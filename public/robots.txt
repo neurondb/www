@@ -1,0 +1,42 @@
+# robots.txt for NeuronDB
+# https://neurondb.ai/robots.txt
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /search?*
+
+# Allow important pages
+Allow: /
+Allow: /neurondb
+Allow: /docs/
+Allow: /blog/
+Allow: /download
+Allow: /contact
+Allow: /community
+
+# Specific bot configurations
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /favicons/
+Allow: /og-image.jpg
+Disallow: /*.json$
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Sitemap location
+Sitemap: https://neurondb.ai/sitemap.xml
+
+# Crawl-delay for respectful crawling (1 second)
+Crawl-delay: 1
