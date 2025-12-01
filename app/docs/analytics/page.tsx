@@ -14,12 +14,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/performance',
+  href: '/docs/performance',
   label: 'Performance',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml',
+  href: '/docs/ml',
   label: 'ML Functions',
 }
 

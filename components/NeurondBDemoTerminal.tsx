@@ -19,7 +19,8 @@ const NeurondBDemoTerminal = () => {
   const [cursorVisible, setCursorVisible] = useState(true)
   const [speedMultiplier, setSpeedMultiplier] = useState(1)
   // Two-level tab structure: mainTab -> subTab
-  const [activeMainTab, setActiveMainTab] = useState<'build' | 'vectors' | 'ml' | 'embeddings' | 'llm' | 'gpu' | 'hybrid' | 'advanced'>('build')
+  type MainTabType = 'build' | 'vectors' | 'ml' | 'embeddings' | 'llm' | 'gpu' | 'hybrid' | 'advanced'
+  const [activeMainTab, setActiveMainTab] = useState<MainTabType>('build')
   const [activeSubTab, setActiveSubTab] = useState<string>('')
 
   // Comprehensive tab structure covering all NeuronDB features
@@ -2734,7 +2735,7 @@ const NeurondBDemoTerminal = () => {
           <button
               key={mainTab}
             onClick={() => {
-              setActiveMainTab(mainTab)
+              setActiveMainTab(mainTab as MainTabType)
               resetDemo()
             }}
             disabled={isRunning}

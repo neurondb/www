@@ -1,0 +1,7 @@
+# Vercel ignore file - files that shouldn't be uploaded to Vercel
+icons/
+png/
+*.md
+LICENSE
+.eslintcache
+tsconfig.tsbuildinfo

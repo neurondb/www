@@ -90,9 +90,14 @@ const nextConfig = {
     ]
   },
   
-  // Generate static pages for better SEO
-  // Note: 'standalone' is for production builds only
-  // output: 'standalone',
+  // Vercel optimizations
+  // Note: Vercel handles output automatically, no need for 'standalone'
+  
+  // Ensure proper build output for Vercel
+  swcMinify: true,
+  
+  // Production optimizations
+  productionBrowserSourceMaps: false,
 }
 
 module.exports = nextConfig
