@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     'async jobs'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/background-workers',
+    canonical: 'https://neurondb.ai/docs/background-workers',
   },
   openGraph: {
     title: 'Background Workers | Async Processing & Monitoring',
     description: 'Dedicated workers for async processing, monitoring, and maintenance to keep your system running optimally.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/background-workers',
+    url: 'https://neurondb.ai/docs/background-workers',
   },
 }
 
@@ -222,18 +222,18 @@ FROM neurondb_queue_stats();`}
       <section>
         <h2>Worker Details</h2>
         <ul>
-          <li><a href="/docs/neurondb/background-workers/neuranq">neuranq</a> - Async job queue executor</li>
-          <li><a href="/docs/neurondb/background-workers/neuranmon">neuranmon</a> - Live query auto-tuner</li>
-          <li><a href="/docs/neurondb/background-workers/neurandefrag">neurandefrag</a> - Index maintenance</li>
-          <li><a href="/docs/neurondb/background-workers/neuranllm">neuranllm</a> - LLM job processor</li>
+          <li><a href="/docs/background-workers/neuranq">neuranq</a> - Async job queue executor</li>
+          <li><a href="/docs/background-workers/neuranmon">neuranmon</a> - Live query auto-tuner</li>
+          <li><a href="/docs/background-workers/neurandefrag">neurandefrag</a> - Index maintenance</li>
+          <li><a href="/docs/background-workers/neuranllm">neuranllm</a> - LLM job processor</li>
         </ul>
       </section>
 
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/configuration">Configuration</a> - Worker settings</li>
-          <li><a href="/docs/neurondb/performance">Performance</a> - Optimization tips</li>
+          <li><a href="/docs/configuration">Configuration</a> - Worker settings</li>
+          <li><a href="/docs/performance">Performance</a> - Optimization tips</li>
         </ul>
       </section>
     </PostgresDocsLayout>

@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     'query caching'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/advanced-features',
+    canonical: 'https://neurondb.ai/docs/advanced-features',
   },
   openGraph: {
     title: 'Advanced Features | Hybrid Search, Reranking, RAG & Caching',
     description: 'Production-ready AI features: hybrid search, reranking, RAG pipelines, and intelligent caching.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/advanced-features',
+    url: 'https://neurondb.ai/docs/advanced-features',
   },
 }
 
@@ -500,12 +500,12 @@ $$ LANGUAGE plpgsql;`}
       <section>
         <h2>Related Documentation</h2>
         <ul>
-          <li><a href="/docs/neurondb/hybrid">Hybrid Search</a> - Detailed hybrid search guide</li>
-          <li><a href="/docs/neurondb/reranking">Reranking</a> - Complete reranking documentation</li>
-          <li><a href="/docs/neurondb/rag">RAG Pipelines</a> - RAG implementation guide</li>
-          <li><a href="/docs/neurondb/vector-engine">Vector Engine</a> - Vector search capabilities</li>
-          <li><a href="/docs/neurondb/embedding-engine">Embedding Engine</a> - Embedding generation</li>
-          <li><a href="/docs/neurondb/performance">Performance Tuning</a> - Optimize advanced features</li>
+          <li><a href="/docs/hybrid">Hybrid Search</a> - Detailed hybrid search guide</li>
+          <li><a href="/docs/reranking">Reranking</a> - Complete reranking documentation</li>
+          <li><a href="/docs/rag">RAG Pipelines</a> - RAG implementation guide</li>
+          <li><a href="/docs/vector-engine">Vector Engine</a> - Vector search capabilities</li>
+          <li><a href="/docs/embedding-engine">Embedding Engine</a> - Embedding generation</li>
+          <li><a href="/docs/performance">Performance Tuning</a> - Optimize advanced features</li>
         </ul>
       </section>
     </PostgresDocsLayout>

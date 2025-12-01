@@ -96,9 +96,9 @@ SELECT neurondb.random_search(
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/gpu">GPU Acceleration</a> - Speed up training</li>
-          <li><a href="/docs/neurondb/ml/unified-api">Unified ML API</a> - Consistent training interface</li>
-          <li><a href="/docs/neurondb/performance">Performance</a> - Optimize model performance</li>
+          <li><a href="/docs/ml/gpu">GPU Acceleration</a> - Speed up training</li>
+          <li><a href="/docs/ml/unified-api">Unified ML API</a> - Consistent training interface</li>
+          <li><a href="/docs/performance">Performance</a> - Optimize model performance</li>
         </ul>
       </section>
     </PostgresDocsLayout>

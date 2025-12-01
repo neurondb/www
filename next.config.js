@@ -2,6 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   
+  // Development configuration
+  ...(process.env.NODE_ENV === 'development' ? {
+    allowedDevOrigins: ['127.0.0.1', 'localhost'],
+  } : {}),
+  
   // SEO and Performance Optimizations
   compress: true,
   poweredByHeader: false,
@@ -86,12 +91,8 @@ const nextConfig = {
   },
   
   // Generate static pages for better SEO
-  output: 'standalone',
-  
-  // Experimental features for better performance
-  experimental: {
-    optimizeCss: true,
-  },
+  // Note: 'standalone' is for production builds only
+  // output: 'standalone',
 }
 
 module.exports = nextConfig

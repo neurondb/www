@@ -117,7 +117,7 @@ export function generateBlogMetadata({
   slug,
   publishedAt,
   image,
-  author = 'pgElephant Team',
+  author = 'NeuronDB Team',
 }: {
   title: string
   description: string
@@ -245,7 +245,7 @@ export function generateArticleSchema({
   publishedAt,
   modifiedAt,
   image,
-  author = 'pgElephant Team',
+  author = 'NeuronDB Team',
 }: {
   title: string
   description: string

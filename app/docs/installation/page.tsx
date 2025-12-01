@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Complete installation guide for NeurondB on PostgreSQL 16–18. Includes Linux, macOS, and RHEL builds plus GPU-ready configuration and verification steps.',
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/installation',
+    canonical: 'https://neurondb.ai/docs/installation',
   },
 }
 
@@ -79,7 +79,7 @@ sudo apt-get install -y postgresql-17 \\
         <h3>Compile & install</h3>
         <BashCodeBlock
           title="Build NeurondB"
-          code={`git clone https://github.com/pgElephant/NeurondB.git
+          code={`git clone https://github.com/neurondb-ai/neurondb.git
 cd NeurondB
 make PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config
 sudo make install PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config`}
@@ -107,7 +107,7 @@ brew services start postgresql@17`}
         <h3>Compile & install</h3>
         <BashCodeBlock
           title="Build NeurondB"
-          code={`git clone https://github.com/pgElephant/NeurondB.git
+          code={`git clone https://github.com/neurondb-ai/neurondb.git
 cd NeurondB
 make PG_CONFIG=/opt/homebrew/opt/postgresql@17/bin/pg_config
 sudo make install PG_CONFIG=/opt/homebrew/opt/postgresql@17/bin/pg_config`}
@@ -141,7 +141,7 @@ sudo make install PG_CONFIG=/opt/homebrew/opt/postgresql@17/bin/pg_config`}
         <h3>Compile & install</h3>
         <BashCodeBlock
           title="Build NeurondB"
-          code={`git clone https://github.com/pgElephant/NeurondB.git
+          code={`git clone https://github.com/neurondb-ai/neurondb.git
 cd NeurondB
 make PG_CONFIG=/usr/pgsql-17/bin/pg_config
 sudo make install PG_CONFIG=/usr/pgsql-17/bin/pg_config`}
@@ -180,9 +180,9 @@ neurondb.gpu_memory_pool_mb = 2048`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/getting-started">Getting Started</a> - Load sample data, create vector indexes, and run first searches.</li>
-          <li><a href="/docs/neurondb/configuration">Configuration Reference</a> - Tune GUC parameters for CPU/GPU execution paths and logging.</li>
-          <li><a href="/docs/neurondb/troubleshooting">Troubleshooting Guide</a> - Resolve build failures, GPU driver issues, and deployment blockers.</li>
+          <li><a href="/docs/getting-started">Getting Started</a> - Load sample data, create vector indexes, and run first searches.</li>
+          <li><a href="/docs/configuration">Configuration Reference</a> - Tune GUC parameters for CPU/GPU execution paths and logging.</li>
+          <li><a href="/docs/troubleshooting">Troubleshooting Guide</a> - Resolve build failures, GPU driver issues, and deployment blockers.</li>
         </ul>
       </section>
     </PostgresDocsLayout>

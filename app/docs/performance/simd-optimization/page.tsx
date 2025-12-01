@@ -72,7 +72,7 @@ LIMIT 10;`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on SIMD optimization, compiler flags, and performance tuning, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/performance/simd-optimization" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/performance/simd-optimization" target="_blank" rel="noopener noreferrer">
             SIMD Optimization Documentation
           </a>
         </p>
@@ -81,8 +81,8 @@ LIMIT 10;`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/gpu/cuda-support">GPU Acceleration</a> - GPU optimization</li>
-          <li><a href="/docs/neurondb/performance/monitoring">Monitoring</a> - Performance monitoring</li>
+          <li><a href="/docs/gpu/cuda-support">GPU Acceleration</a> - GPU optimization</li>
+          <li><a href="/docs/performance/monitoring">Monitoring</a> - Performance monitoring</li>
         </ul>
       </section>
     </PostgresDocsLayout>

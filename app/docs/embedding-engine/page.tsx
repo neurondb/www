@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     'vector embeddings'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/embedding-engine',
+    canonical: 'https://neurondb.ai/docs/embedding-engine',
   },
   openGraph: {
     title: 'Embedding Engine | Multi-Modal Embedding Generation',
     description: 'Generate embeddings for text, images, and mixed data using state-of-the-art transformer models.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/embedding-engine',
+    url: 'https://neurondb.ai/docs/embedding-engine',
   },
 }
 
@@ -495,11 +495,11 @@ FROM (
       <section>
         <h2>Related Documentation</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/embeddings">Embeddings Guide</a> - Detailed embedding documentation</li>
-          <li><a href="/docs/neurondb/ml/embedding-generation">Embedding Generation</a> - Advanced embedding techniques</li>
-          <li><a href="/docs/neurondb/vector-engine">Vector Engine</a> - Index and search embeddings</li>
-          <li><a href="/docs/neurondb/gpu">GPU Accelerator</a> - Accelerate embedding generation</li>
-          <li><a href="/docs/neurondb/rag">RAG Pipelines</a> - Build RAG applications with embeddings</li>
+          <li><a href="/docs/ml/embeddings">Embeddings Guide</a> - Detailed embedding documentation</li>
+          <li><a href="/docs/ml/embedding-generation">Embedding Generation</a> - Advanced embedding techniques</li>
+          <li><a href="/docs/vector-engine">Vector Engine</a> - Index and search embeddings</li>
+          <li><a href="/docs/gpu">GPU Accelerator</a> - Accelerate embedding generation</li>
+          <li><a href="/docs/rag">RAG Pipelines</a> - Build RAG applications with embeddings</li>
         </ul>
       </section>
     </PostgresDocsLayout>

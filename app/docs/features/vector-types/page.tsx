@@ -119,9 +119,9 @@ WHERE dense_embedding <=> '[0.1, 0.2, ...]'::vector < 0.5;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/features/distance-metrics">Distance Metrics</a> - Learn about distance functions</li>
-          <li><a href="/docs/neurondb/indexing">Indexing</a> - Index vectors for fast search</li>
-          <li><a href="/docs/neurondb/features/quantization">Quantization</a> - Compress vectors</li>
+          <li><a href="/docs/features/distance-metrics">Distance Metrics</a> - Learn about distance functions</li>
+          <li><a href="/docs/indexing">Indexing</a> - Index vectors for fast search</li>
+          <li><a href="/docs/features/quantization">Quantization</a> - Compress vectors</li>
         </ul>
       </section>
     </PostgresDocsLayout>

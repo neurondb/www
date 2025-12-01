@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     'PostgreSQL AI GPU'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/gpu/cuda-support',
+    canonical: 'https://neurondb.ai/docs/gpu/cuda-support',
   },
   openGraph: {
     title: 'CUDA GPU Support in NeurondB | NVIDIA GPU Acceleration',
     description: 'Configure NVIDIA CUDA GPU acceleration in NeurondB for vector search and ML inference. Complete setup guide.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/gpu/cuda-support',
+    url: 'https://neurondb.ai/docs/gpu/cuda-support',
   },
 }
 
@@ -114,7 +114,7 @@ SELECT * FROM pg_stat_neurondb_gpu;`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on CUDA setup, GPU optimization, and performance tuning, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/gpu" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/gpu" target="_blank" rel="noopener noreferrer">
             CUDA Support Documentation
           </a>
         </p>
@@ -123,8 +123,8 @@ SELECT * FROM pg_stat_neurondb_gpu;`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/gpu/auto-detection">GPU Auto-Detection</a> - Automatic GPU setup</li>
-          <li><a href="/docs/neurondb/gpu/rocm-support">ROCm Support</a> - AMD GPU support</li>
+          <li><a href="/docs/gpu/auto-detection">GPU Auto-Detection</a> - Automatic GPU setup</li>
+          <li><a href="/docs/gpu/rocm-support">ROCm Support</a> - AMD GPU support</li>
         </ul>
       </section>
     </PostgresDocsLayout>

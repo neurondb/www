@@ -87,7 +87,7 @@ SELECT * FROM neurondb_worker_status();`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on monitoring, metrics interpretation, and alerting, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/performance/monitoring" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/performance/monitoring" target="_blank" rel="noopener noreferrer">
             Monitoring Documentation
           </a>
         </p>
@@ -96,8 +96,8 @@ SELECT * FROM neurondb_worker_status();`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/performance/simd-optimization">SIMD Optimization</a> - Performance optimization</li>
-          <li><a href="/docs/neurondb/configuration">Configuration</a> - Configuration options</li>
+          <li><a href="/docs/performance/simd-optimization">SIMD Optimization</a> - Performance optimization</li>
+          <li><a href="/docs/configuration">Configuration</a> - Configuration options</li>
         </ul>
       </section>
     </PostgresDocsLayout>

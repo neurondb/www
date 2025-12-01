@@ -64,7 +64,7 @@ SELECT * FROM neurondb.index_maintenance_status;`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on index maintenance, defragmentation strategies, and performance optimization, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/background-workers/neurandefrag" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/background-workers/neurandefrag" target="_blank" rel="noopener noreferrer">
             neurandefrag Documentation
           </a>
         </p>
@@ -73,8 +73,8 @@ SELECT * FROM neurondb.index_maintenance_status;`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/background-workers">Background Workers</a> - Overview</li>
-          <li><a href="/docs/neurondb/indexing">Indexing</a> - Index creation</li>
+          <li><a href="/docs/background-workers">Background Workers</a> - Overview</li>
+          <li><a href="/docs/indexing">Indexing</a> - Index creation</li>
         </ul>
       </section>
     </PostgresDocsLayout>

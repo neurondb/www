@@ -97,9 +97,9 @@ SELECT evaluate_logistic_regression(
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/regression">Regression</a> - Predict continuous values</li>
-          <li><a href="/docs/neurondb/ml/svm">Support Vector Machines</a> - SVM classifiers</li>
-          <li><a href="/docs/neurondb/ml/model-management">Model Management</a> - Deploy and version models</li>
+          <li><a href="/docs/ml/regression">Regression</a> - Predict continuous values</li>
+          <li><a href="/docs/ml/svm">Support Vector Machines</a> - SVM classifiers</li>
+          <li><a href="/docs/ml/model-management">Model Management</a> - Deploy and version models</li>
         </ul>
       </section>
     </PostgresDocsLayout>

@@ -134,10 +134,10 @@ SELECT embedding || '[0.5]'::vector FROM embeddings LIMIT 1;`}
       <section>
         <h2>Related Documentation</h2>
         <ul>
-          <li><a href="/docs/neurondb/features/vector-types">Detailed Vector Types Guide</a></li>
-          <li><a href="/docs/neurondb/indexing">Vector Indexing Deep Dive</a></li>
-          <li><a href="/docs/neurondb/performance">Performance Optimization</a></li>
-          <li><a href="/docs/neurondb/gpu">GPU Acceleration Guide</a></li>
+          <li><a href="/docs/features/vector-types">Detailed Vector Types Guide</a></li>
+          <li><a href="/docs/indexing">Vector Indexing Deep Dive</a></li>
+          <li><a href="/docs/performance">Performance Optimization</a></li>
+          <li><a href="/docs/gpu">GPU Acceleration Guide</a></li>
         </ul>
       </section>
     </PostgresDocsLayout>

@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     'PostgreSQL AI embeddings'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/ml/embedding-generation',
+    canonical: 'https://neurondb.ai/docs/ml/embedding-generation',
   },
   openGraph: {
     title: 'Text Embedding Generation in NeurondB | embed_text() Guide',
     description: 'Generate text embeddings in PostgreSQL with NeurondB. Complete guide to embed_text(), batch processing, and caching.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/ml/embedding-generation',
+    url: 'https://neurondb.ai/docs/ml/embedding-generation',
   },
 }
 
@@ -230,7 +230,7 @@ SET neurondb.embedding_cache_size = 10000;`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on embedding models, providers, caching strategies, and multimodal embeddings, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/ml/embeddings" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/ml/embeddings" target="_blank" rel="noopener noreferrer">
             Embedding Generation Documentation
           </a>
         </p>
@@ -239,8 +239,8 @@ SET neurondb.embedding_cache_size = 10000;`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/model-management">Model Management</a> - Manage embedding models</li>
-          <li><a href="/docs/neurondb/indexing">Vector Search</a> - Index and search embeddings</li>
+          <li><a href="/docs/ml/model-management">Model Management</a> - Manage embedding models</li>
+          <li><a href="/docs/indexing">Vector Search</a> - Index and search embeddings</li>
         </ul>
       </section>
     </PostgresDocsLayout>

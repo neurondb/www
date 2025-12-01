@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     'Apple Metal'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/gpu',
+    canonical: 'https://neurondb.ai/docs/gpu',
   },
   openGraph: {
     title: 'GPU Accelerator | CUDA, ROCm & Metal Support',
     description: 'Accelerate vector operations and ML inference with GPU support. Automatic CPU fallback for maximum compatibility.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/gpu',
+    url: 'https://neurondb.ai/docs/gpu',
   },
 }
 
@@ -332,12 +332,12 @@ SET neurondb.gpu_streams = 4;`}
       <section>
         <h2>Related Documentation</h2>
         <ul>
-          <li><a href="/docs/neurondb/vector-engine">Vector Engine</a> - GPU-accelerated vector search</li>
-          <li><a href="/docs/neurondb/ml-engine">ML Engine</a> - GPU-accelerated ML inference</li>
-          <li><a href="/docs/neurondb/embedding-engine">Embedding Engine</a> - GPU-accelerated embeddings</li>
-          <li><a href="/docs/neurondb/configuration">Configuration</a> - Complete GPU configuration reference</li>
-          <li><a href="/docs/neurondb/performance">Performance Guide</a> - Benchmark GPU vs CPU</li>
-          <li><a href="/docs/neurondb/troubleshooting">Troubleshooting</a> - Fix GPU issues</li>
+          <li><a href="/docs/vector-engine">Vector Engine</a> - GPU-accelerated vector search</li>
+          <li><a href="/docs/ml-engine">ML Engine</a> - GPU-accelerated ML inference</li>
+          <li><a href="/docs/embedding-engine">Embedding Engine</a> - GPU-accelerated embeddings</li>
+          <li><a href="/docs/configuration">Configuration</a> - Complete GPU configuration reference</li>
+          <li><a href="/docs/performance">Performance Guide</a> - Benchmark GPU vs CPU</li>
+          <li><a href="/docs/troubleshooting">Troubleshooting</a> - Fix GPU issues</li>
         </ul>
       </section>
     </PostgresDocsLayout>

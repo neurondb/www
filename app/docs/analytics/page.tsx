@@ -128,9 +128,9 @@ FROM reduce_pca(
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml">ML Functions</a> - Complete ML API reference</li>
-          <li><a href="/docs/neurondb/ml/clustering">Clustering Guide</a> - Detailed clustering documentation</li>
-          <li><a href="/docs/neurondb/performance">Performance</a> - Optimize ML operations</li>
+          <li><a href="/docs/ml">ML Functions</a> - Complete ML API reference</li>
+          <li><a href="/docs/ml/clustering">Clustering Guide</a> - Detailed clustering documentation</li>
+          <li><a href="/docs/performance">Performance</a> - Optimize ML operations</li>
         </ul>
       </section>
     </PostgresDocsLayout>

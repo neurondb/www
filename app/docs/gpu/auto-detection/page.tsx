@@ -65,7 +65,7 @@ FROM documents;`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on GPU auto-detection, fallback behavior, and manual configuration, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/gpu" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/gpu" target="_blank" rel="noopener noreferrer">
             GPU Auto-Detection Documentation
           </a>
         </p>
@@ -74,9 +74,9 @@ FROM documents;`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/gpu/cuda-support">CUDA Support</a> - NVIDIA GPU</li>
-          <li><a href="/docs/neurondb/gpu/rocm-support">ROCm Support</a> - AMD GPU</li>
-          <li><a href="/docs/neurondb/gpu/metal-support">Metal Support</a> - Apple Silicon</li>
+          <li><a href="/docs/gpu/cuda-support">CUDA Support</a> - NVIDIA GPU</li>
+          <li><a href="/docs/gpu/rocm-support">ROCm Support</a> - AMD GPU</li>
+          <li><a href="/docs/gpu/metal-support">Metal Support</a> - Apple Silicon</li>
         </ul>
       </section>
     </PostgresDocsLayout>

@@ -99,7 +99,7 @@ SELECT detect_trend(
         <h2>Learn More</h2>
         <p>
           For detailed documentation on time series analysis, forecasting models, seasonality detection, and anomaly detection in time series, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/ml/time-series" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/ml/time-series" target="_blank" rel="noopener noreferrer">
             Time Series Documentation
           </a>
         </p>
@@ -108,8 +108,8 @@ SELECT detect_trend(
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/outlier-detection">Outlier Detection</a> - Detect anomalies in time series</li>
-          <li><a href="/docs/neurondb/ml/drift-detection">Drift Detection</a> - Detect distribution changes</li>
+          <li><a href="/docs/ml/outlier-detection">Outlier Detection</a> - Detect anomalies in time series</li>
+          <li><a href="/docs/ml/drift-detection">Drift Detection</a> - Detect distribution changes</li>
         </ul>
       </section>
     </PostgresDocsLayout>

@@ -77,6 +77,6 @@
   
   <!-- Footer branding -->
   <text x="600" y="560" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="300" fill="#fff" text-anchor="middle" opacity="0.6">
-    pgElephant.com
+    neurondb.ai
   </text>
 </svg>

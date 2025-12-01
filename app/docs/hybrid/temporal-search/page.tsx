@@ -78,7 +78,7 @@ LIMIT 10;`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on temporal search, decay functions, time windowing, and freshness scoring, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/hybrid/temporal-search" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/hybrid/temporal-search" target="_blank" rel="noopener noreferrer">
             Temporal Search Documentation
           </a>
         </p>
@@ -87,8 +87,8 @@ LIMIT 10;`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/hybrid/overview">Hybrid Search</a> - Combined search</li>
-          <li><a href="/docs/neurondb/hybrid/faceted-search">Faceted Search</a> - Category filtering</li>
+          <li><a href="/docs/hybrid/overview">Hybrid Search</a> - Combined search</li>
+          <li><a href="/docs/hybrid/faceted-search">Faceted Search</a> - Category filtering</li>
         </ul>
       </section>
     </PostgresDocsLayout>

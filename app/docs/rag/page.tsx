@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     'PostgreSQL AI RAG'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/rag',
+    canonical: 'https://neurondb.ai/docs/rag',
   },
   openGraph: {
     title: 'RAG Pipeline in NeurondB | Retrieval Augmented Generation',
     description: 'Build production RAG applications with NeurondB. Complete guide to vector search, embeddings, and LLM integration.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/rag',
+    url: 'https://neurondb.ai/docs/rag',
   },
 }
 
@@ -170,17 +170,17 @@ LIMIT 5;`}
       <section>
         <h2>RAG Components</h2>
         <ul>
-          <li><a href="/docs/neurondb/rag/llm-integration">LLM Integration</a> - Hugging Face and OpenAI integration</li>
-          <li><a href="/docs/neurondb/rag/document-processing">Document Processing</a> - Text processing and NLP</li>
+          <li><a href="/docs/rag/llm-integration">LLM Integration</a> - Hugging Face and OpenAI integration</li>
+          <li><a href="/docs/rag/document-processing">Document Processing</a> - Text processing and NLP</li>
         </ul>
       </section>
 
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/hybrid">Hybrid Search</a> - Advanced hybrid search techniques</li>
-          <li><a href="/docs/neurondb/reranking/overview">Reranking</a> - Cross-encoder reranking guide</li>
-          <li><a href="/docs/neurondb/ml/inference">ML Inference</a> - ONNX model deployment</li>
+          <li><a href="/docs/hybrid">Hybrid Search</a> - Advanced hybrid search techniques</li>
+          <li><a href="/docs/reranking/overview">Reranking</a> - Cross-encoder reranking guide</li>
+          <li><a href="/docs/ml/inference">ML Inference</a> - ONNX model deployment</li>
         </ul>
       </section>
     </PostgresDocsLayout>

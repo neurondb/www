@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     'high-performance vector search'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/vector-engine',
+    canonical: 'https://neurondb.ai/docs/vector-engine',
   },
   openGraph: {
     title: 'Vector Engine | High-Performance ANN Search with HNSW & IVF',
     description: 'Billion-scale vector similarity search with HNSW and IVF indexing, multiple distance metrics, and quantization techniques.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/vector-engine',
+    url: 'https://neurondb.ai/docs/vector-engine',
   },
 }
 
@@ -460,11 +460,11 @@ LIMIT 10;`}
       <section>
         <h2>Related Documentation</h2>
         <ul>
-          <li><a href="/docs/neurondb/indexing">Indexing Guide</a> - Detailed index configuration and tuning</li>
-          <li><a href="/docs/neurondb/features/distance-metrics">Distance Metrics</a> - Complete distance metric reference</li>
-          <li><a href="/docs/neurondb/features/quantization">Quantization</a> - Advanced quantization techniques</li>
-          <li><a href="/docs/neurondb/gpu">GPU Acceleration</a> - Accelerate vector operations with GPU</li>
-          <li><a href="/docs/neurondb/performance">Performance Tuning</a> - Optimize vector search performance</li>
+          <li><a href="/docs/indexing">Indexing Guide</a> - Detailed index configuration and tuning</li>
+          <li><a href="/docs/features/distance-metrics">Distance Metrics</a> - Complete distance metric reference</li>
+          <li><a href="/docs/features/quantization">Quantization</a> - Advanced quantization techniques</li>
+          <li><a href="/docs/gpu">GPU Acceleration</a> - Accelerate vector operations with GPU</li>
+          <li><a href="/docs/performance">Performance Tuning</a> - Optimize vector search performance</li>
         </ul>
       </section>
     </PostgresDocsLayout>

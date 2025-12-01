@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Vector Database Performance Tuning | Optimize NeuronDB PostgreSQL',
   description: 'Complete performance optimization guide for NeuronDB PostgreSQL vector database. HNSW tuning, recall optimization, latency reduction, memory management, and production scaling. Handle 100M+ vectors with sub-10ms queries.',
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/performance',
+    canonical: 'https://neurondb.ai/docs/performance',
   },
 }
 
@@ -175,9 +175,9 @@ UPDATE docs SET embedding = embed_text(content);  -- Slow!`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/indexing">Indexing Guide</a> - Learn about HNSW and IVF indexes</li>
-          <li><a href="/docs/neurondb/gpu">GPU Acceleration</a> - Enable GPU for 100x speedup</li>
-          <li><a href="/docs/neurondb/configuration">Configuration</a> - Tune GUC parameters</li>
+          <li><a href="/docs/indexing">Indexing Guide</a> - Learn about HNSW and IVF indexes</li>
+          <li><a href="/docs/gpu">GPU Acceleration</a> - Enable GPU for 100x speedup</li>
+          <li><a href="/docs/configuration">Configuration</a> - Tune GUC parameters</li>
         </ul>
       </section>
     </PostgresDocsLayout>

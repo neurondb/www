@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     'time series forecasting'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/ml-engine',
+    canonical: 'https://neurondb.ai/docs/ml-engine',
   },
   openGraph: {
     title: 'ML Engine | Machine Learning Suite with ONNX',
     description: 'Comprehensive ML capabilities with classification, regression, clustering, and AutoML powered by ONNX.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/ml-engine',
+    url: 'https://neurondb.ai/docs/ml-engine',
   },
 }
 
@@ -450,14 +450,14 @@ SELECT detect_data_drift(
       <section>
         <h2>Related Documentation</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml">ML Overview</a> - Complete ML capabilities guide</li>
-          <li><a href="/docs/neurondb/ml/classification">Classification</a> - Classification algorithms and examples</li>
-          <li><a href="/docs/neurondb/ml/regression">Regression</a> - Regression models and forecasting</li>
-          <li><a href="/docs/neurondb/ml/clustering">Clustering</a> - Clustering algorithms and use cases</li>
-          <li><a href="/docs/neurondb/ml/inference">Inference</a> - ONNX model deployment and inference</li>
-          <li><a href="/docs/neurondb/ml/model-management">Model Management</a> - Versioning, A/B testing, monitoring</li>
-          <li><a href="/docs/neurondb/ml/hyperparameter-tuning">Hyperparameter Tuning</a> - AutoML and optimization</li>
-          <li><a href="/docs/neurondb/gpu">GPU Acceleration</a> - Accelerate ML with GPU</li>
+          <li><a href="/docs/ml">ML Overview</a> - Complete ML capabilities guide</li>
+          <li><a href="/docs/ml/classification">Classification</a> - Classification algorithms and examples</li>
+          <li><a href="/docs/ml/regression">Regression</a> - Regression models and forecasting</li>
+          <li><a href="/docs/ml/clustering">Clustering</a> - Clustering algorithms and use cases</li>
+          <li><a href="/docs/ml/inference">Inference</a> - ONNX model deployment and inference</li>
+          <li><a href="/docs/ml/model-management">Model Management</a> - Versioning, A/B testing, monitoring</li>
+          <li><a href="/docs/ml/hyperparameter-tuning">Hyperparameter Tuning</a> - AutoML and optimization</li>
+          <li><a href="/docs/gpu">GPU Acceleration</a> - Accelerate ML with GPU</li>
         </ul>
       </section>
     </PostgresDocsLayout>

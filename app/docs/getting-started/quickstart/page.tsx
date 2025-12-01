@@ -40,7 +40,7 @@ export default function QuickStartPage() {
         <h2>Prerequisites</h2>
         <ul>
           <li>PostgreSQL 16, 17, or 18 installed</li>
-          <li>NeuronDB extension installed (see <a href="/docs/neurondb/installation">Installation Guide</a>)</li>
+          <li>NeuronDB extension installed (see <a href="/docs/installation">Installation Guide</a>)</li>
         </ul>
       </section>
 
@@ -106,10 +106,10 @@ LIMIT 5;`}
       <section id="next-steps">
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/features/vector-types">Vector Types</a> - Learn about different vector formats</li>
-          <li><a href="/docs/neurondb/ml/embeddings">Embeddings</a> - Embedding generation</li>
-          <li><a href="/docs/neurondb/hybrid/overview">Hybrid Search</a> - Combine semantic and keyword search</li>
-          <li><a href="/docs/neurondb/configuration">Configuration</a> - Configuration options</li>
+          <li><a href="/docs/features/vector-types">Vector Types</a> - Learn about different vector formats</li>
+          <li><a href="/docs/ml/embeddings">Embeddings</a> - Embedding generation</li>
+          <li><a href="/docs/hybrid/overview">Hybrid Search</a> - Combine semantic and keyword search</li>
+          <li><a href="/docs/configuration">Configuration</a> - Configuration options</li>
         </ul>
       </section>
 
@@ -117,7 +117,7 @@ LIMIT 5;`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation, examples, and comprehensive guides, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/neurondb" target="_blank" rel="noopener noreferrer">
             Detailed Documentation
           </a>
         </p>

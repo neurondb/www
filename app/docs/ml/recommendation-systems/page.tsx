@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     'PostgreSQL AI recommendations'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/ml/recommendation-systems',
+    canonical: 'https://neurondb.ai/docs/ml/recommendation-systems',
   },
   openGraph: {
     title: 'Collaborative Filtering in NeurondB | Recommendation Systems',
     description: 'Build recommendation systems in PostgreSQL with NeurondB collaborative filtering. Complete guide with SQL examples.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/ml/recommendation-systems',
+    url: 'https://neurondb.ai/docs/ml/recommendation-systems',
   },
 }
 
@@ -209,7 +209,7 @@ ORDER BY metric;`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on recommendation algorithms, evaluation metrics, cold start problems, and hybrid recommendation systems, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/ml/recommendation-systems" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/ml/recommendation-systems" target="_blank" rel="noopener noreferrer">
             Recommendation Systems Documentation
           </a>
         </p>
@@ -218,8 +218,8 @@ ORDER BY metric;`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/indexing">Vector Search</a> - Similarity-based recommendations</li>
-          <li><a href="/docs/neurondb/ml/quality-metrics">Quality Metrics</a> - Evaluate recommendation quality</li>
+          <li><a href="/docs/indexing">Vector Search</a> - Similarity-based recommendations</li>
+          <li><a href="/docs/ml/quality-metrics">Quality Metrics</a> - Evaluate recommendation quality</li>
         </ul>
       </section>
     </PostgresDocsLayout>

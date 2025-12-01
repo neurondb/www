@@ -22,7 +22,7 @@ const markdown = `![NeuronDB header](/blog/neurondb/header.svg?v=7)
 
 # Semantic Search Over Text with NeuronDB
 
-**[View on GitHub](https://github.com/pgElephant/NeurondB)** | **[Download Latest Release](https://github.com/pgElephant/NeurondB/releases)** | **[Documentation](https://www.pgelephant.com/docs/neurondb)**
+**[View on GitHub](https://github.com/neurondb-ai/neurondb)** | **[Download Latest Release](https://github.com/neurondb-ai/neurondb/releases)** | **[Documentation](https://neurondb.ai/docs/neurondb)**
 
 ## Introduction
 
@@ -942,9 +942,9 @@ Use semantic search for knowledge bases, document search, and RAG applications. 
 
 ## Resources
 
-- [Documentation](https://pgelephant.com/neurondb)
-- [GitHub Repository](https://github.com/pgElephant/NeurondB)
-- [Support Email](mailto:admin@pgelephant.com)
+- [Documentation](https://neurondb.ai/neurondb)
+- [GitHub Repository](https://github.com/neurondb-ai/neurondb)
+- [Support Email](mailto:support@neurondb.ai)
 `;
 
 export default function BlogPost() {
@@ -963,7 +963,7 @@ export default function BlogPost() {
                     <div className="border-t border-white/10 pt-8">
                         <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
                         <ShareOnLinkedIn
-                            url="https://www.pgelephant.com/blog/neurondb-semantic-search-guide"
+                            url="https://neurondb.ai/blog/neurondb-semantic-search-guide"
                             title="Semantic Search Over Text with NeuronDB"
                             summary="Learn how to implement semantic search over text using NeuronDB with real-world examples, SQL queries, and production-ready code. Guide to building document search systems, RAG pipelines, and hybrid search."
                             hashtags={[
@@ -974,7 +974,7 @@ export default function BlogPost() {
                                 'RAG',
                                 'MachineLearning',
                                 'NeuronDB',
-                                'pgElephant',
+                                'NeuronDB',
                                 'OpenSource',
                                 'NLP',
                                 'Embeddings',

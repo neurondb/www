@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     'mmr_rerank function'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/reranking/ensemble',
+    canonical: 'https://neurondb.ai/docs/reranking/ensemble',
   },
   openGraph: {
     title: 'Ensemble Reranking in NeurondB | MMR, RRF, Weighted Methods',
     description: 'Combine multiple reranking models in NeurondB using MMR, RRF, weighted ensemble, and Borda count methods.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/reranking/ensemble',
+    url: 'https://neurondb.ai/docs/reranking/ensemble',
   },
 }
 
@@ -270,7 +270,7 @@ ORDER BY rrf.score DESC;`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on ensemble strategies, weight optimization, and combining rerankers, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/reranking/ensemble" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/reranking/ensemble" target="_blank" rel="noopener noreferrer">
             Ensemble Reranking Documentation
           </a>
         </p>
@@ -279,8 +279,8 @@ ORDER BY rrf.score DESC;`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/reranking/cross-encoder">Cross-Encoder</a> - Neural reranking</li>
-          <li><a href="/docs/neurondb/reranking/llm-reranking">LLM Reranking</a> - LLM-powered reranking</li>
+          <li><a href="/docs/reranking/cross-encoder">Cross-Encoder</a> - Neural reranking</li>
+          <li><a href="/docs/reranking/llm-reranking">LLM Reranking</a> - LLM-powered reranking</li>
         </ul>
       </section>
     </PostgresDocsLayout>

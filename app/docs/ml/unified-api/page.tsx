@@ -123,9 +123,9 @@ FROM test_data;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/model-management">Model Management</a> - Version and deploy models</li>
-          <li><a href="/docs/neurondb/ml/hyperparameter-tuning">Hyperparameter Tuning</a> - Optimize model parameters</li>
-          <li><a href="/docs/neurondb/ml">ML Overview</a> - Complete ML documentation</li>
+          <li><a href="/docs/ml/model-management">Model Management</a> - Version and deploy models</li>
+          <li><a href="/docs/ml/hyperparameter-tuning">Hyperparameter Tuning</a> - Optimize model parameters</li>
+          <li><a href="/docs/ml">ML Overview</a> - Complete ML documentation</li>
         </ul>
       </section>
     </PostgresDocsLayout>

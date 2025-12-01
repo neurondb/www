@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     'query document matching'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/reranking/cross-encoder',
+    canonical: 'https://neurondb.ai/docs/reranking/cross-encoder',
   },
   openGraph: {
     title: 'Cross-Encoder Reranking in NeurondB | Neural Reranking Guide',
     description: 'Improve search relevance with cross-encoder reranking in NeurondB. Complete guide with SQL examples and Flash Attention optimization.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/reranking/cross-encoder',
+    url: 'https://neurondb.ai/docs/reranking/cross-encoder',
   },
 }
 
@@ -187,7 +187,7 @@ rerank_long_context(
         <h2>Learn More</h2>
         <p>
           For detailed documentation on cross-encoder models, model selection, fine-tuning, and performance optimization, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/reranking/cross-encoder" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/reranking/cross-encoder" target="_blank" rel="noopener noreferrer">
             Cross-Encoder Documentation
           </a>
         </p>
@@ -196,8 +196,8 @@ rerank_long_context(
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/reranking/llm-reranking">LLM Reranking</a> - LLM-powered reranking</li>
-          <li><a href="/docs/neurondb/reranking/ensemble">Ensemble</a> - Combine reranking strategies</li>
+          <li><a href="/docs/reranking/llm-reranking">LLM Reranking</a> - LLM-powered reranking</li>
+          <li><a href="/docs/reranking/ensemble">Ensemble</a> - Combine reranking strategies</li>
         </ul>
       </section>
     </PostgresDocsLayout>

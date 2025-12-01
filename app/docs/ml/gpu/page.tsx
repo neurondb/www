@@ -63,9 +63,9 @@ SET neurondb.gpu_backend = 'metal';`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/gpu">GPU Guide</a> - Complete GPU documentation</li>
-          <li><a href="/docs/neurondb/ml/text-ml">Text ML</a> - Text processing with GPU</li>
-          <li><a href="/docs/neurondb/performance">Performance</a> - Optimize GPU performance</li>
+          <li><a href="/docs/gpu">GPU Guide</a> - Complete GPU documentation</li>
+          <li><a href="/docs/ml/text-ml">Text ML</a> - Text processing with GPU</li>
+          <li><a href="/docs/performance">Performance</a> - Optimize GPU performance</li>
         </ul>
       </section>
     </PostgresDocsLayout>

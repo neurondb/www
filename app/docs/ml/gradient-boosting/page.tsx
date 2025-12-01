@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     'PostgreSQL AI ML'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/ml/gradient-boosting',
+    canonical: 'https://neurondb.ai/docs/ml/gradient-boosting',
   },
   openGraph: {
     title: 'Gradient Boosting in NeurondB | XGBoost, LightGBM, CatBoost',
     description: 'Train XGBoost, LightGBM, and CatBoost models in PostgreSQL with NeurondB. Complete guide with SQL examples and GPU support.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/ml/gradient-boosting',
+    url: 'https://neurondb.ai/docs/ml/gradient-boosting',
   },
 }
 
@@ -225,7 +225,7 @@ END $$;`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on gradient boosting algorithms, hyperparameter tuning, feature importance, and model comparison, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/ml/gradient-boosting" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/ml/gradient-boosting" target="_blank" rel="noopener noreferrer">
             Gradient Boosting Documentation
           </a>
         </p>
@@ -234,8 +234,8 @@ END $$;`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/random-forest">Random Forest</a> - Ensemble methods</li>
-          <li><a href="/docs/neurondb/ml/classification">Classification</a> - Classification algorithms</li>
+          <li><a href="/docs/ml/random-forest">Random Forest</a> - Ensemble methods</li>
+          <li><a href="/docs/ml/classification">Classification</a> - Classification algorithms</li>
         </ul>
       </section>
     </PostgresDocsLayout>

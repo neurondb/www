@@ -116,7 +116,7 @@ SELECT davies_bouldin_index(
         <h2>Learn More</h2>
         <p>
           For detailed documentation on all quality metrics, choosing appropriate metrics, benchmarking, and interpretation, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/ml/quality-metrics" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/ml/quality-metrics" target="_blank" rel="noopener noreferrer">
             Quality Metrics Documentation
           </a>
         </p>
@@ -125,8 +125,8 @@ SELECT davies_bouldin_index(
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/clustering">Clustering</a> - Evaluate clustering quality</li>
-          <li><a href="/docs/neurondb/indexing">Vector Search</a> - Evaluate search quality</li>
+          <li><a href="/docs/ml/clustering">Clustering</a> - Evaluate clustering quality</li>
+          <li><a href="/docs/indexing">Vector Search</a> - Evaluate search quality</li>
         </ul>
       </section>
     </PostgresDocsLayout>

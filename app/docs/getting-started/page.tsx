@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     'Postgres AI extension'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/getting-started',
+    canonical: 'https://neurondb.ai/docs/getting-started',
   },
   openGraph: {
     title: 'Getting Started with NeurondB | Installation & Quick Start',
     description: 'Complete NeurondB installation guide for PostgreSQL. Learn vector search, embeddings, and RAG workflows.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/getting-started',
+    url: 'https://neurondb.ai/docs/getting-started',
   },
 }
 
@@ -103,7 +103,7 @@ export default function NeurondBGettingStarted() {
 sudo apt-get install -y postgresql-17 postgresql-server-dev-17 build-essential \\
     libcurl4-openssl-dev libssl-dev zlib1g-dev
 
-git clone https://github.com/pgElephant/NeurondB.git
+git clone https://github.com/neurondb-ai/neurondb.git
 cd NeurondB
 make PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config
 sudo make install PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config`}
@@ -114,7 +114,7 @@ sudo make install PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config`}
           title="Install packages & build"
           code={`brew install postgresql@17
 
-git clone https://github.com/pgElephant/NeurondB.git
+git clone https://github.com/neurondb-ai/neurondb.git
 cd NeurondB
 ./build.sh                    # Prepare build environment
 make PG_CONFIG=/opt/homebrew/opt/postgresql@17/bin/pg_config
@@ -127,7 +127,7 @@ sudo make install PG_CONFIG=/opt/homebrew/opt/postgresql@17/bin/pg_config`}
           code={`sudo dnf install -y postgresql17-server postgresql17-devel gcc make \\
     curl-devel openssl-devel zlib-devel
 
-git clone https://github.com/pgElephant/NeurondB.git
+git clone https://github.com/neurondb-ai/neurondb.git
 cd NeurondB
 ./build.sh                    # Prepare build environment
 make PG_CONFIG=/usr/pgsql-17/bin/pg_config
@@ -267,10 +267,10 @@ LIMIT 10;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/indexing">Vector Indexing</a> - Configure HNSW, IVF, and quantization strategies for large-scale search.</li>
-          <li><a href="/docs/neurondb/ml/inference">ONNX Inference</a> - Deploy ONNX models and batch infer directly in PostgreSQL.</li>
-          <li><a href="/docs/neurondb/hybrid/overview">Hybrid Retrieval</a> - Combine vector, keyword, and metadata filters for production search.</li>
-          <li><a href="/docs/neurondb/rag">RAG Pipelines</a> - Build retrieval augmented generation pipelines with SQL workflows.</li>
+          <li><a href="/docs/indexing">Vector Indexing</a> - Configure HNSW, IVF, and quantization strategies for large-scale search.</li>
+          <li><a href="/docs/ml/inference">ONNX Inference</a> - Deploy ONNX models and batch infer directly in PostgreSQL.</li>
+          <li><a href="/docs/hybrid/overview">Hybrid Retrieval</a> - Combine vector, keyword, and metadata filters for production search.</li>
+          <li><a href="/docs/rag">RAG Pipelines</a> - Build retrieval augmented generation pipelines with SQL workflows.</li>
         </ul>
       </section>
     </PostgresDocsLayout>

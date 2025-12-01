@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     'PostgreSQL ML clustering'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/ml/clustering',
+    canonical: 'https://neurondb.ai/docs/ml/clustering',
   },
   openGraph: {
     title: 'Clustering Algorithms in NeurondB | K-means, DBSCAN, GMM',
     description: 'Cluster vectors directly in PostgreSQL with NeurondB. Complete guide to K-means, DBSCAN, GMM, and hierarchical clustering.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/ml/clustering',
+    url: 'https://neurondb.ai/docs/ml/clustering',
   },
 }
 
@@ -343,9 +343,9 @@ SELECT
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/classification">Classification</a> - Supervised learning algorithms</li>
-          <li><a href="/docs/neurondb/analytics">Analytics Suite</a> - Complete ML analytics</li>
-          <li><a href="/docs/neurondb/performance">Performance</a> - Optimize clustering performance</li>
+          <li><a href="/docs/ml/classification">Classification</a> - Supervised learning algorithms</li>
+          <li><a href="/docs/analytics">Analytics Suite</a> - Complete ML analytics</li>
+          <li><a href="/docs/performance">Performance</a> - Optimize clustering performance</li>
         </ul>
       </section>
     </PostgresDocsLayout>

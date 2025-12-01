@@ -44,7 +44,7 @@ export default function InferencePage() {
           code={`SELECT neurondb_register_model(
   name          => 'text-embedding-3-small',
   version       => '1.0.0',
-  storage_url   => 'https://github.com/pgElephant/NeurondB/releases/download/models/text-embedding-3-small.onnx',
+  storage_url   => 'https://github.com/neurondb-ai/neurondb/releases/download/models/text-embedding-3-small.onnx',
   runtime       => 'onnx',
   device        => 'auto'
 );`}
@@ -103,9 +103,9 @@ SELECT neurondb_embed_batch(
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/embeddings">Embedding Generation</a> - Generate embeddings</li>
-          <li><a href="/docs/neurondb/performance">Performance Tuning</a> - Optimize inference</li>
-          <li><a href="/docs/neurondb/ml/model-management">Model Management</a> - Version and deploy models</li>
+          <li><a href="/docs/ml/embeddings">Embedding Generation</a> - Generate embeddings</li>
+          <li><a href="/docs/performance">Performance Tuning</a> - Optimize inference</li>
+          <li><a href="/docs/ml/model-management">Model Management</a> - Version and deploy models</li>
         </ul>
       </section>
     </PostgresDocsLayout>

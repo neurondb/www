@@ -81,9 +81,9 @@ LIMIT 20000;  -- Smaller dataset for SVM`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/unified-api">Unified ML API</a> - Consistent training interface</li>
-          <li><a href="/docs/neurondb/ml/classification">Classification</a> - Other classification algorithms</li>
-          <li><a href="/docs/neurondb/ml/model-management">Model Management</a> - Deploy SVM models</li>
+          <li><a href="/docs/ml/unified-api">Unified ML API</a> - Consistent training interface</li>
+          <li><a href="/docs/ml/classification">Classification</a> - Other classification algorithms</li>
+          <li><a href="/docs/ml/model-management">Model Management</a> - Deploy SVM models</li>
         </ul>
       </section>
     </PostgresDocsLayout>

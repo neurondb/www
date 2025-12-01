@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     'query document scoring'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/reranking/llm-reranking',
+    canonical: 'https://neurondb.ai/docs/reranking/llm-reranking',
   },
   openGraph: {
     title: 'LLM Reranking in NeurondB | GPT/Claude Reranking Guide',
     description: 'Rerank search results with LLMs in NeurondB. Complete guide to ndb_llm_rerank() function and LLM integration.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/reranking/llm-reranking',
+    url: 'https://neurondb.ai/docs/reranking/llm-reranking',
   },
 }
 
@@ -126,7 +126,7 @@ SET neurondb.openai_api_key = 'your-openai-api-key';`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on LLM reranking, model configuration, cost optimization, and prompt engineering, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/reranking/llm-reranking" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/reranking/llm-reranking" target="_blank" rel="noopener noreferrer">
             LLM Reranking Documentation
           </a>
         </p>
@@ -135,8 +135,8 @@ SET neurondb.openai_api_key = 'your-openai-api-key';`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/reranking/cross-encoder">Cross-Encoder</a> - Neural reranking</li>
-          <li><a href="/docs/neurondb/reranking/ensemble">Ensemble</a> - Combine rerankers</li>
+          <li><a href="/docs/reranking/cross-encoder">Cross-Encoder</a> - Neural reranking</li>
+          <li><a href="/docs/reranking/ensemble">Ensemble</a> - Combine rerankers</li>
         </ul>
       </section>
     </PostgresDocsLayout>

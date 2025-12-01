@@ -87,9 +87,9 @@ SELECT neurondb.register_feature(
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/hyperparameter-tuning">Hyperparameter Tuning</a> - Optimize model parameters</li>
-          <li><a href="/docs/neurondb/ml/unified-api">Unified ML API</a> - Consistent training interface</li>
-          <li><a href="/docs/neurondb/ml/model-management">Model Management</a> - Deploy models</li>
+          <li><a href="/docs/ml/hyperparameter-tuning">Hyperparameter Tuning</a> - Optimize model parameters</li>
+          <li><a href="/docs/ml/unified-api">Unified ML API</a> - Consistent training interface</li>
+          <li><a href="/docs/ml/model-management">Model Management</a> - Deploy models</li>
         </ul>
       </section>
     </PostgresDocsLayout>

@@ -94,9 +94,9 @@ LIMIT 10;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/rag">RAG Guide</a> - Complete RAG workflows</li>
-          <li><a href="/docs/neurondb/ml/model-management">Model Management</a> - Deploy RAG models</li>
-          <li><a href="/docs/neurondb/hybrid">Hybrid Search</a> - Combine with hybrid search</li>
+          <li><a href="/docs/rag">RAG Guide</a> - Complete RAG workflows</li>
+          <li><a href="/docs/ml/model-management">Model Management</a> - Deploy RAG models</li>
+          <li><a href="/docs/hybrid">Hybrid Search</a> - Combine with hybrid search</li>
         </ul>
       </section>
     </PostgresDocsLayout>

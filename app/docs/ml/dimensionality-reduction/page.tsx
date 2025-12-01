@@ -86,7 +86,7 @@ SELECT pca_whiten(
         <h2>Learn More</h2>
         <p>
           For detailed documentation on PCA, whitening, choosing dimensions, and inverse transformation, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/ml/dimensionality-reduction" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/ml/dimensionality-reduction" target="_blank" rel="noopener noreferrer">
             Dimensionality Reduction Documentation
           </a>
         </p>
@@ -95,8 +95,8 @@ SELECT pca_whiten(
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/clustering">Clustering</a> - Apply clustering after reduction</li>
-          <li><a href="/docs/neurondb/ml/quality-metrics">Quality Metrics</a> - Evaluate reduction quality</li>
+          <li><a href="/docs/ml/clustering">Clustering</a> - Apply clustering after reduction</li>
+          <li><a href="/docs/ml/quality-metrics">Quality Metrics</a> - Evaluate reduction quality</li>
         </ul>
       </section>
     </PostgresDocsLayout>

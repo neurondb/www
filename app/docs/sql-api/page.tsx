@@ -146,9 +146,9 @@ FROM cluster_kmeans(
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/indexing">Indexing Guide</a> - Learn about vector indexes</li>
-          <li><a href="/docs/neurondb/ml">ML Functions</a> - Complete ML API reference</li>
-          <li><a href="/docs/neurondb/configuration">Configuration</a> - All GUC parameters</li>
+          <li><a href="/docs/indexing">Indexing Guide</a> - Learn about vector indexes</li>
+          <li><a href="/docs/ml">ML Functions</a> - Complete ML API reference</li>
+          <li><a href="/docs/configuration">Configuration</a> - All GUC parameters</li>
         </ul>
       </section>
     </PostgresDocsLayout>

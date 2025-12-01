@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     'PostgreSQL AI vector index'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/indexing',
+    canonical: 'https://neurondb.ai/docs/indexing',
   },
   openGraph: {
     title: 'Vector Indexing & ANN Search | HNSW, IVF for NeurondB',
     description: 'Complete guide to HNSW and IVF vector indexes in NeurondB. Optimize ANN search for 10M+ vectors with millisecond latency.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/indexing',
+    url: 'https://neurondb.ai/docs/indexing',
   },
 }
 
@@ -308,7 +308,7 @@ SET ivf.probes = 20;`}
 
       <section id="gpu-acceleration">
         <h2>GPU-Accelerated Distance Functions</h2>
-        <p>When GPU acceleration is enabled, NeuronDB provides GPU-accelerated distance computation functions for batch operations. See the <a href="/docs/neurondb/gpu">GPU Acceleration</a> page for configuration details.</p>
+        <p>When GPU acceleration is enabled, NeuronDB provides GPU-accelerated distance computation functions for batch operations. See the <a href="/docs/gpu">GPU Acceleration</a> page for configuration details.</p>
         <SqlCodeBlock
           title="GPU distance functions"
           code={`-- Enable GPU acceleration (session-level)
@@ -386,10 +386,10 @@ LIMIT 10;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/gpu">Learn about GPU acceleration</a> for faster distance computation.</li>
-          <li><a href="/docs/neurondb/hybrid">Explore hybrid search</a> combining vector and full-text search.</li>
-          <li><a href="/docs/neurondb/analytics">Use ML analytics</a> for clustering and outlier detection.</li>
-          <li><a href="/docs/neurondb/performance">Optimize performance</a> with indexing and query best practices.</li>
+          <li><a href="/docs/gpu">Learn about GPU acceleration</a> for faster distance computation.</li>
+          <li><a href="/docs/hybrid">Explore hybrid search</a> combining vector and full-text search.</li>
+          <li><a href="/docs/analytics">Use ML analytics</a> for clustering and outlier detection.</li>
+          <li><a href="/docs/performance">Optimize performance</a> with indexing and query best practices.</li>
         </ul>
       </section>
     </PostgresDocsLayout>

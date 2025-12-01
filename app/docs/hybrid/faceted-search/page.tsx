@@ -89,7 +89,7 @@ SELECT facet_counts(
         <h2>Learn More</h2>
         <p>
           For detailed documentation on faceted search, facet hierarchies, filtering strategies, and performance optimization, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/hybrid/faceted-search" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/hybrid/faceted-search" target="_blank" rel="noopener noreferrer">
             Faceted Search Documentation
           </a>
         </p>
@@ -98,8 +98,8 @@ SELECT facet_counts(
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/hybrid/overview">Hybrid Search</a> - Combined search strategies</li>
-          <li><a href="/docs/neurondb/hybrid/temporal-search">Temporal Search</a> - Time-based filtering</li>
+          <li><a href="/docs/hybrid/overview">Hybrid Search</a> - Combined search strategies</li>
+          <li><a href="/docs/hybrid/temporal-search">Temporal Search</a> - Time-based filtering</li>
         </ul>
       </section>
     </PostgresDocsLayout>

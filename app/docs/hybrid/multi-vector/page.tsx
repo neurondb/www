@@ -78,7 +78,7 @@ LIMIT 10;`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on multi-vector strategies, embedding selection, weight optimization, and performance tuning, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/hybrid/multi-vector" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/hybrid/multi-vector" target="_blank" rel="noopener noreferrer">
             Multi-Vector Documentation
           </a>
         </p>
@@ -87,8 +87,8 @@ LIMIT 10;`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/hybrid/overview">Hybrid Search</a> - Combine multiple search types</li>
-          <li><a href="/docs/neurondb/indexing">Vector Search</a> - Vector similarity</li>
+          <li><a href="/docs/hybrid/overview">Hybrid Search</a> - Combine multiple search types</li>
+          <li><a href="/docs/indexing">Vector Search</a> - Vector similarity</li>
         </ul>
       </section>
     </PostgresDocsLayout>

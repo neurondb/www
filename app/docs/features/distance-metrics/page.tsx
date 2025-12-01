@@ -136,9 +136,9 @@ LIMIT  12;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/indexing">Indexing Guide</a> - Create indexes for distance metrics</li>
-          <li><a href="/docs/neurondb/features/quantization">Quantization</a> - Compress vectors</li>
-          <li><a href="/docs/neurondb/performance">Performance</a> - Optimize distance calculations</li>
+          <li><a href="/docs/indexing">Indexing Guide</a> - Create indexes for distance metrics</li>
+          <li><a href="/docs/features/quantization">Quantization</a> - Compress vectors</li>
+          <li><a href="/docs/performance">Performance</a> - Optimize distance calculations</li>
         </ul>
       </section>
     </PostgresDocsLayout>

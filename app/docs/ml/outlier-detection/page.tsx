@@ -62,9 +62,9 @@ SELECT detect_outliers_zscore(
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/svm">Support Vector Machines</a> - SVM classifiers</li>
-          <li><a href="/docs/neurondb/ml/unified-api">Unified ML API</a> - Consistent training interface</li>
-          <li><a href="/docs/neurondb/analytics">Analytics Suite</a> - Complete ML analytics</li>
+          <li><a href="/docs/ml/svm">Support Vector Machines</a> - SVM classifiers</li>
+          <li><a href="/docs/ml/unified-api">Unified ML API</a> - Consistent training interface</li>
+          <li><a href="/docs/analytics">Analytics Suite</a> - Complete ML analytics</li>
         </ul>
       </section>
     </PostgresDocsLayout>

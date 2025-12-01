@@ -81,7 +81,7 @@ SET neurondb.huggingface_endpoint = 'https://api-inference.huggingface.co';`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on LLM integration, provider configuration, model selection, and cost optimization, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/llm" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/llm" target="_blank" rel="noopener noreferrer">
             LLM Integration Documentation
           </a>
         </p>
@@ -90,8 +90,8 @@ SET neurondb.huggingface_endpoint = 'https://api-inference.huggingface.co';`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/rag">RAG Overview</a> - RAG pipeline</li>
-          <li><a href="/docs/neurondb/rag/document-processing">Document Processing</a> - Text processing</li>
+          <li><a href="/docs/rag">RAG Overview</a> - RAG pipeline</li>
+          <li><a href="/docs/rag/document-processing">Document Processing</a> - Text processing</li>
         </ul>
       </section>
     </PostgresDocsLayout>

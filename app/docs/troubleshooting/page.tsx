@@ -214,9 +214,9 @@ WHERE attrelid = 'documents'::regclass
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/configuration">Configuration Reference</a> - Verify each GUC parameter and recommended value after making changes.</li>
-          <li><a href="/docs/neurondb/performance">Performance Tuning</a> - Benchmark NeurondB after applying fixes to confirm SLO improvements.</li>
-          <li><a href="https://github.com/pgElephant/NeurondB/issues" target="_blank" rel="noopener noreferrer">Open GitHub Issue</a> - Share logs and repro steps with the community for unresolved bugs.</li>
+          <li><a href="/docs/configuration">Configuration Reference</a> - Verify each GUC parameter and recommended value after making changes.</li>
+          <li><a href="/docs/performance">Performance Tuning</a> - Benchmark NeurondB after applying fixes to confirm SLO improvements.</li>
+          <li><a href="https://github.com/neurondb-ai/neurondb/issues" target="_blank" rel="noopener noreferrer">Open GitHub Issue</a> - Share logs and repro steps with the community for unresolved bugs.</li>
         </ul>
       </section>
     </PostgresDocsLayout>

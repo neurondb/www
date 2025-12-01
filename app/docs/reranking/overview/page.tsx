@@ -100,19 +100,19 @@ FROM reranked_results;`}
       <section>
         <h2>Reranking Methods</h2>
         <ul>
-          <li><a href="/docs/neurondb/reranking/cross-encoder">Cross-Encoder</a> - Neural reranking models</li>
-          <li><a href="/docs/neurondb/reranking/llm-reranking">LLM Reranking</a> - GPT/Claude-powered scoring</li>
-          <li><a href="/docs/neurondb/reranking/colbert">ColBERT</a> - Late interaction models</li>
-          <li><a href="/docs/neurondb/reranking/ensemble">Ensemble</a> - Combine multiple strategies</li>
+          <li><a href="/docs/reranking/cross-encoder">Cross-Encoder</a> - Neural reranking models</li>
+          <li><a href="/docs/reranking/llm-reranking">LLM Reranking</a> - GPT/Claude-powered scoring</li>
+          <li><a href="/docs/reranking/colbert">ColBERT</a> - Late interaction models</li>
+          <li><a href="/docs/reranking/ensemble">Ensemble</a> - Combine multiple strategies</li>
         </ul>
       </section>
 
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/inference">Inference Runtime</a> - ONNX model deployment</li>
-          <li><a href="/docs/neurondb/hybrid/overview">Hybrid Retrieval</a> - Combine with hybrid search</li>
-          <li><a href="/docs/neurondb/rag">RAG Pipelines</a> - Complete RAG workflows</li>
+          <li><a href="/docs/ml/inference">Inference Runtime</a> - ONNX model deployment</li>
+          <li><a href="/docs/hybrid/overview">Hybrid Retrieval</a> - Combine with hybrid search</li>
+          <li><a href="/docs/rag">RAG Pipelines</a> - Complete RAG workflows</li>
         </ul>
       </section>
     </PostgresDocsLayout>

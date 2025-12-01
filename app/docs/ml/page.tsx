@@ -110,9 +110,9 @@ export default function MLPage() {
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/inference">ONNX Inference</a> - Deploy ONNX models</li>
-          <li><a href="/docs/neurondb/ml/embeddings">Embeddings</a> - Generate embeddings</li>
-          <li><a href="/docs/neurondb/ml/clustering">Clustering</a> - ML clustering algorithms</li>
+          <li><a href="/docs/ml/inference">ONNX Inference</a> - Deploy ONNX models</li>
+          <li><a href="/docs/ml/embeddings">Embeddings</a> - Generate embeddings</li>
+          <li><a href="/docs/ml/clustering">Clustering</a> - ML clustering algorithms</li>
         </ul>
       </section>
     </PostgresDocsLayout>

@@ -21,7 +21,7 @@ const markdown = `![NeuronDB header](/blog/neurondb/header.svg?v=7)
 
 # NeuronDB: PostgreSQL AI Vector Database Extension
 
-**[View on GitHub](https://github.com/pgElephant/NeurondB)** | **[Download Latest Release](https://github.com/pgElephant/NeurondB/releases)** | **[Documentation](https://www.pgelephant.com/docs/neurondb)**
+**[View on GitHub](https://github.com/neurondb-ai/neurondb)** | **[Download Latest Release](https://github.com/neurondb-ai/neurondb/releases)** | **[Documentation](https://neurondb.ai/docs)**
 
 ## Executive Summary
 
@@ -139,7 +139,7 @@ Optional CUDA support for performance improvements:
 sudo apt-get install -y postgresql-server-dev-all build-essential
 
 # Download and install NeuronDB
-wget https://github.com/pgElephant/NeurondB/releases/latest/download/neurondb-pg16-ubuntu.tar.gz
+wget https://github.com/neurondb-ai/neurondb/releases/latest/download/neurondb-pg16-ubuntu.tar.gz
 tar -xzf neurondb-pg16-ubuntu.tar.gz
 cd neurondb
 sudo make install
@@ -151,7 +151,7 @@ psql -c "CREATE EXTENSION neurondb;"
 **macOS**
 \`\`\`bash
 # Install with Homebrew
-brew install pgelephant/tap/neurondb
+brew install neurondb-ai/tap/neurondb
 
 # Enable extension
 psql -c "CREATE EXTENSION neurondb;"
@@ -159,7 +159,7 @@ psql -c "CREATE EXTENSION neurondb;"
 
 **Build from Source**
 \`\`\`bash
-git clone https://github.com/pgElephant/NeurondB.git
+git clone https://github.com/neurondb-ai/neurondb.git
 cd NeurondB
 make PG_CONFIG=/path/to/pg_config
 sudo make install
@@ -525,30 +525,29 @@ SELECT * FROM vectors ORDER BY embedding <=> '[1,2,3...]' LIMIT 10;
 ## Community and Support
 
 **Get Involved**
-- [Report Issues](https://github.com/pgElephant/NeurondB/issues)
-- [Discussions](https://github.com/pgElephant/NeurondB/discussions)
-- [Documentation](https://www.pgelephant.com/docs/neurondb)
-- [Contributing Guide](https://github.com/pgElephant/NeurondB/blob/main/CONTRIBUTING.md)
+- [Report Issues](https://github.com/neurondb-ai/neurondb/issues)
+- [Discussions](https://github.com/neurondb-ai/neurondb/discussions)
+- [Documentation](https://neurondb.ai/docs/neurondb)
+- [Contributing Guide](https://github.com/neurondb-ai/neurondb/blob/main/CONTRIBUTING.md)
 
 **Commercial Support**
-For production deployments, enterprise support, and custom features, contact [support@pgelephant.com](mailto:support@pgelephant.com)
+For production deployments, enterprise support, and custom features, contact [support@neurondb.ai](mailto:support@neurondb.ai)
 
 ## Conclusion
 
 NeuronDB adds AI capabilities to PostgreSQL. You do not need separate vector databases, ML services, or complex integrations. NeuronDB provides performance, GPU acceleration, and AI capabilities. You build semantic search, RAG applications, and recommendation systems in PostgreSQL.
 
 **Get Started**
-- [Download NeuronDB](https://github.com/pgElephant/NeurondB/releases)
-- [Read the Docs](https://www.pgelephant.com/docs/neurondb)
-- [Quick Start Guide](https://www.pgelephant.com/docs/neurondb/getting-started)
+- [Download NeuronDB](https://github.com/neurondb-ai/neurondb/releases)
+- [Read the Docs](https://neurondb.ai/docs/neurondb)
+- [Quick Start Guide](https://neurondb.ai/docs/getting-started)
 
 ---
 
-**About pgElephant**
+**About NeuronDB**
 
-pgElephant builds PostgreSQL extensions for data workloads. We extend PostgreSQL's capabilities while maintaining reliability, simplicity, and open-source philosophy.
+NeuronDB builds PostgreSQL extensions for data workloads. We extend PostgreSQL's capabilities while maintaining reliability, simplicity, and open-source philosophy.
 
-Other projects: [pg_stat_insights](https://www.pgelephant.com/docs/pg-stat-insights) | [pgBalancer](https://www.pgelephant.com/docs/pgbalancer) | [pgRaft](https://www.pgelephant.com/docs/pgraft)
 `;
 
 export default function BlogPost() {
@@ -563,7 +562,7 @@ export default function BlogPost() {
           <div className="border-t border-white/10 pt-8">
             <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
             <ShareOnLinkedIn
-              url="https://www.pgelephant.com/blog/neurondb"
+              url="https://neurondb.ai/blog/neurondb"
               title="🧠 NeuronDB: PostgreSQL AI Vector Database Extension"
               summary="Transform PostgreSQL into an AI platform with vector search, ML inference, and GPU acceleration. HNSW indexing, 10+ distance metrics, RAG capabilities, and full pgvector compatibility. Build semantic search, recommendation systems, and AI applications directly in PostgreSQL."
               hashtags={[
@@ -575,7 +574,7 @@ export default function BlogPost() {
                 'RAG',
                 'GPU',
                 'NeuronDB',
-                'pgElephant',
+                'NeuronDB',
                 'OpenSource',
                 'DeepLearning',
                 'NLP'

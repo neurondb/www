@@ -54,7 +54,7 @@ SELECT idx, score FROM rerank_colbert(
         <h2>Learn More</h2>
         <p>
           For detailed documentation on ColBERT models, late interaction, and efficiency optimization, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/reranking/colbert" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/reranking/colbert" target="_blank" rel="noopener noreferrer">
             ColBERT Documentation
           </a>
         </p>
@@ -63,8 +63,8 @@ SELECT idx, score FROM rerank_colbert(
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/reranking/cross-encoder">Cross-Encoder</a> - Neural reranking</li>
-          <li><a href="/docs/neurondb/reranking/ensemble">Ensemble</a> - Combine strategies</li>
+          <li><a href="/docs/reranking/cross-encoder">Cross-Encoder</a> - Neural reranking</li>
+          <li><a href="/docs/reranking/ensemble">Ensemble</a> - Combine strategies</li>
         </ul>
       </section>
     </PostgresDocsLayout>

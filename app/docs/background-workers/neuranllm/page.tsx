@@ -66,7 +66,7 @@ SELECT * FROM neurondb.llm_jobs WHERE status = 'pending';`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on LLM job processing, crash recovery, and error handling, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/background-workers/neuranllm" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/background-workers/neuranllm" target="_blank" rel="noopener noreferrer">
             neuranllm Documentation
           </a>
         </p>
@@ -75,8 +75,8 @@ SELECT * FROM neurondb.llm_jobs WHERE status = 'pending';`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/background-workers">Background Workers</a> - Overview</li>
-          <li><a href="/docs/neurondb/rag/llm-integration">LLM Integration</a> - LLM providers</li>
+          <li><a href="/docs/background-workers">Background Workers</a> - Overview</li>
+          <li><a href="/docs/rag/llm-integration">LLM Integration</a> - LLM providers</li>
         </ul>
       </section>
     </PostgresDocsLayout>

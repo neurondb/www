@@ -118,9 +118,9 @@ FROM source_documents;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/inference">ONNX Inference</a> - Deploy custom models</li>
-          <li><a href="/docs/neurondb/indexing">Vector Indexing</a> - Index embeddings for fast search</li>
-          <li><a href="/docs/neurondb/rag">RAG Pipelines</a> - Build RAG applications</li>
+          <li><a href="/docs/ml/inference">ONNX Inference</a> - Deploy custom models</li>
+          <li><a href="/docs/indexing">Vector Indexing</a> - Index embeddings for fast search</li>
+          <li><a href="/docs/rag">RAG Pipelines</a> - Build RAG applications</li>
         </ul>
       </section>
     </PostgresDocsLayout>

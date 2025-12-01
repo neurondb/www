@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     'PostgreSQL AI settings'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/configuration',
+    canonical: 'https://neurondb.ai/docs/configuration',
   },
   openGraph: {
     title: 'NeurondB Configuration Guide | PostgreSQL Settings & Tuning',
     description: 'Complete NeurondB configuration reference. Tune HNSW indexes, GPU acceleration, and performance for production.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/configuration',
+    url: 'https://neurondb.ai/docs/configuration',
   },
 }
 
@@ -194,9 +194,9 @@ ALTER SYSTEM SET neurondb.enable_prefetch = on;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/performance">Performance Guide</a> - Benchmark NeurondB under different parameter profiles and workloads.</li>
-          <li><a href="/docs/neurondb/background-workers">Background Workers</a> - Configure neuranq, neuranmon, and neurandefrag scheduling.</li>
-          <li><a href="/docs/neurondb/security">Security & Compliance</a> - Enable encryption, differential privacy, and audit logging.</li>
+          <li><a href="/docs/performance">Performance Guide</a> - Benchmark NeurondB under different parameter profiles and workloads.</li>
+          <li><a href="/docs/background-workers">Background Workers</a> - Configure neuranq, neuranmon, and neurandefrag scheduling.</li>
+          <li><a href="/docs/security">Security & Compliance</a> - Enable encryption, differential privacy, and audit logging.</li>
         </ul>
       </section>
     </PostgresDocsLayout>

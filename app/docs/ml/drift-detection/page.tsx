@@ -87,7 +87,7 @@ SELECT temporal_drift_monitor(
         <h2>Learn More</h2>
         <p>
           For detailed documentation on drift detection methods, setting thresholds, alerting, and model retraining strategies, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/ml/drift-detection" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/ml/drift-detection" target="_blank" rel="noopener noreferrer">
             Drift Detection Documentation
           </a>
         </p>
@@ -96,8 +96,8 @@ SELECT temporal_drift_monitor(
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/outlier-detection">Outlier Detection</a> - Detect anomalies</li>
-          <li><a href="/docs/neurondb/ml/quality-metrics">Quality Metrics</a> - Monitor data quality</li>
+          <li><a href="/docs/ml/outlier-detection">Outlier Detection</a> - Detect anomalies</li>
+          <li><a href="/docs/ml/quality-metrics">Quality Metrics</a> - Monitor data quality</li>
         </ul>
       </section>
     </PostgresDocsLayout>

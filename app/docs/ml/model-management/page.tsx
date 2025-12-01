@@ -117,9 +117,9 @@ GROUP BY model_name, version;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/inference">Inference Runtime</a> - Deploy models</li>
-          <li><a href="/docs/neurondb/analytics">Monitoring & QA</a> - Track model performance</li>
-          <li><a href="/docs/neurondb/ml/feature-store">Feature Store</a> - Manage features</li>
+          <li><a href="/docs/ml/inference">Inference Runtime</a> - Deploy models</li>
+          <li><a href="/docs/analytics">Monitoring & QA</a> - Track model performance</li>
+          <li><a href="/docs/ml/feature-store">Feature Store</a> - Manage features</li>
         </ul>
       </section>
     </PostgresDocsLayout>

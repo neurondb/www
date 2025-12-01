@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     'Postgres machine learning'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/ml/random-forest',
+    canonical: 'https://neurondb.ai/docs/ml/random-forest',
   },
   openGraph: {
     title: 'Random Forest in NeurondB | ML Classification & Regression',
     description: 'Train Random Forest models in PostgreSQL with NeurondB. Complete guide with SQL examples and GPU acceleration.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/ml/random-forest',
+    url: 'https://neurondb.ai/docs/ml/random-forest',
   },
 }
 
@@ -228,7 +228,7 @@ FROM rf_metrics_temp m;`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on Random Forest parameters, hyperparameter tuning, feature importance, and GPU optimization, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/ml/random-forest" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/ml/random-forest" target="_blank" rel="noopener noreferrer">
             Random Forest Documentation
           </a>
         </p>
@@ -237,8 +237,8 @@ FROM rf_metrics_temp m;`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/classification">Classification</a> - Other classification algorithms</li>
-          <li><a href="/docs/neurondb/ml/model-management">Model Management</a> - Managing trained models</li>
+          <li><a href="/docs/ml/classification">Classification</a> - Other classification algorithms</li>
+          <li><a href="/docs/ml/model-management">Model Management</a> - Managing trained models</li>
         </ul>
       </section>
     </PostgresDocsLayout>

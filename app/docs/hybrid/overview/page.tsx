@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     'production search pipeline'
   ].join(', '),
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/hybrid/overview',
+    canonical: 'https://neurondb.ai/docs/hybrid/overview',
   },
   openGraph: {
     title: 'Hybrid Search in NeurondB | Vector + Full-Text Fusion',
     description: 'Combine vector similarity and full-text search in NeurondB. Complete guide to hybrid retrieval pipelines.',
     type: 'article',
-    url: 'https://www.pgelephant.com/docs/neurondb/hybrid/overview',
+    url: 'https://neurondb.ai/docs/hybrid/overview',
   },
 }
 
@@ -169,12 +169,12 @@ LIMIT 5;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/hybrid/multi-vector">Multi-Vector Search</a> - Multiple embeddings per document</li>
-          <li><a href="/docs/neurondb/hybrid/faceted-search">Faceted Search</a> - Category-aware filtering</li>
-          <li><a href="/docs/neurondb/hybrid/temporal-search">Temporal Search</a> - Time-decay relevance</li>
-          <li><a href="/docs/neurondb/rag">RAG Playbooks</a> - Complete RAG workflows</li>
-          <li><a href="/docs/neurondb/features/distance-metrics">Distance Metrics</a> - Tune distance functions</li>
-          <li><a href="/docs/neurondb/reranking/overview">Reranking Guide</a> - Cross-encoder reranking</li>
+          <li><a href="/docs/hybrid/multi-vector">Multi-Vector Search</a> - Multiple embeddings per document</li>
+          <li><a href="/docs/hybrid/faceted-search">Faceted Search</a> - Category-aware filtering</li>
+          <li><a href="/docs/hybrid/temporal-search">Temporal Search</a> - Time-decay relevance</li>
+          <li><a href="/docs/rag">RAG Playbooks</a> - Complete RAG workflows</li>
+          <li><a href="/docs/features/distance-metrics">Distance Metrics</a> - Tune distance functions</li>
+          <li><a href="/docs/reranking/overview">Reranking Guide</a> - Cross-encoder reranking</li>
         </ul>
       </section>
     </PostgresDocsLayout>

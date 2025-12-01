@@ -104,9 +104,9 @@ USING neurondb_hamming (fingerprint);`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/performance">Performance Tuning</a> - Optimize quantized search</li>
-          <li><a href="/docs/neurondb/background-workers">Automation Workers</a> - Auto-rebalance quantizers</li>
-          <li><a href="/docs/neurondb/indexing">Indexing</a> - Create quantized indexes</li>
+          <li><a href="/docs/performance">Performance Tuning</a> - Optimize quantized search</li>
+          <li><a href="/docs/background-workers">Automation Workers</a> - Auto-rebalance quantizers</li>
+          <li><a href="/docs/indexing">Indexing</a> - Create quantized indexes</li>
         </ul>
       </section>
     </PostgresDocsLayout>

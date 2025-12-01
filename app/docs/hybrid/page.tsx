@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Hybrid Search PostgreSQL | Vector + Full-Text BM25 - NeuronDB',
   description: 'Combine semantic vector search with BM25 full-text search in PostgreSQL. Reciprocal Rank Fusion (RRF), learning-to-rank, and weighted scoring for best-in-class search relevance.',
   alternates: {
-    canonical: 'https://www.pgelephant.com/docs/neurondb/hybrid',
+    canonical: 'https://neurondb.ai/docs/hybrid',
   },
 }
 
@@ -152,9 +152,9 @@ LIMIT 10;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/hybrid/overview">Hybrid Overview</a> - Detailed hybrid retrieval guide</li>
-          <li><a href="/docs/neurondb/reranking/overview">Reranking</a> - Improve relevance with reranking</li>
-          <li><a href="/docs/neurondb/rag">RAG Pipelines</a> - Build RAG applications</li>
+          <li><a href="/docs/hybrid/overview">Hybrid Overview</a> - Detailed hybrid retrieval guide</li>
+          <li><a href="/docs/reranking/overview">Reranking</a> - Improve relevance with reranking</li>
+          <li><a href="/docs/rag">RAG Pipelines</a> - Build RAG applications</li>
         </ul>
       </section>
     </PostgresDocsLayout>

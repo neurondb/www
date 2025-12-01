@@ -89,9 +89,9 @@ FROM reviews;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/outlier-detection">Outlier Detection</a> - Detect anomalies</li>
-          <li><a href="/docs/neurondb/ml/svm">Support Vector Machines</a> - SVM classifiers</li>
-          <li><a href="/docs/neurondb/ml/embeddings">Embeddings</a> - Generate text embeddings</li>
+          <li><a href="/docs/ml/outlier-detection">Outlier Detection</a> - Detect anomalies</li>
+          <li><a href="/docs/ml/svm">Support Vector Machines</a> - SVM classifiers</li>
+          <li><a href="/docs/ml/embeddings">Embeddings</a> - Generate text embeddings</li>
         </ul>
       </section>
     </PostgresDocsLayout>

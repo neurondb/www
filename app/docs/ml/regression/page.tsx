@@ -93,9 +93,9 @@ SELECT evaluate_linear_regression(
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/ml/rag">RAG Pipeline</a> - Build RAG applications</li>
-          <li><a href="/docs/neurondb/ml/hyperparameter-tuning">Hyperparameter Tuning</a> - Optimize model parameters</li>
-          <li><a href="/docs/neurondb/ml/model-management">Model Management</a> - Deploy models</li>
+          <li><a href="/docs/ml/rag">RAG Pipeline</a> - Build RAG applications</li>
+          <li><a href="/docs/ml/hyperparameter-tuning">Hyperparameter Tuning</a> - Optimize model parameters</li>
+          <li><a href="/docs/ml/model-management">Model Management</a> - Deploy models</li>
         </ul>
       </section>
     </PostgresDocsLayout>

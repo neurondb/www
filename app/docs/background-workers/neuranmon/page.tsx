@@ -64,7 +64,7 @@ SELECT * FROM neurondb.tuning_recommendations;`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on query auto-tuning, performance optimization, and monitoring, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/background-workers/neuranmon" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/background-workers/neuranmon" target="_blank" rel="noopener noreferrer">
             neuranmon Documentation
           </a>
         </p>
@@ -73,8 +73,8 @@ SELECT * FROM neurondb.tuning_recommendations;`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/background-workers">Background Workers</a> - Overview</li>
-          <li><a href="/docs/neurondb/performance/monitoring">Monitoring</a> - Performance monitoring</li>
+          <li><a href="/docs/background-workers">Background Workers</a> - Overview</li>
+          <li><a href="/docs/performance/monitoring">Monitoring</a> - Performance monitoring</li>
         </ul>
       </section>
     </PostgresDocsLayout>

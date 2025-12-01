@@ -121,8 +121,8 @@ GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA neurondb TO admin_role;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/neurondb/configuration">Configuration Reference</a> - Security-related GUC parameters</li>
-          <li><a href="/docs/neurondb/troubleshooting">Troubleshooting</a> - Security-related issues</li>
+          <li><a href="/docs/configuration">Configuration Reference</a> - Security-related GUC parameters</li>
+          <li><a href="/docs/troubleshooting">Troubleshooting</a> - Security-related issues</li>
         </ul>
       </section>
     </PostgresDocsLayout>

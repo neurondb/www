@@ -63,7 +63,7 @@ FROM documents;`}
         <h2>Learn More</h2>
         <p>
           For detailed documentation on ROCm setup and AMD GPU configuration, visit:{' '}
-          <a href="https://www.pgelephant.com/docs/neurondb/gpu" target="_blank" rel="noopener noreferrer">
+          <a href="https://neurondb.ai/docs/gpu" target="_blank" rel="noopener noreferrer">
             ROCm Support Documentation
           </a>
         </p>
@@ -72,8 +72,8 @@ FROM documents;`}
       <section>
         <h2>Related Topics</h2>
         <ul>
-          <li><a href="/docs/neurondb/gpu/cuda-support">CUDA Support</a> - NVIDIA GPU support</li>
-          <li><a href="/docs/neurondb/gpu/auto-detection">GPU Auto-Detection</a> - Automatic detection</li>
+          <li><a href="/docs/gpu/cuda-support">CUDA Support</a> - NVIDIA GPU support</li>
+          <li><a href="/docs/gpu/auto-detection">GPU Auto-Detection</a> - Automatic detection</li>
         </ul>
       </section>
     </PostgresDocsLayout>
