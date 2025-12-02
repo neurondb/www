@@ -19,8 +19,7 @@ const NeurondBDemoTerminal = () => {
   const [cursorVisible, setCursorVisible] = useState(true)
   const [speedMultiplier, setSpeedMultiplier] = useState(1)
   // Two-level tab structure: mainTab -> subTab
-  type MainTabType = 'build' | 'vectors' | 'ml' | 'embeddings' | 'llm' | 'gpu' | 'hybrid' | 'advanced'
-  const [activeMainTab, setActiveMainTab] = useState<MainTabType>('build')
+  const [activeMainTab, setActiveMainTab] = useState<'build' | 'vectors' | 'ml' | 'embeddings' | 'llm' | 'gpu' | 'hybrid' | 'advanced' | 'neuronagent' | 'neuronmcp'>('build')
   const [activeSubTab, setActiveSubTab] = useState<string>('')
 
   // Comprehensive tab structure covering all NeuronDB features
@@ -47,7 +46,9 @@ const NeurondBDemoTerminal = () => {
     advanced: {
       subTabs: ['sparse', 'quantization', 'workers', 'onnx', 'metrics', 'planner', 'types'],
       defaultSubTab: 'sparse'
-    }
+    },
+    neuronagent: { subTabs: [], defaultSubTab: '' },
+    neuronmcp: { subTabs: [], defaultSubTab: '' }
   }), [])
 
   // Initialize sub-tab when main tab changes
@@ -76,7 +77,7 @@ const NeurondBDemoTerminal = () => {
   // NeurondB-specific demo commands and their outputs
   const buildCommands = useMemo(() => [
     {
-      command: 'git clone https://github.com/neurondb-ai/neurondb.git && cd neurondb',
+      command: 'git clone https://github.com/pgelephant/neurondb.git && cd neurondb',
       output: [
         '\x1b[32mCloning into \'neurondb\'...\x1b[0m',
         'remote: Enumerating objects: 2847, done.',
@@ -2293,6 +2294,116 @@ const NeurondBDemoTerminal = () => {
     }
   ], [])
 
+  // NeuronAgent Commands
+  const neuronagentCommands = useMemo(() => [
+    {
+      command: 'cd NeuronAgent && go run cmd/agent-server/main.go',
+      output: [
+        '\x1b[32mStarting NeuronAgent server...\x1b[0m',
+        'Database connection established',
+        'Running migrations...',
+        '\x1b[32m✓ Migrations completed\x1b[0m',
+        'Starting HTTP server on :8080',
+        '\x1b[32m✓ NeuronAgent server ready\x1b[0m',
+        '\x1b[36m  REST API: http://localhost:8080/api/v1\x1b[0m',
+        '\x1b[36m  WebSocket: ws://localhost:8080/ws\x1b[0m',
+        '\x1b[36m  Health: http://localhost:8080/health\x1b[0m'
+      ],
+      isShellCommand: true
+    },
+    {
+      command: 'curl -X POST http://localhost:8080/api/v1/agents \\',
+      output: [
+        '  -H "Authorization: Bearer YOUR_API_KEY" \\',
+        '  -H "Content-Type: application/json" \\',
+        '  -d \'{"name": "research_agent", "profile": "research", "tools": ["sql", "http"]}\''
+      ],
+      isShellCommand: true
+    },
+    {
+      command: '',
+      output: [
+        '{',
+        '  "id": "550e8400-e29b-41d4-a716-446655440000",',
+        '  "name": "research_agent",',
+        '  "profile": "research",',
+        '  "tools": ["sql", "http"],',
+        '  "created_at": "2025-01-15T10:30:00Z",',
+        '  "status": "active"',
+        '}',
+        '',
+        '\x1b[32m✓ Agent created successfully\x1b[0m',
+        '\x1b[36m  Agent ID: 550e8400-e29b-41d4-a716-446655440000\x1b[0m'
+      ],
+      isShellCommand: true
+    },
+    {
+      command: 'curl -X POST http://localhost:8080/api/v1/sessions \\',
+      output: [
+        '  -H "Authorization: Bearer YOUR_API_KEY" \\',
+        '  -H "Content-Type: application/json" \\',
+        '  -d \'{"agent_id": "550e8400-e29b-41d4-a716-446655440000"}\''
+      ],
+      isShellCommand: true
+    },
+    {
+      command: '',
+      output: [
+        '{',
+        '  "id": "660e8400-e29b-41d4-a716-446655440001",',
+        '  "agent_id": "550e8400-e29b-41d4-a716-446655440000",',
+        '  "created_at": "2025-01-15T10:31:00Z",',
+        '  "status": "active"',
+        '}',
+        '',
+        '\x1b[32m✓ Session created successfully\x1b[0m',
+        '\x1b[36m  Session ID: 660e8400-e29b-41d4-a716-446655440001\x1b[0m'
+      ],
+      isShellCommand: true
+    },
+    {
+      command: 'curl -X POST http://localhost:8080/api/v1/sessions/660e8400-e29b-41d4-a716-446655440001/messages \\',
+      output: [
+        '  -H "Authorization: Bearer YOUR_API_KEY" \\',
+        '  -H "Content-Type: application/json" \\',
+        '  -d \'{"role": "user", "content": "Find documents about machine learning"}\''
+      ],
+      isShellCommand: true
+    },
+    {
+      command: '',
+      output: [
+        '{',
+        '  "id": "770e8400-e29b-41d4-a716-446655440002",',
+        '  "session_id": "660e8400-e29b-41d4-a716-446655440001",',
+        '  "role": "assistant",',
+        '  "content": "I found 5 documents about machine learning using vector search...",',
+        '  "tools_used": ["sql"],',
+        '  "created_at": "2025-01-15T10:32:00Z"',
+        '}',
+        '',
+        '\x1b[32m✓ Message processed successfully\x1b[0m',
+        '\x1b[36m  Agent used SQL tool to query NeuronDB vector search\x1b[0m',
+        '\x1b[36m  Retrieved 5 relevant documents from memory\x1b[0m'
+      ],
+      isShellCommand: true
+    },
+    {
+      command: 'curl http://localhost:8080/health',
+      output: [
+        '{',
+        '  "status": "healthy",',
+        '  "database": "connected",',
+        '  "neurondb": "ready",',
+        '  "version": "1.0.0"',
+        '}',
+        '',
+        '\x1b[32m✓ NeuronAgent service is healthy\x1b[0m'
+      ],
+      isShellCommand: true
+    }
+  ], [])
+
   // Get commands based on active main tab and sub tab
   const getCommands = useCallback(() => {
     // Handle main tabs without sub-tabs
@@ -2359,8 +2470,14 @@ const NeurondBDemoTerminal = () => {
       }
     }
 
+    // Handle NeuronAgent tab
+    if (activeMainTab === 'neuronagent') return neuronagentCommands
+
+    // Handle NeuronMCP tab (placeholder for now)
+    if (activeMainTab === 'neuronmcp') return buildCommands
+
     return buildCommands
-  }, [activeMainTab, activeSubTab, buildCommands, vectorOperationsCommands, vectorIndexingCommands, vectorDistanceCommands, vectorQuantizationCommands, mlRegressionCommands, mlClassificationCommands, mlClusteringCommands, mlBoostingCommands, mlNeuralCommands, mlTimeseriesCommands, mlAutomlCommands, mlRecommenderCommands, embeddingCommands, embeddingsBatchCommands, embeddingsConfigCommands, embeddingsHfModelsCommands, multimodalCommands, gpuCommands, hybridCommands, ragCommands, rerankingCommands, sparseCommands, quantizationCommands, advancedOnnxCommands, advancedMetricsCommands, advancedPlannerCommands, advancedTypesCommands, workersCommands])
+  }, [activeMainTab, activeSubTab, buildCommands, vectorOperationsCommands, vectorIndexingCommands, vectorDistanceCommands, vectorQuantizationCommands, mlRegressionCommands, mlClassificationCommands, mlClusteringCommands, mlBoostingCommands, mlNeuralCommands, mlTimeseriesCommands, mlAutomlCommands, mlRecommenderCommands, embeddingCommands, embeddingsBatchCommands, embeddingsConfigCommands, embeddingsHfModelsCommands, multimodalCommands, gpuCommands, hybridCommands, ragCommands, rerankingCommands, sparseCommands, quantizationCommands, advancedOnnxCommands, advancedMetricsCommands, advancedPlannerCommands, advancedTypesCommands, workersCommands, neuronagentCommands])
 
   // Cleanup all intervals and timeouts
   const cleanup = useCallback(() => {
@@ -2671,71 +2788,42 @@ const NeurondBDemoTerminal = () => {
             <span className="text-gray-300 text-sm ml-4 font-mono">neurondb-demo</span>
           </div>
           <div className="flex items-center gap-2">
-            {!isRunning && commandHistory.length === 0 && (
-              <button
-                onClick={runDemo}
-                className="flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors font-semibold text-sm"
-              >
-                <Play className="w-4 h-4" />
-                Run Demo
-              </button>
-            )}
-            {isRunning && (
-              <button
-                onClick={stopDemo}
-                className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-semibold text-sm"
-              >
-                <Square className="w-4 h-4" />
-                Stop
-              </button>
-            )}
-            {!isRunning && commandHistory.length > 0 && (
-              <>
-                <button
-                  onClick={runDemo}
-                  className="flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors font-semibold text-sm"
-                >
-                  <Play className="w-4 h-4" />
-                  Run Again
-                </button>
-                <button
-                  onClick={copyToClipboard}
-                  disabled={commandHistory.length === 0}
-                  className={`p-2 rounded transition-all ${
-                    copied 
-                      ? 'bg-green-600 text-white' 
-                      : commandHistory.length === 0
-                      ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
-                      : 'hover:bg-gray-700 text-gray-400 hover:text-white'
-                  }`}
-                  title={copied ? 'Copied!' : 'Copy to clipboard'}
-                >
-                  {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                </button>
-                <button
-                  onClick={resetDemo}
-                  disabled={isRunning}
-                  className={`p-2 rounded transition-all ${
-                    isRunning 
-                      ? 'bg-gray-700 text-gray-500 cursor-not-allowed' 
-                      : 'hover:bg-gray-700 text-gray-400 hover:text-white'
-                  }`}
-                  title="Reset demo"
-                >
-                  <RotateCcw className="w-4 h-4" />
-                </button>
-              </>
-            )}
+            <button
+              onClick={copyToClipboard}
+              disabled={commandHistory.length === 0}
+              className={`p-2 rounded transition-all ${
+                copied 
+                  ? 'bg-green-600 text-white' 
+                  : commandHistory.length === 0
+                  ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                  : 'hover:bg-gray-700 text-gray-400 hover:text-white'
+              }`}
+              title={copied ? 'Copied!' : 'Copy to clipboard'}
+            >
+              {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+            </button>
+            <button
+              onClick={resetDemo}
+              disabled={isRunning}
+              className={`p-2 rounded transition-all ${
+                isRunning 
+                  ? 'bg-gray-700 text-gray-500 cursor-not-allowed' 
+                  : 'hover:bg-gray-700 text-gray-400 hover:text-white'
+              }`}
+              title="Reset demo"
+            >
+              <RotateCcw className="w-4 h-4" />
+            </button>
           </div>
         </div>
         
         {/* Main Tabs */}
         <div className="flex gap-2 flex-wrap mb-2">
-          {(['build', 'vectors', 'ml', 'embeddings', 'llm', 'gpu', 'hybrid', 'advanced'] as const).map((mainTab) => (
+          {(['build', 'vectors', 'ml', 'embeddings', 'llm', 'gpu', 'hybrid', 'advanced', 'neuronagent', 'neuronmcp'] as const).map((mainTab) => (
           <button
               key={mainTab}
             onClick={() => {
-              setActiveMainTab(mainTab as MainTabType)
+                setActiveMainTab(mainTab)
               resetDemo()
             }}
             disabled={isRunning}
@@ -2745,7 +2833,7 @@ const NeurondBDemoTerminal = () => {
                 : 'bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white'
             } ${isRunning ? 'cursor-not-allowed opacity-50' : ''}`}
           >
-              {mainTab === 'llm' ? 'LLM' : mainTab}
+              {mainTab === 'llm' ? 'LLM' : mainTab === 'neuronagent' ? 'NeuronAgent' : mainTab === 'neuronmcp' ? 'NeuronMCP' : mainTab}
           </button>
           ))}
         </div>
@@ -2923,7 +3011,46 @@ const NeurondBDemoTerminal = () => {
       <div className="bg-gray-800 px-4 py-3 border-t border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-3">
+            <button
+              onClick={runDemo}
+              disabled={isRunning}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold transition-all shadow-lg ${
+                isRunning 
+                  ? 'bg-gray-700 text-gray-500 cursor-not-allowed shadow-none' 
+                  : 'bg-emerald-600 hover:bg-emerald-700 text-white hover:scale-105 shadow-emerald-600/30'
+              }`}
+            >
+              <Play className="w-4 h-4" />
+              {isRunning ? 'Running Demo...' : 'Run Demo'}
+            </button>
+            
+            <button
+              onClick={stopDemo}
+              disabled={!isRunning}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold transition-all ${
+                !isRunning 
+                  ? 'bg-gray-700 text-gray-500 cursor-not-allowed' 
+                  : 'bg-red-600 hover:bg-red-700 text-white hover:scale-105'
+              }`}
+            >
+              <Square className="w-4 h-4" />
+              Stop
+            </button>
+
+            <button
+              onClick={resetDemo}
+              disabled={isRunning}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold transition-all ${
+                isRunning 
+                  ? 'bg-gray-700 text-gray-500 cursor-not-allowed' 
+                  : 'bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-white'
+              }`}
+            >
+              <RotateCcw className="w-4 h-4" />
+              Reset
+            </button>
+
+            <div className="flex items-center gap-3 ml-6 pl-6 border-l border-gray-700">
               <span className="text-gray-400 text-sm font-medium">Speed:</span>
               <div className="flex gap-2">
                 {[1, 2, 3].map((speed) => (

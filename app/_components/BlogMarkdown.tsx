@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image'
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import { Highlight, themes } from 'prism-react-renderer';
 
 // Usage: <BlogMarkdown>{markdown}</BlogMarkdown>
@@ -38,6 +39,7 @@ export function BlogMarkdown({ children }: { children: string }) {
     <article className="prose dark:prose-invert max-w-7xl mx-auto py-12 px-6">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw]}
         components={{
           // Headings with proper sizing and styling
           h1({ node, ...props }) {
@@ -60,8 +62,18 @@ export function BlogMarkdown({ children }: { children: string }) {
           },
 
           // Paragraphs with better spacing and readability
-          p({ node, ...props }) {
-            return <p className="text-white/90 text-lg leading-relaxed mb-6 drop-shadow-sm" {...props} />;
+          p({ node, children, ...props }: any) {
+            // Check if paragraph only contains an image - if so, unwrap it
+            const hasOnlyImage = node?.children?.length === 1 && 
+                                 node.children[0]?.type === 'element' && 
+                                 node.children[0]?.tagName === 'img';
+            
+            if (hasOnlyImage) {
+              // Return the image directly without paragraph wrapper
+              return <>{children}</>;
+            }
+            
+            return <p className="text-white/90 text-lg leading-relaxed mb-6 drop-shadow-sm" {...props}>{children}</p>;
           },
 
           // Lists with proper styling
@@ -176,16 +188,18 @@ export function BlogMarkdown({ children }: { children: string }) {
           },
 
           // Images with proper styling (use Next/Image to avoid lint warnings)
+          // Note: Images are block-level elements, so we use a div wrapper
           img({ node, ...props }) {
             const src = (props as any).src as string | undefined
             const alt = ((props as any).alt as string | undefined) || 'Blog image'
             if (!src) return null
+            // Return as a block-level element to prevent nesting in paragraphs
             return (
-              <div style={{ borderRadius: 12, marginBottom: 40, maxWidth: 900, width: '100%', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', overflow: 'hidden' }}>
+              <div style={{ borderRadius: 12, marginBottom: 40, maxWidth: '100%', width: '100%', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', overflow: 'hidden', display: 'block' }}>
                 <Image
                   src={src}
                   alt={alt}
-                  width={900}
+                  width={1280}
                   height={750}
                   style={{ width: '100%', height: 'auto' }}
                   unoptimized
@@ -207,13 +221,21 @@ export function BlogMarkdown({ children }: { children: string }) {
             return <em className="italic text-white/95" {...props} />;
           },
 
-          // Links with proper styling
-          a({ node, ...props }) {
+          // Links with proper styling - internal links are yellow, external are cyan
+          a({ node, className, ...props }: any) {
+            const href = props.href || '';
+            // Internal links (docs, blog) are yellow, external are cyan
+            const isInternalLink = href && (href.startsWith('/docs/') || href.startsWith('/blog/') || href.startsWith('#'));
+            const isYellowLink = isInternalLink || props['data-yellow'] === 'true';
+            
             return (
               <a
-                className="text-cyan-400 hover:text-cyan-300 underline underline-offset-2 transition-colors duration-200"
-                target="_blank"
-                rel="noopener noreferrer"
+                className={isYellowLink 
+                  ? "text-yellow-400 hover:text-yellow-300 underline underline-offset-2 transition-colors duration-200"
+                  : "text-cyan-400 hover:text-cyan-300 underline underline-offset-2 transition-colors duration-200"
+                }
+                target={href && (href.startsWith('http') || href.startsWith('mailto')) && !href.includes('neurondb.ai') ? '_blank' : undefined}
+                rel={href && (href.startsWith('http') || href.startsWith('mailto')) && !href.includes('neurondb.ai') ? 'noopener noreferrer' : undefined}
                 {...props}
               />
             );

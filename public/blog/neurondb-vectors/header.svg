@@ -1,0 +1,89 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#030609;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#0a0f17;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#151b25;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#242a35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#343942;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="overlayGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:0.25" />
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.25" />
+    </linearGradient>
+    <linearGradient id="textGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="400" fill="url(#bgGradient3)"/>
+  <rect width="1200" height="400" fill="url(#overlayGradient3)"/>
+  
+  <g opacity="0.1">
+    <circle cx="100" cy="100" r="3" fill="#fff"/>
+    <circle cx="150" cy="150" r="2" fill="#fff"/>
+    <circle cx="200" cy="80" r="2.5" fill="#fff"/>
+    <circle cx="1000" cy="300" r="3" fill="#fff"/>
+    <circle cx="1100" cy="200" r="2" fill="#fff"/>
+  </g>
+  
+  <!-- Vector visualization -->
+  <g transform="translate(100, 80)" opacity="0.8">
+    <!-- Vector arrows -->
+    <g stroke="#06b6d4" stroke-width="3" fill="#06b6d4">
+      <line x1="0" y1="200" x2="80" y2="100"/>
+      <polygon points="75,105 85,100 75,95"/>
+      <line x1="0" y1="200" x2="120" y2="80"/>
+      <polygon points="115,85 125,80 115,75"/>
+      <line x1="0" y1="200" x2="100" y2="120"/>
+      <polygon points="95,125 105,120 95,115"/>
+    </g>
+    <!-- Vector origin -->
+    <circle cx="0" cy="200" r="8" fill="#4f46e5">
+      <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Vector space grid -->
+  <g transform="translate(800, 100)" opacity="0.4">
+    <line x1="0" y1="0" x2="200" y2="0" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="0" y1="50" x2="200" y2="50" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="0" y1="100" x2="200" y2="100" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="0" y1="150" x2="200" y2="150" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="0" y1="200" x2="200" y2="200" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="0" y1="0" x2="0" y2="200" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="50" y1="0" x2="50" y2="200" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="100" y1="0" x2="100" y2="200" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="150" y1="0" x2="150" y2="200" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="200" stroke="#06b6d4" stroke-width="1"/>
+  </g>
+  
+  <text x="600" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="300" fill="url(#textGradient3)" text-anchor="middle">
+    Complete Guide to Vectors
+  </text>
+  
+  <text x="600" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="300" fill="#fff" text-anchor="middle" opacity="0.9">
+    in PostgreSQL
+  </text>
+  
+  <g transform="translate(280, 260)">
+    <rect x="0" y="0" width="130" height="30" rx="15" fill="#4f46e5" opacity="0.6"/>
+    <text x="65" y="20" fill="#fff" font-size="14" text-anchor="middle">Vector Types</text>
+  </g>
+  <g transform="translate(430, 260)">
+    <rect x="0" y="0" width="130" height="30" rx="15" fill="#06b6d4" opacity="0.6"/>
+    <text x="65" y="20" fill="#fff" font-size="14" text-anchor="middle">HNSW Index</text>
+  </g>
+  <g transform="translate(580, 260)">
+    <rect x="0" y="0" width="130" height="30" rx="15" fill="#10b981" opacity="0.6"/>
+    <text x="65" y="20" fill="#fff" font-size="14" text-anchor="middle">Distance Metrics</text>
+  </g>
+  <g transform="translate(730, 260)">
+    <rect x="0" y="0" width="130" height="30" rx="15" fill="#8b5cf6" opacity="0.6"/>
+    <text x="65" y="20" fill="#fff" font-size="14" text-anchor="middle">Quantization</text>
+  </g>
+</svg>
+

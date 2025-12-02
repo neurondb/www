@@ -18,7 +18,7 @@ export const metadata = {
     },
 };
 
-const markdown = `![NeuronDB header](/blog/neurondb/header.svg?v=7)
+const markdown = `![NeuronDB header](/blog/neurondb-semantic-search-guide/header.svg?v=7)
 
 # Semantic Search Over Text with NeuronDB
 
@@ -940,11 +940,14 @@ NeuronDB adds semantic search directly to PostgreSQL. You build search systems u
 
 Use semantic search for knowledge bases, document search, and RAG applications. All queries in this guide are production-ready and can be adapted to your specific use case.
 
-## Resources
+## Related Blog Posts
 
-- [Documentation](https://neurondb.ai/neurondb)
-- [GitHub Repository](https://github.com/neurondb-ai/neurondb)
-- [Support Email](mailto:support@neurondb.ai)
+- [NeuronDB: PostgreSQL AI Vector Database Extension](/blog/neurondb) - Learn about NeuronDB's complete feature set including vector search, ML inference, GPU acceleration, and RAG capabilities
+- [Complete Guide to Vectors in PostgreSQL](/blog/neurondb-vectors) - Master vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Comprehensive guide with SQL queries, results, and real-world examples
+
+## Support
+
+For questions, issues, or commercial support, contact [support@neurondb.ai](mailto:support@neurondb.ai)
 `;
 
 export default function BlogPost() {
