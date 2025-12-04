@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 // Blog statistics
 const blogStats = [
-  { label: 'Total Articles', value: '3', icon: BookOpen, color: 'text-white' },
+  { label: 'Total Articles', value: '4', icon: BookOpen, color: 'text-white' },
   { label: 'Monthly Readers', value: '2.1k', icon: Eye, color: 'text-white' },
   { label: 'Categories', value: '1', icon: Tag, color: 'text-white' },
   { label: 'Authors', value: '1', icon: Users, color: 'text-white' }
@@ -69,6 +69,23 @@ const blogPosts = [
     likes: 0,
     comments: 0,
     tags: ['NeuronDB', 'Vectors', 'Vector Search', 'HNSW', 'Distance Metrics', 'PostgreSQL', 'Tutorial', 'AI', 'Indexing']
+  },
+  {
+    slug: 'neurondb-mcp-server',
+    title: 'MCP Server: Model Context Protocol Explained',
+    excerpt: 'Complete guide to MCP Server (Model Context Protocol) - what it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation. Learn how MCP enables AI assistants to access external tools and resources.',
+    content: 'Comprehensive guide to MCP Server architecture, protocol implementation, Claude Desktop integration, popular MCP servers, and NeuronMCP. Learn how the Model Context Protocol enables AI assistants to securely access external tools and data sources.',
+    author: 'NeuronDB Team',
+    authorRole: 'Core Developers',
+    date: '2025-02-22',
+    readTime: '28 min read',
+    category: 'Technical',
+    featured: false,
+    icon: 'neurondb',
+    views: 0,
+    likes: 0,
+    comments: 0,
+    tags: ['MCP', 'ModelContextProtocol', 'ClaudeDesktop', 'NeuronMCP', 'AI', 'PostgreSQL', 'VectorDatabase', 'MachineLearning', 'RAG', 'OpenSource', 'NeuronDB']
   }
 ]
 
@@ -105,6 +122,16 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
               <Image
                 src="/blog/neurondb-vectors/header.svg?v=7"
                 alt="NeuronDB Vectors Guide blog header"
+                fill
+                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
+                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
+                unoptimized
+                priority
+              />
+            ) : post.slug === 'neurondb-mcp-server' ? (
+              <Image
+                src="/blog/neurondb-mcp-server/header.svg?v=7"
+                alt="MCP Server blog header"
                 fill
                 className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
                 style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}

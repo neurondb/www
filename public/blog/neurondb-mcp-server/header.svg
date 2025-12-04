@@ -1,0 +1,104 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Website theme gradient - darker version -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#030609;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#0a0f17;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#151b25;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#242a35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#343942;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="overlayGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:0.25" />
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.25" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="protocolGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bgGradient)"/>
+  <rect width="1200" height="400" fill="url(#overlayGradient)"/>
+  
+  <!-- Subtle pattern overlay -->
+  <g opacity="0.1">
+    <circle cx="100" cy="100" r="3" fill="#fff"/>
+    <circle cx="150" cy="150" r="2" fill="#fff"/>
+    <circle cx="200" cy="80" r="2.5" fill="#fff"/>
+    <circle cx="1000" cy="300" r="3" fill="#fff"/>
+    <circle cx="1100" cy="200" r="2" fill="#fff"/>
+    <circle cx="900" cy="250" r="2.5" fill="#fff"/>
+  </g>
+  
+  <!-- MCP Protocol visualization -->
+  <g transform="translate(100, 80)">
+    <!-- Client-Server communication -->
+    <g opacity="0.8">
+      <!-- Client (Claude Desktop) -->
+      <rect x="0" y="60" width="120" height="80" rx="8" fill="url(#protocolGlow)" stroke="#06b6d4" stroke-width="2" opacity="0.3"/>
+      <text x="60" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">Client</text>
+      <text x="60" y="125" font-family="Arial, sans-serif" font-size="11" fill="#06b6d4" text-anchor="middle" opacity="0.8">Claude Desktop</text>
+      
+      <!-- Server (NeuronMCP) -->
+      <rect x="980" y="60" width="120" height="80" rx="8" fill="url(#protocolGlow)" stroke="#10b981" stroke-width="2" opacity="0.3"/>
+      <text x="1040" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Server</text>
+      <text x="1040" y="125" font-family="Arial, sans-serif" font-size="11" fill="#10b981" text-anchor="middle" opacity="0.8">NeuronMCP</text>
+      
+      <!-- Communication arrows -->
+      <path d="M 120 100 L 980 100" stroke="#4f46e5" stroke-width="3" fill="none" opacity="0.6" marker-end="url(#arrowhead)"/>
+      <path d="M 980 140 L 120 140" stroke="#06b6d4" stroke-width="3" fill="none" opacity="0.6" marker-end="url(#arrowheadReverse)"/>
+      
+      <!-- JSON-RPC messages -->
+      <g transform="translate(200, 85)">
+        <rect x="0" y="0" width="180" height="30" rx="4" fill="#1e293b" stroke="#4f46e5" stroke-width="1" opacity="0.8"/>
+        <text x="90" y="20" font-family="monospace" font-size="10" fill="#06b6d4" text-anchor="middle">JSON-RPC Request</text>
+      </g>
+      
+      <g transform="translate(820, 125)">
+        <rect x="0" y="0" width="180" height="30" rx="4" fill="#1e293b" stroke="#10b981" stroke-width="1" opacity="0.8"/>
+        <text x="90" y="20" font-family="monospace" font-size="10" fill="#10b981" text-anchor="middle">JSON-RPC Response</text>
+      </g>
+    </g>
+    
+    <!-- Tools and Resources -->
+    <g transform="translate(450, 180)">
+      <!-- Tools -->
+      <circle cx="0" cy="0" r="25" fill="url(#protocolGlow)" stroke="#4f46e5" stroke-width="2" opacity="0.4">
+        <animate attributeName="r" values="25;28;25" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4f46e5" text-anchor="middle">Tools</text>
+      
+      <!-- Resources -->
+      <circle cx="300" cy="0" r="25" fill="url(#protocolGlow)" stroke="#06b6d4" stroke-width="2" opacity="0.4">
+        <animate attributeName="r" values="25;28;25" dur="3s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      <text x="300" y="5" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#06b6d4" text-anchor="middle">Resources</text>
+      
+      <!-- Connection lines -->
+      <line x1="25" y1="0" x2="275" y2="0" stroke="#4f46e5" stroke-width="2" opacity="0.3"/>
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="320" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="url(#textGradient)" text-anchor="middle">MCP Server</text>
+  <text x="600" y="360" font-family="Arial, sans-serif" font-size="24" fill="#e5e7eb" text-anchor="middle" opacity="0.9">Model Context Protocol Explained</text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#4f46e5" opacity="0.6"/>
+    </marker>
+    <marker id="arrowheadReverse" markerWidth="10" markerHeight="10" refX="1" refY="3" orient="auto">
+      <polygon points="10 0, 0 3, 10 6" fill="#06b6d4" opacity="0.6"/>
+    </marker>
+  </defs>
+</svg>

@@ -7,6 +7,34 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { Highlight, themes } from 'prism-react-renderer';
 
+// Helper function to style arrows and numbered items in text
+const styleSpecialChars = (text: string): React.ReactNode => {
+  if (typeof text !== 'string') return text;
+  
+  // Check if text contains special characters
+  if (!text.includes('→') && !/\[[0-9]+\]/.test(text)) {
+    return text;
+  }
+  
+  const parts = text.split(/(→|\[[0-9]+\])/);
+  if (parts.length === 1) return text;
+  
+  return (
+    <>
+      {parts.map((part, index) => {
+        if (!part) return null;
+        if (part === '→') {
+          return <span key={`arrow-${index}`} className="text-cyan-400 font-bold">{part}</span>;
+        }
+        if (/^\[[0-9]+\]$/.test(part)) {
+          return <span key={`num-${index}`} className="text-cyan-400 font-bold">{part}</span>;
+        }
+        return part;
+      })}
+    </>
+  );
+};
+
 // Usage: <BlogMarkdown>{markdown}</BlogMarkdown>
 export function BlogMarkdown({ children }: { children: string }) {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
@@ -73,7 +101,26 @@ export function BlogMarkdown({ children }: { children: string }) {
               return <>{children}</>;
             }
             
-            return <p className="text-white/90 text-lg leading-relaxed mb-6 drop-shadow-sm" {...props}>{children}</p>;
+            // Process children to style special characters - only process string children
+            const processChildren = (children: any): any => {
+              if (typeof children === 'string') {
+                return styleSpecialChars(children);
+              }
+              if (Array.isArray(children)) {
+                return children.map((child, idx) => {
+                  if (typeof child === 'string') {
+                    const styled = styleSpecialChars(child);
+                    return <React.Fragment key={`p-${idx}`}>{styled}</React.Fragment>;
+                  }
+                  // Don't process React elements, just return them
+                  return child;
+                });
+              }
+              // Don't process if it's already a React element
+              return children;
+            };
+            
+            return <p className="text-white/90 text-lg leading-relaxed mb-6 drop-shadow-sm" {...props}>{processChildren(children)}</p>;
           },
 
           // Lists with proper styling
@@ -214,26 +261,39 @@ export function BlogMarkdown({ children }: { children: string }) {
           },
 
           // Strong and emphasis
-          strong({ node, ...props }) {
-            return <strong className="font-semibold text-white" {...props} />;
+          strong({ node, children, ...props }: any) {
+            // Process children to style special characters - only process string children
+            const processChildren = (children: any): any => {
+              if (typeof children === 'string') {
+                return styleSpecialChars(children);
+              }
+              if (Array.isArray(children)) {
+                return children.map((child, idx) => {
+                  if (typeof child === 'string') {
+                    const styled = styleSpecialChars(child);
+                    return <React.Fragment key={`strong-${idx}`}>{styled}</React.Fragment>;
+                  }
+                  // Don't process React elements, just return them
+                  return child;
+                });
+              }
+              // Don't process if it's already a React element
+              return children;
+            };
+            
+            return <strong className="font-semibold text-white" {...props}>{processChildren(children)}</strong>;
           },
           em({ node, ...props }) {
             return <em className="italic text-white/95" {...props} />;
           },
 
-          // Links with proper styling - internal links are yellow, external are cyan
+          // Links with proper styling - all links are yellow
           a({ node, className, ...props }: any) {
             const href = props.href || '';
-            // Internal links (docs, blog) are yellow, external are cyan
-            const isInternalLink = href && (href.startsWith('/docs/') || href.startsWith('/blog/') || href.startsWith('#'));
-            const isYellowLink = isInternalLink || props['data-yellow'] === 'true';
             
             return (
               <a
-                className={isYellowLink 
-                  ? "text-yellow-400 hover:text-yellow-300 underline underline-offset-2 transition-colors duration-200"
-                  : "text-cyan-400 hover:text-cyan-300 underline underline-offset-2 transition-colors duration-200"
-                }
+                className="text-yellow-400 hover:text-yellow-300 underline underline-offset-2 transition-colors duration-200"
                 target={href && (href.startsWith('http') || href.startsWith('mailto')) && !href.includes('neurondb.ai') ? '_blank' : undefined}
                 rel={href && (href.startsWith('http') || href.startsWith('mailto')) && !href.includes('neurondb.ai') ? 'noopener noreferrer' : undefined}
                 {...props}

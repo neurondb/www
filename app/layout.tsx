@@ -128,6 +128,24 @@ export const metadata: Metadata = {
   },
   category: 'Technology',
   classification: 'Database Software, AI Database, Vector Search, PostgreSQL Extensions',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicons/favicon-16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicons/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicons/favicon-48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicons/favicon-64.png', sizes: '64x64', type: 'image/png' },
+      { url: '/favicons/favicon-128.png', sizes: '128x128', type: 'image/png' },
+      { url: '/favicons/favicon-256.png', sizes: '256x256', type: 'image/png' },
+      { url: '/favicons/favicon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/favicons/favicon-180.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: [
+      { url: '/favicon.ico' },
+    ],
+  },
   other: {
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
@@ -155,19 +173,6 @@ export default function RootLayout({
         
         {/* Preload critical resources */}
         <link rel="preload" href="/og-image.jpg" as="image" type="image/jpeg" />
-        
-        {/* Favicons */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32.png" />
-        <link rel="icon" type="image/png" sizes="48x48" href="/favicons/favicon-48.png" />
-        <link rel="icon" type="image/png" sizes="64x64" href="/favicons/favicon-64.png" />
-        <link rel="icon" type="image/png" sizes="128x128" href="/favicons/favicon-128.png" />
-        <link rel="icon" type="image/png" sizes="256x256" href="/favicons/favicon-256.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/favicons/favicon-512.png" />
-        
-        {/* Apple Touch Icon */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/favicon-180.png" />
         
         {/* Manifest */}
         <link rel="manifest" href="/manifest.json" />
