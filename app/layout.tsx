@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import { siteConfig } from '@/config/site'
 import Header from '@/components/Header'
@@ -180,6 +181,20 @@ export default function RootLayout({
         <meta name="msapplication-starturl" content="/" />
       </head>
       <body className={inter.className} suppressHydrationWarning>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-R4NNPBY0R1"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-R4NNPBY0R1');
+          `}
+        </Script>
+        
         <OrganizationSchema />
         <Header />
         <main role="main">
