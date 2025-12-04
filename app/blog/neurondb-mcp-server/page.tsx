@@ -2,18 +2,46 @@ import { BlogMarkdown } from '../../_components/BlogMarkdown';
 import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
 
 export const metadata = {
-  title: 'MCP Server: Model Context Protocol Explained',
-  description: 'Complete guide to MCP Server (Model Context Protocol) - what it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation. Learn how MCP enables AI assistants to access external tools and resources.',
+  title: 'MCP Server: Model Context Protocol Explained | NeuronDB',
+  description: 'Complete guide to MCP Server (Model Context Protocol) - what it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation. Learn how MCP enables AI assistants to access external tools and resources. Includes JSON-RPC 2.0, stdio transport, tool execution, and resource access.',
+  keywords: ['MCP Server', 'Model Context Protocol', 'Claude Desktop', 'NeuronMCP', 'JSON-RPC', 'AI assistants', 'PostgreSQL', 'vector search', 'MCP protocol', 'stdio transport', 'tool execution', 'resource access', 'MCP servers', 'Anthropic', 'AI integration'],
+  authors: [{ name: 'NeuronDB Team' }],
   openGraph: {
-    title: 'MCP Server: Model Context Protocol Explained',
-    description: 'Complete guide to MCP Server - what it is, how it works, Claude Desktop integration, and NeuronMCP',
-    images: ['/blog/neurondb-mcp-server/og-image.svg'],
+    title: 'MCP Server: Model Context Protocol Explained | NeuronDB',
+    description: 'Complete guide to MCP Server - what it is, how it works, Claude Desktop integration, and NeuronMCP. Learn JSON-RPC 2.0, stdio transport, and tool execution.',
+    url: 'https://neurondb.ai/blog/neurondb-mcp-server',
+    siteName: 'NeuronDB',
+    images: [
+      {
+        url: 'https://neurondb.ai/blog/neurondb-mcp-server/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: 'MCP Server: Model Context Protocol Explained',
+      },
+    ],
+    locale: 'en_US',
+    type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MCP Server: Model Context Protocol Explained',
+    title: 'MCP Server: Model Context Protocol Explained | NeuronDB',
     description: 'Complete guide to MCP Server - what it is, how it works, Claude Desktop integration, and NeuronMCP',
-    images: ['/blog/neurondb-mcp-server/og-image.svg'],
+    images: ['https://neurondb.ai/blog/neurondb-mcp-server/og-image.svg'],
+    creator: '@neurondb',
+  },
+  alternates: {
+    canonical: 'https://neurondb.ai/blog/neurondb-mcp-server',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -612,8 +640,40 @@ For questions, issues, or commercial support, contact [support@neurondb.ai](mail
 `;
 
 export default function BlogPost() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: 'MCP Server: Model Context Protocol Explained',
+    description: 'Complete guide to MCP Server (Model Context Protocol) - what it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation.',
+    image: 'https://neurondb.ai/blog/neurondb-mcp-server/og-image.svg',
+    datePublished: '2024-12-05',
+    dateModified: '2024-12-05',
+    author: {
+      '@type': 'Organization',
+      name: 'NeuronDB',
+      url: 'https://neurondb.ai',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'NeuronDB',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://neurondb.ai/neurondb_ai_512.ico',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://neurondb.ai/blog/neurondb-mcp-server',
+    },
+    keywords: 'MCP Server, Model Context Protocol, Claude Desktop, NeuronMCP, JSON-RPC, AI assistants, PostgreSQL, vector search',
+  };
+
   return (
     <div className="pt-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Blog Content */}
       <div style={{ backgroundColor: '#1f2937' }}>
         <BlogMarkdown>{markdown}</BlogMarkdown>

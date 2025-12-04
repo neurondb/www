@@ -3,18 +3,46 @@ import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
 import BlogPageTracker from '../../../components/BlogPageTracker';
 
 export const metadata = {
-    title: 'Complete Guide to Vectors in PostgreSQL',
-    description: 'Master vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Comprehensive guide with SQL queries, results, and real-world examples. Learn HNSW indexing, distance metrics, quantization, and performance optimization.',
+    title: 'Complete Guide to Vectors in PostgreSQL | NeuronDB Vector Operations',
+    description: 'Master vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Comprehensive guide with SQL queries, results, and real-world examples. Learn HNSW indexing, distance metrics (cosine, L2, inner product), quantization (FP16, INT8, binary), performance optimization, and vector similarity search.',
+    keywords: ['vectors', 'PostgreSQL', 'NeuronDB', 'vector search', 'similarity search', 'HNSW indexing', 'distance metrics', 'cosine similarity', 'L2 distance', 'quantization', 'embedding', 'vector operations', 'pgvector', 'vector database', 'SQL queries', 'performance optimization'],
+    authors: [{ name: 'NeuronDB Team' }],
     openGraph: {
-        title: 'Complete Guide to Vectors in PostgreSQL',
-        description: 'Master vector operations, indexing, and similarity search in PostgreSQL - comprehensive guide with SQL queries and results',
-        images: ['/blog/neurondb/og-image.svg'],
+        title: 'Complete Guide to Vectors in PostgreSQL | NeuronDB Vector Operations',
+        description: 'Master vector operations, indexing, and similarity search in PostgreSQL - comprehensive guide with SQL queries, HNSW indexing, distance metrics, and quantization',
+        url: 'https://neurondb.ai/blog/neurondb-vectors',
+        siteName: 'NeuronDB',
+        images: [
+            {
+                url: 'https://neurondb.ai/blog/neurondb-vectors/og-image.svg',
+                width: 1200,
+                height: 630,
+                alt: 'Complete Guide to Vectors in PostgreSQL',
+            },
+        ],
+        locale: 'en_US',
+        type: 'article',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Complete Guide to Vectors in PostgreSQL',
+        title: 'Complete Guide to Vectors in PostgreSQL | NeuronDB Vector Operations',
         description: 'Master vector operations, indexing, and similarity search in PostgreSQL - comprehensive guide with SQL queries and results',
-        images: ['/blog/neurondb/og-image.svg'],
+        images: ['https://neurondb.ai/blog/neurondb-vectors/og-image.svg'],
+        creator: '@neurondb',
+    },
+    alternates: {
+        canonical: 'https://neurondb.ai/blog/neurondb-vectors',
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
     },
 };
 
@@ -550,8 +578,40 @@ For questions, issues, or commercial support, contact [support@neurondb.ai](mail
 `;
 
 export default function BlogPost() {
+    const structuredData = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: 'Complete Guide to Vectors in PostgreSQL | NeuronDB Vector Operations',
+        description: 'Master vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Comprehensive guide with SQL queries, results, and real-world examples. Learn HNSW indexing, distance metrics, quantization, and performance optimization.',
+        image: 'https://neurondb.ai/blog/neurondb-vectors/og-image.svg',
+        datePublished: '2024-12-05',
+        dateModified: '2024-12-05',
+        author: {
+            '@type': 'Organization',
+            name: 'NeuronDB',
+            url: 'https://neurondb.ai',
+        },
+        publisher: {
+            '@type': 'Organization',
+            name: 'NeuronDB',
+            logo: {
+                '@type': 'ImageObject',
+                url: 'https://neurondb.ai/neurondb_ai_512.ico',
+            },
+        },
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': 'https://neurondb.ai/blog/neurondb-vectors',
+        },
+        keywords: 'vectors, PostgreSQL, NeuronDB, vector search, similarity search, HNSW indexing, distance metrics, cosine similarity, quantization',
+    };
+
     return (
         <div className="pt-16">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
             <BlogPageTracker
                 slug="neurondb-vectors"
                 title="Complete Guide to Vectors in PostgreSQL"

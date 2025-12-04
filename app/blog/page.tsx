@@ -6,8 +6,37 @@ import FooterTemplate from '@/components/templates/FooterTemplate'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: `Blog - ${siteConfig.name}`,
-  description: 'Latest updates, tutorials, and technical insights about NeuronDB',
+  title: 'NeuronDB Blog - Tutorials, Guides & Technical Insights',
+  description: 'Latest updates, tutorials, and technical insights about NeuronDB. Learn about vector search, ML inference, RAG pipelines, PostgreSQL AI extensions, and best practices. Expert guides and real-world examples.',
+  keywords: ['NeuronDB blog', 'PostgreSQL blog', 'vector database blog', 'AI database tutorials', 'ML inference guides', 'RAG pipeline', 'semantic search', 'PostgreSQL AI', 'technical blog', 'database tutorials'],
+  authors: [{ name: 'NeuronDB Team' }],
+  openGraph: {
+    title: 'NeuronDB Blog - Tutorials, Guides & Technical Insights',
+    description: 'Latest updates, tutorials, and technical insights about NeuronDB. Learn about vector search, ML inference, and RAG pipelines.',
+    url: 'https://neurondb.ai/blog',
+    siteName: 'NeuronDB',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NeuronDB Blog - Tutorials, Guides & Technical Insights',
+    description: 'Latest updates, tutorials, and technical insights about NeuronDB.',
+    creator: '@neurondb',
+  },
+  alternates: {
+    canonical: 'https://neurondb.ai/blog',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 // Blog statistics

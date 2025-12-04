@@ -6,8 +6,37 @@ import FooterTemplate from '@/components/templates/FooterTemplate'
 import { siteConfig } from '@/config/site'
 
 export const metadata = {
-  title: `Download - ${siteConfig.name}`,
-  description: 'Download NeuronDB - AI Database Extension for PostgreSQL',
+  title: 'Download NeuronDB - PostgreSQL AI Extension | Free Download',
+  description: 'Download NeuronDB - AI Database Extension for PostgreSQL. Get vector search, ML inference, GPU acceleration, and RAG capabilities. Available for Linux, macOS, and Windows. Free and open source.',
+  keywords: ['download NeuronDB', 'PostgreSQL extension download', 'vector database download', 'AI database download', 'NeuronDB installation', 'PostgreSQL AI extension', 'free download', 'open source'],
+  authors: [{ name: 'NeuronDB Team' }],
+  openGraph: {
+    title: 'Download NeuronDB - PostgreSQL AI Extension | Free Download',
+    description: 'Download NeuronDB - AI Database Extension for PostgreSQL with vector search, ML inference, GPU acceleration, and RAG capabilities.',
+    url: 'https://neurondb.ai/download',
+    siteName: 'NeuronDB',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Download NeuronDB - PostgreSQL AI Extension',
+    description: 'Download NeuronDB - AI Database Extension for PostgreSQL with vector search, ML inference, and GPU acceleration.',
+    creator: '@neurondb',
+  },
+  alternates: {
+    canonical: 'https://neurondb.ai/download',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function DownloadPage() {

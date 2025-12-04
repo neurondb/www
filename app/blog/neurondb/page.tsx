@@ -2,18 +2,46 @@ import { BlogMarkdown } from '../../_components/BlogMarkdown';
 import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
 
 export const metadata = {
-  title: 'NeuronDB a PostgreSQL AI Extension',
-  description: 'NeuronDB is a PostgreSQL extension that adds vector search, ML inference, GPU acceleration, and RAG capabilities. HNSW indexing, 52 ML algorithms, 473 SQL functions, and full pgvector compatibility.',
+  title: 'NeuronDB: PostgreSQL AI Extension for Vector Search & ML | Complete Guide',
+  description: 'NeuronDB is a PostgreSQL extension that adds vector search, ML inference, GPU acceleration, and RAG capabilities. Features HNSW indexing, 52 ML algorithms, 473 SQL functions, full pgvector compatibility, CUDA/ROCm/Metal support, and in-database AI operations. Build semantic search, recommendation systems, and RAG pipelines with SQL.',
+  keywords: ['NeuronDB', 'PostgreSQL extension', 'vector search', 'ML inference', 'GPU acceleration', 'RAG', 'HNSW indexing', 'pgvector', 'semantic search', 'machine learning', 'PostgreSQL AI', 'vector database', 'embedding', 'similarity search', 'CUDA', 'ROCm', 'Metal'],
+  authors: [{ name: 'NeuronDB Team' }],
   openGraph: {
-    title: 'NeuronDB a PostgreSQL AI Extension',
-    description: 'PostgreSQL extension with vector search, ML inference, GPU acceleration, and RAG pipeline',
-    images: ['/blog/neurondb/og-image.svg'],
+    title: 'NeuronDB: PostgreSQL AI Extension for Vector Search & ML | Complete Guide',
+    description: 'PostgreSQL extension with vector search, ML inference, GPU acceleration, and RAG pipeline. HNSW indexing, 52 ML algorithms, 473 SQL functions.',
+    url: 'https://neurondb.ai/blog/neurondb',
+    siteName: 'NeuronDB',
+    images: [
+      {
+        url: 'https://neurondb.ai/blog/neurondb/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: 'NeuronDB: PostgreSQL AI Extension',
+      },
+    ],
+    locale: 'en_US',
+    type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NeuronDB a PostgreSQL AI Extension',
+    title: 'NeuronDB: PostgreSQL AI Extension for Vector Search & ML',
     description: 'PostgreSQL extension with vector search, ML inference, GPU acceleration, and RAG pipeline',
-    images: ['/blog/neurondb/og-image.svg'],
+    images: ['https://neurondb.ai/blog/neurondb/og-image.svg'],
+    creator: '@neurondb',
+  },
+  alternates: {
+    canonical: 'https://neurondb.ai/blog/neurondb',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -748,8 +776,40 @@ For questions, issues, or commercial support, contact [support@neurondb.ai](mail
 `;
 
 export default function BlogPost() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: 'NeuronDB: PostgreSQL AI Extension for Vector Search & ML',
+    description: 'NeuronDB is a PostgreSQL extension that adds vector search, ML inference, GPU acceleration, and RAG capabilities. Features HNSW indexing, 52 ML algorithms, 473 SQL functions, and full pgvector compatibility.',
+    image: 'https://neurondb.ai/blog/neurondb/og-image.svg',
+    datePublished: '2024-12-05',
+    dateModified: '2024-12-05',
+    author: {
+      '@type': 'Organization',
+      name: 'NeuronDB',
+      url: 'https://neurondb.ai',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'NeuronDB',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://neurondb.ai/neurondb_ai_512.ico',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://neurondb.ai/blog/neurondb',
+    },
+    keywords: 'NeuronDB, PostgreSQL extension, vector search, ML inference, GPU acceleration, RAG, HNSW indexing, pgvector, semantic search',
+  };
+
   return (
     <div className="pt-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Blog Content */}
       <div style={{ backgroundColor: '#1f2937' }}>
         <BlogMarkdown>{markdown}</BlogMarkdown>
