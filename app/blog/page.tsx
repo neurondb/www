@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
 // Blog statistics
 const blogStats = [
-  { label: 'Total Articles', value: '4', icon: BookOpen, color: 'text-white' },
+  { label: 'Total Articles', value: '5', icon: BookOpen, color: 'text-white' },
   { label: 'Monthly Readers', value: '2.1k', icon: Eye, color: 'text-white' },
   { label: 'Categories', value: '1', icon: Tag, color: 'text-white' },
   { label: 'Authors', value: '1', icon: Users, color: 'text-white' }
@@ -115,6 +115,23 @@ const blogPosts = [
     likes: 0,
     comments: 0,
     tags: ['MCP', 'ModelContextProtocol', 'ClaudeDesktop', 'NeuronMCP', 'AI', 'PostgreSQL', 'VectorDatabase', 'MachineLearning', 'RAG', 'OpenSource', 'NeuronDB']
+  },
+  {
+    slug: 'rag-complete-guide',
+    title: 'RAG: Retrieval-Augmented Generation Complete Guide',
+    excerpt: 'Complete guide to RAG (Retrieval-Augmented Generation) with detailed examples, SQL queries, and implementation patterns. Learn how to build RAG systems with document retrieval, context building, LLM integration, and response generation.',
+    content: 'Comprehensive guide to RAG architecture, implementation patterns, SQL examples, and NeuronDB integration. Learn how to build RAG systems with document processing, embedding generation, similarity search, context building, and response generation.',
+    author: 'NeuronDB Team',
+    authorRole: 'Core Developers',
+    date: '2025-02-23',
+    readTime: '35 min read',
+    category: 'Technical',
+    featured: false,
+    icon: 'neurondb',
+    views: 0,
+    likes: 0,
+    comments: 0,
+    tags: ['RAG', 'RetrievalAugmentedGeneration', 'LLM', 'VectorSearch', 'SemanticSearch', 'NeuronDB', 'PostgreSQL', 'AI', 'MachineLearning', 'DocumentRetrieval', 'KnowledgeBase']
   }
 ]
 
@@ -161,6 +178,16 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
               <Image
                 src="/blog/neurondb-mcp-server/header.svg?v=7"
                 alt="MCP Server blog header"
+                fill
+                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
+                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
+                unoptimized
+                priority
+              />
+            ) : post.slug === 'rag-complete-guide' ? (
+              <Image
+                src="/blog/rag-complete-guide/header.svg?v=7"
+                alt="RAG Complete Guide blog header"
                 fill
                 className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
                 style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
