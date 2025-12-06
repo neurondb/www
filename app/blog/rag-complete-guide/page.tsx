@@ -2,12 +2,12 @@ import { BlogMarkdown } from '../../_components/BlogMarkdown';
 import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
 
 export const metadata = {
-  title: 'RAG: Retrieval-Augmented Generation Complete Guide | NeuronDB',
+  title: 'RAG: Retrieval-Augmented Generation With PostgreSQL | NeuronDB',
   description: 'Complete guide to RAG (Retrieval-Augmented Generation) with detailed examples, SQL queries, and implementation patterns. Learn how to build RAG systems with document retrieval, context building, LLM integration, and response generation. Includes real-world examples and NeuronDB implementation.',
   keywords: ['RAG', 'Retrieval-Augmented Generation', 'LLM', 'vector search', 'semantic search', 'document retrieval', 'context building', 'NeuronDB', 'PostgreSQL', 'embedding', 'similarity search', 'knowledge base', 'AI', 'machine learning'],
   authors: [{ name: 'NeuronDB Team' }],
   openGraph: {
-    title: 'RAG: Retrieval-Augmented Generation Complete Guide | NeuronDB',
+    title: 'RAG: Retrieval-Augmented Generation With PostgreSQL | NeuronDB',
     description: 'Complete guide to RAG with detailed examples, SQL queries, and implementation patterns. Build RAG systems with document retrieval, context building, and LLM integration.',
     url: 'https://neurondb.ai/blog/rag-complete-guide',
     siteName: 'NeuronDB',
@@ -16,7 +16,7 @@ export const metadata = {
         url: 'https://neurondb.ai/blog/rag-complete-guide/og-image.svg',
         width: 1200,
         height: 630,
-        alt: 'RAG: Retrieval-Augmented Generation Complete Guide',
+        alt: 'RAG: Retrieval-Augmented Generation With PostgreSQL',
       },
     ],
     locale: 'en_US',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RAG: Retrieval-Augmented Generation Complete Guide | NeuronDB',
+    title: 'RAG: Retrieval-Augmented Generation With PostgreSQL | NeuronDB',
     description: 'Complete guide to RAG with detailed examples, SQL queries, and implementation patterns',
     images: ['https://neurondb.ai/blog/rag-complete-guide/og-image.svg'],
     creator: '@neurondb',
@@ -47,7 +47,7 @@ export const metadata = {
 
 const markdown = `![RAG header](/blog/rag-complete-guide/header.svg?v=7)
 
-# RAG: Retrieval-Augmented Generation Complete Guide
+# RAG: Retrieval-Augmented Generation With PostgreSQL
 
 **[View on GitHub](https://github.com/neurondb-ai/neurondb)** | **[Download Latest Release](https://github.com/neurondb-ai/neurondb/releases)** | **[Documentation](/docs/rag)**
 
@@ -1106,11 +1106,11 @@ export default function BlogPost() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
-    headline: 'RAG: Retrieval-Augmented Generation Complete Guide',
+    headline: 'RAG: Retrieval-Augmented Generation With PostgreSQL',
     description: 'Complete guide to RAG (Retrieval-Augmented Generation) with detailed examples, SQL queries, and implementation patterns. Learn how to build RAG systems with document retrieval, context building, LLM integration, and response generation.',
     image: 'https://neurondb.ai/blog/rag-complete-guide/og-image.svg',
-    datePublished: '2024-12-06',
-    dateModified: '2024-12-06',
+    datePublished: '2025-02-23',
+    dateModified: '2025-02-23',
     author: {
       '@type': 'Organization',
       name: 'NeuronDB',
@@ -1147,7 +1147,7 @@ export default function BlogPost() {
             <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
             <ShareOnLinkedIn
               url="https://neurondb.ai/blog/rag-complete-guide"
-              title="RAG: Retrieval-Augmented Generation Complete Guide"
+              title="RAG: Retrieval-Augmented Generation With PostgreSQL"
               summary="Complete guide to RAG with detailed examples, SQL queries, and implementation patterns. Learn how to build RAG systems with document retrieval, context building, and LLM integration."
               hashtags={[
                 'RAG',

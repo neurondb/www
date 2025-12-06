@@ -118,7 +118,7 @@ const blogPosts = [
   },
   {
     slug: 'rag-complete-guide',
-    title: 'RAG: Retrieval-Augmented Generation Complete Guide',
+    title: 'RAG: Retrieval-Augmented Generation With PostgreSQL',
     excerpt: 'Complete guide to RAG (Retrieval-Augmented Generation) with detailed examples, SQL queries, and implementation patterns. Learn how to build RAG systems with document retrieval, context building, LLM integration, and response generation.',
     content: 'Comprehensive guide to RAG architecture, implementation patterns, SQL examples, and NeuronDB integration. Learn how to build RAG systems with document processing, embedding generation, similarity search, context building, and response generation.',
     author: 'NeuronDB Team',
