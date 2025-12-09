@@ -999,19 +999,56 @@ SELECT neurondb.predict(
 
 ## Applications
 
-Machine learning appears in many applications. Email filters classify messages. Recommendation systems suggest products. Image recognition identifies objects. Speech recognition converts audio to text. Medical diagnosis aids doctors. Autonomous vehicles navigate roads.
+Machine learning appears in many applications:
 
-Email filtering uses classification. The system learns from labeled emails. It identifies spam patterns. It filters unwanted messages automatically.
+- **Email Filters**: Classify messages automatically
+- **Recommendation Systems**: Suggest products based on user preferences
+- **Image Recognition**: Identify objects in images
+- **Speech Recognition**: Convert audio to text
+- **Medical Diagnosis**: Aid doctors with clinical decisions
+- **Autonomous Vehicles**: Navigate roads safely
 
-Recommendation systems use collaborative filtering. They find users with similar preferences. They suggest items liked by similar users. They improve with more usage data.
+### Email Filtering
 
-Image recognition uses deep learning. Convolutional neural networks process pixels. They learn visual features. They identify objects in images.
+- Uses classification algorithms
+- The system learns from labeled emails
+- It identifies spam patterns
+- It filters unwanted messages automatically
 
-Speech recognition converts audio to text. Recurrent neural networks process sequences. They learn speech patterns. They transcribe spoken words.
+### Recommendation Systems
 
-Medical diagnosis assists healthcare. Systems learn from patient data. They identify disease indicators. They support clinical decisions.
+- Use collaborative filtering techniques
+- They find users with similar preferences
+- They suggest items liked by similar users
+- They improve with more usage data
 
-Autonomous vehicles navigate environments. They process sensor data. They identify obstacles. They plan safe paths.
+### Image Recognition
+
+- Uses deep learning architectures
+- Convolutional neural networks process pixels
+- They learn visual features automatically
+- They identify objects in images accurately
+
+### Speech Recognition
+
+- Converts audio signals to text
+- Recurrent neural networks process sequences
+- They learn speech patterns from data
+- They transcribe spoken words effectively
+
+### Medical Diagnosis
+
+- Assists healthcare professionals
+- Systems learn from patient data
+- They identify disease indicators
+- They support clinical decision-making
+
+### Autonomous Vehicles
+
+- Navigate complex environments
+- They process sensor data in real-time
+- They identify obstacles and hazards
+- They plan safe paths for navigation
 
 ## Python Example: Email Spam Classification
 
