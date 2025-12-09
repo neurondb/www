@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { siteConfig } from '@/config/site'
 import { products } from '@/config/products'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = `https://${siteConfig.domain}`
   const currentDate = new Date().toISOString()
 
@@ -92,6 +92,124 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/blog/rag-complete-guide`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+  ]
+
+  // Tutorial pages
+  const tutorialPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/tutorials`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-01-introduction`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-02-data-preparation`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-03-linear-models`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-04-neural-networks`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-05-training`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-06-regularization`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-07-embeddings`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-08-transformers`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-09-llms`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-10-vector-search`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-11-semantic-search`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-12-rag-fundamentals`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-13-advanced-rag`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-14-prompt-engineering`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-15-model-evaluation`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-16-fine-tuning`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-17-production`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/tutorials/ai-tutorial-18-advanced-architectures`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -571,6 +689,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages,
     ...blogPages,
+    ...tutorialPages,
     ...docsMainPages,
     ...gettingStartedPages,
     ...coreFeaturePages,

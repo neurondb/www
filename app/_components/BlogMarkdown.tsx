@@ -35,9 +35,59 @@ const styleSpecialChars = (text: string): React.ReactNode => {
   );
 };
 
+// Helper function to check if a node or its children contain links
+const hasLinkNode = (node: any): boolean => {
+  if (!node) return false;
+  if (node.type === 'element' && node.tagName === 'a') return true;
+  if (node.children && Array.isArray(node.children)) {
+    return node.children.some((child: any) => hasLinkNode(child));
+  }
+  return false;
+};
+
 // Usage: <BlogMarkdown>{markdown}</BlogMarkdown>
 export function BlogMarkdown({ children }: { children: string }) {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
+  const articleRef = React.useRef<HTMLElement>(null);
+  
+  // Post-process to ensure inline list items are styled correctly and add colored bullets
+  React.useEffect(() => {
+    if (!articleRef.current) return;
+    
+    // Find all inline lists and ensure their items have proper styling
+    const inlineLists = articleRef.current.querySelectorAll('[data-inline-list="true"]');
+    inlineLists.forEach((list) => {
+      const items = list.querySelectorAll('li');
+      items.forEach((item) => {
+        if (!item.classList.contains('inline-list-item')) {
+          item.classList.add('inline-list-item');
+        }
+      });
+    });
+    
+    // Add colored bullets to Key Concepts section
+    const h3Headings = articleRef.current.querySelectorAll('h3');
+    h3Headings.forEach((h3) => {
+      const text = h3.textContent || '';
+      const nextUl = h3.nextElementSibling;
+      if (nextUl && nextUl.tagName === 'UL') {
+        const listItems = nextUl.querySelectorAll('li');
+        let color = '';
+        if (text.includes('Features')) color = 'rgb(34, 197, 94)';
+        else if (text.includes('Labels')) color = 'rgb(251, 146, 60)';
+        else if (text.includes('Training')) color = 'rgb(168, 85, 247)';
+        else if (text.includes('Testing')) color = 'rgb(248, 113, 113)';
+        else if (text.includes('Overfitting')) color = 'rgb(234, 179, 8)';
+        
+        if (color) {
+          (nextUl as HTMLElement).style.setProperty('--bullet-color', color);
+          listItems.forEach((li) => {
+            (li as HTMLElement).style.setProperty('--bullet-color', color);
+          });
+        }
+      }
+    });
+  }, [children]);
 
   const copyToClipboard = async (text: string) => {
     try {
@@ -64,29 +114,54 @@ export function BlogMarkdown({ children }: { children: string }) {
   };
 
   return (
-    <article className="prose dark:prose-invert max-w-7xl mx-auto py-12 px-6">
-      <ReactMarkdown
+    <>
+      <style>{`
+        article [data-inline-list="true"] li:not(:last-child)::after {
+          content: ' • ';
+          color: rgb(234 179 8);
+          margin-left: 0.5rem;
+          margin-right: 0.5rem;
+        }
+        /* Colored bullets for Key Concepts section using CSS custom properties */
+        article ul li::marker {
+          color: var(--bullet-color, rgb(96 165 250));
+        }
+      `}</style>
+      <article ref={articleRef} className="prose dark:prose-invert max-w-7xl mx-auto py-12 px-6">
+        <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}
         components={{
           // Headings with proper sizing and styling
-          h1({ node, ...props }) {
-            return <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 mt-12 first:mt-0 leading-tight drop-shadow-lg" {...props} />;
+          h1({ node, children, ...props }: any) {
+            return <h1 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-8 mt-12 first:mt-0 leading-tight drop-shadow-lg" {...props}>{children}</h1>;
           },
-          h2({ node, ...props }) {
-            return <h2 className="text-3xl md:text-4xl font-semibold text-white mb-6 mt-10 leading-tight drop-shadow-lg" {...props} />;
+          h2({ node, children, ...props }: any) {
+            // Check if this is in Key Concepts section - apply yellow color
+            const text = typeof children === 'string' ? children : children?.toString() || '';
+            const isKeyConcepts = text.includes('Key Concepts');
+            const colorClass = isKeyConcepts ? 'text-yellow-400' : 'text-cyan-400';
+            return <h2 className={`text-3xl md:text-4xl font-semibold ${colorClass} mb-6 mt-10 leading-tight drop-shadow-lg`} {...props}>{children}</h2>;
           },
-          h3({ node, ...props }) {
-            return <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4 mt-8 leading-tight drop-shadow-lg" {...props} />;
+          h3({ node, children, ...props }: any) {
+            // Color-code subheadings in Key Concepts section
+            const text = typeof children === 'string' ? children : children?.toString() || '';
+            let colorClass = 'text-white';
+            if (text.includes('Features')) colorClass = 'text-green-400';
+            else if (text.includes('Labels')) colorClass = 'text-orange-400';
+            else if (text.includes('Training')) colorClass = 'text-purple-400';
+            else if (text.includes('Testing')) colorClass = 'text-red-400';
+            else if (text.includes('Overfitting')) colorClass = 'text-yellow-400';
+            return <h3 className={`text-2xl md:text-3xl font-semibold ${colorClass} mb-4 mt-8 leading-tight drop-shadow-lg`} {...props}>{children}</h3>;
           },
-          h4({ node, ...props }) {
-            return <h4 className="text-xl md:text-2xl font-semibold text-white mb-3 mt-6 leading-tight drop-shadow-lg" {...props} />;
+          h4({ node, children, ...props }: any) {
+            return <h4 className="text-xl md:text-2xl font-semibold text-white mb-3 mt-6 leading-tight drop-shadow-lg" {...props}>{children}</h4>;
           },
-          h5({ node, ...props }) {
-            return <h5 className="text-lg md:text-xl font-semibold text-white mb-3 mt-5 leading-tight drop-shadow-lg" {...props} />;
+          h5({ node, children, ...props }: any) {
+            return <h5 className="text-lg md:text-xl font-semibold text-white mb-3 mt-5 leading-tight drop-shadow-lg" {...props}>{children}</h5>;
           },
-          h6({ node, ...props }) {
-            return <h6 className="text-base md:text-lg font-semibold text-white mb-2 mt-4 leading-tight drop-shadow-lg" {...props} />;
+          h6({ node, children, ...props }: any) {
+            return <h6 className="text-base md:text-lg font-semibold text-white mb-2 mt-4 leading-tight drop-shadow-lg" {...props}>{children}</h6>;
           },
 
           // Paragraphs with better spacing and readability
@@ -124,14 +199,67 @@ export function BlogMarkdown({ children }: { children: string }) {
           },
 
           // Lists with proper styling
-          ul({ node, ...props }) {
-            return <ul className="list-disc list-inside text-white/90 text-lg leading-relaxed mb-6 space-y-2 ml-4" {...props} />;
+          ul({ node, children, ...props }: any) {
+            // Check if list items contain links (common in "Related Tutorials" sections)
+            const hasLinks = node?.children?.some((child: any) => hasLinkNode(child));
+            
+            // Check if this is an inline list (contains links or short items)
+            const listItemCount = node?.children?.length || 0;
+            const isInlineList = hasLinks || listItemCount <= 5;
+            
+            // Check if parent is in Key Concepts section
+            let parentElement = node;
+            let inKeyConcepts = false;
+            while (parentElement && parentElement.parent) {
+              parentElement = parentElement.parent;
+              if (parentElement.children) {
+                const hasKeyConceptsHeading = parentElement.children.some((child: any) => {
+                  if (child.type === 'element' && child.tagName === 'h2') {
+                    const text = child.children?.[0]?.value || '';
+                    return text.includes('Key Concepts');
+                  }
+                  return false;
+                });
+                if (hasKeyConceptsHeading) {
+                  inKeyConcepts = true;
+                  break;
+                }
+              }
+            }
+            
+            if (isInlineList) {
+              return (
+                <ul data-inline-list="true" className="flex flex-wrap gap-x-4 gap-y-2 text-white/90 text-lg leading-relaxed mb-6 list-none" {...props}>
+                  {children}
+                </ul>
+              );
+            }
+            
+            // Add colored bullets for Key Concepts section
+            const bulletClass = inKeyConcepts ? '[&>li]:list-disc [&>li]:marker:text-cyan-400' : '';
+            return <ul className={`list-disc list-inside text-white/90 text-lg leading-relaxed mb-6 space-y-2 ml-4 ${bulletClass}`} {...props} />;
           },
-          ol({ node, ...props }) {
+          ol({ node, children, ...props }: any) {
+            // Check if list items contain links (common in "Related Tutorials" sections)
+            const hasLinks = node?.children?.some((child: any) => hasLinkNode(child));
+            
+            // Check if this is an inline list (contains links or short items)
+            const listItemCount = node?.children?.length || 0;
+            const isInlineList = hasLinks || listItemCount <= 5;
+            
+            if (isInlineList) {
+              return (
+                <ol data-inline-list="true" className="flex flex-wrap gap-x-4 gap-y-2 text-white/90 text-lg leading-relaxed mb-6 list-none" {...props}>
+                  {children}
+                </ol>
+              );
+            }
+            
             return <ol className="list-decimal list-inside text-white/90 text-lg leading-relaxed mb-6 space-y-2 ml-4" {...props} />;
           },
-          li({ node, ...props }) {
-            return <li className="mb-2 drop-shadow-sm" {...props} />;
+          li({ node, children, ...props }: any) {
+            // Regular list items
+            return <li className="mb-2 drop-shadow-sm" {...props}>{children}</li>;
           },
 
           // Code blocks with syntax highlighting
@@ -304,6 +432,7 @@ export function BlogMarkdown({ children }: { children: string }) {
       >
         {children}
       </ReactMarkdown>
-    </article>
+      </article>
+    </>
   );
 }
