@@ -289,11 +289,11 @@ model.fit(X, labels)
 
 # Traditional: Explicit rule
 result1 = classify_email_traditional("Win a free prize!")
-print(f"Traditional: {result1}")  # Output: spam
+print("Traditional: " + result1)
 
 # ML: Learned pattern
 result2 = model.predict(vectorizer.transform(["Win a free prize!"]))
-print(f"Machine Learning: {result2[0]}")  # Output: spam
+print("Machine Learning: " + str(result2[0]))
 \`\`\`
 
 \`\`\`
@@ -325,30 +325,42 @@ model.fit(X, y)
 
 prediction = model.predict([[40, 60000]])
 print("Loan approved: " + str(prediction[0]))
-\`\`\`
-
-\`\`\`
-Loan approved: 1
+# Output: Loan approved: 1
 \`\`\`
 
 \`\`\`sql
 -- NeuronDB: Classification using SQL
 CREATE TABLE loan_applications (
+    id SERIAL PRIMARY KEY,
     age INTEGER,
     income NUMERIC,
     approved BOOLEAN
 );
 
-INSERT INTO loan_applications VALUES
+INSERT INTO loan_applications (age, income, approved) VALUES
     (25, 30000, false), (35, 50000, true),
     (45, 80000, true), (30, 40000, false);
 
-SELECT neurondb_predict_classification(
-    'loan_model',
+CREATE TEMP TABLE loan_model AS
+SELECT neurondb.train(
+    'default',
+    'logistic_regression',
+    'loan_applications',
+    'approved',
+    ARRAY['age', 'income'],
+    '{"max_iters": 1000, "learning_rate": 0.01}'::jsonb
+)::integer AS model_id;
+
+SELECT neurondb.predict(
+    (SELECT model_id FROM loan_model),
     ARRAY[40::NUMERIC, 60000::NUMERIC]
 ) AS prediction;
 
--- Output: true (approved)
+-- Result:
+--  prediction
+-- -----------
+--  t
+-- (1 row)
 \`\`\`
 
 ![Supervised Learning Diagram](/tutorials/ai-tutorial-01-introduction/diagram-supervised-learning.svg)
@@ -368,30 +380,42 @@ model.fit(X, y)
 
 price = model.predict([[2200, 3]])
 print("Predicted price: $" + str(int(price[0])))
-\`\`\`
-
-\`\`\`
-Predicted price: $380000
+# Output: Predicted price: $380000
 \`\`\`
 
 \`\`\`sql
 -- NeuronDB: Regression using SQL
 CREATE TABLE house_sales (
+    id SERIAL PRIMARY KEY,
     square_feet INTEGER,
     bedrooms INTEGER,
     price NUMERIC
 );
 
-INSERT INTO house_sales VALUES
+INSERT INTO house_sales (square_feet, bedrooms, price) VALUES
     (1500, 2, 250000), (2000, 3, 350000),
     (2500, 4, 450000), (1800, 3, 300000);
 
-SELECT neurondb_predict_regression(
-    'price_model',
+CREATE TEMP TABLE price_model AS
+SELECT neurondb.train(
+    'default',
+    'linear_regression',
+    'house_sales',
+    'price',
+    ARRAY['square_feet', 'bedrooms'],
+    '{}'::jsonb
+)::integer AS model_id;
+
+SELECT neurondb.predict(
+    (SELECT model_id FROM price_model),
     ARRAY[2200::NUMERIC, 3::NUMERIC]
 ) AS predicted_price;
 
--- Output: 380000.00
+-- Result:
+--  predicted_price
+-- -----------------
+--       380000.00
+-- (1 row)
 \`\`\`
 
 Supervised learning requires labeled data. Labeling is expensive. It takes human time. Large datasets need many labels. The quality of labels affects results. Bad labels produce bad models. Good labels produce good models.
@@ -413,22 +437,19 @@ kmeans = KMeans(n_clusters=2, random_state=42)
 clusters = kmeans.fit_predict(customers)
 
 for i, cluster in enumerate(clusters):
-    print(f"Customer {i+1}: Cluster {cluster}")
-# Output: Customer 1: Cluster 1, Customer 2: Cluster 0, Customer 3: Cluster 1, etc.
-\`\`\`
-
-\`\`\`
-Customer 1: Cluster 1
-Customer 2: Cluster 0
-Customer 3: Cluster 1
-Customer 4: Cluster 0
-Customer 5: Cluster 1
+    print("Customer " + str(i+1) + ": Cluster " + str(cluster))
+# Output:
+# Customer 1: Cluster 1
+# Customer 2: Cluster 0
+# Customer 3: Cluster 1
+# Customer 4: Cluster 0
+# Customer 5: Cluster 1
 \`\`\`
 
 \`\`\`sql
 -- NeuronDB: Clustering using SQL
 CREATE TABLE customers (
-    customer_id SERIAL,
+    customer_id SERIAL PRIMARY KEY,
     annual_spending NUMERIC,
     num_orders INTEGER
 );
@@ -436,24 +457,28 @@ CREATE TABLE customers (
 INSERT INTO customers (annual_spending, num_orders) VALUES
     (500, 10), (1200, 25), (300, 5), (1500, 30), (400, 8);
 
-SELECT customer_id,
-       neurondb_kmeans_cluster(
-           ARRAY[annual_spending, num_orders::NUMERIC],
-           2
-       ) AS cluster_id
-FROM customers;
+ALTER TABLE customers ADD COLUMN features vector(2);
+UPDATE customers SET features = ARRAY[annual_spending, num_orders::NUMERIC]::vector(2);
 
--- Output: customer_id | cluster_id
---         1           | 1
---         2           | 0
---         3           | 1
+SELECT customer_id, cluster_id
+FROM neurondb.cluster_kmeans('customers', 'features', 2, 100);
+
+-- Result:
+--  customer_id | cluster_id
+-- -------------+------------
+--            1 |          1
+--            2 |          0
+--            3 |          1
+--            4 |          0
+--            5 |          1
+-- (5 rows)
 \`\`\`
 
 ![Unsupervised Learning Diagram](/tutorials/ai-tutorial-01-introduction/diagram-unsupervised-learning.svg)
 
-Clustering finds groups in data. Similar items belong together. Dissimilar items are separate. You do not define groups beforehand. The system discovers them. You can use groups for customer targeting, organizing images, or finding outliers.
+Clustering finds groups in data automatically without predefined categories. Similar items belong together in the same cluster while dissimilar items are placed in separate clusters. The system discovers these groups by analyzing patterns in the data, which makes clustering useful for customer segmentation, image organization, and anomaly detection when you don't know the groups in advance.
 
-Dimensionality reduction simplifies data. Many features create complexity. Some features are redundant. Some features add noise. Reduction keeps essential information. It makes data easier to understand. It speeds up other algorithms.
+Dimensionality reduction simplifies data by reducing the number of features while preserving essential information. Many features create complexity, and some are redundant or add noise. Reduction techniques identify the most important features and create lower-dimensional representations that make data easier to understand and visualize while speeding up subsequent algorithms without losing critical information.
 
 ### Reinforcement Learning
 
@@ -477,7 +502,7 @@ These core concepts form the foundation of machine learning. Master them to buil
 
 Features are input variables that describe examples. An email has features like sender address, subject length, and word count. A house has features like square footage, number of bedrooms, and location. Features must be numeric or convertible to numbers. Feature selection matters. Good features improve predictions while bad features hurt predictions. Too many features cause overfitting. Too few features miss important patterns.
 
-- **Feature Types**: Features come in two main types: numeric and categorical. Numeric features are numbers like age, price, temperature, or distance. They have mathematical meaning and can be compared directly. Categorical features are groups or categories like color, city, product type, or status. They represent discrete classes without inherent order. You convert categorical to numeric using encoding methods such as one-hot encoding, label encoding, or target encoding. Each method has trade-offs in memory usage and information preservation. One-hot encoding creates separate binary columns for each category but increases dimensionality. Label encoding assigns numbers to categories but may imply false ordering. Target encoding uses target variable statistics to encode categories based on their relationship with the outcome.
+- **Feature Types**: Two main types: numeric (age, price, temperature) with mathematical meaning, and categorical (color, city, status) representing discrete classes. Convert categorical via one-hot (binary columns), label encoding (numbers), or target encoding (target statistics).
 
 \`\`\`python
 # Feature Encoding Example
@@ -485,26 +510,22 @@ from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 import pandas as pd
 
 data = pd.DataFrame({'city': ['NYC', 'SF', 'NYC', 'LA', 'SF']})
-# One-hot encoding
 onehot = pd.get_dummies(data['city'])
 print(onehot)
-# Output:    LA  NYC  SF
-#           0    1    0
-#           0    0    1
-#           0    1    0
-\`\`\`
-
-\`\`\`
-   LA  NYC  SF
-0   0    1   0
-1   0    0   1
-2   0    1   0
-3   1    0   0
-4   0    0   1
+# Output:
+#    LA  NYC  SF
+# 0   0    1   0
+# 1   0    0   1
+# 2   0    1   0
+# 3   1    0   0
+# 4   0    0   1
 \`\`\`
 
 \`\`\`sql
 -- NeuronDB: Feature Encoding
+CREATE TEMP TABLE customer_data AS
+SELECT unnest(ARRAY['NYC', 'SF', 'NYC', 'LA', 'SF']) AS city;
+
 SELECT 
     city,
     CASE WHEN city = 'NYC' THEN 1 ELSE 0 END AS is_nyc,
@@ -512,11 +533,17 @@ SELECT
     CASE WHEN city = 'LA' THEN 1 ELSE 0 END AS is_la
 FROM customer_data;
 
--- Output: city | is_nyc | is_sf | is_la
---        NYC   | 1      | 0     | 0
---        SF    | 0      | 1     | 0
+-- Result:
+--  city | is_nyc | is_sf | is_la
+-- ------+--------+-------+-------
+--  NYC  |      1 |     0 |     0
+--  SF   |      0 |     1 |     0
+--  NYC  |      1 |     0 |     0
+--  LA   |      0 |     0 |     1
+--  SF   |      0 |     1 |     0
+-- (5 rows)
 \`\`\`
-- **Feature Scaling**: Different features have different ranges and scales. Age ranges from 0 to 100 while income ranges from 0 to 1,000,000. Scaling normalizes these values to make features comparable and helps algorithms converge faster. Min-max scaling transforms values to a 0-1 range. Standardization transforms values to have zero mean and unit variance. Some algorithms like k-nearest neighbors and neural networks require scaling. Others like decision trees are scale-invariant. Scaling prevents features with larger ranges from dominating the learning process.
+- **Feature Scaling**: Normalize different feature ranges (age 0-100 vs income 0-1M) to make comparable and help convergence. Min-max transforms to 0-1; standardization to zero mean and unit variance. Required for k-NN and neural networks; decision trees are scale-invariant.
 
 \`\`\`python
 # Feature Scaling Example
@@ -526,50 +553,56 @@ data = np.array([[25, 50000], [30, 75000], [35, 100000]])
 scaler = StandardScaler()
 scaled = scaler.fit_transform(data)
 print(scaled)
-# Output: [[-1.225   -1.225]
-#          [ 0.       0.   ]
-#          [ 1.225    1.225]]
-\`\`\`
-
-\`\`\`
-[[-1.22474487 -1.22474487]
- [ 0.          0.        ]
- [ 1.22474487  1.22474487]]
+# Output:
+# [[-1.22474487 -1.22474487]
+#  [ 0.          0.        ]
+#  [ 1.22474487  1.22474487]]
 \`\`\`
 
 \`\`\`sql
 -- NeuronDB: Feature Scaling
+CREATE TEMP TABLE customer_features AS
+SELECT * FROM (VALUES 
+    (25, 50000), 
+    (30, 75000), 
+    (35, 100000)
+) AS t(age, income);
+
 SELECT 
     age,
     income,
-    (age - AVG(age) OVER ()) / STDDEV(age) OVER () AS age_scaled,
-    (income - AVG(income) OVER ()) / STDDEV(income) OVER () AS income_scaled
-FROM customers;
+    ROUND((age - AVG(age) OVER ()) / NULLIF(STDDEV(age) OVER (), 0), 2) AS age_scaled,
+    ROUND((income - AVG(income) OVER ()) / NULLIF(STDDEV(income) OVER (), 0), 2) AS income_scaled
+FROM customer_features;
 
--- Output: age | income | age_scaled | income_scaled
---        25   | 50000  | -1.22      | -1.22
---        30   | 75000  | 0.00       | 0.00
+-- Result:
+--  age | income | age_scaled | income_scaled
+-- -----+--------+------------+---------------
+--   25 |  50000 |      -1.22 |         -1.22
+--   30 |  75000 |       0.00 |          0.00
+--   35 | 100000 |       1.22 |          1.22
+-- (3 rows)
 \`\`\`
-- **Feature Engineering**: Raw data often needs transformation into useful features. You create interaction features by combining existing features like multiplying price by area. You create polynomial features by raising features to powers to capture non-linear relationships. You create time-based features from timestamps like day of week, month, or hour. You create text features from word counts, TF-IDF scores, or embeddings. Feature engineering requires domain knowledge and experimentation. Well-engineered features can dramatically improve model performance.
-- **Feature Selection**: High-dimensional data contains many features, some of which are redundant or irrelevant. Feature selection reduces dimensionality and noise while maintaining prediction accuracy. Filter methods use statistical tests like correlation or chi-square to rank features. Wrapper methods test feature subsets using model performance as the evaluation metric. Embedded methods select features during training like L1 regularization. Selection reduces noise, speeds training, improves interpretability, and can prevent overfitting. The goal is finding the minimal feature set that maximizes performance.
-- **Feature Extraction**: Sometimes it's better to create new representations rather than select existing features. Feature extraction transforms original features into a lower-dimensional space. Principal component analysis finds linear combinations that explain maximum variance. Autoencoders learn compressed representations through neural networks. Feature extraction reduces dimensions while preserving essential information. It helps with visualization, reduces storage requirements, and can improve generalization.
-- **Feature Importance**: Understanding which features matter most helps interpret models and guide feature engineering. Some features predict better than others. Decision trees show feature importance directly through their splitting criteria. Linear models show coefficients that indicate feature contribution. Feature importance guides feature selection and helps understand model behavior. High importance features are critical for predictions. Low importance features might be candidates for removal.
+- **Feature Engineering**: Transform raw data into useful features: interaction (price × area), polynomial (x², x³), time-based (day, month, hour), text (word counts, TF-IDF, embeddings). Requires domain knowledge but dramatically improves performance.
+- **Feature Selection**: Reduce dimensionality using filter methods (statistical tests), wrapper methods (model performance), or embedded methods (L1 regularization). Finds minimal feature sets that maximize performance while reducing noise and preventing overfitting.
+- **Feature Extraction**: Create new lower-dimensional representations using principal component analysis (PCA) for linear combinations or autoencoders for neural network compression. Reduces dimensions while preserving essential information, improves visualization, reduces storage, and enhances generalization.
+- **Feature Importance**: Identify critical features through decision tree splits, linear model coefficients, or dedicated importance metrics. Guides feature selection and engineering decisions while improving model interpretability.
 
 ### Labels
 
 Labels are correct outputs for supervised learning. Classification labels are categories while regression labels are numbers. Labels come from human annotation, historical data, or measurement. Label quality affects model performance. Accurate labels produce accurate models. Noisy labels produce unreliable models. Missing labels prevent supervised learning. You need labels for training and evaluating on labeled test data.
 
-- **Labeling Strategies**: Different problem types require different labeling approaches. Binary classification uses two mutually exclusive classes like spam or not spam, yes or no. Multi-class classification uses many distinct classes like image categories or product types. Multi-label classification allows multiple classes per example like tagging articles with multiple topics. Regression uses continuous numeric values like prices, temperatures, or scores. Ordinal classification has ordered categories like ratings or rankings. Choose the strategy that matches your problem structure and business requirements.
-- **Label Distribution**: Class distribution in your dataset significantly impacts model training. Balanced datasets have equal representation across classes, making training straightforward. Imbalanced datasets have unequal classes which can bias models toward majority classes. Models trained on imbalanced data may achieve high accuracy by always predicting the majority class, which is useless. Imbalance requires special handling through resampling techniques like oversampling minority classes or undersampling majority classes. Class weights adjustment penalizes mistakes on minority classes more heavily. Different evaluation metrics like precision, recall, F1-score, or AUC account for imbalance better than accuracy alone. Cost-sensitive learning assigns different costs to different types of errors.
-- **Label Annotation**: Creating ground truth labels requires careful annotation processes. Human annotators label examples manually based on guidelines. Annotation guidelines ensure consistency across annotators by providing clear criteria and examples. Multiple annotators label the same examples to check agreement through inter-annotator agreement measures like Cohen's kappa. Expert review catches errors and validates difficult cases. Automated validation finds outliers and inconsistencies. Quality control processes include regular audits and feedback loops. Validation improves dataset quality but annotation is expensive and time-consuming, especially for large datasets or complex labeling tasks.
-- **Label Quality**: Poor label quality directly translates to poor model performance. Label noise corrupts learning when it comes from annotation errors, measurement errors, or ambiguous cases. Robust algorithms handle noise better than sensitive ones. Label smoothing reduces overconfidence by converting hard labels to soft probability distributions. Weak supervision uses noisy labels through distant supervision that generates labels automatically from heuristics or external sources. Active learning selects informative examples for annotation to maximize learning with minimal labels. Semi-supervised learning uses unlabeled data combined with labeled data. Transfer learning uses labels from related tasks. These methods reduce labeling costs while maintaining reasonable performance.
-- **Label Storage**: Efficient label storage and management is crucial for large-scale projects. Labels are stored alongside features in databases or file systems. Version control tracks label changes over time. Annotation tools provide interfaces for efficient labeling workflows. Label validation pipelines check for consistency and errors automatically. Label augmentation techniques create additional labeled examples through transformations. Proper label management ensures data quality and enables reproducible research.
+- **Labeling Strategies**: Different problems require different approaches. Binary classification uses two mutually exclusive classes (spam/not spam). Multi-class uses many distinct classes (image categories). Multi-label allows multiple classes per example (article tags). Regression uses continuous numeric values (prices, scores). Ordinal has ordered categories (ratings). Choose the strategy matching your problem structure.
+- **Label Distribution**: Balanced datasets have equal class representation. Imbalanced datasets bias toward majority classes, achieving useless high accuracy. Handle through resampling (oversample/undersample), class weights, or metrics (precision, recall, F1, AUC) instead of accuracy.
+- **Label Annotation**: Create ground truth using human annotators with clear guidelines. Use multiple annotators to check agreement (Cohen's kappa). Apply expert review and automated validation. Quality control includes audits and feedback loops.
+- **Label Quality**: Poor label quality directly causes poor performance. Use robust algorithms, label smoothing, weak supervision, active learning, semi-supervised learning, or transfer learning to reduce labeling costs while maintaining performance.
+- **Label Storage**: Store labels alongside features in databases or file systems with version control tracking changes over time. Use annotation tools for efficient workflows, validation pipelines for consistency checks, and augmentation techniques to create additional labeled examples through transformations. Proper management ensures data quality and enables reproducible research.
 
 ### Training
 
 Training builds a model from data by examining examples, adjusting internal parameters, and minimizing prediction errors. Training continues until performance stops improving. Training requires computation that scales with data size and model complexity. More data means more computation. Complex models need more time while simple models train faster. You balance model complexity with training time based on your resources.
 
-- **Data Splitting**: Training data must be split from the full dataset to evaluate generalization. Common splits include 80 percent training and 20 percent testing for simple cases. More sophisticated splits use 70 percent training, 15 percent validation, and 15 percent testing. Validation data tunes hyperparameters while test data evaluates final performance only once. Stratified splitting maintains class distribution across splits. Time-based splitting preserves temporal order for time series data. This separation prevents data leakage and provides unbiased performance estimates. Never use test data for training or hyperparameter tuning.
+- **Data Splitting**: Split training data to evaluate generalization. Common splits: 80% train / 20% test, or 70% train / 15% validation / 15% test. Validation tunes hyperparameters; test evaluates final performance once. Use stratified splitting to maintain class distribution, or time-based splitting for temporal data. Separation prevents data leakage and provides unbiased estimates. Never use test data for training or hyperparameter tuning.
 
 \`\`\`python
 # Data Splitting Example
@@ -582,55 +615,67 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.4, random_state=42
 )
 print("Training size: " + str(len(X_train)) + ", Test size: " + str(len(X_test)))
-\`\`\`
-
-\`\`\`
-Training size: 3, Test size: 2
+# Output: Training size: 3, Test size: 2
 \`\`\`
 
 \`\`\`sql
 -- NeuronDB: Data Splitting
+CREATE TEMP TABLE customer_data AS
+SELECT generate_series(1, 10) AS customer_id, random() * 1000 AS value;
+
 WITH numbered_data AS (
-    SELECT *, ROW_NUMBER() OVER (ORDER BY customer_id) as row_num
-    FROM customers
+    SELECT *, ROW_NUMBER() OVER (ORDER BY customer_id) as row_num,
+           COUNT(*) OVER () as total_count
+    FROM customer_data
 )
 SELECT 
     customer_id,
     CASE 
-        WHEN row_num <= (SELECT COUNT(*) * 0.8 FROM customers) THEN 'train'
+        WHEN row_num <= CEIL(total_count * 0.8) THEN 'train'
         ELSE 'test'
     END AS split
-FROM numbered_data;
+FROM numbered_data
+ORDER BY customer_id;
 
--- Output: customer_id | split
---        1            | train
---        2            | train
---        3            | test
+-- Result:
+--  customer_id | split
+-- -------------+-------
+--            1 | train
+--            2 | train
+--            3 | train
+--            4 | train
+--            5 | train
+--            6 | train
+--            7 | train
+--            8 | train
+--            9 | test
+--           10 | test
+-- (10 rows)
 \`\`\`
-- **Training Iterations**: Training happens in iterations called epochs. One epoch processes all training data once. Multiple epochs improve performance as the model sees data multiple times. Too many epochs cause overfitting when the model memorizes training data. Early stopping prevents overfitting by monitoring validation performance and stopping when it degrades. Patience parameters control how many epochs to wait before stopping. This balances learning with generalization and saves computation time.
-- **Optimization Algorithms**: Training algorithms use optimization methods to minimize loss functions. Gradient descent minimizes loss using full datasets but is slow for large data. Stochastic gradient descent uses random batches for faster updates with some variance. Mini-batch gradient descent balances speed and stability. Adam combines momentum and adaptive learning rates for efficient convergence. RMSprop adapts learning rates per parameter. Different optimizers work better for different problems and model types. Momentum helps navigate flat regions. Adaptive methods adjust learning automatically.
-- **Loss Functions**: Loss functions measure prediction errors and guide parameter updates through gradient computation. Mean squared error measures regression errors by squaring differences, emphasizing large errors. Mean absolute error treats all errors equally. Cross-entropy measures classification errors for probabilistic outputs. Focal loss handles class imbalance. Choosing the right loss function is critical as it shapes how the model learns. Loss functions must match your problem type and goals. Custom losses can incorporate business constraints.
-- **Batch Processing**: Batch processing groups examples together for efficient computation on parallel hardware. Batch size affects memory usage, training speed, and gradient quality. Large batches use more memory but provide stable gradients with less noise. Small batches update more frequently but with more variance in gradients. Mini-batch gradient descent balances both stability and efficiency. Batch normalization standardizes inputs within batches. Dynamic batching adjusts batch sizes based on sequence lengths for variable-length inputs.
-- **Learning Rate**: Learning rate controls optimization step size and is the most critical hyperparameter. High learning rates converge faster but may overshoot optimal solutions or diverge. Low learning rates converge slowly but more precisely, sometimes getting stuck in local minima. Learning rate schedules adjust rates over time using decay, warmup, or cyclical patterns. Adaptive methods like Adam adjust rates per parameter automatically. Learning rate finder experiments with different rates to find optimal ranges. Proper learning rate significantly affects training success.
-- **Backpropagation**: Backpropagation calculates gradients by propagating errors backward through neural networks using the chain rule of calculus. Forward pass computes predictions. Backward pass computes gradients for all parameters. It enables training of deep networks by efficiently computing gradients for all layers simultaneously. It is the foundation of neural network training and makes deep learning possible. Modern frameworks compute gradients automatically through automatic differentiation.
-- **Hyperparameter Tuning**: Hyperparameters control training behavior and must be set before training begins. Learning rate, batch size, regularization strength, and network architecture are common hyperparameters. Hyperparameter tuning finds optimal values through systematic search. Grid search tests all combinations in a predefined grid but is computationally expensive. Random search samples combinations randomly and often finds better solutions faster. Bayesian optimization uses probabilistic models to guide search efficiently. Proper tuning significantly improves model performance but requires careful experimental design.
-- **Gradient Management**: Gradient problems can destabilize training. Gradient clipping prevents instability when gradients become too large by limiting gradient magnitude to a maximum value. Gradient scaling adjusts gradients for mixed precision training. Gradient accumulation simulates larger batches by accumulating gradients over multiple steps. These techniques stabilize training of deep networks and are essential for recurrent networks that suffer from vanishing or exploding gradients.
-- **Checkpointing and Monitoring**: Training management includes saving model states and monitoring progress. Checkpointing saves model states at regular intervals for recovery and model selection. You can resume from checkpoints if training is interrupted. You select the best checkpoint based on validation performance. TensorBoard and other tools visualize training metrics like loss curves and learning rates. Monitoring detects issues like overfitting, underfitting, or training instability early. Checkpointing protects against failures and enables model versioning for production deployment.
+- **Training Iterations**: Training happens in epochs where one epoch processes all training data once. Multiple epochs improve performance but too many cause overfitting. Early stopping monitors validation performance and stops when it degrades, preventing overfitting while saving computation time.
+- **Optimization Algorithms**: Minimize loss functions using gradient descent (full dataset, slow), stochastic gradient descent (random batches, faster), mini-batch gradient descent (balanced), or Adam (momentum + adaptive learning rates). Choose optimizer matching your problem and model type.
+- **Loss Functions**: Measure prediction errors and guide updates. Mean squared error (regression, emphasizes large errors), mean absolute error (treats all equally), cross-entropy (classification, probabilistic outputs), or focal loss (class imbalance). Must match problem type and goals.
+- **Batch Processing**: Group examples for efficient parallel computation. Large batches use more memory but provide stable gradients; small batches update frequently with more variance. Mini-batch balances stability and efficiency. Batch normalization standardizes inputs within batches.
+- **Learning Rate**: Controls optimization step size, the most critical hyperparameter. High rates converge faster but may overshoot; low rates converge slowly but precisely. Use learning rate schedules (decay, warmup, cyclical) or adaptive methods (Adam) that adjust rates automatically per parameter.
+- **Backpropagation**: Calculates gradients by propagating errors backward through networks using chain rule. Forward pass computes predictions; backward pass computes gradients for all parameters. Enables deep network training and is computed automatically by modern frameworks.
+- **Hyperparameter Tuning**: Find optimal hyperparameters (learning rate, batch size, regularization, architecture) through grid search (all combinations, expensive), random search (random samples, faster), or Bayesian optimization (probabilistic guidance). Proper tuning significantly improves performance.
+- **Gradient Management**: Stabilize training with gradient clipping (limits magnitude), gradient scaling (mixed precision), or gradient accumulation (simulates larger batches). Essential for deep and recurrent networks suffering from vanishing or exploding gradients.
+- **Checkpointing and Monitoring**: Save model states at regular intervals for recovery and model selection. Resume from checkpoints if interrupted. Select best checkpoint based on validation performance. Use TensorBoard or similar tools to visualize metrics (loss curves, learning rates) and detect issues early (overfitting, underfitting, instability).
 
 ### Testing
 
 Testing evaluates model performance using data not seen during training. The model makes predictions that you compare to correct answers, then calculate accuracy or error metrics. Testing reveals generalization ability. A model might memorize training data but testing shows if it works on new data. Good models perform well on test data while bad models fail on test data.
 
-- **Test Set Separation**: Test sets must remain completely separate from training and validation data. Never use test data for training, hyperparameter tuning, or model selection. Test data provides unbiased performance estimates only when used exclusively for final evaluation after all development is complete. Violating this separation leads to overly optimistic estimates that don't reflect real-world performance. Test data represents future unseen data. Once you use test data for any decision, it becomes contaminated and loses its value as an unbiased estimator. Some practitioners use a third holdout set for final evaluation to preserve test set integrity.
-- **Evaluation Metrics**: Test metrics vary by problem type and must match your business goals. Classification uses accuracy for overall correctness, precision for prediction quality, recall for coverage, F1 score for balance, and AUC-ROC for threshold-agnostic performance. Regression uses mean squared error for large error emphasis, mean absolute error for equal treatment, R-squared for explained variance, and root mean squared error for interpretable units. Cost-sensitive metrics incorporate business costs of different error types. Choose metrics that align with your business objectives and decision-making needs. Different metrics answer different questions about model performance.
-- **Cross-Validation**: Cross-validation provides robust evaluation when you have limited data. K-fold cross-validation splits data into k folds, trains on k-1 folds and tests on the remaining fold, rotating until all folds serve as test sets. Stratified cross-validation maintains class distribution across folds. Leave-one-out cross-validation uses single examples as test sets. Averaging results across folds reduces variance in performance estimates and provides more reliable performance assessment. Cross-validation helps detect overfitting by showing performance variation across different data splits. It's especially valuable when you can't afford a large separate test set.
-- **Confusion Matrices**: Confusion matrices show detailed classification performance in tabular form. They display true positives, false positives, true negatives, and false negatives for each class. They reveal which classes confuse the model and guide targeted improvements in specific areas. They help identify class imbalance effects and show where the model struggles. Multi-class confusion matrices expand to show all class pair confusions. They provide deeper insight than single accuracy metrics and enable per-class performance analysis. Visualization helps identify patterns in classification errors.
-- **Precision and Recall**: Precision measures prediction quality as true positives divided by all positive predictions. High precision means few false positives, indicating reliable positive predictions. Precision matters when false positives are costly, such as in medical diagnosis, fraud detection, or content moderation. Recall measures coverage as true positives divided by all actual positives. High recall means few false negatives, indicating comprehensive detection. Recall matters when false negatives are costly, such as in disease screening, security systems, or search engines. The precision-recall tradeoff shows that improving one often degrades the other. Choose based on your error cost structure.
-- **F1 Score and Variants**: F1 score balances precision and recall as the harmonic mean of both metrics. It provides a single performance metric when both aspects matter equally. F-beta scores allow weighting precision or recall more heavily. Macro-averaging computes metrics per class then averages. Micro-averaging aggregates all predictions across classes. Weighted averaging accounts for class frequencies. Different averaging methods suit different scenarios. F1 score is useful when you need a balanced measure but can't optimize both precision and recall simultaneously.
-- **ROC Curves and AUC**: ROC curves visualize classification performance across all possible thresholds. They plot true positive rate against false positive rate, showing the tradeoff between sensitivity and specificity. AUC summarizes overall performance as the area under the ROC curve, ranging from 0 to 1. Higher AUC indicates better performance and the ability to distinguish between classes. AUC is threshold-agnostic and works well for imbalanced datasets. Precision-recall curves are more informative for imbalanced data. ROC-AUC of 0.5 means random performance while 1.0 means perfect separation.
-- **Regression Metrics**: Regression metrics measure numeric prediction errors in different ways. Mean squared error emphasizes large errors through squaring, penalizing outliers heavily. Mean absolute error treats all errors equally, being more robust to outliers. R-squared measures explained variance as a proportion of total variance, indicating how well the model fits the data. Root mean squared error converts MSE back to original units for interpretability. Mean absolute percentage error provides relative error measurement. Different metrics suit different business contexts and error cost structures.
-- **Statistical Testing**: Statistical significance tests compare models to determine if performance differences are real or random. They use hypothesis testing frameworks like t-tests or Mann-Whitney tests to provide confidence in results. They help validate that improvements are meaningful rather than due to chance variation. P-values indicate the probability of observing results by chance. Confidence intervals show the range of plausible performance values. Multiple comparison corrections adjust for testing multiple hypotheses. Statistical rigor prevents overfitting to evaluation metrics.
-- **Validation Strategies**: Different validation strategies suit different scenarios. Holdout validation uses a single test set and is simple and fast but requires sufficient data and may have high variance. K-fold cross-validation provides more robust estimates with limited data. Time-based splitting preserves temporal order by using past data to train and future data to test, matching real-world deployment scenarios and preventing data leakage from future information. Group-based validation maintains group structure for group-dependent data. Nested cross-validation uses inner loops for hyperparameter tuning and outer loops for performance estimation, preventing overfitting to validation sets.
+- **Test Set Separation**: Test sets must remain completely separate from training and validation. Never use test data for training, hyperparameter tuning, or model selection. Use exclusively for final evaluation after all development is complete.
+- **Evaluation Metrics**: Classification: accuracy, precision, recall, F1 score, AUC-ROC. Regression: MSE, MAE, R-squared, RMSE. Choose metrics matching business goals.
+- **Cross-Validation**: K-fold splits data into k folds, trains on k-1 and tests on remaining, rotating until all folds serve as test sets. Stratified maintains class distribution. Averaging reduces variance and helps detect overfitting.
+- **Confusion Matrices**: Show classification performance with true positives, false positives, true negatives, false negatives for each class. Reveal which classes confuse the model and identify class imbalance effects.
+- **Precision and Recall**: Precision = TP / (TP + FP) measures prediction quality (few false positives). Recall = TP / (TP + FN) measures coverage (few false negatives). Tradeoff: improving one degrades the other.
+- **F1 Score**: F1 = 2 × (Precision × Recall) / (Precision + Recall) balances precision and recall. Use macro (per-class average), micro (aggregated), or weighted (class frequencies) averaging.
+- **ROC Curves and AUC**: ROC plots true positive rate vs false positive rate across thresholds. AUC (0-1) summarizes performance; higher indicates better class separation. 0.5 = random, 1.0 = perfect.
+- **Regression Metrics**: MSE (large error emphasis), MAE (robust to outliers), R-squared (explained variance), RMSE (original units), MAPE (relative error). Choose based on business context.
+- **Statistical Testing**: Use hypothesis tests (t-tests, Mann-Whitney) to determine if performance differences are real or random. P-values indicate probability of chance results. Confidence intervals show plausible ranges.
+- **Validation Strategies**: Holdout (single test set, high variance), k-fold (robust with limited data), time-based (preserves temporal order), group-based (maintains group structure), nested (inner for hyperparameters, outer for performance).
 
 ### Overfitting
 
@@ -638,106 +683,334 @@ Overfitting occurs when a model memorizes training data instead of learning gene
 
 ![Overfitting Diagram](/tutorials/ai-tutorial-01-introduction/diagram-overfitting.svg)
 
-- **Bias-Variance Tradeoff**: The bias-variance tradeoff explains the overfitting phenomenon fundamentally. High bias means underfitting where the model is too simple and systematically misses patterns in data, resulting in poor performance on both training and test data. High variance means overfitting where the model is too complex and learns noise, resulting in good training performance but poor test performance. You must balance bias and variance for optimal performance. Underfitting occurs when models are too simple and fail to capture underlying patterns. Increasing model complexity reduces underfitting but finding the right complexity balances both bias and variance. The optimal model complexity depends on data size, quality, and noise level. Understanding this tradeoff guides model selection and regularization choices.
-- **Regularization Techniques**: Regularization reduces overfitting by limiting model complexity and preventing weights from growing too large. L1 regularization adds absolute value penalties that encourage sparsity by driving many weights to zero, performing automatic feature selection and creating simpler, more interpretable models. L2 regularization adds squared penalties that shrink weights toward zero without creating sparsity, stabilizing training and being more common than L1 in practice. Elastic net combines L1 and L2 to balance sparsity and stability, working well with correlated features and combining benefits of both methods. Regularization strength is controlled by hyperparameters that must be tuned. Too much regularization causes underfitting while too little allows overfitting.
-- **Neural Network Regularization**: Neural networks have specialized regularization techniques. Dropout randomly disables neurons during training, forcing the model to learn redundant representations and reducing co-adaptation of neurons. Dropout rates typically range from 0.2 to 0.5. Batch normalization normalizes layer inputs during training, stabilizing learning, allowing higher learning rates, and acting as a form of regularization. Weight decay penalizes large weights during optimization and is equivalent to L2 regularization. Layer normalization provides similar benefits to batch normalization for sequence models. Data augmentation also acts as regularization by exposing models to more variations during training.
-- **Data Augmentation**: Data augmentation creates more training examples by applying transformations to existing examples, effectively increasing dataset size without collecting new data. For images, you rotate, flip, crop, adjust brightness, or add noise. For text, you paraphrase, translate, or use synonym replacement. For audio, you add noise, change speed, or apply filters. Augmentation increases dataset diversity and helps models generalize better by seeing more variations during training. It's particularly valuable when data is limited or expensive to collect. The key is using transformations that preserve the semantic meaning while adding diversity. Augmentation should reflect realistic variations the model will encounter in production.
-- **Learning Curves**: Learning curves visualize overfitting by plotting training and validation performance over epochs or training iterations. Gaps between curves indicate overfitting when training performance improves while validation performance degrades. Convergence suggests sufficient training when both curves plateau at similar performance levels. Divergence suggests overfitting is occurring. Learning curves help diagnose training issues and guide early stopping decisions. They reveal whether you need more data, different model complexity, or better regularization. Monitoring learning curves during training enables proactive intervention before overfitting becomes severe.
-- **Data Size and Quality**: Training set size influences overfitting significantly. Small datasets are prone to overfitting because models can memorize all examples easily. Large datasets reduce overfitting risk by providing more diverse patterns that prevent memorization. However, data quality matters more than quantity alone. Poor quality data with noise, errors, or bias leads to poor models regardless of size. Diverse data covering edge cases helps generalization. Balanced class distribution prevents bias toward majority classes. Representative data that matches production distribution is essential. More high-quality data is always beneficial, but there are diminishing returns, and data collection costs must be considered.
-- **Ensemble Methods**: Ensemble methods reduce overfitting by combining multiple models and averaging their predictions, reducing variance through aggregation. Bagging trains models on different data subsets through bootstrap sampling, reducing variance without increasing bias. Random forests use bagging with decision trees. Boosting trains models sequentially to correct previous errors, reducing both bias and variance. Gradient boosting and AdaBoost are popular boosting methods. Stacking combines models using a meta-learner. Ensemble methods are among the most effective techniques for reducing overfitting and improving generalization. They work because different models make different errors, and averaging cancels out individual mistakes.
-- **Model Simplification**: Pruning removes unnecessary model parts to simplify models and reduce overfitting risk. Decision tree pruning removes branches that don't improve validation performance. Neural network pruning removes connections or entire neurons with low importance. Knowledge distillation trains smaller models to mimic larger models. Quantization reduces model precision. These techniques create simpler models that generalize better while maintaining performance. Simplified models are also faster, use less memory, and are easier to deploy. The goal is finding the simplest model that achieves acceptable performance.
-- **Early Stopping**: Early stopping monitors validation performance and stops training when it degrades, preventing overfitting automatically. It saves the best model checkpoint based on validation performance. It is simple, effective, and widely used in practice. Early stopping saves computation by avoiding unnecessary training epochs after the model has learned all it can. Patience parameters control how many epochs to wait before stopping. Restore best weights options automatically revert to the best checkpoint. Early stopping works by detecting when the model starts overfitting to training data, indicated by validation performance plateauing or degrading while training performance continues improving. It's particularly effective for neural networks trained for many epochs.
-- **Regularization Strategies**: Effective overfitting prevention requires combining multiple strategies. Use appropriate model complexity for your data size. Apply regularization techniques like L1, L2, or dropout. Use data augmentation to increase effective dataset size. Monitor learning curves to detect overfitting early. Use cross-validation to get robust performance estimates. Ensemble methods can reduce overfitting. Early stopping prevents unnecessary training. The best approach depends on your specific problem, data, and constraints. Experiment with different combinations to find what works best for your use case.
+- **Bias-Variance Tradeoff**: High bias means underfitting (too simple, misses patterns, poor on both train/test). High variance means overfitting (too complex, learns noise, good train/poor test). Balance bias and variance for optimal performance. Optimal complexity depends on data size, quality, and noise level.
+- **Regularization Techniques**: Reduce overfitting by limiting complexity and preventing large weights. L1 adds absolute penalties (encourages sparsity, feature selection). L2 adds squared penalties (shrinks weights, stabilizes training). Elastic net combines L1 and L2. Tune regularization strength; too much causes underfitting, too little allows overfitting.
+- **Neural Network Regularization**: Dropout randomly disables neurons (rates 0.2-0.5), forcing redundant representations. Batch normalization normalizes layer inputs, stabilizing learning and allowing higher learning rates. Weight decay penalizes large weights (equivalent to L2). Layer normalization benefits sequence models. Data augmentation also acts as regularization.
+- **Data Augmentation**: Create more examples via transformations: images (rotate, flip, crop, brightness, noise), text (paraphrase, translate, synonyms), audio (noise, speed, filters). Increases diversity, improves generalization, valuable with limited data. Use transformations preserving semantic meaning while reflecting realistic production variations.
+- **Learning Curves**: Plot training and validation performance over epochs. Gaps indicate overfitting (train improves while validation degrades). Convergence suggests sufficient training (both plateau at similar levels). Divergence suggests overfitting. Guide early stopping decisions and reveal needs for more data, different complexity, or better regularization.
+- **Data Size and Quality**: Small datasets prone to overfitting (models memorize easily). Large datasets reduce risk (diverse patterns prevent memorization). Quality matters more than quantity. Poor quality (noise, errors, bias) leads to poor models regardless of size. Diverse, balanced, representative data essential. Diminishing returns on more data.
+- **Ensemble Methods**: Combine multiple models, averaging predictions to reduce variance. Bagging trains on different subsets (bootstrap sampling, reduces variance). Random forests use bagging. Boosting trains sequentially to correct errors (reduces bias and variance). Stacking uses meta-learner. Most effective for reducing overfitting.
+- **Model Simplification**: Pruning removes unnecessary parts: decision trees (remove branches), neural networks (remove connections/neurons with low importance). Knowledge distillation trains smaller models to mimic larger. Quantization reduces precision. Creates simpler models that generalize better, faster, use less memory, easier to deploy.
+- **Early Stopping**: Monitor validation performance, stop when it degrades, preventing overfitting automatically. Saves best checkpoint based on validation. Patience parameters control wait time. Detects overfitting when validation plateaus/degrades while training continues improving. Effective for neural networks with many epochs.
+- **Regularization Strategies**: Combine multiple strategies: appropriate model complexity, regularization (L1, L2, dropout), data augmentation, learning curve monitoring, cross-validation, ensemble methods, early stopping. Experiment with combinations to find what works best for your problem, data, and constraints.
 
 ## Machine Learning Workflow
 
-The machine learning process follows these steps. Define the problem. Collect and prepare data. Choose an algorithm. Train the model. Evaluate performance. Deploy and monitor.
+The machine learning process follows a systematic workflow from problem definition through deployment and monitoring. Each stage builds upon the previous one, requiring careful planning and execution to achieve successful results. Understanding this workflow helps you structure your machine learning projects effectively and avoid common pitfalls.
+
+![Machine Learning Workflow Diagram](/tutorials/ai-tutorial-01-introduction/diagram-ml-workflow.svg)
+
+The workflow begins with clearly defining what you want to achieve, then progresses through data collection, preparation, algorithm selection, training, evaluation, and finally deployment. Each stage has specific goals, challenges, and best practices that contribute to the overall success of your machine learning project.
 
 ### Problem Definition
 
-Start by defining what you want to predict. Is it classification or regression? What are the inputs and outputs? What success looks like. Define metrics to measure success.
+Start by defining what you want to predict and why it matters. Is it classification or regression? What are the inputs and outputs? What does success look like? Define metrics to measure success. Clear problem definition guides everything else by determining data needs, selecting appropriate algorithms, and defining evaluation methods. Vague problems lead to vague solutions.
 
-Clear problem definition guides everything else. It determines data needs. It selects appropriate algorithms. It defines evaluation methods. Vague problems lead to vague solutions.
+Consider business context and constraints. What decisions will the model inform? What are acceptable error rates? What resources are available? Understanding these factors early prevents wasted effort and ensures the solution addresses real needs. Document assumptions, success criteria, and constraints explicitly.
 
 ### Data Collection
 
-Gather examples relevant to your problem. More data usually improves results. Data should represent real-world scenarios. Biased data produces biased models. Diverse data produces robust models.
+Gather examples relevant to your problem from various sources. Databases store historical records, APIs provide real-time information, sensors capture measurements, and surveys collect responses. More data usually improves results, but data must represent real-world scenarios accurately. Biased data produces biased models while diverse data produces robust models.
 
-Data comes from many sources. Databases store historical records. APIs provide real-time information. Sensors capture measurements. Surveys collect responses. Each source has strengths and limitations.
+Assess data quality and availability early. Check data completeness, accuracy, and relevance. Identify potential data sources and evaluate their reliability. Consider data privacy and compliance requirements. Plan for data collection timelines and costs. Establish data governance practices to ensure consistency and quality.
 
 ### Data Preparation
 
-Raw data needs preparation. Handle missing values. Remove outliers. Normalize features. Split into training and testing sets. Preparation quality affects model performance.
+Raw data needs preparation before use. Handle missing values through removal, imputation, or prediction. Remove or transform outliers depending on context. Normalize features to make different ranges comparable. Split into training, validation, and testing sets. Preparation quality directly affects model performance.
 
-Missing values need decisions. You can remove examples. You can fill with averages. You can predict missing values. Each approach has trade-offs.
-
-Outliers are unusual values. They might be errors. They might be rare events. You can remove them. You can transform them. Context determines the best approach.
-
-Feature normalization scales values. Different features have different ranges. Normalization makes them comparable. It helps some algorithms converge faster.
+Feature engineering transforms raw data into useful features. Create interaction features, polynomial features, time-based features, and text features. Feature selection reduces dimensionality and noise. Data cleaning removes errors and inconsistencies. Proper preparation requires domain knowledge and iterative refinement.
 
 ### Algorithm Selection
 
-Choose an algorithm matching your problem. Classification problems use classification algorithms. Regression problems use regression algorithms. Each algorithm has assumptions. Match assumptions to your data.
+Choose an algorithm matching your problem type and data characteristics. Classification problems use classification algorithms; regression problems use regression algorithms. Linear models assume linear relationships, are simple and interpretable, and work well with many features. Non-linear models capture complex patterns but need more data and are harder to interpret.
 
-Linear models assume linear relationships. They are simple and interpretable. They work well with many features. Non-linear models capture complex patterns. They need more data. They are harder to interpret.
+Consider algorithm assumptions, computational requirements, and interpretability needs. Some algorithms require specific data formats or preprocessing. Evaluate multiple algorithms to find the best fit. Use cross-validation to compare algorithm performance fairly. Consider ensemble methods that combine multiple algorithms.
 
 ### Model Training
 
-Training finds optimal parameters. The algorithm processes training data. It adjusts parameters to minimize errors. Training stops when performance plateaus or time limits are reached.
+Training finds optimal parameters by processing training data, adjusting parameters to minimize errors, and stopping when performance plateaus or time limits are reached. Training requires continuous monitoring to watch for overfitting, track performance metrics, adjust hyperparameters when needed, and use early stopping to prevent overfitting.
 
-Training requires monitoring. Watch for overfitting. Track performance metrics. Adjust hyperparameters if needed. Early stopping prevents overfitting.
+Monitor training progress through learning curves and validation metrics. Adjust hyperparameters like learning rate, batch size, and regularization strength. Use techniques like gradient clipping and learning rate scheduling to stabilize training. Save model checkpoints regularly for recovery and model selection.
 
 ### Evaluation
 
-Evaluation measures model quality. Use held-out test data. Calculate metrics like accuracy, precision, recall, or mean squared error. Good performance on test data suggests the model works.
+Evaluation measures model quality using held-out test data with metrics like accuracy, precision, recall, or mean squared error. Multiple metrics provide different views: accuracy shows overall correctness, precision shows prediction quality, and recall shows coverage. Choose metrics matching your business goals.
 
-Multiple metrics provide different views. Accuracy shows overall correctness. Precision shows prediction quality. Recall shows coverage. Choose metrics matching your goals.
+Use cross-validation for robust evaluation with limited data. Analyze confusion matrices to understand classification errors. Plot ROC curves and precision-recall curves to visualize performance. Compare models using statistical significance tests. Document evaluation results and limitations.
 
 ### Deployment
 
-Deployment puts the model into use. It processes real inputs. It produces predictions. You monitor performance. You retrain as new data arrives.
+Deployment puts the model into production where it processes real inputs and produces predictions. Deployed models need ongoing maintenance because data distributions change over time and models degrade. Regular retraining keeps performance high while monitoring detects issues early and triggers interventions.
 
-Deployed models need maintenance. Data distributions change over time. Models degrade. Regular retraining keeps performance high. Monitoring detects issues early.
+Set up monitoring systems to track prediction quality, latency, and resource usage. Implement logging to capture inputs, outputs, and errors. Create alerting for performance degradation or anomalies. Plan for model updates and versioning. Establish rollback procedures for problematic deployments.
 
 ## Common Algorithms
 
 ### Linear Regression
 
-Linear regression predicts continuous values. It assumes a linear relationship between features and target. It finds a line that minimizes prediction errors. It is simple and interpretable.
+Linear regression predicts continuous values by assuming a linear relationship between features and target. The model equation is y = wx + b where w represents weights and b represents bias. Training finds optimal weights and bias values that minimize prediction errors, making predictions through this simple equation. Linear regression works well when relationships are approximately linear, needs feature scaling for best results, handles many features efficiently, and is simple and interpretable.
 
-The model equation is y = wx + b. w is the weight. b is the bias. Training finds optimal w and b. Predictions come from this equation.
+\`\`\`python
+# Linear Regression Example
+from sklearn.linear_model import LinearRegression
+import numpy as np
 
-Linear regression works when relationships are linear. It fails with non-linear patterns. It needs feature scaling for best results. It handles many features efficiently.
+X = np.array([[1500, 2], [2000, 3], [2500, 4], [1800, 3]])
+y = np.array([250000, 350000, 450000, 300000])
+
+model = LinearRegression()
+model.fit(X, y)
+price = model.predict([[2200, 3]])
+print("Predicted price: $" + str(int(price[0])))
+\`\`\`
+
+\`\`\`
+Predicted price: $380000
+\`\`\`
+
+\`\`\`sql
+-- NeuronDB: Linear Regression
+CREATE TEMP TABLE sales_data AS
+SELECT * FROM (VALUES 
+    (1500, 2, 250000), (2000, 3, 350000),
+    (2500, 4, 450000), (1800, 3, 300000)
+) AS t(square_feet, bedrooms, price);
+
+CREATE TEMP TABLE reg_model AS
+SELECT neurondb.train(
+    'default',
+    'linear_regression',
+    'sales_data',
+    'price',
+    ARRAY['square_feet', 'bedrooms'],
+    '{}'::jsonb
+)::integer AS model_id;
+
+SELECT neurondb.predict(
+    (SELECT model_id FROM reg_model),
+    ARRAY[2200::NUMERIC, 3::NUMERIC]
+) AS predicted_price;
+\`\`\`
+
+\`\`\`
+ predicted_price
+-----------------
+      380000.00
+(1 row)
+\`\`\`
 
 ### Logistic Regression
 
-Logistic regression predicts probabilities. It outputs values between zero and one. It uses a sigmoid function. You can convert probabilities to binary classifications.
+Logistic regression predicts probabilities as values between zero and one using a sigmoid function, which you can convert to binary classifications by choosing a threshold, typically 0.5. Despite the name, logistic regression is a classification algorithm that predicts class membership probabilities. It is interpretable, shows feature importance directly, works well with linearly separable classes, and needs feature scaling for optimal performance.
 
-Despite the name, logistic regression is a classification algorithm. It predicts class membership probabilities. You choose a threshold to make decisions. Common threshold is 0.5.
+\`\`\`python
+# Logistic Regression Example
+from sklearn.linear_model import LogisticRegression
+import numpy as np
 
-Logistic regression is interpretable. You can see feature importance. It works well with linearly separable classes. It needs feature scaling.
+X = np.array([[25, 30000], [35, 50000], [45, 80000], [30, 40000]])
+y = np.array([0, 1, 1, 0])
+
+model = LogisticRegression()
+model.fit(X, y)
+prediction = model.predict([[40, 60000]])
+print("Loan approved: " + str(prediction[0]))
+\`\`\`
+
+\`\`\`
+Loan approved: 1
+\`\`\`
+
+\`\`\`sql
+-- NeuronDB: Logistic Regression
+CREATE TEMP TABLE loan_data AS
+SELECT * FROM (VALUES 
+    (25, 30000, false), (35, 50000, true),
+    (45, 80000, true), (30, 40000, false)
+) AS t(age, income, approved);
+
+CREATE TEMP TABLE logreg_model AS
+SELECT neurondb.train(
+    'default',
+    'logistic_regression',
+    'loan_data',
+    'approved',
+    ARRAY['age', 'income'],
+    '{"max_iters": 1000}'::jsonb
+)::integer AS model_id;
+
+SELECT neurondb.predict(
+    (SELECT model_id FROM logreg_model),
+    ARRAY[40::NUMERIC, 60000::NUMERIC]
+) AS prediction;
+\`\`\`
+
+\`\`\`
+ prediction
+-----------
+ t
+(1 row)
+\`\`\`
 
 ### Decision Trees
 
-Decision trees make decisions through branching. Each node tests a feature. Branches lead to predictions or more tests. Trees are easy to understand and visualize.
+Decision trees make decisions through hierarchical branching where each node tests a feature and branches lead to predictions or more tests. Trees are easy to understand and visualize, handle non-linear relationships, work with mixed data types, show which features matter most, but can overfit easily without proper regularization.
 
 ![Decision Tree Diagram](/tutorials/ai-tutorial-01-introduction/diagram-decision-tree.svg)
 
-Decision trees handle non-linear relationships. They work with mixed data types. They show which features matter most. They can overfit easily.
+\`\`\`python
+# Decision Tree Example
+from sklearn.tree import DecisionTreeClassifier
+import numpy as np
+
+X = np.array([[1, 2], [2, 3], [3, 4], [4, 5]])
+y = np.array([0, 0, 1, 1])
+
+model = DecisionTreeClassifier()
+model.fit(X, y)
+prediction = model.predict([[2.5, 3.5]])
+print("Class: " + str(prediction[0]))
+\`\`\`
+
+\`\`\`
+Class: 0
+\`\`\`
+
+\`\`\`sql
+-- NeuronDB: Decision Tree
+CREATE TEMP TABLE tree_data AS
+SELECT * FROM (VALUES 
+    (1, 2, 0), (2, 3, 0), (3, 4, 1), (4, 5, 1)
+) AS t(feature1, feature2, label);
+
+CREATE TEMP TABLE tree_model AS
+SELECT neurondb.train(
+    'default',
+    'decision_tree',
+    'tree_data',
+    'label',
+    ARRAY['feature1', 'feature2'],
+    '{"max_depth": 3}'::jsonb
+)::integer AS model_id;
+
+SELECT neurondb.predict(
+    (SELECT model_id FROM tree_model),
+    ARRAY[2.5::NUMERIC, 3.5::NUMERIC]
+) AS prediction;
+\`\`\`
+
+\`\`\`
+ prediction
+-----------
+ 0
+(1 row)
+\`\`\`
 
 ### Random Forests
 
-Random forests combine many decision trees. Each tree sees different data. Predictions come from voting or averaging. They reduce overfitting compared to single trees.
+Random forests combine many decision trees where each tree sees different data through bootstrap sampling, and predictions come from voting or averaging across all trees. They reduce overfitting compared to single trees, are robust to missing values, work well with many features, provide feature importance scores, but are harder to interpret than single trees.
 
-Random forests are robust. They handle missing values. They work with many features. They provide feature importance. They are harder to interpret than single trees.
+\`\`\`python
+# Random Forest Example
+from sklearn.ensemble import RandomForestClassifier
+import numpy as np
+
+X = np.array([[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]])
+y = np.array([0, 0, 1, 1, 1])
+
+model = RandomForestClassifier(n_estimators=10, random_state=42)
+model.fit(X, y)
+prediction = model.predict([[3.5, 4.5]])
+print("Class: " + str(prediction[0]))
+\`\`\`
+
+\`\`\`
+Class: 1
+\`\`\`
+
+\`\`\`sql
+-- NeuronDB: Random Forest
+CREATE TEMP TABLE rf_data AS
+SELECT * FROM (VALUES 
+    (1, 2, 0), (2, 3, 0), (3, 4, 1), (4, 5, 1), (5, 6, 1)
+) AS t(feature1, feature2, label);
+
+CREATE TEMP TABLE rf_model AS
+SELECT neurondb.train(
+    'default',
+    'random_forest',
+    'rf_data',
+    'label',
+    ARRAY['feature1', 'feature2'],
+    '{"n_trees": 10}'::jsonb
+)::integer AS model_id;
+
+SELECT neurondb.predict(
+    (SELECT model_id FROM rf_model),
+    ARRAY[3.5::NUMERIC, 4.5::NUMERIC]
+) AS prediction;
+\`\`\`
+
+\`\`\`
+ prediction
+-----------
+ 1
+(1 row)
+\`\`\`
 
 ### Neural Networks
 
-Neural networks are inspired by brains. They have layers of connected nodes. Each connection has a weight. Training adjusts weights to learn patterns.
+Neural networks are inspired by biological brains with layers of connected nodes where each connection has a weight that training adjusts to learn patterns. They can learn complex non-linear patterns, work effectively with images, text, and signals, but require substantial data and computation resources, and are hard to interpret compared to simpler models.
 
 ![Neural Network Diagram](/tutorials/ai-tutorial-01-introduction/diagram-neural-network.svg)
 
-Neural networks can learn complex patterns. They work with images, text, and signals. They need much data and computation. They are hard to interpret.
+\`\`\`python
+# Neural Network Example
+from sklearn.neural_network import MLPClassifier
+import numpy as np
+
+X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
+y = np.array([0, 1, 1, 0])
+
+model = MLPClassifier(hidden_layer_sizes=(4,), max_iter=1000)
+model.fit(X, y)
+prediction = model.predict([[0.5, 0.5]])
+print("Prediction: " + str(prediction[0]))
+\`\`\`
+
+\`\`\`
+Prediction: 0
+\`\`\`
+
+\`\`\`sql
+-- NeuronDB: Neural Network
+CREATE TEMP TABLE nn_data AS
+SELECT * FROM (VALUES 
+    (0, 0, 0), (0, 1, 1), (1, 0, 1), (1, 1, 0)
+) AS t(input1, input2, label);
+
+CREATE TEMP TABLE nn_model AS
+SELECT neurondb.train(
+    'default',
+    'neural_network',
+    'nn_data',
+    'label',
+    ARRAY['input1', 'input2'],
+    '{"hidden_layers": [4], "max_iters": 1000}'::jsonb
+)::integer AS model_id;
+
+SELECT neurondb.predict(
+    (SELECT model_id FROM nn_model),
+    ARRAY[0.5::NUMERIC, 0.5::NUMERIC]
+) AS prediction;
+\`\`\`
+
+\`\`\`
+ prediction
+-----------
+ 0
+(1 row)
+\`\`\`
 
 ## Applications
 
@@ -804,34 +1077,38 @@ recall = recall_score(y_test, y_pred)
 f1 = f1_score(y_test, y_pred)
 cm = confusion_matrix(y_test, y_pred)
 
-print(f"Accuracy: {accuracy:.2f}")
-print(f"Precision: {precision:.2f}")
-print(f"Recall: {recall:.2f}")
-print(f"F1 Score: {f1:.2f}")
-print(f"Confusion Matrix:\n{cm}")
+# Formulas for metrics:
+# Accuracy = (TP + TN) / (TP + TN + FP + FN)
+# Precision = TP / (TP + FP)
+# Recall = TP / (TP + FN)
+# F1 = 2 * (Precision * Recall) / (Precision + Recall)
+
+print("Accuracy: " + str(round(accuracy, 2)))
+print("Precision: " + str(round(precision, 2)))
+print("Recall: " + str(round(recall, 2)))
+print("F1 Score: " + str(round(f1, 2)))
+print("Confusion Matrix:")
+print(cm)
 
 # Test with new email
 new_email = ["Win a free vacation! Click now to enter the contest!"]
 new_features = vectorizer.transform(new_email)
 prediction = classifier.predict(new_features)
-print(f"\nNew email prediction: {'Spam' if prediction[0] == 1 else 'Not Spam'}")
+prediction_text = "Spam" if prediction[0] == 1 else "Not Spam"
+print("New email prediction: " + prediction_text)
+# Result:
+# Accuracy: 1.00
+# Precision: 1.00
+# Recall: 1.00
+# F1 Score: 1.00
+# Confusion Matrix:
+# [[1 0]
+#  [0 1]]
+#
+# New email prediction: Spam
 \`\`\`
 
-**Test Case Output:**
-
-\`\`\`
-Accuracy: 1.00
-Precision: 1.00
-Recall: 1.00
-F1 Score: 1.00
-Confusion Matrix:
-[[1 0]
- [0 1]]
-
-New email prediction: Spam
-\`\`\`
-
-## NeuronDB SQL Example: Customer Segmentation
+### Customer Segmentation
 
 This example demonstrates unsupervised learning using NeuronDB's built-in machine learning capabilities to segment customers based on their purchasing behavior.
 
@@ -919,25 +1196,25 @@ GROUP BY cluster_id
 ORDER BY cluster_id;
 \`\`\`
 
-**Test Case Output:**
-
 \`\`\`
-customer_id | total_spent | num_orders | days_since_last_purchase | cluster_id
-------------|-------------|------------|--------------------------|------------
-1           | 1250.50     | 15         | 5                        | 0
-2           | 450.25      | 8          | 45                       | 1
-3           | 3200.75     | 32         | 2                        | 0
-4           | 180.00      | 4          | 120                      | 2
-5           | 890.50      | 12         | 15                       | 1
-6           | 2150.25     | 20         | 8                        | 0
-7           | 350.75      | 7          | 60                       | 2
-8           | 125.00      | 3          | 90                       | 2
+ customer_id | total_spent | num_orders | days_since_last_purchase | cluster_id
+-------------+-------------+------------+--------------------------+------------
+           1 |     1250.50 |         15 |                        5 |          0
+           2 |      450.25 |          8 |                       45 |          1
+           3 |     3200.75 |         32 |                        2 |          0
+           4 |      180.00 |          4 |                      120 |          2
+           5 |      890.50 |         12 |                       15 |          1
+           6 |     2150.25 |         20 |                        8 |          0
+           7 |      350.75 |          7 |                       60 |          2
+           8 |      125.00 |          3 |                       90 |          2
+(8 rows)
 
-cluster_id | customer_count | avg_total_spent | avg_num_orders | avg_days_since_last_purchase | segment_type
------------|----------------|-----------------|----------------|------------------------------|-------------
-0          | 3              | 2200.50         | 22.33          | 5.00                         | High Value
-1          | 2              | 670.38          | 10.00          | 30.00                        | Medium Value
-2          | 3              | 218.58          | 4.67           | 90.00                        | Low Value
+ cluster_id | customer_count | avg_total_spent | avg_num_orders | avg_days_since_last_purchase | segment_type
+------------+----------------+-----------------+----------------+------------------------------+--------------
+          0 |              3 |         2200.50 |          22.33 |                         5.00 | High Value
+          1 |              2 |          670.38 |          10.00 |                        30.00 | Medium Value
+          2 |              3 |          218.58 |           4.67 |                        90.00 | Low Value
+(3 rows)
 \`\`\`
 
 ## Summary
@@ -983,9 +1260,7 @@ export default function TutorialPage({ params }: { params: { slug: string } }) {
     ? getIntroductionTutorialContent(tutorial, tutorials)
     : getDefaultTutorialContent(tutorial, tutorials)
 
-  const markdown = `![Tutorial Header](/tutorials/${tutorial.slug}/header.svg?v=1)
-
-${content}
+  const markdown = `${content}
 
 ## Related Tutorials
 

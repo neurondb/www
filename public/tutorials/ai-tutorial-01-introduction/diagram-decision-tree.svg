@@ -4,10 +4,9 @@
       <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
     </linearGradient>
-    <clipPath id="clipRoot"><rect x="0" y="0" width="100" height="50"/></clipPath>
-    <clipPath id="clipLevel2"><rect x="0" y="0" width="100" height="50"/></clipPath>
-    <clipPath id="clipLeaf"><rect x="0" y="0" width="80" height="40"/></clipPath>
-    <clipPath id="clipDecisionExplain"><rect x="0" y="0" width="700" height="170"/></clipPath>
+    <marker id="arrowTree" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+    </marker>
   </defs>
   
   <rect width="800" height="600" fill="url(#treeBg)"/>
@@ -17,76 +16,76 @@
   <!-- Root Node -->
   <g transform="translate(350, 80)">
     <rect x="0" y="0" width="100" height="50" fill="#4f46e5" opacity="0.4" rx="6" stroke="#6366f1" stroke-width="2"/>
-    <text x="50" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle" clip-path="url(#clipRoot)">Feature X₁</text>
-    <text x="50" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipRoot)">≤ 5?</text>
+    <text x="50" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Feature X₁</text>
+    <text x="50" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">≤ 5?</text>
   </g>
   
   <!-- Level 2 Nodes -->
   <g transform="translate(150, 180)">
     <rect x="0" y="0" width="100" height="50" fill="#10b981" opacity="0.4" rx="6" stroke="#22c55e" stroke-width="2"/>
-    <text x="50" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle" clip-path="url(#clipLevel2)">Feature X₂</text>
-    <text x="50" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipLevel2)">≤ 3?</text>
+    <text x="50" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Feature X₂</text>
+    <text x="50" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">≤ 3?</text>
   </g>
   
   <g transform="translate(550, 180)">
     <rect x="0" y="0" width="100" height="50" fill="#f59e0b" opacity="0.4" rx="6" stroke="#fbbf24" stroke-width="2"/>
-    <text x="50" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle" clip-path="url(#clipLevel2)">Feature X₃</text>
-    <text x="50" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipLevel2)">≤ 7?</text>
+    <text x="50" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Feature X₃</text>
+    <text x="50" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">≤ 7?</text>
   </g>
   
   <!-- Level 3 Nodes - Leaves -->
   <g transform="translate(50, 300)">
     <rect x="0" y="0" width="80" height="40" fill="#22c55e" opacity="0.5" rx="4"/>
-    <text x="40" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle" clip-path="url(#clipLeaf)">Class A</text>
-    <text x="40" y="35" font-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipLeaf)">85%</text>
+    <text x="40" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Class A</text>
+    <text x="40" y="35" font-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle">85%</text>
   </g>
   
   <g transform="translate(170, 300)">
     <rect x="0" y="0" width="80" height="40" fill="#ef4444" opacity="0.5" rx="4"/>
-    <text x="40" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle" clip-path="url(#clipLeaf)">Class B</text>
-    <text x="40" y="35" font-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipLeaf)">78%</text>
+    <text x="40" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Class B</text>
+    <text x="40" y="35" font-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle">78%</text>
   </g>
   
   <g transform="translate(450, 300)">
     <rect x="0" y="0" width="80" height="40" fill="#f59e0b" opacity="0.5" rx="4"/>
-    <text x="40" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle" clip-path="url(#clipLeaf)">Class C</text>
-    <text x="40" y="35" font-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipLeaf)">92%</text>
+    <text x="40" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Class C</text>
+    <text x="40" y="35" font-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle">92%</text>
   </g>
   
   <g transform="translate(570, 300)">
     <rect x="0" y="0" width="80" height="40" fill="#8b5cf6" opacity="0.5" rx="4"/>
-    <text x="40" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle" clip-path="url(#clipLeaf)">Class D</text>
-    <text x="40" y="35" font-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipLeaf)">67%</text>
+    <text x="40" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Class D</text>
+    <text x="40" y="35" font-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle">67%</text>
   </g>
   
-  <!-- Branches -->
-  <path d="M 400 130 L 200 180" fill="none" stroke="#06b6d4" stroke-width="2"/>
-  <text x="300" y="155" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">Yes</text>
+  <!-- Branches - longer routes to avoid mixing -->
+  <path d="M 400 130 L 400 145 L 150 145 L 150 205 L 200 205 L 200 180" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowTree)"/>
+  <text x="275" y="135" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">Yes</text>
   
-  <path d="M 400 130 L 600 180" fill="none" stroke="#06b6d4" stroke-width="2"/>
-  <text x="500" y="155" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">No</text>
+  <path d="M 400 130 L 400 145 L 650 145 L 650 205 L 600 205 L 600 180" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowTree)"/>
+  <text x="525" y="135" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">No</text>
   
-  <path d="M 200 230 L 90 300" fill="none" stroke="#06b6d4" stroke-width="2"/>
-  <text x="145" y="265" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">Yes</text>
+  <path d="M 200 230 L 200 250 L 50 250 L 50 315 L 90 315 L 90 300" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowTree)"/>
+  <text x="125" y="240" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">Yes</text>
   
-  <path d="M 200 230 L 210 300" fill="none" stroke="#06b6d4" stroke-width="2"/>
-  <text x="205" y="265" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">No</text>
+  <path d="M 200 230 L 200 250 L 250 250 L 250 315 L 210 315 L 210 300" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowTree)"/>
+  <text x="225" y="240" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">No</text>
   
-  <path d="M 600 230 L 490 300" fill="none" stroke="#06b6d4" stroke-width="2"/>
-  <text x="545" y="265" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">Yes</text>
+  <path d="M 600 230 L 600 250 L 450 250 L 450 315 L 490 315 L 490 300" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowTree)"/>
+  <text x="525" y="240" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">Yes</text>
   
-  <path d="M 600 230 L 610 300" fill="none" stroke="#06b6d4" stroke-width="2"/>
-  <text x="605" y="265" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">No</text>
+  <path d="M 600 230 L 600 250 L 650 250 L 650 315 L 610 315 L 610 300" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowTree)"/>
+  <text x="625" y="240" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">No</text>
   
   <!-- Explanation -->
   <g transform="translate(50, 400)">
     <rect x="0" y="0" width="700" height="170" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
     <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">How Decision Trees Work</text>
     
-    <text x="20" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" clip-path="url(#clipDecisionExplain)">Decision trees make predictions by following a path from root to leaf. Each internal node tests a feature condition.</text>
-    <text x="20" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" clip-path="url(#clipDecisionExplain)">Branches represent outcomes of tests. Leaf nodes contain final predictions or class labels.</text>
-    <text x="20" y="110" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" clip-path="url(#clipDecisionExplain)">For a new example, start at the root. Follow branches based on feature values. Reach a leaf node.</text>
-    <text x="20" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" clip-path="url(#clipDecisionExplain)">The prediction is the class or value in the leaf node. Trees are interpretable because you can trace the decision path.</text>
+    <text x="20" y="60" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">Decision trees make predictions by following a path from root to leaf. Each internal node tests a feature condition.</text>
+    <text x="20" y="85" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">Branches represent outcomes of tests. Leaf nodes contain final predictions or class labels.</text>
+    <text x="20" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">For a new example, start at the root. Follow branches based on feature values. Reach a leaf node.</text>
+    <text x="20" y="135" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">The prediction is the class or value in the leaf node. Trees are interpretable because you can trace the decision path.</text>
   </g>
 </svg>
 

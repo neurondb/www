@@ -4,31 +4,8 @@
       <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
     </linearGradient>
-    <clipPath id="clipRawData1"><rect x="10" y="45" width="160" height="20"/></clipPath>
-    <clipPath id="clipRawData2"><rect x="10" y="70" width="160" height="20"/></clipPath>
-    <clipPath id="clipRawData3"><rect x="10" y="95" width="160" height="20"/></clipPath>
-    <clipPath id="clipFeatures1"><rect x="10" y="45" width="180" height="25"/></clipPath>
-    <clipPath id="clipFeatures2"><rect x="10" y="75" width="180" height="25"/></clipPath>
-    <clipPath id="clipFeatures3"><rect x="10" y="105" width="180" height="25"/></clipPath>
-    <clipPath id="clipLabels1"><rect x="10" y="45" width="180" height="25"/></clipPath>
-    <clipPath id="clipLabels2"><rect x="10" y="75" width="180" height="25"/></clipPath>
-    <clipPath id="clipLabels3"><rect x="10" y="105" width="180" height="25"/></clipPath>
-    <clipPath id="clipTraining1"><rect x="10" y="45" width="150" height="25"/></clipPath>
-    <clipPath id="clipTraining2"><rect x="10" y="75" width="150" height="25"/></clipPath>
-    <clipPath id="clipTraining3"><rect x="10" y="105" width="150" height="25"/></clipPath>
-    <clipPath id="clipTrainingProcess1"><rect x="20" y="50" width="100" height="50"/></clipPath>
-    <clipPath id="clipTrainingProcess2"><rect x="150" y="50" width="100" height="50"/></clipPath>
-    <clipPath id="clipTrainingProcess3"><rect x="280" y="50" width="100" height="50"/></clipPath>
-    <clipPath id="clipTesting1"><rect x="10" y="45" width="260" height="25"/></clipPath>
-    <clipPath id="clipTesting2"><rect x="10" y="75" width="260" height="25"/></clipPath>
-    <clipPath id="clipTesting3"><rect x="10" y="105" width="260" height="25"/></clipPath>
-    <clipPath id="clipOverfitting1"><rect x="10" y="45" width="260" height="25"/></clipPath>
-    <clipPath id="clipOverfitting2"><rect x="10" y="75" width="260" height="25"/></clipPath>
-    <clipPath id="clipOverfitting3"><rect x="10" y="105" width="260" height="25"/></clipPath>
-    <clipPath id="clipModel"><rect x="0" y="0" width="200" height="80"/></clipPath>
-    <clipPath id="clipDataFlow"><rect x="0" y="0" width="900" height="80"/></clipPath>
-    <marker id="arrowConcepts" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#06b6d4"/>
+    <marker id="arrowConcepts" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
     </marker>
   </defs>
   
@@ -42,13 +19,13 @@
     <text x="90" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#4f46e5" text-anchor="middle">Raw Data</text>
     
     <rect x="10" y="45" width="160" height="20" fill="#4f46e5" opacity="0.4" rx="3"/>
-    <text x="90" y="58" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipRawData1)">Email 1, Email 2, Email 3...</text>
+    <text x="90" y="58" font-family="monospace" font-size="8" fill="#fff" text-anchor="middle">Email 1, Email 2, Email 3...</text>
     
     <rect x="10" y="70" width="160" height="20" fill="#4f46e5" opacity="0.4" rx="3"/>
-    <text x="90" y="83" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipRawData2)">House 1, House 2, House 3...</text>
+    <text x="90" y="83" font-family="monospace" font-size="8" fill="#fff" text-anchor="middle">House 1, House 2, House 3...</text>
     
     <rect x="10" y="95" width="160" height="20" fill="#4f46e5" opacity="0.4" rx="3"/>
-    <text x="90" y="108" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipRawData3)">Image 1, Image 2, Image 3...</text>
+    <text x="90" y="108" font-family="monospace" font-size="8" fill="#fff" text-anchor="middle">Image 1, Image 2, Image 3...</text>
   </g>
   
   <!-- Features Extraction -->
@@ -57,13 +34,13 @@
     <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle">Features (X)</text>
     
     <rect x="10" y="45" width="180" height="25" fill="#10b981" opacity="0.4" rx="3"/>
-    <text x="100" y="61" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipFeatures1)">X₁: Sender domain</text>
+    <text x="100" y="61" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">X₁: Sender domain</text>
     
     <rect x="10" y="75" width="180" height="25" fill="#10b981" opacity="0.4" rx="3"/>
-    <text x="100" y="91" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipFeatures2)">X₂: Subject length</text>
+    <text x="100" y="91" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">X₂: Subject length</text>
     
     <rect x="10" y="105" width="180" height="25" fill="#10b981" opacity="0.4" rx="3"/>
-    <text x="100" y="121" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipFeatures3)">X₃: Word count</text>
+    <text x="100" y="121" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">X₃: Word count</text>
   </g>
   
   <!-- Labels -->
@@ -72,13 +49,13 @@
     <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">Labels (Y)</text>
     
     <rect x="10" y="45" width="180" height="25" fill="#f59e0b" opacity="0.4" rx="3"/>
-    <text x="100" y="61" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipLabels1)">Y₁: Spam</text>
+    <text x="100" y="61" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">Y₁: Spam</text>
     
     <rect x="10" y="75" width="180" height="25" fill="#f59e0b" opacity="0.4" rx="3"/>
-    <text x="100" y="91" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipLabels2)">Y₂: Not Spam</text>
+    <text x="100" y="91" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">Y₂: Not Spam</text>
     
     <rect x="10" y="105" width="180" height="25" fill="#f59e0b" opacity="0.4" rx="3"/>
-    <text x="100" y="121" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipLabels3)">Y₃: Spam</text>
+    <text x="100" y="121" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">Y₃: Spam</text>
   </g>
   
   <!-- Training Data -->
@@ -87,26 +64,26 @@
     <text x="85" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#6366f1" text-anchor="middle">Training Set</text>
     
     <rect x="10" y="45" width="150" height="25" fill="#6366f1" opacity="0.4" rx="3"/>
-    <text x="85" y="61" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipTraining1)">80% of data</text>
+    <text x="85" y="61" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">80% of data</text>
     
     <rect x="10" y="75" width="150" height="25" fill="#6366f1" opacity="0.4" rx="3"/>
-    <text x="85" y="91" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipTraining2)">Used to build</text>
+    <text x="85" y="91" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">Used to build</text>
     
     <rect x="10" y="105" width="150" height="25" fill="#6366f1" opacity="0.4" rx="3"/>
-    <text x="85" y="121" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipTraining3)">the model</text>
+    <text x="85" y="121" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">the model</text>
   </g>
   
-  <!-- Arrows from Raw Data to Features -->
-  <path d="M 230 160 L 280 160" fill="none" stroke="#06b6d4" stroke-width="3" marker-end="url(#arrowConcepts)"/>
-  <text x="255" y="150" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Extract</text>
+  <!-- Arrows from Raw Data to Features - longer route to avoid mixing -->
+  <path d="M 230 160 L 230 180 L 280 180 L 280 160" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <text x="255" y="195" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Extract</text>
   
-  <!-- Arrows from Features to Labels -->
-  <path d="M 480 160 L 530 160" fill="none" stroke="#06b6d4" stroke-width="3" marker-end="url(#arrowConcepts)"/>
-  <text x="505" y="150" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Pair</text>
+  <!-- Arrows from Features to Labels - longer route to avoid mixing -->
+  <path d="M 480 160 L 480 180 L 530 180 L 530 160" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <text x="505" y="195" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Pair</text>
   
-  <!-- Arrow to Training Set -->
-  <path d="M 730 160 L 780 160" fill="none" stroke="#06b6d4" stroke-width="3" marker-end="url(#arrowConcepts)"/>
-  <text x="755" y="150" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Split</text>
+  <!-- Arrow to Training Set - longer route to avoid mixing -->
+  <path d="M 730 160 L 730 180 L 780 180 L 780 160" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <text x="755" y="195" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Split</text>
   
   <!-- Training Process -->
   <g transform="translate(300, 280)">
@@ -114,32 +91,32 @@
     <text x="200" y="30" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Training Process</text>
     
     <rect x="20" y="50" width="100" height="50" fill="#8b5cf6" opacity="0.4" rx="4"/>
-    <text x="70" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle" clip-path="url(#clipTrainingProcess1)">Feed Data</text>
-    <text x="70" y="87" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipTrainingProcess1)">X + Y</text>
+    <text x="70" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Feed Data</text>
+    <text x="70" y="87" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">X + Y</text>
     
     <rect x="150" y="50" width="100" height="50" fill="#a78bfa" opacity="0.4" rx="4"/>
-    <text x="200" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle" clip-path="url(#clipTrainingProcess2)">Adjust</text>
-    <text x="200" y="87" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipTrainingProcess2)">Parameters</text>
+    <text x="200" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Adjust</text>
+    <text x="200" y="87" font-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle">Parameters</text>
     
     <rect x="280" y="50" width="100" height="50" fill="#c084fc" opacity="0.4" rx="4"/>
-    <text x="330" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle" clip-path="url(#clipTrainingProcess3)">Minimize</text>
-    <text x="330" y="87" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipTrainingProcess3)">Errors</text>
+    <text x="330" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Minimize</text>
+    <text x="330" y="87" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Errors</text>
     
-    <path d="M 120 75 L 150 75" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowConcepts)"/>
-    <path d="M 250 75 L 280 75" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowConcepts)"/>
+    <path d="M 120 75 L 150 75" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+    <path d="M 250 75 L 280 75" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
   </g>
   
   <!-- Trained Model -->
   <g transform="translate(400, 450)">
     <rect x="0" y="0" width="200" height="80" fill="#10b981" opacity="0.3" rx="8" stroke="#22c55e" stroke-width="2"/>
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle" clip-path="url(#clipModel)">Trained Model</text>
-    <text x="100" y="55" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipModel)">Learned patterns</text>
-    <text x="100" y="72" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipModel)">from training data</text>
+    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle">Trained Model</text>
+    <text x="100" y="55" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Learned patterns</text>
+    <text x="100" y="72" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">from training data</text>
   </g>
   
-  <!-- Arrow from Training to Model -->
-  <path d="M 500 400 L 500 450" fill="none" stroke="#06b6d4" stroke-width="4" marker-end="url(#arrowConcepts)"/>
-  <text x="520" y="425" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4">Produces</text>
+  <!-- Arrow from Training to Model - longer route to avoid mixing -->
+  <path d="M 500 400 L 500 430 L 550 430 L 550 450 L 500 450" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <text x="535" y="440" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4">Produces</text>
   
   <!-- Testing -->
   <g transform="translate(50, 450)">
@@ -147,13 +124,13 @@
     <text x="140" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">Testing Phase</text>
     
     <rect x="10" y="45" width="260" height="25" fill="#ef4444" opacity="0.4" rx="3"/>
-    <text x="140" y="61" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle" clip-path="url(#clipTesting1)">Use 20% test data (unseen)</text>
+    <text x="140" y="61" font-family="monospace" font-size="8" fill="#fff" text-anchor="middle">Use 20% test data (unseen)</text>
     
     <rect x="10" y="75" width="260" height="25" fill="#ef4444" opacity="0.4" rx="3"/>
-    <text x="140" y="91" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipTesting2)">Model makes predictions</text>
+    <text x="140" y="91" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">Model makes predictions</text>
     
     <rect x="10" y="105" width="260" height="25" fill="#ef4444" opacity="0.4" rx="3"/>
-    <text x="140" y="121" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle" clip-path="url(#clipTesting3)">Compare to true labels</text>
+    <text x="140" y="121" font-family="monospace" font-size="8" fill="#fff" text-anchor="middle">Compare to true labels</text>
   </g>
   
   <!-- Overfitting Warning -->
@@ -162,33 +139,33 @@
     <text x="140" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">Overfitting Risk</text>
     
     <rect x="10" y="45" width="260" height="25" fill="#f59e0b" opacity="0.4" rx="3"/>
-    <text x="140" y="61" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipOverfitting1)">High training accuracy</text>
+    <text x="140" y="61" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">High training accuracy</text>
     
     <rect x="10" y="75" width="260" height="25" fill="#f59e0b" opacity="0.4" rx="3"/>
-    <text x="140" y="91" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" clip-path="url(#clipOverfitting2)">Low test accuracy</text>
+    <text x="140" y="91" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">Low test accuracy</text>
     
     <rect x="10" y="105" width="260" height="25" fill="#f59e0b" opacity="0.4" rx="3"/>
-    <text x="140" y="121" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle" clip-path="url(#clipOverfitting3)">Model memorized data</text>
+    <text x="140" y="121" font-family="monospace" font-size="8" fill="#fff" text-anchor="middle">Model memorized data</text>
   </g>
   
-  <!-- Arrows -->
-  <path d="M 330 490 L 400 490" fill="none" stroke="#06b6d4" stroke-width="3" marker-end="url(#arrowConcepts)"/>
-  <text x="365" y="480" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Test</text>
+  <!-- Arrows - longer routes to avoid mixing -->
+  <path d="M 330 490 L 330 520 L 400 520 L 400 490" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <text x="365" y="535" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Test</text>
   
-  <path d="M 600 490 L 680 490" fill="none" stroke="#ef4444" stroke-width="3" marker-end="url(#arrowConcepts)"/>
-  <text x="640" y="480" font-family="system-ui, sans-serif" font-size="12" fill="#ef4444" text-anchor="middle">Monitor</text>
+  <path d="M 600 490 L 600 520 L 680 520 L 680 490" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <text x="640" y="535" font-family="system-ui, sans-serif" font-size="12" fill="#ef4444" text-anchor="middle">Monitor</text>
   
   <!-- Data Flow Explanation -->
   <g transform="translate(50, 600)">
     <rect x="0" y="0" width="900" height="80" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
     <text x="450" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#facc15" text-anchor="middle">Data Flow Summary</text>
     
-    <text x="20" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" clip-path="url(#clipDataFlow)">1. Extract features (X) from raw data</text>
-    <text x="250" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" clip-path="url(#clipDataFlow)">2. Collect labels (Y) for supervised learning</text>
-    <text x="500" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" clip-path="url(#clipDataFlow)">3. Split into training (80%) and test (20%)</text>
-    <text x="20" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" clip-path="url(#clipDataFlow)">4. Train model on training data to learn patterns</text>
-    <text x="250" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" clip-path="url(#clipDataFlow)">5. Test model on unseen test data</text>
-    <text x="500" y="72" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" clip-path="url(#clipDataFlow)">6. Watch for overfitting (train >> test)</text>
+    <text x="20" y="50" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">1. Extract features (X) from raw data</text>
+    <text x="250" y="50" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">2. Collect labels (Y) for supervised learning</text>
+    <text x="500" y="50" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">3. Split into training (80%) and test (20%)</text>
+    <text x="20" y="72" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">4. Train model on training data to learn patterns</text>
+    <text x="250" y="72" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">5. Test model on unseen test data</text>
+    <text x="500" y="72" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">6. Watch for overfitting (train >> test)</text>
   </g>
   
 </svg>

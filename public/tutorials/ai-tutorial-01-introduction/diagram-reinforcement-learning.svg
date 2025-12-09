@@ -4,12 +4,11 @@
       <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
     </linearGradient>
-    <clipPath id="clipAgent"><rect x="0" y="0" width="120" height="80"/></clipPath>
-    <clipPath id="clipEnv"><rect x="0" y="0" width="200" height="120"/></clipPath>
-    <clipPath id="clipLearning"><rect x="0" y="50" width="100" height="60"/></clipPath>
-    <clipPath id="clipRLExamples"><rect x="0" y="0" width="700" height="100"/></clipPath>
-    <marker id="arrowRL" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#06b6d4"/>
+    <marker id="arrowRL" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+    </marker>
+    <marker id="arrowRLOrange" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#f59e0b"/>
     </marker>
   </defs>
   
@@ -20,53 +19,53 @@
   <!-- Agent -->
   <g transform="translate(100, 100)">
     <rect x="0" y="0" width="120" height="80" fill="#ef4444" opacity="0.4" rx="8" stroke="#f87171" stroke-width="2"/>
-    <text x="60" y="30" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle" clip-path="url(#clipAgent)">Agent</text>
-    <text x="60" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipAgent)">Observes</text>
-    <text x="60" y="68" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipAgent)">Acts</text>
+    <text x="60" y="30" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Agent</text>
+    <text x="60" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Observes</text>
+    <text x="60" y="68" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Acts</text>
   </g>
   
   <!-- Environment -->
   <g transform="translate(500, 80)">
     <rect x="0" y="0" width="200" height="120" fill="#10b981" opacity="0.3" rx="8" stroke="#22c55e" stroke-width="2"/>
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle" clip-path="url(#clipEnv)">Environment</text>
-    <text x="100" y="55" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipEnv)">Current State</text>
-    <text x="100" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipEnv)">Rewards/Penalties</text>
-    <text x="100" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" clip-path="url(#clipEnv)">New State</text>
+    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Environment</text>
+    <text x="100" y="55" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Current State</text>
+    <text x="100" y="75" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Rewards/Penalties</text>
+    <text x="100" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">New State</text>
   </g>
   
-  <!-- Action Arrow -->
-  <path d="M 220 140 L 500 140" fill="none" stroke="#06b6d4" stroke-width="4" marker-end="url(#arrowRL)"/>
-  <text x="360" y="130" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">Action</text>
+  <!-- Action Arrow - longer route above to avoid mixing -->
+  <path d="M 220 140 L 220 120 L 500 120 L 500 140" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRL)"/>
+  <text x="360" y="110" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">Action</text>
   
-  <!-- State/Reward Arrow -->
-  <path d="M 500 140 L 220 140" fill="none" stroke="#f59e0b" stroke-width="4" marker-end="url(#arrowRL)" stroke-dasharray="10,5"/>
-  <text x="360" y="155" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">State + Reward</text>
+  <!-- State/Reward Arrow - longer route below to avoid mixing -->
+  <path d="M 500 140 L 500 165 L 220 165 L 220 140" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRLOrange)"/>
+  <text x="360" y="175" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">State + Reward</text>
   
   <!-- Learning Loop -->
   <g transform="translate(250, 250)">
     <text x="150" y="30" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Learning Loop</text>
     
     <rect x="0" y="50" width="100" height="60" fill="#4f46e5" opacity="0.3" rx="4"/>
-    <text x="50" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle" clip-path="url(#clipLearning)">Observe</text>
-    <text x="50" y="92" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle" clip-path="url(#clipLearning)">State</text>
+    <text x="50" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Observe</text>
+    <text x="50" y="92" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">State</text>
     
     <rect x="120" y="50" width="100" height="60" fill="#6366f1" opacity="0.3" rx="4"/>
-    <text x="170" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle" clip-path="url(#clipLearning)">Choose</text>
-    <text x="170" y="92" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle" clip-path="url(#clipLearning)">Action</text>
+    <text x="170" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Choose</text>
+    <text x="170" y="92" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Action</text>
     
     <rect x="240" y="50" width="100" height="60" fill="#818cf8" opacity="0.3" rx="4"/>
-    <text x="290" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle" clip-path="url(#clipLearning)">Receive</text>
-    <text x="290" y="92" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle" clip-path="url(#clipLearning)">Reward</text>
+    <text x="290" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Receive</text>
+    <text x="290" y="92" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Reward</text>
     
     <rect x="360" y="50" width="100" height="60" fill="#a5b4fc" opacity="0.3" rx="4"/>
-    <text x="410" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle" clip-path="url(#clipLearning)">Update</text>
-    <text x="410" y="92" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle" clip-path="url(#clipLearning)">Strategy</text>
+    <text x="410" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Update</text>
+    <text x="410" y="92" font-family="system-ui, sans-serif" font-size="9" fill="#fff" text-anchor="middle">Strategy</text>
     
     <!-- Loop Arrows -->
-    <path d="M 100 80 L 120 80" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowRL)"/>
-    <path d="M 220 80 L 240 80" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowRL)"/>
-    <path d="M 340 80 L 360 80" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowRL)"/>
-    <path d="M 410 110 Q 450 130 410 150 L 410 150 L 50 150 L 50 110" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowRL)"/>
+    <path d="M 100 80 L 120 80" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRL)"/>
+    <path d="M 220 80 L 240 80" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRL)"/>
+    <path d="M 340 80 L 360 80" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRL)"/>
+    <path d="M 410 110 L 410 140 L 50 140 L 50 110" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRL)"/>
   </g>
   
   <!-- Examples -->
@@ -74,9 +73,9 @@
     <rect x="0" y="0" width="700" height="100" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
     <text x="350" y="25" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Applications</text>
     
-    <text x="20" y="55" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" clip-path="url(#clipRLExamples)">Game Playing: Agent learns to win games through trial and error</text>
-    <text x="20" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" clip-path="url(#clipRLExamples)">Robotics: Robot learns navigation by exploring and receiving feedback</text>
-    <text x="20" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" clip-path="url(#clipRLExamples)">Recommendation: System learns user preferences from interaction rewards</text>
+    <text x="20" y="55" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">Game Playing: Agent learns to win games through trial and error</text>
+    <text x="20" y="75" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">Robotics: Robot learns navigation by exploring and receiving feedback</text>
+    <text x="20" y="95" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">Recommendation: System learns user preferences from interaction rewards</text>
   </g>
   
 </svg>

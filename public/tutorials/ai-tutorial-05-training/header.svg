@@ -46,15 +46,15 @@
   </g>
   
   <!-- Main Title -->
-  <text x="600" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#facc15" text-anchor="middle" letter-spacing="-0.5px">
+  <text x="600" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#facc15" text-anchor="middle" letter-spacing="-0.5px">
     Training Neural Networks
   </text>
   
   <!-- Tutorial Info Badge -->
   <g transform="translate(600, 275)">
-    <rect x="-250" y="-25" width="500" height="50" rx="25" fill="rgba(15, 23, 42, 0.8)" stroke="#10b981" stroke-width="2" opacity="0.8"/>
-    <text x="-140" y="6" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="start" font-weight="500">Tutorial 05</text>
-    <text x="0" y="6" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#10b981" text-anchor="start" font-weight="600">Beginner</text>
-    <text x="110" y="6" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#cbd5e1" text-anchor="start">Training Process</text>
+    <rect x="-325" y="-30" width="650" height="60" rx="30" fill="rgba(15, 23, 42, 0.8)" stroke="#10b981" stroke-width="2" opacity="0.8"/>
+    <text x="-180" y="8" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="start" font-weight="500">Tutorial 05</text>
+    <text x="-20" y="8" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#10b981" text-anchor="start" font-weight="600">Beginner</text>
+    <text x="140" y="8" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#cbd5e1" text-anchor="start">Training Process</text>
   </g>
 </svg>

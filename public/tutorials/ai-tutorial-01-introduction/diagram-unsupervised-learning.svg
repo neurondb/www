@@ -4,8 +4,6 @@
       <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
     </linearGradient>
-    <clipPath id="clipPattern"><rect x="0" y="0" width="200" height="80"/></clipPath>
-    <clipPath id="clipApplications"><rect x="0" y="0" width="300" height="150"/></clipPath>
   </defs>
   
   <rect width="800" height="500" fill="url(#unsupervisedBg)"/>
@@ -35,24 +33,24 @@
   <!-- Learning -->
   <g transform="translate(300, 180)">
     <rect x="0" y="0" width="200" height="80" fill="#6366f1" opacity="0.4" rx="8" stroke="#818cf8" stroke-width="2"/>
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Pattern Discovery</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Finds hidden structure</text>
-    <text x="100" y="68" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Groups similar items</text>
+    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Pattern Discovery</text>
+    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Finds hidden structure</text>
+    <text x="100" y="68" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Groups similar items</text>
   </g>
   
   <!-- Applications -->
   <g transform="translate(50, 280)">
     <rect x="0" y="0" width="300" height="150" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <text x="150" y="25" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Applications</text>
+    <text x="150" y="25" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#facc15" text-anchor="middle">Applications</text>
     
-    <text x="20" y="55" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#8b5cf6">Clustering:</text>
-    <text x="30" y="75" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Customer segmentation</text>
-    <text x="30" y="92" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Image organization</text>
-    <text x="30" y="109" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Anomaly detection</text>
+    <text x="20" y="55" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#8b5cf6">Clustering:</text>
+    <text x="30" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Customer segmentation</text>
+    <text x="30" y="92" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Image organization</text>
+    <text x="30" y="109" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Anomaly detection</text>
     
-    <text x="20" y="135" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#8b5cf6">Dimensionality Reduction:</text>
-    <text x="30" y="155" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Data visualization</text>
-    <text x="30" y="172" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Feature compression</text>
+    <text x="20" y="135" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#8b5cf6">Dimensionality Reduction:</text>
+    <text x="30" y="155" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Data visualization</text>
+    <text x="30" y="172" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Feature compression</text>
   </g>
   
   <!-- Clustering Result -->

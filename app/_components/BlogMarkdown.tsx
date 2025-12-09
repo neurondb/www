@@ -83,6 +83,24 @@ export function BlogMarkdown({ children }: { children: string }) {
           (nextUl as HTMLElement).style.setProperty('--bullet-color', color);
           listItems.forEach((li) => {
             (li as HTMLElement).style.setProperty('--bullet-color', color);
+            
+            // Style bullet headings with section-appropriate colors
+            const strongElement = li.querySelector('strong');
+            if (strongElement) {
+              const strongText = strongElement.textContent || '';
+              // Check if this is a main bullet item (ends with colon) - use orange
+              if (strongText.trim().endsWith(':')) {
+                strongElement.style.color = 'rgb(251, 146, 60)'; // orange-400
+              } else if (strongText.includes('Feature Engineering')) {
+                strongElement.style.color = 'rgb(59, 130, 246)'; // blue-500
+              } else if (strongText.includes('Feature Selection')) {
+                strongElement.style.color = 'rgb(236, 72, 153)'; // pink-500
+              } else {
+                // Use section color for all other headings
+                strongElement.style.color = color; // Match section bullet color
+              }
+              strongElement.style.fontWeight = '700'; // Ensure bold
+            }
           });
         }
       }
@@ -237,7 +255,7 @@ export function BlogMarkdown({ children }: { children: string }) {
             
             // Add colored bullets for Key Concepts section
             const bulletClass = inKeyConcepts ? '[&>li]:list-disc [&>li]:marker:text-cyan-400' : '';
-            return <ul className={`list-disc list-inside text-white/90 text-lg leading-relaxed mb-6 space-y-2 ml-4 ${bulletClass}`} {...props} />;
+            return <ul className={`list-disc list-inside text-white/90 text-lg leading-relaxed mb-6 space-y-2 ml-8 md:ml-12 ${bulletClass}`} {...props}>{children}</ul>;
           },
           ol({ node, children, ...props }: any) {
             // Check if list items contain links (common in "Related Tutorials" sections)
@@ -255,7 +273,7 @@ export function BlogMarkdown({ children }: { children: string }) {
               );
             }
             
-            return <ol className="list-decimal list-inside text-white/90 text-lg leading-relaxed mb-6 space-y-2 ml-4" {...props} />;
+            return <ol className="list-decimal list-inside text-white/90 text-lg leading-relaxed mb-6 space-y-2 ml-8 md:ml-12" {...props} />;
           },
           li({ node, children, ...props }: any) {
             // Regular list items
@@ -408,6 +426,27 @@ export function BlogMarkdown({ children }: { children: string }) {
               // Don't process if it's already a React element
               return children;
             };
+            
+            // Check if this is within a list item (bullet heading)
+            const isInListItem = node?.parent?.tagName === 'li' || 
+                                 node?.parent?.parent?.tagName === 'li' ||
+                                 node?.parent?.parent?.parent?.tagName === 'li';
+            
+            if (isInListItem) {
+              // Check if text ends with colon (main bullet item) - use orange color
+              const text = typeof children === 'string' ? children : 
+                          Array.isArray(children) ? children.join('') : 
+                          children?.toString() || '';
+              const isMainBulletItem = text.trim().endsWith(':');
+              
+              if (isMainBulletItem) {
+                // Style main bullet items with orange color
+                return <strong className="font-bold text-orange-400" {...props}>{processChildren(children)}</strong>;
+              }
+              
+              // Style other bullet headings with cyan color
+              return <strong className="font-bold text-cyan-300" {...props}>{processChildren(children)}</strong>;
+            }
             
             return <strong className="font-semibold text-white" {...props}>{processChildren(children)}</strong>;
           },
