@@ -1,189 +1,172 @@
-<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="820" viewBox="0 0 1200 820" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="workflowBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
     </linearGradient>
-    <marker id="arrowWorkflow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#06b6d4"/>
+    <marker id="arrowWorkflow" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
     </marker>
   </defs>
   
-  <rect width="1200" height="800" fill="url(#workflowBg)"/>
+  <rect width="1200" height="820" fill="url(#workflowBg)"/>
   
   <text x="600" y="40" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle">Machine Learning Workflow</text>
   
   <!-- Problem Definition -->
-  <g transform="translate(50, 80)">
-    <rect x="0" y="0" width="200" height="100" fill="#4f46e5" opacity="0.2" rx="8" stroke="#6366f1" stroke-width="2"/>
+  <g transform="translate(50, 90)">
+    <rect x="0" y="0" width="200" height="110" fill="#4f46e5" opacity="0.2" rx="8" stroke="#6366f1" stroke-width="2"/>
     <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#4f46e5" text-anchor="middle">1. Problem</text>
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#4f46e5" text-anchor="middle">Definition</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Define goals</text>
-    <text x="100" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">and metrics</text>
-    <text x="100" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Set constraints</text>
+    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#4f46e5" text-anchor="middle">Definition</text>
+    <text x="100" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Define goals</text>
+    <text x="100" y="88" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">and metrics</text>
+    <text x="100" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Set constraints</text>
   </g>
   
   <!-- Data Collection -->
-  <g transform="translate(300, 80)">
-    <rect x="0" y="0" width="200" height="100" fill="#10b981" opacity="0.2" rx="8" stroke="#22c55e" stroke-width="2"/>
+  <g transform="translate(300, 90)">
+    <rect x="0" y="0" width="200" height="110" fill="#10b981" opacity="0.2" rx="8" stroke="#22c55e" stroke-width="2"/>
     <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle">2. Data</text>
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle">Collection</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Gather examples</text>
-    <text x="100" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">from sources</text>
-    <text x="100" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Assess quality</text>
+    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle">Collection</text>
+    <text x="100" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Gather examples</text>
+    <text x="100" y="88" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">from sources</text>
+    <text x="100" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Assess quality</text>
   </g>
   
   <!-- Data Preparation -->
-  <g transform="translate(550, 80)">
-    <rect x="0" y="0" width="200" height="100" fill="#f59e0b" opacity="0.2" rx="8" stroke="#fbbf24" stroke-width="2"/>
+  <g transform="translate(550, 90)">
+    <rect x="0" y="0" width="200" height="110" fill="#f59e0b" opacity="0.2" rx="8" stroke="#fbbf24" stroke-width="2"/>
     <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">3. Data</text>
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">Preparation</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Clean and</text>
-    <text x="100" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">transform</text>
-    <text x="100" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Split data</text>
+    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">Preparation</text>
+    <text x="100" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Clean and</text>
+    <text x="100" y="88" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">transform</text>
+    <text x="100" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Split data</text>
   </g>
   
   <!-- Algorithm Selection -->
-  <g transform="translate(800, 80)">
-    <rect x="0" y="0" width="200" height="100" fill="#8b5cf6" opacity="0.2" rx="8" stroke="#a78bfa" stroke-width="2"/>
+  <g transform="translate(800, 90)">
+    <rect x="0" y="0" width="200" height="110" fill="#8b5cf6" opacity="0.2" rx="8" stroke="#a78bfa" stroke-width="2"/>
     <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#8b5cf6" text-anchor="middle">4. Algorithm</text>
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Selection</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Choose model</text>
-    <text x="100" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">type</text>
-    <text x="100" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Match problem</text>
+    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Selection</text>
+    <text x="100" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Choose model</text>
+    <text x="100" y="88" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">type</text>
+    <text x="100" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Match problem</text>
   </g>
   
   <!-- Model Training -->
-  <g transform="translate(1050, 80)">
-    <rect x="0" y="0" width="200" height="100" fill="#ec4899" opacity="0.2" rx="8" stroke="#f472b6" stroke-width="2"/>
+  <g transform="translate(1050, 90)">
+    <rect x="0" y="0" width="200" height="110" fill="#ec4899" opacity="0.2" rx="8" stroke="#f472b6" stroke-width="2"/>
     <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ec4899" text-anchor="middle">5. Model</text>
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ec4899" text-anchor="middle">Training</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Train model</text>
-    <text x="100" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Monitor</text>
-    <text x="100" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Tune params</text>
+    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ec4899" text-anchor="middle">Training</text>
+    <text x="100" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Train model</text>
+    <text x="100" y="88" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Monitor</text>
+    <text x="100" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Tune params</text>
   </g>
   
   <!-- Evaluation -->
-  <g transform="translate(800, 250)">
-    <rect x="0" y="0" width="200" height="100" fill="#ef4444" opacity="0.2" rx="8" stroke="#f87171" stroke-width="2"/>
+  <g transform="translate(800, 270)">
+    <rect x="0" y="0" width="200" height="110" fill="#ef4444" opacity="0.2" rx="8" stroke="#f87171" stroke-width="2"/>
     <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">6. Evaluation</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Test on</text>
-    <text x="100" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">held-out data</text>
-    <text x="100" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Calculate metrics</text>
+    <text x="100" y="52" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Test on</text>
+    <text x="100" y="68" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">held-out data</text>
+    <text x="100" y="84" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Calculate metrics</text>
   </g>
   
   <!-- Deployment -->
-  <g transform="translate(550, 250)">
-    <rect x="0" y="0" width="200" height="100" fill="#06b6d4" opacity="0.2" rx="8" stroke="#22d3ee" stroke-width="2"/>
+  <g transform="translate(550, 270)">
+    <rect x="0" y="0" width="200" height="110" fill="#06b6d4" opacity="0.2" rx="8" stroke="#22d3ee" stroke-width="2"/>
     <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#06b6d4" text-anchor="middle">7. Deployment</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Deploy to</text>
-    <text x="100" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">production</text>
-    <text x="100" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Monitor</text>
+    <text x="100" y="52" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Deploy to</text>
+    <text x="100" y="68" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">production</text>
+    <text x="100" y="84" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Monitor</text>
   </g>
   
   <!-- Monitoring & Maintenance -->
-  <g transform="translate(300, 250)">
-    <rect x="0" y="0" width="200" height="100" fill="#14b8a6" opacity="0.2" rx="8" stroke="#2dd4bf" stroke-width="2"/>
+  <g transform="translate(300, 270)">
+    <rect x="0" y="0" width="200" height="110" fill="#14b8a6" opacity="0.2" rx="8" stroke="#2dd4bf" stroke-width="2"/>
     <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#14b8a6" text-anchor="middle">8. Monitor</text>
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#14b8a6" text-anchor="middle">&amp; Maintain</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Track</text>
-    <text x="100" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">performance</text>
-    <text x="100" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Retrain</text>
+    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#14b8a6" text-anchor="middle">&amp; Maintain</text>
+    <text x="100" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Track</text>
+    <text x="100" y="88" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">performance</text>
+    <text x="100" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Retrain</text>
   </g>
   
-  <!-- Arrows with curved paths to avoid collisions -->
-  <!-- 1 to 2 -->
-  <path d="M 250 130 Q 275 100, 300 130" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowWorkflow)"/>
+  <!-- Arrows - shortest paths from center to center, avoiding box intersections -->
+  <!-- 1 to 2: Box centers (150, 145) to (400, 145) - direct horizontal -->
+  <path d="M 250 145 L 300 145" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowWorkflow)"/>
   
-  <!-- 2 to 3 -->
-  <path d="M 500 130 Q 525 100, 550 130" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowWorkflow)"/>
+  <!-- 2 to 3: Box centers (400, 145) to (650, 145) - direct horizontal -->
+  <path d="M 500 145 L 550 145" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowWorkflow)"/>
   
-  <!-- 3 to 4 -->
-  <path d="M 750 130 Q 775 100, 800 130" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowWorkflow)"/>
+  <!-- 3 to 4: Box centers (650, 145) to (900, 145) - direct horizontal -->
+  <path d="M 750 145 L 800 145" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowWorkflow)"/>
   
-  <!-- 4 to 5 -->
-  <path d="M 1000 130 Q 1025 100, 1050 130" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowWorkflow)"/>
+  <!-- 4 to 5: Box centers (900, 145) to (1150, 145) - direct horizontal -->
+  <path d="M 1000 145 L 1050 145" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowWorkflow)"/>
   
-  <!-- 5 to 6 (down and left) -->
-  <path d="M 1150 180 Q 1150 215, 1000 250" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowWorkflow)"/>
+  <!-- 5 to 6: Box centers (1150, 145) to (900, 325) - route right then down then left to avoid Box4 -->
+  <!-- Path: (1250, 145) -> (1250, 235) -> (1000, 235) -> (1000, 270) -->
+  <path d="M 1250 145 L 1250 235 L 1000 235 L 1000 270" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowWorkflow)"/>
   
-  <!-- 6 to 7 (left) -->
-  <path d="M 800 300 Q 675 300, 550 300" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowWorkflow)"/>
+  <!-- 6 to 7: Box centers (900, 325) to (650, 325) - direct horizontal -->
+  <path d="M 800 325 L 750 325" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowWorkflow)"/>
   
-  <!-- 7 to 8 (left) -->
-  <path d="M 550 300 Q 425 300, 300 300" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowWorkflow)"/>
+  <!-- 7 to 8: Box centers (650, 325) to (400, 325) - direct horizontal -->
+  <path d="M 550 325 L 500 325" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowWorkflow)"/>
   
-  <!-- 8 back to 1 (loop back) -->
-  <path d="M 300 350 Q 150 400, 150 180 Q 150 100, 250 180" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrowWorkflow)"/>
+  <!-- 8 to 1: Horizontal first, then vertical -->
+  <!-- Box 8 right edge (500, 325) -> left horizontally to x=50 -> up vertically to Box 1 top center (150, 90) -->
+  <path d="M 500 325 L 50 325 L 50 90 L 150 90" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowWorkflow)"/>
   
   <!-- Iterative Process Box -->
-  <g transform="translate(50, 400)">
-    <rect x="0" y="0" width="1100" height="120" fill="#1e293b" rx="8" stroke="#475569" stroke-width="2"/>
-    <text x="550" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Iterative Process</text>
+  <g transform="translate(50, 450)">
+    <rect x="0" y="0" width="1100" height="155" fill="#1e293b" rx="8" stroke="#475569" stroke-width="2"/>
+    <text x="550" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Iterative Process</text>
     
-    <text x="100" y="65" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Each stage informs the next</text>
-    <text x="100" y="85" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Iterate based on results</text>
-    <text x="100" y="105" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Continuous improvement</text>
+    <text x="100" y="58" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Each stage informs the next</text>
+    <text x="100" y="76" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Iterate based on results</text>
+    <text x="100" y="94" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Continuous improvement</text>
+    <text x="100" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Monitor and adjust</text>
+    <text x="100" y="130" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Retrain with new data</text>
     
-    <text x="400" y="65" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Monitor and adjust</text>
-    <text x="400" y="85" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Retrain with new data</text>
-    <text x="400" y="105" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Update models regularly</text>
+    <text x="400" y="58" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Update models regularly</text>
+    <text x="400" y="76" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Document decisions</text>
+    <text x="400" y="94" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Version control</text>
+    <text x="400" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Track experiments</text>
+    <text x="400" y="130" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• A/B testing</text>
     
-    <text x="700" y="65" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Document decisions</text>
-    <text x="700" y="85" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Version control</text>
-    <text x="700" y="105" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Track experiments</text>
-    
-    <text x="1000" y="65" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• A/B testing</text>
-    <text x="1000" y="85" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Performance metrics</text>
-    <text x="1000" y="105" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1">• Error analysis</text>
+    <text x="700" y="58" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Performance metrics</text>
+    <text x="700" y="76" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Error analysis</text>
+    <text x="700" y="94" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Model versioning</text>
+    <text x="700" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Reproducibility</text>
+    <text x="700" y="130" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Collaboration tools</text>
   </g>
   
   <!-- Key Principles -->
-  <g transform="translate(50, 550)">
-    <rect x="0" y="0" width="1100" height="200" fill="#1e293b" rx="8" stroke="#475569" stroke-width="2"/>
-    <text x="550" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Key Principles</text>
+  <g transform="translate(50, 635)">
+    <rect x="0" y="0" width="1100" height="140" fill="#1e293b" rx="8" stroke="#475569" stroke-width="2"/>
+    <text x="550" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Key Principles</text>
     
-    <g transform="translate(50, 60)">
-      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#4f46e5">Problem Definition</text>
-      <text x="0" y="20" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Define clear objectives and success metrics</text>
-      <text x="0" y="35" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Understand business context and constraints</text>
-      <text x="0" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Document assumptions and requirements</text>
-    </g>
+    <text x="100" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#4f46e5" text-anchor="middle">Problem</text>
+    <text x="100" y="85" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#4f46e5" text-anchor="middle">Definition</text>
+    <text x="100" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Clear objectives</text>
     
-    <g transform="translate(350, 60)">
-      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981">Data Quality</text>
-      <text x="0" y="20" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Quality over quantity</text>
-      <text x="0" y="35" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Representative and diverse data</text>
-      <text x="0" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Proper train/test separation</text>
-    </g>
+    <text x="283" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981" text-anchor="middle">Data</text>
+    <text x="283" y="85" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981" text-anchor="middle">Quality</text>
+    <text x="283" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Representative data</text>
     
-    <g transform="translate(650, 60)">
-      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#8b5cf6">Model Development</text>
-      <text x="0" y="20" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Start simple, iterate</text>
-      <text x="0" y="35" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Validate on held-out data</text>
-      <text x="0" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Monitor for overfitting</text>
-    </g>
+    <text x="466" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Model</text>
+    <text x="466" y="85" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Development</text>
+    <text x="466" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Start simple</text>
     
-    <g transform="translate(950, 60)">
-      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4">Production</text>
-      <text x="0" y="20" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Monitor performance</text>
-      <text x="0" y="35" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Retrain regularly</text>
-      <text x="0" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Handle data drift</text>
-    </g>
+    <text x="649" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ef4444" text-anchor="middle">Evaluation</text>
+    <text x="649" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Test unseen data</text>
     
-    <g transform="translate(50, 120)">
-      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ef4444">Evaluation</text>
-      <text x="0" y="20" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Use appropriate metrics</text>
-      <text x="0" y="35" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Test on unseen data</text>
-      <text x="0" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Statistical significance</text>
-    </g>
+    <text x="832" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4" text-anchor="middle">Deployment</text>
+    <text x="832" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Monitor</text>
     
-    <g transform="translate(350, 120)">
-      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#14b8a6">Iteration</text>
-      <text x="0" y="20" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Continuous improvement</text>
-      <text x="0" y="35" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Learn from failures</text>
-      <text x="0" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Document experiments</text>
-    </g>
+    <text x="1015" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#14b8a6" text-anchor="middle">Iteration</text>
+    <text x="1015" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Improve</text>
   </g>
   
 </svg>

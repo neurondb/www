@@ -294,11 +294,9 @@ print("Traditional: " + result1)
 # ML: Learned pattern
 result2 = model.predict(vectorizer.transform(["Win a free prize!"]))
 print("Machine Learning: " + str(result2[0]))
-\`\`\`
-
-\`\`\`
-Traditional: spam
-Machine Learning: spam
+# Result:
+# Traditional: spam
+# Machine Learning: spam
 \`\`\`
 
 ## Types of Machine Learning
@@ -325,7 +323,7 @@ model.fit(X, y)
 
 prediction = model.predict([[40, 60000]])
 print("Loan approved: " + str(prediction[0]))
-# Output: Loan approved: 1
+# Result: Loan approved: 1
 \`\`\`
 
 \`\`\`sql
@@ -370,6 +368,7 @@ Classification works with discrete outputs. The output is a category. Email is s
 \`\`\`python
 # Regression Example: Predicting Numbers
 from sklearn.linear_model import LinearRegression
+import numpy as np
 
 # Features: [square_feet, bedrooms] | Target: price
 X = np.array([[1500, 2], [2000, 3], [2500, 4], [1800, 3]])
@@ -380,7 +379,7 @@ model.fit(X, y)
 
 price = model.predict([[2200, 3]])
 print("Predicted price: $" + str(int(price[0])))
-# Output: Predicted price: $380000
+# Result: Predicted price: $380000
 \`\`\`
 
 \`\`\`sql
@@ -429,6 +428,7 @@ Common unsupervised learning tasks include clustering and dimensionality reducti
 \`\`\`python
 # Clustering Example: Grouping Similar Customers
 from sklearn.cluster import KMeans
+import numpy as np
 
 # Customer features: [annual_spending, num_orders]
 customers = np.array([[500, 10], [1200, 25], [300, 5], [1500, 30], [400, 8]])
@@ -438,7 +438,7 @@ clusters = kmeans.fit_predict(customers)
 
 for i, cluster in enumerate(clusters):
     print("Customer " + str(i+1) + ": Cluster " + str(cluster))
-# Output:
+# Result:
 # Customer 1: Cluster 1
 # Customer 2: Cluster 0
 # Customer 3: Cluster 1
@@ -476,7 +476,9 @@ FROM neurondb.cluster_kmeans('customers', 'features', 2, 100);
 
 ![Unsupervised Learning Diagram](/tutorials/ai-tutorial-01-introduction/diagram-unsupervised-learning.svg)
 
-Clustering finds groups in data automatically without predefined categories. Similar items belong together in the same cluster while dissimilar items are placed in separate clusters. The system discovers these groups by analyzing patterns in the data, which makes clustering useful for customer segmentation, image organization, and anomaly detection when you don't know the groups in advance.
+Clustering automatically finds groups in data without predefined categories. Similar items belong together in the same cluster while dissimilar items are placed in separate clusters. The system discovers these groups by analyzing patterns in the data. Applications include customer segmentation, image organization, and anomaly detection when you don't know the groups in advance.
+
+Dimensionality reduction simplifies data by reducing the number of features while preserving essential information. Similar items belong together in the same cluster while dissimilar items are placed in separate clusters. The system discovers these groups by analyzing patterns in the data, which makes clustering useful for customer segmentation, image organization, and anomaly detection when you don't know the groups in advance.
 
 Dimensionality reduction simplifies data by reducing the number of features while preserving essential information. Many features create complexity, and some are redundant or add noise. Reduction techniques identify the most important features and create lower-dimensional representations that make data easier to understand and visualize while speeding up subsequent algorithms without losing critical information.
 
@@ -486,9 +488,7 @@ Reinforcement learning learns through interaction. An agent takes actions in an 
 
 ![Reinforcement Learning Diagram](/tutorials/ai-tutorial-01-introduction/diagram-reinforcement-learning.svg)
 
-Reinforcement learning works in steps. The agent observes the current state. It chooses an action. The environment changes. The agent receives a reward. It updates its strategy. Over time, it learns optimal actions.
-
-Applications include game playing, robotics, and recommendation systems. Game playing agents learn to win. Robotics agents learn to navigate. Recommendation systems learn user preferences through feedback.
+Reinforcement learning works in steps. The agent observes the current state, chooses an action, and sends it to the environment. The environment changes and returns a new state plus a reward or penalty. The agent updates its strategy based on rewards received. This creates a learning loop: observe state, choose action, receive reward, update strategy. Over time, the agent learns optimal actions that maximize cumulative rewards. Applications include game playing where agents learn to win through trial and error, robotics where robots learn navigation by exploring and receiving feedback, and recommendation systems that learn user preferences from interaction rewards.
 
 ## Key Concepts
 
@@ -512,7 +512,7 @@ import pandas as pd
 data = pd.DataFrame({'city': ['NYC', 'SF', 'NYC', 'LA', 'SF']})
 onehot = pd.get_dummies(data['city'])
 print(onehot)
-# Output:
+# Result:
 #    LA  NYC  SF
 # 0   0    1   0
 # 1   0    0   1
@@ -548,12 +548,13 @@ FROM customer_data;
 \`\`\`python
 # Feature Scaling Example
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
+import numpy as np
 
 data = np.array([[25, 50000], [30, 75000], [35, 100000]])
 scaler = StandardScaler()
 scaled = scaler.fit_transform(data)
 print(scaled)
-# Output:
+# Result:
 # [[-1.22474487 -1.22474487]
 #  [ 0.          0.        ]
 #  [ 1.22474487  1.22474487]]
@@ -607,6 +608,7 @@ Training builds a model from data by examining examples, adjusting internal para
 \`\`\`python
 # Data Splitting Example
 from sklearn.model_selection import train_test_split
+import numpy as np
 
 X = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10]])
 y = np.array([0, 1, 0, 1, 0])
@@ -615,7 +617,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.4, random_state=42
 )
 print("Training size: " + str(len(X_train)) + ", Test size: " + str(len(X_test)))
-# Output: Training size: 3, Test size: 2
+# Result: Training size: 3, Test size: 2
 \`\`\`
 
 \`\`\`sql
@@ -682,6 +684,8 @@ Testing evaluates model performance using data not seen during training. The mod
 Overfitting occurs when a model memorizes training data instead of learning generalizable patterns. It performs well on training data but poorly on new data. The model learns noise instead of patterns and becomes too specific to training examples. Overfitting happens with complex models and small datasets. Complex models can memorize details while small datasets lack diversity. The solution involves regularization, more data, or simpler models.
 
 ![Overfitting Diagram](/tutorials/ai-tutorial-01-introduction/diagram-overfitting.svg)
+
+The diagram shows good fit versus overfitted models. Good fit models generalize well to new data with consistent performance on both training and test sets. Overfitted models memorize training data and fail on new data, showing high training accuracy but low test accuracy. Good fit models achieve balanced performance around 82-85% on both sets. Overfitted models may achieve 98% training accuracy but only 45% test accuracy. Solutions include regularization, more training data, simpler models, cross-validation, and early stopping.
 
 - **Bias-Variance Tradeoff**: High bias means underfitting (too simple, misses patterns, poor on both train/test). High variance means overfitting (too complex, learns noise, good train/poor test). Balance bias and variance for optimal performance. Optimal complexity depends on data size, quality, and noise level.
 - **Regularization Techniques**: Reduce overfitting by limiting complexity and preventing large weights. L1 adds absolute penalties (encourages sparsity, feature selection). L2 adds squared penalties (shrinks weights, stabilizes training). Elastic net combines L1 and L2. Tune regularization strength; too much causes underfitting, too little allows overfitting.
@@ -762,10 +766,7 @@ model = LinearRegression()
 model.fit(X, y)
 price = model.predict([[2200, 3]])
 print("Predicted price: $" + str(int(price[0])))
-\`\`\`
-
-\`\`\`
-Predicted price: $380000
+# Result: Predicted price: $380000
 \`\`\`
 
 \`\`\`sql
@@ -815,10 +816,7 @@ model = LogisticRegression()
 model.fit(X, y)
 prediction = model.predict([[40, 60000]])
 print("Loan approved: " + str(prediction[0]))
-\`\`\`
-
-\`\`\`
-Loan approved: 1
+# Result: Loan approved: 1
 \`\`\`
 
 \`\`\`sql
@@ -843,13 +841,11 @@ SELECT neurondb.predict(
     (SELECT model_id FROM logreg_model),
     ARRAY[40::NUMERIC, 60000::NUMERIC]
 ) AS prediction;
-\`\`\`
-
-\`\`\`
- prediction
------------
- t
-(1 row)
+-- Result:
+--  prediction
+-- -----------
+--  t
+-- (1 row)
 \`\`\`
 
 ### Decision Trees
@@ -857,6 +853,8 @@ SELECT neurondb.predict(
 Decision trees make decisions through hierarchical branching where each node tests a feature and branches lead to predictions or more tests. Trees are easy to understand and visualize, handle non-linear relationships, work with mixed data types, show which features matter most, but can overfit easily without proper regularization.
 
 ![Decision Tree Diagram](/tutorials/ai-tutorial-01-introduction/diagram-decision-tree.svg)
+
+Decision trees make predictions by following a path from root to leaf. Each internal node tests a feature condition. Branches represent test outcomes. Leaf nodes contain final predictions or class labels. For new examples, start at the root, follow branches based on feature values, reach a leaf node, and use the class or value in that leaf. Trees are interpretable because you can trace the decision path.
 
 \`\`\`python
 # Decision Tree Example
@@ -870,10 +868,7 @@ model = DecisionTreeClassifier()
 model.fit(X, y)
 prediction = model.predict([[2.5, 3.5]])
 print("Class: " + str(prediction[0]))
-\`\`\`
-
-\`\`\`
-Class: 0
+# Result: Class: 0
 \`\`\`
 
 \`\`\`sql
@@ -897,13 +892,11 @@ SELECT neurondb.predict(
     (SELECT model_id FROM tree_model),
     ARRAY[2.5::NUMERIC, 3.5::NUMERIC]
 ) AS prediction;
-\`\`\`
-
-\`\`\`
- prediction
------------
- 0
-(1 row)
+-- Result:
+--  prediction
+-- -----------
+--  0
+-- (1 row)
 \`\`\`
 
 ### Random Forests
@@ -922,10 +915,7 @@ model = RandomForestClassifier(n_estimators=10, random_state=42)
 model.fit(X, y)
 prediction = model.predict([[3.5, 4.5]])
 print("Class: " + str(prediction[0]))
-\`\`\`
-
-\`\`\`
-Class: 1
+# Result: Class: 1
 \`\`\`
 
 \`\`\`sql
@@ -949,13 +939,11 @@ SELECT neurondb.predict(
     (SELECT model_id FROM rf_model),
     ARRAY[3.5::NUMERIC, 4.5::NUMERIC]
 ) AS prediction;
-\`\`\`
-
-\`\`\`
- prediction
------------
- 1
-(1 row)
+-- Result:
+--  prediction
+-- -----------
+--  1
+-- (1 row)
 \`\`\`
 
 ### Neural Networks
@@ -963,6 +951,8 @@ SELECT neurondb.predict(
 Neural networks are inspired by biological brains with layers of connected nodes where each connection has a weight that training adjusts to learn patterns. They can learn complex non-linear patterns, work effectively with images, text, and signals, but require substantial data and computation resources, and are hard to interpret compared to simpler models.
 
 ![Neural Network Diagram](/tutorials/ai-tutorial-01-introduction/diagram-neural-network.svg)
+
+Neural networks consist of layers of connected nodes. The input layer receives features. Hidden layers process information through weighted connections and activation functions. The output layer produces predictions. Each connection has a weight that training adjusts to minimize prediction errors. Activation functions like ReLU, sigmoid, and tanh introduce non-linearity. Training uses backpropagation to compute gradients and optimizers to update weights. Multiple epochs improve performance. More layers enable learning complex patterns.
 
 \`\`\`python
 # Neural Network Example
@@ -976,10 +966,7 @@ model = MLPClassifier(hidden_layer_sizes=(4,), max_iter=1000)
 model.fit(X, y)
 prediction = model.predict([[0.5, 0.5]])
 print("Prediction: " + str(prediction[0]))
-\`\`\`
-
-\`\`\`
-Prediction: 0
+# Result: Prediction: 0
 \`\`\`
 
 \`\`\`sql
@@ -1003,13 +990,11 @@ SELECT neurondb.predict(
     (SELECT model_id FROM nn_model),
     ARRAY[0.5::NUMERIC, 0.5::NUMERIC]
 ) AS prediction;
-\`\`\`
-
-\`\`\`
- prediction
------------
- 0
-(1 row)
+-- Result:
+--  prediction
+-- -----------
+--  0
+-- (1 row)
 \`\`\`
 
 ## Applications
@@ -1193,28 +1178,26 @@ SELECT
     END AS segment_type
 FROM clustered_customers
 GROUP BY cluster_id
-ORDER BY cluster_id;
-\`\`\`
-
-\`\`\`
- customer_id | total_spent | num_orders | days_since_last_purchase | cluster_id
--------------+-------------+------------+--------------------------+------------
-           1 |     1250.50 |         15 |                        5 |          0
-           2 |      450.25 |          8 |                       45 |          1
-           3 |     3200.75 |         32 |                        2 |          0
-           4 |      180.00 |          4 |                      120 |          2
-           5 |      890.50 |         12 |                       15 |          1
-           6 |     2150.25 |         20 |                        8 |          0
-           7 |      350.75 |          7 |                       60 |          2
-           8 |      125.00 |          3 |                       90 |          2
-(8 rows)
-
- cluster_id | customer_count | avg_total_spent | avg_num_orders | avg_days_since_last_purchase | segment_type
-------------+----------------+-----------------+----------------+------------------------------+--------------
-          0 |              3 |         2200.50 |          22.33 |                         5.00 | High Value
-          1 |              2 |          670.38 |          10.00 |                        30.00 | Medium Value
-          2 |              3 |          218.58 |           4.67 |                        90.00 | Low Value
-(3 rows)
+        ORDER BY cluster_id;
+-- Result:
+--  customer_id | total_spent | num_orders | days_since_last_purchase | cluster_id
+-- -------------+-------------+------------+--------------------------+------------
+--            1 |     1250.50 |         15 |                        5 |          0
+--            2 |      450.25 |          8 |                       45 |          1
+--            3 |     3200.75 |         32 |                        2 |          0
+--            4 |      180.00 |          4 |                      120 |          2
+--            5 |      890.50 |         12 |                       15 |          1
+--            6 |     2150.25 |         20 |                        8 |          0
+--            7 |      350.75 |          7 |                       60 |          2
+--            8 |      125.00 |          3 |                       90 |          2
+-- (8 rows)
+--
+--  cluster_id | customer_count | avg_total_spent | avg_num_orders | avg_days_since_last_purchase | segment_type
+-- ------------+----------------+-----------------+----------------+------------------------------+--------------
+--           0 |              3 |         2200.50 |          22.33 |                         5.00 | High Value
+--           1 |              2 |          670.38 |          10.00 |                        30.00 | Medium Value
+--           2 |              3 |          218.58 |           4.67 |                        90.00 | Low Value
+-- (3 rows)
 \`\`\`
 
 ## Summary

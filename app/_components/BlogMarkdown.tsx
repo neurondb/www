@@ -145,7 +145,7 @@ export function BlogMarkdown({ children }: { children: string }) {
           color: var(--bullet-color, rgb(96 165 250));
         }
       `}</style>
-      <article ref={articleRef} className="prose dark:prose-invert max-w-7xl mx-auto py-12 px-6">
+      <article ref={articleRef} className="prose dark:prose-invert max-w-7xl mx-auto py-12 px-6 overflow-hidden">
         <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}
@@ -291,7 +291,7 @@ export function BlogMarkdown({ children }: { children: string }) {
             const isLongContent = codeText.split('\n').length > 10;
 
             return match ? (
-              <div className="my-8 relative group">
+              <div className="my-8 relative group w-full" style={{ maxWidth: '100%', overflow: 'hidden' }}>
                 {/* Copy button */}
                 <button
                   onClick={() => copyToClipboard(codeText)}
@@ -314,9 +314,9 @@ export function BlogMarkdown({ children }: { children: string }) {
                   language={match[1]}
                 >
                   {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                    <div className="w-full max-w-full overflow-x-auto" style={{ scrollbarWidth: 'thin', scrollbarColor: 'rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1)' }}>
-                      <pre className={`${className} rounded-lg text-sm shadow-2xl ${hasOutput ? 'min-h-[72px]' : 'min-h-[48px]'} flex flex-col justify-start border border-gray-600/30 overflow-x-auto`} style={style}>
-                        <div className="flex-1 p-4 min-w-max">
+                    <div className="w-full overflow-x-auto" style={{ scrollbarWidth: 'thin', scrollbarColor: 'rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1)', maxWidth: '100%', boxSizing: 'border-box' }}>
+                      <pre className={`${className} rounded-lg text-sm shadow-2xl ${hasOutput ? 'min-h-[72px]' : 'min-h-[48px]'} flex flex-col justify-start border border-gray-600/30`} style={{ ...style, maxWidth: '100%', boxSizing: 'border-box', overflowX: 'auto', overflowY: 'visible' }}>
+                        <div className="flex-1 p-4" style={{ minWidth: 'max-content', boxSizing: 'border-box' }}>
                           {tokens.map((line, i) => (
                             <div key={i} {...getLineProps({ line })} className="min-h-[1.5rem] whitespace-pre">
                               {line.map((token, tokenKey) => (

@@ -1,4 +1,4 @@
-<svg width="1000" height="700" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="715" viewBox="0 0 1000 715" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="conceptsBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
@@ -9,7 +9,7 @@
     </marker>
   </defs>
   
-  <rect width="1000" height="700" fill="url(#conceptsBg)"/>
+  <rect width="1000" height="715" fill="url(#conceptsBg)"/>
   
   <text x="500" y="50" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle">Key Machine Learning Concepts</text>
   
@@ -73,17 +73,17 @@
     <text x="85" y="121" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">the model</text>
   </g>
   
-  <!-- Arrows from Raw Data to Features - longer route to avoid mixing -->
-  <path d="M 230 160 L 230 180 L 280 180 L 280 160" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
-  <text x="255" y="195" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Extract</text>
+  <!-- Arrows from Raw Data to Features - horizontal route -->
+  <path d="M 230 160 L 280 160" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <text x="255" y="150" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Extract</text>
   
-  <!-- Arrows from Features to Labels - longer route to avoid mixing -->
-  <path d="M 480 160 L 480 180 L 530 180 L 530 160" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
-  <text x="505" y="195" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Pair</text>
+  <!-- Arrows from Features to Labels - horizontal route -->
+  <path d="M 480 160 L 530 160" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <text x="505" y="150" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Pair</text>
   
-  <!-- Arrow to Training Set - longer route to avoid mixing -->
-  <path d="M 730 160 L 730 180 L 780 180 L 780 160" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
-  <text x="755" y="195" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Split</text>
+  <!-- Arrow to Training Set - horizontal route -->
+  <path d="M 730 160 L 780 160" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <text x="755" y="150" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Split</text>
   
   <!-- Training Process -->
   <g transform="translate(300, 280)">
@@ -114,9 +114,9 @@
     <text x="100" y="72" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">from training data</text>
   </g>
   
-  <!-- Arrow from Training to Model - longer route to avoid mixing -->
-  <path d="M 500 400 L 500 430 L 550 430 L 550 450 L 500 450" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
-  <text x="535" y="440" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4">Produces</text>
+  <!-- Arrow from Training to Model - vertical route -->
+  <path d="M 500 400 L 500 450" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <text x="520" y="425" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4">Produces</text>
   
   <!-- Testing -->
   <g transform="translate(50, 450)">
@@ -148,24 +148,28 @@
     <text x="140" y="121" font-family="monospace" font-size="8" fill="#fff" text-anchor="middle">Model memorized data</text>
   </g>
   
-  <!-- Arrows - longer routes to avoid mixing -->
-  <path d="M 330 490 L 330 520 L 400 520 L 400 490" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
-  <text x="365" y="535" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Test</text>
+  <!-- Arrows - horizontal routes where boxes don't overlap -->
+  <path d="M 330 490 L 400 490" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <text x="365" y="480" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Test</text>
   
-  <path d="M 600 490 L 600 520 L 680 520 L 680 490" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
-  <text x="640" y="535" font-family="system-ui, sans-serif" font-size="12" fill="#ef4444" text-anchor="middle">Monitor</text>
+  <path d="M 600 490 L 680 490" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <text x="640" y="480" font-family="system-ui, sans-serif" font-size="12" fill="#ef4444" text-anchor="middle">Monitor</text>
   
   <!-- Data Flow Explanation -->
   <g transform="translate(50, 600)">
-    <rect x="0" y="0" width="900" height="80" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <text x="450" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#facc15" text-anchor="middle">Data Flow Summary</text>
+    <rect x="0" y="0" width="900" height="95" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <text x="450" y="24" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#facc15" text-anchor="middle">Data Flow Summary</text>
     
-    <text x="20" y="50" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">1. Extract features (X) from raw data</text>
-    <text x="250" y="50" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">2. Collect labels (Y) for supervised learning</text>
-    <text x="500" y="50" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">3. Split into training (80%) and test (20%)</text>
-    <text x="20" y="72" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">4. Train model on training data to learn patterns</text>
-    <text x="250" y="72" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">5. Test model on unseen test data</text>
-    <text x="500" y="72" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">6. Watch for overfitting (train >> test)</text>
+    <text x="20" y="48" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">1. Extract features (X) from raw data</text>
+    <text x="250" y="48" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">2. Collect labels (Y) for supervised</text>
+    <text x="500" y="48" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">3. Split into training (80%)</text>
+    <text x="250" y="65" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">learning</text>
+    <text x="500" y="65" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">and test (20%)</text>
+    <text x="20" y="70" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">4. Train model on training data</text>
+    <text x="250" y="70" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">5. Test model on unseen test data</text>
+    <text x="500" y="70" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">6. Watch for overfitting</text>
+    <text x="20" y="87" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">to learn patterns</text>
+    <text x="500" y="87" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">(train >> test)</text>
   </g>
   
 </svg>
