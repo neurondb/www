@@ -513,7 +513,8 @@ export function BlogMarkdown({ children }: { children: string }) {
             // For SVGs, use regular img tag for better compatibility
             const isSVG = src.toLowerCase().endsWith('.svg')
             
-            // Add cache busting for SVGs in development
+            // Add cache busting for SVGs in development only
+            // In production, rely on proper cache headers and version control
             const finalSrc = isSVG && process.env.NODE_ENV === 'development' 
               ? `${src}?t=${Date.now()}` 
               : src
