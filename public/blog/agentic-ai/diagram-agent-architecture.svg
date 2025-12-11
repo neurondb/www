@@ -96,19 +96,19 @@
   </g>
   
   <!-- Arrows: Top row flow -->
-  <path d="M 230 180 L 270 180" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 450 180 L 490 180" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 670 180 L 710 180" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 230 130 H 270" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 450 130 H 490" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 670 130 H 710" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
   
   <!-- Arrows: Top to bottom -->
-  <path d="M 90 180 L 90 200 L 290 200 L 290 280" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 310 180 L 310 200 L 510 200 L 510 280" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 750 180 L 750 200 L 730 200 L 730 280" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 140 180 V 280 H 290" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 360 180 V 280 H 510" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 800 180 V 280 H 730" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
   
   <!-- Arrows: Bottom row flow -->
-  <path d="M 290 330 L 510 330" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 510 330 L 730 330" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 380 330 H 420" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 600 330 H 640" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
   
   <!-- Feedback arrows (dashed) -->
-  <path d="M 730 330 L 750 330 L 750 200 L 310 200 L 310 180" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#arrowhead)" opacity="0.6"/>
+  <path d="M 730 380 V 80 H 360" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#arrowhead)" opacity="0.6"/>
 </svg>

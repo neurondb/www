@@ -113,18 +113,18 @@
   </g>
   
   <!-- Arrows: Storage flow (top) -->
-  <path d="M 230 160 L 270 160" fill="none" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 470 160 L 510 160" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 710 160 L 750 160" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 230 185.0 H 290" fill="none" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 470 185.0 H 530" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 710 185.0 H 770" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
   
   <!-- Arrows: Retrieval flow (bottom) -->
-  <path d="M 230 430 L 270 430" fill="none" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 470 430 L 510 430" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 230 455.0 H 290" fill="none" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 470 455.0 H 530" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
   
   <!-- Arrows: Rank to Context -->
-  <path d="M 570 380 L 570 400 L 450 400 L 450 430" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
-  <path d="M 330 380 L 330 400 L 450 400 L 450 430" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <path d="M 620.0 510 V 570 H 500.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <path d="M 380.0 510 V 570 H 500.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
   
   <!-- Feedback arrow from Index to Search -->
-  <path d="M 810 160 L 850 160 L 850 300 L 330 300 L 330 380" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#arrowhead)" opacity="0.6"/>
+  <path d="M 860.0 240 V 400 H 380.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#arrowhead)" opacity="0.6"/>
 </svg>

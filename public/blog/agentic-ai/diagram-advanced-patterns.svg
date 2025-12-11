@@ -98,15 +98,15 @@
   </g>
   
   <!-- Arrows: Top to bottom -->
-  <path d="M 190 220 L 190 240 L 280 240 L 280 300" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 460 220 L 460 240 L 500 240 L 500 300" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 730 220 L 730 240 L 720 240 L 720 300" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 190.0 220 V 300 H 290.0" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 510.0 220 V 300 H 510.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 780.0 220 V 300 H 730.0" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
   
   <!-- Arrows: Bottom row flow -->
-  <path d="M 280 350 L 500 350" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 500 350 L 720 350" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 380 350.0 H 420" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 600 350.0 H 640" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
   
   <!-- Arrows: Top row connections -->
-  <path d="M 330 180 L 590 180" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 190 180 L 320 180" fill="none" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 650 150.0 H 640" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 330 150.0 H 370" fill="none" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
 </svg>

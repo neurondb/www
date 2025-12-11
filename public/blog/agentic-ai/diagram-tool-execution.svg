@@ -103,23 +103,23 @@
   </g>
   
   <!-- Arrows: Top row flow -->
-  <path d="M 250 180 L 290 180" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 490 180 L 530 180" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 730 180 L 770 180" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 250 135.0 H 290" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 490 135.0 H 530" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 730 135.0 H 770" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
   
   <!-- Arrows: Result to Error Check -->
-  <path d="M 820 190 L 820 210 L 340 210 L 340 280" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowheadRed)" opacity="0.8"/>
-  <path d="M 580 190 L 580 210 L 340 210 L 340 280" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowheadRed)" opacity="0.8"/>
+  <path d="M 870.0 190 V 280 H 340.0" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowheadRed)" opacity="0.8"/>
+  <path d="M 630.0 190 V 280 H 340.0" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowheadRed)" opacity="0.8"/>
   
   <!-- Arrows: Error Check to Retry -->
-  <path d="M 240 335 L 480 335" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 440 335.0 H 480" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
   
   <!-- Arrows: Retry to Execute (feedback) -->
-  <path d="M 480 390 L 480 410 L 580 410 L 580 190" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#arrowhead)" opacity="0.6"/>
+  <path d="M 580.0 280 V 135.0 H 530" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#arrowhead)" opacity="0.6"/>
   
   <!-- Arrows: Error Check to Success (if no error) -->
-  <path d="M 340 390 L 500 390 L 500 480" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <path d="M 340.0 390 V 480 H 500.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
   
   <!-- Arrows: Retry to Success -->
-  <path d="M 580 390 L 500 390 L 500 480" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <path d="M 580.0 390 V 480 H 500.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
 </svg>
