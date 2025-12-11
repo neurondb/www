@@ -1,66 +1,116 @@
-<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="600" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0a1b4e"/>
-      <stop offset="1" stop-color="#001635"/>
+    
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
     </linearGradient>
-    <marker id="arrowhead" markerWidth="5" markerHeight="5" refX="4" refY="3" orient="auto">
-      <polygon points="0 0, 5 2.5, 0 5" fill="#5fc4ff" opacity="0.8"/>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.2" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:0.2" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#06b6d4" opacity="0.9"/>
     </marker>
   </defs>
   
-    <text x="194.0" y="18.5" font-family="Arial, sans-serif" font-size="6" font-weight="normal" fill="#ffd700" text-anchor="middle">State Machine Component</text>
   
-  <g>
-    <rect x="20.0" y="45.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="60.0" y="51.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">State Storage</text>
-    <text x="60.0" y="58.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Database</text>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle">State Machine Component</text>
+  
+  <!-- Top Row -->
+  <g transform="translate(50, 80)">
+    <!-- State Storage -->
+    <g>
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">State Storage</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Database</text>
+      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
+    </g>
+    
+    <!-- Event Handler -->
+    <g transform="translate(240, 0)">
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Event Handler</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Transitions</text>
+      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
+    </g>
+    
+    <!-- Transitions -->
+    <g transform="translate(480, 0)">
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Transitions</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">State Changes</text>
+      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
+    </g>
+    
+    <!-- Error States -->
+    <g transform="translate(720, 0)">
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#ef4444" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#redGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Error States</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Failures</text>
+      <circle cx="100" cy="85" r="4" fill="#ef4444"/>
+    </g>
   </g>
   
-  <g>
-    <rect x="116.0" y="45.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="156.0" y="51.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Event Handler</text>
-    <text x="156.0" y="58.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Transitions</text>
+  <!-- Middle Row -->
+  <g transform="translate(240, 280)">
+    <!-- Recovery -->
+    <g>
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#f59e0b" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Recovery</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Retry Logic</text>
+      <circle cx="100" cy="85" r="4" fill="#f59e0b"/>
+    </g>
+    
+    <!-- Cleanup -->
+    <g transform="translate(240, 0)">
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Cleanup</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Completion</text>
+      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
+    </g>
   </g>
   
-  <g>
-    <rect x="212.0" y="45.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="252.0" y="51.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Transitions</text>
-    <text x="252.0" y="58.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">State Changes</text>
+  <!-- Bottom: State Persist -->
+  <g transform="translate(400, 480)">
+    <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="3" filter="url(#glow)"/>
+    <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+    <text x="100" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">State Persist</text>
+    <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Reliability</text>
+    <circle cx="100" cy="85" r="5" fill="#10b981"/>
   </g>
   
-  <g>
-    <rect x="308.0" y="45.0" width="72" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="344.0" y="51.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Error States</text>
-    <text x="344.0" y="58.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Failures</text>
-  </g>
+  <!-- Arrows -->
+  <path d="M 250 180 L 290 180" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 490 180 L 530 180" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 730 180 L 770 180" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
   
-  <g>
-    <rect x="116.0" y="105.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="156.0" y="111.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Recovery</text>
-    <text x="156.0" y="118.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Retry Logic</text>
-  </g>
+  <path d="M 820 190 L 820 210 L 340 210 L 340 280" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 580 190 L 580 210 L 340 210 L 340 280" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 340 190 L 340 210 L 340 280" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 100 190 L 100 210 L 340 210 L 340 280" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
   
-  <g>
-    <rect x="212.0" y="105.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="252.0" y="111.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Cleanup</text>
-    <text x="252.0" y="118.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Completion</text>
-  </g>
+  <path d="M 340 305 L 480 305" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
   
-  <g>
-    <rect x="164.0" y="165.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="204.0" y="171.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">State Persist</text>
-    <text x="204.0" y="178.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Reliability</text>
-  </g>
-  
-  <path d="M 252.0 125.0 L 252.0 129.0 L 204.0 129.0 L 204.0 165.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 156.0 125.0 L 156.0 129.0 L 204.0 129.0 L 204.0 165.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 344.0 65.0 L 344.0 69.0 L 252.0 69.0 L 252.0 105.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 252.0 65.0 L 252.0 69.0 L 252.0 105.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 156.0 65.0 L 156.0 69.0 L 156.0 105.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 60.0 65.0 L 60.0 69.0 L 156.0 69.0 L 156.0 105.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 196.0 115.0 L 212.0 115.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 292.0 55.0 L 308.0 55.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 196.0 55.0 L 212.0 55.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 100.0 55.0 L 116.0 55.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 440 390 L 500 390 L 500 480" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <path d="M 580 390 L 520 390 L 520 480" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
 </svg>

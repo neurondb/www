@@ -1,66 +1,112 @@
-<svg width="384" height="208" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="600" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0a1b4e"/>
-      <stop offset="1" stop-color="#001635"/>
+    
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
     </linearGradient>
-    <marker id="arrowhead" markerWidth="5" markerHeight="5" refX="4" refY="3" orient="auto">
-      <polygon points="0 0, 5 2.5, 0 5" fill="#5fc4ff" opacity="0.9"/>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.2" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#06b6d4" opacity="0.9"/>
     </marker>
   </defs>
   
-    <text x="186.0" y="22.5" font-family="Arial, sans-serif" font-size="6" font-weight="normal" fill="#ffd700" text-anchor="middle">Planning Component</text>
   
-  <g>
-    <rect x="4.0" y="53.0" width="80" height="20" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="44.0" y="59.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Goal Analyzer</text>
-    <text x="44.0" y="66.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Parse &amp; Understand</text>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle">Planning Component</text>
+  
+  <!-- Top Row -->
+  <g transform="translate(50, 80)">
+    <!-- Goal Analyzer -->
+    <g>
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Goal Analyzer</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Parse &amp; Understand</text>
+      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
+    </g>
+    
+    <!-- Query Tools -->
+    <g transform="translate(240, 0)">
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Query Tools</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Available Actions</text>
+      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
+    </g>
+    
+    <!-- Step Generator -->
+    <g transform="translate(480, 0)">
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Step Generator</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Create Actions</text>
+      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
+    </g>
+    
+    <!-- Order Steps -->
+    <g transform="translate(720, 0)">
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Order Steps</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Dependencies</text>
+      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
+    </g>
   </g>
   
-  <g>
-    <rect x="100.0" y="53.0" width="80" height="20" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="140.0" y="59.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Query Tools</text>
-    <text x="140.0" y="66.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Available Actions</text>
+  <!-- Middle Row -->
+  <g transform="translate(240, 280)">
+    <!-- Validator -->
+    <g>
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Validator</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Feasibility Check</text>
+      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
+    </g>
+    
+    <!-- Rank Plans -->
+    <g transform="translate(240, 0)">
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Rank Plans</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Quality Score</text>
+      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
+    </g>
   </g>
   
-  <g>
-    <rect x="196.0" y="53.0" width="80" height="20" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="236.0" y="59.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Step Generator</text>
-    <text x="236.0" y="66.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Create Actions</text>
+  <!-- Bottom: Valid Plan -->
+  <g transform="translate(400, 480)">
+    <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="3" filter="url(#glow)"/>
+    <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+    <text x="100" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">Valid Plan</text>
+    <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Ready</text>
+    <circle cx="100" cy="85" r="5" fill="#10b981"/>
   </g>
   
-  <g>
-    <rect x="292.0" y="53.0" width="72" height="20" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="328.0" y="59.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Order Steps</text>
-    <text x="328.0" y="66.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Dependencies</text>
-  </g>
+  <!-- Arrows -->
+  <path d="M 250 180 L 290 180" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 490 180 L 530 180" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 730 180 L 770 180" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
   
-  <g>
-    <rect x="100.0" y="113.0" width="80" height="20" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="140.0" y="119.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Validator</text>
-    <text x="140.0" y="126.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Feasibility Check</text>
-  </g>
+  <path d="M 820 190 L 820 210 L 580 210 L 580 280" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 580 190 L 580 210 L 580 280" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 340 190 L 340 210 L 340 280" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 100 190 L 100 210 L 340 210 L 340 280" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
   
-  <g>
-    <rect x="196.0" y="113.0" width="80" height="20" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="236.0" y="119.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Rank Plans</text>
-    <text x="236.0" y="126.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Quality Score</text>
-  </g>
+  <path d="M 340 305 L 480 305" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
   
-  <g>
-    <rect x="148.0" y="173.0" width="80" height="20" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="188.0" y="179.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Valid Plan</text>
-    <text x="188.0" y="186.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Ready</text>
-  </g>
-  
-  <path d="M 236.0 133.0 L 236.0 137.0 L 188.0 137.0 L 188.0 173.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 140.0 133.0 L 140.0 137.0 L 188.0 137.0 L 188.0 173.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 328.0 73.0 L 328.0 77.0 L 236.0 77.0 L 236.0 113.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 236.0 73.0 L 236.0 77.0 L 236.0 113.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 140.0 73.0 L 140.0 77.0 L 140.0 113.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 44.0 73.0 L 44.0 77.0 L 140.0 77.0 L 140.0 113.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 180.0 123.0 L 196.0 123.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 276.0 63.0 L 292.0 63.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 180.0 63.0 L 196.0 63.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 84.0 63.0 L 100.0 63.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 440 390 L 500 390 L 500 480" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <path d="M 580 390 L 520 390 L 520 480" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
 </svg>

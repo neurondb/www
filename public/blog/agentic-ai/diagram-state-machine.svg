@@ -1,66 +1,127 @@
-<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="600" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0a1b4e"/>
-      <stop offset="1" stop-color="#001635"/>
+    
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
     </linearGradient>
-    <marker id="arrowhead" markerWidth="5" markerHeight="5" refX="4" refY="3" orient="auto">
-      <polygon points="0 0, 5 2.5, 0 5" fill="#5fc4ff" opacity="0.8"/>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.2" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.2" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#06b6d4" opacity="0.9"/>
     </marker>
   </defs>
   
-    <text x="194.0" y="18.5" font-family="Arial, sans-serif" font-size="6" font-weight="normal" fill="#ffd700" text-anchor="middle">State Machine</text>
   
-  <g>
-    <rect x="20.0" y="45.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="60.0" y="51.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Initial</text>
-    <text x="60.0" y="58.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Start State</text>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle">State Machine</text>
+  
+  <!-- Top Row: Idle, Planning, Executing, Waiting -->
+  <g transform="translate(50, 80)">
+    <!-- Idle -->
+    <g>
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Idle</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Start State</text>
+      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
+    </g>
+    
+    <!-- Planning -->
+    <g transform="translate(240, 0)">
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#purpleGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Planning</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Generate Steps</text>
+      <circle cx="100" cy="85" r="4" fill="#8b5cf6"/>
+    </g>
+    
+    <!-- Executing -->
+    <g transform="translate(480, 0)">
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Executing</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Run Tools</text>
+      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
+    </g>
+    
+    <!-- Waiting -->
+    <g transform="translate(720, 0)">
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#f59e0b" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Waiting</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Pause</text>
+      <circle cx="100" cy="85" r="4" fill="#f59e0b"/>
+    </g>
   </g>
   
-  <g>
-    <rect x="116.0" y="45.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="156.0" y="51.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Planning</text>
-    <text x="156.0" y="58.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Generate Steps</text>
+  <!-- Middle Row: Error, Complete -->
+  <g transform="translate(240, 280)">
+    <!-- Error -->
+    <g>
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#ef4444" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Error</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Recovery</text>
+      <circle cx="100" cy="85" r="4" fill="#ef4444"/>
+    </g>
+    
+    <!-- Complete -->
+    <g transform="translate(240, 0)">
+      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="3" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">Complete</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Finished</text>
+      <circle cx="100" cy="85" r="5" fill="#10b981"/>
+    </g>
   </g>
   
-  <g>
-    <rect x="212.0" y="45.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="252.0" y="51.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Executing</text>
-    <text x="252.0" y="58.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Run Tools</text>
+  <!-- Bottom: Persist -->
+  <g transform="translate(400, 480)">
+    <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+    <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
+    <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Persist</text>
+    <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Save State</text>
+    <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
   </g>
   
-  <g>
-    <rect x="308.0" y="45.0" width="72" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="344.0" y="51.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Waiting</text>
-    <text x="344.0" y="58.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Pause</text>
-  </g>
+  <!-- Arrows: State transitions -->
+  <path d="M 250 180 L 290 180" fill="none" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 490 180 L 530 180" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 730 180 L 770 180" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
   
-  <g>
-    <rect x="116.0" y="105.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="156.0" y="111.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Error</text>
-    <text x="156.0" y="118.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Recovery</text>
-  </g>
+  <!-- Arrows: Executing to Waiting -->
+  <path d="M 580 190 L 730 190" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
   
-  <g>
-    <rect x="212.0" y="105.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="252.0" y="111.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Complete</text>
-    <text x="252.0" y="118.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Finished</text>
-  </g>
+  <!-- Arrows: Waiting back to Executing -->
+  <path d="M 720 190 L 580 190" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.6"/>
   
-  <g>
-    <rect x="164.0" y="165.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
-    <text x="204.0" y="171.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Persist</text>
-    <text x="204.0" y="178.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Save State</text>
-  </g>
+  <!-- Arrows: To Error -->
+  <path d="M 580 190 L 580 210 L 340 210 L 340 280" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
   
-  <path d="M 252.0 125.0 L 252.0 129.0 L 204.0 129.0 L 204.0 165.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 156.0 125.0 L 156.0 129.0 L 204.0 129.0 L 204.0 165.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 344.0 65.0 L 344.0 69.0 L 252.0 69.0 L 252.0 105.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 252.0 65.0 L 252.0 69.0 L 252.0 105.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 156.0 65.0 L 156.0 69.0 L 156.0 105.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 60.0 65.0 L 60.0 69.0 L 156.0 69.0 L 156.0 105.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 196.0 115.0 L 212.0 115.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 292.0 55.0 L 308.0 55.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 196.0 55.0 L 212.0 55.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 100.0 55.0 L 116.0 55.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <!-- Arrows: Error to Planning (retry) -->
+  <path d="M 240 335 L 240 210 L 290 210 L 290 190" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#arrowhead)" opacity="0.6"/>
+  
+  <!-- Arrows: To Complete -->
+  <path d="M 580 190 L 580 210 L 580 280" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
+  
+  <!-- Arrows: Complete to Persist -->
+  <path d="M 580 390 L 500 390 L 500 480" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  
+  <!-- Arrows: Persist back to Idle -->
+  <path d="M 400 590 L 400 550 L 150 550 L 150 190" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#arrowhead)" opacity="0.6"/>
 </svg>
