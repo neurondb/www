@@ -1,0 +1,59 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398548-0">
+      <rect x="0" y="0" width="700" height="350" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">RAG Retrieval Strategies</text>
+  
+  <!-- Strategies -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="700" height="350" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398548-0)">
+    <text x="140" y="55" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Semantic</text>
+    <text x="140" y="80" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Retrieval</text>
+    <text x="70" y="110" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Uses embeddings</text>
+    <text x="70" y="130" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Meaning-based</text>
+    <text x="70" y="150" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Finds related content</text>
+    <text x="70" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Works for synonyms</text>
+    <text x="360" y="55" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Keyword</text>
+    <text x="360" y="80" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Retrieval</text>
+    <text x="290" y="110" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Uses term matching</text>
+    <text x="290" y="130" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Exact word matches</text>
+    <text x="290" y="150" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Fast and simple</text>
+    <text x="290" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Good for exact terms</text>
+    <text x="580" y="55" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Hybrid</text>
+    <text x="580" y="80" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Retrieval</text>
+    <text x="510" y="110" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Combines both</text>
+    <text x="510" y="130" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Best of both worlds</text>
+    <text x="510" y="150" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Score fusion</text>
+    <text x="510" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Improved quality</text>
+    <text x="360" y="230" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#facc15" text-anchor="middle">Strategy Selection</text>
+    <text x="100" y="260" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Semantic: Best for meaning-based queries, handles synonyms</text>
+    <text x="100" y="285" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Keyword: Best for exact term matching, fast retrieval</text>
+    <text x="100" y="310" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Hybrid: Best for diverse queries, combines strengths, most robust</text>
+    </g>
+
+    <!-- Semantic -->
+    <rect x="50" y="30" width="180" height="140" fill="#4f46e5" opacity="0.3" rx="4"/>
+
+    <!-- Keyword -->
+    <rect x="270" y="30" width="180" height="140" fill="#8b5cf6" opacity="0.3" rx="4"/>
+
+    <!-- Hybrid -->
+    <rect x="490" y="30" width="180" height="140" fill="#10b981" opacity="0.3" rx="4"/>
+
+    <!-- Comparison -->
+    <rect x="50" y="200" width="620" height="130" fill="#1e293b" rx="4"/>
+
+  </g>
+  
+</svg>

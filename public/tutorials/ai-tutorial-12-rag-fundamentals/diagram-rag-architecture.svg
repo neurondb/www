@@ -1,0 +1,121 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+    </marker>
+                  <clipPath id="clip-1765356398548-6">
+      <rect x="0" y="0" width="700" height="70" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398548-5">
+      <rect x="0" y="0" width="150" height="80" rx="8"/>
+    </clipPath>
+    <clipPath id="clip-1765356398548-4">
+      <rect x="0" y="0" width="150" height="80" rx="8"/>
+    </clipPath>
+    <clipPath id="clip-1765356398548-3">
+      <rect x="0" y="0" width="150" height="80" rx="8"/>
+    </clipPath>
+    <clipPath id="clip-1765356398548-2">
+      <rect x="0" y="0" width="150" height="80" rx="8"/>
+    </clipPath>
+    <clipPath id="clip-1765356398548-1">
+      <rect x="0" y="0" width="150" height="80" rx="8"/>
+    </clipPath>
+    <clipPath id="clip-1765356398548-0">
+      <rect x="0" y="0" width="150" height="80" rx="8"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">RAG Architecture</text>
+  
+  <!-- Query -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="150" height="80" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398548-0)">
+    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Query</text>
+    <text x="75" y="55" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">User question</text>
+    </g>
+
+  </g>
+  
+  <!-- Retriever -->
+  <g transform="translate(250, 80)">
+
+    <rect x="0" y="0" width="150" height="80" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398548-1)">
+    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Retriever</text>
+    <text x="75" y="55" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Vector search</text>
+    </g>
+
+  </g>
+  
+  <!-- Document Store -->
+  <g transform="translate(450, 80)">
+
+    <rect x="0" y="0" width="150" height="80" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398548-2)">
+    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Document</text>
+    <text x="75" y="55" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Store</text>
+    </g>
+
+  </g>
+  
+  <!-- Context -->
+  <g transform="translate(600, 80)">
+
+    <rect x="0" y="0" width="150" height="80" fill="#f59e0b" opacity="0.3" rx="8" stroke="#fbbf24" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398548-3)">
+    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Context</text>
+    <text x="75" y="55" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Retrieved docs</text>
+    </g>
+
+  </g>
+  
+  <!-- Generator -->
+  <g transform="translate(325, 200)">
+
+    <rect x="0" y="0" width="150" height="80" fill="#ec4899" opacity="0.4" rx="8" stroke="#f472b6" stroke-width="3"/>
+    <g clip-path="url(#clip-1765356398548-4)">
+    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Generator</text>
+    <text x="75" y="55" font-family="monospace" font-size="12" fill="#cbd5e1" text-anchor="middle">LLM</text>
+    </g>
+
+  </g>
+  
+  <!-- Answer -->
+  <g transform="translate(325, 320)">
+
+    <rect x="0" y="0" width="150" height="80" fill="#10b981" opacity="0.4" rx="8" stroke="#34d399" stroke-width="3"/>
+    <g clip-path="url(#clip-1765356398548-5)">
+    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Answer</text>
+    <text x="75" y="55" font-family="monospace" font-size="12" fill="#cbd5e1" text-anchor="middle">Response</text>
+    </g>
+
+  </g>
+  
+  <!-- Arrows -->
+  <path d="M 125.0 120.0 L 325.0 120.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/>
+  <path d="M 325.0 120.0 L 525.0 120.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/>
+  <path d="M 525.0 120.0 L 675.0 120.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/>
+  <path d="M 675.0 160.0 L 675.0 164.0 L 400.0 164.0 L 400.0 200.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/>
+  <path d="M 400.0 280.0 L 400.0 284.0 L 400.0 320.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/>
+  
+  <!-- Benefits -->
+  <g transform="translate(50, 420)">
+
+    <rect x="0" y="0" width="700" height="70" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398548-6)">
+    <text x="350" y="25" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Benefits: Knowledge-grounded answers • Reduces hallucinations • Enables up-to-date information • Improves answer quality</text>
+    <text x="350" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#facc15" text-anchor="middle">RAG = Retrieval (find relevant docs) + Augmentation (add context) + Generation (produce answer)</text>
+    </g>
+
+  </g>
+  
+</svg>

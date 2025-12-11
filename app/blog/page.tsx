@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
 // Blog statistics
 const blogStats = [
-  { label: 'Total Articles', value: '5', icon: BookOpen, color: 'text-white' },
+  { label: 'Total Articles', value: '6', icon: BookOpen, color: 'text-white' },
   { label: 'Monthly Readers', value: '2.1k', icon: Eye, color: 'text-white' },
   { label: 'Categories', value: '1', icon: Tag, color: 'text-white' },
   { label: 'Authors', value: '1', icon: Users, color: 'text-white' }
@@ -132,6 +132,23 @@ const blogPosts = [
     likes: 0,
     comments: 0,
     tags: ['RAG', 'RetrievalAugmentedGeneration', 'LLM', 'VectorSearch', 'SemanticSearch', 'NeuronDB', 'PostgreSQL', 'AI', 'MachineLearning', 'DocumentRetrieval', 'KnowledgeBase']
+  },
+  {
+    slug: 'agentic-ai',
+    title: 'Agentic AI: Complete Guide to Autonomous AI Agents',
+    excerpt: 'Complete guide to Agentic AI systems. Explains agent architecture, planning, tool use, memory systems, and autonomous task execution. Includes practical implementation using NeuronDB and NeuronAgent with code examples.',
+    content: 'Comprehensive guide to Agentic AI architecture, planning systems, tool execution, memory management, state machines, and implementation patterns. Learn how to build autonomous agents using NeuronDB and NeuronAgent with production-ready code examples.',
+    author: 'NeuronDB Team',
+    authorRole: 'Core Developers',
+    date: '2025-02-24',
+    readTime: '40 min read',
+    category: 'Technical',
+    featured: false,
+    icon: 'neurondb',
+    views: 0,
+    likes: 0,
+    comments: 0,
+    tags: ['AgenticAI', 'AutonomousAgents', 'AIAgents', 'AgentArchitecture', 'ToolUse', 'Planning', 'MemorySystems', 'NeuronDB', 'NeuronAgent', 'PostgreSQL', 'LLM', 'RAG', 'VectorSearch', 'MachineLearning', 'AI']
   }
 ]
 
@@ -188,6 +205,16 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
               <Image
                 src="/blog/rag-complete-guide/header.svg?v=7"
                 alt="RAG Complete Guide blog header"
+                fill
+                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
+                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
+                unoptimized
+                priority
+              />
+            ) : post.slug === 'agentic-ai' ? (
+              <Image
+                src="/blog/agentic-ai/header.svg?v=7"
+                alt="Agentic AI blog header"
                 fill
                 className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
                 style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}

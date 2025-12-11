@@ -1,0 +1,100 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398543-3">
+      <rect x="0" y="0" width="700" height="200" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398543-2">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398543-1">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398543-0">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Optimizer Comparison</text>
+  
+  <!-- SGD -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398543-0)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">SGD</text>
+    <text x="110" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Stochastic Gradient Descent</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Weight</text>
+    <text x="110" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">w = w - α × ∇w</text>
+    <text x="110" y="210" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Simple, can be slow</text>
+    </g>
+
+    <!-- Zigzag path -->
+    <path d="M 20,150 L 60,120 L 100,140 L 140,110 L 180,130" stroke="#06b6d4" stroke-width="2" fill="none"/>
+
+  </g>
+  
+  <!-- Momentum -->
+  <g transform="translate(290, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398543-1)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Momentum</text>
+    <text x="110" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Adds Velocity</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Weight</text>
+    <text x="110" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">v = βv + ∇w</text>
+    <text x="110" y="210" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">w = w - αv</text>
+    <text x="110" y="225" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Faster convergence</text>
+    </g>
+
+    <!-- Smoother path -->
+    <path d="M 20,150 Q 60,130 100,120 Q 140,110 180,100" stroke="#10b981" stroke-width="2" fill="none"/>
+
+  </g>
+  
+  <!-- Adam -->
+  <g transform="translate(530, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398543-2)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">Adam</text>
+    <text x="110" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Adaptive + Momentum</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Weight</text>
+    <text x="110" y="195" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">Adaptive learning</text>
+    <text x="110" y="210" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">rate per parameter</text>
+    <text x="110" y="225" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Best for most cases</text>
+    </g>
+
+    <!-- Smooth adaptive path -->
+    <path d="M 20,150 Q 50,140 80,130 Q 110,120 140,110 Q 170,100 200,90" stroke="#f59e0b" stroke-width="2" fill="none"/>
+
+  </g>
+  
+  <!-- Comparison -->
+  <g transform="translate(50, 280)">
+
+    <rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398543-3)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Optimizer Characteristics</text>
+    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4">SGD</text>
+    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Simple update rule</text>
+    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Can oscillate</text>
+    <text x="120" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Requires tuning learning rate</text>
+    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Momentum</text>
+    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Smoother convergence</text>
+    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Reduces oscillations</text>
+    <text x="420" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Faster than SGD</text>
+    <text x="250" y="170" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">Adam (Recommended)</text>
+    <text x="250" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Combines momentum and adaptive learning rates</text>
+    <text x="250" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Works well for most problems</text>
+    <text x="250" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Less hyperparameter tuning needed</text>
+    </g>
+
+  </g>
+  
+</svg>

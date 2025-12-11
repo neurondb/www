@@ -1,0 +1,88 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398550-1">
+      <rect x="0" y="0" width="700" height="130" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398550-0">
+      <rect x="0" y="0" width="400" height="250" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Confusion Matrix</text>
+  
+  <!-- Matrix -->
+  <g transform="translate(200, 80)">
+
+    <rect x="0" y="0" width="400" height="250" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398550-0)">
+    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#facc15" text-anchor="middle">Predicted</text>
+    <text x="300" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#facc15" text-anchor="middle">Predicted</text>
+    <text x="50" y="80" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#facc15">Actual</text>
+    <text x="50" y="150" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#facc15">Actual</text>
+    <text x="150" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Positive</text>
+    <text x="250" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Negative</text>
+    <text x="20" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Positive</text>
+    <text x="20" y="150" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Negative</text>
+    <text x="140" y="105" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#fff">TP</text>
+    <text x="140" y="125" font-family="monospace" font-size="10" fill="#cbd5e1">45</text>
+    <text x="240" y="105" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#fff">FP</text>
+    <text x="240" y="125" font-family="monospace" font-size="10" fill="#cbd5e1">5</text>
+    <text x="140" y="175" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#fff">FN</text>
+    <text x="140" y="195" font-family="monospace" font-size="10" fill="#cbd5e1">8</text>
+    <text x="240" y="175" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#fff">TN</text>
+    <text x="240" y="195" font-family="monospace" font-size="10" fill="#cbd5e1">42</text>
+    <text x="350" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">TP: True Positive</text>
+    <text x="350" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">FP: False Positive</text>
+    <text x="350" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">FN: False Negative</text>
+    <text x="350" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">TN: True Negative</text>
+    <text x="350" y="190" font-family="monospace" font-size="10" fill="#cbd5e1">Precision = TP/(TP+FP)</text>
+    <text x="350" y="210" font-family="monospace" font-size="10" fill="#cbd5e1">Recall = TP/(TP+FN)</text>
+    <text x="350" y="230" font-family="monospace" font-size="10" fill="#cbd5e1">F1 = 2*(P*R)/(P+R)</text>
+    </g>
+
+    <!-- Headers -->
+
+    <!-- Labels -->
+
+    <!-- Cells -->
+    <rect x="100" y="70" width="80" height="60" fill="#10b981" opacity="0.4" rx="4" stroke="#34d399" stroke-width="2"/>
+
+    <rect x="200" y="70" width="80" height="60" fill="#ef4444" opacity="0.4" rx="4" stroke="#f87171" stroke-width="2"/>
+
+    <rect x="100" y="140" width="80" height="60" fill="#ef4444" opacity="0.4" rx="4" stroke="#f87171" stroke-width="2"/>
+
+    <rect x="200" y="140" width="80" height="60" fill="#10b981" opacity="0.4" rx="4" stroke="#34d399" stroke-width="2"/>
+
+    <!-- Metrics -->
+
+  </g>
+  
+  <!-- Interpretation -->
+  <g transform="translate(50, 350)">
+
+    <rect x="0" y="0" width="700" height="130" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398550-1)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Confusion Matrix Interpretation</text>
+    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">True Positives (TP)</text>
+    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Correctly predicted positive</text>
+    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Model got it right</text>
+    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ef4444">False Positives (FP)</text>
+    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Predicted positive, actually negative</text>
+    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Type I error</text>
+    <text x="100" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ef4444">False Negatives (FN)</text>
+    <text x="120" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Predicted negative, actually positive</text>
+    <text x="120" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Type II error</text>
+    <text x="400" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">True Negatives (TN)</text>
+    <text x="420" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Correctly predicted negative</text>
+    <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Model got it right</text>
+    </g>
+
+  </g>
+  
+</svg>

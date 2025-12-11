@@ -1,0 +1,96 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398544-3">
+      <rect x="0" y="0" width="700" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398544-2">
+      <rect x="0" y="0" width="200" height="200" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398544-1">
+      <rect x="0" y="0" width="200" height="200" rx="8"/>
+    </clipPath>
+    <clipPath id="clip-1765356398544-0">
+      <rect x="0" y="0" width="200" height="200" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Word Embeddings</text>
+  
+  <!-- Words to Vectors -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398544-0)">
+    <text x="100" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Words</text>
+    <text x="100" y="60" font-family="monospace" font-size="12" fill="#cbd5e1" text-anchor="middle">king</text>
+    <text x="100" y="90" font-family="monospace" font-size="12" fill="#cbd5e1" text-anchor="middle">queen</text>
+    <text x="100" y="120" font-family="monospace" font-size="12" fill="#cbd5e1" text-anchor="middle">man</text>
+    <text x="100" y="150" font-family="monospace" font-size="12" fill="#cbd5e1" text-anchor="middle">woman</text>
+    <text x="100" y="180" font-family="monospace" font-size="12" fill="#cbd5e1" text-anchor="middle">car</text>
+    </g>
+
+  </g>
+  
+  <!-- Embedding Model -->
+  <g transform="translate(300, 80)">
+
+    <rect x="0" y="0" width="200" height="200" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398544-1)">
+    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Embedding</text>
+    <text x="100" y="55" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Model</text>
+    <text x="100" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Word2Vec</text>
+    <text x="100" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">or GloVe</text>
+    <text x="100" y="130" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Learns from</text>
+    <text x="100" y="150" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">context</text>
+    </g>
+
+  </g>
+  
+  <!-- Vectors -->
+  <g transform="translate(550, 80)">
+
+    <rect x="0" y="0" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398544-2)">
+    <text x="100" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#facc15" text-anchor="middle">Vectors</text>
+    <text x="100" y="60" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">[0.2, 0.5, ...]</text>
+    <text x="100" y="90" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">[0.3, 0.4, ...]</text>
+    <text x="100" y="120" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">[0.1, 0.6, ...]</text>
+    <text x="100" y="150" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">[0.4, 0.3, ...]</text>
+    <text x="100" y="180" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">[0.8, 0.1, ...]</text>
+    </g>
+
+  </g>
+  
+  <!-- Arrows -->
+  <path d="M 100.0 200.0 L 100.0 204.0 L 400.0 204.0 L 400.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 100.0 200.0 L 100.0 204.0 L 400.0 204.0 L 400.0 80.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+  <path d="M 400.0 180.0 L 650.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 400.0 180.0 L 650.0 180.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+  
+  <!-- Properties -->
+  <g transform="translate(50, 300)">
+
+    <rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398544-3)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Word Embedding Properties</text>
+    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Semantic Similarity</text>
+    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Similar words have similar vectors</text>
+    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Cosine similarity measures relatedness</text>
+    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Relationships</text>
+    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Vector differences encode relationships</text>
+    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">King - Man + Woman ≈ Queen</text>
+    <text x="100" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Dimensionality</text>
+    <text x="120" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Common sizes: 100, 200, 300 dimensions</text>
+    <text x="120" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Higher dimensions capture more nuance</text>
+    <text x="400" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Training</text>
+    <text x="420" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Learns from large text corpora</text>
+    <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Captures semantic and syntactic patterns</text>
+    </g>
+
+  </g>
+  
+</svg>

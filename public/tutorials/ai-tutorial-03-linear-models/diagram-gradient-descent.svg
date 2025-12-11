@@ -1,0 +1,63 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+    </marker>
+                  <clipPath id="clip-1765356398540-1">
+      <rect x="0" y="0" width="700" height="50" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398540-0">
+      <rect x="0" y="0" width="700" height="350" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Gradient Descent Optimization</text>
+  
+  <!-- Cost Surface -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="700" height="350" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398540-0)">
+    <text x="360" y="180" font-family="system-ui, sans-serif" font-size="10" fill="#10b981">Minimum</text>
+    <text x="110" y="295" font-family="system-ui, sans-serif" font-size="9" fill="#facc15">Start</text>
+    <text x="350" y="340" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Weight (w)</text>
+    <text x="20" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Cost</text>
+    </g>
+
+    <!-- Cost surface visualization -->
+    <ellipse cx="350" cy="175" rx="200" ry="100" fill="#4f46e5" opacity="0.2" stroke="#6366f1" stroke-width="2"/>
+    <circle cx="350" cy="175" r="8" fill="#10b981"/>
+
+    <!-- Gradient descent path -->
+    <path d="M 100,300 Q 150,250 200,200 T 300,150 Q 320,140 350,175" stroke="#06b6d4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <!-- Steps -->
+    <circle cx="100" cy="300" r="5" fill="#facc15"/>
+
+    <circle cx="200" cy="200" r="5" fill="#facc15"/>
+    <circle cx="300" cy="150" r="5" fill="#facc15"/>
+    
+    <!-- Axes -->
+    <line x1="50" y1="300" x2="650" y2="300" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="50" y1="300" x2="50" y2="50" stroke="#94a3b8" stroke-width="1"/>
+
+  </g>
+  
+  <!-- Update Rule -->
+  <g transform="translate(50, 450)">
+
+    <rect x="0" y="0" width="700" height="50" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398540-1)">
+    <text x="350" y="30" font-family="monospace" font-size="14" fill="#facc15" text-anchor="middle">w = w - α × ∇w J</text>
+    <text x="350" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">α = learning rate, ∇w J = gradient</text>
+    </g>
+
+  </g>
+  
+</svg>

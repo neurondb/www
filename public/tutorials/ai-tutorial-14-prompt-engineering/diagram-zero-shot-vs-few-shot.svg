@@ -1,0 +1,82 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398550-2">
+      <rect x="0" y="0" width="700" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398550-1">
+      <rect x="0" y="0" width="320" height="200" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398550-0">
+      <rect x="0" y="0" width="320" height="200" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Zero-Shot vs Few-Shot Learning</text>
+  
+  <!-- Zero-Shot -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="320" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398550-0)">
+    <text x="160" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">Zero-Shot</text>
+    <text x="30" y="70" font-family="monospace" font-size="10" fill="#cbd5e1">Task: Classify sentiment</text>
+    <text x="30" y="90" font-family="monospace" font-size="10" fill="#cbd5e1">Input: "I love it"</text>
+    <text x="160" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">No examples provided</text>
+    <text x="160" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Relies on pre-training</text>
+    <text x="160" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Fast and simple</text>
+    <text x="160" y="180" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">May be less accurate</text>
+    </g>
+
+    <rect x="20" y="50" width="280" height="40" fill="#4f46e5" opacity="0.3" rx="4"/>
+
+  </g>
+  
+  <!-- Few-Shot -->
+  <g transform="translate(430, 80)">
+
+    <rect x="0" y="0" width="320" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398550-1)">
+    <text x="160" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Few-Shot</text>
+    <text x="30" y="70" font-family="monospace" font-size="10" fill="#cbd5e1">Task: Classify sentiment</text>
+    <text x="30" y="90" font-family="monospace" font-size="10" fill="#cbd5e1">Example 1: "Great" → positive</text>
+    <text x="30" y="110" font-family="monospace" font-size="10" fill="#cbd5e1">Example 2: "Bad" → negative</text>
+    <text x="30" y="130" font-family="monospace" font-size="10" fill="#cbd5e1">Input: "I love it"</text>
+    <text x="160" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Examples provided</text>
+    <text x="160" y="190" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Better accuracy</text>
+    </g>
+
+    <rect x="20" y="50" width="280" height="100" fill="#10b981" opacity="0.2" rx="4"/>
+
+  </g>
+  
+  <!-- Comparison -->
+  <g transform="translate(50, 300)">
+
+    <rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398550-2)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">When to Use Each</text>
+    <text x="190" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Zero-Shot</text>
+    <text x="70" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Simple tasks</text>
+    <text x="70" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Low latency required</text>
+    <text x="70" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Standard formats</text>
+    <text x="70" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Cost-sensitive</text>
+    <text x="510" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Few-Shot</text>
+    <text x="390" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Complex tasks</text>
+    <text x="390" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Custom formats</text>
+    <text x="390" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Higher accuracy needed</text>
+    <text x="390" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Domain-specific</text>
+    </g>
+
+    <rect x="50" y="50" width="280" height="110" fill="#4f46e5" opacity="0.2" rx="4" stroke="#6366f1" stroke-width="1"/>
+
+    <rect x="370" y="50" width="280" height="110" fill="#10b981" opacity="0.2" rx="4" stroke="#34d399" stroke-width="1"/>
+
+  </g>
+  
+</svg>

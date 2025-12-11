@@ -1,0 +1,102 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398541-3">
+      <rect x="0" y="0" width="700" height="200" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398541-2">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398541-1">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398541-0">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Activation Functions</text>
+  
+  <!-- Sigmoid -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398541-0)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">Sigmoid</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Input</text>
+    <text x="110" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">σ(x) = 1/(1+e^(-x))</text>
+    <text x="110" y="210" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Range: (0, 1)</text>
+    </g>
+
+    <!-- S-curve -->
+    <path d="M 20,150 Q 60,120 110,100 T 200,50" stroke="#06b6d4" stroke-width="2" fill="none"/>
+    <line x1="20" y1="150" x2="200" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="110" y1="50" x2="110" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+
+  </g>
+  
+  <!-- Tanh -->
+  <g transform="translate(290, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398541-1)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Tanh</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Input</text>
+    <text x="110" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">tanh(x) = (e^x - e^(-x))/(e^x + e^(-x))</text>
+    <text x="110" y="210" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Range: (-1, 1)</text>
+    </g>
+
+    <!-- Centered S-curve -->
+    <path d="M 20,50 Q 60,80 110,100 T 200,150" stroke="#10b981" stroke-width="2" fill="none"/>
+    <line x1="20" y1="100" x2="200" y2="100" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="110" y1="50" x2="110" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+
+  </g>
+  
+  <!-- ReLU -->
+  <g transform="translate(530, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398541-2)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">ReLU</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Input</text>
+    <text x="110" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">ReLU(x) = max(0, x)</text>
+    <text x="110" y="210" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Range: [0, ∞)</text>
+    </g>
+
+    <!-- ReLU curve -->
+    <line x1="20" y1="150" x2="110" y2="150" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="110" y1="150" x2="200" y2="50" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="20" y1="150" x2="200" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="110" y1="50" x2="110" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+
+  </g>
+  
+  <!-- Comparison -->
+  <g transform="translate(50, 280)">
+
+    <rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398541-3)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">When to Use Each Activation Function</text>
+    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4">Sigmoid</text>
+    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Binary classification output</text>
+    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Outputs probabilities (0-1)</text>
+    <text x="120" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Suffers from vanishing gradients</text>
+    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Tanh</text>
+    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Centered around zero</text>
+    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Range: (-1, 1)</text>
+    <text x="420" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Also has vanishing gradients</text>
+    <text x="250" y="170" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">ReLU (Recommended for Hidden Layers)</text>
+    <text x="250" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Default choice for hidden layers</text>
+    <text x="250" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Solves vanishing gradient problem</text>
+    <text x="250" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Enables training deep networks</text>
+    </g>
+
+  </g>
+  
+</svg>

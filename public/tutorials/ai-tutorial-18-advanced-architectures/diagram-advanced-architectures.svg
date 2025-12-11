@@ -1,0 +1,61 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398553-0">
+      <rect x="0" y="0" width="700" height="350" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Advanced Architectures</text>
+  
+  <!-- Components -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="700" height="350" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398553-0)">
+    <text x="150" y="55" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Multi-vector</text>
+    <text x="150" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Multiple embeddings</text>
+    <text x="150" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">per document</text>
+    <text x="400" y="55" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Temporal Search</text>
+    <text x="400" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Time-weighted</text>
+    <text x="400" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">scoring</text>
+    <text x="625" y="55" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Ensemble</text>
+    <text x="625" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Multiple</text>
+    <text x="625" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">models</text>
+    <text x="200" y="165" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Advanced Indexing</text>
+    <text x="200" y="185" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">HNSW, IVFFlat, Product Quantization</text>
+    <text x="200" y="205" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Optimized for scale</text>
+    <text x="550" y="165" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Complex Architecture</text>
+    <text x="550" y="185" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Multi-stage retrieval</text>
+    <text x="550" y="205" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Cascading models</text>
+    <text x="375" y="280" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#facc15" text-anchor="middle">Benefits</text>
+    <text x="375" y="305" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Improved retrieval quality • Better coverage • Handles complexity • Optimized performance</text>
+    <text x="375" y="325" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Enables sophisticated applications • Scales to large datasets</text>
+    </g>
+
+    <!-- Multi-vector -->
+    <rect x="50" y="30" width="200" height="80" fill="#4f46e5" opacity="0.3" rx="4"/>
+
+    <!-- Temporal -->
+    <rect x="300" y="30" width="200" height="80" fill="#8b5cf6" opacity="0.3" rx="4"/>
+
+    <!-- Ensemble -->
+    <rect x="550" y="30" width="150" height="80" fill="#ec4899" opacity="0.3" rx="4"/>
+
+    <!-- Advanced Indexing -->
+    <rect x="50" y="140" width="300" height="80" fill="#10b981" opacity="0.3" rx="4"/>
+
+    <!-- Complex Architecture -->
+    <rect x="400" y="140" width="300" height="80" fill="#f59e0b" opacity="0.3" rx="4"/>
+
+    <!-- Benefits -->
+    <rect x="50" y="250" width="650" height="80" fill="#1e293b" rx="4"/>
+
+  </g>
+  
+</svg>

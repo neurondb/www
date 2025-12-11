@@ -73,16 +73,17 @@
     <text x="85" y="121" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">the model</text>
   </g>
   
-  <!-- Arrows from Raw Data to Features - horizontal route -->
-  <path d="M 230 160 L 280 160" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <!-- Arrows - following pattern: center-bottom -> down 4px -> horizontal -> center-bottom (for same row) or center-top (for different row) -->
+  <!-- Raw Data (50,100,180,120) center-bottom (140,220) to Features (280,90,200,140) center-bottom (380,230) -->
+  <path d="M 140.0 220.0 L 140.0 224.0 L 380.0 224.0 L 380.0 230.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowConcepts)" opacity="0.8"/>
   <text x="255" y="150" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Extract</text>
   
-  <!-- Arrows from Features to Labels - horizontal route -->
-  <path d="M 480 160 L 530 160" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <!-- Features (280,90,200,140) center-bottom (380,230) to Labels (530,90,200,140) center-bottom (630,230) -->
+  <path d="M 380.0 230.0 L 380.0 234.0 L 630.0 234.0 L 630.0 230.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowConcepts)" opacity="0.8"/>
   <text x="505" y="150" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Pair</text>
   
-  <!-- Arrow to Training Set - horizontal route -->
-  <path d="M 730 160 L 780 160" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <!-- Labels (530,90,200,140) center-bottom (630,230) to Training Set (780,90,170,140) center-bottom (865,230) -->
+  <path d="M 630.0 230.0 L 630.0 234.0 L 865.0 234.0 L 865.0 230.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowConcepts)" opacity="0.8"/>
   <text x="755" y="150" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Split</text>
   
   <!-- Training Process -->
@@ -102,8 +103,8 @@
     <text x="330" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Minimize</text>
     <text x="330" y="87" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Errors</text>
     
-    <path d="M 120 75 L 150 75" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
-    <path d="M 250 75 L 280 75" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+    <!-- Training Set (780,90,170,140) center-bottom (865,230) to Training Process (300,280,400,120) center-top (500,280) -->
+    <path d="M 865.0 230.0 L 865.0 234.0 L 500.0 234.0 L 500.0 280.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowConcepts)" opacity="0.8"/>
   </g>
   
   <!-- Trained Model -->
@@ -114,8 +115,8 @@
     <text x="100" y="72" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">from training data</text>
   </g>
   
-  <!-- Arrow from Training to Model - vertical route -->
-  <path d="M 500 400 L 500 450" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <!-- Training Process (300,280,400,120) center-bottom (500,400) to Trained Model (400,450,200,80) center-top (500,450) -->
+  <path d="M 500.0 400.0 L 500.0 404.0 L 500.0 450.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowConcepts)" opacity="0.8"/>
   <text x="520" y="425" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4">Produces</text>
   
   <!-- Testing -->
@@ -148,11 +149,12 @@
     <text x="140" y="121" font-family="monospace" font-size="8" fill="#fff" text-anchor="middle">Model memorized data</text>
   </g>
   
-  <!-- Arrows - horizontal routes where boxes don't overlap -->
-  <path d="M 330 490 L 400 490" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <!-- Testing Phase (50,450,280,120) center-bottom (190,570) to Trained Model (400,450,200,80) center-top (500,450) -->
+  <path d="M 190.0 570.0 L 190.0 574.0 L 500.0 574.0 L 500.0 450.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowConcepts)" opacity="0.8"/>
   <text x="365" y="480" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Test</text>
   
-  <path d="M 600 490 L 680 490" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowConcepts)"/>
+  <!-- Trained Model (400,450,200,80) center-bottom (500,530) to Overfitting Risk (680,450,280,120) center-bottom (820,570) -->
+  <path d="M 500.0 530.0 L 500.0 534.0 L 820.0 534.0 L 820.0 570.0" fill="none" stroke="#ef4444" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowConcepts)" opacity="0.8"/>
   <text x="640" y="480" font-family="system-ui, sans-serif" font-size="12" fill="#ef4444" text-anchor="middle">Monitor</text>
   
   <!-- Data Flow Explanation -->

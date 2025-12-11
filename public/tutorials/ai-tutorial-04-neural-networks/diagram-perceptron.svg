@@ -1,0 +1,102 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+    </marker>
+                  <clipPath id="clip-1765356398542-2">
+      <rect x="0" y="0" width="700" height="150" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398542-1">
+      <rect x="0" y="0" width="100" height="100" rx="8"/>
+    </clipPath>
+    <clipPath id="clip-1765356398542-0">
+      <rect x="0" y="0" width="100" height="100" rx="8"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Perceptron Model</text>
+  
+  <!-- Inputs -->
+  <g transform="translate(50, 100)">
+    <circle cx="50" cy="50" r="15" fill="#4f46e5" opacity="0.5"/>
+    <text x="50" y="55" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">x₁</text>
+    <text x="50" y="85" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Input 1</text>
+    
+    <circle cx="50" cy="150" r="15" fill="#4f46e5" opacity="0.5"/>
+    <text x="50" y="155" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">x₂</text>
+    <text x="50" y="185" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Input 2</text>
+    
+    <circle cx="50" cy="250" r="15" fill="#4f46e5" opacity="0.5"/>
+    <text x="50" y="255" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">x₃</text>
+    <text x="50" y="285" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Input 3</text>
+  </g>
+  
+  <!-- Weights -->
+  <g transform="translate(200, 100)">
+    <text x="0" y="50" font-family="monospace" font-size="12" fill="#06b6d4">w₁</text>
+    <text x="0" y="150" font-family="monospace" font-size="12" fill="#06b6d4">w₂</text>
+    <text x="0" y="250" font-family="monospace" font-size="12" fill="#06b6d4">w₃</text>
+  </g>
+  
+  <!-- Sum -->
+  <g transform="translate(350, 150)">
+
+    <rect x="0" y="0" width="100" height="100" fill="#8b5cf6" opacity="0.4" rx="8" stroke="#a78bfa" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398542-0)">
+    <text x="50" y="40" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Sum</text>
+    <text x="50" y="60" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Σ wᵢxᵢ</text>
+    <text x="50" y="80" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">+ b</text>
+    </g>
+
+  </g>
+  
+  <!-- Activation -->
+  <g transform="translate(500, 150)">
+
+    <rect x="0" y="0" width="100" height="100" fill="#ec4899" opacity="0.4" rx="8" stroke="#f472b6" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398542-1)">
+    <text x="50" y="40" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Activation</text>
+    <text x="50" y="60" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">f(z)</text>
+    <text x="50" y="80" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Step/Sigmoid</text>
+    </g>
+
+  </g>
+  
+  <!-- Output -->
+  <g transform="translate(650, 150)">
+    <circle cx="50" cy="50" r="20" fill="#10b981" opacity="0.5"/>
+    <text x="50" y="55" font-family="monospace" font-size="14" fill="#fff" text-anchor="middle">y</text>
+    <text x="50" y="85" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Output</text>
+  </g>
+  
+  <!-- Connections -->
+  <line x1="65" y1="50" x2="200" y2="50" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="65" y1="150" x2="200" y2="150" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="65" y1="250" x2="200" y2="250" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="220" y1="50" x2="350" y2="150" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="220" y1="150" x2="350" y2="180" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="220" y1="250" x2="350" y2="200" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="450" y1="200" x2="500" y2="200" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="200" x2="650" y2="200" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Formula -->
+  <g transform="translate(50, 320)">
+
+    <rect x="0" y="0" width="700" height="150" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398542-2)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Perceptron Formula</text>
+    <text x="350" y="60" font-family="monospace" font-size="14" fill="#cbd5e1" text-anchor="middle">z = w₁x₁ + w₂x₂ + w₃x₃ + b</text>
+    <text x="350" y="85" font-family="monospace" font-size="14" fill="#cbd5e1" text-anchor="middle">y = f(z)</text>
+    <text x="350" y="115" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Step function: y = 1 if z ≥ 0, else y = 0</text>
+    <text x="350" y="140" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Sigmoid: y = 1 / (1 + e^(-z))</text>
+    </g>
+
+  </g>
+  
+</svg>

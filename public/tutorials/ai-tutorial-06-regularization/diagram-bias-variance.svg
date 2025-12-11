@@ -1,0 +1,120 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398543-3">
+      <rect x="0" y="0" width="700" height="200" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398543-2">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398543-1">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398543-0">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Bias-Variance Tradeoff</text>
+  
+  <!-- High Bias -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398543-0)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">High Bias</text>
+    <text x="110" y="45" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">(Underfitting)</text>
+    <text x="110" y="130" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Too simple</text>
+    <text x="110" y="150" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Misses patterns</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Poor on train & test</text>
+    </g>
+
+    <!-- Simple model -->
+    <line x1="20" y1="100" x2="200" y2="100" stroke="#ef4444" stroke-width="3"/>
+    <circle cx="50" cy="80" r="4" fill="#10b981"/>
+    <circle cx="100" cy="90" r="4" fill="#10b981"/>
+    <circle cx="150" cy="85" r="4" fill="#10b981"/>
+    <circle cx="200" cy="95" r="4" fill="#10b981"/>
+
+  </g>
+  
+  <!-- Optimal -->
+  <g transform="translate(290, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398543-1)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Optimal</text>
+    <text x="110" y="45" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">(Good Fit)</text>
+    <text x="110" y="130" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Balanced</text>
+    <text x="110" y="150" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Captures patterns</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Good on train & test</text>
+    </g>
+
+    <!-- Balanced curve -->
+    <path d="M 20,120 Q 60,100 110,90 Q 160,80 200,85" stroke="#10b981" stroke-width="3" fill="none"/>
+    <circle cx="50" cy="110" r="4" fill="#10b981"/>
+    <circle cx="100" cy="95" r="4" fill="#10b981"/>
+    <circle cx="150" cy="85" r="4" fill="#10b981"/>
+    <circle cx="200" cy="90" r="4" fill="#10b981"/>
+
+  </g>
+  
+  <!-- High Variance -->
+  <g transform="translate(530, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398543-2)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">High Variance</text>
+    <text x="110" y="45" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">(Overfitting)</text>
+    <text x="110" y="130" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Too complex</text>
+    <text x="110" y="150" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Learns noise</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Good train, poor test</text>
+    </g>
+
+    <!-- Complex wiggly curve -->
+    <path d="M 20,100 Q 40,60 60,80 Q 80,100 100,70 Q 120,40 140,75 Q 160,110 180,85 Q 200,60 220,90" stroke="#f59e0b" stroke-width="3" fill="none"/>
+    <circle cx="50" cy="85" r="4" fill="#10b981"/>
+    <circle cx="100" cy="75" r="4" fill="#10b981"/>
+    <circle cx="150" cy="80" r="4" fill="#10b981"/>
+    <circle cx="200" cy="75" r="4" fill="#10b981"/>
+
+  </g>
+  
+  <!-- Tradeoff -->
+  <g transform="translate(50, 280)">
+
+    <rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398543-3)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Bias-Variance Tradeoff</text>
+    <text x="300" y="15" font-family="system-ui, sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">Bias (decreases)</text>
+    <text x="300" y="185" font-family="system-ui, sans-serif" font-size="11" fill="#f59e0b" text-anchor="middle">Variance (increases)</text>
+    <text x="320" y="45" font-family="system-ui, sans-serif" font-size="10" fill="#10b981">Optimal</text>
+    <text x="0" y="120" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">Simple</text>
+    <text x="600" y="120" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="end">Complex</text>
+    </g>
+
+    <!-- Tradeoff curve -->
+    <g transform="translate(50, 50)">
+      <line x1="0" y1="100" x2="600" y2="100" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+      <line x1="0" y1="100" x2="0" y2="0" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+      
+      <!-- Bias curve (decreasing) -->
+      <path d="M 0,20 L 600,80" stroke="#ef4444" stroke-width="2" fill="none"/>
+
+      <!-- Variance curve (increasing) -->
+      <path d="M 0,80 L 600,20" stroke="#f59e0b" stroke-width="2" fill="none"/>
+
+      <!-- Optimal point -->
+      <circle cx="300" cy="50" r="8" fill="#10b981"/>
+
+  </g>
+    
+    <text x="350" y="280" font-family="system-ui, sans-serif" font-size="12" fill="#facc15" text-anchor="middle">Goal: Find the balance point that minimizes total error</text>
+  </g>
+  
+</svg>

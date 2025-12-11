@@ -1,0 +1,93 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398548-3">
+      <rect x="0" y="0" width="700" height="230" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398548-2">
+      <rect x="0" y="0" width="200" height="150" rx="8"/>
+    </clipPath>
+    <clipPath id="clip-1765356398548-1">
+      <rect x="0" y="0" width="200" height="150" rx="8"/>
+    </clipPath>
+    <clipPath id="clip-1765356398548-0">
+      <rect x="0" y="0" width="200" height="150" rx="8"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">RAG Components</text>
+  
+  <!-- Document Store -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="200" height="150" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398548-0)">
+    <text x="100" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Document Store</text>
+    <text x="100" y="55" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Vector database</text>
+    <text x="100" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Traditional database</text>
+    <text x="100" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Hybrid storage</text>
+    <text x="100" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Stores knowledge base</text>
+    <text x="100" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Indexed for fast search</text>
+    </g>
+
+  </g>
+  
+  <!-- Retriever -->
+  <g transform="translate(300, 80)">
+
+    <rect x="0" y="0" width="200" height="150" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398548-1)">
+    <text x="100" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Retriever</text>
+    <text x="100" y="55" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Semantic search</text>
+    <text x="100" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Keyword search</text>
+    <text x="100" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Hybrid search</text>
+    <text x="100" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Finds relevant docs</text>
+    <text x="100" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Returns top-k results</text>
+    </g>
+
+  </g>
+  
+  <!-- Generator -->
+  <g transform="translate(550, 80)">
+
+    <rect x="0" y="0" width="200" height="150" fill="#ec4899" opacity="0.3" rx="8" stroke="#f472b6" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398548-2)">
+    <text x="100" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Generator</text>
+    <text x="100" y="55" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Language model</text>
+    <text x="100" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• GPT, Claude, etc.</text>
+    <text x="100" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Uses context</text>
+    <text x="100" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Produces answer</text>
+    <text x="100" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Grounded in docs</text>
+    </g>
+
+  </g>
+  
+  <!-- Flow -->
+  <g transform="translate(50, 250)">
+
+    <rect x="0" y="0" width="700" height="230" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398548-3)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">RAG Workflow</text>
+    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">1. Query Processing</text>
+    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">User asks question</text>
+    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Query converted to embedding</text>
+    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">2. Retrieval</text>
+    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Search document store</text>
+    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Find top-k relevant documents</text>
+    <text x="100" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">3. Context Building</text>
+    <text x="120" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Combine retrieved documents</text>
+    <text x="120" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Format as context for LLM</text>
+    <text x="400" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">4. Generation</text>
+    <text x="420" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">LLM generates answer</text>
+    <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Using query + context</text>
+    <text x="250" y="230" font-family="system-ui, sans-serif" font-size="12" fill="#facc15" text-anchor="middle">Result: Knowledge-grounded answer that references retrieved documents</text>
+    </g>
+
+  </g>
+  
+</svg>

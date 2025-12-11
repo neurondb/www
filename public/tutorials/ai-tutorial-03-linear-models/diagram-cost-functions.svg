@@ -1,0 +1,98 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398540-3">
+      <rect x="0" y="0" width="700" height="200" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398540-2">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398540-1">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398540-0">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Cost Functions Comparison</text>
+  
+  <!-- MSE -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398540-0)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">Mean Squared Error</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Error</text>
+    <text x="110" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">MSE = (1/n) Σ(y_pred - y_true)²</text>
+    <text x="110" y="210" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Emphasizes large errors</text>
+    </g>
+
+    <!-- Quadratic curve -->
+    <path d="M 20,150 Q 110,50 200,150" stroke="#06b6d4" stroke-width="2" fill="none"/>
+    <line x1="20" y1="150" x2="200" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+
+  </g>
+  
+  <!-- MAE -->
+  <g transform="translate(290, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398540-1)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Mean Absolute Error</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Error</text>
+    <text x="110" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">MAE = (1/n) Σ|y_pred - y_true|</text>
+    <text x="110" y="210" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Robust to outliers</text>
+    </g>
+
+    <!-- Linear V shape -->
+    <path d="M 20,150 L 110,50 L 200,150" stroke="#10b981" stroke-width="2" fill="none"/>
+    <line x1="20" y1="150" x2="200" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+
+  </g>
+  
+  <!-- Cross-Entropy -->
+  <g transform="translate(530, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398540-2)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">Cross-Entropy</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Probability Error</text>
+    <text x="110" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">CE = -Σ y_true × log(y_pred)</text>
+    <text x="110" y="210" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">For classification</text>
+    </g>
+
+    <!-- Logarithmic curve -->
+    <path d="M 20,50 Q 60,80 100,100 T 200,120" stroke="#f59e0b" stroke-width="2" fill="none"/>
+    <line x1="20" y1="150" x2="200" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+
+  </g>
+  
+  <!-- Use Cases -->
+  <g transform="translate(50, 280)">
+
+    <rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398540-3)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">When to Use Each Cost Function</text>
+    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4">MSE (Mean Squared Error)</text>
+    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Regression problems</text>
+    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Emphasizes large errors</text>
+    <text x="120" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Sensitive to outliers</text>
+    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">MAE (Mean Absolute Error)</text>
+    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Regression problems</text>
+    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Treats all errors equally</text>
+    <text x="420" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Robust to outliers</text>
+    <text x="250" y="170" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">Cross-Entropy</text>
+    <text x="250" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Classification problems</text>
+    <text x="250" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Works with probabilities</text>
+    <text x="250" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Penalizes confident wrong predictions</text>
+    </g>
+
+  </g>
+  
+</svg>

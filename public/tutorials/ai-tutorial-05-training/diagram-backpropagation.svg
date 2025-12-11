@@ -1,0 +1,113 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+    </marker>
+    <marker id="arrowheadBack" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#ef4444"/>
+    </marker>
+                  <clipPath id="clip-1765356398542-2">
+      <rect x="0" y="0" width="700" height="250" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398542-1">
+      <rect x="0" y="0" width="320" height="120" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398542-0">
+      <rect x="0" y="0" width="320" height="120" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Backpropagation</text>
+  
+  <!-- Forward Pass -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="320" height="120" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398542-0)">
+    <text x="160" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Forward Pass</text>
+    <text x="50" y="65" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">Input</text>
+    <text x="50" y="80" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">x</text>
+    <text x="130" y="65" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">Layer 1</text>
+    <text x="130" y="80" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">z₁, a₁</text>
+    <text x="210" y="65" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">Layer 2</text>
+    <text x="210" y="80" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">z₂, a₂</text>
+    <text x="290" y="65" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">Output</text>
+    <text x="290" y="80" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">y</text>
+    </g>
+
+    <rect x="20" y="40" width="60" height="60" fill="#4f46e5" opacity="0.3" rx="4"/>
+
+    <rect x="100" y="40" width="60" height="60" fill="#8b5cf6" opacity="0.3" rx="4"/>
+
+    <rect x="180" y="40" width="60" height="60" fill="#ec4899" opacity="0.3" rx="4"/>
+
+    <rect x="260" y="40" width="60" height="60" fill="#10b981" opacity="0.3" rx="4"/>
+
+    <path d="M 50.0 70.0 L 130.0 70.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 50.0 70.0 L 130.0 70.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+    <path d="M 130.0 100.0 L 130.0 104.0 L 210.0 104.0 L 210.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 130.0 100.0 L 130.0 104.0 L 210.0 104.0 L 210.0 80.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+    <path d="M 210.0 70.0 L 290.0 70.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 210.0 70.0 L 290.0 70.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+  
+  </g>
+  
+  <!-- Backward Pass -->
+  <g transform="translate(430, 80)">
+
+    <rect x="0" y="0" width="320" height="120" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398542-1)">
+    <text x="160" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">Backward Pass</text>
+    <text x="50" y="65" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">Input</text>
+    <text x="50" y="80" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">x</text>
+    <text x="130" y="65" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">Layer 1</text>
+    <text x="130" y="80" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">∇w₁, ∇b₁</text>
+    <text x="210" y="65" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">Layer 2</text>
+    <text x="210" y="80" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">∇w₂, ∇b₂</text>
+    <text x="290" y="65" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">Error</text>
+    <text x="290" y="80" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">δ</text>
+    </g>
+
+    <rect x="20" y="40" width="60" height="60" fill="#4f46e5" opacity="0.3" rx="4"/>
+
+    <rect x="100" y="40" width="60" height="60" fill="#8b5cf6" opacity="0.3" rx="4"/>
+
+    <rect x="180" y="40" width="60" height="60" fill="#ec4899" opacity="0.3" rx="4"/>
+
+    <rect x="260" y="40" width="60" height="60" fill="#ef4444" opacity="0.3" rx="4"/>
+
+    <path d="M 290.0 100.0 L 290.0 104.0 L 210.0 104.0 L 210.0 80.0" fill="none" stroke="#ef4444" stroke-width="0.5" marker-end="M 290.0 100.0 L 290.0 104.0 L 210.0 104.0 L 210.0 80.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+    <path d="M 210.0 70.0 L 130.0 70.0" fill="none" stroke="#ef4444" stroke-width="0.5" marker-end="M 210.0 70.0 L 130.0 70.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+    <path d="M 130.0 70.0 L 50.0 70.0" fill="none" stroke="#ef4444" stroke-width="0.5" marker-end="M 130.0 70.0 L 50.0 70.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+  
+  </g>
+  
+  <!-- Chain Rule -->
+  <g transform="translate(50, 230)">
+
+    <rect x="0" y="0" width="700" height="250" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398542-2)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Backpropagation Using Chain Rule</text>
+    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4">Output Layer Gradient</text>
+    <text x="120" y="95" font-family="monospace" font-size="11" fill="#cbd5e1">∂L/∂w₂ = ∂L/∂y × ∂y/∂z₂ × ∂z₂/∂w₂</text>
+    <text x="120" y="115" font-family="monospace" font-size="11" fill="#cbd5e1">∂L/∂b₂ = ∂L/∂y × ∂y/∂z₂ × ∂z₂/∂b₂</text>
+    <text x="100" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4">Hidden Layer Gradient</text>
+    <text x="120" y="175" font-family="monospace" font-size="11" fill="#cbd5e1">∂L/∂w₁ = ∂L/∂a₁ × ∂a₁/∂z₁ × ∂z₁/∂w₁</text>
+    <text x="120" y="195" font-family="monospace" font-size="11" fill="#cbd5e1">where ∂L/∂a₁ comes from next layer</text>
+    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Key Points</text>
+    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Gradients flow backward</text>
+    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Chain rule connects layers</text>
+    <text x="420" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Each layer computes its gradient</text>
+    <text x="420" y="155" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Gradients accumulate through layers</text>
+    <text x="400" y="190" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Benefits</text>
+    <text x="420" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Computes all gradients in one pass</text>
+    <text x="420" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Efficient for deep networks</text>
+    <text x="420" y="255" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Enables automatic differentiation</text>
+    </g>
+
+  </g>
+  
+</svg>

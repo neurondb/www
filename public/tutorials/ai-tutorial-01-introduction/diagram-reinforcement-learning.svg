@@ -34,11 +34,11 @@
   </g>
   
   <!-- Action Arrow - direct horizontal route (Agent right center to Environment left center) -->
-  <path d="M 220 140 L 500 140" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRL)"/>
+  <path d="M 160.0 140.0 L 600.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" opacity="0.8"/>
   <text x="360" y="125" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">Action</text>
   
   <!-- State/Reward Arrow - direct horizontal route below (Environment left center to Agent right center) -->
-  <path d="M 500 160 L 220 160" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRLOrange)"/>
+  <path d="M 600.0 140.0 L 160.0 140.0" fill="none" stroke="#f59e0b" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" opacity="0.8"/>
   <text x="360" y="175" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">State + Reward</text>
   
   <!-- Learning Loop -->
@@ -62,10 +62,10 @@
     <text x="410" y="92" font-family="system-ui, sans-serif" font-size="9" fill="#fff" text-anchor="middle">Strategy</text>
     
     <!-- Loop Arrows -->
-    <path d="M 100 80 L 120 80" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRL)"/>
-    <path d="M 220 80 L 240 80" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRL)"/>
-    <path d="M 340 80 L 360 80" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRL)"/>
-    <path d="M 410 110 L 410 140 L 50 140 L 50 110" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowRL)"/>
+    <path d="M 160.0 140.0 L 160.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" opacity="0.8"/>
+    <path d="M 160.0 140.0 L 160.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" opacity="0.8"/>
+    <path d="M 160.0 140.0 L 160.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" opacity="0.8"/>
+    <path d="M 600.0 140.0 L 160.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" opacity="0.8"/>
   </g>
   
 </svg>

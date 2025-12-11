@@ -1,0 +1,66 @@
+<svg width="360" height="182" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1b4e"/>
+      <stop offset="1" stop-color="#001635"/>
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="5" markerHeight="5" refX="4" refY="3" orient="auto">
+      <polygon points="0 0, 5 2.5, 0 5" fill="#5fc4ff" opacity="0.9"/>
+    </marker>
+  </defs>
+  
+    <text x="181.0" y="19.5" font-family="Arial, sans-serif" font-size="6" font-weight="normal" fill="#ffd700" text-anchor="middle">Planning System</text>
+  
+  <g>
+    <rect x="22.0" y="47.0" width="68" height="18" rx="5.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="56.0" y="52.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Goal Input</text>
+    <text x="56.0" y="59.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Query</text>
+  </g>
+  
+  <g>
+    <rect x="106.0" y="47.0" width="68" height="18" rx="5.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="140.0" y="52.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Analyze</text>
+    <text x="140.0" y="59.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Break Down</text>
+  </g>
+  
+  <g>
+    <rect x="190.0" y="47.0" width="68" height="18" rx="5.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="224.0" y="52.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Generate</text>
+    <text x="224.0" y="59.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Steps</text>
+  </g>
+  
+  <g>
+    <rect x="274.0" y="47.0" width="68" height="18" rx="5.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="308.0" y="52.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Validate</text>
+    <text x="308.0" y="59.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Check</text>
+  </g>
+  
+  <g>
+    <rect x="106.0" y="99.0" width="68" height="18" rx="5.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="140.0" y="104.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Order Steps</text>
+    <text x="140.0" y="111.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Dependencies</text>
+  </g>
+  
+  <g>
+    <rect x="190.0" y="99.0" width="68" height="18" rx="5.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="224.0" y="104.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Rank Plans</text>
+    <text x="224.0" y="111.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Quality</text>
+  </g>
+  
+  <g>
+    <rect x="147.0" y="151.0" width="68" height="18" rx="5.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="181.0" y="156.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Final Plan</text>
+    <text x="181.0" y="163.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Ready</text>
+  </g>
+  
+  <path d="M 224.0 117.0 L 224.0 121.0 L 181.0 121.0 L 181.0 151.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 140.0 117.0 L 140.0 121.0 L 181.0 121.0 L 181.0 151.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 308.0 65.0 L 308.0 69.0 L 224.0 69.0 L 224.0 99.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 224.0 65.0 L 224.0 69.0 L 224.0 99.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 140.0 65.0 L 140.0 69.0 L 140.0 99.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 56.0 65.0 L 56.0 69.0 L 140.0 69.0 L 140.0 99.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 174.0 108.0 L 190.0 108.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 258.0 56.0 L 274.0 56.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 174.0 56.0 L 190.0 56.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 90.0 56.0 L 106.0 56.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+</svg>

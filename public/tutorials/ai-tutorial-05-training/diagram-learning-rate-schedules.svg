@@ -1,0 +1,96 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398542-3">
+      <rect x="0" y="0" width="700" height="200" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398542-2">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398542-1">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398542-0">
+      <rect x="0" y="0" width="220" height="180" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Learning Rate Schedules</text>
+  
+  <!-- Fixed -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398542-0)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">Fixed Rate</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Epochs</text>
+    <text x="110" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Constant rate</text>
+    <text x="110" y="210" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Simple but may be suboptimal</text>
+    </g>
+
+    <line x1="20" y1="100" x2="200" y2="100" stroke="#06b6d4" stroke-width="2"/>
+
+  </g>
+  
+  <!-- Step Decay -->
+  <g transform="translate(290, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398542-1)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Step Decay</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Epochs</text>
+    <text x="110" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Reduces at intervals</text>
+    <text x="110" y="210" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Common pattern</text>
+    </g>
+
+    <line x1="20" y1="100" x2="100" y2="100" stroke="#10b981" stroke-width="2"/>
+    <line x1="100" y1="100" x2="100" y2="80" stroke="#10b981" stroke-width="2"/>
+    <line x1="100" y1="80" x2="180" y2="80" stroke="#10b981" stroke-width="2"/>
+    <line x1="180" y1="80" x2="180" y2="60" stroke="#10b981" stroke-width="2"/>
+    <line x1="180" y1="60" x2="200" y2="60" stroke="#10b981" stroke-width="2"/>
+
+  </g>
+  
+  <!-- Exponential -->
+  <g transform="translate(530, 80)">
+
+    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398542-2)">
+    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">Exponential</text>
+    <text x="110" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Epochs</text>
+    <text x="110" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Continuous decay</text>
+    <text x="110" y="210" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Smooth reduction</text>
+    </g>
+
+    <path d="M 20,100 Q 60,90 100,80 Q 140,70 200,50" stroke="#f59e0b" stroke-width="2" fill="none"/>
+
+  </g>
+  
+  <!-- Comparison -->
+  <g transform="translate(50, 280)">
+
+    <rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398542-3)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Learning Rate Schedule Benefits</text>
+    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Faster Initial Learning</text>
+    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Start with higher rate</text>
+    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Make large updates early</text>
+    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Fine-tuning Later</text>
+    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Reduce rate later</text>
+    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Make precise adjustments</text>
+    <text x="100" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Prevents Overshooting</text>
+    <text x="120" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Lower rate prevents overshooting</text>
+    <text x="120" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Converges more reliably</text>
+    <text x="400" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Adaptive Methods</text>
+    <text x="420" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Adam, RMSprop adjust automatically</text>
+    <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Per-parameter learning rates</text>
+    </g>
+
+  </g>
+  
+</svg>

@@ -1,0 +1,101 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+    </marker>
+                  <clipPath id="clip-1765356398546-3">
+      <rect x="0" y="0" width="700" height="260" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398546-2">
+      <rect x="0" y="0" width="200" height="120" rx="8"/>
+    </clipPath>
+    <clipPath id="clip-1765356398546-1">
+      <rect x="0" y="0" width="200" height="120" rx="8"/>
+    </clipPath>
+    <clipPath id="clip-1765356398546-0">
+      <rect x="0" y="0" width="200" height="120" rx="8"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Pre-training Process</text>
+  
+  <!-- Large Corpus -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="200" height="120" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398546-0)">
+    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Large Text</text>
+    <text x="100" y="55" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Corpus</text>
+    <text x="100" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Billions of</text>
+    <text x="100" y="105" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">documents</text>
+    </g>
+
+  </g>
+  
+  <!-- Training -->
+  <g transform="translate(300, 80)">
+
+    <rect x="0" y="0" width="200" height="120" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398546-1)">
+    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Unsupervised</text>
+    <text x="100" y="55" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Training</text>
+    <text x="100" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Predict tokens</text>
+    <text x="100" y="105" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">from context</text>
+    </g>
+
+  </g>
+  
+  <!-- Learned Knowledge -->
+  <g transform="translate(550, 80)">
+
+    <rect x="0" y="0" width="200" height="120" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398546-2)">
+    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Learned</text>
+    <text x="100" y="55" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Knowledge</text>
+    <text x="100" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Language</text>
+    <text x="100" y="105" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">patterns</text>
+    </g>
+
+  </g>
+  
+  <!-- Arrows -->
+  <path d="M 100.0 120.0 L 100.0 124.0 L 400.0 124.0 L 400.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 100.0 120.0 L 100.0 124.0 L 400.0 124.0 L 400.0 80.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+  <path d="M 510.0 145.0 L 510.0 145.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 510.0 145.0 L 510.0 145.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+  
+  <!-- Objectives -->
+  <g transform="translate(50, 220)">
+
+    <rect x="0" y="0" width="700" height="260" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398546-3)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Pre-training Objectives</text>
+    <text x="190" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Masked Language Modeling (BERT)</text>
+    <text x="70" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Mask random tokens in input</text>
+    <text x="70" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Predict masked tokens from context</text>
+    <text x="70" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Learns bidirectional representations</text>
+    <text x="70" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Example: "The [MASK] sat on the mat"</text>
+    <text x="70" y="180" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Model predicts "cat"</text>
+    <text x="70" y="200" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Works for understanding tasks</text>
+    <text x="70" y="220" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Used by BERT, RoBERTa</text>
+    <text x="510" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Next Token Prediction (GPT)</text>
+    <text x="390" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Predict next token in sequence</text>
+    <text x="390" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Autoregressive generation</text>
+    <text x="390" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Learns causal relationships</text>
+    <text x="390" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Example: "The cat sat on the" → "mat"</text>
+    <text x="390" y="180" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Works for generation tasks</text>
+    <text x="390" y="200" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Used by GPT, GPT-2, GPT-3, GPT-4</text>
+    <text x="390" y="220" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Enables text generation</text>
+    </g>
+
+    <rect x="50" y="50" width="280" height="190" fill="#4f46e5" opacity="0.2" rx="4" stroke="#6366f1" stroke-width="1"/>
+
+    <rect x="370" y="50" width="280" height="190" fill="#8b5cf6" opacity="0.2" rx="4" stroke="#a78bfa" stroke-width="1"/>
+
+  </g>
+  
+</svg>

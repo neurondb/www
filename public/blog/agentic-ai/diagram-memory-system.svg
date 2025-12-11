@@ -1,0 +1,74 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1b4e"/>
+      <stop offset="1" stop-color="#001635"/>
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="5" markerHeight="5" refX="4" refY="3" orient="auto">
+      <polygon points="0 0, 5 2.5, 0 5" fill="#5fc4ff" opacity="0.9"/>
+    </marker>
+  </defs>
+  
+    <text x="205.0" y="20.5" font-family="Arial, sans-serif" font-size="6" font-weight="normal" fill="#ffd700" text-anchor="middle">Memory System</text>
+  
+  <g>
+    <rect x="66.0" y="49.0" width="68" height="18" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="100.0" y="54.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Text Input</text>
+    <text x="100.0" y="61.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Facts</text>
+  </g>
+  
+  <g>
+    <rect x="150.0" y="49.0" width="68" height="18" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="184.0" y="54.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Embedding</text>
+    <text x="184.0" y="61.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">LLM Model</text>
+  </g>
+  
+  <g>
+    <rect x="234.0" y="49.0" width="68" height="18" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="268.0" y="54.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Vector DB</text>
+    <text x="268.0" y="61.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">PostgreSQL</text>
+  </g>
+  
+  <g>
+    <rect x="318.0" y="49.0" width="68" height="18" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="352.0" y="54.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Index</text>
+    <text x="352.0" y="61.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">HNSW</text>
+  </g>
+  
+  <g>
+    <rect x="107.0" y="109.0" width="68" height="18" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="141.0" y="114.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Query</text>
+    <text x="141.0" y="121.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Search Input</text>
+  </g>
+  
+  <g>
+    <rect x="191.0" y="109.0" width="68" height="18" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="225.0" y="114.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Search</text>
+    <text x="225.0" y="121.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Similarity</text>
+  </g>
+  
+  <g>
+    <rect x="275.0" y="109.0" width="68" height="18" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="309.0" y="114.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Rank</text>
+    <text x="309.0" y="121.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Top Results</text>
+  </g>
+  
+  <g>
+    <rect x="191.0" y="165.0" width="68" height="20" rx="4" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="225.0" y="171.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Context</text>
+    <text x="225.0" y="178.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Retrieved</text>
+  </g>
+  
+  <path d="M 309.0 127.0 L 309.0 131.0 L 225.0 131.0 L 225.0 165.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 225.0 127.0 L 225.0 131.0 L 225.0 165.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 141.0 127.0 L 141.0 131.0 L 225.0 131.0 L 225.0 165.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 352.0 67.0 L 352.0 71.0 L 309.0 71.0 L 309.0 109.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 268.0 67.0 L 268.0 71.0 L 309.0 71.0 L 309.0 109.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 184.0 67.0 L 184.0 71.0 L 225.0 71.0 L 225.0 109.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 100.0 67.0 L 100.0 71.0 L 141.0 71.0 L 141.0 109.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 259.0 118.0 L 275.0 118.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 175.0 118.0 L 191.0 118.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 302.0 58.0 L 318.0 58.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 218.0 58.0 L 234.0 58.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 134.0 58.0 L 150.0 58.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+</svg>

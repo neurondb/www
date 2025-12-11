@@ -1,0 +1,130 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+    </marker>
+                  <clipPath id="clip-1765356398539-4">
+      <rect x="0" y="20" width="200" height="150" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398539-3">
+      <rect x="0" y="20" width="200" height="150" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398539-2">
+      <rect x="0" y="20" width="200" height="200" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398539-1">
+      <rect x="0" y="20" width="200" height="200" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398539-0">
+      <rect x="0" y="20" width="200" height="200" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Feature Selection Methods</text>
+  
+  <!-- All Features -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="20" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398539-0)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">All Features (10):</text>
+    <text x="10" y="45" font-family="monospace" font-size="10" fill="#10b981">feature1 (high)</text>
+    <text x="10" y="65" font-family="monospace" font-size="10" fill="#10b981">feature2 (high)</text>
+    <text x="10" y="85" font-family="monospace" font-size="10" fill="#ef4444">feature3 (low)</text>
+    <text x="10" y="105" font-family="monospace" font-size="10" fill="#10b981">feature4 (high)</text>
+    <text x="10" y="125" font-family="monospace" font-size="10" fill="#ef4444">feature5 (low)</text>
+    <text x="10" y="145" font-family="monospace" font-size="10" fill="#10b981">feature6 (medium)</text>
+    <text x="10" y="165" font-family="monospace" font-size="10" fill="#ef4444">feature7 (low)</text>
+    <text x="10" y="185" font-family="monospace" font-size="10" fill="#10b981">feature8 (high)</text>
+    <text x="10" y="205" font-family="monospace" font-size="10" fill="#ef4444">feature9 (low)</text>
+    <text x="10" y="225" font-family="monospace" font-size="10" fill="#10b981">feature10 (medium)</text>
+    </g>
+
+  </g>
+  
+  <!-- Filter Method -->
+  <g transform="translate(300, 80)">
+
+    <rect x="0" y="20" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398539-1)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Filter Method:</text>
+    <text x="10" y="45" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Uses statistical tests</text>
+    <text x="10" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Scores each feature</text>
+    <text x="10" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">independently</text>
+    <text x="10" y="110" font-family="monospace" font-size="10" fill="#10b981">Selected (5):</text>
+    <text x="10" y="130" font-family="monospace" font-size="10" fill="#10b981">feature1</text>
+    <text x="10" y="150" font-family="monospace" font-size="10" fill="#10b981">feature2</text>
+    <text x="10" y="170" font-family="monospace" font-size="10" fill="#10b981">feature4</text>
+    <text x="10" y="190" font-family="monospace" font-size="10" fill="#10b981">feature6</text>
+    <text x="10" y="210" font-family="monospace" font-size="10" fill="#10b981">feature8</text>
+    <text x="10" y="230" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">Fast, model-agnostic</text>
+    </g>
+
+  </g>
+  
+  <!-- Wrapper Method -->
+  <g transform="translate(550, 80)">
+
+    <rect x="0" y="20" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398539-2)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Wrapper Method:</text>
+    <text x="10" y="45" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Uses model performance</text>
+    <text x="10" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Tests feature subsets</text>
+    <text x="10" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">with cross-validation</text>
+    <text x="10" y="110" font-family="monospace" font-size="10" fill="#10b981">Selected (4):</text>
+    <text x="10" y="130" font-family="monospace" font-size="10" fill="#10b981">feature1</text>
+    <text x="10" y="150" font-family="monospace" font-size="10" fill="#10b981">feature2</text>
+    <text x="10" y="170" font-family="monospace" font-size="10" fill="#10b981">feature4</text>
+    <text x="10" y="190" font-family="monospace" font-size="10" fill="#10b981">feature8</text>
+    <text x="10" y="230" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">Slower, model-specific</text>
+    </g>
+
+  </g>
+  
+  <!-- Embedded Method -->
+  <g transform="translate(175, 320)">
+
+    <rect x="0" y="20" width="200" height="150" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398539-3)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Embedded Method:</text>
+    <text x="10" y="45" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Uses model internals</text>
+    <text x="10" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Feature importance</text>
+    <text x="10" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">or L1 regularization</text>
+    <text x="10" y="110" font-family="monospace" font-size="10" fill="#10b981">Selected (5):</text>
+    <text x="10" y="130" font-family="monospace" font-size="10" fill="#10b981">feature1, feature2</text>
+    <text x="10" y="150" font-family="monospace" font-size="10" fill="#10b981">feature4, feature6</text>
+    <text x="10" y="170" font-family="monospace" font-size="10" fill="#10b981">feature8</text>
+    </g>
+
+  </g>
+  
+  <!-- Selected Features -->
+  <g transform="translate(425, 320)">
+
+    <rect x="0" y="20" width="200" height="150" fill="#10b981" opacity="0.2" rx="4" stroke="#34d399" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398539-4)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Selected Features:</text>
+    <text x="10" y="50" font-family="monospace" font-size="11" fill="#10b981">feature1</text>
+    <text x="10" y="70" font-family="monospace" font-size="11" fill="#10b981">feature2</text>
+    <text x="10" y="90" font-family="monospace" font-size="11" fill="#10b981">feature4</text>
+    <text x="10" y="110" font-family="monospace" font-size="11" fill="#10b981">feature6</text>
+    <text x="10" y="130" font-family="monospace" font-size="11" fill="#10b981">feature8</text>
+    <text x="10" y="155" font-family="system-ui, sans-serif" font-size="11" fill="#facc15">Reduced from 10 to 5</text>
+    <text x="10" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#facc15">features (50% reduction)</text>
+    </g>
+
+  </g>
+  
+  <!-- Arrows -->
+  <path d="M 100.0 170.0 L 100.0 174.0 L 400.0 174.0 L 400.0 100.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 100.0 170.0 L 100.0 174.0 L 400.0 174.0 L 400.0 100.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+  <path d="M 400.0 200.0 L 650.0 200.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 400.0 200.0 L 650.0 200.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+  <path d="M 400.0 300.0 L 400.0 304.0 L 275.0 304.0 L 275.0 340.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 400.0 300.0 L 400.0 304.0 L 275.0 304.0 L 275.0 340.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+  <path d="M 400.0 300.0 L 400.0 304.0 L 525.0 304.0 L 525.0 340.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 400.0 300.0 L 400.0 304.0 L 525.0 304.0 L 525.0 340.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+  
+</svg>

@@ -45,6 +45,16 @@ const hasLinkNode = (node: any): boolean => {
   return false;
 };
 
+// Helper function to extract text content from a node
+const extractTextFromNode = (node: any): string => {
+  if (!node) return '';
+  if (node.type === 'text') return node.value || '';
+  if (node.children && Array.isArray(node.children)) {
+    return node.children.map((child: any) => extractTextFromNode(child)).join(' ');
+  }
+  return '';
+};
+
 // Usage: <BlogMarkdown>{markdown}</BlogMarkdown>
 export function BlogMarkdown({ children }: { children: string }) {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
@@ -88,9 +98,9 @@ export function BlogMarkdown({ children }: { children: string }) {
             const strongElement = li.querySelector('strong');
             if (strongElement) {
               const strongText = strongElement.textContent || '';
-              // Check if this is a main bullet item (ends with colon) - use orange
+              // Check if this is a main bullet item (ends with colon) - use green
               if (strongText.trim().endsWith(':')) {
-                strongElement.style.color = 'rgb(251, 146, 60)'; // orange-400
+                strongElement.style.color = 'rgb(34, 197, 94)'; // green-500
               } else if (strongText.includes('Feature Engineering')) {
                 strongElement.style.color = 'rgb(59, 130, 246)'; // blue-500
               } else if (strongText.includes('Feature Selection')) {
@@ -133,7 +143,7 @@ export function BlogMarkdown({ children }: { children: string }) {
 
   return (
     <>
-      <style>{`
+      <style dangerouslySetInnerHTML={{__html: `
         article [data-inline-list="true"] li:not(:last-child)::after {
           content: ' • ';
           color: rgb(234 179 8);
@@ -144,7 +154,38 @@ export function BlogMarkdown({ children }: { children: string }) {
         article ul li::marker {
           color: var(--bullet-color, rgb(96 165 250));
         }
-      `}</style>
+        /* Enhanced table styling */
+        article table {
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(6, 182, 212, 0.1);
+        }
+        article table thead th {
+          position: relative;
+        }
+        article table thead th::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.6), transparent);
+        }
+        article table tbody tr {
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        article table tbody tr:hover {
+          transform: translateX(4px);
+          box-shadow: inset 4px 0 0 rgba(6, 182, 212, 0.5);
+        }
+        article table td:first-child {
+          font-weight: 600;
+          color: rgb(250, 204, 21);
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        article table td:not(:first-child) {
+          color: rgba(255, 255, 255, 0.95);
+        }
+      `}} />
       <article ref={articleRef} className="prose dark:prose-invert max-w-7xl mx-auto py-12 px-6 overflow-hidden">
         <ReactMarkdown
         remarkPlugins={[remarkGfm]}
@@ -221,12 +262,55 @@ export function BlogMarkdown({ children }: { children: string }) {
             // Check if list items contain links (common in "Related Tutorials" sections)
             const hasLinks = node?.children?.some((child: any) => hasLinkNode(child));
             
-            // Check if this is an inline list (contains links or short items)
+            // Check if this is a Related Resources list by checking item content
             const listItemCount = node?.children?.length || 0;
-            const isInlineList = hasLinks || listItemCount <= 5;
+            let isRelatedResources = false;
+            if (hasLinks && listItemCount >= 4) {
+              // Check if items contain Related Resources keywords
+              const itemTexts: string[] = [];
+              node?.children?.forEach((child: any) => {
+                if (child.children) {
+                  const text = extractTextFromNode(child);
+                  if (text) itemTexts.push(text);
+                }
+              });
+              
+              const hasNeuronDB = itemTexts.some(t => t.includes('NeuronDB Documentation'));
+              const hasNeuronAgent = itemTexts.some(t => t.includes('NeuronAgent Documentation'));
+              const hasSemanticSearch = itemTexts.some(t => t.includes('Semantic Search Guide'));
+              const hasRAG = itemTexts.some(t => t.includes('RAG Complete Guide'));
+              
+              if (hasNeuronDB && hasNeuronAgent && (hasSemanticSearch || hasRAG)) {
+                isRelatedResources = true;
+              }
+            }
+            
+            // Check if this is in Related Resources section - always render as block list
+            let parentElement = node;
+            let inRelatedResources = false;
+            while (parentElement && parentElement.parent) {
+              parentElement = parentElement.parent;
+              if (parentElement.children) {
+                const hasRelatedResourcesHeading = parentElement.children.some((child: any) => {
+                  if (child.type === 'element' && child.tagName === 'h2') {
+                    const text = child.children?.[0]?.value || '';
+                    return text.includes('Related Resources');
+                  }
+                  return false;
+                });
+                if (hasRelatedResourcesHeading) {
+                  inRelatedResources = true;
+                  break;
+                }
+              }
+            }
+            
+            // Check if this is an inline list (contains links or short items)
+            // But NOT if it's Related Resources
+            const isInlineList = (hasLinks || listItemCount <= 5) && !inRelatedResources && !isRelatedResources;
             
             // Check if parent is in Key Concepts section
-            let parentElement = node;
+            parentElement = node;
             let inKeyConcepts = false;
             while (parentElement && parentElement.parent) {
               parentElement = parentElement.parent;
@@ -276,8 +360,8 @@ export function BlogMarkdown({ children }: { children: string }) {
             return <ol className="list-decimal list-inside text-white/90 text-lg leading-relaxed mb-6 space-y-2 ml-8 md:ml-12" {...props} />;
           },
           li({ node, children, ...props }: any) {
-            // Regular list items
-            return <li className="mb-2 drop-shadow-sm" {...props}>{children}</li>;
+            // Regular list items - ensure bullet and text stay on same line
+            return <li className="mb-2 drop-shadow-sm leading-tight" style={{ display: 'list-item' }} {...props}>{children}</li>;
           },
 
           // Code blocks with syntax highlighting
@@ -353,11 +437,13 @@ export function BlogMarkdown({ children }: { children: string }) {
                 }}
               >
                 <table
-                  className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 shadow-xl"
+                  className="bg-gradient-to-br from-slate-800/90 via-slate-900/90 to-slate-800/90 backdrop-blur-md rounded-xl border-2 border-cyan-500/30 shadow-2xl overflow-hidden"
                   style={{
-                    width: 'max-content',
+                    width: '100%',
                     minWidth: '100%',
-                    borderCollapse: 'collapse'
+                    borderCollapse: 'separate',
+                    borderSpacing: 0,
+                    tableLayout: 'auto'
                   }}
                   {...props}
                 />
@@ -365,19 +451,56 @@ export function BlogMarkdown({ children }: { children: string }) {
             );
           },
           thead({ node, ...props }) {
-            return <thead className="bg-white/20" {...props} />;
+            return (
+              <thead 
+                className="bg-gradient-to-r from-cyan-600/40 via-blue-600/40 to-purple-600/40 backdrop-blur-sm border-b-2 border-cyan-400/50" 
+                {...props} 
+              />
+            );
           },
           tbody({ node, ...props }) {
             return <tbody className="divide-y divide-white/10" {...props} />;
           },
           tr({ node, ...props }) {
-            return <tr className="hover:bg-white/5 transition-colors" {...props} />;
+            // Add alternating row colors and better hover effect
+            return (
+              <tr 
+                className="hover:bg-gradient-to-r hover:from-cyan-500/10 hover:via-blue-500/10 hover:to-purple-500/10 transition-all duration-300 hover:shadow-lg hover:scale-[1.01] even:bg-white/5 odd:bg-transparent border-b border-white/5" 
+                {...props} 
+              />
+            );
           },
           th({ node, ...props }) {
-            return <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider" {...props} />;
+            return (
+              <th 
+                className="px-6 py-5 text-left text-sm font-bold text-cyan-300 uppercase tracking-wider break-words drop-shadow-lg" 
+                style={{ 
+                  wordWrap: 'break-word', 
+                  overflowWrap: 'break-word', 
+                  whiteSpace: 'normal', 
+                  minWidth: '120px',
+                  textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)',
+                  letterSpacing: '0.05em'
+                }} 
+                {...props} 
+              />
+            );
           },
           td({ node, ...props }) {
-            return <td className="px-6 py-4 text-sm text-white/90" {...props} />;
+            return (
+              <td 
+                className="px-6 py-5 text-sm text-white/95 break-words leading-relaxed" 
+                style={{ 
+                  wordWrap: 'break-word', 
+                  overflowWrap: 'break-word', 
+                  whiteSpace: 'normal', 
+                  minWidth: '200px', 
+                  maxWidth: '500px',
+                  lineHeight: '1.7'
+                }} 
+                {...props} 
+              />
+            );
           },
 
           // Images with proper styling (use Next/Image to avoid lint warnings)

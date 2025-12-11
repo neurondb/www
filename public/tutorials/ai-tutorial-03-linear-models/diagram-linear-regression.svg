@@ -1,0 +1,61 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398540-1">
+      <rect x="0" y="0" width="700" height="50" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398540-0">
+      <rect x="0" y="0" width="700" height="350" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Linear Regression</text>
+  
+  <!-- Data Points -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="700" height="350" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398540-0)">
+    <text x="350" y="340" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Features (X)</text>
+    <text x="20" y="175" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Target (Y)</text>
+    <text x="600" y="70" font-family="system-ui, sans-serif" font-size="11" fill="#06b6d4">y = wx + b</text>
+    <text x="220" y="185" font-family="system-ui, sans-serif" font-size="9" fill="#ef4444">Error</text>
+    </g>
+
+    <!-- Axes -->
+    <line x1="50" y1="300" x2="650" y2="300" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="50" y1="300" x2="50" y2="50" stroke="#94a3b8" stroke-width="2"/>
+
+    <!-- Data points -->
+    <circle cx="100" cy="250" r="5" fill="#10b981"/>
+    <circle cx="200" cy="200" r="5" fill="#10b981"/>
+    <circle cx="300" cy="150" r="5" fill="#10b981"/>
+    <circle cx="400" cy="100" r="5" fill="#10b981"/>
+    <circle cx="500" cy="80" r="5" fill="#10b981"/>
+    
+    <!-- Regression line -->
+    <line x1="50" y1="280" x2="650" y2="60" stroke="#06b6d4" stroke-width="3"/>
+
+    <!-- Error lines -->
+    <line x1="200" y1="200" x2="200" y2="180" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="300" y1="150" x2="300" y2="130" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3"/>
+
+  </g>
+  
+  <!-- Equation -->
+  <g transform="translate(50, 450)">
+
+    <rect x="0" y="0" width="700" height="50" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398540-1)">
+    <text x="350" y="30" font-family="monospace" font-size="14" fill="#facc15" text-anchor="middle">y = w₁x₁ + w₂x₂ + ... + wₙxₙ + b</text>
+    <text x="350" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Minimize MSE = (1/n) Σ(y_pred - y_true)²</text>
+    </g>
+
+  </g>
+  
+</svg>

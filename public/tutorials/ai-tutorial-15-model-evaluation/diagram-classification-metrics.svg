@@ -1,0 +1,86 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398550-2">
+      <rect x="0" y="0" width="700" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398550-1">
+      <rect x="0" y="0" width="350" height="200" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398550-0">
+      <rect x="0" y="0" width="300" height="200" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Classification Metrics</text>
+  
+  <!-- Confusion Matrix -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="300" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398550-0)">
+    <text x="150" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Confusion Matrix</text>
+    <text x="100" y="75" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Predicted</text>
+    <text x="150" y="75" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Negative</text>
+    <text x="200" y="75" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Positive</text>
+    <text x="70" y="100" font-family="monospace" font-size="10" fill="#cbd5e1">Actual</text>
+    <text x="70" y="130" font-family="monospace" font-size="10" fill="#cbd5e1">Negative</text>
+    <text x="70" y="160" font-family="monospace" font-size="10" fill="#cbd5e1">Positive</text>
+    <text x="150" y="130" font-family="monospace" font-size="12" fill="#10b981" text-anchor="middle">TN</text>
+    <text x="200" y="130" font-family="monospace" font-size="12" fill="#ef4444" text-anchor="middle">FP</text>
+    <text x="150" y="160" font-family="monospace" font-size="12" fill="#ef4444" text-anchor="middle">FN</text>
+    <text x="200" y="160" font-family="monospace" font-size="12" fill="#10b981" text-anchor="middle">TP</text>
+    </g>
+
+    <rect x="50" y="50" width="200" height="130" fill="#10b981" opacity="0.2" rx="4"/>
+    
+    <!-- Headers -->
+
+    <!-- Values -->
+
+  </g>
+  
+  <!-- Metrics -->
+  <g transform="translate(400, 80)">
+
+    <rect x="0" y="0" width="350" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398550-1)">
+    <text x="175" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">Derived Metrics</text>
+    <text x="20" y="60" font-family="monospace" font-size="11" fill="#cbd5e1">Accuracy = (TP + TN) / Total</text>
+    <text x="20" y="85" font-family="monospace" font-size="11" fill="#cbd5e1">Precision = TP / (TP + FP)</text>
+    <text x="20" y="110" font-family="monospace" font-size="11" fill="#cbd5e1">Recall = TP / (TP + FN)</text>
+    <text x="20" y="135" font-family="monospace" font-size="11" fill="#cbd5e1">F1 = 2 × (Precision × Recall) / (Precision + Recall)</text>
+    <text x="20" y="160" font-family="monospace" font-size="11" fill="#cbd5e1">AUC-ROC = Area under ROC curve</text>
+    <text x="20" y="185" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Each metric captures different aspects</text>
+    </g>
+
+  </g>
+  
+  <!-- Use Cases -->
+  <g transform="translate(50, 300)">
+
+    <rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398550-2)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">When to Use Each Metric</text>
+    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Accuracy</text>
+    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Balanced classes</text>
+    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Overall correctness</text>
+    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Precision</text>
+    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Reduce false positives</text>
+    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Quality of predictions</text>
+    <text x="100" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Recall</text>
+    <text x="120" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Reduce false negatives</text>
+    <text x="120" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Coverage of positives</text>
+    <text x="400" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">F1 Score</text>
+    <text x="420" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Balance precision & recall</text>
+    <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Single metric summary</text>
+    </g>
+
+  </g>
+  
+</svg>

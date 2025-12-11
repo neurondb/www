@@ -1,0 +1,119 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398539-4">
+      <rect x="0" y="25" width="450" height="250" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398539-3">
+      <rect x="0" y="0" width="200" height="100" rx="8"/>
+    </clipPath>
+    <clipPath id="clip-1765356398539-2">
+      <rect x="0" y="0" width="200" height="200" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398539-1">
+      <rect x="0" y="25" width="200" height="50" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398539-0">
+      <rect x="0" y="0" width="200" height="100" rx="8"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Data Validation Checks</text>
+  
+  <!-- Data Input -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="200" height="100" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398539-0)">
+    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Data Input</text>
+    <text x="100" y="55" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">age: 150</text>
+    <text x="100" y="75" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">income: "invalid"</text>
+    <text x="100" y="95" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">email: "bad-email"</text>
+    </g>
+
+  </g>
+  
+  <!-- Validation Checks -->
+  <g transform="translate(300, 80)">
+
+    <!-- Range Check -->
+    <rect x="0" y="25" width="200" height="50" fill="#ef4444" opacity="0.3" rx="4" stroke="#f87171" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398539-1)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Validation Checks:</text>
+    <text x="10" y="45" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff">Range Validation</text>
+    <text x="10" y="62" font-family="monospace" font-size="10" fill="#cbd5e1">age: 150 > 120 → FAIL</text>
+    <text x="10" y="75" font-family="monospace" font-size="10" fill="#cbd5e1">Expected: 0-120</text>
+    <text x="10" y="105" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff">Type Validation</text>
+    <text x="10" y="122" font-family="monospace" font-size="10" fill="#cbd5e1">income: string → FAIL</text>
+    <text x="10" y="135" font-family="monospace" font-size="10" fill="#cbd5e1">Expected: numeric</text>
+    <text x="10" y="165" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff">Pattern Validation</text>
+    <text x="10" y="182" font-family="monospace" font-size="10" fill="#cbd5e1">email: invalid → FAIL</text>
+    <text x="10" y="195" font-family="monospace" font-size="10" fill="#cbd5e1">Expected: valid email</text>
+    </g>
+
+    <!-- Type Check -->
+    <rect x="0" y="85" width="200" height="50" fill="#ef4444" opacity="0.3" rx="4" stroke="#f87171" stroke-width="1"/>
+
+    <!-- Pattern Check -->
+    <rect x="0" y="145" width="200" height="50" fill="#ef4444" opacity="0.3" rx="4" stroke="#f87171" stroke-width="1"/>
+
+  </g>
+  
+  <!-- Validation Results -->
+  <g transform="translate(550, 80)">
+
+    <rect x="0" y="0" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398539-2)">
+    <text x="100" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8" text-anchor="middle">Validation Report</text>
+    <text x="10" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#ef4444">3 validation errors</text>
+    <text x="10" y="75" font-family="monospace" font-size="10" fill="#cbd5e1">1. age out of range</text>
+    <text x="10" y="95" font-family="monospace" font-size="10" fill="#cbd5e1">2. income wrong type</text>
+    <text x="10" y="115" font-family="monospace" font-size="10" fill="#cbd5e1">3. email invalid format</text>
+    <text x="10" y="150" font-family="system-ui, sans-serif" font-size="11" fill="#ef4444">Data rejected</text>
+    <text x="10" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Fix errors and</text>
+    <text x="10" y="190" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">re-validate</text>
+    </g>
+
+  </g>
+  
+  <!-- Valid Data Example -->
+  <g transform="translate(50, 220)">
+
+    <rect x="0" y="0" width="200" height="100" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398539-3)">
+    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Valid Data</text>
+    <text x="100" y="55" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">age: 35 ✓</text>
+    <text x="100" y="75" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">income: 75000 ✓</text>
+    <text x="100" y="95" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">email: user@example.com ✓</text>
+    </g>
+
+  </g>
+  
+  <!-- Validation Types -->
+  <g transform="translate(300, 220)">
+
+    <rect x="0" y="25" width="450" height="250" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398539-4)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Validation Types:</text>
+    <text x="20" y="55" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4">1. Range Validation</text>
+    <text x="30" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Checks if values fall within expected bounds</text>
+    <text x="30" y="90" font-family="monospace" font-size="10" fill="#cbd5e1">Example: age between 0 and 120</text>
+    <text x="20" y="120" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4">2. Type Validation</text>
+    <text x="30" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Verifies correct data types</text>
+    <text x="30" y="155" font-family="monospace" font-size="10" fill="#cbd5e1">Example: income is numeric, not string</text>
+    <text x="20" y="185" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4">3. Pattern Validation</text>
+    <text x="30" y="205" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Matches against expected patterns</text>
+    <text x="30" y="220" font-family="monospace" font-size="10" fill="#cbd5e1">Example: email format, phone format</text>
+    <text x="20" y="250" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4">4. Constraint Validation</text>
+    <text x="30" y="270" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Enforces business rules</text>
+    <text x="30" y="285" font-family="monospace" font-size="10" fill="#cbd5e1">Example: end_date > start_date</text>
+    </g>
+
+  </g>
+  
+</svg>

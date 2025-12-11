@@ -11,14 +11,16 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   
-  // Image optimization
+  // Image optimization for Vercel
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
+    minimumCacheTTL: 31536000, // 1 year for Vercel edge cache
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Vercel image optimization
+    unoptimized: false,
   },
   
   // Headers for SEO and security
@@ -70,6 +72,33 @@ const nextConfig = {
             value: 'public, max-age=86400'
           }
         ]
+      },
+      {
+        source: '/blog/:path*/:image*.(svg|png|jpg|jpeg|webp|avif)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        source: '/tutorials/:path*/:image*.(svg|png|jpg|jpeg|webp|avif)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        source: '/public/:path*.(svg|png|jpg|jpeg|webp|avif)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
       }
     ]
   },
@@ -98,6 +127,13 @@ const nextConfig = {
   
   // Production optimizations
   productionBrowserSourceMaps: false,
+  
+  // Compiler optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
 }
 
 module.exports = nextConfig

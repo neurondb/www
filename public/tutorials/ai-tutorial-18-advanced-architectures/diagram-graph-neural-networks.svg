@@ -1,0 +1,76 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398554-1">
+      <rect x="0" y="0" width="700" height="130" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398554-0">
+      <rect x="0" y="0" width="700" height="250" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Graph Neural Networks</text>
+  
+  <!-- Graph Structure -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="700" height="250" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398554-0)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Graph Structure</text>
+    <text x="150" y="107" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">A</text>
+    <text x="300" y="107" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">B</text>
+    <text x="450" y="107" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">C</text>
+    <text x="200" y="187" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">D</text>
+    <text x="400" y="187" font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">E</text>
+    <text x="350" y="230" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Nodes represent entities, edges represent relationships</text>
+    </g>
+
+    <!-- Nodes -->
+    <circle cx="150" cy="100" r="25" fill="#06b6d4" opacity="0.4"/>
+
+    <circle cx="300" cy="100" r="25" fill="#10b981" opacity="0.4"/>
+
+    <circle cx="450" cy="100" r="25" fill="#f59e0b" opacity="0.4"/>
+
+    <circle cx="200" cy="180" r="25" fill="#8b5cf6" opacity="0.4"/>
+
+    <circle cx="400" cy="180" r="25" fill="#ec4899" opacity="0.4"/>
+
+    <!-- Edges -->
+    <line x1="175" y1="100" x2="275" y2="100" stroke="#facc15" stroke-width="2"/>
+    <line x1="325" y1="100" x2="425" y2="100" stroke="#facc15" stroke-width="2"/>
+    <line x1="150" y1="125" x2="200" y2="155" stroke="#facc15" stroke-width="2"/>
+    <line x1="300" y1="125" x2="200" y2="155" stroke="#facc15" stroke-width="2"/>
+    <line x1="300" y1="125" x2="400" y2="155" stroke="#facc15" stroke-width="2"/>
+    <line x1="450" y1="125" x2="400" y2="155" stroke="#facc15" stroke-width="2"/>
+
+  </g>
+  
+  <!-- Applications -->
+  <g transform="translate(50, 350)">
+
+    <rect x="0" y="0" width="700" height="130" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398554-1)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Graph Neural Network Applications</text>
+    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Social Networks</text>
+    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Node classification</text>
+    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Link prediction</text>
+    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Molecular Analysis</text>
+    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Drug discovery</text>
+    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Property prediction</text>
+    <text x="100" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Knowledge Graphs</text>
+    <text x="120" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Entity relationships</text>
+    <text x="120" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Reasoning</text>
+    <text x="400" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Recommendation Systems</text>
+    <text x="420" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">User-item interactions</text>
+    <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Graph-based recommendations</text>
+    </g>
+
+  </g>
+  
+</svg>

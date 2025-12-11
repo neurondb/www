@@ -1,0 +1,92 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398541-1">
+      <rect x="0" y="0" width="700" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398541-0">
+      <rect x="0" y="0" width="100" height="200" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Multi-Layer Neural Network</text>
+  
+  <!-- Layers -->
+  <g transform="translate(50, 80)">
+
+    <!-- Input -->
+    <rect x="0" y="0" width="100" height="200" fill="#4f46e5" opacity="0.3" rx="4"/>
+    <g clip-path="url(#clip-1765356398541-0)">
+    <text x="50" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Input</text>
+    <text x="200" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Hidden 1</text>
+    <text x="350" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Hidden 2</text>
+    <text x="500" y="20" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Output</text>
+    </g>
+
+    <circle cx="50" cy="60" r="6" fill="#10b981"/>
+    <circle cx="50" cy="90" r="6" fill="#10b981"/>
+    <circle cx="50" cy="120" r="6" fill="#10b981"/>
+    
+    <!-- Hidden 1 -->
+    <rect x="150" y="0" width="100" height="200" fill="#8b5cf6" opacity="0.3" rx="4"/>
+    
+    <circle cx="200" cy="50" r="6" fill="#22d3ee"/>
+    <circle cx="200" cy="80" r="6" fill="#22d3ee"/>
+    <circle cx="200" cy="110" r="6" fill="#22d3ee"/>
+    <circle cx="200" cy="140" r="6" fill="#22d3ee"/>
+    
+    <!-- Hidden 2 -->
+    <rect x="300" y="0" width="100" height="200" fill="#ec4899" opacity="0.3" rx="4"/>
+    
+    <circle cx="350" cy="70" r="6" fill="#f59e0b"/>
+    <circle cx="350" cy="100" r="6" fill="#f59e0b"/>
+    <circle cx="350" cy="130" r="6" fill="#f59e0b"/>
+    
+    <!-- Output -->
+    <rect x="450" y="0" width="100" height="200" fill="#10b981" opacity="0.3" rx="4"/>
+    
+    <circle cx="500" cy="90" r="6" fill="#facc15"/>
+    <circle cx="500" cy="120" r="6" fill="#facc15"/>
+  
+  </g>
+  
+  <!-- Connections (simplified) -->
+  <g opacity="0.2">
+    <line x1="100" y1="60" x2="150" y2="50" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="100" y1="90" x2="150" y2="80" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="100" y1="120" x2="150" y2="110" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="250" y1="50" x2="300" y2="70" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="250" y1="80" x2="300" y2="100" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="250" y1="110" x2="300" y2="130" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="400" y1="100" x2="450" y2="90" stroke="#06b6d4" stroke-width="1"/>
+    <line x1="400" y1="100" x2="450" y2="120" stroke="#06b6d4" stroke-width="1"/>
+  </g>
+  
+  <!-- Forward Propagation -->
+  <g transform="translate(50, 300)">
+
+    <rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398541-1)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Forward Propagation</text>
+    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Layer 1 (Input → Hidden 1)</text>
+    <text x="120" y="95" font-family="monospace" font-size="11" fill="#cbd5e1">z₁ = W₁x + b₁</text>
+    <text x="120" y="115" font-family="monospace" font-size="11" fill="#cbd5e1">a₁ = f(z₁)</text>
+    <text x="100" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Layer 2 (Hidden 1 → Hidden 2)</text>
+    <text x="120" y="175" font-family="monospace" font-size="11" fill="#cbd5e1">z₂ = W₂a₁ + b₂</text>
+    <text x="120" y="195" font-family="monospace" font-size="11" fill="#cbd5e1">a₂ = f(z₂)</text>
+    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Layer 3 (Hidden 2 → Output)</text>
+    <text x="420" y="95" font-family="monospace" font-size="11" fill="#cbd5e1">z₃ = W₃a₂ + b₃</text>
+    <text x="420" y="115" font-family="monospace" font-size="11" fill="#cbd5e1">y = f(z₃)</text>
+    <text x="400" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Benefits</text>
+    <text x="420" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Learns non-linear patterns</text>
+    <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Hierarchical feature learning</text>
+    </g>
+
+  </g>
+  
+</svg>

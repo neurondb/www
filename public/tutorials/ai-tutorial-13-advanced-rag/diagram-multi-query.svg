@@ -1,0 +1,91 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+    </marker>
+                  <clipPath id="clip-1765356398549-3">
+      <rect x="0" y="0" width="700" height="300" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398549-2">
+      <rect x="0" y="0" width="200" height="80" rx="8"/>
+    </clipPath>
+    <clipPath id="clip-1765356398549-1">
+      <rect x="0" y="0" width="200" height="80" rx="8"/>
+    </clipPath>
+    <clipPath id="clip-1765356398549-0">
+      <rect x="0" y="0" width="200" height="80" rx="8"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Multi-Query Retrieval</text>
+  
+  <!-- Original Query -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="200" height="80" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398549-0)">
+    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Original Query</text>
+    <text x="100" y="55" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">"machine learning"</text>
+    </g>
+
+  </g>
+  
+  <!-- Query Generation -->
+  <g transform="translate(300, 80)">
+
+    <rect x="0" y="0" width="200" height="80" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398549-1)">
+    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Generate</text>
+    <text x="100" y="55" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Multiple queries</text>
+    </g>
+
+  </g>
+  
+  <!-- Multiple Queries -->
+  <g transform="translate(550, 80)">
+
+    <rect x="0" y="0" width="200" height="80" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
+    <g clip-path="url(#clip-1765356398549-2)">
+    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Queries</text>
+    <text x="100" y="55" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Q1, Q2, Q3</text>
+    </g>
+
+  </g>
+  
+  <!-- Arrows -->
+  <path d="M 150.0 120.0 L 400.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 150.0 120.0 L 400.0 120.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+  <path d="M 400.0 120.0 L 650.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 400.0 120.0 L 650.0 120.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
+  
+  <!-- Process -->
+  <g transform="translate(50, 180)">
+
+    <rect x="0" y="0" width="700" height="300" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398549-3)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Multi-Query Process</text>
+    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">1. Query Generation</text>
+    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">LLM generates multiple queries</text>
+    <text x="120" y="115" font-family="monospace" font-size="10" fill="#cbd5e1">"ML", "neural networks", "AI algorithms"</text>
+    <text x="120" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Different perspectives</text>
+    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">2. Parallel Retrieval</text>
+    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Retrieve for each query</text>
+    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Independent searches</text>
+    <text x="420" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Diverse results</text>
+    <text x="100" y="170" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">3. Result Fusion</text>
+    <text x="120" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Combine results from all queries</text>
+    <text x="120" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Deduplicate documents</text>
+    <text x="120" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Re-rank by relevance</text>
+    <text x="400" y="170" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">4. Benefits</text>
+    <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Broader coverage</text>
+    <text x="420" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Handles ambiguity</text>
+    <text x="420" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Better recall</text>
+    </g>
+
+  </g>
+  
+</svg>

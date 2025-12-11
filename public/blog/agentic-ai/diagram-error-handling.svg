@@ -1,0 +1,66 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1b4e"/>
+      <stop offset="1" stop-color="#001635"/>
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="5" markerHeight="5" refX="4" refY="3" orient="auto">
+      <polygon points="0 0, 5 2.5, 0 5" fill="#5fc4ff" opacity="0.8"/>
+    </marker>
+  </defs>
+  
+    <text x="194.0" y="18.5" font-family="Arial, sans-serif" font-size="6" font-weight="normal" fill="#ffd700" text-anchor="middle">Error Handling</text>
+  
+  <g>
+    <rect x="20.0" y="45.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="60.0" y="51.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Execution</text>
+    <text x="60.0" y="58.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Tool Run</text>
+  </g>
+  
+  <g>
+    <rect x="116.0" y="45.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="156.0" y="51.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Error</text>
+    <text x="156.0" y="58.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Detected</text>
+  </g>
+  
+  <g>
+    <rect x="212.0" y="45.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="252.0" y="51.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Classify</text>
+    <text x="252.0" y="58.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Error Type</text>
+  </g>
+  
+  <g>
+    <rect x="308.0" y="45.0" width="72" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="344.0" y="51.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Strategy</text>
+    <text x="344.0" y="58.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Select</text>
+  </g>
+  
+  <g>
+    <rect x="116.0" y="105.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="156.0" y="111.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Retry</text>
+    <text x="156.0" y="118.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Backoff</text>
+  </g>
+  
+  <g>
+    <rect x="212.0" y="105.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="252.0" y="111.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Fallback</text>
+    <text x="252.0" y="118.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Alternative</text>
+  </g>
+  
+  <g>
+    <rect x="164.0" y="165.0" width="80" height="20" rx="6.0" fill="none" stroke="#5fc4ff" stroke-width="0.5"/>
+    <text x="204.0" y="171.5" font-family="Arial, sans-serif" font-size="4" font-weight="normal" fill="#ffffff" text-anchor="middle">Recovered</text>
+    <text x="204.0" y="178.5" font-family="Arial, sans-serif" font-size="4" fill="#dce6ff" text-anchor="middle">Continue</text>
+  </g>
+  
+  <path d="M 252.0 125.0 L 252.0 129.0 L 204.0 129.0 L 204.0 165.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 156.0 125.0 L 156.0 129.0 L 204.0 129.0 L 204.0 165.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 344.0 65.0 L 344.0 69.0 L 252.0 69.0 L 252.0 105.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 252.0 65.0 L 252.0 69.0 L 252.0 105.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 156.0 65.0 L 156.0 69.0 L 156.0 105.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 60.0 65.0 L 60.0 69.0 L 156.0 69.0 L 156.0 105.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 196.0 115.0 L 212.0 115.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 292.0 55.0 L 308.0 55.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 196.0 55.0 L 212.0 55.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <path d="M 100.0 55.0 L 116.0 55.0" stroke="#5fc4ff" stroke-width="0.5" stroke-dasharray="1.5,1.5" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+</svg>

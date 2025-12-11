@@ -1,0 +1,69 @@
+<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    </linearGradient>
+                  <clipPath id="clip-1765356398551-1">
+      <rect x="0" y="0" width="700" height="180" rx="4"/>
+    </clipPath>
+    <clipPath id="clip-1765356398551-0">
+      <rect x="0" y="0" width="700" height="200" rx="4"/>
+    </clipPath>
+  </defs>
+  
+  <rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Hyperparameter Tuning</text>
+  
+  <!-- Hyperparameters -->
+  <g transform="translate(50, 80)">
+
+    <rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398551-0)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Key Hyperparameters</text>
+    <text x="190" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Learning Rate</text>
+    <text x="70" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Controls step size</text>
+    <text x="70" y="120" font-family="monospace" font-size="10" fill="#cbd5e1">Typical: 1e-5 to 1e-3</text>
+    <text x="70" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Too high: overshoots</text>
+    <text x="70" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Too low: slow convergence</text>
+    <text x="510" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Batch Size</text>
+    <text x="390" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Samples per update</text>
+    <text x="390" y="120" font-family="monospace" font-size="10" fill="#cbd5e1">Typical: 8, 16, 32, 64</text>
+    <text x="390" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Larger: more stable</text>
+    <text x="390" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Smaller: more updates</text>
+    </g>
+
+    <rect x="50" y="50" width="280" height="130" fill="#4f46e5" opacity="0.2" rx="4" stroke="#6366f1" stroke-width="1"/>
+
+    <rect x="370" y="50" width="280" height="130" fill="#10b981" opacity="0.2" rx="4" stroke="#34d399" stroke-width="1"/>
+
+  </g>
+  
+  <!-- Methods -->
+  <g transform="translate(50, 300)">
+
+    <rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    <g clip-path="url(#clip-1765356398551-1)">
+    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Tuning Methods</text>
+    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Grid Search</text>
+    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Exhaustive search</text>
+    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">All combinations</text>
+    <text x="120" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Computationally expensive</text>
+    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Random Search</text>
+    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Random sampling</text>
+    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">More efficient</text>
+    <text x="420" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Better coverage</text>
+    <text x="100" y="170" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Bayesian Optimization</text>
+    <text x="120" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Uses prior results</text>
+    <text x="120" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Most efficient</text>
+    <text x="120" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Best for expensive evaluations</text>
+    <text x="400" y="170" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Other Parameters</text>
+    <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Epochs, weight decay</text>
+    <text x="420" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Warmup steps</text>
+    <text x="420" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Dropout rate</text>
+    </g>
+
+  </g>
+  
+</svg>
