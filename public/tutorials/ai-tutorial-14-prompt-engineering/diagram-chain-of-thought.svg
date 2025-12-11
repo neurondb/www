@@ -53,9 +53,7 @@
 
     <rect x="50" y="170" width="600" height="30" fill="#10b981" opacity="0.3" rx="4"/>
 
-    <path d="M 350 200 L 350 250" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
-  
-  </g>
+    <path d="M 350 200 L 350 250" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/></g>
   
   <!-- Answer -->
   <g transform="translate(50, 400)">

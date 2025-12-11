@@ -49,11 +49,7 @@
 
     <rect x="260" y="40" width="60" height="60" fill="#10b981" opacity="0.3" rx="4"/>
 
-    <path d="M 50.0 70.0 L 130.0 70.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 50.0 70.0 L 130.0 70.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-    <path d="M 130.0 100.0 L 130.0 104.0 L 210.0 104.0 L 210.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 130.0 100.0 L 130.0 104.0 L 210.0 104.0 L 210.0 80.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-    <path d="M 210.0 70.0 L 290.0 70.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 210.0 70.0 L 290.0 70.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  
-  </g>
+    <path d="M 50.0 70.0 L 130.0 70.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 130.0 100.0 L 130.0 104.0 L 210.0 104.0 L 210.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 210.0 70.0 L 290.0 70.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/></g>
   
   <!-- Backward Pass -->
   <g transform="translate(430, 80)">
@@ -79,11 +75,7 @@
 
     <rect x="260" y="40" width="60" height="60" fill="#ef4444" opacity="0.3" rx="4"/>
 
-    <path d="M 290.0 100.0 L 290.0 104.0 L 210.0 104.0 L 210.0 80.0" fill="none" stroke="#ef4444" stroke-width="0.5" marker-end="M 290.0 100.0 L 290.0 104.0 L 210.0 104.0 L 210.0 80.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-    <path d="M 210.0 70.0 L 130.0 70.0" fill="none" stroke="#ef4444" stroke-width="0.5" marker-end="M 210.0 70.0 L 130.0 70.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-    <path d="M 130.0 70.0 L 50.0 70.0" fill="none" stroke="#ef4444" stroke-width="0.5" marker-end="M 130.0 70.0 L 50.0 70.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  
-  </g>
+    <path d="M 290.0 100.0 L 290.0 104.0 L 210.0 104.0 L 210.0 80.0" fill="none" stroke="#ef4444" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 210.0 70.0 L 130.0 70.0" fill="none" stroke="#ef4444" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 130.0 70.0 L 50.0 70.0" fill="none" stroke="#ef4444" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/></g>
   
   <!-- Chain Rule -->
   <g transform="translate(50, 230)">

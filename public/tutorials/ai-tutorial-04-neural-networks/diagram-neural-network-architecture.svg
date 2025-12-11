@@ -108,7 +108,6 @@
   </g>
   
   <!-- Flow -->
-  <path d="M 60.0 300.0 L 60.0 304.0 L 620.0 304.0 L 620.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 60.0 300.0 L 60.0 304.0 L 620.0 304.0 L 620.0 80.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <text x="400" y="395" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Forward Propagation</text>
+  <path d="M 60.0 300.0 L 60.0 304.0 L 620.0 304.0 L 620.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><text x="400" y="395" font-family="system-ui, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">Forward Propagation</text>
   
 </svg>

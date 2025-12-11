@@ -91,10 +91,7 @@
   </g>
   
   <!-- Arrows -->
-  <path d="M 125.0 170.0 L 125.0 174.0 L 320.0 174.0 L 320.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 125.0 170.0 L 125.0 174.0 L 320.0 174.0 L 320.0 80.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <path d="M 350.0 125.0 L 625.0 175.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 350.0 125.0 L 625.0 175.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  
-  <!-- Benefits -->
+  <path d="M 125.0 200.0 L 125.0 204.0 L 350.0 204.0 L 350.0 150.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 350.0 150.0 L 350.0 154.0 L 625.0 154.0 L 625.0 250.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><!-- Benefits -->
   <g transform="translate(50, 260)">
 
     <rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>

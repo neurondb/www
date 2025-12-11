@@ -80,7 +80,7 @@
     <g clip-path="url(#clip-1765356398546-2)">
     <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Accuracy vs Speed Tradeoff</text>
     <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Use Exact Search When:</text>
-    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Small dataset (< 100K vectors)</text>
+    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Small dataset (&lt; 100K vectors)</text>
     <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Need 100% accuracy</text>
     <text x="120" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Latency not critical</text>
     <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f59e0b">Use Approximate Search When:</text>

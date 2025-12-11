@@ -1,4 +1,4 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="510" viewBox="0 0 800 510">"http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
@@ -17,14 +17,14 @@
   
   <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Prompt Design Components</text>
+  <text x="400" y="35" family="system-ui, sans-serif" size="18">"bold" fill="#facc15" text-anchor="middle">Prompt Design Components</text>
   
   <!-- Good Prompt -->
   <g transform="translate(50, 80)">
 
     <rect x="0" y="0" width="320" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
     <g clip-path="url(#clip-1765356398550-0)">
-    <text x="160" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Good Prompt</text>
+    <text x="160" y="25" family="system-ui, sans-serif" size="14">"bold" fill="#10b981" text-anchor="middle">Good Prompt</text>
     <text x="30" y="60" font-family="monospace" font-size="10" fill="#cbd5e1">Task: Classify sentiment as positive, negative, or neutral</text>
     <text x="30" y="100" font-family="monospace" font-size="10" fill="#cbd5e1">Context: Sentiment analysis determines emotional tone</text>
     <text x="30" y="140" font-family="monospace" font-size="10" fill="#cbd5e1">Example: "I love it" → positive</text>
@@ -38,7 +38,7 @@
 
     <rect x="20" y="120" width="280" height="30" fill="#10b981" opacity="0.2" rx="4"/>
 
-    <rect x="20" y="160" width="280" y="30" fill="#10b981" opacity="0.2" rx="4"/>
+    <rect x="20" y="160" width="280" height="30" fill="#10b981" opacity="0.2" rx="4"/>
 
   </g>
   
@@ -47,7 +47,7 @@
 
     <rect x="0" y="0" width="320" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
     <g clip-path="url(#clip-1765356398550-1)">
-    <text x="160" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">Bad Prompt</text>
+    <text x="160" y="25" family="system-ui, sans-serif" size="14">"bold" fill="#ef4444" text-anchor="middle">Bad Prompt</text>
     <text x="30" y="70" font-family="monospace" font-size="11" fill="#cbd5e1">What is the sentiment?</text>
     <text x="160" y="210" font-family="system-ui, sans-serif" font-size="10" fill="#ef4444" text-anchor="middle">Vague, no context, no examples</text>
     </g>
@@ -61,17 +61,17 @@
 
     <rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
     <g clip-path="url(#clip-1765356398550-2)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Prompt Design Principles</text>
-    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Be Specific</text>
+    <text x="350" y="30" family="system-ui, sans-serif" size="16">"bold" fill="#facc15" text-anchor="middle">Prompt Design Principles</text>
+    <text x="100" y="70" family="system-ui, sans-serif" size="13">"bold" fill="#10b981">Be Specific</text>
     <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Clearly define the task</text>
     <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Avoid ambiguity</text>
-    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Provide Context</text>
+    <text x="400" y="70" family="system-ui, sans-serif" size="13">"bold" fill="#10b981">Provide Context</text>
     <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Background information</text>
     <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Domain knowledge</text>
-    <text x="100" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Use Examples</text>
+    <text x="100" y="150" family="system-ui, sans-serif" size="13">"bold" fill="#10b981">Use Examples</text>
     <text x="120" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Demonstrate desired format</text>
     <text x="120" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Few-shot learning</text>
-    <text x="400" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Specify Format</text>
+    <text x="400" y="150" family="system-ui, sans-serif" size="13">"bold" fill="#10b981">Specify Format</text>
     <text x="420" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Output structure</text>
     <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Consistency</text>
     </g>

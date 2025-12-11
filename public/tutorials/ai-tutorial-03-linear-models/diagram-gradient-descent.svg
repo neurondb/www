@@ -35,9 +35,7 @@
     <circle cx="350" cy="175" r="8" fill="#10b981"/>
 
     <!-- Gradient descent path -->
-    <path d="M 100,300 Q 150,250 200,200 T 300,150 Q 320,140 350,175" stroke="#06b6d4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-    
-    <!-- Steps -->
+    <path d="M 100,300 Q 150,250 200,200 T 300,150 Q 320,140 350,175" stroke="#06b6d4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/><!-- Steps -->
     <circle cx="100" cy="300" r="5" fill="#facc15"/>
 
     <circle cx="200" cy="200" r="5" fill="#facc15"/>

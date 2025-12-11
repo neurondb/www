@@ -101,13 +101,7 @@
   </g>
   
   <!-- Arrows -->
-  <path d="M 125.0 120.0 L 325.0 120.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/>
-  <path d="M 325.0 120.0 L 525.0 120.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/>
-  <path d="M 525.0 120.0 L 675.0 120.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/>
-  <path d="M 675.0 160.0 L 675.0 164.0 L 400.0 164.0 L 400.0 200.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/>
-  <path d="M 400.0 280.0 L 400.0 284.0 L 400.0 320.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/>
-  
-  <!-- Benefits -->
+  <path d="M 125.0 120.0 L 325.0 120.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/><path d="M 325.0 120.0 L 525.0 120.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/><path d="M 525.0 120.0 L 675.0 120.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/><path d="M 675.0 160.0 L 675.0 164.0 L 400.0 164.0 L 400.0 200.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/><path d="M 400.0 280.0 L 400.0 284.0 L 400.0 320.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)"/><!-- Benefits -->
   <g transform="translate(50, 420)">
 
     <rect x="0" y="0" width="700" height="70" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>

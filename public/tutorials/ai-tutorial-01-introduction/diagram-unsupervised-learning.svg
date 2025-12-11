@@ -42,9 +42,7 @@
   </g>
   
   <!-- Arrow from Input to Learning -->
-  <path d="M 400 200 L 300 180" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowUnsupervised)"/>
-  
-  <!-- Clustering Result -->
+  <path d="M 400 200 L 300 180" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowUnsupervised)"/><!-- Clustering Result -->
   <g transform="translate(200, 280)">
     <text x="200" y="30" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#10b981" text-anchor="middle">Clustering Result</text>
     
@@ -77,7 +75,5 @@
   </g>
   
   <!-- Arrow from Learning to Clustering -->
-  <path d="M 400 260 L 400 280" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowUnsupervised)"/>
-  
-</svg>
+  <path d="M 400 260 L 400 280" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowUnsupervised)"/></svg>
 

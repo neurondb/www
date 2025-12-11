@@ -35,9 +35,7 @@
     </g>
 
     <!-- Zigzag path -->
-    <path d="M 20,150 L 60,120 L 100,140 L 140,110 L 180,130" stroke="#06b6d4" stroke-width="2" fill="none"/>
-
-  </g>
+    <path d="M 20,150 L 60,120 L 100,140 L 140,110 L 180,130" stroke="#06b6d4" stroke-width="2" fill="none"/></g>
   
   <!-- Momentum -->
   <g transform="translate(290, 80)">
@@ -53,9 +51,7 @@
     </g>
 
     <!-- Smoother path -->
-    <path d="M 20,150 Q 60,130 100,120 Q 140,110 180,100" stroke="#10b981" stroke-width="2" fill="none"/>
-
-  </g>
+    <path d="M 20,150 Q 60,130 100,120 Q 140,110 180,100" stroke="#10b981" stroke-width="2" fill="none"/></g>
   
   <!-- Adam -->
   <g transform="translate(530, 80)">
@@ -71,9 +67,7 @@
     </g>
 
     <!-- Smooth adaptive path -->
-    <path d="M 20,150 Q 50,140 80,130 Q 110,120 140,110 Q 170,100 200,90" stroke="#f59e0b" stroke-width="2" fill="none"/>
-
-  </g>
+    <path d="M 20,150 Q 50,140 80,130 Q 110,120 140,110 Q 170,100 200,90" stroke="#f59e0b" stroke-width="2" fill="none"/></g>
   
   <!-- Comparison -->
   <g transform="translate(50, 280)">

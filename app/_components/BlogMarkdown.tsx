@@ -509,17 +509,50 @@ export function BlogMarkdown({ children }: { children: string }) {
             const src = (props as any).src as string | undefined
             const alt = ((props as any).alt as string | undefined) || 'Blog image'
             if (!src) return null
+            
+            // For SVGs, use regular img tag for better compatibility
+            const isSVG = src.toLowerCase().endsWith('.svg')
+            
+            // Add cache busting for SVGs in development
+            const finalSrc = isSVG && process.env.NODE_ENV === 'development' 
+              ? `${src}?t=${Date.now()}` 
+              : src
+            
             // Return as a block-level element to prevent nesting in paragraphs
             return (
-              <div style={{ borderRadius: 12, marginBottom: 40, maxWidth: '100%', width: '100%', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', overflow: 'hidden', display: 'block' }}>
-                <Image
-                  src={src}
-                  alt={alt}
-                  width={1280}
-                  height={750}
-                  style={{ width: '100%', height: 'auto' }}
-                  unoptimized
-                />
+              <div style={{ borderRadius: 12, marginBottom: 40, maxWidth: '100%', width: '100%', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', overflow: 'visible', display: 'block', textAlign: 'center', backgroundColor: 'transparent', minHeight: '100px' }}>
+                {isSVG ? (
+                  <img
+                    key={finalSrc}
+                    src={finalSrc}
+                    alt={alt}
+                    style={{ width: '100%', height: 'auto', maxWidth: '800px', display: 'block', margin: '0 auto', visibility: 'visible' }}
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      console.error('❌ Failed to load SVG:', src);
+                      console.error('Final src used:', finalSrc);
+                      const target = e.target as HTMLImageElement;
+                      target.style.border = '2px solid red';
+                      target.style.backgroundColor = '#ff000020';
+                      target.style.minHeight = '200px';
+                    }}
+                    onLoad={(e) => {
+                      console.log('✅ SVG loaded successfully:', src);
+                      const target = e.target as HTMLImageElement;
+                      console.log('📐 Image dimensions:', target.naturalWidth, 'x', target.naturalHeight);
+                    }}
+                  />
+                ) : (
+                  <Image
+                    src={src}
+                    alt={alt}
+                    width={1280}
+                    height={750}
+                    style={{ width: '100%', height: 'auto' }}
+                    unoptimized
+                  />
+                )}
               </div>
             )
           },

@@ -69,10 +69,7 @@
   </g>
   
   <!-- Arrows -->
-  <path d="M 150.0 200.0 L 150.0 204.0 L 500.0 204.0 L 500.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 150.0 200.0 L 150.0 204.0 L 500.0 204.0 L 500.0 80.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <path d="M 500.0 180.0 L 700.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 500.0 180.0 L 700.0 180.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  
-  <!-- Benefits -->
+  <path d="M 150.0 200.0 L 150.0 204.0 L 500.0 204.0 L 500.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 500.0 180.0 L 700.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><!-- Benefits -->
   <g transform="translate(50, 300)">
 
     <rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>

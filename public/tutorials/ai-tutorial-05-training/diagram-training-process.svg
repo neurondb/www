@@ -91,14 +91,7 @@
   </g>
   
   <!-- Arrows -->
-  <path d="M 125.0 130.0 L 325.0 130.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 125.0 130.0 L 325.0 130.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <path d="M 325.0 130.0 L 525.0 130.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 325.0 130.0 L 525.0 130.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <path d="M 525.0 130.0 L 725.0 130.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 525.0 130.0 L 725.0 130.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <path d="M 725.0 180.0 L 725.0 184.0 L 400.0 184.0 L 400.0 220.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 725.0 180.0 L 725.0 184.0 L 400.0 184.0 L 400.0 220.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <path d="M 400.0 260.0 L 400.0 260.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 400.0 260.0 L 400.0 260.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <path d="M 125.0 180.0 L 125.0 184.0 L 400.0 184.0 L 400.0 220.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 125.0 180.0 L 125.0 184.0 L 400.0 184.0 L 400.0 220.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  
-  <!-- Training Loop Details -->
+  <path d="M 125.0 130.0 L 325.0 130.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 325.0 130.0 L 525.0 130.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 525.0 130.0 L 725.0 130.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 725.0 180.0 L 725.0 184.0 L 400.0 184.0 L 400.0 220.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 400.0 260.0 L 400.0 260.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 125.0 180.0 L 125.0 184.0 L 400.0 184.0 L 400.0 220.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><!-- Training Loop Details -->
   <g transform="translate(50, 330)">
 
     <rect x="0" y="0" width="700" height="150" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>

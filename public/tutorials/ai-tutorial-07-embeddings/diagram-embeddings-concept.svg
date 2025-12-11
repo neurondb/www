@@ -47,8 +47,7 @@
     </g>
     
     <!-- Relationship arrow -->
-    <path d="M 200,50 L 250,150" stroke="#facc15" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-    <text x="225" y="95" font-family="system-ui, sans-serif" font-size="10" fill="#facc15">Similar</text>
+    <path d="M 200,50 L 250,150" stroke="#facc15" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/><text x="225" y="95" font-family="system-ui, sans-serif" font-size="10" fill="#facc15">Similar</text>
     
     <!-- Vector difference -->
     <text x="350" y="280" font-family="monospace" font-size="12" fill="#facc15" text-anchor="middle">King - Man + Woman ≈ Queen</text>

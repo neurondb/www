@@ -32,9 +32,7 @@
     </g>
 
     <!-- Diamond shape (L1) -->
-    <path d="M 160,100 L 200,140 L 160,180 L 120,140 Z" stroke="#4f46e5" stroke-width="2" fill="#4f46e5" opacity="0.2"/>
-
-  </g>
+    <path d="M 160,100 L 200,140 L 160,180 L 120,140 Z" stroke="#4f46e5" stroke-width="2" fill="#4f46e5" opacity="0.2"/></g>
   
   <!-- L2 -->
   <g transform="translate(430, 80)">

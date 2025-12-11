@@ -72,12 +72,7 @@
   </g>
   
   <!-- Arrows -->
-  <path d="M 125.0 120.0 L 325.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 125.0 120.0 L 325.0 120.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <path d="M 325.0 120.0 L 525.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 325.0 120.0 L 525.0 120.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <path d="M 525.0 120.0 L 700.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 525.0 120.0 L 700.0 120.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <path d="M 525.0 120.0 L 125.0 120.0" fill="none" stroke="#facc15" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="M 525.0 120.0 L 125.0 120.0"/ opacity="0.8">
-  
-  <!-- Process -->
+  <path d="M 125.0 120.0 L 325.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 325.0 120.0 L 525.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 525.0 120.0 L 700.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 525.0 120.0 L 125.0 120.0" fill="none" stroke="#facc15" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)" opacity="0.8"/><!-- Process -->
   <g transform="translate(50, 180)">
 
     <rect x="0" y="0" width="700" height="300" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>

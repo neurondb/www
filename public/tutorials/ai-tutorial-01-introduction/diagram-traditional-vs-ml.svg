@@ -35,10 +35,7 @@
     <text x="260" y="105" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Result</text>
     
     <!-- Arrows - horizontal routes to avoid mixing -->
-    <path d="M 110.0 165.0 L 110.0 165.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)" opacity="0.8"/>
-    <path d="M 210.0 165.0 L 210.0 165.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)" opacity="0.8"/>
-    
-    <!-- Characteristics -->
+    <path d="M 110.0 165.0 L 110.0 165.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)" opacity="0.8"/><path d="M 210.0 165.0 L 210.0 165.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)" opacity="0.8"/><!-- Characteristics -->
     <text x="10" y="150" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#94a3b8">Characteristics:</text>
     <text x="20" y="172" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Explicit rules</text>
     <text x="20" y="190" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Programmer writes logic</text>
@@ -75,10 +72,7 @@
     <text x="235" y="175" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">New Data</text>
     
     <!-- Arrows - horizontal/vertical routes to avoid mixing -->
-    <path d="M 110.0 165.0 L 210.0 165.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)" opacity="0.8"/>
-    <path d="M 210.0 165.0 L 210.0 165.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)" opacity="0.8"/>
-    
-    <!-- Characteristics -->
+    <path d="M 110.0 165.0 L 210.0 165.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)" opacity="0.8"/><path d="M 210.0 165.0 L 210.0 165.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)" opacity="0.8"/><!-- Characteristics -->
     <text x="10" y="200" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#94a3b8">Characteristics:</text>
     <text x="20" y="222" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Learns from examples</text>
     <text x="20" y="240" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Discovers patterns</text>

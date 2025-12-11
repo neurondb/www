@@ -95,30 +95,14 @@
   <!-- All arrows start from center-bottom of source box and end at center-top of target box -->
   
   <!-- 1 to 2: Box 1 center-bottom (150,200) to Box 2 center-top (400,90) -->
-  <path d="M 150.0 200.0 L 150.0 204.0 L 400.0 204.0 L 400.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/>
-  
-  <!-- 2 to 3: Box 2 center-bottom (400,200) to Box 3 center-top (650,90) -->
-  <path d="M 400.0 200.0 L 400.0 204.0 L 650.0 204.0 L 650.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/>
-  
-  <!-- 3 to 4: Box 3 center-bottom (650,200) to Box 4 center-top (900,90) -->
-  <path d="M 650.0 200.0 L 650.0 204.0 L 900.0 204.0 L 900.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/>
-  
-  <!-- 4 to 5: Box 4 center-bottom (900,200) to Box 5 center-top (1150,90) -->
-  <path d="M 900.0 200.0 L 900.0 204.0 L 1150.0 204.0 L 1150.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/>
-  
-  <!-- 5 to 6: Different row - Box 5 center-bottom (1150,200) to Box 6 center-top (900,270) -->
-  <path d="M 1150.0 200.0 L 1150.0 204.0 L 900.0 204.0 L 900.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/>
-  
-  <!-- 6 to 7: Box 6 center-bottom (900,380) to Box 7 center-top (650,270) -->
-  <path d="M 900.0 380.0 L 900.0 384.0 L 650.0 384.0 L 650.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/>
-  
-  <!-- 7 to 8: Box 7 center-bottom (650,380) to Box 8 center-top (400,270) -->
-  <path d="M 650.0 380.0 L 650.0 384.0 L 400.0 384.0 L 400.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/>
-  
-  <!-- 8 to 1: Different row - Box 8 center-bottom (400,380) to Box 1 center-top (150,90) -->
-  <path d="M 400.0 380.0 L 400.0 384.0 L 150.0 384.0 L 150.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/>
-  
-  <!-- Iterative Process Box -->
+  <path d="M 150.0 200.0 L 150.0 204.0 L 400.0 204.0 L 400.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- 2 to 3: Box 2 center-bottom (400,200) to Box 3 center-top (650,90) -->
+  <path d="M 400.0 200.0 L 400.0 204.0 L 650.0 204.0 L 650.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- 3 to 4: Box 3 center-bottom (650,200) to Box 4 center-top (900,90) -->
+  <path d="M 650.0 200.0 L 650.0 204.0 L 900.0 204.0 L 900.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- 4 to 5: Box 4 center-bottom (900,200) to Box 5 center-top (1150,90) -->
+  <path d="M 900.0 200.0 L 900.0 204.0 L 1150.0 204.0 L 1150.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- 5 to 6: Different row - Box 5 center-bottom (1150,200) to Box 6 center-top (900,270) -->
+  <path d="M 1150.0 200.0 L 1150.0 204.0 L 900.0 204.0 L 900.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- 6 to 7: Box 6 center-bottom (900,380) to Box 7 center-top (650,270) -->
+  <path d="M 900.0 380.0 L 900.0 384.0 L 650.0 384.0 L 650.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- 7 to 8: Box 7 center-bottom (650,380) to Box 8 center-top (400,270) -->
+  <path d="M 650.0 380.0 L 650.0 384.0 L 400.0 384.0 L 400.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- 8 to 1: Different row - Box 8 center-bottom (400,380) to Box 1 center-top (150,90) -->
+  <path d="M 400.0 380.0 L 400.0 384.0 L 150.0 384.0 L 150.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- Iterative Process Box -->
   <g transform="translate(50, 450)">
     <rect x="0" y="0" width="1100" height="155" fill="#1e293b" rx="8" stroke="#475569" stroke-width="2"/>
     <text x="550" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Iterative Process</text>

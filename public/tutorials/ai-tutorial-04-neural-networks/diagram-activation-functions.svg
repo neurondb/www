@@ -34,8 +34,7 @@
     </g>
 
     <!-- S-curve -->
-    <path d="M 20,150 Q 60,120 110,100 T 200,50" stroke="#06b6d4" stroke-width="2" fill="none"/>
-    <line x1="20" y1="150" x2="200" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+    <path d="M 20,150 Q 60,120 110,100 T 200,50" stroke="#06b6d4" stroke-width="2" fill="none"/><line x1="20" y1="150" x2="200" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
     <line x1="110" y1="50" x2="110" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
 
   </g>
@@ -52,8 +51,7 @@
     </g>
 
     <!-- Centered S-curve -->
-    <path d="M 20,50 Q 60,80 110,100 T 200,150" stroke="#10b981" stroke-width="2" fill="none"/>
-    <line x1="20" y1="100" x2="200" y2="100" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+    <path d="M 20,50 Q 60,80 110,100 T 200,150" stroke="#10b981" stroke-width="2" fill="none"/><line x1="20" y1="100" x2="200" y2="100" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
     <line x1="110" y1="50" x2="110" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
 
   </g>

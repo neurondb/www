@@ -23,15 +23,15 @@
   
   <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">A/B Testing for Models</text>
+  <text x="400" y="35" font-font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">A/B Testing for Models</text>
   
   <!-- Traffic Split -->
   <g transform="translate(50, 80)">
 
     <rect x="0" y="0" width="200" height="80" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
     <g clip-path="url(#clip-1765356398552-0)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Traffic</text>
-    <text x="100" y="55" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">100%</text>
+    <text x="100" y="30" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Traffic</text>
+    <text x="100" y="55" font-font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">100%</text>
     </g>
 
   </g>
@@ -41,8 +41,8 @@
 
     <rect x="0" y="0" width="200" height="80" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
     <g clip-path="url(#clip-1765356398552-1)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Split</text>
-    <text x="100" y="55" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">50/50</text>
+    <text x="100" y="30" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Split</text>
+    <text x="100" y="55" font-font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">50/50</text>
     </g>
 
   </g>
@@ -52,38 +52,35 @@
 
     <rect x="0" y="0" width="200" height="80" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
     <g clip-path="url(#clip-1765356398552-2)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Models</text>
-    <text x="100" y="55" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">A & B</text>
+    <text x="100" y="30" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Models</text>
+    <text x="100" y="55" font-font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">A &amp; B</text>
     </g>
 
   </g>
   
   <!-- Arrows -->
-  <path d="M 190.0 160.0 L 190.0 164.0 L 400.0 164.0 L 400.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 190.0 160.0 L 190.0 164.0 L 400.0 164.0 L 400.0 80.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <path d="M 510.0 105.0 L 510.0 105.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 510.0 105.0 L 510.0 105.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  
-  <!-- Process -->
+  <path d="M 190.0 160.0 L 190.0 164.0 L 400.0 164.0 L 400.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 510.0 105.0 L 510.0 105.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><!-- Process -->
   <g transform="translate(50, 180)">
 
     <rect x="0" y="0" width="700" height="300" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
     <g clip-path="url(#clip-1765356398552-3)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">A/B Testing Process</text>
-    <text x="190" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Variant A (Control)</text>
-    <text x="70" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Current production model</text>
-    <text x="70" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">50% of traffic</text>
-    <text x="70" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Baseline performance</text>
-    <text x="510" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Variant B (Treatment)</text>
-    <text x="390" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">New model version</text>
-    <text x="390" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">50% of traffic</text>
-    <text x="390" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Test performance</text>
-    <text x="100" y="190" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Metrics Collection</text>
-    <text x="120" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Track performance metrics</text>
-    <text x="120" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Accuracy, latency, business metrics</text>
-    <text x="120" y="255" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Statistical significance</text>
-    <text x="400" y="190" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Decision</text>
-    <text x="420" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">If B performs better: deploy</text>
-    <text x="420" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">If A performs better: keep current</text>
-    <text x="420" y="255" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Rollback if issues detected</text>
+    <text x="350" y="30" font-font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">A/B Testing Process</text>
+    <text x="190" y="75" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Variant A (Control)</text>
+    <text x="70" y="100" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Current production model</text>
+    <text x="70" y="120" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">50% of traffic</text>
+    <text x="70" y="140" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Baseline performance</text>
+    <text x="510" y="75" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Variant B (Treatment)</text>
+    <text x="390" y="100" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">New model version</text>
+    <text x="390" y="120" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">50% of traffic</text>
+    <text x="390" y="140" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Test performance</text>
+    <text x="100" y="190" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Metrics Collection</text>
+    <text x="120" y="215" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Track performance metrics</text>
+    <text x="120" y="235" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Accuracy, latency, business metrics</text>
+    <text x="120" y="255" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Statistical significance</text>
+    <text x="400" y="190" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Decision</text>
+    <text x="420" y="215" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">If B performs better: deploy</text>
+    <text x="420" y="235" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">If A performs better: keep current</text>
+    <text x="420" y="255" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Rollback if issues detected</text>
     </g>
 
     <rect x="50" y="50" width="280" height="110" fill="#4f46e5" opacity="0.2" rx="4" stroke="#6366f1" stroke-width="1"/>

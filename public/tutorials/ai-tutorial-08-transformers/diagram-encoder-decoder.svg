@@ -76,8 +76,7 @@
   </g>
   
   <!-- Connection -->
-  <path d="M 150.0 240.0 L 150.0 244.0 L 600.0 244.0 L 600.0 80.0" fill="none" stroke="#facc15" stroke-width="0.5" marker-end="M 150.0 240.0 L 150.0 244.0 L 600.0 244.0 L 600.0 80.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <text x="400" y="220" font-family="system-ui, sans-serif" font-size="11" fill="#facc15" text-anchor="middle">Encoder output</text>
+  <path d="M 150.0 240.0 L 150.0 244.0 L 600.0 244.0 L 600.0 80.0" fill="none" stroke="#facc15" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><text x="400" y="220" font-family="system-ui, sans-serif" font-size="11" fill="#facc15" text-anchor="middle">Encoder output</text>
   <text x="400" y="240" font-family="system-ui, sans-serif" font-size="11" fill="#facc15" text-anchor="middle">to decoder</text>
   
   <!-- Use Cases -->

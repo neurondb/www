@@ -60,28 +60,22 @@
   
   <!-- Branches - routes connect to box edges, not inside -->
   <!-- Root bottom center (400, 130) to Left Level 2 top center (200, 180) -->
-  <path d="M 400.0 130.0 L 400.0 134.0 L 200.0 134.0 L 200.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" opacity="0.8"/>
-  <text x="300" y="135" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">Yes</text>
+  <path d="M 400.0 130.0 L 400.0 134.0 L 200.0 134.0 L 200.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" opacity="0.8"/><text x="300" y="135" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">Yes</text>
   
   <!-- Root bottom center (400, 130) to Right Level 2 top center (600, 180) -->
-  <path d="M 400.0 130.0 L 400.0 134.0 L 600.0 134.0 L 600.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" opacity="0.8"/>
-  <text x="500" y="135" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">No</text>
+  <path d="M 400.0 130.0 L 400.0 134.0 L 600.0 134.0 L 600.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" opacity="0.8"/><text x="500" y="135" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">No</text>
   
   <!-- Left Level 2 bottom center (200, 230) to Left Leaf 1 top center (90, 300) -->
-  <path d="M 200.0 230.0 L 200.0 234.0 L 90.0 234.0 L 90.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" opacity="0.8"/>
-  <text x="145" y="240" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">Yes</text>
+  <path d="M 200.0 230.0 L 200.0 234.0 L 90.0 234.0 L 90.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" opacity="0.8"/><text x="145" y="240" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">Yes</text>
   
   <!-- Left Level 2 bottom center (200, 230) to Left Leaf 2 top center (210, 300) -->
-  <path d="M 200.0 230.0 L 200.0 234.0 L 210.0 234.0 L 210.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" opacity="0.8"/>
-  <text x="205" y="240" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">No</text>
+  <path d="M 200.0 230.0 L 200.0 234.0 L 210.0 234.0 L 210.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" opacity="0.8"/><text x="205" y="240" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">No</text>
   
   <!-- Right Level 2 bottom center (600, 230) to Right Leaf 1 top center (490, 300) -->
-  <path d="M 600.0 230.0 L 600.0 234.0 L 490.0 234.0 L 490.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" opacity="0.8"/>
-  <text x="545" y="240" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">Yes</text>
+  <path d="M 600.0 230.0 L 600.0 234.0 L 490.0 234.0 L 490.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" opacity="0.8"/><text x="545" y="240" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">Yes</text>
   
   <!-- Right Level 2 bottom center (600, 230) to Right Leaf 2 top center (610, 300) -->
-  <path d="M 600.0 230.0 L 600.0 234.0 L 610.0 234.0 L 610.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" opacity="0.8"/>
-  <text x="605" y="240" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">No</text>
+  <path d="M 600.0 230.0 L 600.0 234.0 L 610.0 234.0 L 610.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" opacity="0.8"/><text x="605" y="240" font-family="system-ui, sans-serif" font-size="10" fill="#06b6d4">No</text>
   
 </svg>
 

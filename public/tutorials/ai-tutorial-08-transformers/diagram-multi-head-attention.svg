@@ -94,11 +94,7 @@
   </g>
   
   <!-- Arrows -->
-  <path d="M 240.0 65.0 L 240.0 65.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 240.0 65.0 L 240.0 65.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <path d="M 725.0 180.0 L 725.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 725.0 180.0 L 725.0 180.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  <path d="M 725.0 280.0 L 725.0 284.0 L 400.0 284.0 L 400.0 320.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="M 725.0 280.0 L 725.0 284.0 L 400.0 284.0 L 400.0 320.0"/ stroke-dasharray="1.5,1.5" opacity="0.8">
-  
-  <!-- Benefits -->
+  <path d="M 240.0 65.0 L 240.0 65.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 725.0 180.0 L 725.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 725.0 280.0 L 725.0 284.0 L 400.0 284.0 L 400.0 320.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><!-- Benefits -->
   <g transform="translate(50, 420)">
 
     <rect x="0" y="0" width="700" height="70" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>

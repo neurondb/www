@@ -67,9 +67,7 @@
     <text x="110" y="210" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Smooth reduction</text>
     </g>
 
-    <path d="M 20,100 Q 60,90 100,80 Q 140,70 200,50" stroke="#f59e0b" stroke-width="2" fill="none"/>
-
-  </g>
+    <path d="M 20,100 Q 60,90 100,80 Q 140,70 200,50" stroke="#f59e0b" stroke-width="2" fill="none"/></g>
   
   <!-- Comparison -->
   <g transform="translate(50, 280)">
