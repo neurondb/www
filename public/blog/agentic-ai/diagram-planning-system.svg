@@ -1,113 +1,114 @@
-<svg width="1000" height="700" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
-  <defs>
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <ns0:defs>
     
-    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3" />
-      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.2" />
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <polygon points="0 0, 8 4, 0 8" fill="#06b6d4" opacity="0.9"/>
-    </marker>
-  </defs>
+    <ns0:linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <ns0:stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3" />
+      <ns0:stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.2" />
+    </ns0:linearGradient>
+    <ns0:filter id="glow">
+      <ns0:feGaussianBlur stdDeviation="3" result="coloredBlur" />
+      <ns0:feMerge>
+        <ns0:feMergeNode in="coloredBlur" />
+        <ns0:feMergeNode in="SourceGraphic" />
+      </ns0:feMerge>
+    </ns0:filter>
+    <ns0:marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <ns0:polygon points="0 0, 8 4, 0 8" fill="#06b6d4" opacity="0.9" />
+    </ns0:marker>
+  </ns0:defs>
   
   
   
-  <!-- Title -->
-  <text x="500" y="40" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle">Planning System</text>
   
-  <!-- Top Row: Goal Input, Analyze, Generate, Validate -->
-  <g transform="translate(50, 80)">
-    <!-- Goal Input -->
-    <g>
-      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
-      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
-      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Goal Input</text>
-      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">User Query</text>
-      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
-    </g>
+  <ns0:text x="500" y="40" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle">Planning System</ns0:text>
+  
+  
+  <ns0:g transform="translate(50, 80)">
     
-    <!-- Analyze -->
-    <g transform="translate(240, 0)">
-      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
-      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
-      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Analyze</text>
-      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Break Down</text>
-      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
-    </g>
+    <ns0:g>
+      <ns0:rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)" />
+      <ns0:rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)" />
+      <ns0:text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Goal Input</ns0:text>
+      <ns0:text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">User Query</ns0:text>
+      <ns0:circle cx="100" cy="85" r="4" fill="#06b6d4" />
+    </ns0:g>
     
-    <!-- Generate -->
-    <g transform="translate(480, 0)">
-      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
-      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
-      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Generate</text>
-      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Create Steps</text>
-      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
-    </g>
     
-    <!-- Validate -->
-    <g transform="translate(720, 0)">
-      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
-      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
-      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Validate</text>
-      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Check Feasibility</text>
-      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
-    </g>
-  </g>
-  
-  <!-- Middle Row: Order Steps, Rank Plans -->
-  <g transform="translate(240, 250)">
-    <!-- Order Steps -->
-    <g>
-      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
-      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
-      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Order Steps</text>
-      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Dependencies</text>
-      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
-    </g>
+    <ns0:g transform="translate(240, 0)">
+      <ns0:rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)" />
+      <ns0:rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)" />
+      <ns0:text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Analyze</ns0:text>
+      <ns0:text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Break Down</ns0:text>
+      <ns0:circle cx="100" cy="85" r="4" fill="#06b6d4" />
+    </ns0:g>
     
-    <!-- Rank Plans -->
-    <g transform="translate(240, 0)">
-      <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
-      <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
-      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Rank Plans</text>
-      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Quality Metrics</text>
-      <circle cx="100" cy="85" r="4" fill="#06b6d4"/>
-    </g>
-  </g>
+    
+    <ns0:g transform="translate(480, 0)">
+      <ns0:rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)" />
+      <ns0:rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)" />
+      <ns0:text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Generate</ns0:text>
+      <ns0:text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Create Steps</ns0:text>
+      <ns0:circle cx="100" cy="85" r="4" fill="#06b6d4" />
+    </ns0:g>
+    
+    
+    <ns0:g transform="translate(720, 0)">
+      <ns0:rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)" />
+      <ns0:rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)" />
+      <ns0:text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Validate</ns0:text>
+      <ns0:text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Check Feasibility</ns0:text>
+      <ns0:circle cx="100" cy="85" r="4" fill="#06b6d4" />
+    </ns0:g>
+  </ns0:g>
   
-  <!-- Bottom: Final Plan -->
-  <g transform="translate(400, 450)">
-    <rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="3" filter="url(#glow)"/>
-    <rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)"/>
-    <text x="100" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">Final Plan</text>
-    <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Ready to Execute</text>
-    <circle cx="100" cy="85" r="5" fill="#10b981"/>
-  </g>
   
-  <!-- Arrows: Top row flow -->
-  <path d="M 250 135.0 H 290" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 490 135.0 H 530" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 730 135.0 H 770" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <ns0:g transform="translate(240, 250)">
+    
+    <ns0:g>
+      <ns0:rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)" />
+      <ns0:rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)" />
+      <ns0:text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Order Steps</ns0:text>
+      <ns0:text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Dependencies</ns0:text>
+      <ns0:circle cx="100" cy="85" r="4" fill="#06b6d4" />
+    </ns0:g>
+    
+    
+    <ns0:g transform="translate(240, 0)">
+      <ns0:rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)" />
+      <ns0:rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)" />
+      <ns0:text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Rank Plans</ns0:text>
+      <ns0:text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Quality Metrics</ns0:text>
+      <ns0:circle cx="100" cy="85" r="4" fill="#06b6d4" />
+    </ns0:g>
+  </ns0:g>
   
-  <!-- Arrows: Top to middle -->
-  <path d="M 390.0 190 V 250 H 340.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 630.0 190 V 250 H 580.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
   
-  <!-- Arrows: Middle row flow -->
-  <path d="M 440 305.0 H 480" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <ns0:g transform="translate(400, 450)">
+    <ns0:rect x="0" y="0" width="200" height="110" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="3" filter="url(#glow)" />
+    <ns0:rect x="5" y="5" width="190" height="100" rx="6" fill="url(#cyanGrad)" />
+    <ns0:text x="100" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">Final Plan</ns0:text>
+    <ns0:text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Ready to Execute</ns0:text>
+    <ns0:circle cx="100" cy="85" r="5" fill="#10b981" />
+  </ns0:g>
   
-  <!-- Arrows: Middle to bottom -->
-  <path d="M 580.0 360 V 450 H 500.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
-  <path d="M 340.0 360 V 450 H 500.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
-</svg>
+  
+  <ns0:path d="M 250 135.0 H 290" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8" />
+  <ns0:path d="M 490 135.0 H 530" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8" />
+  <ns0:path d="M 730 135.0 H 770" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8" />
+  
+  
+  <ns0:path d="M 390.0 190 V 250 H 340.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8" />
+  <ns0:path d="M 630.0 190 V 250 H 580.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8" />
+  
+  
+  <ns0:path d="M 440 305.0 H 480" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8" />
+  
+  
+  <ns0:path d="M 580.0 360 V 450 H 500.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9" />
+  <ns0:path d="M 340.0 360 V 450 H 500.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9" />
+</ns0:svg>

@@ -166,7 +166,7 @@ Agents follow a structured architecture. The architecture separates concerns, ea
 
 **User interface:** Sends messages to the agent. Messages include user queries and goals. The interface may be a web application or API, and messages are formatted as text or structured data.
 
-![Agent Architecture Diagram](/blog/agentic-ai/agent-architecture.png)
+![Agent Architecture Diagram](/blog/agentic-ai/agent-main.png)
 
 The architecture diagram shows component relationships. User input flows to the runtime. The runtime queries the planner for execution plans. The planner generates steps and validates feasibility. Steps flow to the tool executor for action execution. Results flow to memory for storage. Memory feeds back to the planner for context. The state machine coordinates all transitions. The response generator formats final output.
 
@@ -442,6 +442,8 @@ Recovery strategies include retries:
 The error handling diagram shows recovery flow. Errors are detected. Errors are categorized. Recovery strategies are selected. Strategies are executed. Success restores normal flow.
 
 ## Building an Agent with NeuronDB and NeuronAgent
+
+![Agent, MCP, and NeuronDB Integration](/blog/agentic-ai/agent-mcp-ndb.png)
 
 This section provides a complete step-by-step guide to building a production agent. The guide covers:
 - Installation and setup

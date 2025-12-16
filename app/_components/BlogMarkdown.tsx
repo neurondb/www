@@ -513,6 +513,11 @@ export function BlogMarkdown({ children }: { children: string }) {
             // For SVGs, use regular img tag for better compatibility
             const isSVG = src.toLowerCase().endsWith('.svg')
             
+            // Check if this is one of the specific PNG diagrams that should be smaller
+            const isSmallDiagram = src.includes('agent-main.png') || 
+                                   src.includes('agent-mcp-ndb.png') || 
+                                   src.includes('mcp-main.png')
+            
             // Add cache busting for SVGs in development only
             // In production, rely on proper cache headers and version control
             const finalSrc = isSVG && process.env.NODE_ENV === 'development' 
@@ -548,9 +553,9 @@ export function BlogMarkdown({ children }: { children: string }) {
                   <Image
                     src={src}
                     alt={alt}
-                    width={1280}
-                    height={750}
-                    style={{ width: '100%', height: 'auto' }}
+                    width={isSmallDiagram ? 1000 : 1280}
+                    height={isSmallDiagram ? 600 : 750}
+                    style={{ width: '100%', height: 'auto', maxWidth: isSmallDiagram ? '700px' : '100%', margin: '0 auto', display: 'block' }}
                     unoptimized
                   />
                 )}

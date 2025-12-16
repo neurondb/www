@@ -1,130 +1,131 @@
-<svg width="1000" height="700" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
-  <defs>
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <ns0:defs>
     
-    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3" />
-      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.2" />
-    </linearGradient>
-    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3" />
-      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.2" />
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <polygon points="0 0, 8 4, 0 8" fill="#06b6d4" opacity="0.9"/>
-    </marker>
-  </defs>
+    <ns0:linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <ns0:stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3" />
+      <ns0:stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.2" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3" />
+      <ns0:stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.2" />
+    </ns0:linearGradient>
+    <ns0:filter id="glow">
+      <ns0:feGaussianBlur stdDeviation="3" result="coloredBlur" />
+      <ns0:feMerge>
+        <ns0:feMergeNode in="coloredBlur" />
+        <ns0:feMergeNode in="SourceGraphic" />
+      </ns0:feMerge>
+    </ns0:filter>
+    <ns0:marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <ns0:polygon points="0 0, 8 4, 0 8" fill="#06b6d4" opacity="0.9" />
+    </ns0:marker>
+  </ns0:defs>
   
   
   
-  <!-- Title -->
-  <text x="500" y="40" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle">Memory System</text>
   
-  <!-- Storage Flow (Top) -->
-  <g transform="translate(50, 80)">
-    <text x="450" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#06b6d4" text-anchor="middle">Storage Flow</text>
-    
-    <!-- Text Input -->
-    <g>
-      <rect x="0" y="50" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
-      <rect x="5" y="55" width="170" height="100" rx="6" fill="url(#cyanGrad)"/>
-      <text x="90" y="85" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Text Input</text>
-      <text x="90" y="110" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Facts &amp; Events</text>
-      <circle cx="90" cy="135" r="4" fill="#06b6d4"/>
-    </g>
-    
-    <!-- Embedding -->
-    <g transform="translate(240, 50)">
-      <rect x="0" y="0" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
-      <rect x="5" y="5" width="170" height="100" rx="6" fill="url(#purpleGrad)"/>
-      <text x="90" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Embedding</text>
-      <text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">LLM Model</text>
-      <circle cx="90" cy="85" r="4" fill="#8b5cf6"/>
-    </g>
-    
-    <!-- Vector DB -->
-    <g transform="translate(480, 50)">
-      <rect x="0" y="0" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
-      <rect x="5" y="5" width="170" height="100" rx="6" fill="url(#cyanGrad)"/>
-      <text x="90" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Vector DB</text>
-      <text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">PostgreSQL</text>
-      <circle cx="90" cy="85" r="4" fill="#06b6d4"/>
-    </g>
-    
-    <!-- Index -->
-    <g transform="translate(720, 50)">
-      <rect x="0" y="0" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
-      <rect x="5" y="5" width="170" height="100" rx="6" fill="url(#cyanGrad)"/>
-      <text x="90" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Index</text>
-      <text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">HNSW</text>
-      <circle cx="90" cy="85" r="4" fill="#06b6d4"/>
-    </g>
-  </g>
+  <ns0:text x="500" y="40" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle">Memory System</ns0:text>
   
-  <!-- Retrieval Flow (Bottom) -->
-  <g transform="translate(50, 350)">
-    <text x="450" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#06b6d4" text-anchor="middle">Retrieval Flow</text>
-    
-    <!-- Query -->
-    <g>
-      <rect x="0" y="50" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
-      <rect x="5" y="55" width="170" height="100" rx="6" fill="url(#cyanGrad)"/>
-      <text x="90" y="85" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Query</text>
-      <text x="90" y="110" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Search Input</text>
-      <circle cx="90" cy="135" r="4" fill="#06b6d4"/>
-    </g>
-    
-    <!-- Search -->
-    <g transform="translate(240, 50)">
-      <rect x="0" y="0" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
-      <rect x="5" y="5" width="170" height="100" rx="6" fill="url(#purpleGrad)"/>
-      <text x="90" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Search</text>
-      <text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Similarity</text>
-      <circle cx="90" cy="85" r="4" fill="#8b5cf6"/>
-    </g>
-    
-    <!-- Rank -->
-    <g transform="translate(480, 50)">
-      <rect x="0" y="0" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
-      <rect x="5" y="5" width="170" height="100" rx="6" fill="url(#cyanGrad)"/>
-      <text x="90" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Rank</text>
-      <text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Top Results</text>
-      <circle cx="90" cy="85" r="4" fill="#06b6d4"/>
-    </g>
-    
-    <!-- Context Retrieved -->
-    <g transform="translate(360, 220)">
-      <rect x="0" y="0" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="3" filter="url(#glow)"/>
-      <rect x="5" y="5" width="170" height="100" rx="6" fill="url(#cyanGrad)"/>
-      <text x="90" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">Context</text>
-      <text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Retrieved</text>
-      <circle cx="90" cy="85" r="5" fill="#10b981"/>
-    </g>
-  </g>
   
-  <!-- Arrows: Storage flow (top) -->
-  <path d="M 230 185.0 H 290" fill="none" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 470 185.0 H 530" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 710 185.0 H 770" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <ns0:g transform="translate(50, 80)">
+    <ns0:text x="450" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#06b6d4" text-anchor="middle">Storage Flow</ns0:text>
+    
+    
+    <ns0:g>
+      <ns0:rect x="0" y="50" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)" />
+      <ns0:rect x="5" y="55" width="170" height="100" rx="6" fill="url(#cyanGrad)" />
+      <ns0:text x="90" y="85" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Text Input</ns0:text>
+      <ns0:text x="90" y="110" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Facts &amp; Events</ns0:text>
+      <ns0:circle cx="90" cy="135" r="4" fill="#06b6d4" />
+    </ns0:g>
+    
+    
+    <ns0:g transform="translate(240, 50)">
+      <ns0:rect x="0" y="0" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)" />
+      <ns0:rect x="5" y="5" width="170" height="100" rx="6" fill="url(#purpleGrad)" />
+      <ns0:text x="90" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Embedding</ns0:text>
+      <ns0:text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">LLM Model</ns0:text>
+      <ns0:circle cx="90" cy="85" r="4" fill="#8b5cf6" />
+    </ns0:g>
+    
+    
+    <ns0:g transform="translate(480, 50)">
+      <ns0:rect x="0" y="0" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)" />
+      <ns0:rect x="5" y="5" width="170" height="100" rx="6" fill="url(#cyanGrad)" />
+      <ns0:text x="90" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Vector DB</ns0:text>
+      <ns0:text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">PostgreSQL</ns0:text>
+      <ns0:circle cx="90" cy="85" r="4" fill="#06b6d4" />
+    </ns0:g>
+    
+    
+    <ns0:g transform="translate(720, 50)">
+      <ns0:rect x="0" y="0" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)" />
+      <ns0:rect x="5" y="5" width="170" height="100" rx="6" fill="url(#cyanGrad)" />
+      <ns0:text x="90" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Index</ns0:text>
+      <ns0:text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">HNSW</ns0:text>
+      <ns0:circle cx="90" cy="85" r="4" fill="#06b6d4" />
+    </ns0:g>
+  </ns0:g>
   
-  <!-- Arrows: Retrieval flow (bottom) -->
-  <path d="M 230 455.0 H 290" fill="none" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
-  <path d="M 470 455.0 H 530" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8"/>
   
-  <!-- Arrows: Rank to Context -->
-  <path d="M 620.0 510 V 570 H 500.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
-  <path d="M 380.0 510 V 570 H 500.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <ns0:g transform="translate(50, 350)">
+    <ns0:text x="450" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#06b6d4" text-anchor="middle">Retrieval Flow</ns0:text>
+    
+    
+    <ns0:g>
+      <ns0:rect x="0" y="50" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)" />
+      <ns0:rect x="5" y="55" width="170" height="100" rx="6" fill="url(#cyanGrad)" />
+      <ns0:text x="90" y="85" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Query</ns0:text>
+      <ns0:text x="90" y="110" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Search Input</ns0:text>
+      <ns0:circle cx="90" cy="135" r="4" fill="#06b6d4" />
+    </ns0:g>
+    
+    
+    <ns0:g transform="translate(240, 50)">
+      <ns0:rect x="0" y="0" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)" />
+      <ns0:rect x="5" y="5" width="170" height="100" rx="6" fill="url(#purpleGrad)" />
+      <ns0:text x="90" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Search</ns0:text>
+      <ns0:text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Similarity</ns0:text>
+      <ns0:circle cx="90" cy="85" r="4" fill="#8b5cf6" />
+    </ns0:g>
+    
+    
+    <ns0:g transform="translate(480, 50)">
+      <ns0:rect x="0" y="0" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)" />
+      <ns0:rect x="5" y="5" width="170" height="100" rx="6" fill="url(#cyanGrad)" />
+      <ns0:text x="90" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Rank</ns0:text>
+      <ns0:text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Top Results</ns0:text>
+      <ns0:circle cx="90" cy="85" r="4" fill="#06b6d4" />
+    </ns0:g>
+    
+    
+    <ns0:g transform="translate(360, 220)">
+      <ns0:rect x="0" y="0" width="180" height="110" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="3" filter="url(#glow)" />
+      <ns0:rect x="5" y="5" width="170" height="100" rx="6" fill="url(#cyanGrad)" />
+      <ns0:text x="90" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">Context</ns0:text>
+      <ns0:text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Retrieved</ns0:text>
+      <ns0:circle cx="90" cy="85" r="5" fill="#10b981" />
+    </ns0:g>
+  </ns0:g>
   
-  <!-- Feedback arrow from Index to Search -->
-  <path d="M 860.0 240 V 400 H 380.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#arrowhead)" opacity="0.6"/>
-</svg>
+  
+  <ns0:path d="M 230 185.0 H 290" fill="none" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8" />
+  <ns0:path d="M 470 185.0 H 530" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8" />
+  <ns0:path d="M 710 185.0 H 770" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8" />
+  
+  
+  <ns0:path d="M 230 455.0 H 290" fill="none" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8" />
+  <ns0:path d="M 470 455.0 H 530" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8" />
+  
+  
+  <ns0:path d="M 620.0 510 V 570 H 500.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9" />
+  <ns0:path d="M 380.0 510 V 570 H 500.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9" />
+  
+  
+  <ns0:path d="M 860.0 240 V 400 H 380.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#arrowhead)" opacity="0.6" />
+</ns0:svg>

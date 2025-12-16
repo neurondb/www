@@ -464,6 +464,8 @@ NeuronMCP implements the full MCP specification. It provides tools for vector op
 
 ### Architecture
 
+![NeuronMCP Architecture](/blog/neurondb-mcp-server/mcp-main.png)
+
 NeuronMCP follows a modular architecture where the core server handles protocol communication, tool handlers implement specific operations, resource providers expose data sources, and middleware components enable custom processing.
 
 Architecture components:
