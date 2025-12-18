@@ -1,0 +1,72 @@
+<svg width="1000" height="600" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:0.2" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:0.2" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle">PostgreSQL vs Standalone Vector Databases</text>
+  
+  <!-- PostgreSQL Vector DB -->
+  <g transform="translate(50, 100)">
+    <rect x="0" y="0" width="400" height="450" rx="12" fill="url(#boxGrad)" stroke="#10b981" stroke-width="3" filter="url(#glow)"/>
+    <rect x="10" y="10" width="380" height="430" rx="8" fill="url(#greenGrad)"/>
+    
+    <text x="200" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#10b981" text-anchor="middle">PostgreSQL Vector DB</text>
+    
+    <!-- Features -->
+    <g transform="translate(30, 80)">
+      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✓ ACID Transactions</text>
+      <text x="0" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✓ SQL Interface</text>
+      <text x="0" y="60" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✓ Unified Storage</text>
+      <text x="0" y="90" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✓ Hybrid Queries</text>
+      <text x="0" y="120" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✓ Standard Tooling</text>
+      <text x="0" y="150" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✓ Backup &amp; Recovery</text>
+      <text x="0" y="180" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✓ PostgreSQL Monitoring</text>
+      <text x="0" y="210" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✓ Strong Consistency</text>
+      <text x="0" y="240" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✓ Existing Skills</text>
+      <text x="0" y="270" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✓ No Data Sync</text>
+      <text x="0" y="300" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✓ Single System</text>
+    </g>
+  </g>
+  
+  <!-- Standalone Vector DB -->
+  <g transform="translate(550, 100)">
+    <rect x="0" y="0" width="400" height="450" rx="12" fill="url(#boxGrad)" stroke="#ef4444" stroke-width="3" filter="url(#glow)"/>
+    <rect x="10" y="10" width="380" height="430" rx="8" fill="url(#redGrad)"/>
+    
+    <text x="200" y="50" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#ef4444" text-anchor="middle">Standalone Vector DB</text>
+    
+    <!-- Features -->
+    <g transform="translate(30, 80)">
+      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✗ Limited Transactions</text>
+      <text x="0" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✗ Specialized Query Language</text>
+      <text x="0" y="60" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✗ Separate Storage</text>
+      <text x="0" y="90" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✗ Vector Only</text>
+      <text x="0" y="120" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✗ Limited Tooling</text>
+      <text x="0" y="150" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✗ Custom Backup</text>
+      <text x="0" y="180" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✗ Specialized Monitoring</text>
+      <text x="0" y="210" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✗ Eventual Consistency</text>
+      <text x="0" y="240" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✗ New Skills Required</text>
+      <text x="0" y="270" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✗ Data Synchronization</text>
+      <text x="0" y="300" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">✗ Multiple Systems</text>
+    </g>
+  </g>
+</svg>

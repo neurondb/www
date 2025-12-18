@@ -1,0 +1,124 @@
+<svg width="1000" height="700" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.2" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.2" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:0.2" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#06b6d4" opacity="0.9"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle">PostgreSQL Vector Database Architecture</text>
+  
+  <!-- Top Row: Storage Layer -->
+  <g transform="translate(50, 80)">
+    <!-- Vector Storage -->
+    <g>
+      <rect x="0" y="0" width="200" height="120" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="110" rx="6" fill="url(#purpleGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Vector Storage</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Embeddings</text>
+      <text x="100" y="80" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">384/768/1024 dims</text>
+      <circle cx="100" cy="105" r="4" fill="#8b5cf6"/>
+    </g>
+    
+    <!-- Relational Storage -->
+    <g transform="translate(250, 0)">
+      <rect x="0" y="0" width="200" height="120" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="110" rx="6" fill="url(#cyanGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Relational Storage</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Tables &amp; Metadata</text>
+      <text x="100" y="80" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">ACID Guarantees</text>
+      <circle cx="100" cy="105" r="4" fill="#06b6d4"/>
+    </g>
+    
+    <!-- Unified Queries -->
+    <g transform="translate(500, 0)">
+      <rect x="0" y="0" width="200" height="120" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="190" height="110" rx="6" fill="url(#greenGrad)"/>
+      <text x="100" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Hybrid Queries</text>
+      <text x="100" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Vector + SQL</text>
+      <text x="100" y="80" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Single Query</text>
+      <circle cx="100" cy="105" r="4" fill="#10b981"/>
+    </g>
+  </g>
+  
+  <!-- Middle: Query Planner -->
+  <g transform="translate(300, 250)">
+    <rect x="0" y="0" width="400" height="100" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="3" filter="url(#glow)"/>
+    <rect x="5" y="5" width="390" height="90" rx="6" fill="url(#cyanGrad)"/>
+    <text x="200" y="40" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Query Planner</text>
+    <text x="200" y="65" font-family="system-ui, sans-serif" font-size="16" fill="#cbd5e1" text-anchor="middle">Optimizes Vector &amp; Relational Operations</text>
+    <text x="200" y="85" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Index Selection &amp; Query Execution</text>
+  </g>
+  
+  <!-- Bottom Row: Indexes -->
+  <g transform="translate(100, 450)">
+    <!-- HNSW Index -->
+    <g>
+      <rect x="0" y="0" width="180" height="120" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="170" height="110" rx="6" fill="url(#purpleGrad)"/>
+      <text x="90" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">HNSW Index</text>
+      <text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">5-8ms Latency</text>
+      <text x="90" y="80" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">High Performance</text>
+      <circle cx="90" cy="105" r="4" fill="#8b5cf6"/>
+    </g>
+    
+    <!-- IVFFlat Index -->
+    <g transform="translate(220, 0)">
+      <rect x="0" y="0" width="180" height="120" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="170" height="110" rx="6" fill="url(#cyanGrad)"/>
+      <text x="90" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">IVFFlat Index</text>
+      <text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">15-25ms Latency</text>
+      <text x="90" y="80" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Fast Updates</text>
+      <circle cx="90" cy="105" r="4" fill="#06b6d4"/>
+    </g>
+    
+    <!-- DiskANN Index -->
+    <g transform="translate(440, 0)">
+      <rect x="0" y="0" width="180" height="120" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2" filter="url(#glow)"/>
+      <rect x="5" y="5" width="170" height="110" rx="6" fill="url(#greenGrad)"/>
+      <text x="90" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">DiskANN Index</text>
+      <text x="90" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">30-50ms Latency</text>
+      <text x="90" y="80" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Billion Scale</text>
+      <circle cx="90" cy="105" r="4" fill="#10b981"/>
+    </g>
+  </g>
+  
+  <!-- Arrows: Top to Middle -->
+  <!-- Vector Storage: box at absolute x=50, width=200, so right edge at x=250. Bottom edge at y=200. Query Planner left edge at x=300, so start from right edge x=250. -->
+  <path d="M 250 200 V 225 H 300 V 250" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <!-- Relational Storage: box at absolute x=300, width=200, so right edge at x=500. Bottom edge at y=200. Query Planner left edge at x=300, so start from right edge x=500. -->
+  <path d="M 500 200 V 225 H 300 V 250" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <!-- Hybrid Queries: box at absolute x=550, width=200, so left edge at x=550. Bottom edge at y=200. Query Planner right edge at x=700, so start from left edge x=550. -->
+  <path d="M 550 200 V 225 H 700 V 250" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  
+  <!-- Arrows: Middle to Bottom -->
+  <!-- Query Planner: box at absolute x=300, width=400, so left edge at x=300, right edge at x=700. Bottom edge at y=350. HNSW Index left edge at x=100, so use Query Planner left edge x=300. -->
+  <path d="M 300 350 V 400 H 100 V 450" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <!-- Query Planner to IVFFlat: IVFFlat left edge at x=320, so use Query Planner left edge x=300. -->
+  <path d="M 300 350 V 400 H 320 V 450" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <!-- Query Planner to DiskANN: DiskANN left edge at x=540, so use Query Planner right edge x=700. -->
+  <path d="M 700 350 V 400 H 540 V 450" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
+</svg>

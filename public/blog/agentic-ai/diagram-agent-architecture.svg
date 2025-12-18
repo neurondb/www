@@ -102,14 +102,14 @@
   <ns0:path d="M 670 130 H 710" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8" />
   
   
-  <ns0:path d="M 140 180 V 280 H 290" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8" />
-  <ns0:path d="M 360 180 V 280 H 510" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8" />
-  <ns0:path d="M 800 180 V 280 H 730" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8" />
+  <ns0:path d="M 140.0 180.0 V 230.0 H 290.0 V 280.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8" />
+  <ns0:path d="M 360.0 180.0 V 230.0 H 510.0 V 280.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8" />
+  <ns0:path d="M 800.0 180.0 V 230.0 H 730.0 V 280.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8" />
   
   
   <ns0:path d="M 380 330 H 420" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8" />
   <ns0:path d="M 600 330 H 640" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8" />
   
   
-  <ns0:path d="M 730 380 V 80 H 360" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#arrowhead)" opacity="0.6" />
+  <ns0:path d="M 730.0 380.0 V 230.0 H 360.0 V 80.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#arrowhead)" opacity="0.6" />
 </ns0:svg>

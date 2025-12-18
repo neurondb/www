@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
 // Blog statistics
 const blogStats = [
-  { label: 'Total Articles', value: '6', icon: BookOpen, color: 'text-white' },
+  { label: 'Total Articles', value: '7', icon: BookOpen, color: 'text-white' },
   { label: 'Monthly Readers', value: '2.1k', icon: Eye, color: 'text-white' },
   { label: 'Categories', value: '1', icon: Tag, color: 'text-white' },
   { label: 'Authors', value: '1', icon: Users, color: 'text-white' }
@@ -149,6 +149,23 @@ const blogPosts = [
     likes: 0,
     comments: 0,
     tags: ['AgenticAI', 'AutonomousAgents', 'AIAgents', 'AgentArchitecture', 'ToolUse', 'Planning', 'MemorySystems', 'NeuronDB', 'NeuronAgent', 'PostgreSQL', 'LLM', 'RAG', 'VectorSearch', 'MachineLearning', 'AI']
+  },
+  {
+    slug: 'postgresql-vector-database',
+    title: 'PostgreSQL as a Vector Database: Complete Guide',
+    excerpt: 'Complete guide to using PostgreSQL as a vector database. Learn how PostgreSQL with NeuronDB extension transforms into a powerful vector database with HNSW indexing, similarity search, and production-ready capabilities.',
+    content: 'Comprehensive guide to PostgreSQL vector database architecture, performance benchmarks, indexing strategies, query patterns, and migration approaches. Learn how PostgreSQL with NeuronDB becomes a complete vector database solution.',
+    author: 'NeuronDB Team',
+    authorRole: 'Core Developers',
+    date: '2025-02-25',
+    readTime: '35 min read',
+    category: 'Technical',
+    featured: false,
+    icon: 'neurondb',
+    views: 0,
+    likes: 0,
+    comments: 0,
+    tags: ['PostgreSQL', 'VectorDatabase', 'NeuronDB', 'VectorSearch', 'HNSW', 'SQL', 'Database', 'AI', 'SemanticSearch', 'Production', 'Indexing']
   }
 ]
 
@@ -215,6 +232,16 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
               <Image
                 src="/blog/agentic-ai/header.svg?v=7"
                 alt="Agentic AI blog header"
+                fill
+                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
+                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
+                unoptimized
+                priority
+              />
+            ) : post.slug === 'postgresql-vector-database' ? (
+              <Image
+                src="/blog/postgresql-vector-database/header.svg?v=7"
+                alt="PostgreSQL as Vector Database blog header"
                 fill
                 className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
                 style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}

@@ -93,11 +93,11 @@
   <ns0:path d="M 730 155.0 H 770" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9" />
   
   
-  <ns0:path d="M 870.0 210 V 280 H 400.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8" />
+  <ns0:path d="M 870.0 210.0 V 245.0 H 400.0 V 280.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8" />
   
   
   <ns0:path d="M 500 335.0 H 540" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8" />
   
   
-  <ns0:path d="M 640.0 280 V 155.0 H 290" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#arrowhead)" opacity="0.6" />
+  <ns0:path d="M 640.0 280.0 V 217.5 H 290.0 V 155.0" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,6" marker-end="url(#arrowhead)" opacity="0.6" />
 </ns0:svg>

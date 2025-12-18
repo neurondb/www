@@ -123,6 +123,6 @@
   <ns0:path d="M 490 455.0 H 530" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.8" />
   
   
-  <ns0:path d="M 630.0 510 V 570 H 510.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9" />
-  <ns0:path d="M 390.0 510 V 570 H 510.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9" />
+  <ns0:path d="M 630.0 510.0 V 540.0 H 510.0 V 570.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9" />
+  <ns0:path d="M 390.0 510.0 V 540.0 H 510.0 V 570.0" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.9" />
 </ns0:svg>
