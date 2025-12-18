@@ -46,7 +46,7 @@ export const metadata = {
     },
 };
 
-const markdown = `![PostgreSQL as Vector Database header](/blog/postgresql-vector-database/header.svg?v=7)
+const markdown = `![PostgreSQL as Vector Database header](/blog/postgresql-vector-database/header.svg?v=8)
 
 # PostgreSQL as a Vector Database
 

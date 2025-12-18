@@ -240,7 +240,7 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
               />
             ) : post.slug === 'postgresql-vector-database' ? (
               <Image
-                src="/blog/postgresql-vector-database/header.svg?v=7"
+                src="/blog/postgresql-vector-database/header.svg?v=8"
                 alt="PostgreSQL as Vector Database blog header"
                 fill
                 className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
