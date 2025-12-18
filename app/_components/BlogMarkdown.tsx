@@ -526,13 +526,13 @@ export function BlogMarkdown({ children }: { children: string }) {
             
             // Return as a block-level element to prevent nesting in paragraphs
             return (
-              <div style={{ borderRadius: 12, marginBottom: 40, maxWidth: '100%', width: '100%', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', overflow: 'visible', display: 'block', textAlign: 'center', backgroundColor: 'transparent', minHeight: '100px' }}>
+              <div style={{ borderRadius: 12, marginBottom: 40, maxWidth: '100%', width: '100%', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', overflow: 'visible', display: 'block', textAlign: 'center', backgroundColor: 'transparent', minHeight: '400px' }}>
                 {isSVG ? (
                   <img
                     key={finalSrc}
                     src={finalSrc}
                     alt={alt}
-                    style={{ width: '100%', height: 'auto', maxWidth: '800px', display: 'block', margin: '0 auto', visibility: 'visible' }}
+                    style={{ width: '100%', height: 'auto', maxWidth: '100%', display: 'block', margin: '0 auto', visibility: 'visible', objectFit: 'contain' }}
                     loading="lazy"
                     decoding="async"
                     onError={(e) => {
