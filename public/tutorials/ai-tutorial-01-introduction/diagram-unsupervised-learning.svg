@@ -7,6 +7,9 @@
     <marker id="arrowUnsupervised" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
       <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
     </marker>
+      <clipPath id="clip-0">
+      <rect x="0" y="0" width="200" height="80" rx="8"/>
+    </clipPath>
   </defs>
   
   <rect width="800" height="450" fill="url(#unsupervisedBg)"/>
@@ -30,15 +33,16 @@
       <circle cx="90" cy="85" r="8" fill="#c084fc" opacity="0.7"/>
     </g>
     
-    <text x="350" y="120" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">No labels provided</text>
-  </g>
-  
-  <!-- Learning -->
-  <g transform="translate(300, 180)">
+    <text x="350" y="120" font-family="system-ui, sans-serif" font-si<g transform="translate(300, 180)">
+
     <rect x="0" y="0" width="200" height="80" fill="#6366f1" opacity="0.4" rx="8" stroke="#818cf8" stroke-width="2"/>
+    <g clip-path="url(#clip-0)">
     <text x="100" y="30" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Pattern Discovery</text>
     <text x="100" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Finds hidden structure</text>
     <text x="100" y="68" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Groups similar items</text>
+    </g>
+  
+  </g>-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Groups similar items</text>
   </g>
   
   <!-- Arrow from Input to Learning -->

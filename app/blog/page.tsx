@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
 // Blog statistics
 const blogStats = [
-  { label: 'Total Articles', value: '7', icon: BookOpen, color: 'text-white' },
+  { label: 'Total Articles', value: '8', icon: BookOpen, color: 'text-white' },
   { label: 'Monthly Readers', value: '2.1k', icon: Eye, color: 'text-white' },
   { label: 'Categories', value: '1', icon: Tag, color: 'text-white' },
   { label: 'Authors', value: '1', icon: Users, color: 'text-white' }
@@ -166,6 +166,23 @@ const blogPosts = [
     likes: 0,
     comments: 0,
     tags: ['PostgreSQL', 'VectorDatabase', 'NeuronDB', 'VectorSearch', 'HNSW', 'SQL', 'Database', 'AI', 'SemanticSearch', 'Production', 'Indexing']
+  },
+  {
+    slug: 'ai-with-database-on-prem',
+    title: 'AI With Data On-Premises: Complete Guide',
+    excerpt: 'Complete guide to deploying AI workloads with databases on-premises. Learn about on-premises AI infrastructure, data sovereignty, security, performance, and implementation with NeuronDB. Includes architecture patterns, deployment strategies, and real-world examples.',
+    content: 'Comprehensive guide to on-premises AI infrastructure, data sovereignty, security architecture, performance optimization, deployment strategies, and implementation patterns. Learn how to deploy NeuronDB and AI workloads on-premises with complete control over data and infrastructure.',
+    author: 'NeuronDB Team',
+    authorRole: 'Core Developers',
+    date: '2025-02-26',
+    readTime: '38 min read',
+    category: 'Technical',
+    featured: false,
+    icon: 'neurondb',
+    views: 0,
+    likes: 0,
+    comments: 0,
+    tags: ['OnPremises', 'AIInfrastructure', 'DataSovereignty', 'PrivateAI', 'EnterpriseAI', 'SelfHosted', 'NeuronDB', 'PostgreSQL', 'Security', 'Compliance', 'EdgeAI', 'HybridCloud']
   }
 ]
 
@@ -242,6 +259,16 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
               <Image
                 src="/blog/postgresql-vector-database/header.svg?v=8"
                 alt="PostgreSQL as Vector Database blog header"
+                fill
+                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
+                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
+                unoptimized
+                priority
+              />
+            ) : post.slug === 'ai-with-database-on-prem' ? (
+              <Image
+                src="/blog/ai-with-database-on-prem/header.svg?v=7"
+                alt="AI With Data On-Premises blog header"
                 fill
                 className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
                 style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}

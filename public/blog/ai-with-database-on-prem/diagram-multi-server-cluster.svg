@@ -1,0 +1,121 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.2" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.2" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:0.2" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:0.2" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#06b6d4" opacity="0.9"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="600" y="40" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle">Multi-Server Cluster Architecture</text>
+  
+  <!-- Load Balancer -->
+  <g transform="translate(450, 80)">
+    <rect x="0" y="0" width="300" height="80" rx="10" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="3" filter="url(#glow)"/>
+    <rect x="5" y="5" width="290" height="70" rx="8" fill="url(#cyanGrad)"/>
+    <text x="150" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Load Balancer</text>
+    <text x="150" y="60" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Query Distribution &amp; Health Checks</text>
+  </g>
+  
+  <!-- Primary Server -->
+  <g transform="translate(100, 220)">
+    <rect x="0" y="0" width="250" height="200" rx="10" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="3" filter="url(#glow)"/>
+    <rect x="5" y="5" width="240" height="190" rx="8" fill="url(#purpleGrad)"/>
+    <text x="125" y="30" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Primary Server</text>
+    <text x="125" y="55" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">PostgreSQL + NeuronDB</text>
+    <text x="125" y="80" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Write Operations</text>
+    <text x="125" y="105" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Read Operations</text>
+    <rect x="20" y="130" width="210" height="50" rx="6" fill="url(#boxGrad)" stroke="#facc15" stroke-width="1" opacity="0.5"/>
+    <text x="125" y="155" font-family="system-ui, sans-serif" font-size="12" fill="#facc15" text-anchor="middle">PRIMARY</text>
+    <text x="125" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Active Writes</text>
+  </g>
+  
+  <!-- Replica Server 1 -->
+  <g transform="translate(400, 220)">
+    <rect x="0" y="0" width="250" height="200" rx="10" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2"/>
+    <rect x="5" y="5" width="240" height="190" rx="8" fill="url(#greenGrad)"/>
+    <text x="125" y="30" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Replica Server 1</text>
+    <text x="125" y="55" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">PostgreSQL + NeuronDB</text>
+    <text x="125" y="80" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Read-Only</text>
+    <text x="125" y="105" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Query Scaling</text>
+    <rect x="20" y="130" width="210" height="50" rx="6" fill="url(#boxGrad)" stroke="#10b981" stroke-width="1" opacity="0.5"/>
+    <text x="125" y="155" font-family="system-ui, sans-serif" font-size="12" fill="#10b981" text-anchor="middle">REPLICA</text>
+    <text x="125" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Read Scaling</text>
+  </g>
+  
+  <!-- Replica Server 2 -->
+  <g transform="translate(700, 220)">
+    <rect x="0" y="0" width="250" height="200" rx="10" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2"/>
+    <rect x="5" y="5" width="240" height="190" rx="8" fill="url(#greenGrad)"/>
+    <text x="125" y="30" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Replica Server 2</text>
+    <text x="125" y="55" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">PostgreSQL + NeuronDB</text>
+    <text x="125" y="80" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Read-Only</text>
+    <text x="125" y="105" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Query Scaling</text>
+    <rect x="20" y="130" width="210" height="50" rx="6" fill="url(#boxGrad)" stroke="#10b981" stroke-width="1" opacity="0.5"/>
+    <text x="125" y="155" font-family="system-ui, sans-serif" font-size="12" fill="#10b981" text-anchor="middle">REPLICA</text>
+    <text x="125" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Read Scaling</text>
+  </g>
+  
+  <!-- Shared Storage -->
+  <g transform="translate(400, 480)">
+    <rect x="0" y="0" width="400" height="120" rx="10" fill="url(#boxGrad)" stroke="#f97316" stroke-width="2" filter="url(#glow)"/>
+    <rect x="5" y="5" width="390" height="110" rx="8" fill="url(#orangeGrad)"/>
+    <text x="200" y="35" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Shared Storage</text>
+    <text x="100" y="65" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">SAN / NFS</text>
+    <text x="200" y="65" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Data Consistency</text>
+    <text x="300" y="65" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Backup</text>
+    <text x="200" y="95" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Encrypted &amp; Replicated</text>
+  </g>
+  
+  <!-- Arrows: Load Balancer to Servers -->
+  <path d="M 500 160 L 225 220" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.7"/>
+  <path d="M 600 160 L 525 220" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.7"/>
+  <path d="M 700 160 L 825 220" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.7"/>
+  
+  <!-- Arrows: Primary to Replicas (Replication) -->
+  <path d="M 350 320 L 400 320 L 400 280" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)" opacity="0.7"/>
+  <path d="M 350 320 L 700 320 L 700 280" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)" opacity="0.7"/>
+  
+  <!-- Arrows: Servers to Storage -->
+  <path d="M 225 420 L 500 480" fill="none" stroke="#f97316" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.7"/>
+  <path d="M 525 420 L 500 480" fill="none" stroke="#f97316" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.7"/>
+  <path d="M 825 420 L 700 480" fill="none" stroke="#f97316" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.7"/>
+  
+  <!-- Benefits Box -->
+  <g transform="translate(50, 620)">
+    <rect x="0" y="0" width="1100" height="60" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2" opacity="0.3"/>
+    <text x="550" y="25" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle">Cluster Benefits</text>
+    <text x="200" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">✓ High Availability</text>
+    <text x="400" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">✓ Read Scaling</text>
+    <text x="600" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">✓ Automatic Failover</text>
+    <text x="800" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">✓ Load Distribution</text>
+    <text x="1000" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">✓ Data Redundancy</text>
+  </g>
+</svg>
+

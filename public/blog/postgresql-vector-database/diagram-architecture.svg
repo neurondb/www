@@ -122,3 +122,4 @@
   <!-- Query Planner to DiskANN: DiskANN left edge at x=540, so use Query Planner right edge x=700. -->
   <path d="M 700 350 V 400 H 540 V 450" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrowhead)" opacity="0.8"/>
 </svg>
+

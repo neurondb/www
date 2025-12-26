@@ -205,3 +205,4 @@
     <text x="550" y="45" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">Lowest latency (5-8ms) • Fastest index build (15-30 min) • GPU acceleration (10x throughput) • ACID + SQL</text>
   </g>
 </svg>
+

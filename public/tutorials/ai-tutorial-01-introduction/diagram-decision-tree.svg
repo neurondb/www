@@ -7,55 +7,81 @@
     <marker id="arrowTree" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
       <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
     </marker>
-  </defs>
-  
-  <rect width="800" height="370" fill="url(#treeBg)"/>
-  
-  <text x="400" y="40" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#facc15" text-anchor="middle">Decision Tree Structure</text>
-  
-  <!-- Root Node -->
-  <g transform="translate(350, 80)">
+      <clipPath id="clip-6">
+      <rect x="0" y="0" width="80" height="40" rx="4"/>
+    </clipPath>
+      <clipPath id="clip-5">
+      <rect x="0" y="0" width="80" height="40" rx="4"/>
+    </clipPath>
+      <clipPath id="clip-4">
+      <rect x="0" y="0" wi<g transform="translate(350, 80)">
+
     <rect x="0" y="0" width="100" height="50" fill="#4f46e5" opacity="0.4" rx="6" stroke="#6366f1" stroke-width="2"/>
+    <g clip-path="url(#clip-0)">
     <text x="50" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Feature <tspan font-style="italic">X</tspan><tspan baseline-shift="sub" font-size="9">₁</tspan></text>
     <text x="50" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">≤ 5?</text>
+    </g>
+  
+  </g>reeBg)"/>
+  
+  <text x="400" y="40" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="#facc15" text-anchor=<g transform="translate(150, 180)">
+
+    <rect x="0" y="0" width="100" height="50" fill="#10b981" opacity="0.4" rx="6" stroke="#22c55e" stroke-width="2"/>
+    <g clip-path="url(#clip-1)">
+    <text x="50" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Feature <tspan font-style="italic">X</tspan><tspan baseline-shift="sub" font-size="9">₂</tspan></text>
+    <text x="50" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">≤ 3?</text>
+    </g>
+  
+  </g>t-size="9" fill="#cbd5e1" text-anchor="middle">≤ 5?</text>
   </g>
   
   <!-- Level 2 Nodes -->
-  <g transform="translate(150, 180)">
-    <rect x="0" y="0" width="100" height="50" fill="#10b981" opacity="0.4" rx="6" stroke="#22c55e" stroke-width="2"/>
-    <text x="50" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Feature <tspan font-style="italic">X</tspan><tspan baseline-shift="sub" font-size="9">₂</tspan></text>
-    <text x="50" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">≤ 3?</text>
-  </g>
-  
-  <g transform="translate(550, 180)">
+  <g transform<g transform="translate(550, 180)">
+
     <rect x="0" y="0" width="100" height="50" fill="#f59e0b" opacity="0.4" rx="6" stroke="#fbbf24" stroke-width="2"/>
+    <g clip-path="url(#clip-2)">
     <text x="50" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Feature <tspan font-style="italic">X</tspan><tspan baseline-shift="sub" font-size="9">₃</tspan></text>
     <text x="50" y="38" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">≤ 7?</text>
-  </g>
+    </g>
   
-  <!-- Level 3 Nodes - Leaves -->
-  <g transform="translate(50, 300)">
+  </g>nsform="translate(550, 180)">
+    <rect x="0" y="0" width="100" height="50" fill="#f59e0b" opacity="0.4" rx="6" stroke="#fbbf24" stroke-width=<g transform="translate(50, 300)">
+
     <rect x="0" y="0" width="80" height="40" fill="#22c55e" opacity="0.5" rx="4"/>
+    <g clip-path="url(#clip-3)">
     <text x="40" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Class A</text>
     <text x="40" y="35" font-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle">85%</text>
-  </g>
+    </g>
   
-  <g transform="translate(170, 300)">
+  </g>s - Leaves -->
+  <g transform="translate(50, 300)">
+    <rect x="0" y="0" width="80" height="40" fill="#22c<g transform="translate(170, 300)">
+
     <rect x="0" y="0" width="80" height="40" fill="#ef4444" opacity="0.5" rx="4"/>
+    <g clip-path="url(#clip-4)">
     <text x="40" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Class B</text>
     <text x="40" y="35" font-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle">78%</text>
-  </g>
+    </g>
   
-  <g transform="translate(450, 300)">
+  </g>="#ef4444" opacity="0.5" rx="4"/>
+    <text x="40" y="22" font-family="system-ui, sans-serif" font-size="11<g transform="translate(450, 300)">
+
     <rect x="0" y="0" width="80" height="40" fill="#f59e0b" opacity="0.5" rx="4"/>
+    <g clip-path="url(#clip-5)">
     <text x="40" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Class C</text>
     <text x="40" y="35" font-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle">92%</text>
-  </g>
+    </g>
   
-  <g transform="translate(570, 300)">
+  </g>ze="11" font-weight="bold" fill="#fff" text-anchor="middle">Class C</text>
+    <text x="40" y="35" font-fam<g transform="translate(570, 300)">
+
     <rect x="0" y="0" width="80" height="40" fill="#8b5cf6" opacity="0.5" rx="4"/>
+    <g clip-path="url(#clip-6)">
     <text x="40" y="22" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Class D</text>
     <text x="40" y="35" font-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle">67%</text>
+    </g>
+  
+  </g>nt-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle">67%</text>
   </g>
   
   <!-- Branches - routes connect to box edges, not inside -->

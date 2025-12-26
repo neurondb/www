@@ -16,6 +16,9 @@
       <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:0.5" />
       <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:0" />
     </radialGradient>
+      <clipPath id="clip-0">
+      <rect x="-325" y="-30" width="650" height="60" rx="30"/>
+    </clipPath>
   </defs>
   
   <!-- Background layers -->
@@ -46,15 +49,15 @@
   </g>
   
   <!-- Main Title -->
-  <text x="600" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#facc15" text-anchor="middle" letter-spacing="-0.5px">
-    Semantic Search: Finding Meaning in Text
-  </text>
-  
-  <!-- Tutorial Info Badge -->
-  <g transform="translate(600, 275)">
+  <text x="600" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#facc15" text-anchor="middle" letter-s<g transform="translate(600, 275)">
+
     <rect x="-325" y="-30" width="650" height="60" rx="30" fill="rgba(15, 23, 42, 0.8)" stroke="#3b82f6" stroke-width="1.5" opacity="0.8"/>
+    <g clip-path="url(#clip-0)">
     <text x="-180" y="8" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="start" font-weight="500">Tutorial 11</text>
     <text x="-20" y="8" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#3b82f6" text-anchor="start" font-weight="600">Intermediate</text>
     <text x="140" y="8" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#cbd5e1" text-anchor="start">Semantic Search</text>
+    </g>
+  
+  </g>, -apple-system, sans-serif" font-size="16" fill="#cbd5e1" text-anchor="start">Semantic Search</text>
   </g>
 </svg>

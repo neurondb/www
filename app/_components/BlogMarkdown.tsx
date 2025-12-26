@@ -185,6 +185,49 @@ export function BlogMarkdown({ children }: { children: string }) {
         article table td:not(:first-child) {
           color: rgba(255, 255, 255, 0.95);
         }
+        /* Ensure list items keep content inline */
+        article ul li,
+        article ol li {
+          display: list-item;
+        }
+        article ul li > *,
+        article ol li > * {
+          display: inline !important;
+        }
+        article ul li > p,
+        article ol li > p {
+          display: inline !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        article ul li p,
+        article ol li p {
+          display: inline !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        article ul li span,
+        article ol li span {
+          display: inline !important;
+        }
+        article ul li strong,
+        article ol li strong {
+          display: inline !important;
+        }
+        /* Force all content in list items to be inline, including nested elements */
+        article ul li *,
+        article ol li * {
+          display: inline !important;
+        }
+        /* Exception: keep images and code blocks as block */
+        article ul li img,
+        article ol li img,
+        article ul li code,
+        article ol li code,
+        article ul li pre,
+        article ol li pre {
+          display: block !important;
+        }
       `}} />
       <article ref={articleRef} className="prose dark:prose-invert max-w-7xl mx-auto py-12 px-6 overflow-hidden">
         <ReactMarkdown
@@ -235,6 +278,17 @@ export function BlogMarkdown({ children }: { children: string }) {
               return <>{children}</>;
             }
             
+            // Check if paragraph is inside a list item
+            let parentElement = node?.parent;
+            let isInsideListItem = false;
+            while (parentElement) {
+              if (parentElement.type === 'element' && parentElement.tagName === 'li') {
+                isInsideListItem = true;
+                break;
+              }
+              parentElement = parentElement.parent;
+            }
+            
             // Process children to style special characters - only process string children
             const processChildren = (children: any): any => {
               if (typeof children === 'string') {
@@ -253,6 +307,11 @@ export function BlogMarkdown({ children }: { children: string }) {
               // Don't process if it's already a React element
               return children;
             };
+            
+            // If inside list item, render as inline span instead of block paragraph
+            if (isInsideListItem) {
+              return <span className="inline" {...props}>{processChildren(children)}</span>;
+            }
             
             return <p className="text-white/90 text-lg leading-relaxed mb-6 drop-shadow-sm" {...props}>{processChildren(children)}</p>;
           },
@@ -339,7 +398,7 @@ export function BlogMarkdown({ children }: { children: string }) {
             
             // Add colored bullets for Key Concepts section
             const bulletClass = inKeyConcepts ? '[&>li]:list-disc [&>li]:marker:text-cyan-400' : '';
-            return <ul className={`list-disc list-inside text-white/90 text-lg leading-relaxed mb-6 space-y-2 ml-8 md:ml-12 ${bulletClass}`} {...props}>{children}</ul>;
+            return <ul className={`list-disc list-outside text-white/90 text-lg leading-relaxed mb-6 space-y-2 ml-8 md:ml-12 pl-4 ${bulletClass}`} {...props}>{children}</ul>;
           },
           ol({ node, children, ...props }: any) {
             // Check if list items contain links (common in "Related Tutorials" sections)
@@ -357,11 +416,62 @@ export function BlogMarkdown({ children }: { children: string }) {
               );
             }
             
-            return <ol className="list-decimal list-inside text-white/90 text-lg leading-relaxed mb-6 space-y-2 ml-8 md:ml-12" {...props} />;
+            return <ol className="list-decimal list-outside text-white/90 text-lg leading-relaxed mb-6 space-y-2 ml-8 md:ml-12 pl-4" {...props}>{children}</ol>;
           },
           li({ node, children, ...props }: any) {
             // Regular list items - ensure bullet and text stay on same line
-            return <li className="mb-2 drop-shadow-sm leading-tight" style={{ display: 'list-item' }} {...props}>{children}</li>;
+            // Always unwrap paragraphs inside list items to keep content inline
+            const unwrapParagraphs = (children: any): any => {
+              if (!children) return children;
+              
+              // Handle arrays
+              if (Array.isArray(children)) {
+                return children.flatMap((child: any) => {
+                  if (!child) return child;
+                  if (React.isValidElement(child) && child.type === 'p') {
+                    return unwrapParagraphs((child.props as any).children);
+                  }
+                  if (React.isValidElement(child) && child.type === 'span' && (child.props as any).className === 'inline') {
+                    return unwrapParagraphs((child.props as any).children);
+                  }
+                  return child;
+                });
+              }
+              
+              // Handle single child
+              if (React.isValidElement(children)) {
+                if (children.type === 'p') {
+                  return unwrapParagraphs((children.props as any).children);
+                }
+                if (children.type === 'span' && (children.props as any).className === 'inline') {
+                  return unwrapParagraphs((children.props as any).children);
+                }
+              }
+              
+              return React.Children.map(children, (child: any) => {
+                if (!child) return child;
+                
+                // If it's a paragraph element, return its children directly
+                if (React.isValidElement(child) && child.type === 'p') {
+                  return unwrapParagraphs((child.props as any).children);
+                }
+                
+                // If it's an inline span (from paragraph conversion), unwrap it
+                if (React.isValidElement(child) && child.type === 'span' && (child.props as any).className === 'inline') {
+                  return unwrapParagraphs((child.props as any).children);
+                }
+                
+                // If it's an array, recursively process
+                if (Array.isArray(child)) {
+                  return unwrapParagraphs(child);
+                }
+                
+                return child;
+              });
+            };
+            
+            const processedChildren = unwrapParagraphs(children);
+            return <li className="mb-2 drop-shadow-sm leading-relaxed" style={{ display: 'list-item', lineHeight: '1.75', listStylePosition: 'outside' }} {...props}>{processedChildren || children}</li>;
           },
 
           // Code blocks with syntax highlighting
@@ -518,6 +628,9 @@ export function BlogMarkdown({ children }: { children: string }) {
                                    src.includes('agent-mcp-ndb.png') || 
                                    src.includes('mcp-main.png')
             
+            // Check if this is a diagram that should be half size (architecture or onprem-cloud comparison)
+            const isHalfSizeDiagram = src.includes('architecture.png') || src.includes('onprem-cloud-comparison.png')
+            
             // Add cache busting for SVGs in development only
             // In production, rely on proper cache headers and version control
             const finalSrc = isSVG && process.env.NODE_ENV === 'development' 
@@ -553,9 +666,9 @@ export function BlogMarkdown({ children }: { children: string }) {
                   <Image
                     src={src}
                     alt={alt}
-                    width={isSmallDiagram ? 1000 : 1280}
-                    height={isSmallDiagram ? 600 : 750}
-                    style={{ width: '100%', height: 'auto', maxWidth: isSmallDiagram ? '700px' : '100%', margin: '0 auto', display: 'block' }}
+                    width={isHalfSizeDiagram ? 640 : (isSmallDiagram ? 1000 : 1280)}
+                    height={isHalfSizeDiagram ? 375 : (isSmallDiagram ? 600 : 750)}
+                    style={{ width: '100%', height: 'auto', maxWidth: isHalfSizeDiagram ? '50%' : (isSmallDiagram ? '700px' : '100%'), margin: '0 auto', display: 'block' }}
                     unoptimized
                   />
                 )}
