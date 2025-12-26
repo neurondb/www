@@ -1812,13 +1812,6 @@ We'll cover:
 
 Let's examine solutions for each category:
 
-## Related Resources
-
-- [NeuronDB Documentation](/docs) - Complete documentation for NeuronDB features and capabilities
-- [NeuronDB: PostgreSQL AI Extension](/blog/neurondb) - Comprehensive guide to NeuronDB features
-- [RAG Complete Guide](/blog/rag-complete-guide) - Build RAG systems with NeuronDB
-- [Semantic Search Guide](/blog/neurondb-semantic-search-guide) - Implement semantic search on-premises
-
 ## Troubleshooting Common Issues
 
 On-premises AI deployments encounter various issues. This section provides solutions for common problems.
@@ -2261,83 +2254,22 @@ FROM neurondb.query_cache_stats
 ORDER BY hit_count DESC;
 \`\`\`
 
-### Advanced Configuration Summary
-
-**Advanced Techniques Covered:**
-
-- ✓ Multi-tenant isolation with row-level security
-- ✓ Custom distance metrics for specialized use cases
-- ✓ Query result caching for performance
-- ✓ Schema-based tenant separation
-
-**Next:** Review the conclusion and next steps.
-
----
-
 ## Conclusion
 
-### Key Takeaways
+This comprehensive guide has covered everything you need to deploy and operate on-premises AI infrastructure. Throughout this guide, we've explored why organizations choose on-premises AI, how to architect these systems, and the practical steps for implementation and operations.
 
-This comprehensive guide has covered everything you need to deploy and operate on-premises AI infrastructure:
+In planning and design, you've learned to understand why on-premises AI makes sense for your organization, choose the right architecture pattern for your needs, and plan infrastructure requirements carefully. For implementation, the guide covered implementing comprehensive security measures, optimizing performance for your workload, and following deployment best practices. In operations, you've seen real-world use cases, understood costs and ROI, learned operational best practices, and discovered how to troubleshoot common issues effectively.
 
-**Planning & Design:**
-- ✓ Understand why on-premises AI makes sense for your organization
-- ✓ Choose the right architecture pattern for your needs
-- ✓ Plan infrastructure requirements carefully
+When deciding between on-premises and cloud AI, choose on-premises when data sovereignty is required, security is paramount, low latency is critical, high query volume makes cloud expensive, or vendor independence is important. On-premises AI provides complete data control and sovereignty, enhanced security and compliance, predictable performance and latency, cost-effectiveness for high-volume workloads, and vendor independence.
 
-**Implementation:**
-- ✓ Implement comprehensive security measures
-- ✓ Optimize performance for your workload
-- ✓ Follow deployment best practices
+To get started, evaluate your needs using the decision frameworks in this guide, plan your architecture by choosing the right pattern for your workload, design infrastructure using the specifications provided, implement security following the security framework, deploy systematically following the deployment phases, monitor and optimize using the monitoring and optimization techniques, and maintain and troubleshoot following best practices and troubleshooting guides.
 
-**Operations:**
-- ✓ Learn from real-world use cases
-- ✓ Understand costs and ROI
-- ✓ Follow operational best practices
-- ✓ Troubleshoot common issues effectively
+## Related Resources
 
-### Decision Summary
-
-**Choose On-Premises When:**
-- Data sovereignty is required
-- Security is paramount
-- Low latency is critical
-- High query volume makes cloud expensive
-- Vendor independence is important
-
-**On-Premises AI Benefits:**
-- ✓ Complete data control and sovereignty
-- ✓ Enhanced security and compliance
-- ✓ Predictable performance and latency
-- ✓ Cost-effective for high-volume workloads
-- ✓ Vendor independence
-
-### Next Steps
-
-1. **Evaluate Your Needs** - Use the decision frameworks in this guide
-2. **Plan Your Architecture** - Choose the right pattern for your workload
-3. **Design Infrastructure** - Use the specifications provided
-4. **Implement Security** - Follow the security framework
-5. **Deploy Systematically** - Follow the deployment phases
-6. **Monitor and Optimize** - Use the monitoring and optimization techniques
-7. **Maintain and Troubleshoot** - Follow best practices and troubleshooting guides
-
-### Getting Started with NeuronDB
-
-NeuronDB makes on-premises AI deployment straightforward:
-
-- **Installation:** Simple PostgreSQL extension installation
-- **Configuration:** Standard SQL configuration
-- **Operations:** All operations use familiar SQL syntax
-- **Performance:** Optimized for on-premises workloads
-- **Support:** Comprehensive documentation and community
-
-**Ready to Get Started?**
-
-1. [Download NeuronDB](https://github.com/neurondb-ai/neurondb/releases)
-2. [Read the Documentation](/docs)
-3. [Join the Community](https://discord.gg/neurondb)
-4. [Contact Support](mailto:support@neurondb.ai)
+- [NeuronDB Documentation](/docs) - Complete documentation for NeuronDB features and capabilities
+- [NeuronDB: PostgreSQL AI Extension](/blog/neurondb) - Comprehensive guide to NeuronDB features
+- [RAG Complete Guide](/blog/rag-complete-guide) - Build RAG systems with NeuronDB
+- [Semantic Search Guide](/blog/neurondb-semantic-search-guide) - Implement semantic search on-premises
 
 `;
 
