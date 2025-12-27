@@ -1,94 +1,241 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
-    </marker>
-                  <clipPath id="clip-1765356398552-3">
-      <rect x="0" y="0" width="700" height="250" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398552-2">
-      <rect x="0" y="0" width="200" height="120" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398552-1">
-      <rect x="0" y="0" width="200" height="120" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398552-0">
-      <rect x="0" y="0" width="200" height="120" rx="8"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Transfer Learning Concept</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+    
+    <ns0:marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      
+      
+      <ns0:polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+      
+    
+    </ns0:marker>
+    
+                  
+    <ns0:clipPath id="clip-1765356398552-3">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="250" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398552-2">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="120" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398552-1">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="120" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398552-0">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="120" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Source Task -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="200" height="120" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398552-0)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Source Task</text>
-    <text x="100" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">General language</text>
-    <text x="100" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">understanding</text>
-    <text x="100" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Pre-trained model</text>
-    </g>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Transfer -->
-  <g transform="translate(300, 80)">
-
-    <rect x="0" y="0" width="200" height="120" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398552-1)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Transfer</text>
-    <text x="100" y="60" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Knowledge</text>
-    <text x="100" y="80" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">transfer</text>
-    </g>
-
-  </g>
   
-  <!-- Target Task -->
-  <g transform="translate(550, 80)">
-
-    <rect x="0" y="0" width="200" height="120" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398552-2)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Target Task</text>
-    <text x="100" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Specific task</text>
-    <text x="100" y="80" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Fine-tuned</text>
-    <text x="100" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">model</text>
-    </g>
-
-  </g>
   
-  <!-- Arrows -->
-  <path d="M 100.0 120.0 L 100.0 124.0 L 400.0 124.0 L 400.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 400.0 140.0 L 650.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><!-- Benefits -->
-  <g transform="translate(50, 220)">
-
-    <rect x="0" y="0" width="700" height="250" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398552-3)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Transfer Learning Benefits</text>
-    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Efficiency</text>
-    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Requires less data</text>
-    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Faster training</text>
-    <text x="120" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Lower compute costs</text>
-    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Performance</text>
-    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Better than training from scratch</text>
-    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Leverages pre-trained knowledge</text>
-    <text x="420" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Adapts to domain</text>
-    <text x="100" y="170" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Knowledge Transfer</text>
-    <text x="120" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">General patterns transfer</text>
-    <text x="120" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Task-specific patterns learned</text>
-    <text x="120" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Balances general and specific</text>
-    <text x="400" y="170" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Applications</text>
-    <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Text classification</text>
-    <text x="420" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Question answering</text>
-    <text x="420" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Named entity recognition</text>
-    </g>
-
-  </g>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
   
-</svg>
+  
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Transfer Learning Concept</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="200" height="120" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398552-0)">
+      
+    
+      <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Source Task</ns0:text>
+      
+    
+      <ns0:text x="100" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">General language</ns0:text>
+      
+    
+      <ns0:text x="100" y="80" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">understanding</ns0:text>
+      
+    
+      <ns0:text x="100" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Pre-trained model</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(300, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="200" height="120" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398552-1)">
+      
+    
+      <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Transfer</ns0:text>
+      
+    
+      <ns0:text x="100" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Knowledge</ns0:text>
+      
+    
+      <ns0:text x="100" y="80" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">transfer</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(550, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="200" height="120" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398552-2)">
+      
+    
+      <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Target Task</ns0:text>
+      
+    
+      <ns0:text x="100" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Specific task</ns0:text>
+      
+    
+      <ns0:text x="100" y="80" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Fine-tuned</ns0:text>
+      
+    
+      <ns0:text x="100" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">model</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:path d="M 100.0 120.0 L 100.0 124.0 L 400.0 124.0 L 400.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 400.0 140.0 L 650.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  
+  
+  <ns0:g transform="translate(50, 220)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="250" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398552-3)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Transfer Learning Benefits</ns0:text>
+      
+    
+      <ns0:text x="100" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Efficiency</ns0:text>
+      
+    
+      <ns0:text x="120" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Requires less data</ns0:text>
+      
+    
+      <ns0:text x="120" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Faster training</ns0:text>
+      
+    
+      <ns0:text x="120" y="135" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Lower compute costs</ns0:text>
+      
+    
+      <ns0:text x="400" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Performance</ns0:text>
+      
+    
+      <ns0:text x="420" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Better than training from scratch</ns0:text>
+      
+    
+      <ns0:text x="420" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Leverages pre-trained knowledge</ns0:text>
+      
+    
+      <ns0:text x="420" y="135" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Adapts to domain</ns0:text>
+      
+    
+      <ns0:text x="100" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Knowledge Transfer</ns0:text>
+      
+    
+      <ns0:text x="120" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">General patterns transfer</ns0:text>
+      
+    
+      <ns0:text x="120" y="215" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Task-specific patterns learned</ns0:text>
+      
+    
+      <ns0:text x="120" y="235" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Balances general and specific</ns0:text>
+      
+    
+      <ns0:text x="400" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Applications</ns0:text>
+      
+    
+      <ns0:text x="420" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Text classification</ns0:text>
+      
+    
+      <ns0:text x="420" y="215" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Question answering</ns0:text>
+      
+    
+      <ns0:text x="420" y="235" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Named entity recognition</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

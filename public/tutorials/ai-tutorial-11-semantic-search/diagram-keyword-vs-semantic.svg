@@ -1,81 +1,205 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-                  <clipPath id="clip-1765356398547-2">
-      <rect x="0" y="0" width="700" height="180" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398547-1">
-      <rect x="0" y="0" width="320" height="200" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398547-0">
-      <rect x="0" y="0" width="320" height="200" rx="4"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Keyword vs Semantic Search</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+                  
+    <ns0:clipPath id="clip-1765356398547-2">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="180" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398547-1">
+      
+      
+      <ns0:rect x="0" y="0" width="320" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398547-0">
+      
+      
+      <ns0:rect x="0" y="0" width="320" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Keyword -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="320" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398547-0)">
-    <text x="160" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">Keyword Search</text>
-    <text x="20" y="60" font-family="monospace" font-size="11" fill="#cbd5e1">Query: "machine learning"</text>
-    <text x="20" y="90" font-family="system-ui, sans-serif" font-size="11" fill="#10b981">✓ Matches: "machine learning tutorial"</text>
-    <text x="20" y="110" font-family="system-ui, sans-serif" font-size="11" fill="#10b981">✓ Matches: "learn machine learning"</text>
-    <text x="20" y="130" font-family="system-ui, sans-serif" font-size="11" fill="#ef4444">✗ Misses: "AI tutorial" (no exact match)</text>
-    <text x="20" y="150" font-family="system-ui, sans-serif" font-size="11" fill="#ef4444">✗ Misses: "neural networks guide"</text>
-    <text x="160" y="175" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Matches exact words only</text>
-    <text x="160" y="195" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Misses synonyms and related terms</text>
-    </g>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Semantic -->
-  <g transform="translate(430, 80)">
-
-    <rect x="0" y="0" width="320" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398547-1)">
-    <text x="160" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Semantic Search</text>
-    <text x="20" y="60" font-family="monospace" font-size="11" fill="#cbd5e1">Query: "machine learning"</text>
-    <text x="20" y="90" font-family="system-ui, sans-serif" font-size="11" fill="#10b981">✓ Matches: "machine learning tutorial"</text>
-    <text x="20" y="110" font-family="system-ui, sans-serif" font-size="11" fill="#10b981">✓ Matches: "AI tutorial" (similar meaning)</text>
-    <text x="20" y="130" font-family="system-ui, sans-serif" font-size="11" fill="#10b981">✓ Matches: "neural networks guide"</text>
-    <text x="20" y="150" font-family="system-ui, sans-serif" font-size="11" fill="#10b981">✓ Matches: "deep learning intro"</text>
-    <text x="160" y="175" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Matches by meaning</text>
-    <text x="160" y="195" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Finds synonyms and related concepts</text>
-    </g>
-
-  </g>
   
-  <!-- Comparison -->
-  <g transform="translate(50, 300)">
-
-    <rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398547-2)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Comparison</text>
-    <text x="190" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Keyword Search</text>
-    <text x="70" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Fast and simple</text>
-    <text x="70" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Exact word matching</text>
-    <text x="70" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Misses synonyms</text>
-    <text x="70" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Good for exact terms</text>
-    <text x="510" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Semantic Search</text>
-    <text x="390" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Finds related concepts</text>
-    <text x="390" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Meaning-based matching</text>
-    <text x="390" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Handles synonyms</text>
-    <text x="390" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Better for many queries</text>
-    </g>
-
-    <rect x="50" y="50" width="280" height="110" fill="#ef4444" opacity="0.2" rx="4" stroke="#f87171" stroke-width="1"/>
-
-    <rect x="370" y="50" width="280" height="110" fill="#10b981" opacity="0.2" rx="4" stroke="#34d399" stroke-width="1"/>
-
-  </g>
   
-</svg>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Keyword vs Semantic Search</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="320" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398547-0)">
+      
+    
+      <ns0:text x="160" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Keyword Search</ns0:text>
+      
+    
+      <ns0:text x="20" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Query: "machine learning"</ns0:text>
+      
+    
+      <ns0:text x="20" y="90" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">✓ Matches: "machine learning tutorial"</ns0:text>
+      
+    
+      <ns0:text x="20" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">✓ Matches: "learn machine learning"</ns0:text>
+      
+    
+      <ns0:text x="20" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#ef4444" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">✗ Misses: "AI tutorial" (no exact match)</ns0:text>
+      
+    
+      <ns0:text x="20" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#ef4444" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">✗ Misses: "neural networks guide"</ns0:text>
+      
+    
+      <ns0:text x="160" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Matches exact words only</ns0:text>
+      
+    
+      <ns0:text x="160" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Misses synonyms and related terms</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(430, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="320" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398547-1)">
+      
+    
+      <ns0:text x="160" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Semantic Search</ns0:text>
+      
+    
+      <ns0:text x="20" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Query: "machine learning"</ns0:text>
+      
+    
+      <ns0:text x="20" y="90" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">✓ Matches: "machine learning tutorial"</ns0:text>
+      
+    
+      <ns0:text x="20" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">✓ Matches: "AI tutorial" (similar meaning)</ns0:text>
+      
+    
+      <ns0:text x="20" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">✓ Matches: "neural networks guide"</ns0:text>
+      
+    
+      <ns0:text x="20" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">✓ Matches: "deep learning intro"</ns0:text>
+      
+    
+      <ns0:text x="160" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Matches by meaning</ns0:text>
+      
+    
+      <ns0:text x="160" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Finds synonyms and related concepts</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 300)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398547-2)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Comparison</ns0:text>
+      
+    
+      <ns0:text x="190" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Keyword Search</ns0:text>
+      
+    
+      <ns0:text x="70" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Fast and simple</ns0:text>
+      
+    
+      <ns0:text x="70" y="120" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Exact word matching</ns0:text>
+      
+    
+      <ns0:text x="70" y="140" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Misses synonyms</ns0:text>
+      
+    
+      <ns0:text x="70" y="160" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Good for exact terms</ns0:text>
+      
+    
+      <ns0:text x="510" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Semantic Search</ns0:text>
+      
+    
+      <ns0:text x="390" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Finds related concepts</ns0:text>
+      
+    
+      <ns0:text x="390" y="120" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Meaning-based matching</ns0:text>
+      
+    
+      <ns0:text x="390" y="140" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Handles synonyms</ns0:text>
+      
+    
+      <ns0:text x="390" y="160" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Better for many queries</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:rect x="50" y="50" width="280" height="110" fill="#ef4444" opacity="0.2" rx="4" stroke="#f87171" stroke-width="1"/>
+    
+
+    
+    <ns0:rect x="370" y="50" width="280" height="110" fill="#10b981" opacity="0.2" rx="4" stroke="#34d399" stroke-width="1"/>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

@@ -1,129 +1,321 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-                  <clipPath id="clip-1765356398542-3">
-      <rect x="0" y="0" width="700" height="180" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398542-2">
-      <rect x="0" y="0" width="200" height="200" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398542-1">
-      <rect x="0" y="0" width="200" height="200" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398542-0">
-      <rect x="0" y="0" width="200" height="200" rx="4"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Network Architecture Design</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+                  
+    <ns0:clipPath id="clip-1765356398542-3">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="180" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398542-2">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398542-1">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398542-0">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Simple -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398542-0)">
-    <text x="100" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Simple Architecture</text>
-    <text x="40" y="35" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Input</text>
-    <text x="40" y="170" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">10</text>
-    <text x="100" y="55" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Hidden</text>
-    <text x="100" y="150" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">5</text>
-    <text x="160" y="75" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Output</text>
-    <text x="160" y="130" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">1</text>
-    <text x="100" y="195" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">10 → 5 → 1</text>
-    </g>
-
-    <rect x="20" y="40" width="40" height="120" fill="#4f46e5" opacity="0.3" rx="2"/>
-
-    <rect x="80" y="60" width="40" height="80" fill="#8b5cf6" opacity="0.3" rx="2"/>
-
-    <rect x="140" y="80" width="40" height="40" fill="#10b981" opacity="0.3" rx="2"/>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Medium -->
-  <g transform="translate(300, 80)">
-
-    <rect x="0" y="0" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398542-1)">
-    <text x="100" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">Medium Architecture</text>
-    <text x="35" y="35" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Input</text>
-    <text x="35" y="170" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">10</text>
-    <text x="75" y="45" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">H1</text>
-    <text x="75" y="160" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">20</text>
-    <text x="115" y="55" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">H2</text>
-    <text x="115" y="150" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">10</text>
-    <text x="155" y="75" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Out</text>
-    <text x="155" y="130" font-family="monospace" font-size="9" fill="#cbd5e1" text-anchor="middle">1</text>
-    <text x="100" y="195" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">10 → 20 → 10 → 1</text>
-    </g>
-
-    <rect x="20" y="40" width="30" height="120" fill="#4f46e5" opacity="0.3" rx="2"/>
-
-    <rect x="60" y="50" width="30" height="100" fill="#8b5cf6" opacity="0.3" rx="2"/>
-
-    <rect x="100" y="60" width="30" height="80" fill="#ec4899" opacity="0.3" rx="2"/>
-
-    <rect x="140" y="80" width="30" height="40" fill="#10b981" opacity="0.3" rx="2"/>
-
-  </g>
   
-  <!-- Complex -->
-  <g transform="translate(550, 80)">
-
-    <rect x="0" y="0" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398542-2)">
-    <text x="100" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">Complex Architecture</text>
-    <text x="22.5" y="35" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">In</text>
-    <text x="22.5" y="170" font-family="monospace" font-size="8" fill="#cbd5e1" text-anchor="middle">10</text>
-    <text x="57.5" y="40" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">H1</text>
-    <text x="57.5" y="165" font-family="monospace" font-size="8" fill="#cbd5e1" text-anchor="middle">50</text>
-    <text x="92.5" y="50" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">H2</text>
-    <text x="92.5" y="155" font-family="monospace" font-size="8" fill="#cbd5e1" text-anchor="middle">30</text>
-    <text x="127.5" y="65" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">H3</text>
-    <text x="127.5" y="140" font-family="monospace" font-size="8" fill="#cbd5e1" text-anchor="middle">20</text>
-    <text x="162.5" y="80" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Out</text>
-    <text x="162.5" y="125" font-family="monospace" font-size="8" fill="#cbd5e1" text-anchor="middle">1</text>
-    <text x="100" y="195" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">10 → 50 → 30 → 20 → 1</text>
-    </g>
-
-    <rect x="10" y="40" width="25" height="120" fill="#4f46e5" opacity="0.3" rx="2"/>
-
-    <rect x="45" y="45" width="25" height="110" fill="#8b5cf6" opacity="0.3" rx="2"/>
-
-    <rect x="80" y="55" width="25" height="90" fill="#ec4899" opacity="0.3" rx="2"/>
-
-    <rect x="115" y="70" width="25" height="60" fill="#f59e0b" opacity="0.3" rx="2"/>
-
-    <rect x="150" y="85" width="25" height="30" fill="#10b981" opacity="0.3" rx="2"/>
-
-  </g>
   
-  <!-- Guidelines -->
-  <g transform="translate(50, 300)">
-
-    <rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398542-3)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Architecture Design Guidelines</text>
-    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Input Layer Size</text>
-    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Matches number of features</text>
-    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Example: 10 features → 10 neurons</text>
-    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Output Layer Size</text>
-    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Matches number of classes/values</text>
-    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Example: Binary → 1, Multi-class → N</text>
-    <text x="100" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Hidden Layer Sizes</text>
-    <text x="120" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Common patterns: decreasing (50→30→20), constant (20→20→20), or increasing</text>
-    <text x="120" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Start simple, increase complexity as needed</text>
-    <text x="400" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Depth vs Width</text>
-    <text x="420" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">More layers: learn complex patterns</text>
-    <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">More neurons: learn more features</text>
-    </g>
-
-  </g>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
   
-</svg>
+  
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Network Architecture Design</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398542-0)">
+      
+    
+      <ns0:text x="100" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Simple Architecture</ns0:text>
+      
+    
+      <ns0:text x="40" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Input</ns0:text>
+      
+    
+      <ns0:text x="40" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">10</ns0:text>
+      
+    
+      <ns0:text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Hidden</ns0:text>
+      
+    
+      <ns0:text x="100" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">5</ns0:text>
+      
+    
+      <ns0:text x="160" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Output</ns0:text>
+      
+    
+      <ns0:text x="160" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">1</ns0:text>
+      
+    
+      <ns0:text x="100" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">10 → 5 → 1</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:rect x="20" y="40" width="40" height="120" fill="#4f46e5" opacity="0.3" rx="2"/>
+    
+
+    
+    <ns0:rect x="80" y="60" width="40" height="80" fill="#8b5cf6" opacity="0.3" rx="2"/>
+    
+
+    
+    <ns0:rect x="140" y="80" width="40" height="40" fill="#10b981" opacity="0.3" rx="2"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(300, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398542-1)">
+      
+    
+      <ns0:text x="100" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Medium Architecture</ns0:text>
+      
+    
+      <ns0:text x="35" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Input</ns0:text>
+      
+    
+      <ns0:text x="35" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">10</ns0:text>
+      
+    
+      <ns0:text x="75" y="45" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">H1</ns0:text>
+      
+    
+      <ns0:text x="75" y="160" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">20</ns0:text>
+      
+    
+      <ns0:text x="115" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">H2</ns0:text>
+      
+    
+      <ns0:text x="115" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">10</ns0:text>
+      
+    
+      <ns0:text x="155" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Out</ns0:text>
+      
+    
+      <ns0:text x="155" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">1</ns0:text>
+      
+    
+      <ns0:text x="100" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">10 → 20 → 10 → 1</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:rect x="20" y="40" width="30" height="120" fill="#4f46e5" opacity="0.3" rx="2"/>
+    
+
+    
+    <ns0:rect x="60" y="50" width="30" height="100" fill="#8b5cf6" opacity="0.3" rx="2"/>
+    
+
+    
+    <ns0:rect x="100" y="60" width="30" height="80" fill="#ec4899" opacity="0.3" rx="2"/>
+    
+
+    
+    <ns0:rect x="140" y="80" width="30" height="40" fill="#10b981" opacity="0.3" rx="2"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(550, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398542-2)">
+      
+    
+      <ns0:text x="100" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Complex Architecture</ns0:text>
+      
+    
+      <ns0:text x="22.5" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">In</ns0:text>
+      
+    
+      <ns0:text x="22.5" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">10</ns0:text>
+      
+    
+      <ns0:text x="57.5" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">H1</ns0:text>
+      
+    
+      <ns0:text x="57.5" y="165" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">50</ns0:text>
+      
+    
+      <ns0:text x="92.5" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">H2</ns0:text>
+      
+    
+      <ns0:text x="92.5" y="155" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">30</ns0:text>
+      
+    
+      <ns0:text x="127.5" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">H3</ns0:text>
+      
+    
+      <ns0:text x="127.5" y="140" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">20</ns0:text>
+      
+    
+      <ns0:text x="162.5" y="80" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Out</ns0:text>
+      
+    
+      <ns0:text x="162.5" y="125" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">1</ns0:text>
+      
+    
+      <ns0:text x="100" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">10 → 50 → 30 → 20 → 1</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:rect x="10" y="40" width="25" height="120" fill="#4f46e5" opacity="0.3" rx="2"/>
+    
+
+    
+    <ns0:rect x="45" y="45" width="25" height="110" fill="#8b5cf6" opacity="0.3" rx="2"/>
+    
+
+    
+    <ns0:rect x="80" y="55" width="25" height="90" fill="#ec4899" opacity="0.3" rx="2"/>
+    
+
+    
+    <ns0:rect x="115" y="70" width="25" height="60" fill="#f59e0b" opacity="0.3" rx="2"/>
+    
+
+    
+    <ns0:rect x="150" y="85" width="25" height="30" fill="#10b981" opacity="0.3" rx="2"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 300)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398542-3)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Architecture Design Guidelines</ns0:text>
+      
+    
+      <ns0:text x="100" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Input Layer Size</ns0:text>
+      
+    
+      <ns0:text x="120" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Matches number of features</ns0:text>
+      
+    
+      <ns0:text x="120" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Example: 10 features → 10 neurons</ns0:text>
+      
+    
+      <ns0:text x="400" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Output Layer Size</ns0:text>
+      
+    
+      <ns0:text x="420" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Matches number of classes/values</ns0:text>
+      
+    
+      <ns0:text x="420" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Example: Binary → 1, Multi-class → N</ns0:text>
+      
+    
+      <ns0:text x="100" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Hidden Layer Sizes</ns0:text>
+      
+    
+      <ns0:text x="120" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Common patterns: decreasing (50→30→20), constant (20→20→20), or increasing</ns0:text>
+      
+    
+      <ns0:text x="120" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Start simple, increase complexity as needed</ns0:text>
+      
+    
+      <ns0:text x="400" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Depth vs Width</ns0:text>
+      
+    
+      <ns0:text x="420" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">More layers: learn complex patterns</ns0:text>
+      
+    
+      <ns0:text x="420" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">More neurons: learn more features</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

@@ -1,99 +1,248 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
-    </marker>
-                  <clipPath id="clip-1765356398541-3">
-      <rect x="0" y="0" width="700" height="250" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398541-2">
-      <rect x="0" y="0" width="200" height="120" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398541-1">
-      <rect x="0" y="0" width="200" height="120" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398541-0">
-      <rect x="0" y="0" width="200" height="120" rx="8"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Model Evaluation Process</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+    
+    <ns0:marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      
+      
+      <ns0:polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+      
+    
+    </ns0:marker>
+    
+                  
+    <ns0:clipPath id="clip-1765356398541-3">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="250" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398541-2">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="120" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398541-1">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="120" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398541-0">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="120" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Data Split -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="200" height="120" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398541-0)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Dataset</text>
-    <text x="100" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">100% data</text>
-    <text x="100" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Split into:</text>
-    <text x="100" y="110" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Train / Test</text>
-    </g>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Training -->
-  <g transform="translate(300, 80)">
-
-    <rect x="0" y="0" width="200" height="120" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398541-1)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Training</text>
-    <text x="100" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Train model</text>
-    <text x="100" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">on training data</text>
-    <text x="100" y="110" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">(80%)</text>
-    </g>
-
-  </g>
   
-  <!-- Evaluation -->
-  <g transform="translate(550, 80)">
-
-    <rect x="0" y="0" width="200" height="120" fill="#f59e0b" opacity="0.3" rx="8" stroke="#fbbf24" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398541-2)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Evaluation</text>
-    <text x="100" y="60" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Test on</text>
-    <text x="100" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">test data</text>
-    <text x="100" y="110" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">(20%)</text>
-    </g>
-
-  </g>
   
-  <!-- Metrics -->
-  <g transform="translate(50, 230)">
-
-    <rect x="0" y="0" width="700" height="250" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398541-3)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Evaluation Metrics</text>
-    <text x="200" y="75" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Regression Metrics</text>
-    <text x="70" y="105" font-family="monospace" font-size="11" fill="#cbd5e1">• MSE: Mean Squared Error</text>
-    <text x="70" y="125" font-family="monospace" font-size="11" fill="#cbd5e1">• MAE: Mean Absolute Error</text>
-    <text x="70" y="145" font-family="monospace" font-size="11" fill="#cbd5e1">• R²: R-squared</text>
-    <text x="70" y="165" font-family="monospace" font-size="11" fill="#cbd5e1">• RMSE: Root Mean Squared</text>
-    <text x="70" y="185" font-family="monospace" font-size="11" fill="#cbd5e1">• MAPE: Mean Absolute %</text>
-    <text x="70" y="205" font-family="monospace" font-size="11" fill="#cbd5e1">• Explained Variance</text>
-    <text x="500" y="75" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Classification Metrics</text>
-    <text x="370" y="105" font-family="monospace" font-size="11" fill="#cbd5e1">• Accuracy</text>
-    <text x="370" y="125" font-family="monospace" font-size="11" fill="#cbd5e1">• Precision</text>
-    <text x="370" y="145" font-family="monospace" font-size="11" fill="#cbd5e1">• Recall</text>
-    <text x="370" y="165" font-family="monospace" font-size="11" fill="#cbd5e1">• F1 Score</text>
-    <text x="370" y="185" font-family="monospace" font-size="11" fill="#cbd5e1">• AUC-ROC</text>
-    <text x="370" y="205" font-family="monospace" font-size="11" fill="#cbd5e1">• Confusion Matrix</text>
-    </g>
-
-    <!-- Regression -->
-    <rect x="50" y="50" width="300" height="180" fill="#4f46e5" opacity="0.2" rx="4" stroke="#6366f1" stroke-width="1"/>
-
-    <!-- Classification -->
-    <rect x="350" y="50" width="300" height="180" fill="#8b5cf6" opacity="0.2" rx="4" stroke="#a78bfa" stroke-width="1"/>
-
-  </g>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <!-- Arrows -->
-  <path d="M 200.0 230.0 L 200.0 234.0 L 400.0 234.0 L 400.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 500.0 140.0 L 500.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 400.0 140.0 L 400.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/></svg>
+  
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Model Evaluation Process</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="200" height="120" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398541-0)">
+      
+    
+      <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Dataset</ns0:text>
+      
+    
+      <ns0:text x="100" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">100% data</ns0:text>
+      
+    
+      <ns0:text x="100" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Split into:</ns0:text>
+      
+    
+      <ns0:text x="100" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Train / Test</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(300, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="200" height="120" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398541-1)">
+      
+    
+      <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Training</ns0:text>
+      
+    
+      <ns0:text x="100" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Train model</ns0:text>
+      
+    
+      <ns0:text x="100" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">on training data</ns0:text>
+      
+    
+      <ns0:text x="100" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">(80%)</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(550, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="200" height="120" fill="#f59e0b" opacity="0.3" rx="8" stroke="#fbbf24" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398541-2)">
+      
+    
+      <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Evaluation</ns0:text>
+      
+    
+      <ns0:text x="100" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Test on</ns0:text>
+      
+    
+      <ns0:text x="100" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">test data</ns0:text>
+      
+    
+      <ns0:text x="100" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">(20%)</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 230)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="250" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398541-3)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Evaluation Metrics</ns0:text>
+      
+    
+      <ns0:text x="200" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Regression Metrics</ns0:text>
+      
+    
+      <ns0:text x="70" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• MSE: Mean Squared Error</ns0:text>
+      
+    
+      <ns0:text x="70" y="125" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• MAE: Mean Absolute Error</ns0:text>
+      
+    
+      <ns0:text x="70" y="145" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• R²: R-squared</ns0:text>
+      
+    
+      <ns0:text x="70" y="165" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• RMSE: Root Mean Squared</ns0:text>
+      
+    
+      <ns0:text x="70" y="185" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• MAPE: Mean Absolute %</ns0:text>
+      
+    
+      <ns0:text x="70" y="205" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Explained Variance</ns0:text>
+      
+    
+      <ns0:text x="500" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Classification Metrics</ns0:text>
+      
+    
+      <ns0:text x="370" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Accuracy</ns0:text>
+      
+    
+      <ns0:text x="370" y="125" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Precision</ns0:text>
+      
+    
+      <ns0:text x="370" y="145" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Recall</ns0:text>
+      
+    
+      <ns0:text x="370" y="165" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• F1 Score</ns0:text>
+      
+    
+      <ns0:text x="370" y="185" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• AUC-ROC</ns0:text>
+      
+    
+      <ns0:text x="370" y="205" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Confusion Matrix</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    
+    <ns0:rect x="50" y="50" width="300" height="180" fill="#4f46e5" opacity="0.2" rx="4" stroke="#6366f1" stroke-width="1"/>
+    
+
+    
+    
+    <ns0:rect x="350" y="50" width="300" height="180" fill="#8b5cf6" opacity="0.2" rx="4" stroke="#a78bfa" stroke-width="1"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:path d="M 200.0 230.0 L 200.0 234.0 L 400.0 234.0 L 400.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 500.0 140.0 L 500.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 400.0 140.0 L 400.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+</ns0:svg>

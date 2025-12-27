@@ -1,92 +1,227 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
-    </marker>
-                  <clipPath id="clip-1765356398545-3">
-      <rect x="0" y="0" width="700" height="130" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398545-2">
-      <rect x="0" y="0" width="150" height="80" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398545-1">
-      <rect x="0" y="0" width="300" height="250" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398545-0">
-      <rect x="0" y="0" width="150" height="80" rx="8"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">BERT Architecture (Encoder-Only)</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+    
+    <ns0:marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      
+      
+      <ns0:polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+      
+    
+    </ns0:marker>
+    
+                  
+    <ns0:clipPath id="clip-1765356398545-3">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="130" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398545-2">
+      
+      
+      <ns0:rect x="0" y="0" width="150" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398545-1">
+      
+      
+      <ns0:rect x="0" y="0" width="300" height="250" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398545-0">
+      
+      
+      <ns0:rect x="0" y="0" width="150" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Input -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="150" height="80" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398545-0)">
-    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Input</text>
-    <text x="75" y="55" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Tokens</text>
-    </g>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Encoder Layers -->
-  <g transform="translate(250, 80)">
-
-    <rect x="0" y="0" width="300" height="250" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398545-1)">
-    <text x="150" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Encoder Stack</text>
-    <text x="150" y="70" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Self-Attention (Bidirectional)</text>
-    <text x="150" y="110" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Feed Forward</text>
-    <text x="150" y="150" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">...</text>
-    <text x="150" y="190" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Self-Attention</text>
-    <text x="150" y="230" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Feed Forward</text>
-    </g>
-
-    <rect x="20" y="50" width="260" height="30" fill="#34d399" opacity="0.4" rx="4"/>
-
-    <rect x="20" y="90" width="260" height="30" fill="#34d399" opacity="0.4" rx="4"/>
-
-    <rect x="20" y="170" width="260" height="30" fill="#34d399" opacity="0.4" rx="4"/>
-
-    <rect x="20" y="210" width="260" height="30" fill="#34d399" opacity="0.4" rx="4"/>
-
-  </g>
   
-  <!-- Output -->
-  <g transform="translate(600, 80)">
-
-    <rect x="0" y="0" width="150" height="80" fill="#f59e0b" opacity="0.3" rx="8" stroke="#fbbf24" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398545-2)">
-    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Output</text>
-    <text x="75" y="55" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Representations</text>
-    </g>
-
-  </g>
   
-  <!-- Arrows -->
-  <path d="M 150.0 105.0 L 150.0 105.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 675.0 120.0 L 675.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><!-- Characteristics -->
-  <g transform="translate(50, 350)">
-
-    <rect x="0" y="0" width="700" height="130" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398545-3)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">BERT Characteristics</text>
-    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Bidirectional</text>
-    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Sees context from both directions</text>
-    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Better for understanding</text>
-    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Masked LM</text>
-    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Pre-trained with masked tokens</text>
-    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Learns representations</text>
-    <text x="250" y="140" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#facc15" text-anchor="middle">Use Cases: Classification • Question answering • Named entity recognition • Understanding tasks</text>
-    </g>
-
-  </g>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
   
-</svg>
+  
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">BERT Architecture (Encoder-Only)</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="150" height="80" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398545-0)">
+      
+    
+      <ns0:text x="75" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Input</ns0:text>
+      
+    
+      <ns0:text x="75" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Tokens</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(250, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="300" height="250" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398545-1)">
+      
+    
+      <ns0:text x="150" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Encoder Stack</ns0:text>
+      
+    
+      <ns0:text x="150" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Self-Attention (Bidirectional)</ns0:text>
+      
+    
+      <ns0:text x="150" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Feed Forward</ns0:text>
+      
+    
+      <ns0:text x="150" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">...</ns0:text>
+      
+    
+      <ns0:text x="150" y="190" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Self-Attention</ns0:text>
+      
+    
+      <ns0:text x="150" y="230" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Feed Forward</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:rect x="20" y="50" width="260" height="30" fill="#34d399" opacity="0.4" rx="4"/>
+    
+
+    
+    <ns0:rect x="20" y="90" width="260" height="30" fill="#34d399" opacity="0.4" rx="4"/>
+    
+
+    
+    <ns0:rect x="20" y="170" width="260" height="30" fill="#34d399" opacity="0.4" rx="4"/>
+    
+
+    
+    <ns0:rect x="20" y="210" width="260" height="30" fill="#34d399" opacity="0.4" rx="4"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(600, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="150" height="80" fill="#f59e0b" opacity="0.3" rx="8" stroke="#fbbf24" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398545-2)">
+      
+    
+      <ns0:text x="75" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Output</ns0:text>
+      
+    
+      <ns0:text x="75" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Representations</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:path d="M 150.0 105.0 L 150.0 105.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 675.0 120.0 L 675.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  
+  
+  <ns0:g transform="translate(50, 350)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="130" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398545-3)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">BERT Characteristics</ns0:text>
+      
+    
+      <ns0:text x="100" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Bidirectional</ns0:text>
+      
+    
+      <ns0:text x="120" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Sees context from both directions</ns0:text>
+      
+    
+      <ns0:text x="120" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Better for understanding</ns0:text>
+      
+    
+      <ns0:text x="400" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Masked LM</ns0:text>
+      
+    
+      <ns0:text x="420" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Pre-trained with masked tokens</ns0:text>
+      
+    
+      <ns0:text x="420" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Learns representations</ns0:text>
+      
+    
+      <ns0:text x="250" y="140" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Use Cases: Classification • Question answering • Named entity recognition • Understanding tasks</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

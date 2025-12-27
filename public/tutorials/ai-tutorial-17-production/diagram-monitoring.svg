@@ -1,61 +1,149 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-                  <clipPath id="clip-1765356398553-0">
-      <rect x="0" y="0" width="700" height="380" rx="4"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Production Monitoring</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+                  
+    <ns0:clipPath id="clip-1765356398553-0">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="380" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Metrics -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="700" height="380" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398553-0)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Monitoring Metrics</text>
-    <text x="190" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Performance Metrics</text>
-    <text x="70" y="105" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Latency (p50, p95, p99)</text>
-    <text x="70" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Throughput (requests/sec)</text>
-    <text x="70" y="145" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Error rate</text>
-    <text x="70" y="165" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Queue depth</text>
-    <text x="70" y="185" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Resource utilization</text>
-    <text x="510" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Model Quality Metrics</text>
-    <text x="390" y="105" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Prediction distribution</text>
-    <text x="390" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Confidence scores</text>
-    <text x="390" y="145" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Drift detection</text>
-    <text x="390" y="165" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• A/B test results</text>
-    <text x="390" y="185" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Feedback loops</text>
-    <text x="190" y="245" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Data Quality</text>
-    <text x="70" y="270" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Input distribution</text>
-    <text x="70" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Missing values</text>
-    <text x="70" y="310" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Outliers</text>
-    <text x="70" y="330" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Schema changes</text>
-    <text x="510" y="245" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Business Metrics</text>
-    <text x="390" y="270" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• User satisfaction</text>
-    <text x="390" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Conversion rates</text>
-    <text x="390" y="310" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Revenue impact</text>
-    <text x="390" y="330" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Cost per prediction</text>
-    </g>
-
-    <!-- Performance -->
-    <rect x="50" y="50" width="280" height="150" fill="#4f46e5" opacity="0.2" rx="4" stroke="#6366f1" stroke-width="1"/>
-
-    <!-- Model Quality -->
-    <rect x="370" y="50" width="280" height="150" fill="#10b981" opacity="0.2" rx="4" stroke="#34d399" stroke-width="1"/>
-
-    <!-- Data Quality -->
-    <rect x="50" y="220" width="280" height="130" fill="#f59e0b" opacity="0.2" rx="4" stroke="#fbbf24" stroke-width="1"/>
-
-    <!-- Business Metrics -->
-    <rect x="370" y="220" width="280" height="130" fill="#8b5cf6" opacity="0.2" rx="4" stroke="#a78bfa" stroke-width="1"/>
-
-  </g>
+  </ns0:defs>
   
-</svg>
+  
+  
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Production Monitoring</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="700" height="380" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398553-0)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Monitoring Metrics</ns0:text>
+      
+    
+      <ns0:text x="190" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Performance Metrics</ns0:text>
+      
+    
+      <ns0:text x="70" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Latency (p50, p95, p99)</ns0:text>
+      
+    
+      <ns0:text x="70" y="125" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Throughput (requests/sec)</ns0:text>
+      
+    
+      <ns0:text x="70" y="145" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Error rate</ns0:text>
+      
+    
+      <ns0:text x="70" y="165" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Queue depth</ns0:text>
+      
+    
+      <ns0:text x="70" y="185" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Resource utilization</ns0:text>
+      
+    
+      <ns0:text x="510" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Model Quality Metrics</ns0:text>
+      
+    
+      <ns0:text x="390" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Prediction distribution</ns0:text>
+      
+    
+      <ns0:text x="390" y="125" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Confidence scores</ns0:text>
+      
+    
+      <ns0:text x="390" y="145" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Drift detection</ns0:text>
+      
+    
+      <ns0:text x="390" y="165" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• A/B test results</ns0:text>
+      
+    
+      <ns0:text x="390" y="185" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Feedback loops</ns0:text>
+      
+    
+      <ns0:text x="190" y="245" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Data Quality</ns0:text>
+      
+    
+      <ns0:text x="70" y="270" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Input distribution</ns0:text>
+      
+    
+      <ns0:text x="70" y="290" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Missing values</ns0:text>
+      
+    
+      <ns0:text x="70" y="310" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Outliers</ns0:text>
+      
+    
+      <ns0:text x="70" y="330" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Schema changes</ns0:text>
+      
+    
+      <ns0:text x="510" y="245" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Business Metrics</ns0:text>
+      
+    
+      <ns0:text x="390" y="270" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• User satisfaction</ns0:text>
+      
+    
+      <ns0:text x="390" y="290" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Conversion rates</ns0:text>
+      
+    
+      <ns0:text x="390" y="310" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Revenue impact</ns0:text>
+      
+    
+      <ns0:text x="390" y="330" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Cost per prediction</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    
+    <ns0:rect x="50" y="50" width="280" height="150" fill="#4f46e5" opacity="0.2" rx="4" stroke="#6366f1" stroke-width="1"/>
+    
+
+    
+    
+    <ns0:rect x="370" y="50" width="280" height="150" fill="#10b981" opacity="0.2" rx="4" stroke="#34d399" stroke-width="1"/>
+    
+
+    
+    
+    <ns0:rect x="50" y="220" width="280" height="130" fill="#f59e0b" opacity="0.2" rx="4" stroke="#fbbf24" stroke-width="1"/>
+    
+
+    
+    
+    <ns0:rect x="370" y="220" width="280" height="130" fill="#8b5cf6" opacity="0.2" rx="4" stroke="#a78bfa" stroke-width="1"/>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

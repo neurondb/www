@@ -1,105 +1,265 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
-    </marker>
-                  <clipPath id="clip-1765356398547-4">
-      <rect x="0" y="0" width="700" height="180" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398547-3">
-      <rect x="0" y="0" width="50" height="200" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398547-2">
-      <rect x="0" y="0" width="150" height="200" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398547-1">
-      <rect x="0" y="0" width="200" height="200" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398547-0">
-      <rect x="0" y="0" width="150" height="100" rx="8"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Vector Search Process</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+    
+    <ns0:marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      
+      
+      <ns0:polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+      
+    
+    </ns0:marker>
+    
+                  
+    <ns0:clipPath id="clip-1765356398547-4">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="180" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398547-3">
+      
+      
+      <ns0:rect x="0" y="0" width="50" height="200" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398547-2">
+      
+      
+      <ns0:rect x="0" y="0" width="150" height="200" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398547-1">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398547-0">
+      
+      
+      <ns0:rect x="0" y="0" width="150" height="100" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Query -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="150" height="100" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398547-0)">
-    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Query</text>
-    <text x="75" y="60" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Vector</text>
-    <text x="75" y="85" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">[0.2, 0.5, ...]</text>
-    </g>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Database -->
-  <g transform="translate(250, 80)">
-
-    <rect x="0" y="0" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398547-1)">
-    <text x="100" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Vector Database</text>
-    <text x="100" y="55" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Doc 1: [0.3, 0.4, ...]</text>
-    <text x="100" y="75" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Doc 2: [0.1, 0.6, ...]</text>
-    <text x="100" y="95" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Doc 3: [0.8, 0.2, ...]</text>
-    <text x="100" y="115" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Doc 4: [0.5, 0.3, ...]</text>
-    <text x="100" y="135" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Doc 5: [0.2, 0.7, ...]</text>
-    <text x="100" y="155" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">...</text>
-    <text x="100" y="175" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Millions of vectors</text>
-    </g>
-
-  </g>
   
-  <!-- Similarity -->
-  <g transform="translate(500, 80)">
-
-    <rect x="0" y="0" width="150" height="200" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398547-2)">
-    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Similarity</text>
-    <text x="75" y="60" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Compute</text>
-    <text x="75" y="85" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Cosine</text>
-    <text x="75" y="110" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Euclidean</text>
-    <text x="75" y="135" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Distance</text>
-    <text x="75" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">metrics</text>
-    </g>
-
-  </g>
   
-  <!-- Results -->
-  <g transform="translate(700, 80)">
-
-    <rect x="0" y="0" width="50" height="200" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398547-3)">
-    <text x="25" y="30" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Rank</text>
-    </g>
-
-  </g>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <!-- Arrows -->
-  <path d="M 125.0 130.0 L 350.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 350.0 180.0 L 575.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 575.0 180.0 L 725.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><!-- Results -->
-  <g transform="translate(50, 300)">
-
-    <rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398547-4)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Search Results (Top 5)</text>
-    <text x="70" y="75" font-family="monospace" font-size="11" fill="#10b981">1. Doc 2 - Similarity: 0.95</text>
-    <text x="70" y="95" font-family="monospace" font-size="11" fill="#10b981">2. Doc 5 - Similarity: 0.87</text>
-    <text x="70" y="115" font-family="monospace" font-size="11" fill="#10b981">3. Doc 1 - Similarity: 0.82</text>
-    <text x="70" y="135" font-family="monospace" font-size="11" fill="#10b981">4. Doc 4 - Similarity: 0.75</text>
-    <text x="70" y="155" font-family="monospace" font-size="11" fill="#10b981">5. Doc 3 - Similarity: 0.68</text>
-    <text x="350" y="180" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Results ranked by similarity score</text>
-    </g>
-
-    <rect x="50" y="50" width="600" height="110" fill="#10b981" opacity="0.1" rx="4"/>
-
-  </g>
   
-</svg>
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Vector Search Process</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="150" height="100" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398547-0)">
+      
+    
+      <ns0:text x="75" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Query</ns0:text>
+      
+    
+      <ns0:text x="75" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Vector</ns0:text>
+      
+    
+      <ns0:text x="75" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">[0.2, 0.5, ...]</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(250, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398547-1)">
+      
+    
+      <ns0:text x="100" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Vector Database</ns0:text>
+      
+    
+      <ns0:text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Doc 1: [0.3, 0.4, ...]</ns0:text>
+      
+    
+      <ns0:text x="100" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Doc 2: [0.1, 0.6, ...]</ns0:text>
+      
+    
+      <ns0:text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Doc 3: [0.8, 0.2, ...]</ns0:text>
+      
+    
+      <ns0:text x="100" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Doc 4: [0.5, 0.3, ...]</ns0:text>
+      
+    
+      <ns0:text x="100" y="135" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Doc 5: [0.2, 0.7, ...]</ns0:text>
+      
+    
+      <ns0:text x="100" y="155" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">...</ns0:text>
+      
+    
+      <ns0:text x="100" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Millions of vectors</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(500, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="150" height="200" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398547-2)">
+      
+    
+      <ns0:text x="75" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Similarity</ns0:text>
+      
+    
+      <ns0:text x="75" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Compute</ns0:text>
+      
+    
+      <ns0:text x="75" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Cosine</ns0:text>
+      
+    
+      <ns0:text x="75" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Euclidean</ns0:text>
+      
+    
+      <ns0:text x="75" y="135" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Distance</ns0:text>
+      
+    
+      <ns0:text x="75" y="160" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">metrics</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(700, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="50" height="200" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398547-3)">
+      
+    
+      <ns0:text x="25" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Rank</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:path d="M 125.0 130.0 L 350.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 350.0 180.0 L 575.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 575.0 180.0 L 725.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  
+  
+  <ns0:g transform="translate(50, 300)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398547-4)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Search Results (Top 5)</ns0:text>
+      
+    
+      <ns0:text x="70" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">1. Doc 2 - Similarity: 0.95</ns0:text>
+      
+    
+      <ns0:text x="70" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">2. Doc 5 - Similarity: 0.87</ns0:text>
+      
+    
+      <ns0:text x="70" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">3. Doc 1 - Similarity: 0.82</ns0:text>
+      
+    
+      <ns0:text x="70" y="135" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">4. Doc 4 - Similarity: 0.75</ns0:text>
+      
+    
+      <ns0:text x="70" y="155" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">5. Doc 3 - Similarity: 0.68</ns0:text>
+      
+    
+      <ns0:text x="350" y="180" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Results ranked by similarity score</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:rect x="50" y="50" width="600" height="110" fill="#10b981" opacity="0.1" rx="4"/>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

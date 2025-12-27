@@ -1,95 +1,240 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
-    </marker>
-                  <clipPath id="clip-1765356398549-3">
-      <rect x="0" y="0" width="700" height="300" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398549-2">
-      <rect x="0" y="0" width="200" height="80" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398549-1">
-      <rect x="0" y="0" width="200" height="80" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398549-0">
-      <rect x="0" y="0" width="200" height="80" rx="8"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Query Expansion</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+    
+    <ns0:marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      
+      
+      <ns0:polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+      
+    
+    </ns0:marker>
+    
+                  
+    <ns0:clipPath id="clip-1765356398549-3">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="300" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398549-2">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398549-1">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398549-0">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Original Query -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="200" height="80" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398549-0)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Original Query</text>
-    <text x="100" y="55" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">"machine learning"</text>
-    </g>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Expansion -->
-  <g transform="translate(300, 80)">
-
-    <rect x="0" y="0" width="200" height="80" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398549-1)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Expansion</text>
-    <text x="100" y="55" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">LLM/Embeddings</text>
-    </g>
-
-  </g>
   
-  <!-- Expanded Query -->
-  <g transform="translate(550, 80)">
-
-    <rect x="0" y="0" width="200" height="80" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398549-2)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Expanded Query</text>
-    <text x="100" y="55" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">"ML, AI, neural networks"</text>
-    </g>
-
-  </g>
   
-  <!-- Arrows -->
-  <path d="M 150.0 120.0 L 400.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 400.0 160.0 L 400.0 164.0 L 510.0 164.0 L 510.0 50.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><!-- Methods -->
-  <g transform="translate(50, 180)">
-
-    <rect x="0" y="0" width="700" height="300" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398549-3)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Query Expansion Methods</text>
-    <text x="190" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Synonym Expansion</text>
-    <text x="70" y="105" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Use word embeddings</text>
-    <text x="70" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Find similar terms</text>
-    <text x="70" y="145" font-family="monospace" font-size="10" fill="#cbd5e1">"car" → "vehicle", "automobile"</text>
-    <text x="70" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Simple and fast</text>
-    <text x="70" y="190" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Good for keyword matching</text>
-    <text x="70" y="210" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">May add noise</text>
-    <text x="70" y="230" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Limited context awareness</text>
-    <text x="70" y="250" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Requires embedding model</text>
-    <text x="510" y="75" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">LLM Expansion</text>
-    <text x="390" y="105" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Use LLM to generate</text>
-    <text x="390" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">related terms or queries</text>
-    <text x="390" y="145" font-family="monospace" font-size="10" fill="#cbd5e1">"ML" → "deep learning, AI"</text>
-    <text x="390" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Context-aware</text>
-    <text x="390" y="190" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Better quality expansions</text>
-    <text x="390" y="210" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">More expensive</text>
-    <text x="390" y="230" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Adds latency</text>
-    <text x="390" y="250" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Requires LLM API</text>
-    </g>
-
-    <rect x="50" y="50" width="280" height="230" fill="#4f46e5" opacity="0.2" rx="4" stroke="#6366f1" stroke-width="1"/>
-
-    <rect x="370" y="50" width="280" height="230" fill="#8b5cf6" opacity="0.2" rx="4" stroke="#a78bfa" stroke-width="1"/>
-
-  </g>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
   
-</svg>
+  
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Query Expansion</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="200" height="80" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398549-0)">
+      
+    
+      <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Original Query</ns0:text>
+      
+    
+      <ns0:text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">"machine learning"</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(300, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="200" height="80" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398549-1)">
+      
+    
+      <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Expansion</ns0:text>
+      
+    
+      <ns0:text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">LLM/Embeddings</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(550, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="200" height="80" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398549-2)">
+      
+    
+      <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Expanded Query</ns0:text>
+      
+    
+      <ns0:text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">"ML, AI, neural networks"</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:path d="M 150.0 120.0 L 400.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 400.0 160.0 L 400.0 164.0 L 510.0 164.0 L 510.0 50.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  
+  
+  <ns0:g transform="translate(50, 180)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="300" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398549-3)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Query Expansion Methods</ns0:text>
+      
+    
+      <ns0:text x="190" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Synonym Expansion</ns0:text>
+      
+    
+      <ns0:text x="70" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Use word embeddings</ns0:text>
+      
+    
+      <ns0:text x="70" y="125" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Find similar terms</ns0:text>
+      
+    
+      <ns0:text x="70" y="145" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">"car" → "vehicle", "automobile"</ns0:text>
+      
+    
+      <ns0:text x="70" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Simple and fast</ns0:text>
+      
+    
+      <ns0:text x="70" y="190" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Good for keyword matching</ns0:text>
+      
+    
+      <ns0:text x="70" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">May add noise</ns0:text>
+      
+    
+      <ns0:text x="70" y="230" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Limited context awareness</ns0:text>
+      
+    
+      <ns0:text x="70" y="250" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Requires embedding model</ns0:text>
+      
+    
+      <ns0:text x="510" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">LLM Expansion</ns0:text>
+      
+    
+      <ns0:text x="390" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Use LLM to generate</ns0:text>
+      
+    
+      <ns0:text x="390" y="125" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">related terms or queries</ns0:text>
+      
+    
+      <ns0:text x="390" y="145" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">"ML" → "deep learning, AI"</ns0:text>
+      
+    
+      <ns0:text x="390" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Context-aware</ns0:text>
+      
+    
+      <ns0:text x="390" y="190" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Better quality expansions</ns0:text>
+      
+    
+      <ns0:text x="390" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">More expensive</ns0:text>
+      
+    
+      <ns0:text x="390" y="230" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Adds latency</ns0:text>
+      
+    
+      <ns0:text x="390" y="250" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Requires LLM API</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:rect x="50" y="50" width="280" height="230" fill="#4f46e5" opacity="0.2" rx="4" stroke="#6366f1" stroke-width="1"/>
+    
+
+    
+    <ns0:rect x="370" y="50" width="280" height="230" fill="#8b5cf6" opacity="0.2" rx="4" stroke="#a78bfa" stroke-width="1"/>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

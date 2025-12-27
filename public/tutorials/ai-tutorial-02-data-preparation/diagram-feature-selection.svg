@@ -1,126 +1,330 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
-    </marker>
-                  <clipPath id="clip-1765356398539-4">
-      <rect x="0" y="20" width="200" height="150" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398539-3">
-      <rect x="0" y="20" width="200" height="150" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398539-2">
-      <rect x="0" y="20" width="200" height="200" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398539-1">
-      <rect x="0" y="20" width="200" height="200" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398539-0">
-      <rect x="0" y="20" width="200" height="200" rx="4"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Feature Selection Methods</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+    
+    <ns0:marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      
+      
+      <ns0:polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+      
+    
+    </ns0:marker>
+    
+                  
+    <ns0:clipPath id="clip-1765356398539-4">
+      
+      
+      <ns0:rect x="0" y="20" width="200" height="150" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398539-3">
+      
+      
+      <ns0:rect x="0" y="20" width="200" height="150" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398539-2">
+      
+      
+      <ns0:rect x="0" y="20" width="200" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398539-1">
+      
+      
+      <ns0:rect x="0" y="20" width="200" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398539-0">
+      
+      
+      <ns0:rect x="0" y="20" width="200" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- All Features -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="20" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398539-0)">
-    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">All Features (10):</text>
-    <text x="10" y="45" font-family="monospace" font-size="10" fill="#10b981">feature1 (high)</text>
-    <text x="10" y="65" font-family="monospace" font-size="10" fill="#10b981">feature2 (high)</text>
-    <text x="10" y="85" font-family="monospace" font-size="10" fill="#ef4444">feature3 (low)</text>
-    <text x="10" y="105" font-family="monospace" font-size="10" fill="#10b981">feature4 (high)</text>
-    <text x="10" y="125" font-family="monospace" font-size="10" fill="#ef4444">feature5 (low)</text>
-    <text x="10" y="145" font-family="monospace" font-size="10" fill="#10b981">feature6 (medium)</text>
-    <text x="10" y="165" font-family="monospace" font-size="10" fill="#ef4444">feature7 (low)</text>
-    <text x="10" y="185" font-family="monospace" font-size="10" fill="#10b981">feature8 (high)</text>
-    <text x="10" y="205" font-family="monospace" font-size="10" fill="#ef4444">feature9 (low)</text>
-    <text x="10" y="225" font-family="monospace" font-size="10" fill="#10b981">feature10 (medium)</text>
-    </g>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Filter Method -->
-  <g transform="translate(300, 80)">
-
-    <rect x="0" y="20" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398539-1)">
-    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Filter Method:</text>
-    <text x="10" y="45" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Uses statistical tests</text>
-    <text x="10" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Scores each feature</text>
-    <text x="10" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">independently</text>
-    <text x="10" y="110" font-family="monospace" font-size="10" fill="#10b981">Selected (5):</text>
-    <text x="10" y="130" font-family="monospace" font-size="10" fill="#10b981">feature1</text>
-    <text x="10" y="150" font-family="monospace" font-size="10" fill="#10b981">feature2</text>
-    <text x="10" y="170" font-family="monospace" font-size="10" fill="#10b981">feature4</text>
-    <text x="10" y="190" font-family="monospace" font-size="10" fill="#10b981">feature6</text>
-    <text x="10" y="210" font-family="monospace" font-size="10" fill="#10b981">feature8</text>
-    <text x="10" y="230" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">Fast, model-agnostic</text>
-    </g>
-
-  </g>
   
-  <!-- Wrapper Method -->
-  <g transform="translate(550, 80)">
-
-    <rect x="0" y="20" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398539-2)">
-    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Wrapper Method:</text>
-    <text x="10" y="45" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Uses model performance</text>
-    <text x="10" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Tests feature subsets</text>
-    <text x="10" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">with cross-validation</text>
-    <text x="10" y="110" font-family="monospace" font-size="10" fill="#10b981">Selected (4):</text>
-    <text x="10" y="130" font-family="monospace" font-size="10" fill="#10b981">feature1</text>
-    <text x="10" y="150" font-family="monospace" font-size="10" fill="#10b981">feature2</text>
-    <text x="10" y="170" font-family="monospace" font-size="10" fill="#10b981">feature4</text>
-    <text x="10" y="190" font-family="monospace" font-size="10" fill="#10b981">feature8</text>
-    <text x="10" y="230" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">Slower, model-specific</text>
-    </g>
-
-  </g>
   
-  <!-- Embedded Method -->
-  <g transform="translate(175, 320)">
-
-    <rect x="0" y="20" width="200" height="150" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398539-3)">
-    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Embedded Method:</text>
-    <text x="10" y="45" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Uses model internals</text>
-    <text x="10" y="65" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Feature importance</text>
-    <text x="10" y="85" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">or L1 regularization</text>
-    <text x="10" y="110" font-family="monospace" font-size="10" fill="#10b981">Selected (5):</text>
-    <text x="10" y="130" font-family="monospace" font-size="10" fill="#10b981">feature1, feature2</text>
-    <text x="10" y="150" font-family="monospace" font-size="10" fill="#10b981">feature4, feature6</text>
-    <text x="10" y="170" font-family="monospace" font-size="10" fill="#10b981">feature8</text>
-    </g>
-
-  </g>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <!-- Selected Features -->
-  <g transform="translate(425, 320)">
-
-    <rect x="0" y="20" width="200" height="150" fill="#10b981" opacity="0.2" rx="4" stroke="#34d399" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398539-4)">
-    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Selected Features:</text>
-    <text x="10" y="50" font-family="monospace" font-size="11" fill="#10b981">feature1</text>
-    <text x="10" y="70" font-family="monospace" font-size="11" fill="#10b981">feature2</text>
-    <text x="10" y="90" font-family="monospace" font-size="11" fill="#10b981">feature4</text>
-    <text x="10" y="110" font-family="monospace" font-size="11" fill="#10b981">feature6</text>
-    <text x="10" y="130" font-family="monospace" font-size="11" fill="#10b981">feature8</text>
-    <text x="10" y="155" font-family="system-ui, sans-serif" font-size="11" fill="#facc15">Reduced from 10 to 5</text>
-    <text x="10" y="170" font-family="system-ui, sans-serif" font-size="11" fill="#facc15">features (50% reduction)</text>
-    </g>
-
-  </g>
   
-  <!-- Arrows -->
-  <path d="M 150.0 300.0 L 150.0 304.0 L 400.0 304.0 L 400.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 400.0 300.0 L 400.0 304.0 L 650.0 304.0 L 650.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 400.0 300.0 L 400.0 304.0 L 275.0 304.0 L 275.0 340.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 400.0 300.0 L 400.0 304.0 L 525.0 304.0 L 525.0 340.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/></svg>
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Feature Selection Methods</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="20" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398539-0)">
+      
+    
+      <ns0:text x="0" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">All Features (10):</ns0:text>
+      
+    
+      <ns0:text x="10" y="45" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature1 (high)</ns0:text>
+      
+    
+      <ns0:text x="10" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature2 (high)</ns0:text>
+      
+    
+      <ns0:text x="10" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#ef4444" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature3 (low)</ns0:text>
+      
+    
+      <ns0:text x="10" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature4 (high)</ns0:text>
+      
+    
+      <ns0:text x="10" y="125" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#ef4444" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature5 (low)</ns0:text>
+      
+    
+      <ns0:text x="10" y="145" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature6 (medium)</ns0:text>
+      
+    
+      <ns0:text x="10" y="165" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#ef4444" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature7 (low)</ns0:text>
+      
+    
+      <ns0:text x="10" y="185" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature8 (high)</ns0:text>
+      
+    
+      <ns0:text x="10" y="205" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#ef4444" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature9 (low)</ns0:text>
+      
+    
+      <ns0:text x="10" y="225" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature10 (medium)</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(300, 80)">
+    
+
+    
+    <ns0:rect x="0" y="20" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398539-1)">
+      
+    
+      <ns0:text x="0" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Filter Method:</ns0:text>
+      
+    
+      <ns0:text x="10" y="45" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Uses statistical tests</ns0:text>
+      
+    
+      <ns0:text x="10" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Scores each feature</ns0:text>
+      
+    
+      <ns0:text x="10" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">independently</ns0:text>
+      
+    
+      <ns0:text x="10" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Selected (5):</ns0:text>
+      
+    
+      <ns0:text x="10" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature1</ns0:text>
+      
+    
+      <ns0:text x="10" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature2</ns0:text>
+      
+    
+      <ns0:text x="10" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature4</ns0:text>
+      
+    
+      <ns0:text x="10" y="190" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature6</ns0:text>
+      
+    
+      <ns0:text x="10" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature8</ns0:text>
+      
+    
+      <ns0:text x="10" y="230" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Fast, model-agnostic</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(550, 80)">
+    
+
+    
+    <ns0:rect x="0" y="20" width="200" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398539-2)">
+      
+    
+      <ns0:text x="0" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Wrapper Method:</ns0:text>
+      
+    
+      <ns0:text x="10" y="45" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Uses model performance</ns0:text>
+      
+    
+      <ns0:text x="10" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Tests feature subsets</ns0:text>
+      
+    
+      <ns0:text x="10" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">with cross-validation</ns0:text>
+      
+    
+      <ns0:text x="10" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Selected (4):</ns0:text>
+      
+    
+      <ns0:text x="10" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature1</ns0:text>
+      
+    
+      <ns0:text x="10" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature2</ns0:text>
+      
+    
+      <ns0:text x="10" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature4</ns0:text>
+      
+    
+      <ns0:text x="10" y="190" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature8</ns0:text>
+      
+    
+      <ns0:text x="10" y="230" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Slower, model-specific</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(175, 320)">
+    
+
+    
+    <ns0:rect x="0" y="20" width="200" height="150" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398539-3)">
+      
+    
+      <ns0:text x="0" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Embedded Method:</ns0:text>
+      
+    
+      <ns0:text x="10" y="45" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Uses model internals</ns0:text>
+      
+    
+      <ns0:text x="10" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Feature importance</ns0:text>
+      
+    
+      <ns0:text x="10" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">or L1 regularization</ns0:text>
+      
+    
+      <ns0:text x="10" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Selected (5):</ns0:text>
+      
+    
+      <ns0:text x="10" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature1, feature2</ns0:text>
+      
+    
+      <ns0:text x="10" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature4, feature6</ns0:text>
+      
+    
+      <ns0:text x="10" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature8</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(425, 320)">
+    
+
+    
+    <ns0:rect x="0" y="20" width="200" height="150" fill="#10b981" opacity="0.2" rx="4" stroke="#34d399" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398539-4)">
+      
+    
+      <ns0:text x="0" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Selected Features:</ns0:text>
+      
+    
+      <ns0:text x="10" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature1</ns0:text>
+      
+    
+      <ns0:text x="10" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature2</ns0:text>
+      
+    
+      <ns0:text x="10" y="90" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature4</ns0:text>
+      
+    
+      <ns0:text x="10" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature6</ns0:text>
+      
+    
+      <ns0:text x="10" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">feature8</ns0:text>
+      
+    
+      <ns0:text x="10" y="155" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#facc15" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Reduced from 10 to 5</ns0:text>
+      
+    
+      <ns0:text x="10" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#facc15" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">features (50% reduction)</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:path d="M 150.0 300.0 L 150.0 304.0 L 400.0 304.0 L 400.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 400.0 300.0 L 400.0 304.0 L 650.0 304.0 L 650.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 400.0 300.0 L 400.0 304.0 L 275.0 304.0 L 275.0 340.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 400.0 300.0 L 400.0 304.0 L 525.0 304.0 L 525.0 340.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+</ns0:svg>

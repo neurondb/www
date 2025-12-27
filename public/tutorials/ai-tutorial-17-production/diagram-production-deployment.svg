@@ -1,107 +1,266 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
-    </marker>
-                  <clipPath id="clip-1765356398553-4">
-      <rect x="0" y="0" width="700" height="160" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398553-3">
-      <rect x="0" y="0" width="700" height="80" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398553-2">
-      <rect x="0" y="0" width="300" height="120" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398553-1">
-      <rect x="0" y="0" width="150" height="80" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398553-0">
-      <rect x="0" y="0" width="150" height="80" rx="8"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Production Deployment Architecture</text>
-  
-  <!-- Users -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="150" height="80" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398553-0)">
-    <text x="75" y="30" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Users</text>
-    <text x="75" y="55" font-font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Clients</text>
-    </g>
-
-  </g>
-  
-  <!-- Load Balancer -->
-  <g transform="translate(250, 80)">
-
-    <rect x="0" y="0" width="150" height="80" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398553-1)">
-    <text x="75" y="30" font-font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Load</text>
-    <text x="75" y="55" font-font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Balancer</text>
-    </g>
-
-  </g>
-  
-  <!-- Model Servers -->
-  <g transform="translate(450, 80)">
-
-    <rect x="0" y="0" width="300" height="120" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398553-2)">
-    <text x="150" y="25" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Model Servers</text>
-    <text x="60" y="70" font-font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">Server 1</text>
-    <text x="160" y="70" font-font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">Server 2</text>
-    <text x="250" y="70" font-font-family="monospace" font-size="10" fill="#fff" text-anchor="middle">...</text>
-    </g>
-
-    <rect x="20" y="40" width="80" height="60" fill="#34d399" opacity="0.4" rx="4"/>
+  <ns0:defs>
     
-    <rect x="120" y="40" width="80" height="60" fill="#34d399" opacity="0.4" rx="4"/>
     
-    <rect x="220" y="40" width="60" height="60" fill="#34d399" opacity="0.4" rx="4"/>
-
-  </g>
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+    
+    <ns0:marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      
+      
+      <ns0:polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+      
+    
+    </ns0:marker>
+    
+                  
+    <ns0:clipPath id="clip-1765356398553-4">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="160" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398553-3">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="80" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398553-2">
+      
+      
+      <ns0:rect x="0" y="0" width="300" height="120" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398553-1">
+      
+      
+      <ns0:rect x="0" y="0" width="150" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398553-0">
+      
+      
+      <ns0:rect x="0" y="0" width="150" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Monitoring -->
-  <g transform="translate(50, 220)">
-
-    <rect x="0" y="0" width="700" height="80" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398553-3)">
-    <text x="350" y="25" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#facc15" text-anchor="middle">Monitoring &amp; Logging</text>
-    <text x="100" y="55" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Performance metrics</text>
-    <text x="300" y="55" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Error tracking</text>
-    <text x="500" y="55" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Latency monitoring</text>
-    </g>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Arrows -->
-  <path d="M 160.0 70.0 L 250.0 70.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 325.0 120.0 L 325.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><!-- Components -->
-  <g transform="translate(50, 320)">
-
-    <rect x="0" y="0" width="700" height="160" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398553-4)">
-    <text x="350" y="30" font-font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Production Components</text>
-    <text x="100" y="70" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Serving Infrastructure</text>
-    <text x="120" y="95" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">REST APIs, gRPC services</text>
-    <text x="120" y="115" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Load balancing, auto-scaling</text>
-    <text x="400" y="70" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Optimization</text>
-    <text x="420" y="95" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Model quantization, caching</text>
-    <text x="420" y="115" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Hardware acceleration</text>
-    <text x="100" y="150" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Monitoring</text>
-    <text x="120" y="175" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Track performance, errors, latency</text>
-    <text x="400" y="150" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Scaling</text>
-    <text x="420" y="175" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Horizontal and vertical scaling</text>
-    </g>
-
-  </g>
   
-</svg>
+  
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  
+  
+  <ns0:text x="400" y="35" font-font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Production Deployment Architecture</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="150" height="80" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398553-0)">
+      
+    
+      <ns0:text x="75" y="30" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Users</ns0:text>
+      
+    
+      <ns0:text x="75" y="55" font-font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Clients</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(250, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="150" height="80" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398553-1)">
+      
+    
+      <ns0:text x="75" y="30" font-font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Load</ns0:text>
+      
+    
+      <ns0:text x="75" y="55" font-font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Balancer</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(450, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="300" height="120" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398553-2)">
+      
+    
+      <ns0:text x="150" y="25" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Model Servers</ns0:text>
+      
+    
+      <ns0:text x="60" y="70" font-font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Server 1</ns0:text>
+      
+    
+      <ns0:text x="160" y="70" font-font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Server 2</ns0:text>
+      
+    
+      <ns0:text x="250" y="70" font-font-family="monospace" font-size="10" fill="#fff" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">...</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:rect x="20" y="40" width="80" height="60" fill="#34d399" opacity="0.4" rx="4"/>
+    
+    
+    
+    <ns0:rect x="120" y="40" width="80" height="60" fill="#34d399" opacity="0.4" rx="4"/>
+    
+    
+    
+    <ns0:rect x="220" y="40" width="60" height="60" fill="#34d399" opacity="0.4" rx="4"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 220)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="80" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398553-3)">
+      
+    
+      <ns0:text x="350" y="25" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#facc15" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Monitoring &amp; Logging</ns0:text>
+      
+    
+      <ns0:text x="100" y="55" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Performance metrics</ns0:text>
+      
+    
+      <ns0:text x="300" y="55" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Error tracking</ns0:text>
+      
+    
+      <ns0:text x="500" y="55" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Latency monitoring</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:path d="M 160.0 70.0 L 250.0 70.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 325.0 120.0 L 325.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  
+  
+  <ns0:g transform="translate(50, 320)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="160" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398553-4)">
+      
+    
+      <ns0:text x="350" y="30" font-font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Production Components</ns0:text>
+      
+    
+      <ns0:text x="100" y="70" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Serving Infrastructure</ns0:text>
+      
+    
+      <ns0:text x="120" y="95" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">REST APIs, gRPC services</ns0:text>
+      
+    
+      <ns0:text x="120" y="115" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Load balancing, auto-scaling</ns0:text>
+      
+    
+      <ns0:text x="400" y="70" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Optimization</ns0:text>
+      
+    
+      <ns0:text x="420" y="95" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Model quantization, caching</ns0:text>
+      
+    
+      <ns0:text x="420" y="115" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Hardware acceleration</ns0:text>
+      
+    
+      <ns0:text x="100" y="150" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Monitoring</ns0:text>
+      
+    
+      <ns0:text x="120" y="175" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Track performance, errors, latency</ns0:text>
+      
+    
+      <ns0:text x="400" y="150" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Scaling</ns0:text>
+      
+    
+      <ns0:text x="420" y="175" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Horizontal and vertical scaling</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

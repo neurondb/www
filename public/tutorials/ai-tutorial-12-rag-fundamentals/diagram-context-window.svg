@@ -1,66 +1,160 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-                  <clipPath id="clip-1765356398548-1">
-      <rect x="0" y="0" width="700" height="180" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398548-0">
-      <rect x="0" y="0" width="700" height="200" rx="4"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Context Window Management</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+                  
+    <ns0:clipPath id="clip-1765356398548-1">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="180" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398548-0">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Context Window -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398548-0)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Context Window Composition</text>
-    <text x="70" y="70" font-family="monospace" font-size="11" fill="#fff">System: You are a helpful assistant...</text>
-    <text x="70" y="110" font-family="monospace" font-size="11" fill="#fff">Context: [Retrieved document chunks]</text>
-    <text x="70" y="130" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">Multiple retrieved chunks</text>
-    <text x="70" y="170" font-family="monospace" font-size="11" fill="#fff">User: What is machine learning?</text>
-    <text x="350" y="210" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Total length must fit within model's context limit</text>
-    </g>
-
-    <!-- System Prompt -->
-    <rect x="50" y="50" width="600" height="30" fill="#4f46e5" opacity="0.3" rx="4"/>
-
-    <!-- Retrieved Context -->
-    <rect x="50" y="90" width="600" height="50" fill="#10b981" opacity="0.3" rx="4"/>
-
-    <!-- User Query -->
-    <rect x="50" y="150" width="600" height="30" fill="#f59e0b" opacity="0.3" rx="4"/>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Strategies -->
-  <g transform="translate(50, 300)">
-
-    <rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398548-1)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Context Window Strategies</text>
-    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Chunk Selection</text>
-    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Select most relevant chunks</text>
-    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Prioritize by relevance score</text>
-    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Truncation</text>
-    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Truncate if exceeds limit</text>
-    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Keep most important parts</text>
-    <text x="100" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Summarization</text>
-    <text x="120" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Summarize long contexts</text>
-    <text x="120" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Preserve key information</text>
-    <text x="400" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Sliding Window</text>
-    <text x="420" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Process in overlapping windows</text>
-    <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">For very long documents</text>
-    </g>
-
-  </g>
   
-</svg>
+  
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Context Window Management</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398548-0)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Context Window Composition</ns0:text>
+      
+    
+      <ns0:text x="70" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">System: You are a helpful assistant...</ns0:text>
+      
+    
+      <ns0:text x="70" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Context: [Retrieved document chunks]</ns0:text>
+      
+    
+      <ns0:text x="70" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Multiple retrieved chunks</ns0:text>
+      
+    
+      <ns0:text x="70" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">User: What is machine learning?</ns0:text>
+      
+    
+      <ns0:text x="350" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Total length must fit within model's context limit</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    
+    <ns0:rect x="50" y="50" width="600" height="30" fill="#4f46e5" opacity="0.3" rx="4"/>
+    
+
+    
+    
+    <ns0:rect x="50" y="90" width="600" height="50" fill="#10b981" opacity="0.3" rx="4"/>
+    
+
+    
+    
+    <ns0:rect x="50" y="150" width="600" height="30" fill="#f59e0b" opacity="0.3" rx="4"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 300)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398548-1)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Context Window Strategies</ns0:text>
+      
+    
+      <ns0:text x="100" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Chunk Selection</ns0:text>
+      
+    
+      <ns0:text x="120" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Select most relevant chunks</ns0:text>
+      
+    
+      <ns0:text x="120" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Prioritize by relevance score</ns0:text>
+      
+    
+      <ns0:text x="400" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Truncation</ns0:text>
+      
+    
+      <ns0:text x="420" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Truncate if exceeds limit</ns0:text>
+      
+    
+      <ns0:text x="420" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Keep most important parts</ns0:text>
+      
+    
+      <ns0:text x="100" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Summarization</ns0:text>
+      
+    
+      <ns0:text x="120" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Summarize long contexts</ns0:text>
+      
+    
+      <ns0:text x="120" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Preserve key information</ns0:text>
+      
+    
+      <ns0:text x="400" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Sliding Window</ns0:text>
+      
+    
+      <ns0:text x="420" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Process in overlapping windows</ns0:text>
+      
+    
+      <ns0:text x="420" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">For very long documents</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

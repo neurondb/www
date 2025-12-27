@@ -1,79 +1,195 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-                  <clipPath id="clip-1765356398544-2">
-      <rect x="0" y="0" width="700" height="200" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398544-1">
-      <rect x="0" y="0" width="320" height="180" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398544-0">
-      <rect x="0" y="0" width="320" height="180" rx="4"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Overfitting Problem</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+                  
+    <ns0:clipPath id="clip-1765356398544-2">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398544-1">
+      
+      
+      <ns0:rect x="0" y="0" width="320" height="180" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398544-0">
+      
+      
+      <ns0:rect x="0" y="0" width="320" height="180" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Training Performance -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="320" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398544-0)">
-    <text x="160" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Training Performance</text>
-    <text x="160" y="20" font-family="system-ui, sans-serif" font-size="12" fill="#10b981" text-anchor="middle">98% Accuracy</text>
-    <text x="160" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Epochs</text>
-    <text x="160" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#10b981" text-anchor="middle">Model memorizes training data</text>
-    </g>
-
-    <!-- High accuracy line -->
-    <line x1="20" y1="150" x2="300" y2="30" stroke="#10b981" stroke-width="3"/>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Test Performance -->
-  <g transform="translate(430, 80)">
-
-    <rect x="0" y="0" width="320" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398544-1)">
-    <text x="160" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">Test Performance</text>
-    <text x="160" y="60" font-family="system-ui, sans-serif" font-size="12" fill="#ef4444" text-anchor="middle">45% Accuracy</text>
-    <text x="160" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Epochs</text>
-    <text x="160" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">Fails on new data</text>
-    </g>
-
-    <!-- Low accuracy line -->
-    <line x1="20" y1="80" x2="100" y2="70" stroke="#ef4444" stroke-width="2"/>
-    <line x1="100" y1="70" x2="300" y2="150" stroke="#ef4444" stroke-width="3"/>
-
-  </g>
   
-  <!-- Gap -->
-  <g transform="translate(50, 280)">
-
-    <rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398544-2)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Overfitting Indicators</text>
-    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ef4444">Large Gap</text>
-    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Training accuracy: 98%</text>
-    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Test accuracy: 45%</text>
-    <text x="120" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Gap: 53% (overfitting)</text>
-    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Good Fit</text>
-    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Training accuracy: 85%</text>
-    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Test accuracy: 82%</text>
-    <text x="420" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Gap: 3% (good generalization)</text>
-    <text x="250" y="170" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#facc15" text-anchor="middle">Solutions to Overfitting</text>
-    <text x="250" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Regularization (L1, L2, dropout)</text>
-    <text x="250" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• More training data</text>
-    <text x="250" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Simpler model architecture</text>
-    <text x="250" y="255" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">• Early stopping</text>
-    </g>
-
-  </g>
   
-</svg>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Overfitting Problem</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="320" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398544-0)">
+      
+    
+      <ns0:text x="160" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Training Performance</ns0:text>
+      
+    
+      <ns0:text x="160" y="20" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#10b981" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">98% Accuracy</ns0:text>
+      
+    
+      <ns0:text x="160" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Epochs</ns0:text>
+      
+    
+      <ns0:text x="160" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#10b981" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Model memorizes training data</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    
+    <ns0:line x1="20" y1="150" x2="300" y2="30" stroke="#10b981" stroke-width="3"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(430, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="320" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398544-1)">
+      
+    
+      <ns0:text x="160" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Test Performance</ns0:text>
+      
+    
+      <ns0:text x="160" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#ef4444" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">45% Accuracy</ns0:text>
+      
+    
+      <ns0:text x="160" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Epochs</ns0:text>
+      
+    
+      <ns0:text x="160" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#ef4444" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Fails on new data</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    
+    <ns0:line x1="20" y1="80" x2="100" y2="70" stroke="#ef4444" stroke-width="2"/>
+    
+    
+    <ns0:line x1="100" y1="70" x2="300" y2="150" stroke="#ef4444" stroke-width="3"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 280)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398544-2)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Overfitting Indicators</ns0:text>
+      
+    
+      <ns0:text x="100" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ef4444" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Large Gap</ns0:text>
+      
+    
+      <ns0:text x="120" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Training accuracy: 98%</ns0:text>
+      
+    
+      <ns0:text x="120" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Test accuracy: 45%</ns0:text>
+      
+    
+      <ns0:text x="120" y="135" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Gap: 53% (overfitting)</ns0:text>
+      
+    
+      <ns0:text x="400" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Good Fit</ns0:text>
+      
+    
+      <ns0:text x="420" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Training accuracy: 85%</ns0:text>
+      
+    
+      <ns0:text x="420" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Test accuracy: 82%</ns0:text>
+      
+    
+      <ns0:text x="420" y="135" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Gap: 3% (good generalization)</ns0:text>
+      
+    
+      <ns0:text x="250" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Solutions to Overfitting</ns0:text>
+      
+    
+      <ns0:text x="250" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Regularization (L1, L2, dropout)</ns0:text>
+      
+    
+      <ns0:text x="250" y="215" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• More training data</ns0:text>
+      
+    
+      <ns0:text x="250" y="235" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Simpler model architecture</ns0:text>
+      
+    
+      <ns0:text x="250" y="255" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Early stopping</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

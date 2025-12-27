@@ -1,11 +1,11 @@
-<svg width="1200" height="820" viewBox="0 0 1200 820" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="820" viewBox="0 0 1200 820" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="workflowBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
     </linearGradient>
     <marker id="arrowWorkflow" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+      <polygon points="0 0, 6 2, 0 4" fill="currentColor"/>
     </marker>
       <clipPath id="clip-9">
       <rect x="0" y="0" width="1100" height="140" rx="8"/>
@@ -18,25 +18,25 @@
 
     <rect x="0" y="0" width="200" height="110" fill="#4f46e5" opacity="0.2" rx="8" stroke="#6366f1" stroke-width="2"/>
     <g clip-path="url(#clip-0)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#4f46e5" text-anchor="middle">1. Problem</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#4f46e5" text-anchor="middle">Definition</text>
-    <text x="100" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Define goals</text>
-    <text x="100" y="88" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">and metrics</text>
-    <text x="100" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Set constraints</text>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#4f46e5" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">1. Problem>
+    <text x="100" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#4f46e5" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Definition>
+    <text x="100" y="72" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Define goals>
+    <text x="100" y="88" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">and metrics>
+    <text x="100" y="104" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Set constraints>
     </g>
   
-  </g>" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle">Machine Learning Workflow</t<g transform="translate(300, 90)">
+  </g>" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle">Machine Learning Workflow</t<g transform="translate(300, 90)">
 
     <rect x="0" y="0" width="200" height="110" fill="#10b981" opacity="0.2" rx="8" stroke="#22c55e" stroke-width="2"/>
     <g clip-path="url(#clip-1)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle">2. Data</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle">Collection</text>
-    <text x="100" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Gather examples</text>
-    <text x="100" y="88" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">from sources</text>
-    <text x="100" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Assess quality</text>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">2. Data>
+    <text x="100" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Collection>
+    <text x="100" y="72" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Gather examples>
+    <text x="100" y="88" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">from sources>
+    <text x="100" y="104" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Assess quality>
     </g>
   
-  </g>="middle">Set constraints</text>
+  </g>="middle">Set constraints>
   </g>
   
   <!-- Data Collection -->
@@ -45,11 +45,11 @@
 
     <rect x="0" y="0" width="200" height="110" fill="#f59e0b" opacity="0.2" rx="8" stroke="#fbbf24" stroke-width="2"/>
     <g clip-path="url(#clip-2)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">3. Data</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle">Preparation</text>
-    <text x="100" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Clean and</text>
-    <text x="100" y="88" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">transform</text>
-    <text x="100" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Split data</text>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">3. Data>
+    <text x="100" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Preparation>
+    <text x="100" y="72" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Clean and>
+    <text x="100" y="88" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">transform>
+    <text x="100" y="104" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Split data>
     </g>
   
   </g>late(550, 90)">
@@ -58,121 +58,121 @@
 
     <rect x="0" y="0" width="200" height="110" fill="#8b5cf6" opacity="0.2" rx="8" stroke="#a78bfa" stroke-width="2"/>
     <g clip-path="url(#clip-3)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#8b5cf6" text-anchor="middle">4. Algorithm</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Selection</text>
-    <text x="100" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Choose model</text>
-    <text x="100" y="88" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">type</text>
-    <text x="100" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Match problem</text>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#8b5cf6" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">4. Algorithm>
+    <text x="100" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#8b5cf6" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Selection>
+    <text x="100" y="72" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Choose model>
+    <text x="100" y="88" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">type>
+    <text x="100" y="104" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Match problem>
     </g>
   
   </g>#a78bfa" stroke-width="2"/>
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#8b5cf<g transform="translate(1050, 90)">
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#8b5cf<g transform="translate(1050, 90)" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">
 
     <rect x="0" y="0" width="200" height="110" fill="#ec4899" opacity="0.2" rx="8" stroke="#f472b6" stroke-width="2"/>
     <g clip-path="url(#clip-4)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ec4899" text-anchor="middle">5. Model</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ec4899" text-anchor="middle">Training</text>
-    <text x="100" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Train model</text>
-    <text x="100" y="88" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Monitor</text>
-    <text x="100" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Tune params</text>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ec4899" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">5. Model>
+    <text x="100" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ec4899" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Training>
+    <text x="100" y="72" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Train model>
+    <text x="100" y="88" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Monitor>
+    <text x="100" y="104" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Tune params>
     </g>
   
-  </g>="16" font-weight="bold" fill="#ec4899" text-anchor="middle">5. Model</text>
-    <text x="100" y="50" font-family="system-ui, sans-<g transform="translate(800, 270)">
+  </g>="16" font-weight="bold" fill="#ec4899" text-anchor="middle">5. Model>
+    <text x="100" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"translate(800, 270)" dominant-baseline="middle">
 
     <rect x="0" y="0" width="200" height="110" fill="#ef4444" opacity="0.2" rx="8" stroke="#f87171" stroke-width="2"/>
     <g clip-path="url(#clip-5)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">6. Evaluation</text>
-    <text x="100" y="52" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Test on</text>
-    <text x="100" y="68" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">held-out data</text>
-    <text x="100" y="84" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Calculate metrics</text>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">6. Evaluation>
+    <text x="100" y="52" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Test on>
+    <text x="100" y="68" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">held-out data>
+    <text x="100" y="84" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Calculate metrics>
     </g>
   
-  </g>system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">6. Evaluation</text>
-    <text x="100"<g transform="translate(550, 270)">
+  </g>system-ui, sans-serif" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">6. Evaluation>
+    <text x="100"<g transform="translate(550, 270)" dominant-baseline="middle">
 
     <rect x="0" y="0" width="200" height="110" fill="#06b6d4" opacity="0.2" rx="8" stroke="#22d3ee" stroke-width="2"/>
     <g clip-path="url(#clip-6)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#06b6d4" text-anchor="middle">7. Deployment</text>
-    <text x="100" y="52" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Deploy to</text>
-    <text x="100" y="68" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">production</text>
-    <text x="100" y="84" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Monitor</text>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#06b6d4" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">7. Deployment>
+    <text x="100" y="52" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Deploy to>
+    <text x="100" y="68" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">production>
+    <text x="100" y="84" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Monitor>
     </g>
   
-  </g>>7. Deployment</text>
-    <text x="100" y="52" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Deploy to</<g transform="translate(300, 270)">
+  </g>>7. Deployment>
+    <text x="100" y="52" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Deploy to</<g transform="translate(300, 270)">
 
     <rect x="0" y="0" width="200" height="110" fill="#14b8a6" opacity="0.2" rx="8" stroke="#2dd4bf" stroke-width="2"/>
     <g clip-path="url(#clip-7)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#14b8a6" text-anchor="middle">8. Monitor</text>
-    <text x="100" y="50" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#14b8a6" text-anchor="middle">&amp; Maintain</text>
-    <text x="100" y="72" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Track</text>
-    <text x="100" y="88" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">performance</text>
-    <text x="100" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Retrain</text>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#14b8a6" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">8. Monitor>
+    <text x="100" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#14b8a6" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">&amp; Maintain>
+    <text x="100" y="72" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Track>
+    <text x="100" y="88" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">performance>
+    <text x="100" y="104" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Retrain>
     </g>
   
-  </g>l="#cbd5e1" text-anchor="middle">Track</text>
-    <text x="100" y="88" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">performance</text>
-    <text x="100" y="104" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Retrain</text>
+  </g>l="#cbd5e1" text-anchor="middle">Track>
+    <text x="100" y="88" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">performance>
+    <text x="100" y="104" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Retrain>
   </g>
   
   <!-- Arrows - following pattern: center-bottom -> down 4px -> horizontal -> center-top -->
   <!-- All arrows start from center-bottom of source box and end at center-top of target box -->
   
   <!-- 1 to 2: Box 1 center-bottom (150,200) to Box 2 center-top (400,90) -->
-  <path d="M 150.0 200.0 L 150.0 204.0 L 400.0 204.0 L 400.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- 2 to 3: Box 2 center-bottom (400,200) to Box 3 center-top (650,90) -->
-  <path d="M 400.0 200.0 L 400.0 204.0 L 650.0 204.0 L 650.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- 3 to 4: Box 3 center-bottom (650,200) to Box 4 center-top (900,90) -->
-  <path d="M 650.0 200.0 L 650.0 204.0 L 900.0 204.0 L 900.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- 4 to 5: Box 4 center-bottom (900,200) to Box 5 center-top (1150,90) -->
-  <path d="M 900.0 200.0 L 900.0 204.0 L 1150.0 204.0 L 1150.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- 5 to 6: Different row - Box 5 center-bottom (1150,200) to Box 6 center-top (900,270) -->
-  <path d="M 1150.0 200.0 L 1150.0 204.0 L 900.0 204.0 L 900.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- 6 to 7: Box 6 center-bottom (900,380) to Box 7 center-top (650,270) -->
-  <path d="M 900.0 380.0 L 900.0 384.0 L 650.0 384.0 L 650.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- 7 to 8: Box 7 center-bottom (650,380) to Box 8 center-top (400,270) -->
-  <path d="M 650.0 380.0 L 650.0 384.0 L 400.0 384.0 L 400.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" opacity="0.8"/><!-- 8 to 1: Different row - Box 8 center-bottom (400,380) to Box 1 center-top (150,90) -->
+  <path d="M 150.0 200.0 L 150.0 204.0 L 400.0 204.0 L 400.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" style="color: inherit;" opacity="0.8"/><!-- 2 to 3: Box 2 center-bottom (400,200) to Box 3 center-top (650,90) -->
+  <path d="M 400.0 200.0 L 400.0 204.0 L 650.0 204.0 L 650.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" style="color: inherit;" opacity="0.8"/><!-- 3 to 4: Box 3 center-bottom (650,200) to Box 4 center-top (900,90) -->
+  <path d="M 650.0 200.0 L 650.0 204.0 L 900.0 204.0 L 900.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" style="color: inherit;" opacity="0.8"/><!-- 4 to 5: Box 4 center-bottom (900,200) to Box 5 center-top (1150,90) -->
+  <path d="M 900.0 200.0 L 900.0 204.0 L 1150.0 204.0 L 1150.0 90.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" style="color: inherit;" opacity="0.8"/><!-- 5 to 6: Different row - Box 5 center-bottom (1150,200) to Box 6 center-top (900,270) -->
+  <path d="M 1150.0 200.0 L 1150.0 204.0 L 900.0 204.0 L 900.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" style="color: inherit;" opacity="0.8"/><!-- 6 to 7: Box 6 center-bottom (900,380) to Box 7 center-top (650,270) -->
+  <path d="M 900.0 380.0 L 900.0 384.0 L 650.0 384.0 L 650.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" style="color: inherit;" opacity="0.8"/><!-- 7 to 8: Box 7 center-bottom (650,380) to Box 8 center-top (400,270) -->
+  <path d="M 650.0 380.0 L 650.0 384.0 L 400.0 384.0 L 400.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowWorkflow)" style="color: inherit;" opacity="0.8"/><!-- 8 to 1: Different row - Box 8 center-bottom (400,380) to Box 1 center-top (150,90) -->
   <path d="M 40<g transform="translate(50, 450)">
 
     <rect x="0" y="0" width="1100" height="155" fill="#1e293b" rx="8" stroke="#475569" stroke-width="2"/>
     <g clip-path="url(#clip-8)">
-    <text x="550" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Iterative Process</text>
-    <text x="100" y="58" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Each stage informs the next</text>
-    <text x="100" y="76" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Iterate based on results</text>
-    <text x="100" y="94" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Continuous improvement</text>
-    <text x="100" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Monitor and adjust</text>
-    <text x="100" y="130" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Retrain with new data</text>
-    <text x="400" y="58" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Update models regularly</text>
-    <text x="400" y="76" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Document decisions</text>
-    <text x="400" y="94" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Version control</text>
-    <text x="400" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Track experiments</text>
-    <text x="400" y="130" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• A/B testing</text>
-    <text x="700" y="58" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Performance metrics</text>
-    <text x="700" y="76" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Error analysis</text>
-    <text x="700" y="94" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Model versioning</text>
-    <text x="700" y="112" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Reproducibility</text>
-    <text x="700" y="130" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Collaboration tools</text>
+    <text x="550" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Iterative Process>
+    <text x="100" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Each stage informs the next>
+    <text x="100" y="76" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Iterate based on results>
+    <text x="100" y="94" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Continuous improvement>
+    <text x="100" y="112" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Monitor and adjust>
+    <text x="100" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Retrain with new data>
+    <text x="400" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Update models regularly>
+    <text x="400" y="76" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Document decisions>
+    <text x="400" y="94" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Version control>
+    <text x="400" y="112" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Track experiments>
+    <text x="400" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• A/B testing>
+    <text x="700" y="58" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Performance metrics>
+    <text x="700" y="76" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Error analysis>
+    <text x="700" y="94" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Model versioning>
+    <text x="700" y="112" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Reproducibility>
+    <text x="700" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Collaboration tools>
     </g>
   
-  </g>y="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Reproducibility</text>
-    <text x="700" y="130" font-family="system-ui, sans-<g transform="translate(50, 635)">
+  </g>y="system-ui, sans-serif" font-size="10" fill="#cbd5e1">• Reproducibility>
+    <text x="700" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"translate(50, 635)" dominant-baseline="middle">
 
     <rect x="0" y="0" width="1100" height="140" fill="#1e293b" rx="8" stroke="#475569" stroke-width="2"/>
     <g clip-path="url(#clip-9)">
-    <text x="550" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Key Principles</text>
-    <text x="100" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#4f46e5" text-anchor="middle">Problem</text>
-    <text x="100" y="85" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#4f46e5" text-anchor="middle">Definition</text>
-    <text x="100" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Clear objectives</text>
-    <text x="283" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981" text-anchor="middle">Data</text>
-    <text x="283" y="85" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981" text-anchor="middle">Quality</text>
-    <text x="283" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Representative data</text>
-    <text x="466" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Model</text>
-    <text x="466" y="85" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Development</text>
-    <text x="466" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Start simple</text>
-    <text x="649" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#ef4444" text-anchor="middle">Evaluation</text>
-    <text x="649" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Test unseen data</text>
-    <text x="832" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4" text-anchor="middle">Deployment</text>
-    <text x="832" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Monitor</text>
-    <text x="1015" y="65" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#14b8a6" text-anchor="middle">Iteration</text>
-    <text x="1015" y="110" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Improve</text>
+    <text x="550" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Key Principles>
+    <text x="100" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#4f46e5" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Problem>
+    <text x="100" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#4f46e5" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Definition>
+    <text x="100" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Clear objectives>
+    <text x="283" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Data>
+    <text x="283" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Quality>
+    <text x="283" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Representative data>
+    <text x="466" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#8b5cf6" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Model>
+    <text x="466" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#8b5cf6" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Development>
+    <text x="466" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Start simple>
+    <text x="649" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ef4444" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Evaluation>
+    <text x="649" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Test unseen data>
+    <text x="832" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Deployment>
+    <text x="832" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Monitor>
+    <text x="1015" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#14b8a6" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Iteration>
+    <text x="1015" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Improve>
     </g>
   
-  </g>-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Improve</text>
+  </g>-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">Improve>
   </g>
   
 </svg>

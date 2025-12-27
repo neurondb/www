@@ -1,60 +1,138 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-                  <clipPath id="clip-1765356398550-1">
-      <rect x="0" y="0" width="700" height="50" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398550-0">
-      <rect x="0" y="0" width="700" height="350" rx="4"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Prompt Structure</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+                  
+    <ns0:clipPath id="clip-1765356398550-1">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="50" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398550-0">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="350" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Prompt Components -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="700" height="350" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398550-0)">
-    <text x="30" y="50" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff">Instruction:</text>
-    <text x="30" y="70" font-family="monospace" font-size="11" fill="#cbd5e1">Classify the sentiment of the following text as positive, negative, or neutral</text>
-    <text x="30" y="130" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff">Context:</text>
-    <text x="30" y="150" font-family="monospace" font-size="11" fill="#cbd5e1">Sentiment analysis determines emotional tone of text</text>
-    <text x="30" y="210" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff">Examples:</text>
-    <text x="30" y="230" font-family="monospace" font-size="11" fill="#cbd5e1">Text: "I love this product" → Sentiment: positive</text>
-    <text x="30" y="290" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff">Query:</text>
-    <text x="30" y="310" font-family="monospace" font-size="11" fill="#cbd5e1">Text: "This is terrible"</text>
-    <text x="350" y="360" font-family="system-ui, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Output Format: Return only the sentiment label</text>
-    </g>
-
-    <!-- Instruction -->
-    <rect x="20" y="30" width="660" height="60" fill="#4f46e5" opacity="0.3" rx="4"/>
-
-    <!-- Context -->
-    <rect x="20" y="110" width="660" height="60" fill="#8b5cf6" opacity="0.3" rx="4"/>
-
-    <!-- Examples -->
-    <rect x="20" y="190" width="660" height="60" fill="#ec4899" opacity="0.3" rx="4"/>
-
-    <!-- Query -->
-    <rect x="20" y="270" width="660" height="60" fill="#10b981" opacity="0.3" rx="4"/>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Principles -->
-  <g transform="translate(50, 450)">
-
-    <rect x="0" y="0" width="700" height="50" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398550-1)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="13" fill="#facc15" text-anchor="middle">Principles: Be specific • Provide context • Use examples • Specify output format • Clear instructions</text>
-    </g>
-
-  </g>
   
-</svg>
+  
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Prompt Structure</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="700" height="350" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398550-0)">
+      
+    
+      <ns0:text x="30" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#fff" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Instruction:</ns0:text>
+      
+    
+      <ns0:text x="30" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Classify the sentiment of the following text as positive, negative, or neutral</ns0:text>
+      
+    
+      <ns0:text x="30" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#fff" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Context:</ns0:text>
+      
+    
+      <ns0:text x="30" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Sentiment analysis determines emotional tone of text</ns0:text>
+      
+    
+      <ns0:text x="30" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#fff" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Examples:</ns0:text>
+      
+    
+      <ns0:text x="30" y="230" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Text: "I love this product" → Sentiment: positive</ns0:text>
+      
+    
+      <ns0:text x="30" y="290" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#fff" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Query:</ns0:text>
+      
+    
+      <ns0:text x="30" y="310" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Text: "This is terrible"</ns0:text>
+      
+    
+      <ns0:text x="350" y="360" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Output Format: Return only the sentiment label</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    
+    <ns0:rect x="20" y="30" width="660" height="60" fill="#4f46e5" opacity="0.3" rx="4"/>
+    
+
+    
+    
+    <ns0:rect x="20" y="110" width="660" height="60" fill="#8b5cf6" opacity="0.3" rx="4"/>
+    
+
+    
+    
+    <ns0:rect x="20" y="190" width="660" height="60" fill="#ec4899" opacity="0.3" rx="4"/>
+    
+
+    
+    
+    <ns0:rect x="20" y="270" width="660" height="60" fill="#10b981" opacity="0.3" rx="4"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 450)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="50" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398550-1)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Principles: Be specific • Provide context • Use examples • Specify output format • Clear instructions</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

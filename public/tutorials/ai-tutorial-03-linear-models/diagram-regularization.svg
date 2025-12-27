@@ -1,83 +1,203 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-                  <clipPath id="clip-1765356398541-2">
-      <rect x="0" y="0" width="700" height="200" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398541-1">
-      <rect x="0" y="0" width="320" height="180" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398541-0">
-      <rect x="0" y="0" width="320" height="180" rx="4"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Regularization Effects</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+                  
+    <ns0:clipPath id="clip-1765356398541-2">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398541-1">
+      
+      
+      <ns0:rect x="0" y="0" width="320" height="180" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398541-0">
+      
+      
+      <ns0:rect x="0" y="0" width="320" height="180" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Without Regularization -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="320" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398541-0)">
-    <text x="160" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">Without Regularization</text>
-    <text x="160" y="80" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">Weights can be large</text>
-    <text x="160" y="105" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">w₁ = 100.5</text>
-    <text x="160" y="130" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">w₂ = -85.3</text>
-    <text x="160" y="155" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">w₃ = 120.8</text>
-    <text x="160" y="175" font-family="system-ui, sans-serif" font-size="10" fill="#ef4444" text-anchor="middle">Risk of overfitting</text>
-    </g>
-
-    <!-- Large weights -->
-    <rect x="50" y="50" width="220" height="100" fill="#ef4444" opacity="0.3" rx="4"/>
-
-  </g>
+  </ns0:defs>
   
-  <!-- With Regularization -->
-  <g transform="translate(430, 80)">
-
-    <rect x="0" y="0" width="320" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398541-1)">
-    <text x="160" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">With Regularization</text>
-    <text x="160" y="80" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">Weights are smaller</text>
-    <text x="160" y="105" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">w₁ = 2.5</text>
-    <text x="160" y="130" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">w₂ = -1.8</text>
-    <text x="160" y="155" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">w₃ = 3.2</text>
-    <text x="160" y="175" font-family="system-ui, sans-serif" font-size="10" fill="#10b981" text-anchor="middle">Better generalization</text>
-    </g>
-
-    <!-- Small weights -->
-    <rect x="50" y="50" width="220" height="100" fill="#10b981" opacity="0.3" rx="4"/>
-
-  </g>
   
-  <!-- L1 vs L2 -->
-  <g transform="translate(50, 280)">
-
-    <rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398541-2)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">L1 vs L2 Regularization</text>
-    <text x="190" y="75" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">L1 Regularization (Lasso)</text>
-    <text x="70" y="100" font-family="monospace" font-size="11" fill="#cbd5e1">Cost = Loss + λΣ|w|</text>
-    <text x="70" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Encourages sparsity</text>
-    <text x="70" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Some weights become zero</text>
-    <text x="70" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Feature selection</text>
-    <text x="510" y="75" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">L2 Regularization (Ridge)</text>
-    <text x="390" y="100" font-family="monospace" font-size="11" fill="#cbd5e1">Cost = Loss + λΣw²</text>
-    <text x="390" y="120" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Shrinks all weights</text>
-    <text x="390" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Weights approach zero</text>
-    <text x="390" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Prevents large weights</text>
-    </g>
-
-    <rect x="50" y="50" width="280" height="130" fill="#4f46e5" opacity="0.2" rx="4" stroke="#6366f1" stroke-width="1"/>
-
-    <rect x="370" y="50" width="280" height="130" fill="#8b5cf6" opacity="0.2" rx="4" stroke="#a78bfa" stroke-width="1"/>
-
-  </g>
   
-</svg>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Regularization Effects</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="320" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398541-0)">
+      
+    
+      <ns0:text x="160" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Without Regularization</ns0:text>
+      
+    
+      <ns0:text x="160" y="80" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Weights can be large</ns0:text>
+      
+    
+      <ns0:text x="160" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">w₁ = 100.5</ns0:text>
+      
+    
+      <ns0:text x="160" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">w₂ = -85.3</ns0:text>
+      
+    
+      <ns0:text x="160" y="155" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">w₃ = 120.8</ns0:text>
+      
+    
+      <ns0:text x="160" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#ef4444" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Risk of overfitting</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    
+    <ns0:rect x="50" y="50" width="220" height="100" fill="#ef4444" opacity="0.3" rx="4"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(430, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="320" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398541-1)">
+      
+    
+      <ns0:text x="160" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">With Regularization</ns0:text>
+      
+    
+      <ns0:text x="160" y="80" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Weights are smaller</ns0:text>
+      
+    
+      <ns0:text x="160" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">w₁ = 2.5</ns0:text>
+      
+    
+      <ns0:text x="160" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">w₂ = -1.8</ns0:text>
+      
+    
+      <ns0:text x="160" y="155" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">w₃ = 3.2</ns0:text>
+      
+    
+      <ns0:text x="160" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Better generalization</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    
+    <ns0:rect x="50" y="50" width="220" height="100" fill="#10b981" opacity="0.3" rx="4"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 280)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398541-2)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">L1 vs L2 Regularization</ns0:text>
+      
+    
+      <ns0:text x="190" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">L1 Regularization (Lasso)</ns0:text>
+      
+    
+      <ns0:text x="70" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Cost = Loss + λΣ|w|</ns0:text>
+      
+    
+      <ns0:text x="70" y="120" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Encourages sparsity</ns0:text>
+      
+    
+      <ns0:text x="70" y="140" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Some weights become zero</ns0:text>
+      
+    
+      <ns0:text x="70" y="160" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Feature selection</ns0:text>
+      
+    
+      <ns0:text x="510" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">L2 Regularization (Ridge)</ns0:text>
+      
+    
+      <ns0:text x="390" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Cost = Loss + λΣw²</ns0:text>
+      
+    
+      <ns0:text x="390" y="120" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Shrinks all weights</ns0:text>
+      
+    
+      <ns0:text x="390" y="140" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Weights approach zero</ns0:text>
+      
+    
+      <ns0:text x="390" y="160" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Prevents large weights</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:rect x="50" y="50" width="280" height="130" fill="#4f46e5" opacity="0.2" rx="4" stroke="#6366f1" stroke-width="1"/>
+    
+
+    
+    <ns0:rect x="370" y="50" width="280" height="130" fill="#8b5cf6" opacity="0.2" rx="4" stroke="#a78bfa" stroke-width="1"/>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

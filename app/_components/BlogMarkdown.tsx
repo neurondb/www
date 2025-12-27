@@ -7,6 +7,17 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { Highlight, themes } from 'prism-react-renderer';
 
+// Deterministic, render-safe hash for stable DOM ids (avoids hydration issues)
+const stableHash = (input: string): string => {
+  let hash = 2166136261; // FNV-1a 32-bit offset basis
+  for (let i = 0; i < input.length; i++) {
+    hash ^= input.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  // Convert to unsigned and base36 to keep it short
+  return (hash >>> 0).toString(36);
+};
+
 // Helper function to style arrows and numbered items in text
 const styleSpecialChars = (text: string): React.ReactNode => {
   if (typeof text !== 'string') return text;
@@ -144,6 +155,17 @@ export function BlogMarkdown({ children }: { children: string }) {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
+        /* Figure numbering (CSS counters) — avoids JS counters during render (prevents hydration mismatch) */
+        article {
+          counter-reset: figure;
+        }
+        article figure {
+          counter-increment: figure;
+        }
+        article figure figcaption a.figure-link::after {
+          content: " " counter(figure);
+        }
+
         article [data-inline-list="true"] li:not(:last-child)::after {
           content: ' • ';
           color: rgb(234 179 8);
@@ -185,6 +207,21 @@ export function BlogMarkdown({ children }: { children: string }) {
         article table td:not(:first-child) {
           color: rgba(255, 255, 255, 0.95);
         }
+
+        /* Half-size diagrams (PNG) */
+        article img.blog-diagram-half {
+          display: block;
+          margin: 0 auto;
+          max-width: 50%;
+          width: 100%;
+          height: auto;
+        }
+        @media (max-width: 768px) {
+          article img.blog-diagram-half {
+            max-width: 100%;
+          }
+        }
+
         /* Ensure list items keep content inline */
         article ul li,
         article ol li {
@@ -227,6 +264,26 @@ export function BlogMarkdown({ children }: { children: string }) {
         article ul li pre,
         article ol li pre {
           display: block !important;
+        }
+        /* Figure styling */
+        article figure {
+          margin: 2rem 0;
+        }
+        article figure figcaption {
+          margin-top: 0.75rem;
+          font-size: 0.9rem;
+          color: rgba(255, 255, 255, 0.8);
+          font-style: italic;
+          text-align: center;
+        }
+        article figure figcaption a {
+          color: #60a5fa;
+          text-decoration: none;
+          font-weight: 600;
+        }
+        article figure figcaption a:hover {
+          text-decoration: underline;
+          color: #93c5fd;
         }
       `}} />
       <article ref={articleRef} className="prose dark:prose-invert max-w-7xl mx-auto py-12 px-6 overflow-hidden">
@@ -620,6 +677,11 @@ export function BlogMarkdown({ children }: { children: string }) {
             const alt = ((props as any).alt as string | undefined) || 'Blog image'
             if (!src) return null
             
+            // Skip figure numbering for header images
+            const isHeader = src.includes('header.svg') || src.includes('header.png')
+            // Deterministic figure id (stable across server/client)
+            const figureId = !isHeader ? `figure-${stableHash(src)}` : ''
+            
             // For SVGs, use regular img tag for better compatibility
             const isSVG = src.toLowerCase().endsWith('.svg')
             
@@ -631,21 +693,39 @@ export function BlogMarkdown({ children }: { children: string }) {
             // Check if this is a diagram that should be half size (architecture or onprem-cloud comparison)
             const isHalfSizeDiagram = src.includes('architecture.png') || src.includes('onprem-cloud-comparison.png')
             
-            // Add cache busting for SVGs in development only
-            // In production, rely on proper cache headers and version control
-            const finalSrc = isSVG && process.env.NODE_ENV === 'development' 
-              ? `${src}?t=${Date.now()}` 
-              : src
+            // IMPORTANT: Do not add non-deterministic cache-busting params here (causes hydration mismatch).
+            // If you need cache busting, version the URL in markdown (e.g. /path.svg?v=2).
+            const finalSrc = src
+
+            // SVG sizing:
+            // Many diagrams are authored at large artboard sizes (e.g. 1200px wide). Rendering them at 100% width
+            // makes them feel oversized on wide screens. Cap their max width while keeping them responsive.
+            const isSvgDiagram = isSVG && !isHeader && (src.includes('/blog/') || src.includes('/tutorials/'))
+            const svgMaxWidth = isSvgDiagram ? '980px' : '100%'
             
             // Return as a block-level element to prevent nesting in paragraphs
-            return (
-              <div style={{ borderRadius: 12, marginBottom: 40, maxWidth: '100%', width: '100%', boxShadow: '0 10px 25px rgba(0,0,0,0.3)', overflow: 'visible', display: 'block', textAlign: 'center', backgroundColor: 'transparent', minHeight: '400px' }}>
+            const wrapperStyle: React.CSSProperties = { 
+              borderRadius: 12, 
+              marginBottom: 40, 
+              marginTop: 20, 
+              maxWidth: '100%', 
+              width: '100%', 
+              overflow: 'visible', 
+              display: 'block', 
+              textAlign: 'center', 
+              backgroundColor: 'transparent', 
+              scrollMarginTop: '100px',
+              padding: '0'
+            }
+            
+            const imageContent = (
+              <>
                 {isSVG ? (
                   <img
                     key={finalSrc}
                     src={finalSrc}
                     alt={alt}
-                    style={{ width: '100%', height: 'auto', maxWidth: '100%', display: 'block', margin: '0 auto', visibility: 'visible', objectFit: 'contain' }}
+                    style={{ width: '100%', height: 'auto', maxWidth: svgMaxWidth, display: 'block', margin: '0 auto', visibility: 'visible', objectFit: 'contain' }}
                     loading="lazy"
                     decoding="async"
                     onError={(e) => {
@@ -668,11 +748,41 @@ export function BlogMarkdown({ children }: { children: string }) {
                     alt={alt}
                     width={isHalfSizeDiagram ? 640 : (isSmallDiagram ? 1000 : 1280)}
                     height={isHalfSizeDiagram ? 375 : (isSmallDiagram ? 600 : 750)}
-                    style={{ width: '100%', height: 'auto', maxWidth: isHalfSizeDiagram ? '50%' : (isSmallDiagram ? '700px' : '100%'), margin: '0 auto', display: 'block' }}
+                    className={isHalfSizeDiagram ? 'blog-diagram-half' : undefined}
+                    style={{ width: '100%', height: 'auto', maxWidth: isHalfSizeDiagram ? undefined : (isSmallDiagram ? '700px' : '100%'), margin: '0 auto', display: 'block' }}
                     unoptimized
                   />
                 )}
-              </div>
+              </>
+            )
+            
+            // If header, return without figure wrapper
+            if (isHeader) {
+              return (
+                <div style={wrapperStyle}>
+                  {imageContent}
+                </div>
+              )
+            }
+            
+            // Otherwise, wrap in figure tag with caption and number
+            return (
+              <figure id={figureId} style={wrapperStyle}>
+                {imageContent}
+                <figcaption style={{ marginTop: '12px', fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.8)', fontStyle: 'italic', textAlign: 'center' }}>
+                  <strong>
+                    <a
+                      href={`#${figureId}`}
+                      className="figure-link"
+                      style={{ color: '#60a5fa', textDecoration: 'none' }}
+                    >
+                      Figure
+                    </a>
+                    :
+                  </strong>{' '}
+                  {alt}
+                </figcaption>
+              </figure>
             )
           },
 

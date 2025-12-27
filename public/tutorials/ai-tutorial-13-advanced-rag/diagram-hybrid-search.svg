@@ -1,101 +1,249 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
-    </marker>
-                  <clipPath id="clip-1765356398549-5">
-      <rect x="0" y="0" width="700" height="70" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398549-4">
-      <rect x="0" y="0" width="150" height="80" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398549-3">
-      <rect x="0" y="0" width="150" height="80" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398549-2">
-      <rect x="0" y="0" width="150" height="80" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398549-1">
-      <rect x="0" y="0" width="150" height="80" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398549-0">
-      <rect x="0" y="0" width="150" height="80" rx="8"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Hybrid Search</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+    
+    <ns0:marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      
+      
+      <ns0:polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+      
+    
+    </ns0:marker>
+    
+                  
+    <ns0:clipPath id="clip-1765356398549-5">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="70" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398549-4">
+      
+      
+      <ns0:rect x="0" y="0" width="150" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398549-3">
+      
+      
+      <ns0:rect x="0" y="0" width="150" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398549-2">
+      
+      
+      <ns0:rect x="0" y="0" width="150" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398549-1">
+      
+      
+      <ns0:rect x="0" y="0" width="150" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398549-0">
+      
+      
+      <ns0:rect x="0" y="0" width="150" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Query -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="150" height="80" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398549-0)">
-    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Query</text>
-    </g>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Semantic -->
-  <g transform="translate(250, 80)">
-
-    <rect x="0" y="0" width="150" height="80" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398549-1)">
-    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Semantic</text>
-    <text x="75" y="55" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">Embedding</text>
-    </g>
-
-  </g>
   
-  <!-- Keyword -->
-  <g transform="translate(450, 80)">
-
-    <rect x="0" y="0" width="150" height="80" fill="#f59e0b" opacity="0.3" rx="8" stroke="#fbbf24" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398549-2)">
-    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Keyword</text>
-    <text x="75" y="55" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">TF-IDF</text>
-    </g>
-
-  </g>
   
-  <!-- Combine -->
-  <g transform="translate(325, 200)">
-
-    <rect x="0" y="0" width="150" height="80" fill="#8b5cf6" opacity="0.4" rx="8" stroke="#a78bfa" stroke-width="3"/>
-    <g clip-path="url(#clip-1765356398549-3)">
-    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Combine</text>
-    <text x="75" y="55" font-family="monospace" font-size="12" fill="#cbd5e1" text-anchor="middle">Fusion</text>
-    </g>
-
-  </g>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <!-- Results -->
-  <g transform="translate(325, 320)">
-
-    <rect x="0" y="0" width="150" height="80" fill="#10b981" opacity="0.4" rx="8" stroke="#34d399" stroke-width="3"/>
-    <g clip-path="url(#clip-1765356398549-4)">
-    <text x="75" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Results</text>
-    <text x="75" y="55" font-family="monospace" font-size="12" fill="#cbd5e1" text-anchor="middle">Ranked</text>
-    </g>
-
-  </g>
   
-  <!-- Arrows -->
-  <path d="M 125.0 120.0 L 325.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 325.0 120.0 L 525.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 525.0 160.0 L 525.0 164.0 L 400.0 164.0 L 400.0 200.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 325.0 160.0 L 325.0 164.0 L 400.0 164.0 L 400.0 200.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 400.0 280.0 L 400.0 284.0 L 400.0 320.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><!-- Fusion Methods -->
-  <g transform="translate(50, 420)">
-
-    <rect x="0" y="0" width="700" height="70" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398549-5)">
-    <text x="350" y="25" font-family="system-ui, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Fusion Methods: Reciprocal Rank Fusion • Weighted Combination • Score Normalization</text>
-    <text x="350" y="50" font-family="system-ui, sans-serif" font-size="12" fill="#facc15" text-anchor="middle">Hybrid = α × Semantic + (1-α) × Keyword (typically α = 0.5-0.7)</text>
-    </g>
-
-  </g>
   
-</svg>
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Hybrid Search</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="150" height="80" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398549-0)">
+      
+    
+      <ns0:text x="75" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Query</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(250, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="150" height="80" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398549-1)">
+      
+    
+      <ns0:text x="75" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Semantic</ns0:text>
+      
+    
+      <ns0:text x="75" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Embedding</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(450, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="150" height="80" fill="#f59e0b" opacity="0.3" rx="8" stroke="#fbbf24" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398549-2)">
+      
+    
+      <ns0:text x="75" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Keyword</ns0:text>
+      
+    
+      <ns0:text x="75" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">TF-IDF</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(325, 200)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="150" height="80" fill="#8b5cf6" opacity="0.4" rx="8" stroke="#a78bfa" stroke-width="3"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398549-3)">
+      
+    
+      <ns0:text x="75" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Combine</ns0:text>
+      
+    
+      <ns0:text x="75" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Fusion</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(325, 320)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="150" height="80" fill="#10b981" opacity="0.4" rx="8" stroke="#34d399" stroke-width="3"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398549-4)">
+      
+    
+      <ns0:text x="75" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Results</ns0:text>
+      
+    
+      <ns0:text x="75" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Ranked</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:path d="M 125.0 120.0 L 325.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 325.0 120.0 L 525.0 120.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 525.0 160.0 L 525.0 164.0 L 400.0 164.0 L 400.0 200.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 325.0 160.0 L 325.0 164.0 L 400.0 164.0 L 400.0 200.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 400.0 280.0 L 400.0 284.0 L 400.0 320.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  
+  
+  <ns0:g transform="translate(50, 420)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="70" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398549-5)">
+      
+    
+      <ns0:text x="350" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Fusion Methods: Reciprocal Rank Fusion • Weighted Combination • Score Normalization</ns0:text>
+      
+    
+      <ns0:text x="350" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Hybrid = α × Semantic + (1-α) × Keyword (typically α = 0.5-0.7)</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

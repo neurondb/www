@@ -1,126 +1,308 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-                  <clipPath id="clip-1765356398553-3">
-      <rect x="0" y="0" width="700" height="200" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398553-2">
-      <rect x="0" y="0" width="220" height="180" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398553-1">
-      <rect x="0" y="0" width="220" height="180" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398553-0">
-      <rect x="0" y="0" width="220" height="180" rx="4"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Attention Mechanisms</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+                  
+    <ns0:clipPath id="clip-1765356398553-3">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398553-2">
+      
+      
+      <ns0:rect x="0" y="0" width="220" height="180" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398553-1">
+      
+      
+      <ns0:rect x="0" y="0" width="220" height="180" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398553-0">
+      
+      
+      <ns0:rect x="0" y="0" width="220" height="180" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Self-Attention -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398553-0)">
-    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">Self-Attention</text>
-    <text x="60" y="85" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">A</text>
-    <text x="110" y="85" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">B</text>
-    <text x="160" y="85" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">C</text>
-    <text x="110" y="140" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">All tokens attend</text>
-    <text x="110" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">to all tokens</text>
-    </g>
-
-    <circle cx="60" cy="80" r="20" fill="#06b6d4" opacity="0.3"/>
-
-    <circle cx="110" cy="80" r="20" fill="#06b6d4" opacity="0.3"/>
-
-    <circle cx="160" cy="80" r="20" fill="#06b6d4" opacity="0.3"/>
-
-    <line x1="60" y1="100" x2="110" y2="100" stroke="#facc15" stroke-width="1"/>
-    <line x1="60" y1="100" x2="160" y2="100" stroke="#facc15" stroke-width="1"/>
-    <line x1="110" y1="100" x2="160" y2="100" stroke="#facc15" stroke-width="1"/>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Cross-Attention -->
-  <g transform="translate(290, 80)">
-
-    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398553-1)">
-    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">Cross-Attention</text>
-    <text x="60" y="85" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">Q</text>
-    <text x="110" y="85" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">K</text>
-    <text x="160" y="85" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">V</text>
-    <text x="110" y="135" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">O</text>
-    <text x="110" y="160" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Query attends to keys</text>
-    </g>
-
-    <circle cx="60" cy="80" r="20" fill="#06b6d4" opacity="0.3"/>
-
-    <circle cx="110" cy="80" r="20" fill="#06b6d4" opacity="0.3"/>
-
-    <circle cx="160" cy="80" r="20" fill="#06b6d4" opacity="0.3"/>
-
-    <circle cx="110" cy="130" r="20" fill="#10b981" opacity="0.3"/>
-
-    <line x1="60" y1="100" x2="110" y2="110" stroke="#facc15" stroke-width="1"/>
-    <line x1="110" y1="100" x2="110" y2="110" stroke="#facc15" stroke-width="1"/>
-    <line x1="160" y1="100" x2="110" y2="110" stroke="#facc15" stroke-width="1"/>
-
-  </g>
   
-  <!-- Multi-Head -->
-  <g transform="translate(530, 80)">
-
-    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398553-2)">
-    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">Multi-Head</text>
-    <text x="60" y="70" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">Head 1</text>
-    <text x="160" y="70" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">Head 2</text>
-    <text x="60" y="110" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">Head 3</text>
-    <text x="160" y="110" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">Head 4</text>
-    <text x="110" y="160" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">Concatenate</text>
-    <text x="110" y="190" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Multiple attention patterns</text>
-    </g>
-
-    <rect x="20" y="50" width="80" height="30" fill="#f59e0b" opacity="0.3" rx="4"/>
-
-    <rect x="120" y="50" width="80" height="30" fill="#f59e0b" opacity="0.3" rx="4"/>
-
-    <rect x="20" y="90" width="80" height="30" fill="#f59e0b" opacity="0.3" rx="4"/>
-
-    <rect x="120" y="90" width="80" height="30" fill="#f59e0b" opacity="0.3" rx="4"/>
-
-    <rect x="60" y="140" width="100" height="30" fill="#10b981" opacity="0.3" rx="4"/>
-
-  </g>
   
-  <!-- Comparison -->
-  <g transform="translate(50, 280)">
-
-    <rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398553-3)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Attention Mechanism Benefits</text>
-    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Context Awareness</text>
-    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Captures relationships</text>
-    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Long-range dependencies</text>
-    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Parallelization</text>
-    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">All positions computed</text>
-    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">in parallel</text>
-    <text x="100" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Interpretability</text>
-    <text x="120" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Attention weights show</text>
-    <text x="120" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">what model focuses on</text>
-    <text x="400" y="150" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Flexibility</text>
-    <text x="420" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Adapts to input length</text>
-    <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Variable sequence handling</text>
-    </g>
-
-  </g>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
   
-</svg>
+  
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Attention Mechanisms</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398553-0)">
+      
+    
+      <ns0:text x="110" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Self-Attention</ns0:text>
+      
+    
+      <ns0:text x="60" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">A</ns0:text>
+      
+    
+      <ns0:text x="110" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">B</ns0:text>
+      
+    
+      <ns0:text x="160" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">C</ns0:text>
+      
+    
+      <ns0:text x="110" y="140" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">All tokens attend</ns0:text>
+      
+    
+      <ns0:text x="110" y="160" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">to all tokens</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:circle cx="60" cy="80" r="20" fill="#06b6d4" opacity="0.3"/>
+    
+
+    
+    <ns0:circle cx="110" cy="80" r="20" fill="#06b6d4" opacity="0.3"/>
+    
+
+    
+    <ns0:circle cx="160" cy="80" r="20" fill="#06b6d4" opacity="0.3"/>
+    
+
+    
+    <ns0:line x1="60" y1="100" x2="110" y2="100" stroke="#facc15" stroke-width="1"/>
+    
+    
+    <ns0:line x1="60" y1="100" x2="160" y2="100" stroke="#facc15" stroke-width="1"/>
+    
+    
+    <ns0:line x1="110" y1="100" x2="160" y2="100" stroke="#facc15" stroke-width="1"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(290, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398553-1)">
+      
+    
+      <ns0:text x="110" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Cross-Attention</ns0:text>
+      
+    
+      <ns0:text x="60" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Q</ns0:text>
+      
+    
+      <ns0:text x="110" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">K</ns0:text>
+      
+    
+      <ns0:text x="160" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">V</ns0:text>
+      
+    
+      <ns0:text x="110" y="135" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">O</ns0:text>
+      
+    
+      <ns0:text x="110" y="160" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Query attends to keys</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:circle cx="60" cy="80" r="20" fill="#06b6d4" opacity="0.3"/>
+    
+
+    
+    <ns0:circle cx="110" cy="80" r="20" fill="#06b6d4" opacity="0.3"/>
+    
+
+    
+    <ns0:circle cx="160" cy="80" r="20" fill="#06b6d4" opacity="0.3"/>
+    
+
+    
+    <ns0:circle cx="110" cy="130" r="20" fill="#10b981" opacity="0.3"/>
+    
+
+    
+    <ns0:line x1="60" y1="100" x2="110" y2="110" stroke="#facc15" stroke-width="1"/>
+    
+    
+    <ns0:line x1="110" y1="100" x2="110" y2="110" stroke="#facc15" stroke-width="1"/>
+    
+    
+    <ns0:line x1="160" y1="100" x2="110" y2="110" stroke="#facc15" stroke-width="1"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(530, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398553-2)">
+      
+    
+      <ns0:text x="110" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Multi-Head</ns0:text>
+      
+    
+      <ns0:text x="60" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Head 1</ns0:text>
+      
+    
+      <ns0:text x="160" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Head 2</ns0:text>
+      
+    
+      <ns0:text x="60" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Head 3</ns0:text>
+      
+    
+      <ns0:text x="160" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Head 4</ns0:text>
+      
+    
+      <ns0:text x="110" y="160" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Concatenate</ns0:text>
+      
+    
+      <ns0:text x="110" y="190" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Multiple attention patterns</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:rect x="20" y="50" width="80" height="30" fill="#f59e0b" opacity="0.3" rx="4"/>
+    
+
+    
+    <ns0:rect x="120" y="50" width="80" height="30" fill="#f59e0b" opacity="0.3" rx="4"/>
+    
+
+    
+    <ns0:rect x="20" y="90" width="80" height="30" fill="#f59e0b" opacity="0.3" rx="4"/>
+    
+
+    
+    <ns0:rect x="120" y="90" width="80" height="30" fill="#f59e0b" opacity="0.3" rx="4"/>
+    
+
+    
+    <ns0:rect x="60" y="140" width="100" height="30" fill="#10b981" opacity="0.3" rx="4"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 280)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398553-3)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Attention Mechanism Benefits</ns0:text>
+      
+    
+      <ns0:text x="100" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Context Awareness</ns0:text>
+      
+    
+      <ns0:text x="120" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Captures relationships</ns0:text>
+      
+    
+      <ns0:text x="120" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Long-range dependencies</ns0:text>
+      
+    
+      <ns0:text x="400" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Parallelization</ns0:text>
+      
+    
+      <ns0:text x="420" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">All positions computed</ns0:text>
+      
+    
+      <ns0:text x="420" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">in parallel</ns0:text>
+      
+    
+      <ns0:text x="100" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Interpretability</ns0:text>
+      
+    
+      <ns0:text x="120" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Attention weights show</ns0:text>
+      
+    
+      <ns0:text x="120" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">what model focuses on</ns0:text>
+      
+    
+      <ns0:text x="400" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Flexibility</ns0:text>
+      
+    
+      <ns0:text x="420" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Adapts to input length</ns0:text>
+      
+    
+      <ns0:text x="420" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Variable sequence handling</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

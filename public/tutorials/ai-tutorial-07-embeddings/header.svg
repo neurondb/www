@@ -1,4 +1,4 @@
-<svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="400" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGrad7" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#030609;stop-opacity:1" />
@@ -36,7 +36,7 @@
   
   <!-- Icon -->
   <g transform="translate(100, 140)" opacity="0.5">
-    <text x="0" y="0" font-family="Arial, sans-serif" font-size="100" fill="#06b6d4" text-anchor="middle">🔢</text>
+    <text x="0" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="100" fill="#06b6d4" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">🔢</text>
   </g>
   
   <!-- Subtle grid pattern -->
@@ -49,15 +49,16 @@
   </g>
   
   <!-- Main Title -->
-  <text x="600" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#facc15" text-anchor="middle" letter-s<g transform="translate(600, 275)">
+  <text x="600" y="140" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="700" fill="#facc15" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle"><tspan x="600" dy="0">AI Tutorial 07: Embeddings: Representing</tspan>
+    <tspan x="600" dy="46">Data as Vectors</tspan></text>
+<g transform="translate(600, 275)" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">
 
     <rect x="-325" y="-30" width="650" height="60" rx="30" fill="rgba(15, 23, 42, 0.8)" stroke="#3b82f6" stroke-width="1.5" opacity="0.8"/>
     <g clip-path="url(#clip-0)">
-    <text x="-180" y="8" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="start" font-weight="500">Tutorial 07</text>
-    <text x="-20" y="8" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#3b82f6" text-anchor="start" font-weight="600">Intermediate</text>
-    <text x="140" y="8" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#cbd5e1" text-anchor="start">Vector Embeddings</text>
+    <text x="-180" y="8" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#e2e8f0" text-anchor="start" font-weight="500" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Tutorial 07</text>
+    <text x="-20" y="8" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#3b82f6" text-anchor="start" font-weight="600" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Intermediate</text>
+    <text x="140" y="8" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#cbd5e1" text-anchor="start" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Vector Embeddings</text>
     </g>
   
-  </g>-apple-system, sans-serif" font-size="16" fill="#cbd5e1" text-anchor="start">Vector Embeddings</text>
   </g>
 </svg>

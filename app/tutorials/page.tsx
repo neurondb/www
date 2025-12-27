@@ -247,7 +247,7 @@ const TutorialCard = ({ tutorial }: { tutorial: typeof tutorials[0] }) => {
               alt={tutorial.title}
               width={1200}
               height={400}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain bg-slate-950"
               unoptimized
             />
             <div className="absolute top-4 left-4 bg-slate-950/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg border border-slate-800">

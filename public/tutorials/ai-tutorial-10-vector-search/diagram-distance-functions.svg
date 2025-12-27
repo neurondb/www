@@ -1,102 +1,258 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-                  <clipPath id="clip-1765356398546-3">
-      <rect x="0" y="0" width="700" height="200" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398546-2">
-      <rect x="0" y="0" width="220" height="180" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398546-1">
-      <rect x="0" y="0" width="220" height="180" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398546-0">
-      <rect x="0" y="0" width="220" height="180" rx="4"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Distance Functions</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+                  
+    <ns0:clipPath id="clip-1765356398546-3">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398546-2">
+      
+      
+      <ns0:rect x="0" y="0" width="220" height="180" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398546-1">
+      
+      
+      <ns0:rect x="0" y="0" width="220" height="180" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398546-0">
+      
+      
+      <ns0:rect x="0" y="0" width="220" height="180" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- L2 -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398546-0)">
-    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">L2 (Euclidean)</text>
-    <text x="110" y="120" font-family="system-ui, sans-serif" font-size="10" fill="#facc15">d</text>
-    <text x="110" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">d = √Σ(Aᵢ - Bᵢ)²</text>
-    <text x="110" y="210" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Straight-line distance</text>
-    </g>
-
-    <circle cx="80" cy="100" r="5" fill="#06b6d4"/>
-    <circle cx="140" cy="140" r="5" fill="#10b981"/>
-    <line x1="80" y1="100" x2="140" y2="140" stroke="#facc15" stroke-width="2"/>
-
-  </g>
+  </ns0:defs>
   
-  <!-- L1 -->
-  <g transform="translate(290, 80)">
-
-    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398546-1)">
-    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">L1 (Manhattan)</text>
-    <text x="110" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">d = Σ|Aᵢ - Bᵢ|</text>
-    <text x="110" y="210" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">City-block distance</text>
-    </g>
-
-    <line x1="80" y1="100" x2="140" y2="100" stroke="#10b981" stroke-width="2"/>
-    <line x1="140" y1="100" x2="140" y2="140" stroke="#10b981" stroke-width="2"/>
-    <circle cx="80" cy="100" r="5" fill="#06b6d4"/>
-    <circle cx="140" cy="140" r="5" fill="#10b981"/>
-
-  </g>
   
-  <!-- Cosine -->
-  <g transform="translate(530, 80)">
-
-    <rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398546-2)">
-    <text x="110" y="25" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">Cosine Distance</text>
-    <text x="110" y="70" font-family="system-ui, sans-serif" font-size="10" fill="#facc15">θ</text>
-    <text x="110" y="195" font-family="monospace" font-size="10" fill="#cbd5e1" text-anchor="middle">d = 1 - cos(θ)</text>
-    <text x="110" y="210" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Angle-based distance</text>
-    </g>
-
-    <line x1="50" y1="140" x2="150" y2="80" stroke="#06b6d4" stroke-width="2"/>
-    <line x1="50" y1="140" x2="170" y2="100" stroke="#10b981" stroke-width="2"/>
-
-  </g>
   
-  <!-- Comparison -->
-  <g transform="translate(50, 280)">
-
-    <rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398546-3)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Distance Function Selection</text>
-    <text x="100" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4">L2 (Euclidean)</text>
-    <text x="120" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Spatial/geometric data</text>
-    <text x="120" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Considers magnitude</text>
-    <text x="120" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Sensitive to scale</text>
-    <text x="400" y="70" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">L1 (Manhattan)</text>
-    <text x="420" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Sparse data</text>
-    <text x="420" y="115" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Less sensitive to outliers</text>
-    <text x="420" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• City-block metric</text>
-    <text x="100" y="170" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f59e0b">Cosine Distance</text>
-    <text x="120" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Normalized embeddings</text>
-    <text x="120" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Ignores magnitude</text>
-    <text x="120" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Most common for embeddings</text>
-    <text x="400" y="170" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#f59e0b">Dot Product</text>
-    <text x="420" y="195" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Fast computation</text>
-    <text x="420" y="215" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Equivalent to cosine for unit vectors</text>
-    <text x="420" y="235" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">• Good for normalized vectors</text>
-    </g>
-
-  </g>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
   
-</svg>
+  
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Distance Functions</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398546-0)">
+      
+    
+      <ns0:text x="110" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">L2 (Euclidean)</ns0:text>
+      
+    
+      <ns0:text x="110" y="120" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#facc15" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">d</ns0:text>
+      
+    
+      <ns0:text x="110" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">d = √Σ(Aᵢ - Bᵢ)²</ns0:text>
+      
+    
+      <ns0:text x="110" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Straight-line distance</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:circle cx="80" cy="100" r="5" fill="#06b6d4"/>
+    
+    
+    <ns0:circle cx="140" cy="140" r="5" fill="#10b981"/>
+    
+    
+    <ns0:line x1="80" y1="100" x2="140" y2="140" stroke="#facc15" stroke-width="2"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(290, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398546-1)">
+      
+    
+      <ns0:text x="110" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">L1 (Manhattan)</ns0:text>
+      
+    
+      <ns0:text x="110" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">d = Σ|Aᵢ - Bᵢ|</ns0:text>
+      
+    
+      <ns0:text x="110" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">City-block distance</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:line x1="80" y1="100" x2="140" y2="100" stroke="#10b981" stroke-width="2"/>
+    
+    
+    <ns0:line x1="140" y1="100" x2="140" y2="140" stroke="#10b981" stroke-width="2"/>
+    
+    
+    <ns0:circle cx="80" cy="100" r="5" fill="#06b6d4"/>
+    
+    
+    <ns0:circle cx="140" cy="140" r="5" fill="#10b981"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(530, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="220" height="180" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398546-2)">
+      
+    
+      <ns0:text x="110" y="25" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Cosine Distance</ns0:text>
+      
+    
+      <ns0:text x="110" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#facc15" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">θ</ns0:text>
+      
+    
+      <ns0:text x="110" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">d = 1 - cos(θ)</ns0:text>
+      
+    
+      <ns0:text x="110" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Angle-based distance</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:line x1="50" y1="140" x2="150" y2="80" stroke="#06b6d4" stroke-width="2"/>
+    
+    
+    <ns0:line x1="50" y1="140" x2="170" y2="100" stroke="#10b981" stroke-width="2"/>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 280)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398546-3)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Distance Function Selection</ns0:text>
+      
+    
+      <ns0:text x="100" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#06b6d4" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">L2 (Euclidean)</ns0:text>
+      
+    
+      <ns0:text x="120" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Spatial/geometric data</ns0:text>
+      
+    
+      <ns0:text x="120" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Considers magnitude</ns0:text>
+      
+    
+      <ns0:text x="120" y="135" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Sensitive to scale</ns0:text>
+      
+    
+      <ns0:text x="400" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">L1 (Manhattan)</ns0:text>
+      
+    
+      <ns0:text x="420" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Sparse data</ns0:text>
+      
+    
+      <ns0:text x="420" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Less sensitive to outliers</ns0:text>
+      
+    
+      <ns0:text x="420" y="135" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• City-block metric</ns0:text>
+      
+    
+      <ns0:text x="100" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#f59e0b" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Cosine Distance</ns0:text>
+      
+    
+      <ns0:text x="120" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Normalized embeddings</ns0:text>
+      
+    
+      <ns0:text x="120" y="215" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Ignores magnitude</ns0:text>
+      
+    
+      <ns0:text x="120" y="235" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Most common for embeddings</ns0:text>
+      
+    
+      <ns0:text x="400" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" fill="#f59e0b" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Dot Product</ns0:text>
+      
+    
+      <ns0:text x="420" y="195" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Fast computation</ns0:text>
+      
+    
+      <ns0:text x="420" y="215" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Equivalent to cosine for unit vectors</ns0:text>
+      
+    
+      <ns0:text x="420" y="235" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">• Good for normalized vectors</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

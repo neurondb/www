@@ -1,11 +1,11 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
     </linearGradient>
     <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+      <polygon points="0 0, 6 2, 0 4" fill="currentColor"/>
     </marker>
       <clipPath id="clip-4">
       <rect x="0" y="20" width="200" height="120" rx="4"/>
@@ -19,88 +19,88 @@
 
     <rect x="0" y="20" width="200" height="120" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
     <g clip-path="url(#clip-0)">
-    <text x="10" y="35" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Original Data:</text>
-    <text x="10" y="40" font-family="monospace" font-size="10" fill="#10b981">ID  Age  Income</text>
-    <text x="10" y="55" font-family="monospace" font-size="10" fill="#fff">1   25   50000</text>
-    <text x="10" y="70" font-family="monospace" font-size="10" fill="#ef4444">2   NULL 75000</text>
-    <text x="10" y="85" font-family="monospace" font-size="10" fill="#ef4444">3   35   NULL</text>
-    <text x="10" y="100" font-family="monospace" font-size="10" fill="#fff">4   40   80000</text>
-    <text x="10" y="115" font-family="monospace" font-size="10" fill="#ef4444">5   NULL NULL</text>
-    <text x="10" y="130" font-family="monospace" font-size="10" fill="#facc15">Missing values in red</text>
+    <text x="10" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Original Data:>
+    <text x="10" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">ID  Age  Income>
+    <text x="10" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#fff" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">1   25   50000>
+    <text x="10" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#ef4444" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">2   NULL 75000>
+    <text x="10" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#ef4444" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">3   35   NULL>
+    <text x="10" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#fff" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">4   40   80000>
+    <text x="10" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#ef4444" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">5   NULL NULL>
+    <text x="10" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#facc15" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Missing values in red>
     </g>
     <g>
     
   </g>/text>
-    <text x="10" y="70" font-family="monospace" font-size="10" fill="#ef4444">2   NULL 75000</text>
-    <text x="10" y="85" font-family="mon<g transform="translate(300, 80)">
+    <text x="10" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#ef4444" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">2   NULL 75000>
+    <text x="10" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"translate(300, 80)" dominant-baseline="middle">
 
 
     <rect x="0" y="20" width="200" height="120" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
     <g clip-path="url(#clip-1)">
-    <text x="10" y="35" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Method 1: Removal</text>
-    <text x="10" y="40" font-family="monospace" font-size="10" fill="#10b981">ID  Age  Income</text>
-    <text x="10" y="55" font-family="monospace" font-size="10" fill="#fff">1   25   50000</text>
-    <text x="10" y="70" font-family="monospace" font-size="10" fill="#fff">4   40   80000</text>
-    <text x="10" y="100" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">Rows 2, 3, 5 removed</text>
-    <text x="10" y="115" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">Result: 2 rows</text>
+    <text x="10" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Method 1: Removal>
+    <text x="10" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">ID  Age  Income>
+    <text x="10" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#fff" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">1   25   50000>
+    <text x="10" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#fff" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">4   40   80000>
+    <text x="10" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Rows 2, 3, 5 removed>
+    <text x="10" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Result: 2 rows>
     </g>
     <g>
     
-  </g> y="55" font-family="monospace" font-size="10" fill="#fff">1   25   50000</text>
-    <text x="10" y="70" font-family="monospace" font-size="10" fill="#fff"<g transform="translate(550, 80)">
+  </g> y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#fff">1   25   50000>
+    <text x="10" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#fff"<g transform="translate(550, 80)" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">
 
 
     <rect x="0" y="20" width="200" height="120" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
     <g clip-path="url(#clip-2)">
-    <text x="10" y="35" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Method 2: Mean</text>
-    <text x="10" y="40" font-family="monospace" font-size="10" fill="#10b981">ID  Age  Income</text>
-    <text x="10" y="55" font-family="monospace" font-size="10" fill="#fff">1   25   50000</text>
-    <text x="10" y="70" font-family="monospace" font-size="10" fill="#22d3ee">2   33   75000</text>
-    <text x="10" y="85" font-family="monospace" font-size="10" fill="#22d3ee">3   35   68333</text>
-    <text x="10" y="100" font-family="monospace" font-size="10" fill="#fff">4   40   80000</text>
-    <text x="10" y="115" font-family="monospace" font-size="10" fill="#22d3ee">5   33   68333</text>
-    <text x="10" y="130" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">Mean: Age=33, Income=68333</text>
+    <text x="10" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Method 2: Mean>
+    <text x="10" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">ID  Age  Income>
+    <text x="10" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#fff" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">1   25   50000>
+    <text x="10" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#22d3ee" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">2   33   75000>
+    <text x="10" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#22d3ee" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">3   35   68333>
+    <text x="10" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#fff" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">4   40   80000>
+    <text x="10" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#22d3ee" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">5   33   68333>
+    <text x="10" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Mean: Age=33, Income=68333>
     </g>
     <g>
     
-  </g>"100" font-family="monospace" font-size="10" fill="#fff">4   40   80000</text>
-    <text x="10" y="115" font-family="monospace" font-size="10" fill="#22d3e<g transform="translate(175, 250)">
+  </g>"100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#fff">4   40   80000>
+    <text x="10" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#22d3e<g transform="translate(175, 250)" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">
 
 
     <rect x="0" y="20" width="200" height="120" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
     <g clip-path="url(#clip-3)">
-    <text x="10" y="35" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Method 3: Mode</text>
-    <text x="10" y="40" font-family="monospace" font-size="10" fill="#10b981">ID  Age  Income</text>
-    <text x="10" y="55" font-family="monospace" font-size="10" fill="#fff">1   25   50000</text>
-    <text x="10" y="70" font-family="monospace" font-size="10" fill="#22d3ee">2   25   75000</text>
-    <text x="10" y="85" font-family="monospace" font-size="10" fill="#22d3ee">3   35   50000</text>
-    <text x="10" y="100" font-family="monospace" font-size="10" fill="#fff">4   40   80000</text>
-    <text x="10" y="115" font-family="monospace" font-size="10" fill="#22d3ee">5   25   50000</text>
-    <text x="10" y="130" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">Mode: Age=25, Income=50000</text>
+    <text x="10" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Method 3: Mode>
+    <text x="10" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">ID  Age  Income>
+    <text x="10" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#fff" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">1   25   50000>
+    <text x="10" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#22d3ee" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">2   25   75000>
+    <text x="10" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#22d3ee" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">3   35   50000>
+    <text x="10" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#fff" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">4   40   80000>
+    <text x="10" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#22d3ee" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">5   25   50000>
+    <text x="10" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Mode: Age=25, Income=50000>
     </g>
     <g>
     
-  </g>font-family="monospace" font-size="10" fill="#22d3ee">5   25   50000</text>
-    <text x="10" y="130" font-family="system-ui, sans-serif" font-size="9" fil<g transform="translate(425, 250)">
+  </g>font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#22d3ee">5   25   50000>
+    <text x="10" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fil<g transform="translate(425, 250)" dominant-baseline="middle">
 
 
     <rect x="0" y="20" width="200" height="120" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
     <g clip-path="url(#clip-4)">
-    <text x="10" y="35" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">Method 4: KNN</text>
-    <text x="10" y="40" font-family="monospace" font-size="10" fill="#10b981">ID  Age  Income</text>
-    <text x="10" y="55" font-family="monospace" font-size="10" fill="#fff">1   25   50000</text>
-    <text x="10" y="70" font-family="monospace" font-size="10" fill="#22d3ee">2   30   75000</text>
-    <text x="10" y="85" font-family="monospace" font-size="10" fill="#22d3ee">3   35   75000</text>
-    <text x="10" y="100" font-family="monospace" font-size="10" fill="#fff">4   40   80000</text>
-    <text x="10" y="115" font-family="monospace" font-size="10" fill="#22d3ee">5   32   70000</text>
-    <text x="10" y="130" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">Based on nearest neighbors</text>
+    <text x="10" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Method 4: KNN>
+    <text x="10" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#10b981" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">ID  Age  Income>
+    <text x="10" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#fff" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">1   25   50000>
+    <text x="10" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#22d3ee" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">2   30   75000>
+    <text x="10" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#22d3ee" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">3   35   75000>
+    <text x="10" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#fff" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">4   40   80000>
+    <text x="10" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#22d3ee" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">5   32   70000>
+    <text x="10" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Based on nearest neighbors>
     </g>
     <g>
     
-  </g>t-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">Based on nearest neighbors</text>
+  </g>t-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1">Based on nearest neighbors>
     </g>
 
   </g>
   
   <!-- Arrows -->
-  <path d="M 150.0 220.0 L 150.0 224.0 L 400.0 224.0 L 400.0 220.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 400.0 220.0 L 400.0 224.0 L 650.0 224.0 L 650.0 220.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 150.0 220.0 L 150.0 224.0 L 275.0 224.0 L 275.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 400.0 220.0 L 400.0 224.0 L 525.0 224.0 L 525.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/></svg>
+  <path d="M 150.0 220.0 L 150.0 224.0 L 400.0 224.0 L 400.0 220.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" style="color: inherit;" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 400.0 220.0 L 400.0 224.0 L 650.0 224.0 L 650.0 220.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" style="color: inherit;" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 150.0 220.0 L 150.0 224.0 L 275.0 224.0 L 275.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" style="color: inherit;" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 400.0 220.0 L 400.0 224.0 L 525.0 224.0 L 525.0 270.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" style="color: inherit;" stroke-dasharray="1.5,1.5" opacity="0.8"/></svg>

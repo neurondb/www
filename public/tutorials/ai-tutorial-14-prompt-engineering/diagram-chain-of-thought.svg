@@ -1,70 +1,169 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
-    </marker>
-                  <clipPath id="clip-1765356398549-2">
-      <rect x="0" y="0" width="700" height="80" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398549-1">
-      <rect x="0" y="0" width="700" height="200" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398549-0">
-      <rect x="0" y="0" width="700" height="80" rx="4"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">Chain-of-Thought Prompting</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+    
+    <ns0:marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      
+      
+      <ns0:polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+      
+    
+    </ns0:marker>
+    
+                  
+    <ns0:clipPath id="clip-1765356398549-2">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="80" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398549-1">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="200" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398549-0">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="80" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Problem -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="700" height="80" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398549-0)">
-    <text x="30" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#10b981">Problem:</text>
-    <text x="30" y="55" font-family="monospace" font-size="12" fill="#cbd5e1">If a train travels 60 mph for 2 hours, how far does it go?</text>
-    </g>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Steps -->
-  <g transform="translate(50, 180)">
-
-    <rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398549-1)">
-    <text x="350" y="30" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">Reasoning Steps</text>
-    <text x="70" y="70" font-family="monospace" font-size="11" fill="#fff">Step 1: Identify given information - Speed = 60 mph, Time = 2 hours</text>
-    <text x="70" y="110" font-family="monospace" font-size="11" fill="#fff">Step 2: Recall formula - Distance = Speed × Time</text>
-    <text x="70" y="150" font-family="monospace" font-size="11" fill="#fff">Step 3: Substitute values - Distance = 60 × 2</text>
-    <text x="70" y="190" font-family="monospace" font-size="11" fill="#fff">Step 4: Calculate - Distance = 120 miles</text>
-    </g>
-
-    <rect x="50" y="50" width="600" height="30" fill="#4f46e5" opacity="0.3" rx="4"/>
-
-    <rect x="50" y="90" width="600" height="30" fill="#8b5cf6" opacity="0.3" rx="4"/>
-
-    <rect x="50" y="130" width="600" height="30" fill="#ec4899" opacity="0.3" rx="4"/>
-
-    <rect x="50" y="170" width="600" height="30" fill="#10b981" opacity="0.3" rx="4"/>
-
-    <path d="M 350 200 L 350 250" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/></g>
   
-  <!-- Answer -->
-  <g transform="translate(50, 400)">
-
-    <rect x="0" y="0" width="700" height="80" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398549-2)">
-    <text x="30" y="30" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#facc15">Answer:</text>
-    <text x="30" y="55" font-family="monospace" font-size="12" fill="#cbd5e1">The train travels 120 miles</text>
-    </g>
-
-  </g>
   
-</svg>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
+  
+  
+  
+  <ns0:text x="400" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Chain-of-Thought Prompting</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="700" height="80" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398549-0)">
+      
+    
+      <ns0:text x="30" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#10b981" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Problem:</ns0:text>
+      
+    
+      <ns0:text x="30" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">If a train travels 60 mph for 2 hours, how far does it go?</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 180)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="200" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398549-1)">
+      
+    
+      <ns0:text x="350" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Reasoning Steps</ns0:text>
+      
+    
+      <ns0:text x="70" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Step 1: Identify given information - Speed = 60 mph, Time = 2 hours</ns0:text>
+      
+    
+      <ns0:text x="70" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Step 2: Recall formula - Distance = Speed × Time</ns0:text>
+      
+    
+      <ns0:text x="70" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Step 3: Substitute values - Distance = 60 × 2</ns0:text>
+      
+    
+      <ns0:text x="70" y="190" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Step 4: Calculate - Distance = 120 miles</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:rect x="50" y="50" width="600" height="30" fill="#4f46e5" opacity="0.3" rx="4"/>
+    
+
+    
+    <ns0:rect x="50" y="90" width="600" height="30" fill="#8b5cf6" opacity="0.3" rx="4"/>
+    
+
+    
+    <ns0:rect x="50" y="130" width="600" height="30" fill="#ec4899" opacity="0.3" rx="4"/>
+    
+
+    
+    <ns0:rect x="50" y="170" width="600" height="30" fill="#10b981" opacity="0.3" rx="4"/>
+    
+
+    
+    <ns0:path d="M 350 200 L 350 250" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 400)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="80" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398549-2)">
+      
+    
+      <ns0:text x="30" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#facc15" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Answer:</ns0:text>
+      
+    
+      <ns0:text x="30" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">The train travels 120 miles</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

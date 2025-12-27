@@ -1,93 +1,234 @@
-<svg width="800" height="510" viewBox="0 0 800 510" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
-    </linearGradient>
-    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
-    </marker>
-                  <clipPath id="clip-1765356398552-3">
-      <rect x="0" y="0" width="700" height="300" rx="4"/>
-    </clipPath>
-    <clipPath id="clip-1765356398552-2">
-      <rect x="0" y="0" width="200" height="80" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398552-1">
-      <rect x="0" y="0" width="200" height="80" rx="8"/>
-    </clipPath>
-    <clipPath id="clip-1765356398552-0">
-      <rect x="0" y="0" width="200" height="80" rx="8"/>
-    </clipPath>
-  </defs>
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet">
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
   
-  <text x="400" y="35" font-font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle">A/B Testing for Models</text>
+  <ns0:defs>
+    
+    
+    <ns0:linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#1f2937;stop-opacity:1"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#111827;stop-opacity:1"/>
+      
+    
+    </ns0:linearGradient>
+    
+    
+    <ns0:marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      
+      
+      <ns0:polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+      
+    
+    </ns0:marker>
+    
+                  
+    <ns0:clipPath id="clip-1765356398552-3">
+      
+      
+      <ns0:rect x="0" y="0" width="700" height="300" rx="4"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398552-2">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398552-1">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
+    
+    <ns0:clipPath id="clip-1765356398552-0">
+      
+      
+      <ns0:rect x="0" y="0" width="200" height="80" rx="8"/>
+      
+    
+    </ns0:clipPath>
+    
   
-  <!-- Traffic Split -->
-  <g transform="translate(50, 80)">
-
-    <rect x="0" y="0" width="200" height="80" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398552-0)">
-    <text x="100" y="30" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Traffic</text>
-    <text x="100" y="55" font-font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">100%</text>
-    </g>
-
-  </g>
+  </ns0:defs>
   
-  <!-- Split -->
-  <g transform="translate(300, 80)">
-
-    <rect x="0" y="0" width="200" height="80" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398552-1)">
-    <text x="100" y="30" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Split</text>
-    <text x="100" y="55" font-font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">50/50</text>
-    </g>
-
-  </g>
   
-  <!-- Models -->
-  <g transform="translate(550, 80)">
-
-    <rect x="0" y="0" width="200" height="80" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
-    <g clip-path="url(#clip-1765356398552-2)">
-    <text x="100" y="30" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Models</text>
-    <text x="100" y="55" font-font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">A &amp; B</text>
-    </g>
-
-  </g>
   
-  <!-- Arrows -->
-  <path d="M 190.0 160.0 L 190.0 164.0 L 400.0 164.0 L 400.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><path d="M 510.0 105.0 L 510.0 105.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/><!-- Process -->
-  <g transform="translate(50, 180)">
-
-    <rect x="0" y="0" width="700" height="300" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-    <g clip-path="url(#clip-1765356398552-3)">
-    <text x="350" y="30" font-font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle">A/B Testing Process</text>
-    <text x="190" y="75" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Variant A (Control)</text>
-    <text x="70" y="100" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Current production model</text>
-    <text x="70" y="120" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">50% of traffic</text>
-    <text x="70" y="140" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Baseline performance</text>
-    <text x="510" y="75" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Variant B (Treatment)</text>
-    <text x="390" y="100" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">New model version</text>
-    <text x="390" y="120" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">50% of traffic</text>
-    <text x="390" y="140" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Test performance</text>
-    <text x="100" y="190" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Metrics Collection</text>
-    <text x="120" y="215" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Track performance metrics</text>
-    <text x="120" y="235" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Accuracy, latency, business metrics</text>
-    <text x="120" y="255" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Statistical significance</text>
-    <text x="400" y="190" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981">Decision</text>
-    <text x="420" y="215" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">If B performs better: deploy</text>
-    <text x="420" y="235" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">If A performs better: keep current</text>
-    <text x="420" y="255" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Rollback if issues detected</text>
-    </g>
-
-    <rect x="50" y="50" width="280" height="110" fill="#4f46e5" opacity="0.2" rx="4" stroke="#6366f1" stroke-width="1"/>
-
-    <rect x="370" y="50" width="280" height="110" fill="#10b981" opacity="0.2" rx="4" stroke="#34d399" stroke-width="1"/>
-
-  </g>
+  <ns0:rect width="800" height="510" fill="url(#bgGrad)"/>
   
-</svg>
+  
+  
+  <ns0:text x="400" y="35" font-font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#facc15" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">A/B Testing for Models</ns0:text>
+  
+  
+  
+  
+  <ns0:g transform="translate(50, 80)">
+    
 
+    
+    <ns0:rect x="0" y="0" width="200" height="80" fill="#4f46e5" opacity="0.3" rx="8" stroke="#6366f1" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398552-0)">
+      
+    
+      <ns0:text x="100" y="30" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Traffic</ns0:text>
+      
+    
+      <ns0:text x="100" y="55" font-font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">100%</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(300, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="200" height="80" fill="#8b5cf6" opacity="0.3" rx="8" stroke="#a78bfa" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398552-1)">
+      
+    
+      <ns0:text x="100" y="30" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Split</ns0:text>
+      
+    
+      <ns0:text x="100" y="55" font-font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">50/50</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:g transform="translate(550, 80)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="200" height="80" fill="#10b981" opacity="0.3" rx="8" stroke="#34d399" stroke-width="2"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398552-2)">
+      
+    
+      <ns0:text x="100" y="30" font-font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Models</ns0:text>
+      
+    
+      <ns0:text x="100" y="55" font-font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">A &amp; B</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+  
+  </ns0:g>
+  
+  
+  
+  
+  <ns0:path d="M 190.0 160.0 L 190.0 164.0 L 400.0 164.0 L 400.0 80.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  <ns0:path d="M 510.0 105.0 L 510.0 105.0" fill="none" stroke="#06b6d4" stroke-width="0.5" marker-end="url(#arrowhead)" stroke-dasharray="1.5,1.5" opacity="0.8"/>
+  
+  
+  <ns0:g transform="translate(50, 180)">
+    
+
+    
+    <ns0:rect x="0" y="0" width="700" height="300" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
+    
+    
+    <ns0:g clip-path="url(#clip-1765356398552-3)">
+      
+    
+      <ns0:text x="350" y="30" font-font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#facc15" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">A/B Testing Process</ns0:text>
+      
+    
+      <ns0:text x="190" y="75" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Variant A (Control)</ns0:text>
+      
+    
+      <ns0:text x="70" y="100" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Current production model</ns0:text>
+      
+    
+      <ns0:text x="70" y="120" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">50% of traffic</ns0:text>
+      
+    
+      <ns0:text x="70" y="140" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Baseline performance</ns0:text>
+      
+    
+      <ns0:text x="510" y="75" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Variant B (Treatment)</ns0:text>
+      
+    
+      <ns0:text x="390" y="100" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">New model version</ns0:text>
+      
+    
+      <ns0:text x="390" y="120" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">50% of traffic</ns0:text>
+      
+    
+      <ns0:text x="390" y="140" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Test performance</ns0:text>
+      
+    
+      <ns0:text x="100" y="190" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Metrics Collection</ns0:text>
+      
+    
+      <ns0:text x="120" y="215" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Track performance metrics</ns0:text>
+      
+    
+      <ns0:text x="120" y="235" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Accuracy, latency, business metrics</ns0:text>
+      
+    
+      <ns0:text x="120" y="255" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Statistical significance</ns0:text>
+      
+    
+      <ns0:text x="400" y="190" font-font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#10b981" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Decision</ns0:text>
+      
+    
+      <ns0:text x="420" y="215" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">If B performs better: deploy</ns0:text>
+      
+    
+      <ns0:text x="420" y="235" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">If A performs better: keep current</ns0:text>
+      
+    
+      <ns0:text x="420" y="255" font-font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Rollback if issues detected</ns0:text>
+      
+    
+    </ns0:g>
+    
+
+    
+    <ns0:rect x="50" y="50" width="280" height="110" fill="#4f46e5" opacity="0.2" rx="4" stroke="#6366f1" stroke-width="1"/>
+    
+
+    
+    <ns0:rect x="370" y="50" width="280" height="110" fill="#10b981" opacity="0.2" rx="4" stroke="#34d399" stroke-width="1"/>
+    
+
+  
+  </ns0:g>
+  
+  
+
+</ns0:svg>

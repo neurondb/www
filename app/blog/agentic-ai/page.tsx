@@ -48,7 +48,7 @@ export const metadata = {
 
 const markdown = `
 
-![Agentic AI header](/blog/agentic-ai/header.svg?v=7)
+![Agentic AI header](/blog/agentic-ai/header.svg?v=8)
 
 # Agentic AI: Complete Guide to Autonomous AI Agents
 
@@ -102,6 +102,8 @@ Agentic AI refers to systems that act autonomously to achieve goals. The term "a
 Agents are software systems that exhibit autonomous behavior. They differ from traditional programs in key ways.
 
 ![Traditional Programs vs Agents](/blog/agentic-ai/traditional-programs-vs-agents.png)
+
+The diagram illustrates the fundamental differences between traditional programs and agentic systems. Traditional programs follow fixed execution paths defined at development time, while agents adapt their behavior based on context and goals. This adaptive capability enables agents to handle situations that were not explicitly programmed, making them more flexible and powerful for complex, dynamic environments.
 
 ### Comparison with Traditional AI Systems
 
@@ -170,6 +172,8 @@ Agents follow a structured architecture. The architecture separates concerns, ea
 
 The architecture diagram shows component relationships. User input flows to the runtime. The runtime queries the planner for execution plans. The planner generates steps and validates feasibility. Steps flow to the tool executor for action execution. Results flow to memory for storage. Memory feeds back to the planner for context. The state machine coordinates all transitions. The response generator formats final output.
 
+The agent architecture provides a modular design where each component has clearly defined responsibilities. This separation of concerns allows for independent development and optimization of individual components. The data flow between components is bidirectional, enabling components to influence each other's behavior based on execution context. This architecture supports scalability, allowing individual components to be optimized or replaced without affecting the entire system.
+
 ### Planning Systems
 
 Planning systems convert goals into action sequences. They use language models to generate plans, break complex tasks into steps, handle conditional logic, and manage dependencies between steps. Planning is the core capability that enables autonomous behavior. Without planning, agents cannot break down complex goals, coordinate multiple actions, or adapt to changing conditions.
@@ -202,6 +206,8 @@ Steps are extracted from the selected plan. Each step becomes an executable acti
 ![Planning System Diagram](/blog/agentic-ai/diagram-planning-system.svg)
 
 The planning diagram shows the decision flow. Goals enter the planner for analysis. The planner queries available tools to understand capabilities. The planner generates candidate plans with step sequences. Plans are validated for feasibility and correctness. Valid plans are ranked by quality metrics. The best plan is selected based on scores. Steps are extracted for execution by the runtime.
+
+Planning systems form the foundation of autonomous agent behavior. The ability to break down complex goals into actionable steps distinguishes agents from simple chatbots. Effective planning requires understanding both the desired outcome and the available capabilities. The planning process must balance exploration of possibilities with practical execution constraints. Successful planning enables agents to handle complex, multi-step tasks that would be impossible with direct approaches.
 
 ### Tool Execution
 
@@ -311,6 +317,8 @@ State transitions follow rules:
 
 The state machine diagram shows all states and transitions. States are represented as nodes. Transitions are represented as arrows. Each transition has a condition. Conditions trigger state changes. Error states handle failures. Recovery paths restore normal operation.
 
+State machines provide structured control flow for agent execution. They ensure that agents move through execution phases in a predictable and manageable way. Each state represents a distinct phase of operation, from initial planning through execution to completion. Transitions between states occur based on specific conditions, enabling agents to respond appropriately to different situations. Error handling is built into the state machine, allowing agents to recover gracefully from failures and continue execution when possible.
+
 ## Agent Components in Detail
 
 ### Planning Component
@@ -329,6 +337,8 @@ Plans include step dependencies. Some steps require previous steps to complete. 
 
 The planning component diagram shows internal structure. Goals enter the analyzer. The analyzer queries available tools. The analyzer generates candidate steps. Steps are ordered by dependencies. The validator checks feasibility. Valid plans are output.
 
+The planning component serves as the strategic brain of the agent system. It transforms high-level goals into concrete execution plans through a structured process of analysis, generation, and validation. The component must balance multiple considerations including efficiency, reliability, and resource constraints. Effective planning requires deep understanding of both the goal structure and available capabilities. The validation phase ensures that generated plans are not only logical but also executable given current system state and resource availability.
+
 ### Tool Registry
 
 The tool registry manages available tools. It provides tool discovery, validates tool calls, handles tool execution, and manages tool permissions.
@@ -340,6 +350,8 @@ Tool execution includes error handling. Tools may fail due to network issues or 
 ![Tool Registry Diagram](/blog/agentic-ai/diagram-tool-registry.svg)
 
 The tool registry diagram shows tool management. Tools are registered with metadata. The registry maintains a catalog. Agents query the catalog. The registry validates requests. The registry executes tools. Results are returned to agents.
+
+The tool registry acts as the interface between agents and external systems. It provides a unified way to discover, access, and execute various capabilities without requiring agents to understand implementation details. Tool metadata enables agents to select appropriate tools based on their current needs and constraints. The registry's validation layer ensures that tool calls are properly formatted and authorized before execution. This abstraction allows agents to operate at a higher level of abstraction, focusing on goals rather than low-level implementation details.
 
 ### Memory Component
 
@@ -361,6 +373,8 @@ Memory retrieval uses semantic search:
 
 The memory component diagram shows storage and retrieval. Text enters the embedding generator. Embeddings are stored in vector database. Queries are embedded. Similarity search finds matches. Matches are ranked and returned.
 
+Memory systems enable agents to maintain context across interactions and learn from past experiences. The embedding-based approach allows semantic retrieval, where agents can find relevant memories even when the exact wording differs. This capability is crucial for building agents that can have meaningful conversations over extended periods. The vector database enables efficient similarity search across large collections of stored memories. Ranking mechanisms ensure that the most relevant memories are retrieved and used for context, improving the quality of agent responses.
+
 ### State Machine Component
 
 The state machine manages execution flow. It tracks current state, handles transitions, manages error recovery, and coordinates multi-step tasks.
@@ -379,6 +393,8 @@ Error handling includes recovery paths:
 
 The state machine diagram shows state management. States are stored in database. Transitions are triggered by events. Error states have recovery paths. Completed states trigger cleanup.
 
+State machine components provide reliable execution control for agent operations. They ensure that agents progress through execution phases in a controlled and recoverable manner. Database persistence allows state machines to survive system restarts and continue execution from the last known state. Event-driven transitions enable agents to respond dynamically to changing conditions during execution. Recovery mechanisms built into error states allow agents to handle failures gracefully and continue operations when possible.
+
 ## Agent Execution Flow
 
 ### Complete Execution Cycle
@@ -395,6 +411,8 @@ Agent execution follows this cycle. The cycle starts with user input, ends with 
 ![Execution Flow Diagram](/blog/agentic-ai/diagram-execution-flow.svg)
 
 The execution flow diagram shows the complete cycle. Input flows through planning. Planning flows to execution. Execution flows to memory. Memory flows to response. Response flows to user.
+
+The execution flow represents the complete lifecycle of agent operation, from initial user input through planning and execution to final response generation. Each phase in the cycle builds upon previous phases, with information flowing bidirectionally to enable adaptive behavior. The integration between components ensures that planning decisions are informed by execution results, and that memory systems capture important information for future interactions. This circular flow enables agents to improve over time and handle increasingly complex tasks.
 
 ### Multi-Step Task Execution
 
@@ -441,9 +459,13 @@ Recovery strategies include retries:
 
 The error handling diagram shows recovery flow. Errors are detected. Errors are categorized. Recovery strategies are selected. Strategies are executed. Success restores normal flow.
 
+Robust error handling is essential for production agent systems. Errors can occur at any stage of execution, from tool failures to network issues to validation errors. Effective error handling requires both detection mechanisms and recovery strategies. Categorization of errors enables appropriate response selection, distinguishing between transient issues that can be retried and permanent failures that require different handling. Recovery strategies must be designed to minimize disruption to ongoing operations while ensuring system integrity and reliability.
+
 ## Building an Agent with NeuronDB and NeuronAgent
 
 ![Agent, MCP, and NeuronDB Integration](/blog/agentic-ai/agent-mcp-ndb.png)
+
+The integration diagram illustrates how NeuronDB, NeuronAgent, and the Model Context Protocol work together to create a complete agent system. NeuronDB provides the underlying vector database and embedding capabilities. NeuronAgent supplies the runtime environment and agent framework. The MCP server enables integration with external tools and services. Together, these components create a powerful platform for building production-ready agent applications.
 
 This section provides a complete step-by-step guide to building a production agent. The guide covers:
 - Installation and setup
@@ -470,7 +492,7 @@ Before building an agent, install required components. The setup requires Postgr
 
 #### Step 1: Install PostgreSQL
 
-PostgreSQL version 16 or later is required. Download and install PostgreSQL for your operating system. Verify installation by checking the version.
+PostgreSQL 16, 17, or 18 is recommended. Download and install PostgreSQL for your operating system. Verify installation by checking the version.
 
 \`\`\`bash
 # Check PostgreSQL version
@@ -530,13 +552,13 @@ psql -d neurondb -f migrations/003_add_triggers.sql
 # Verify migrations
 psql -d neurondb -c "\\dt"
 
-# Expected output shows tables:
+# Expected output shows tables (names depend on NeuronAgent version/migrations):
 # agents, sessions, messages, memory_chunks, etc.
 
 # Start NeuronAgent server
 ./bin/neuronagent
 
-# Server starts on port 8080 by default
+# Server often starts on port 8080 by default (verify in your NeuronAgent config)
 # Verify server is running
 curl http://localhost:8080/health
 
@@ -575,7 +597,7 @@ CREATE TABLE IF NOT EXISTS agents (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     name TEXT NOT NULL,
     system_prompt TEXT NOT NULL,
-    model_name TEXT DEFAULT 'gpt-4',
+    model_name TEXT DEFAULT 'gpt-4', -- example; depends on your runtime/provider
     enabled_tools TEXT[] DEFAULT ARRAY['sql', 'http'],
     memory_table TEXT,
     config JSONB DEFAULT '{}',
@@ -656,7 +678,7 @@ CREATE TABLE IF NOT EXISTS memory_chunks (
     agent_id UUID REFERENCES agents(id),
     session_id UUID REFERENCES sessions(id),
     content TEXT NOT NULL,
-    embedding VECTOR(384),
+    embedding vector(384),
     metadata JSONB DEFAULT '{}',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -671,7 +693,7 @@ CREATE TABLE IF NOT EXISTS memory_chunks (
 -- created_at: Timestamp when memory was created
 \`\`\`
 
-The embedding field stores vector representations. Embeddings are generated using language models. Embeddings enable semantic similarity search. The VECTOR(384) type stores 384-dimensional vectors. This matches the embedding model dimensions.
+The embedding field stores vector representations. Embeddings are generated using language models. Embeddings enable semantic similarity search. The vector(384) type stores 384-dimensional vectors (common for \`all-MiniLM-L6-v2\`). Match the vector dimensions to the embedding model you use.
 
 #### Indexes for Performance
 
@@ -679,8 +701,11 @@ Indexes enable fast queries. Vector indexes enable fast similarity search. B-tre
 
 \`\`\`sql
 -- Create vector index for memory search
-CREATE INDEX IF NOT EXISTS idx_memory_embedding 
-ON memory_chunks USING hnsw (embedding vector_cosine_ops) 
+-- Indexing note: NeuronDB commonly provides helper functions (for example, hnsw_create_index)
+-- and also supports CREATE INDEX ... USING hnsw in many examples. Choose the approach
+-- that matches your NeuronDB version/docs.
+CREATE INDEX IF NOT EXISTS idx_memory_embedding
+ON memory_chunks USING hnsw (embedding vector_cosine_ops)
 WITH (m = 16, ef_construction = 64);
 
 -- Explanation:
@@ -959,6 +984,8 @@ Specialized agents focus on specific domains. Research agents handle information
 ![Advanced Patterns Diagram](/blog/agentic-ai/diagram-advanced-patterns.svg)
 
 The advanced patterns diagram shows system architectures. Multi-agent systems show agent coordination. Orchestration shows workflow management. Specialization shows domain-specific agents.
+
+Advanced patterns enable scaling agent systems to handle complex, distributed scenarios. Multi-agent systems allow multiple specialized agents to work together on complex problems that exceed the capabilities of individual agents. Orchestration patterns coordinate agent activities to ensure proper sequencing and resource management. Specialized agents can focus on specific domains, leveraging domain knowledge to provide superior performance in their areas of expertise. These patterns enable building sophisticated agent ecosystems that can tackle enterprise-scale challenges.
 
 ## Production Considerations
 

@@ -1,14 +1,14 @@
-<svg width="800" height="350" viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="350" viewBox="0 0 800 350" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="rlBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
     </linearGradient>
     <marker id="arrowRL" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+      <polygon points="0 0, 6 2, 0 4" fill="currentColor"/>
     </marker>
     <marker id="arrowRLOrange" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#f59e0b"/>
+      <polygon points="0 0, 6 2, 0 4" fill="currentColor"/>
     </marker>
       <clipPath id="clip-2">
       <rect x="0" y="50" width="100" height="60" rx="4"/>
@@ -21,50 +21,50 @@
 
     <rect x="0" y="0" width="120" height="80" fill="#ef4444" opacity="0.4" rx="8" stroke="#f87171" stroke-width="2"/>
     <g clip-path="url(#clip-0)">
-    <text x="60" y="30" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Agent</text>
-    <text x="60" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Observes</text>
-    <text x="60" y="68" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Acts</text>
+    <text x="60" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Agent>
+    <text x="60" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Observes>
+    <text x="60" y="68" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Acts>
     </g>
   
-  </g>bold" fill="#fff" text-anchor="middle">Agent</text>
-    <text x="60" y="50" font-family="system-ui, sans-serif" font-size="11" fill<g transform="translate(500, 80)">
+  </g>bold" fill="#fff" text-anchor="middle">Agent>
+    <text x="60" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill<g transform="translate(500, 80)" dominant-baseline="middle">
 
     <rect x="0" y="0" width="200" height="120" fill="#10b981" opacity="0.3" rx="8" stroke="#22c55e" stroke-width="2"/>
     <g clip-path="url(#clip-1)">
-    <text x="100" y="30" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Environment</text>
-    <text x="100" y="55" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">Current State</text>
-    <text x="100" y="75" font-family="system-ui, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle">Rewards/Penalties</text>
-    <text x="100" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">New State</text>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Environment>
+    <text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Current State>
+    <text x="100" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Rewards/Penalties>
+    <text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">New State>
     </g>
   
-  </g>-size="9" fill="#cbd5e1" text-anchor="middle">Rewards/Penalties</text>
-    <text x="100" y="95" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">New State</text>
+  </g>-size="9" fill="#cbd5e1" text-anchor="middle">Rewards/Penalties>
+    <text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">New State>
   </g>
   
   <!-- Action Arrow - direct horizontal route (Agent right center to Environment left center) -->
-  <path d="M 160.0 140.0 L 600.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" opacity="0.8"/><text x="360" y="125" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">Action</text>
+  <path d="M 160.0 140.0 L 600.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" style="color: inherit;" opacity="0.8"/><text x="360" y="125" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Action>
   
   <!-- State/Reward Arrow - direct horizontal route below (Environment left center to Agent right center) -->
-  <path d="M 600.0 140.0 L 160.0 140.0" fill="none" stroke="#f59e0b" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" opacity="0.8"/><text x="360" y="175" font-family="system-ui, sans-serif" font-size="14" font<g transform="translate(250, 250)">
+  <path d="M 600.0 140.0 L 160.0 140.0" fill="none" stroke="#f59e0b" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" style="color: inherit;" opacity="0.8"/><text x="360" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font<g transform="translate(250, 250)" dominant-baseline="middle">
 
     <rect x="0" y="50" width="100" height="60" fill="#4f46e5" opacity="0.3" rx="4"/>
     <g clip-path="url(#clip-2)">
-    <text x="150" y="30" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#8b5cf6" text-anchor="middle">Learning Loop</text>
-    <text x="50" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Observe</text>
-    <text x="50" y="92" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">State</text>
-    <text x="170" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Choose</text>
-    <text x="170" y="92" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Action</text>
-    <text x="290" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Receive</text>
-    <text x="290" y="92" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Reward</text>
-    <text x="410" y="75" font-family="system-ui, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Update</text>
-    <text x="410" y="92" font-family="system-ui, sans-serif" font-size="9" fill="#fff" text-anchor="middle">Strategy</text>
+    <text x="150" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#8b5cf6" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Learning Loop>
+    <text x="50" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Observe>
+    <text x="50" y="92" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">State>
+    <text x="170" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Choose>
+    <text x="170" y="92" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Action>
+    <text x="290" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Receive>
+    <text x="290" y="92" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Reward>
+    <text x="410" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Update>
+    <text x="410" y="92" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Strategy>
     </g>
     <rect x="120" y="50" width="100" height="60" fill="#6366f1" opacity="0.3" rx="4"/>
     <rect x="240" y="50" width="100" height="60" fill="#818cf8" opacity="0.3" rx="4"/>
     <rect x="360" y="50" width="100" height="60" fill="#a5b4fc" opacity="0.3" rx="4"/>
     <!-- Loop Arrows -->
-    <path d="M 160.0 140.0 L 160.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" opacity="0.8"/><path d="M 160.0 140.0 L 160.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" opacity="0.8"/><path d="M 160.0 140.0 L 160.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" opacity="0.8"/><path d="M 600.0 140.0 L 160.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" opacity="0.8"/>
-  </g>="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" opacity="0.8"/></g>
+    <path d="M 160.0 140.0 L 160.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" style="color: inherit;" opacity="0.8"/><path d="M 160.0 140.0 L 160.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" style="color: inherit;" opacity="0.8"/><path d="M 160.0 140.0 L 160.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" style="color: inherit;" opacity="0.8"/><path d="M 600.0 140.0 L 160.0 140.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" style="color: inherit;" opacity="0.8"/>
+  </g>="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowRL)" style="color: inherit;" opacity="0.8"/></g>
   
 </svg>
 
