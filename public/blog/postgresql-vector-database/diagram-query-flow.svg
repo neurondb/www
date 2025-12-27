@@ -29,6 +29,18 @@
     </ns0:linearGradient>
     
     
+    <ns0:linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      
+      
+      <ns0:stop offset="0%" style="stop-color:#10b981;stop-opacity:0.3"/>
+      
+      
+      <ns0:stop offset="100%" style="stop-color:#059669;stop-opacity:0.2"/>
+      
+    
+    </ns0:linearGradient>
+    
+    
     <ns0:filter id="glow">
       
       

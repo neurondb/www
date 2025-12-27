@@ -1,90 +1,73 @@
-<svg width="800" height="510" viewBox="0 0 800 510" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="460" viewBox="0 0 900 460" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#111827"/>
     </linearGradient>
     <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="currentColor"/>
+      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
     </marker>
-      <clipPath id="clip-1">
-      <rect x="0" y="0" width="320" height="370" rx="8"/>
-    </clipPath>
-      <clipPath id="clip-0">
-      <rect x="0" y="0" width="320" height="370" rx="8"/>
-    </clipPath>
   </defs>
   
-  <rect width="800" height="510" fill="url(#bgGrad)"/>
-  
-  <!-- Title -->
-  <text x="400" y="<g transform="translate(50, 80)" dominant-baseline="middle">
+  <rect width="900" height="460" fill="url(#bg)"/>
 
-    <rect x="0" y="0" width="320" height="370" fill="none" stroke="#4f46e5" stroke-width="2" rx="8" opacity="0.6"/>
-    <g clip-path="url(#clip-0)">
-    <text x="160" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#4f46e5" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Traditional Programming>
-    <text x="60" y="88" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Input>
-    <text x="60" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Data>
-    <text x="160" y="88" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Code>
-    <text x="160" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Rules>
-    <text x="260" y="88" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Output>
-    <text x="260" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Result>
-    <text x="10" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#94a3b8" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Characteristics:>
-    <text x="20" y="172" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Explicit rules>
-    <text x="20" y="190" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Programmer writes logic>
-    <text x="20" y="208" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Fixed behavior>
-    <text x="20" y="226" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Code changes for new cases>
-    <text x="160" y="278" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#facc15" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Example: Email Filter>
-    <text x="20" y="298" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#10b981" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">if sender contains>
-    <text x="20" y="313" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#10b981" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">  "spam.com" → spam>
-    <text x="20" y="328" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#10b981" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">if subject contains>
-    <text x="20" y="343" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#10b981" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">  "free money" → spam>
-    </g>
-    <!-- Input -->
-    <rect x="20" y="60" width="80" height="50" fill="#4f46e5" opacity="0.3" rx="4"/>
-    <!-- Code/Rules -->
-    <rect x="120" y="60" width="80" height="50" fill="#6366f1" opacity="0.4" rx="4"/>
-    <!-- Output -->
-    <rect x="220" y="60" width="80" height="50" fill="#818cf8" opacity="0.3" rx="4"/>
-    <!-- Arrows - horizontal routes to avoid mixing -->
-    <path d="M 110.0 165.0 L 110.0 165.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)" style="color: inherit;" opacity="0.8"/><path d="M 210.0 165.0 L 210.0 165.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)" style="color: inherit;" opacity="0.8"/><!-- Characteristics -->
-    <!-- Example -->
-    <rect x="10" y="260" width="300" height="95" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-  
-  </g>"20" y="328" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#10b981">if subject contains>
-    <text x="20" y="343" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" <g transform="translate(430, 80)" dominant-baseline="middle">
+  <text x="450" y="42" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">
+    Machine Learning vs Traditional Programming
+  </text>
 
-    <rect x="0" y="0" width="320" height="370" fill="none" stroke="#10b981" stroke-width="2" rx="8" opacity="0.6"/>
-    <g clip-path="url(#clip-1)">
-    <text x="160" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Machine Learning>
-    <text x="85" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Input + Labels>
-    <text x="85" y="102" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Training Data>
-    <text x="235" y="85" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Learning>
-    <text x="235" y="102" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Patterns>
-    <text x="235" y="158" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Predictions>
-    <text x="235" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">New Data>
-    <text x="10" y="200" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#94a3b8" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Characteristics:>
-    <text x="20" y="222" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Learns from examples>
-    <text x="20" y="240" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Discovers patterns>
-    <text x="20" y="258" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• Adapts to new data>
-    <text x="20" y="276" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#cbd5e1" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">• No explicit rules needed>
-    <text x="160" y="318" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#facc15" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Example: Email Filter>
-    <text x="20" y="338" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#10b981" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Train on labeled emails>
-    <text x="20" y="353" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#10b981" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Model learns spam patterns>
-    </g>
-    <!-- Input + Labels -->
-    <rect x="20" y="60" width="130" height="50" fill="#10b981" opacity="0.3" rx="4"/>
-    <!-- Model Learning -->
-    <rect x="170" y="60" width="130" height="50" fill="#22c55e" opacity="0.4" rx="4"/>
-    <!-- Output -->
-    <rect x="150" y="130" width="170" height="50" fill="#34d399" opacity="0.3" rx="4"/>
-    <!-- Arrows - horizontal/vertical routes to avoid mixing -->
-    <path d="M 110.0 165.0 L 210.0 165.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)" style="color: inherit;" opacity="0.8"/><path d="M 210.0 165.0 L 210.0 165.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowhead)" style="color: inherit;" opacity="0.8"/><!-- Characteristics -->
-    <!-- Example -->
-    <rect x="10" y="300" width="300" height="55" fill="#1e293b" rx="4" stroke="#475569" stroke-width="1"/>
-  
-  </g>" y="353" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#10b981">Model learns spam patterns>
+  <!-- Traditional programming -->
+  <text x="120" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#94a3b8" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">
+    Traditional programming
+  </text>
+
+  <g transform="translate(70,120)">
+    <rect x="0" y="0" width="220" height="70" rx="10" fill="#10b981" opacity="0.25" stroke="#34d399" stroke-width="2"/>
+    <text x="110" y="28" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Data</text>
+    <text x="110" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">inputs</text>
   </g>
-  
+
+  <g transform="translate(70,210)">
+    <rect x="0" y="0" width="220" height="70" rx="10" fill="#4f46e5" opacity="0.25" stroke="#6366f1" stroke-width="2"/>
+    <text x="110" y="28" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Program</text>
+    <text x="110" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">rules / code</text>
+  </g>
+
+  <g transform="translate(560,165)">
+    <rect x="0" y="0" width="270" height="90" rx="12" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+    <text x="135" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Output</text>
+    <text x="135" y="62" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">predictions / results</text>
+  </g>
+
+  <path d="M 290 155 L 540 205" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <path d="M 290 245 L 540 215" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <text x="430" y="205" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">run program</text>
+
+  <!-- Machine learning -->
+  <text x="120" y="325" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#94a3b8" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">
+    Machine learning
+  </text>
+
+  <g transform="translate(70,345)">
+    <rect x="0" y="0" width="220" height="70" rx="10" fill="#10b981" opacity="0.25" stroke="#34d399" stroke-width="2"/>
+    <text x="110" y="28" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Data</text>
+    <text x="110" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">examples</text>
+  </g>
+
+  <g transform="translate(310,345)">
+    <rect x="0" y="0" width="220" height="70" rx="10" fill="#f59e0b" opacity="0.25" stroke="#fbbf24" stroke-width="2"/>
+    <text x="110" y="28" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Outputs</text>
+    <text x="110" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">labels / targets</text>
+  </g>
+
+  <g transform="translate(560,330)">
+    <rect x="0" y="0" width="270" height="100" rx="12" fill="#8b5cf6" opacity="0.22" stroke="#a78bfa" stroke-width="2"/>
+    <text x="135" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Model</text>
+    <text x="135" y="62" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#e2e8f0" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">learned program</text>
+  </g>
+
+  <path d="M 290 380 L 550 380" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <path d="M 530 380 L 550 380" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <text x="420" y="357" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">train</text>
 </svg>
 

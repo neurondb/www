@@ -1,107 +1,73 @@
-<svg width="800" height="370" viewBox="0 0 800 370" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <linearGradient id="treeBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#111827;stop-opacity:1" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#111827"/>
     </linearGradient>
-    <marker id="arrowTree" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="currentColor"/>
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
     </marker>
-      <clipPath id="clip-6">
-      <rect x="0" y="0" width="80" height="40" rx="4"/>
-    </clipPath>
-      <clipPath id="clip-5">
-      <rect x="0" y="0" width="80" height="40" rx="4"/>
-    </clipPath>
-      <clipPath id="clip-4">
-      <rect x="0" y="0" wi<g transform="translate(350, 80)">
+  </defs>
 
-    <rect x="0" y="0" width="100" height="50" fill="#4f46e5" opacity="0.4" rx="6" stroke="#6366f1" stroke-width="2"/>
-    <g clip-path="url(#clip-0)">
-    <text x="50" y="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Feature <tspan font-style="italic">X</tspan><tspan baseline-shift="sub" font-size="9">₁</tspan>>
-    <text x="50" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">≤ 5?>
-    </g>
-  
-  </g>reeBg)"/>
-  
-  <text x="400" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="bold" fill="#facc15" text-anchor=<g transform="translate(150, 180)" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">
+  <rect width="900" height="420" fill="url(#bg)"/>
 
-    <rect x="0" y="0" width="100" height="50" fill="#10b981" opacity="0.4" rx="6" stroke="#22c55e" stroke-width="2"/>
-    <g clip-path="url(#clip-1)">
-    <text x="50" y="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Feature <tspan font-style="italic">X</tspan><tspan baseline-shift="sub" font-size="9">₂</tspan>>
-    <text x="50" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">≤ 3?>
-    </g>
-  
-  </g>t-size="9" fill="#cbd5e1" text-anchor="middle">≤ 5?>
+  <text x="450" y="42" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">
+    Decision Tree (Example)
+  </text>
+
+  <!-- Nodes -->
+  <g id="root" transform="translate(350,80)">
+    <rect x="0" y="0" width="200" height="70" rx="12" fill="#4f46e5" opacity="0.25" stroke="#6366f1" stroke-width="2"/>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Feature X₁ ≤ 5?</text>
+    <text x="100" y="52" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">split</text>
   </g>
-  
-  <!-- Level 2 Nodes -->
-  <g transform<g transform="translate(550, 180)">
 
-    <rect x="0" y="0" width="100" height="50" fill="#f59e0b" opacity="0.4" rx="6" stroke="#fbbf24" stroke-width="2"/>
-    <g clip-path="url(#clip-2)">
-    <text x="50" y="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Feature <tspan font-style="italic">X</tspan><tspan baseline-shift="sub" font-size="9">₃</tspan>>
-    <text x="50" y="38" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">≤ 7?>
-    </g>
-  
-  </g>nsform="translate(550, 180)">
-    <rect x="0" y="0" width="100" height="50" fill="#f59e0b" opacity="0.4" rx="6" stroke="#fbbf24" stroke-width=<g transform="translate(50, 300)">
-
-    <rect x="0" y="0" width="80" height="40" fill="#22c55e" opacity="0.5" rx="4"/>
-    <g clip-path="url(#clip-3)">
-    <text x="40" y="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Class A>
-    <text x="40" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">85%>
-    </g>
-  
-  </g>s - Leaves -->
-  <g transform="translate(50, 300)">
-    <rect x="0" y="0" width="80" height="40" fill="#22c<g transform="translate(170, 300)">
-
-    <rect x="0" y="0" width="80" height="40" fill="#ef4444" opacity="0.5" rx="4"/>
-    <g clip-path="url(#clip-4)">
-    <text x="40" y="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Class B>
-    <text x="40" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">78%>
-    </g>
-  
-  </g>="#ef4444" opacity="0.5" rx="4"/>
-    <text x="40" y="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11<g transform="translate(450, 300)" dominant-baseline="middle">
-
-    <rect x="0" y="0" width="80" height="40" fill="#f59e0b" opacity="0.5" rx="4"/>
-    <g clip-path="url(#clip-5)">
-    <text x="40" y="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Class C>
-    <text x="40" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">92%>
-    </g>
-  
-  </g>ze="11" font-weight="bold" fill="#fff" text-anchor="middle">Class C>
-    <text x="40" y="35" font-fam<g transform="translate(570, 300)" dominant-baseline="middle">
-
-    <rect x="0" y="0" width="80" height="40" fill="#8b5cf6" opacity="0.5" rx="4"/>
-    <g clip-path="url(#clip-6)">
-    <text x="40" y="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Class D>
-    <text x="40" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">67%>
-    </g>
-  
-  </g>nt-family="system-ui, sans-serif" font-size="8" fill="#cbd5e1" text-anchor="middle">67%>
+  <g id="left" transform="translate(170,200)">
+    <rect x="0" y="0" width="200" height="70" rx="12" fill="#10b981" opacity="0.22" stroke="#34d399" stroke-width="2"/>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Feature X₂ ≤ 3?</text>
+    <text x="100" y="52" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">split</text>
   </g>
-  
-  <!-- Branches - routes connect to box edges, not inside -->
-  <!-- Root bottom center (400, 130) to Left Level 2 top center (200, 180) -->
-  <path d="M 400.0 130.0 L 400.0 134.0 L 200.0 134.0 L 200.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" style="color: inherit;" opacity="0.8"/><text x="300" y="135" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#06b6d4" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Yes>
-  
-  <!-- Root bottom center (400, 130) to Right Level 2 top center (600, 180) -->
-  <path d="M 400.0 130.0 L 400.0 134.0 L 600.0 134.0 L 600.0 180.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" style="color: inherit;" opacity="0.8"/><text x="500" y="135" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#06b6d4" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">No>
-  
-  <!-- Left Level 2 bottom center (200, 230) to Left Leaf 1 top center (90, 300) -->
-  <path d="M 200.0 230.0 L 200.0 234.0 L 90.0 234.0 L 90.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" style="color: inherit;" opacity="0.8"/><text x="145" y="240" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#06b6d4" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Yes>
-  
-  <!-- Left Level 2 bottom center (200, 230) to Left Leaf 2 top center (210, 300) -->
-  <path d="M 200.0 230.0 L 200.0 234.0 L 210.0 234.0 L 210.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" style="color: inherit;" opacity="0.8"/><text x="205" y="240" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#06b6d4" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">No>
-  
-  <!-- Right Level 2 bottom center (600, 230) to Right Leaf 1 top center (490, 300) -->
-  <path d="M 600.0 230.0 L 600.0 234.0 L 490.0 234.0 L 490.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" style="color: inherit;" opacity="0.8"/><text x="545" y="240" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#06b6d4" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">Yes>
-  
-  <!-- Right Level 2 bottom center (600, 230) to Right Leaf 2 top center (610, 300) -->
-  <path d="M 600.0 230.0 L 600.0 234.0 L 610.0 234.0 L 610.0 300.0" fill="none" stroke="#06b6d4" stroke-width="0.5" stroke-dasharray="1.5,1.5" marker-end="url(#arrowTree)" style="color: inherit;" opacity="0.8"/><text x="605" y="240" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#06b6d4" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round" dominant-baseline="middle">No>
-  
+
+  <g id="right" transform="translate(530,200)">
+    <rect x="0" y="0" width="200" height="70" rx="12" fill="#f59e0b" opacity="0.22" stroke="#fbbf24" stroke-width="2"/>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Feature X₃ ≤ 7?</text>
+    <text x="100" y="52" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">split</text>
+  </g>
+
+  <!-- Leaves -->
+  <g transform="translate(80,320)">
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#22c55e" opacity="0.35" stroke="#22c55e" stroke-width="2"/>
+    <text x="80" y="33" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Class A</text>
+  </g>
+  <g transform="translate(260,320)">
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#ef4444" opacity="0.35" stroke="#ef4444" stroke-width="2"/>
+    <text x="80" y="33" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Class B</text>
+  </g>
+  <g transform="translate(480,320)">
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#f59e0b" opacity="0.35" stroke="#f59e0b" stroke-width="2"/>
+    <text x="80" y="33" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Class C</text>
+  </g>
+  <g transform="translate(660,320)">
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#8b5cf6" opacity="0.35" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="80" y="33" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="900" fill="#fff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Class D</text>
+  </g>
+
+  <!-- Branches -->
+  <path d="M 450 150 L 270 200" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <path d="M 450 150 L 630 200" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)" opacity="0.9"/>
+
+  <text x="340" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Yes</text>
+  <text x="560" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">No</text>
+
+  <path d="M 270 270 L 160 320" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <path d="M 270 270 L 340 320" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <text x="210" y="295" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Yes</text>
+  <text x="310" y="295" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">No</text>
+
+  <path d="M 630 270 L 560 320" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <path d="M 630 270 L 740 320" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)" opacity="0.9"/>
+  <text x="590" y="295" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Yes</text>
+  <text x="690" y="295" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">No</text>
 </svg>
 

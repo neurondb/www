@@ -15,6 +15,10 @@
       
     
     </ns0:linearGradient>
+
+    <ns0:marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+      <ns0:polygon points="0 0, 6 2, 0 4" fill="#06b6d4"/>
+    </ns0:marker>
     
                   
     <ns0:clipPath id="clip-1765356398544-3">
