@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import ProductPageTemplate from '@/components/templates/ProductPageTemplate';
-import NeurondBDemoTerminal from '@/components/NeurondBDemoTerminal';
 import NeuronDBArchitectureDiagram from '@/components/NeuronDBArchitectureDiagram';
 import ProductSchema from '@/components/SEO/ProductSchema';
 import { generateProductPageMetadata } from '@/config/seo';
 import { Database } from 'lucide-react';
+
+// Dynamically import large demo component with loading fallback
+const NeurondBDemoTerminal = dynamic(
+  () => import('@/components/NeurondBDemoTerminal'),
+  { 
+    ssr: false,
+    loading: () => (
+      <div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center">
+        <div className="text-slate-400">Loading demo...</div>
+      </div>
+    )
+  }
+);
 
 export const metadata = generateProductPageMetadata('neurondb');
 
 const neurondbConfig = {
   productId: 'neurondb' as const,
   hero: {
-    subtitle: 'AI Database Extension for PostgreSQL. Vector search, ML inference, GPU acceleration, and RAG pipeline, all within PostgreSQL',
+    subtitle: 'PostgreSQL AI Extension for Vector Search, ML Inference & RAG Pipeline. Build AI-powered applications directly in PostgreSQL with GPU acceleration, 52 ML algorithms, and hybrid search.',
   },
-  demo: <NeurondBDemoTerminal />,
+  demo: <Suspense fallback={<div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center"><div className="text-slate-400">Loading demo...</div></div>}><NeurondBDemoTerminal /></Suspense>,
   badges: [
     'PostgreSQL 16-18',
     '5 Vector Types',

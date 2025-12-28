@@ -1,26 +1,39 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import ProductPageTemplate from '@/components/templates/ProductPageTemplate';
-import NeuronMCPDemoTerminal from '@/components/NeuronMCPDemoTerminal';
 import NeuronMCPArchitectureDiagram from '@/components/NeuronMCPArchitectureDiagram';
 import { generateDocsMetadata } from '@/config/products';
 import { Server } from 'lucide-react';
+
+// Dynamically import large demo component with loading fallback
+const NeuronMCPDemoTerminal = dynamic(
+  () => import('@/components/NeuronMCPDemoTerminal'),
+  { 
+    ssr: false,
+    loading: () => (
+      <div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center">
+        <div className="text-slate-400">Loading demo...</div>
+      </div>
+    )
+  }
+);
 
 export const metadata = generateDocsMetadata('neurondb', 'NeuronMCP: Model Context Protocol Server');
 
 const neuronmcpConfig = {
   productId: 'neurondb' as const,
   hero: {
-    subtitle: 'Model Context Protocol server enabling MCP-compatible clients (like Claude Desktop) to access NeuronDB through stdio communication. JSON-RPC 2.0 implementation.',
+    subtitle: 'Model Context Protocol server with 50+ tools enabling MCP-compatible clients (like Claude Desktop) to access NeuronDB. Vector operations, ML training, RAG pipeline, reranking, dataset loading, and PostgreSQL administration through JSON-RPC 2.0.',
   },
-  demo: <NeuronMCPDemoTerminal />,
+  demo: <Suspense fallback={<div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center"><div className="text-slate-400">Loading demo...</div></div>}><NeuronMCPDemoTerminal /></Suspense>,
   badges: [
+    '50+ Tools',
     'JSON-RPC 2.0',
     'stdio Transport',
     'MCP Protocol',
     'Claude Desktop',
-    'Tools & Resources',
-    'Middleware Support',
+    'Enterprise Ready',
   ],
   componentCards: [],
   architecture: {
@@ -33,35 +46,43 @@ const neuronmcpConfig = {
     items: [
       { 
         title: 'MCP Protocol Implementation', 
-        desc: 'Full JSON-RPC 2.0 implementation with stdio communication protocol. Request routing and error handling. Compatible with all MCP-compatible clients including Claude Desktop. Protocol version negotiation and capability discovery.' 
+        desc: 'Full JSON-RPC 2.0 implementation with stdio, HTTP, and SSE transport. Supports tools, resources, prompts protocol, sampling/completions, and progress tracking. Batch operations with transactional tool calls. Protocol version negotiation and capability discovery. Compatible with all MCP-compatible clients including Claude Desktop.' 
+      },
+      { 
+        title: 'Comprehensive Tool Suite', 
+        desc: '50+ tools covering vector operations, ML training, analytics, RAG, reranking, and PostgreSQL administration. Vector search with 7+ distance metrics. Quantization tools (int8, fp16, binary, uint8, ternary, int4). Dataset loading from HuggingFace, URLs, GitHub, S3, and local files with auto-embedding. Vector graph operations and vecmap (sparse vector) support.' 
       },
       { 
         title: 'Vector Operations Tools', 
-        desc: 'Complete set of tools for vector search, similarity computation, embedding generation, and index creation. Direct access to NeuronDB vector engine. Support for multiple vector types and distance metrics. Batch operations support.' 
+        desc: 'Complete set of tools for vector search (L2, Cosine, Inner Product, Manhattan, Hamming, Jaccard), similarity computation, embedding generation (text, image, multimodal), and index creation (HNSW, IVF). Batch embedding generation with caching. Hybrid search with reciprocal rank fusion. Multi-vector, faceted, temporal, and diverse search capabilities.' 
       },
       { 
         title: 'ML Operations Tools', 
-        desc: 'Model training, prediction, and evaluation tools. Access to all 52 ML algorithms in NeuronDB. Model catalog management. Hyperparameter tuning support. Model versioning and A/B testing capabilities.' 
+        desc: 'Complete ML pipeline: training, prediction, evaluation, and AutoML for all 52 ML algorithms in NeuronDB. Model catalog management with versioning. Hyperparameter tuning support. ONNX model import, export, and inference. Model A/B testing and deployment workflows.' 
       },
       { 
-        title: 'Analytics Tools', 
-        desc: 'Data analysis, clustering, and dimensionality reduction tools. Quality metrics computation. Outlier detection. Time series analysis. Comprehensive analytics suite accessible via MCP protocol.' 
+        title: 'Reranking & RAG Operations', 
+        desc: 'Multiple reranking strategies: cross-encoder, LLM-powered, Cohere, ColBERT, learning-to-rank (LTR), and ensemble reranking. Complete RAG pipeline with document processing, chunking, context retrieval, and response generation. LLM integration for answer generation with prompt templates.' 
       },
       { 
-        title: 'RAG Operations', 
-        desc: 'Document processing, context retrieval, and response generation tools. Complete RAG pipeline accessible through MCP. Semantic search with reranking. LLM integration for answer generation.' 
+        title: 'Analytics & Time Series', 
+        desc: 'Data analysis, clustering (K-Means, DBSCAN, GMM), dimensionality reduction (PCA), quality metrics computation (Recall@K, Precision@K, F1@K, MRR). Outlier detection (Z-score, Modified Z-score, IQR). Drift detection and topic discovery. Time series analysis with ARIMA, forecasting, and seasonal decomposition.' 
       },
       { 
         title: 'Resource Management', 
-        desc: 'Schema information, model catalog, index configurations, and system statistics exposed as MCP resources. Real-time resource updates. Resource discovery and metadata access.' 
+        desc: 'Comprehensive resources: schema information, model catalog, index configurations, worker status, system statistics, and server configuration. Real-time resource subscriptions for live updates. Resource discovery and metadata access with search and filtering capabilities.' 
       },
       { 
-        title: 'Middleware Support', 
-        desc: 'Validation middleware for input sanitization. Structured logging for debugging and monitoring. Request timeout handling. Comprehensive error handling with graceful degradation.' 
+        title: 'Middleware & Enterprise Features', 
+        desc: 'Pluggable middleware: validation, logging, timeout, error handling, authentication (JWT, API keys, OAuth2), rate limiting. Caching layer with TTL and connection pooling. Enterprise features: Prometheus metrics, webhooks, retry/resilience (circuit breaker). Health checks for database, tools, and resources.' 
       },
       { 
-        title: 'Claude Desktop Integration', 
-        desc: 'Ready-to-use configuration for Claude Desktop. Docker and binary deployment options. Environment-based configuration. Seamless integration with existing NeuronDB installations.' 
+        title: 'Dataset Loading & Processing', 
+        desc: 'Load datasets from HuggingFace, URLs (CSV, JSON, Parquet), GitHub repositories, S3 buckets, and local files. Automatic schema detection and optimized PostgreSQL table creation. Auto-embedding generation for text columns. Batch loading with progress tracking. Support for multiple formats with efficient bulk loading.' 
+      },
+      { 
+        title: 'PostgreSQL Tools', 
+        desc: 'Complete PostgreSQL administration tools: version info, database statistics, connection monitoring, lock inspection, replication status, configuration settings, and extension management. Query performance analysis and system resource monitoring.' 
       },
     ],
   },
@@ -132,33 +153,53 @@ const neuronmcpConfig = {
         <tr className="bg-slate-800/60">
           <td className="px-4 py-3 font-medium">
             <Link href="/docs/neuronmcp" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
-              Resources
+              Reranking Tools
             </Link>
           </td>
-          <td className="px-4 py-3 text-slate-300">Schema, models, indexes, stats</td>
-          <td className="px-4 py-3 text-slate-300">Real-time updates</td>
+          <td className="px-4 py-3 text-slate-300">Cross-encoder, LLM, Cohere, ColBERT</td>
+          <td className="px-4 py-3 text-slate-300">Neural reranking</td>
           <td className="px-4 py-3 text-green-400">✓</td>
-              </tr>
-              <tr>
+        </tr>
+        <tr>
           <td className="px-4 py-3 font-medium">
             <Link href="/docs/neuronmcp" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
-              Middleware
+              Dataset Loading
             </Link>
           </td>
-          <td className="px-4 py-3 text-slate-300">Validation, logging, timeout</td>
-          <td className="px-4 py-3 text-slate-300">Low overhead</td>
+          <td className="px-4 py-3 text-slate-300">HuggingFace, URLs, GitHub, S3, local</td>
+          <td className="px-4 py-3 text-slate-300">Auto-embedding</td>
           <td className="px-4 py-3 text-green-400">✓</td>
         </tr>
         <tr className="bg-slate-800/60">
           <td className="px-4 py-3 font-medium">
             <Link href="/docs/neuronmcp" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
-              Claude Desktop
+              Resources
             </Link>
           </td>
-          <td className="px-4 py-3 text-slate-300">Ready-to-use configuration</td>
-          <td className="px-4 py-3 text-slate-300">Easy setup</td>
+          <td className="px-4 py-3 text-slate-300">Schema, models, indexes, stats</td>
+          <td className="px-4 py-3 text-slate-300">Real-time subscriptions</td>
           <td className="px-4 py-3 text-green-400">✓</td>
-              </tr>
+        </tr>
+        <tr>
+          <td className="px-4 py-3 font-medium">
+            <Link href="/docs/neuronmcp" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              Middleware & Enterprise
+            </Link>
+          </td>
+          <td className="px-4 py-3 text-slate-300">Validation, auth, metrics, webhooks</td>
+          <td className="px-4 py-3 text-slate-300">Production-ready</td>
+          <td className="px-4 py-3 text-green-400">✓</td>
+        </tr>
+        <tr className="bg-slate-800/60">
+          <td className="px-4 py-3 font-medium">
+            <Link href="/docs/neuronmcp" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              PostgreSQL Tools
+            </Link>
+          </td>
+          <td className="px-4 py-3 text-slate-300">Admin, stats, monitoring</td>
+          <td className="px-4 py-3 text-slate-300">Complete management</td>
+          <td className="px-4 py-3 text-green-400">✓</td>
+        </tr>
             </tbody>
           </table>
   ),

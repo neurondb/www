@@ -52,6 +52,10 @@ const nextConfig = {
           {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()'
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains'
           }
         ]
       },
@@ -99,6 +103,32 @@ const nextConfig = {
             value: 'public, max-age=31536000, immutable'
           }
         ]
+      },
+      {
+        source: '/sitemap.xml',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=3600'
+          },
+          {
+            key: 'Content-Type',
+            value: 'application/xml'
+          }
+        ]
+      },
+      {
+        source: '/robots.txt',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400'
+          },
+          {
+            key: 'Content-Type',
+            value: 'text/plain'
+          }
+        ]
       }
     ]
   },
@@ -134,6 +164,13 @@ const nextConfig = {
       exclude: ['error', 'warn'],
     } : false,
   },
+  
+  // Experimental features for optimization
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'react-syntax-highlighter'],
+  },
+  
+  // Note: Vercel handles output automatically, no need for 'standalone'
 }
 
 module.exports = nextConfig

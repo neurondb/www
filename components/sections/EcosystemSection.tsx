@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { Database, Bot, Server } from 'lucide-react'
+import { Database, Bot, Server, Monitor } from 'lucide-react'
 import SectionTemplate from '@/components/templates/SectionTemplate'
 
 interface EcosystemCardProps {
@@ -72,13 +72,23 @@ export default function EcosystemSection() {
       title: 'NeuronMCP',
       icon: <Server className="w-6 h-6" />,
       features: [
-        'Model Context Protocol server enabling MCP-compatible clients (like Claude Desktop) to access NeuronDB.',
-        'JSON-RPC 2.0 implementation with stdio communication protocol and resource management.',
-        'Tools for vector search, embedding generation, model training, and database schema management.',
-        'Middleware support for custom integrations and tool architecture.',
-        'MCP server with structured logging and error handling.',
+        'Model Context Protocol server with 50+ tools enabling MCP-compatible clients (like Claude Desktop) to access NeuronDB.',
+        'JSON-RPC 2.0 implementation with stdio, HTTP, and SSE transport. Supports tools, resources, prompts, sampling, and progress tracking.',
+        'Comprehensive tools: vector operations, ML training, analytics, RAG, reranking, dataset loading (HuggingFace, URLs, GitHub, S3), and PostgreSQL administration.',
+        'Enterprise features: middleware (validation, auth, logging), Prometheus metrics, webhooks, circuit breaker, and real-time resource subscriptions.',
       ],
       href: '/docs/neuronmcp',
+    },
+    {
+      title: 'NeuronDesktop',
+      icon: <Monitor className="w-6 h-6" />,
+      features: [
+        'Unified web interface providing a single dashboard for managing all NeuronDB ecosystem components (NeuronDB, NeuronAgent, NeuronMCP).',
+        'Real-time communication via WebSocket for live updates and streaming responses. Profile-based configuration for multiple environments.',
+        'Secure authentication with API key-based access control, rate limiting, and comprehensive request/response logging with analytics.',
+        'Professional UI with metrics collection, health monitoring, agent management, MCP tool testing, and vector search interface.',
+      ],
+      href: '/docs/neurondesktop',
     },
   ]
 
@@ -93,7 +103,7 @@ export default function EcosystemSection() {
             Complete AI database platform with core engine and runtime components
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {ecosystemComponents.map((component) => (
             <EcosystemCard
               key={component.title}

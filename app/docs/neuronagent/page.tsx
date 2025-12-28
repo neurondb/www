@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import ProductPageTemplate from '@/components/templates/ProductPageTemplate';
-import NeuronAgentDemoTerminal from '@/components/NeuronAgentDemoTerminal';
 import NeuronAgentArchitectureDiagram from '@/components/NeuronAgentArchitectureDiagram';
 import { generateDocsMetadata } from '@/config/products';
 import { Bot, Server, Database } from 'lucide-react';
+
+// Dynamically import large demo component with loading fallback
+const NeuronAgentDemoTerminal = dynamic(
+  () => import('@/components/NeuronAgentDemoTerminal'),
+  { 
+    ssr: false,
+    loading: () => (
+      <div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center">
+        <div className="text-slate-400">Loading demo...</div>
+      </div>
+    )
+  }
+);
 
 export const metadata = generateDocsMetadata('neurondb', 'NeuronAgent: AI Agent Runtime');
 
@@ -13,7 +26,7 @@ const neuronagentConfig = {
   hero: {
     subtitle: 'REST API and WebSocket agent runtime system with long-term memory, tool execution, and streaming responses. Integrates seamlessly with NeuronDB.',
   },
-  demo: <NeuronAgentDemoTerminal />,
+  demo: <Suspense fallback={<div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center"><div className="text-slate-400">Loading demo...</div></div>}><NeuronAgentDemoTerminal /></Suspense>,
   badges: [
     'REST API',
     'WebSocket',

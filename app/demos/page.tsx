@@ -1,15 +1,50 @@
-import React from 'react'
+import React, { Suspense } from 'react'
+import dynamic from 'next/dynamic'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import PageTemplate from '@/components/templates/PageTemplate'
 import HeroTemplate from '@/components/templates/HeroTemplate'
 import SectionTemplate from '@/components/templates/SectionTemplate'
 import FooterTemplate from '@/components/templates/FooterTemplate'
-import NeurondBDemoTerminal from '@/components/NeurondBDemoTerminal'
-import NeuronAgentDemoTerminal from '@/components/NeuronAgentDemoTerminal'
-import NeuronMCPDemoTerminal from '@/components/NeuronMCPDemoTerminal'
 import { generatePageMetadata } from '@/config/seo'
 import { Database, Bot, Server } from 'lucide-react'
+
+// Dynamically import large demo components with loading fallbacks
+const NeurondBDemoTerminal = dynamic(
+  () => import('@/components/NeurondBDemoTerminal'),
+  { 
+    ssr: false,
+    loading: () => (
+      <div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center">
+        <div className="text-slate-400">Loading demo...</div>
+      </div>
+    )
+  }
+);
+
+const NeuronAgentDemoTerminal = dynamic(
+  () => import('@/components/NeuronAgentDemoTerminal'),
+  { 
+    ssr: false,
+    loading: () => (
+      <div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center">
+        <div className="text-slate-400">Loading demo...</div>
+      </div>
+    )
+  }
+);
+
+const NeuronMCPDemoTerminal = dynamic(
+  () => import('@/components/NeuronMCPDemoTerminal'),
+  { 
+    ssr: false,
+    loading: () => (
+      <div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center">
+        <div className="text-slate-400">Loading demo...</div>
+      </div>
+    )
+  }
+);
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Demos',
@@ -63,7 +98,9 @@ export default function DemosPage() {
                 vector similarity search, ML model training and prediction, document processing, and more - all within PostgreSQL.
               </p>
             </div>
-            <NeurondBDemoTerminal />
+            <Suspense fallback={<div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center"><div className="text-slate-400">Loading demo...</div></div>}>
+              <NeurondBDemoTerminal />
+            </Suspense>
             <div className="mt-6 text-center">
               <Link
                 href="/neurondb"
@@ -95,7 +132,9 @@ export default function DemosPage() {
                 showcases the complete agent lifecycle including health checks and API authentication.
               </p>
             </div>
-            <NeuronAgentDemoTerminal />
+            <Suspense fallback={<div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center"><div className="text-slate-400">Loading demo...</div></div>}>
+              <NeuronAgentDemoTerminal />
+            </Suspense>
             <div className="mt-6 text-center">
               <Link
                 href="/docs/neuronagent"
@@ -128,7 +167,9 @@ export default function DemosPage() {
                 RAG capabilities through a standardized protocol interface.
               </p>
             </div>
-            <NeuronMCPDemoTerminal />
+            <Suspense fallback={<div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center"><div className="text-slate-400">Loading demo...</div></div>}>
+              <NeuronMCPDemoTerminal />
+            </Suspense>
             <div className="mt-6 text-center">
               <Link
                 href="/docs/neuronmcp"

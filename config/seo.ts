@@ -36,6 +36,9 @@ export function generatePageMetadata({
   path,
   image,
   noindex = false,
+  type = 'website',
+  publishedTime,
+  modifiedTime,
 }: {
   title: string
   description: string
@@ -43,33 +46,41 @@ export function generatePageMetadata({
   path: string
   image?: string
   noindex?: boolean
+  type?: 'website' | 'article'
+  publishedTime?: string
+  modifiedTime?: string
 }): Metadata {
   const url = `${baseSEO.siteUrl}${path}`
-  const ogImage = image || baseSEO.defaultImage
+  const ogImage = image ? (image.startsWith('http') ? image : `${baseSEO.siteUrl}${image}`) : `${baseSEO.siteUrl}${baseSEO.defaultImage}`
+  const optimizedDescription = description.substring(0, 160) // Ensure optimal length
 
   return {
     title: `${title} | ${baseSEO.siteName}`,
-    description,
-    keywords: keywords?.join(', '),
+    description: optimizedDescription,
+    keywords: keywords?.join(', ') || '',
     openGraph: {
-      title,
-      description,
-      type: 'website',
+      title: title.substring(0, 60), // Optimal OG title length
+      description: optimizedDescription,
+      type,
       url,
       siteName: baseSEO.siteName,
+      locale: 'en_US',
       images: [
         {
           url: ogImage,
           width: 1200,
           height: 630,
           alt: title,
+          type: 'image/jpeg',
         },
       ],
+      ...(publishedTime && { publishedTime }),
+      ...(modifiedTime && { modifiedTime }),
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: title.substring(0, 70), // Optimal Twitter title length
+      description: description.substring(0, 200), // Optimal Twitter description length
       images: [ogImage],
       creator: baseSEO.twitterHandle,
       site: baseSEO.twitterHandle,
@@ -87,6 +98,9 @@ export function generatePageMetadata({
         'max-image-preview': 'large',
         'max-snippet': -1,
       },
+    },
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || '',
     },
   }
 }
@@ -237,6 +251,7 @@ export function generateProductSchema(productId: ProductId) {
 
 /**
  * Generate Article structured data for a blog post
+ * Enhanced with better SEO properties
  */
 export function generateArticleSchema({
   title,
@@ -246,6 +261,8 @@ export function generateArticleSchema({
   modifiedAt,
   image,
   author = 'NeuronDB Team',
+  keywords,
+  wordCount,
 }: {
   title: string
   description: string
@@ -254,31 +271,43 @@ export function generateArticleSchema({
   modifiedAt?: string
   image?: string
   author?: string
+  keywords?: string[]
+  wordCount?: number
 }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: title,
     description,
-    image: image || `${baseSEO.siteUrl}${baseSEO.defaultImage}`,
+    image: image ? (image.startsWith('http') ? image : `${baseSEO.siteUrl}${image}`) : `${baseSEO.siteUrl}${baseSEO.defaultImage}`,
     datePublished: publishedAt,
     dateModified: modifiedAt || publishedAt,
     author: {
       '@type': 'Person',
       name: author,
+      url: baseSEO.siteUrl,
     },
     publisher: {
       '@type': 'Organization',
       name: baseSEO.siteName,
       logo: {
         '@type': 'ImageObject',
-        url: `${baseSEO.siteUrl}/logo.png`,
+        url: `${baseSEO.siteUrl}/favicons/favicon-512.png`,
+        width: 512,
+        height: 512,
       },
+      url: baseSEO.siteUrl,
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${baseSEO.siteUrl}/blog/${slug}`,
     },
+    articleSection: 'Technology',
+    keywords: keywords?.join(', '),
+    wordCount: wordCount,
+    inLanguage: 'en-US',
+    isAccessibleForFree: true,
+    license: baseSEO.siteUrl,
   }
 }
 

@@ -84,7 +84,7 @@ export const colors = {
 // PRODUCT-SPECIFIC THEMES
 // ============================================================================
 
-export type ProductId = 'neurondb'
+export type ProductId = 'neurondb' | 'neuronagent' | 'neuronmcp' | 'neurondesktop'
 
 export interface ProductTheme {
   // Gradient classes for Tailwind
@@ -140,6 +140,75 @@ export const productThemes: Record<ProductId, ProductTheme> = {
     quickLinkCardClass: 'rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm transition hover:border-indigo-300 dark:border-slate-700/60 dark:bg-slate-900/60',
     quickLinkIconClass: 'text-indigo-600',
     quickLinkHoverLabelClass: 'text-indigo-600',
+    docCardClass: 'rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm dark:border-slate-700/60 dark:bg-slate-900/60',
+  },
+  neuronagent: {
+    badgeGradient: 'from-blue-600 to-cyan-600',
+    heroGradient: 'bg-gradient-to-r from-blue-900/60 via-cyan-900/50 to-teal-900/40',
+    pageGradient: 'bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-900',
+    primaryColor: 'blue-600',
+    secondaryColor: 'cyan-600',
+    accentColor: 'teal-600',
+    iconColors: {
+      primary: 'blue-400',
+      secondary: 'cyan-400',
+      tertiary: 'yellow-400',
+      quaternary: 'teal-400',
+    },
+    buttonPrimary: 'bg-blue-600 hover:bg-blue-700 text-white',
+    buttonSecondary: 'border-blue-300 hover:border-blue-400 text-blue-600',
+    linkHover: 'hover:text-blue-600',
+    featureIconClass: 'text-blue-600',
+    featureCardClass: 'rounded-2xl border border-slate-200 bg-white/85 p-6 shadow-sm dark:border-slate-700/60 dark:bg-slate-900/60',
+    quickLinkCardClass: 'rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm transition hover:border-blue-300 dark:border-slate-700/60 dark:bg-slate-900/60',
+    quickLinkIconClass: 'text-blue-600',
+    quickLinkHoverLabelClass: 'text-blue-600',
+    docCardClass: 'rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm dark:border-slate-700/60 dark:bg-slate-900/60',
+  },
+  neuronmcp: {
+    badgeGradient: 'from-green-600 to-emerald-600',
+    heroGradient: 'bg-gradient-to-r from-green-900/60 via-emerald-900/50 to-teal-900/40',
+    pageGradient: 'bg-gradient-to-br from-slate-50 via-white to-green-50 dark:from-slate-900 dark:via-slate-800 dark:to-green-900',
+    primaryColor: 'green-600',
+    secondaryColor: 'emerald-600',
+    accentColor: 'teal-600',
+    iconColors: {
+      primary: 'green-400',
+      secondary: 'emerald-400',
+      tertiary: 'yellow-400',
+      quaternary: 'teal-400',
+    },
+    buttonPrimary: 'bg-green-600 hover:bg-green-700 text-white',
+    buttonSecondary: 'border-green-300 hover:border-green-400 text-green-600',
+    linkHover: 'hover:text-green-600',
+    featureIconClass: 'text-green-600',
+    featureCardClass: 'rounded-2xl border border-slate-200 bg-white/85 p-6 shadow-sm dark:border-slate-700/60 dark:bg-slate-900/60',
+    quickLinkCardClass: 'rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm transition hover:border-green-300 dark:border-slate-700/60 dark:bg-slate-900/60',
+    quickLinkIconClass: 'text-green-600',
+    quickLinkHoverLabelClass: 'text-green-600',
+    docCardClass: 'rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm dark:border-slate-700/60 dark:bg-slate-900/60',
+  },
+  neurondesktop: {
+    badgeGradient: 'from-purple-600 to-pink-600',
+    heroGradient: 'bg-gradient-to-r from-purple-900/60 via-pink-900/50 to-rose-900/40',
+    pageGradient: 'bg-gradient-to-br from-slate-50 via-white to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-purple-900',
+    primaryColor: 'purple-600',
+    secondaryColor: 'pink-600',
+    accentColor: 'rose-600',
+    iconColors: {
+      primary: 'purple-400',
+      secondary: 'pink-400',
+      tertiary: 'yellow-400',
+      quaternary: 'rose-400',
+    },
+    buttonPrimary: 'bg-purple-600 hover:bg-purple-700 text-white',
+    buttonSecondary: 'border-purple-300 hover:border-purple-400 text-purple-600',
+    linkHover: 'hover:text-purple-600',
+    featureIconClass: 'text-purple-600',
+    featureCardClass: 'rounded-2xl border border-slate-200 bg-white/85 p-6 shadow-sm dark:border-slate-700/60 dark:bg-slate-900/60',
+    quickLinkCardClass: 'rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm transition hover:border-purple-300 dark:border-slate-700/60 dark:bg-slate-900/60',
+    quickLinkIconClass: 'text-purple-600',
+    quickLinkHoverLabelClass: 'text-purple-600',
     docCardClass: 'rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm dark:border-slate-700/60 dark:bg-slate-900/60',
   },
 }

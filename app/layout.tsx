@@ -5,12 +5,14 @@ import './globals.css'
 import { siteConfig } from '@/config/site'
 import Header from '@/components/Header'
 import OrganizationSchema from '@/components/SEO/OrganizationSchema'
+import WebSiteSchema from '@/components/SEO/WebSiteSchema'
 
 const inter = Inter({
   subsets: ['latin'],
-  display: 'swap',
+  display: 'swap', // Optimize font loading - show fallback until font loads
   preload: true,
   variable: '--font-inter',
+  adjustFontFallback: true, // Optimize font fallback rendering
 })
 
 export const viewport: Viewport = {
@@ -31,10 +33,10 @@ const defaultDescription = 'PostgreSQL extension with vector search, RAG pipelin
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: `${siteConfig.name} - ${siteConfig.tagline} | Vector Search & RAG Pipeline`,
-    template: `%s | ${siteConfig.name}`,
+    default: `PostgreSQL AI Extension - ${siteConfig.name} | Vector Search, ML & RAG Pipeline`,
+    template: `%s | PostgreSQL AI Extension`,
   },
-  description: defaultDescription,
+  description: 'NeuronDB is the leading PostgreSQL AI extension for vector search, machine learning inference, and RAG pipeline. Build AI applications in PostgreSQL with GPU acceleration and 52 ML algorithms.',
   applicationName: siteConfig.name,
   authors: [
     { name: `${siteConfig.name} Team`, url: baseUrl },
@@ -42,10 +44,15 @@ export const metadata: Metadata = {
   ],
   generator: 'Next.js',
   keywords: [
+    'postgresql ai extension',
+    'postgresql ai extension vector search',
+    'postgresql ai extension ml',
+    'postgresql ai extension rag',
+    'postgres ai extension',
+    'postgres extension ai',
     'ai database',
     'ai database postgresql',
     'postgres ai',
-    'postgresql ai extension',
     'vector database',
     'vector database postgresql',
     'postgres vector database',
@@ -90,14 +97,14 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: '/',
     siteName: siteConfig.name,
-    title: `${siteConfig.name} - ${siteConfig.tagline}`,
-    description: defaultDescription,
+    title: `PostgreSQL AI Extension - ${siteConfig.name} | Vector Search & ML Inference`,
+    description: 'NeuronDB is the leading PostgreSQL AI extension for vector search, machine learning inference, and RAG pipeline. Build AI applications in PostgreSQL.',
     images: [
       {
         url: '/og-image.jpg?v=2',
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} - AI Database Extension`,
+        alt: `PostgreSQL AI Extension - ${siteConfig.name} | Vector Search & ML Inference`,
         type: 'image/jpeg',
       },
     ],
@@ -188,21 +195,25 @@ export default function RootLayout({
         <meta name="msapplication-starturl" content="/" />
       </head>
       <body className={inter.className} suppressHydrationWarning>
-        {/* Google Analytics */}
+        {/* Google Analytics - Optimized loading */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-R4NNPBY0R1"
           strategy="afterInteractive"
+          defer
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-R4NNPBY0R1');
+            gtag('config', 'G-R4NNPBY0R1', {
+              page_path: window.location.pathname,
+            });
           `}
         </Script>
         
         <OrganizationSchema />
+        <WebSiteSchema />
         <Header />
         <main role="main">
           {children}

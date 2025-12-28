@@ -11,7 +11,7 @@ import { LucideIcon } from 'lucide-react'
 // THEME TYPES
 // ============================================================================
 
-export type ProductId = 'neurondb'
+export type ProductId = 'neurondb' | 'neuronagent' | 'neuronmcp' | 'neurondesktop'
 
 export interface ColorScale {
   50: string

@@ -89,6 +89,12 @@ const capabilities = [
     performance: 'JSON-RPC 2.0 implementation',
     productionReady: true,
   },
+  {
+    capability: 'NeuronDesktop',
+    description: 'Unified web interface for managing all NeuronDB ecosystem components with real-time monitoring and comprehensive analytics',
+    performance: 'WebSocket-based real-time updates',
+    productionReady: true,
+  },
 ]
 
 export default function CapabilitiesSection() {
@@ -97,10 +103,10 @@ export default function CapabilitiesSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-            Capabilities
+            PostgreSQL AI Extension Capabilities
           </h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            AI database features
+            Complete AI database features in a PostgreSQL AI extension
           </p>
         </div>
 
