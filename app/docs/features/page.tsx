@@ -4,7 +4,7 @@ import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
   title: 'Vector Types & Features | NeuronDB Documentation',
-  description: 'Comprehensive guide to NeuronDB vector data types, operators, and advanced features for AI workloads',
+  description: 'NeuronDB vector data types, operators, and advanced features for AI workloads',
 }
 
 const tableOfContents: TocItem[] = [
@@ -15,12 +15,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/indexing',
+  href: '/docs/indexing',
   label: 'Indexing',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/gpu',
+  href: '/docs/gpu',
   label: 'GPU Acceleration',
 }
 
@@ -28,14 +28,14 @@ export default function VectorTypesPage() {
   return (
     <PostgresDocsLayout
       title="Vector Types & Features"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
     >
       <section id="vector-types">
         <h2>Vector Data Types</h2>
-        <p>NeuronDB provides comprehensive vector data types and operations for AI/ML workloads. Support for dense, sparse, binary vectors with GPU acceleration.</p>
+        <p>NeuronDB provides vector data types and operations for AI/ML workloads. Support for dense, sparse, binary vectors with GPU acceleration.</p>
 
         <h3>vector</h3>
         <p>Standard dense vector type (float32). Up to 16,000 dimensions. Storage: 4 bytes per dimension.</p>
@@ -56,6 +56,20 @@ export default function VectorTypesPage() {
         <h3>binaryvec</h3>
         <p>Binary vector (bit-packed). Up to 64,000 dimensions. Storage: 1 bit per dimension.</p>
         <p><strong>Use Cases:</strong> Hamming distance, Binary embeddings, Fast filtering</p>
+
+        <h3>vecmap</h3>
+        <p>Sparse vector map type for high-dimensional sparse data. Stores key-value pairs efficiently. Up to 1,000,000 dimensions with only non-zero values stored.</p>
+        <p><strong>Use Cases:</strong> TF-IDF vectors, High-dimensional text features, Recommendation systems, Sparse embeddings</p>
+        <p><strong>Operations:</strong> L2 distance, cosine distance, inner product, L1 distance, arithmetic operations (add, subtract, multiply_scalar, norm)</p>
+
+        <h3>vgraph</h3>
+        <p>Vector graph type for graph-based vector operations. Supports graph algorithms and graph neural networks.</p>
+        <p><strong>Use Cases:</strong> Knowledge graphs, Recommendation systems, Graph neural networks, Social network analysis</p>
+        <p><strong>Operations:</strong> BFS (Breadth-First Search), DFS (Depth-First Search), PageRank, Community detection</p>
+
+        <h3>rtext</h3>
+        <p>Retrieval text type that combines retrieval capabilities with text operations. Optimized for RAG pipelines and semantic text search.</p>
+        <p><strong>Use Cases:</strong> RAG pipelines, Semantic text search, Combined vector and full-text search, Context-aware retrieval</p>
       </section>
 
       <section id="vector-operators">
@@ -102,7 +116,7 @@ export default function VectorTypesPage() {
       <section id="example-usage">
         <h2>Example Usage</h2>
         <SqlCodeBlock
-          title="Complete example"
+          title="Example"
           code={`-- Create table with vector column
 CREATE TABLE embeddings (
   id SERIAL PRIMARY KEY,

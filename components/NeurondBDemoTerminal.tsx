@@ -77,7 +77,7 @@ const NeurondBDemoTerminal = () => {
   // NeurondB-specific demo commands and their outputs
   const buildCommands = useMemo(() => [
     {
-      command: 'git clone https://github.com/pgelephant/neurondb.git && cd neurondb',
+      command: 'git clone https://github.com/neurondb-ai/neurondb.git && cd neurondb',
       output: [
         '\x1b[32mCloning into \'neurondb\'...\x1b[0m',
         'remote: Enumerating objects: 2847, done.',

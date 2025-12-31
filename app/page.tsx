@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
+import { Layers, Code, Brain, Zap } from 'lucide-react'
 import PageTemplate from '@/components/templates/PageTemplate'
 import HeroTemplate from '@/components/templates/HeroTemplate'
 import FooterTemplate from '@/components/templates/FooterTemplate'
@@ -12,60 +13,56 @@ import { siteConfig } from '@/config/site'
 import { generatePageMetadata } from '@/config/seo'
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'PostgreSQL AI Extension - Vector Search, ML Inference & RAG Pipeline',
-  description: 'NeuronDB is the leading PostgreSQL AI extension for vector search, machine learning inference, and RAG pipeline. Build AI-powered applications directly in PostgreSQL with GPU acceleration, 52 ML algorithms, and hybrid search. PostgreSQL 16-18 compatible.',
+  title: 'NeuronDB PostgreSQL AI Ecosystem',
+  description: 'PostgreSQL AI ecosystem with 4 products: NeuronDB extension for vector search and ML, NeuronAgent runtime, NeuronMCP server for Claude Desktop, and NeuronDesktop interface. Build AI applications with GPU acceleration, 52 ML algorithms, and 473 SQL functions.',
   keywords: [
+    'neurondb',
+    'postgresql ai ecosystem',
+    'ai database ecosystem',
+    'neuronagent',
+    'neuronmcp',
+    'neurondesktop',
     'postgresql ai extension',
-    'postgresql ai extension vector search',
-    'postgresql ai extension ml',
-    'postgresql ai extension rag',
-    'postgres ai extension',
-    'postgres extension ai',
-    'ai database',
-    'ai database postgresql',
-    'vector database',
     'vector database postgresql',
     'vector search postgresql',
     'rag pipeline postgresql',
     'machine learning postgresql',
     'ml inference postgresql',
     'gpu accelerated database',
-    'neurondb',
-    'neuronagent',
-    'neuronmcp',
-    'neurondesktop',
     'pgvector alternative',
     'ai agent runtime',
-    'mcp server',
-    'ai database ecosystem',
+    'mcp server claude',
+    'postgres ai',
+    'ai database',
+    'semantic search postgresql',
   ],
   path: '/',
 })
 
 const faqs = [
   {
-    question: 'What is NeuronDB PostgreSQL AI Extension?',
-    answer: 'NeuronDB is a PostgreSQL AI extension that transforms PostgreSQL into a complete AI database. It consists of four integrated components: NeuronDB (PostgreSQL AI extension for vector search and ML), NeuronAgent (agent runtime), NeuronMCP (MCP protocol server), and NeuronDesktop (web interface). Build AI-powered applications entirely within PostgreSQL.',
+    question: 'What is NeuronDB PostgreSQL AI Ecosystem?',
+    answer: 'NeuronDB is a PostgreSQL AI ecosystem with 4 products: NeuronDB extension for vector search, ML inference, and RAG, NeuronAgent for agent runtime, NeuronMCP for Model Context Protocol server with Claude Desktop, and NeuronDesktop for web interface. They provide AI capabilities in PostgreSQL.',
   },
   {
     question: 'How does NeuronDB compare to pgvector?',
-    answer: 'NeuronDB offers comprehensive AI capabilities beyond vector search, including ML inference with ONNX models, hybrid search combining semantic and full-text search, complete RAG pipelines, GPU acceleration, and 52 ML algorithms. It provides 473 SQL functions and 4 background workers for production-ready AI workloads.',
+    answer: 'NeuronDB adds ML inference with ONNX models, hybrid search, RAG pipelines, GPU acceleration, and 52 ML algorithms. It provides 473 SQL functions and 4 background workers.',
   },
   {
     question: 'What PostgreSQL versions are supported?',
-    answer: 'NeuronDB supports PostgreSQL versions 16, 17, and 18. It is implemented in pure C following PostgreSQL coding standards with zero external dependencies.',
+    answer: 'NeuronDB supports PostgreSQL 16, 17, and 18. It is implemented in pure C with zero external dependencies.',
   },
   {
     question: 'Does NeuronDB support GPU acceleration?',
-    answer: 'Yes, NeuronDB supports GPU acceleration for CUDA (NVIDIA), ROCm (AMD), and Metal (Apple Silicon). GPU acceleration provides up to 100x speedup on batch operations and automatically falls back to CPU when GPU is unavailable.',
+    answer: 'NeuronDB supports GPU acceleration for CUDA, ROCm, and Metal. GPU acceleration speeds up batch operations up to 100x. It falls back to CPU when GPU is unavailable.',
   },
   {
     question: 'What machine learning capabilities does NeuronDB provide?',
-    answer: 'NeuronDB includes 52 ML algorithms implemented in pure C, including Random Forest, XGBoost, LightGBM, CatBoost, SVM, KNN, neural networks, clustering algorithms, and more. It also supports ONNX model inference for embeddings generation and text/image/multimodal embeddings.',
+    answer: 'NeuronDB includes 52 ML algorithms in pure C. Algorithms include Random Forest, XGBoost, LightGBM, CatBoost, SVM, KNN, neural networks, and clustering. It supports ONNX model inference for embeddings generation.',
   },
   {
     question: 'Can I use NeuronDB for RAG (Retrieval Augmented Generation)?',
-    answer: 'Yes, NeuronDB provides a complete in-database RAG pipeline with document processing, semantic retrieval, reranking, and LLM integration. You can build RAG applications entirely within PostgreSQL without external services.',
+    answer: 'NeuronDB provides an in-database RAG pipeline with document processing, semantic retrieval, reranking, and LLM integration. You build RAG applications in PostgreSQL without external services.',
   },
 ]
 
@@ -81,13 +78,14 @@ export default function Home() {
         <div className="container-extra-wide relative z-10 w-full">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight drop-shadow-lg">
-              NeuronDB: PostgreSQL AI Extension
+              <div className="text-3xl md:text-4xl">NeuronDB</div>
+              <div className="text-xl md:text-2xl">PostgreSQL AI Ecosystem</div>
             </h1>
             <p className="text-lg md:text-xl font-normal text-white mb-6 max-w-2xl mx-auto drop-shadow-lg">
-              The Complete PostgreSQL AI Extension for Vector Search, ML Inference & RAG Pipeline
+              Vector Search, ML Inference, Agent Runtime, MCP Server & Desktop Interface
             </p>
             <p className="text-base md:text-lg text-white/90 mb-10 max-w-2xl mx-auto">
-              NeuronDB is a PostgreSQL AI extension that adds vector search, machine learning inference, and RAG pipeline capabilities directly to PostgreSQL. Build AI-powered applications with GPU acceleration, 52 ML algorithms, and hybrid search—all within your PostgreSQL database.
+              Four integrated products. Build AI applications with vector search, ML inference, autonomous agents, and RAG pipelines in PostgreSQL.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -106,23 +104,38 @@ export default function Home() {
           </div>
         </div>
       </HeroTemplate>
-      {/* SEO-Optimized Section for PostgreSQL AI Extension */}
-      <SectionTemplate background="page" padding="xl">
+      
+      {/* Key Features Quick Overview */}
+      <SectionTemplate background="page" padding="lg">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              What is a PostgreSQL AI Extension?
-            </h2>
-            <div className="text-lg text-white/90 space-y-4 leading-relaxed">
-              <p>
-                NeuronDB is a <strong className="text-yellow-400">PostgreSQL AI extension</strong> that extends PostgreSQL with native AI capabilities. Unlike standalone vector databases, this <strong className="text-yellow-400">PostgreSQL AI extension</strong> enables you to run vector search, machine learning inference, and RAG pipelines directly within your PostgreSQL database—no data movement required.
-              </p>
-              <p>
-                As a <strong className="text-yellow-400">PostgreSQL AI extension</strong>, NeuronDB integrates seamlessly with PostgreSQL 16, 17, and 18. It provides 473 SQL functions, 52 ML algorithms, 5 vector types, and GPU acceleration—all accessible through standard SQL queries. Whether you need semantic search, ML model training, or complete RAG workflows, this <strong className="text-yellow-400">PostgreSQL AI extension</strong> delivers enterprise-grade AI functionality within PostgreSQL.
-              </p>
-              <p>
-                Install the <strong className="text-yellow-400">PostgreSQL AI extension</strong> in minutes and start building AI applications immediately. The extension requires zero external dependencies and follows PostgreSQL coding standards, ensuring reliability and performance in production environments.
-              </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <div className="text-center p-4">
+              <div className="flex justify-center mb-2">
+                <Layers className="w-6 h-6 text-yellow-400" />
+              </div>
+              <div className="text-3xl font-bold text-yellow-400 mb-0.5">4</div>
+              <div className="text-sm text-white/80">Integrated Products</div>
+            </div>
+            <div className="text-center p-4">
+              <div className="flex justify-center mb-2">
+                <Code className="w-6 h-6 text-yellow-400" />
+              </div>
+              <div className="text-3xl font-bold text-yellow-400 mb-0.5">473</div>
+              <div className="text-sm text-white/80">SQL Functions</div>
+            </div>
+            <div className="text-center p-4">
+              <div className="flex justify-center mb-2">
+                <Brain className="w-6 h-6 text-yellow-400" />
+              </div>
+              <div className="text-3xl font-bold text-yellow-400 mb-0.5">52</div>
+              <div className="text-sm text-white/80">ML Algorithms</div>
+            </div>
+            <div className="text-center p-4">
+              <div className="flex justify-center mb-2">
+                <Zap className="w-6 h-6 text-yellow-400" />
+              </div>
+              <div className="text-3xl font-bold text-yellow-400 mb-0.5">100x</div>
+              <div className="text-sm text-white/80">GPU Speedup</div>
             </div>
           </div>
         </div>

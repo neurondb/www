@@ -4,7 +4,7 @@ import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
   title: 'SQL API Reference | NeuronDB',
-  description: 'Complete SQL API reference for NeuronDB functions, operators, and configuration parameters.',
+  description: 'SQL API reference for NeuronDB functions, operators, and configuration parameters.',
 }
 
 const tableOfContents: TocItem[] = [
@@ -16,7 +16,7 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/performance',
+  href: '/docs/performance',
   label: 'Performance',
 }
 
@@ -26,7 +26,7 @@ export default function SqlApiPage() {
   return (
     <PostgresDocsLayout
       title="SQL API Reference"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

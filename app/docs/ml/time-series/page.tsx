@@ -16,12 +16,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/topic-discovery',
+  href: '/docs/ml/topic-discovery',
   label: 'Topic Discovery',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/recommendation-systems',
+  href: '/docs/ml/recommendation-systems',
   label: 'Recommendation Systems',
 }
 
@@ -29,7 +29,7 @@ export default function TimeSeriesPage() {
   return (
     <PostgresDocsLayout
       title="Time Series"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

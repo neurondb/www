@@ -18,12 +18,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/getting-started',
+  href: '/docs/getting-started',
   label: 'Getting Started',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/features/vector-types',
+  href: '/docs/features/vector-types',
   label: 'Vector Types',
 }
 
@@ -31,7 +31,7 @@ export default function QuickStartPage() {
   return (
     <PostgresDocsLayout
       title="Quick Start Guide"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

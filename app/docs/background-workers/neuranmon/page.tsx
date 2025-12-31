@@ -15,12 +15,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/background-workers/neuranq',
+  href: '/docs/background-workers/neuranq',
   label: 'neuranq',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/background-workers/neurandefrag',
+  href: '/docs/background-workers/neurandefrag',
   label: 'neurandefrag',
 }
 
@@ -28,7 +28,7 @@ export default function NeurAnmonPage() {
   return (
     <PostgresDocsLayout
       title="neuranmon - Live Query Auto-Tuner"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

@@ -18,12 +18,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/indexing',
+  href: '/docs/indexing',
   label: 'Indexing',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/hybrid/overview',
+  href: '/docs/hybrid/overview',
   label: 'Hybrid Overview',
 }
 
@@ -31,7 +31,7 @@ export default function Page() {
   return (
     <PostgresDocsLayout
       title="Hybrid Search"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

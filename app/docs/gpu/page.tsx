@@ -4,7 +4,7 @@ import SqlCodeBlock from '@/components/SqlCodeBlock'
 import BashCodeBlock from '@/components/BashCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'GPU Accelerator | CUDA, ROCm & Metal Support | NeurondB',
+  title: 'GPU Accelerator | CUDA, ROCm & Metal Support | NeuronDB',
   description: 'CUDA and ROCm support for parallel matrix operations with automatic fallback to CPU for maximum compatibility. Accelerate vector search, ML inference, and embedding generation with 10-100x speedup.',
   keywords: [
     'GPU accelerator',
@@ -42,12 +42,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/embedding-engine',
+  href: '/docs/embedding-engine',
   label: 'Embedding Engine',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/background-workers',
+  href: '/docs/background-workers',
   label: 'Background Workers',
 }
 
@@ -55,7 +55,7 @@ export default function Page() {
   return (
     <PostgresDocsLayout
       title="GPU Accelerator"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
@@ -201,7 +201,7 @@ ORDER BY 1 LIMIT 10;`}
       <section id="automatic-fallback">
         <h2>Automatic CPU Fallback</h2>
         <p>
-          NeurondB automatically falls back to CPU execution when GPU is unavailable, ensuring your application 
+          NeuronDB automatically falls back to CPU execution when GPU is unavailable, ensuring your application 
           continues to work regardless of hardware configuration. This provides maximum compatibility without 
           requiring separate builds or configurations.
         </p>

@@ -15,7 +15,7 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/svm',
+  href: '/docs/ml/svm',
   label: 'Support Vector Machines',
 }
 
@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <PostgresDocsLayout
       title="Unified ML API"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

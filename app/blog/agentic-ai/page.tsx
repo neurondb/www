@@ -3,13 +3,13 @@ import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
 import BlogPageTracker from '../../../components/BlogPageTracker';
 
 export const metadata = {
-    title: 'Agentic AI: Complete Guide to Autonomous AI Agents | NeuronDB',
-    description: 'Complete guide to Agentic AI systems. Explains agent architecture, planning, tool use, memory systems, and autonomous task execution. Includes practical implementation using NeuronDB and NeuronAgent with code examples.',
+    title: 'Agentic AI: Guide to Autonomous AI Agents | NeuronDB',
+    description: 'Agentic AI systems guide. Explains agent architecture, planning, tool use, memory systems, and autonomous task execution. Includes implementation using NeuronDB and NeuronAgent with code examples.',
     keywords: ['agentic AI', 'autonomous agents', 'AI agents', 'agent architecture', 'tool use', 'planning', 'memory systems', 'NeuronDB', 'NeuronAgent', 'PostgreSQL', 'LLM', 'RAG', 'vector search', 'semantic search'],
     authors: [{ name: 'NeuronDB Team' }],
     openGraph: {
-        title: 'Agentic AI: Complete Guide to Autonomous AI Agents | NeuronDB',
-        description: 'Complete guide to Agentic AI systems with architecture diagrams, implementation patterns, and practical examples using NeuronDB and NeuronAgent',
+        title: 'Agentic AI: Guide to Autonomous AI Agents | NeuronDB',
+        description: 'Agentic AI systems guide with architecture diagrams, implementation patterns, and examples using NeuronDB and NeuronAgent',
         url: 'https://neurondb.ai/blog/agentic-ai',
         siteName: 'NeuronDB',
         images: [
@@ -17,7 +17,7 @@ export const metadata = {
                 url: 'https://neurondb.ai/blog/agentic-ai/og-image.svg',
                 width: 1200,
                 height: 630,
-                alt: 'Agentic AI: Complete Guide to Autonomous AI Agents',
+                alt: 'Agentic AI: Guide to Autonomous AI Agents',
             },
         ],
         locale: 'en_US',
@@ -25,8 +25,8 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Agentic AI: Complete Guide to Autonomous AI Agents | NeuronDB',
-        description: 'Complete guide to Agentic AI systems with architecture diagrams and practical examples',
+        title: 'Agentic AI: Guide to Autonomous AI Agents | NeuronDB',
+        description: 'Agentic AI systems guide with architecture diagrams and examples',
         images: ['https://neurondb.ai/blog/agentic-ai/og-image.svg'],
         creator: '@neurondb',
     },
@@ -50,7 +50,7 @@ const markdown = `
 
 ![Agentic AI header](/blog/agentic-ai/header.svg?v=8)
 
-# Agentic AI: Complete Guide to Autonomous AI Agents
+# Agentic AI: Guide to Autonomous AI Agents
 
 **[View on GitHub](https://github.com/neurondb-ai/neurondb)** | **[Download Latest Release](https://github.com/neurondb-ai/neurondb/releases)** | **[Documentation](https://neurondb.ai/docs)**
 
@@ -1087,7 +1087,7 @@ Use agents for:
 - [NeuronDB Documentation](https://neurondb.ai/docs/neurondb) - Complete NeuronDB reference
 - [NeuronAgent Documentation](https://neurondb.ai/docs/neuronagent) - Complete NeuronAgent reference
 - [Semantic Search Guide](/blog/neurondb-semantic-search-guide) - Learn semantic search with NeuronDB
-- [RAG Complete Guide](/blog/rag-complete-guide) - Learn RAG implementation patterns
+- [RAG Guide](/blog/rag-complete-guide) - Learn RAG implementation patterns
 
 ## Support
 
@@ -1098,8 +1098,8 @@ export default function BlogPost() {
     const structuredData = {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
-        headline: 'Agentic AI: Complete Guide to Autonomous AI Agents',
-        description: 'Complete guide to Agentic AI systems with architecture diagrams, implementation patterns, and practical examples using NeuronDB and NeuronAgent',
+        headline: 'Agentic AI: Guide to Autonomous AI Agents',
+        description: 'Agentic AI systems guide with architecture diagrams, implementation patterns, and examples using NeuronDB and NeuronAgent',
         image: 'https://neurondb.ai/blog/agentic-ai/og-image.svg',
         datePublished: '2025-02-24',
         dateModified: '2025-02-24',
@@ -1131,7 +1131,7 @@ export default function BlogPost() {
             />
             <BlogPageTracker
                 slug="agentic-ai"
-                title="Agentic AI: Complete Guide to Autonomous AI Agents"
+                title="Agentic AI: Guide to Autonomous AI Agents"
             />
             <div style={{ backgroundColor: '#1f2937' }}>
                 <BlogMarkdown>{markdown}</BlogMarkdown>
@@ -1141,8 +1141,8 @@ export default function BlogPost() {
                         <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
                         <ShareOnLinkedIn
                             url="https://neurondb.ai/blog/agentic-ai"
-                            title="Agentic AI: Complete Guide to Autonomous AI Agents"
-                            summary="Complete guide to Agentic AI systems with architecture diagrams, implementation patterns, and practical examples using NeuronDB and NeuronAgent"
+                            title="Agentic AI: Guide to Autonomous AI Agents"
+                            summary="Agentic AI systems guide with architecture diagrams, implementation patterns, and examples using NeuronDB and NeuronAgent"
                             hashtags={[
                                 'AgenticAI',
                                 'AutonomousAgents',

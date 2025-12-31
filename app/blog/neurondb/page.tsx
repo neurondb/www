@@ -2,12 +2,12 @@ import { BlogMarkdown } from '../../_components/BlogMarkdown';
 import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
 
 export const metadata = {
-  title: 'NeuronDB: PostgreSQL AI Extension for Vector Search & ML | Complete Guide',
+  title: 'NeuronDB: PostgreSQL AI Extension for Vector Search and ML',
   description: 'NeuronDB is a PostgreSQL extension that adds vector search, ML inference, GPU acceleration, and RAG capabilities. Features HNSW indexing, 52 ML algorithms, 473 SQL functions, full pgvector compatibility, CUDA/ROCm/Metal support, and in-database AI operations. Build semantic search, recommendation systems, and RAG pipelines with SQL.',
   keywords: ['NeuronDB', 'PostgreSQL extension', 'vector search', 'ML inference', 'GPU acceleration', 'RAG', 'HNSW indexing', 'pgvector', 'semantic search', 'machine learning', 'PostgreSQL AI', 'vector database', 'embedding', 'similarity search', 'CUDA', 'ROCm', 'Metal'],
   authors: [{ name: 'NeuronDB Team' }],
   openGraph: {
-    title: 'NeuronDB: PostgreSQL AI Extension for Vector Search & ML | Complete Guide',
+    title: 'NeuronDB: PostgreSQL AI Extension for Vector Search and ML',
     description: 'PostgreSQL extension with vector search, ML inference, GPU acceleration, and RAG pipeline. HNSW indexing, 52 ML algorithms, 473 SQL functions.',
     url: 'https://neurondb.ai/blog/neurondb',
     siteName: 'NeuronDB',
@@ -57,7 +57,7 @@ PostgreSQL handles relational data. AI applications need vector similarity searc
 
 NeuronDB is a PostgreSQL extension. It adds vector search, ML inference, GPU acceleration, and hybrid retrieval to PostgreSQL. It maintains full pgvector compatibility. Applications use SQL syntax for AI operations. No external services required. No complex integrations needed.
 
-NeuronDB supports PostgreSQL 16, 17, and 18. It is implemented in pure C following PostgreSQL coding standards. The extension has zero external dependencies. It provides 473 SQL functions, 52 ML algorithms, and 4 background workers. All operations run within PostgreSQL.
+NeuronDB supports PostgreSQL 16, 17, and 18. It is implemented in pure C following PostgreSQL coding standards. The extension has zero external dependencies. It provides 473 SQL functions, comprehensive ML capabilities with 19 implemented algorithms (part of 52 total ML features), and 4 background workers including the new neuranllm worker. All operations run within PostgreSQL. Includes 7 monitoring views, 4 new tables for multi-tenancy and security, and 27 new SQL functions for advanced features.
 
 ## What is NeuronDB
 
@@ -65,7 +65,7 @@ NeuronDB extends PostgreSQL with AI capabilities. The extension adds vector data
 
 The extension provides five vector types. The vector type stores float32 embeddings. The vectorp type stores packed vectors for memory efficiency. The vecmap type handles sparse vector maps. The vgraph type supports graph-based vectors. The rtext type combines retrieval with text operations.
 
-NeuronDB includes 52 ML algorithms implemented in pure C. These include Random Forest, XGBoost, LightGBM, CatBoost, Linear Regression, Logistic Regression, Ridge, Lasso, SVM, KNN, Naive Bayes, Decision Trees, Neural Networks, K-means, DBSCAN, GMM, and PCA. All algorithms support GPU acceleration.
+NeuronDB includes comprehensive ML capabilities with 19 fully implemented algorithms in pure C. **Clustering**: K-Means, Mini-batch K-means, DBSCAN, GMM, Hierarchical clustering. **Dimensionality Reduction**: PCA, PCA Whitening. **Quantization**: Product Quantization (PQ), Optimized PQ (OPQ). **Outlier Detection**: Z-score, Modified Z-score, IQR. **Reranking**: MMR (Maximal Marginal Relevance), Ensemble (Weighted & Borda), Learning-to-Rank (LTR). **Quality Metrics**: Recall@K, Precision@K, F1@K, MRR, Davies-Bouldin Index, Silhouette Score. **Drift Detection**: Centroid drift, Distribution divergence, Temporal drift monitoring. **Analytics**: Topic discovery, Similarity histograms, KNN graph building, Embedding quality assessment. **Search**: Hybrid Lexical-Semantic Fusion, Reciprocal Rank Fusion (RRF). Additionally supports Random Forest, XGBoost, LightGBM, CatBoost, Linear/Logistic Regression, Ridge, Lasso, SVM, KNN, Naive Bayes, Decision Trees, Neural Networks, Deep Learning. All algorithms support GPU acceleration.
 
 The extension provides 473 SQL functions for vector operations, ML inference, embedding generation, hybrid search, reranking, and analytics. Functions integrate with PostgreSQL's query planner and optimizer. Operations use standard SQL syntax.
 
@@ -270,7 +270,16 @@ GPU acceleration provides 10x to 100x speedup for batch operations. The extensio
 
 ## Background Workers
 
-NeuronDB includes four background workers for production operations. The neuranq worker executes async job queues with SKIP LOCKED semantics. It handles retries, poison message handling, and batch processing. The neuranmon worker provides live query auto-tuning. It adjusts search parameters automatically, rotates caches, and tracks recall metrics. The neurandefrag worker performs automatic index maintenance. It handles compaction, tombstone pruning, and rebuild scheduling. The neuranllm worker processes LLM jobs with crash recovery.
+NeuronDB includes four background workers for production operations. The neuranq worker executes async job queues with SKIP LOCKED semantics. It handles retries, poison message handling, and batch processing. The neuranmon worker provides live query auto-tuning. It adjusts search parameters automatically, rotates caches, and tracks recall metrics. The neurandefrag worker performs automatic index maintenance. It handles compaction, tombstone pruning, and rebuild scheduling. The neuranllm worker processes LLM jobs with crash recovery, automatic retry on failure, job pruning for old completed jobs, and state preservation.
+
+**New November 2025 Features:**
+- **7 Monitoring Views**: vector_stats, index_health, tenant_quota_usage, llm_job_status, query_performance, index_maintenance_status, metrics_summary
+- **4 New Tables**: tenant_quotas (per-tenant resource limits), rls_policies (row-level security), index_metadata (index health tracking)
+- **27 New Functions**: Tenant-aware HNSW operations, hybrid indexes, temporal indexes, reranking indexes, configuration management, model management utilities, statistics functions, advanced search, security functions, distributed features, encryption functions
+- **Code Reorganization**: 120 files reorganized into logical subdirectories (ml/, gpu/, worker/, index/, scan/, llm/, search/, storage/, util/)
+- **SIMD Optimizations**: Architecture-specific acceleration (AVX2, AVX-512 for x86_64, NEON for ARM64) with runtime CPU feature detection
+- **Enhanced Multi-Tenancy**: Tenant-aware indexes, quota management, resource isolation
+- **Distributed Features**: Federated vector queries, vector replication, Foreign Data Wrapper (FDW) support
 
 All workers are tenant-aware with QPS and cost budgets. Workers integrate with PostgreSQL's background worker framework. Operations run asynchronously without blocking database operations.
 
@@ -766,7 +775,7 @@ Applications build semantic search, RAG systems, recommendation engines, and ima
 
 ## Related Blog Posts
 
-- [Complete Guide to Vectors in PostgreSQL](/blog/neurondb-vectors) - Master vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Comprehensive guide with SQL queries, results, and real-world examples
+- [Vectors in PostgreSQL](/blog/neurondb-vectors) - Vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Guide with SQL queries, results, and examples
 
 - [Semantic Search Over Text with NeuronDB](/blog/neurondb-semantic-search-guide) - Build complete semantic search systems with document chunking, embeddings, and hybrid search techniques
 

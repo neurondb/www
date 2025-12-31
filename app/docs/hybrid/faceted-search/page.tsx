@@ -15,12 +15,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/hybrid/multi-vector',
+  href: '/docs/hybrid/multi-vector',
   label: 'Multi-Vector',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/hybrid/temporal-search',
+  href: '/docs/hybrid/temporal-search',
   label: 'Temporal Search',
 }
 
@@ -28,7 +28,7 @@ export default function FacetedSearchPage() {
   return (
     <PostgresDocsLayout
       title="Faceted Search"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

@@ -13,12 +13,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/reranking/llm-reranking',
+  href: '/docs/reranking/llm-reranking',
   label: 'LLM Reranking',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/reranking/ensemble',
+  href: '/docs/reranking/ensemble',
   label: 'Ensemble Reranking',
 }
 
@@ -26,7 +26,7 @@ export default function ColBERTPage() {
   return (
     <PostgresDocsLayout
       title="ColBERT Reranking"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

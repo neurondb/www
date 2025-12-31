@@ -3,13 +3,13 @@ import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
 import BlogPageTracker from '../../../components/BlogPageTracker';
 
 export const metadata = {
-    title: 'Complete Guide to Vectors in PostgreSQL | NeuronDB Vector Operations',
-    description: 'Master vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Comprehensive guide with SQL queries, results, and real-world examples. Learn HNSW indexing, distance metrics (cosine, L2, inner product), quantization (FP16, INT8, binary), performance optimization, and vector similarity search.',
+    title: 'Vectors in PostgreSQL | NeuronDB Vector Operations',
+    description: 'Vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Guide with SQL queries, results, and examples. Learn HNSW indexing, distance metrics, quantization, performance optimization, and vector similarity search.',
     keywords: ['vectors', 'PostgreSQL', 'NeuronDB', 'vector search', 'similarity search', 'HNSW indexing', 'distance metrics', 'cosine similarity', 'L2 distance', 'quantization', 'embedding', 'vector operations', 'pgvector', 'vector database', 'SQL queries', 'performance optimization'],
     authors: [{ name: 'NeuronDB Team' }],
     openGraph: {
-        title: 'Complete Guide to Vectors in PostgreSQL | NeuronDB Vector Operations',
-        description: 'Master vector operations, indexing, and similarity search in PostgreSQL - comprehensive guide with SQL queries, HNSW indexing, distance metrics, and quantization',
+        title: 'Vectors in PostgreSQL | NeuronDB Vector Operations',
+        description: 'Vector operations, indexing, and similarity search in PostgreSQL. Guide with SQL queries, HNSW indexing, distance metrics, and quantization',
         url: 'https://neurondb.ai/blog/neurondb-vectors',
         siteName: 'NeuronDB',
         images: [
@@ -17,7 +17,7 @@ export const metadata = {
                 url: 'https://neurondb.ai/blog/neurondb-vectors/og-image.svg',
                 width: 1200,
                 height: 630,
-                alt: 'Complete Guide to Vectors in PostgreSQL',
+                alt: 'Vectors in PostgreSQL',
             },
         ],
         locale: 'en_US',
@@ -25,8 +25,8 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Complete Guide to Vectors in PostgreSQL | NeuronDB Vector Operations',
-        description: 'Master vector operations, indexing, and similarity search in PostgreSQL - comprehensive guide with SQL queries and results',
+        title: 'Vectors in PostgreSQL | NeuronDB Vector Operations',
+        description: 'Vector operations, indexing, and similarity search in PostgreSQL. Guide with SQL queries and results',
         images: ['https://neurondb.ai/blog/neurondb-vectors/og-image.svg'],
         creator: '@neurondb',
     },
@@ -48,11 +48,11 @@ export const metadata = {
 
 const markdown = `![NeuronDB header](/blog/neurondb-vectors/header.svg?v=7)
 
-# Complete Guide to Vectors in PostgreSQL
+# Vectors in PostgreSQL
 
 **[View on GitHub](https://github.com/neurondb-ai/neurondb)** | **[Download Latest Release](https://github.com/neurondb-ai/neurondb/releases)** | **[Documentation](https://neurondb.ai/docs)**
 
-Vectors represent data as arrays of floating-point numbers where each number corresponds to a dimension in high-dimensional space. These numerical representations enable computers to understand semantic relationships between different pieces of data. Text documents transform into vectors through embedding models that capture meaning beyond words. Images convert to vectors via vision models that extract visual features. User preferences become vectors for recommendation systems that match similar interests. NeuronDB provides comprehensive vector operations directly within PostgreSQL, eliminating the need for separate vector database systems and reducing operational complexity.
+Vectors represent data as arrays of floating-point numbers where each number corresponds to a dimension in high-dimensional space. These numerical representations enable computers to understand semantic relationships between different pieces of data. Text documents transform into vectors through embedding models that capture meaning beyond words. Images convert to vectors via vision models that extract visual features. User preferences become vectors for recommendation systems that match similar interests. NeuronDB provides vector operations in PostgreSQL, eliminating the need for separate vector database systems.
 
 This guide covers vector types, operations, distance metrics, indexing strategies, and quantization techniques in NeuronDB. Each section includes executable SQL queries with actual results demonstrating how vector operations work. The queries run directly in PostgreSQL with the NeuronDB extension enabled, providing practical examples for building vector-based applications.
 
@@ -119,7 +119,7 @@ The verification query confirms that all five documents contain vector embedding
 
 ## Vector Operations
 
-NeuronDB provides comprehensive arithmetic operations for vector manipulation and computation, enabling mathematical transformations that support various machine learning and data processing workflows. Vector addition combines corresponding elements from two vectors element-wise, producing a new vector where each dimension contains the sum of the corresponding dimensions from the input vectors. Vector subtraction performs element-wise difference calculation, while scalar multiplication scales all vector elements by a constant factor. Scalar division divides each vector element by a scalar value. Vector normalization computes unit vectors by dividing each element by the vector's magnitude, creating vectors with standardized length while preserving directional information.
+NeuronDB provides arithmetic operations for vector manipulation and computation, enabling mathematical transformations that support machine learning and data processing workflows. Vector addition combines corresponding elements from two vectors element-wise, producing a new vector where each dimension contains the sum of the corresponding dimensions from the input vectors. Vector subtraction performs element-wise difference calculation, while scalar multiplication scales all vector elements by a constant factor. Scalar division divides each vector element by a scalar value. Vector normalization computes unit vectors by dividing each element by the vector's magnitude, creating vectors with standardized length while preserving directional information.
 
 The following example demonstrates vector addition, showing how corresponding elements from two vectors combine to produce a new vector. Addition requires both input vectors to have identical dimensions, as each position in the first vector adds to the corresponding position in the second vector. The result maintains the same dimensionality as the input vectors, preserving the vector space structure while transforming the values through arithmetic combination.
 
@@ -563,7 +563,7 @@ The batch insert operation generates and inserts 100 articles using a single SQL
 
 ## Conclusion
 
-NeuronDB extends PostgreSQL with comprehensive vector capabilities that enable building sophisticated semantic search systems, recommendation engines, and similarity matching applications entirely within the database. Vector storage uses the native vector data type with configurable dimensions that match embedding model outputs, providing efficient storage and retrieval. Arithmetic operations support vector manipulation through addition, subtraction, scalar multiplication, normalization, and other mathematical transformations. Distance metrics including L2, cosine, inner product, L1, and others quantify similarity between vectors using different mathematical approaches suited for various use cases. Indexing strategies like HNSW and IVF organize vectors in data structures optimized for fast approximate nearest neighbor search, enabling sub-millisecond queries on datasets containing millions of vectors. Quantization techniques compress vectors to reduce storage and accelerate search while maintaining acceptable accuracy levels through Product Quantization and Optimized Product Quantization. All operations execute directly within PostgreSQL without requiring external vector database services, eliminating data synchronization overhead and simplifying application architecture. Standard SQL queries perform similarity search, enabling integration with existing database tools, ORMs, and query optimization techniques. The system scales to millions of vectors with consistent query latency, supporting production workloads requiring high-throughput semantic search. NeuronDB eliminates the need for separate vector database infrastructure by extending PostgreSQL with native vector operations, providing a unified platform for both relational and vector data management.
+NeuronDB extends PostgreSQL with vector capabilities that enable building sophisticated semantic search systems, recommendation engines, and similarity matching applications entirely within the database. Vector storage uses the native vector data type with configurable dimensions that match embedding model outputs, providing efficient storage and retrieval. Arithmetic operations support vector manipulation through addition, subtraction, scalar multiplication, normalization, and other mathematical transformations. Distance metrics including L2, cosine, inner product, L1, and others quantify similarity between vectors using different mathematical approaches suited for various use cases. Indexing strategies like HNSW and IVF organize vectors in data structures optimized for fast approximate nearest neighbor search, enabling sub-millisecond queries on datasets containing millions of vectors. Quantization techniques compress vectors to reduce storage and accelerate search while maintaining acceptable accuracy levels through Product Quantization and Optimized Product Quantization. All operations execute directly within PostgreSQL without requiring external vector database services, eliminating data synchronization overhead and simplifying application architecture. Standard SQL queries perform similarity search, enabling integration with existing database tools, ORMs, and query optimization techniques. The system scales to millions of vectors with consistent query latency, supporting production workloads requiring high-throughput semantic search. NeuronDB eliminates the need for separate vector database infrastructure by extending PostgreSQL with native vector operations, providing a unified platform for both relational and vector data management.
 
 ## Related Blog Posts
 
@@ -581,8 +581,8 @@ export default function BlogPost() {
     const structuredData = {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
-        headline: 'Complete Guide to Vectors in PostgreSQL | NeuronDB Vector Operations',
-        description: 'Master vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Comprehensive guide with SQL queries, results, and real-world examples. Learn HNSW indexing, distance metrics, quantization, and performance optimization.',
+        headline: 'Vectors in PostgreSQL | NeuronDB Vector Operations',
+        description: 'Vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Guide with SQL queries, results, and examples. Learn HNSW indexing, distance metrics, quantization, and performance optimization.',
         image: 'https://neurondb.ai/blog/neurondb-vectors/og-image.svg',
         datePublished: '2024-12-05',
         dateModified: '2024-12-05',
@@ -614,7 +614,7 @@ export default function BlogPost() {
             />
             <BlogPageTracker
                 slug="neurondb-vectors"
-                title="Complete Guide to Vectors in PostgreSQL"
+                title="Vectors in PostgreSQL"
             />
             {/* Blog Content */}
             <div style={{ backgroundColor: '#1f2937' }}>
@@ -626,8 +626,8 @@ export default function BlogPost() {
                         <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
                         <ShareOnLinkedIn
                             url="https://neurondb.ai/blog/neurondb-vectors"
-                            title="Complete Guide to Vectors in PostgreSQL"
-                            summary="Master vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Comprehensive guide with SQL queries, results, and real-world examples. Learn HNSW indexing, distance metrics, quantization, and performance optimization."
+                            title="Vectors in PostgreSQL"
+                            summary="Vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Guide with SQL queries, results, and examples. Learn HNSW indexing, distance metrics, quantization, and performance optimization."
                             hashtags={[
                                 'PostgreSQL',
                                 'AI',

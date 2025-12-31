@@ -3,8 +3,8 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'Ensemble Reranking in NeurondB | MMR, RRF, Weighted & Borda Count',
-  description: 'Complete guide to ensemble reranking in NeurondB: MMR (Maximal Marginal Relevance), RRF (Reciprocal Rank Fusion), weighted ensemble, and Borda count methods. Learn how to combine multiple reranking models for optimal search relevance and diversity.',
+  title: 'Ensemble Reranking in NeuronDB | MMR, RRF, Weighted & Borda Count',
+  description: 'Guide to ensemble reranking in NeuronDB: MMR (Maximal Marginal Relevance), RRF (Reciprocal Rank Fusion), weighted ensemble, and Borda count methods. Learn how to combine multiple reranking models for optimal search relevance and diversity.',
   keywords: [
     'ensemble reranking',
     'MMR reranking',
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     canonical: 'https://neurondb.ai/docs/reranking/ensemble',
   },
   openGraph: {
-    title: 'Ensemble Reranking in NeurondB | MMR, RRF, Weighted Methods',
-    description: 'Combine multiple reranking models in NeurondB using MMR, RRF, weighted ensemble, and Borda count methods.',
+    title: 'Ensemble Reranking in NeuronDB | MMR, RRF, Weighted Methods',
+    description: 'Combine multiple reranking models in NeuronDB using MMR, RRF, weighted ensemble, and Borda count methods.',
     type: 'article',
     url: 'https://neurondb.ai/docs/reranking/ensemble',
   },
@@ -38,12 +38,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/reranking/colbert',
+  href: '/docs/reranking/colbert',
   label: 'ColBERT',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/rag/overview',
+  href: '/docs/rag/overview',
   label: 'RAG Overview',
 }
 
@@ -51,7 +51,7 @@ export default function EnsemblePage() {
   return (
     <PostgresDocsLayout
       title="Ensemble Reranking"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

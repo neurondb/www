@@ -52,7 +52,7 @@ export const products: Record<'neurondb' | 'neuronagent' | 'neuronmcp' | 'neuron
     displayName: 'NeuronDB',
     tagline: 'PostgreSQL AI Extension',
     description: 'PostgreSQL AI extension with vector search, ML inference, RAG pipeline, and GPU acceleration. Build AI applications directly in PostgreSQL.',
-    longDescription: 'NeuronDB is a PostgreSQL AI extension that transforms PostgreSQL into a complete AI database. This PostgreSQL AI extension provides vector search, machine learning inference, RAG pipeline, and GPU acceleration. Includes HNSW indexing, ONNX runtime, GPU acceleration, embeddings generation, and cross-encoder reranking. Provides in-database RAG with semantic search, full-text search, and LLM integration—all within PostgreSQL.',
+    longDescription: 'NeuronDB is a PostgreSQL AI extension. It provides vector search with 5 vector types (vector, vectorp, vecmap, vgraph, rtext), 52 ML algorithms implemented in pure C, 473 SQL functions, and GPU acceleration for CUDA, ROCm, and Metal. Includes HNSW and IVF indexing, ONNX runtime, embeddings generation (text, image, multimodal), hybrid search, cross-encoder and LLM reranking, AutoML, feature store, and comprehensive background workers. Provides in-database RAG with semantic search, full-text search, and LLM integration in PostgreSQL.',
     keywords: [
       'postgresql ai extension',
       'postgresql ai extension vector search',
@@ -139,13 +139,13 @@ export const products: Record<'neurondb' | 'neuronagent' | 'neuronmcp' | 'neuron
     name: 'neuronmcp',
     displayName: 'NeuronMCP',
     tagline: 'Model Context Protocol Server for NeuronDB',
-    description: 'Model Context Protocol server with 50+ tools enabling MCP-compatible clients (like Claude Desktop) to access NeuronDB vector operations, ML training, RAG pipeline, and PostgreSQL administration.',
-    longDescription: 'Model Context Protocol server for NeuronDB PostgreSQL extension, implemented in Go. Provides 50+ tools for vector operations, ML training, analytics, RAG pipeline, reranking, dataset loading, and PostgreSQL administration. Full JSON-RPC 2.0 implementation with stdio, HTTP, and SSE transport. Enterprise features including middleware, authentication, metrics, and webhooks.',
+    description: 'Model Context Protocol server with 100+ tools (27 PostgreSQL + 70+ NeuronDB) enabling MCP-compatible clients (like Claude Desktop) to access NeuronDB vector operations, ML training, RAG pipeline, dataset loading from HuggingFace/URLs/GitHub/S3, and PostgreSQL administration.',
+    longDescription: 'Model Context Protocol server for NeuronDB PostgreSQL extension, implemented in Go. Provides 100+ tools including 27 comprehensive PostgreSQL administration tools and 70+ NeuronDB tools for vector operations (7+ distance metrics, quantization), ML training (all 52 algorithms), analytics, RAG pipeline, reranking (cross-encoder, LLM, ColBERT, ensemble), dataset loading (HuggingFace, URLs, GitHub, S3, local files with auto-embedding), and complete database management. Full JSON-RPC 2.0 implementation with stdio, HTTP, and SSE transport. Enterprise features including middleware, authentication, metrics, webhooks, caching, and circuit breaker.',
     keywords: [
       'mcp server', 'model context protocol', 'claude desktop', 'mcp protocol',
       'json-rpc', 'stdio transport', 'mcp tools', 'mcp resources', 'claude integration',
       'neuronmcp', 'mcp neurondb', 'anthropic mcp', 'mcp client', 'protocol server',
-      '50 mcp tools', 'dataset loading', 'reranking tools', 'postgresql tools',
+      '100 mcp tools', '100+ tools', '27 postgresql tools', '70 neurondb tools', 'dataset loading', 'reranking tools', 'postgresql tools',
     ],
     githubUrl: 'https://github.com/neurondb-ai/neurondb',
     docsUrl: '/docs/neuronmcp',
@@ -156,16 +156,16 @@ export const products: Record<'neurondb' | 'neuronagent' | 'neuronmcp' | 'neuron
     title: 'MCP Server Features',
     items: [
       'JSON-RPC 2.0 implementation with stdio, HTTP, and SSE transport for MCP-compatible clients.',
-      '50+ tools covering vector operations, ML training, analytics, RAG, reranking, dataset loading, and PostgreSQL administration.',
+      '100+ tools: 27 PostgreSQL administration tools + 70+ NeuronDB tools covering vector operations, ML training, analytics, RAG, reranking, dataset loading, and complete database management.',
       'Resource management for schema, models, indexes, and system statistics with real-time subscriptions.',
       'Enterprise features: middleware (validation, logging, auth), Prometheus metrics, webhooks, circuit breaker.',
     ],
     badges: [
-      '50+ Tools',
+      '100+ Tools',
+      '27 PostgreSQL Tools',
       'JSON-RPC 2.0',
       'stdio Transport',
       'MCP Protocol',
-      'Claude Desktop',
       'Enterprise Ready',
     ],
   },
@@ -175,7 +175,7 @@ export const products: Record<'neurondb' | 'neuronagent' | 'neuronmcp' | 'neuron
     displayName: 'NeuronDesktop',
     tagline: 'Unified Web Interface for NeuronDB Ecosystem',
     description: 'Unified web interface providing a single dashboard for managing and interacting with MCP servers, NeuronDB, and NeuronAgent. Real-time WebSocket communication, secure authentication, and comprehensive monitoring.',
-    longDescription: 'Unified web interface providing a single dashboard for managing and interacting with MCP servers, NeuronDB, and NeuronAgent. Features real-time communication via WebSocket, secure API key authentication, professional UI, comprehensive logging with analytics, built-in metrics collection, automated setup, and profile-based configuration for multiple environments.',
+    longDescription: 'Unified web interface providing a single dashboard for managing and interacting with MCP servers, NeuronDB, and NeuronAgent. Features real-time communication via WebSocket, secure API key authentication, professional UI with markdown rendering, comprehensive logging with analytics, built-in metrics collection, automated setup with auto-detection, profile-based configuration for multiple environments, SQL console, query builder, schema browser, and agent management.',
     keywords: [
       'neurondesktop', 'web interface', 'dashboard', 'ui', 'admin panel',
       'mcp interface', 'agent management', 'vector search ui', 'database ui',
@@ -309,11 +309,11 @@ export function generateDocsMetadata(productId: ProductId, pageTitle?: string): 
 
   return {
     title,
-    description: `Complete documentation for ${product.displayName}. ${product.description}`,
+    description: `Documentation for ${product.displayName}. ${product.description}`,
     keywords: product.keywords.join(', '),
     openGraph: {
       title,
-      description: `Complete documentation for ${product.displayName}. ${product.description}`,
+      description: `Documentation for ${product.displayName}. ${product.description}`,
       type: 'website',
       url: `https://www.neurondb.ai${product.docsUrl}`,
       siteName: 'NeuronDB',
@@ -329,7 +329,7 @@ export function generateDocsMetadata(productId: ProductId, pageTitle?: string): 
     twitter: {
       card: 'summary_large_image',
       title,
-      description: `Complete documentation for ${product.displayName}`,
+      description: `Documentation for ${product.displayName}`,
       images: [product.ogImage],
     },
     alternates: {

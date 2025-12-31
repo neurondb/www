@@ -3,10 +3,10 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'Gradient Boosting in AI PostgreSQL | XGBoost, LightGBM, CatBoost in NeurondB',
-  description: 'Complete guide to gradient boosting in NeurondB (AI PostgreSQL extension): XGBoost, LightGBM, and CatBoost algorithms. Alternative to PostgreSQL.ai and pgml for gradient boosting. Learn how to train, predict, and evaluate models in PostgreSQL with SQL examples and GPU acceleration.',
+  title: 'Gradient Boosting in AI PostgreSQL | XGBoost, LightGBM, CatBoost in NeuronDB',
+  description: 'Guide to gradient boosting in NeuronDB (AI PostgreSQL extension): XGBoost, LightGBM, and CatBoost algorithms. Alternative to PostgreSQL.ai and pgml for gradient boosting. Learn how to train, predict, and evaluate models in PostgreSQL with SQL examples and GPU acceleration.',
   keywords: [
-    'XGBoost NeurondB',
+    'XGBoost NeuronDB',
     'AI PostgreSQL XGBoost',
     'PostgreSQL.ai XGBoost',
     'pgml XGBoost',
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     canonical: 'https://neurondb.ai/docs/ml/gradient-boosting',
   },
   openGraph: {
-    title: 'Gradient Boosting in NeurondB | XGBoost, LightGBM, CatBoost',
-    description: 'Train XGBoost, LightGBM, and CatBoost models in PostgreSQL with NeurondB. Complete guide with SQL examples and GPU support.',
+    title: 'Gradient Boosting in NeuronDB | XGBoost, LightGBM, CatBoost',
+    description: 'Train XGBoost, LightGBM, and CatBoost models in PostgreSQL with NeuronDB. Guide with SQL examples and GPU support.',
     type: 'article',
     url: 'https://neurondb.ai/docs/ml/gradient-boosting',
   },
@@ -43,12 +43,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/random-forest',
+  href: '/docs/ml/random-forest',
   label: 'Random Forest',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/dimensionality-reduction',
+  href: '/docs/ml/dimensionality-reduction',
   label: 'Dimensionality Reduction',
 }
 
@@ -56,7 +56,7 @@ export default function GradientBoostingPage() {
   return (
     <PostgresDocsLayout
       title="Gradient Boosting"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

@@ -15,12 +15,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/hyperparameter-tuning',
+  href: '/docs/ml/hyperparameter-tuning',
   label: 'Hyperparameter Tuning',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/text-ml',
+  href: '/docs/ml/text-ml',
   label: 'Text ML',
 }
 
@@ -28,7 +28,7 @@ export default function Page() {
   return (
     <PostgresDocsLayout
       title="GPU Acceleration"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

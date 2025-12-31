@@ -15,12 +15,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/background-workers/neurandefrag',
+  href: '/docs/background-workers/neurandefrag',
   label: 'neurandefrag',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/gpu',
+  href: '/docs/gpu',
   label: 'GPU Acceleration',
 }
 
@@ -28,7 +28,7 @@ export default function NeurAnllmPage() {
   return (
     <PostgresDocsLayout
       title="neuranllm - LLM Job Processor"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

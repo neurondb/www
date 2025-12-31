@@ -3,8 +3,8 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'Vector Indexing in AI PostgreSQL | HNSW, IVF Indexes for NeurondB',
-  description: 'Complete guide to vector indexing in NeurondB (AI PostgreSQL extension). Learn HNSW and IVF indexes, distance metrics (cosine, L2, inner product), and optimize ANN search. Alternative to PostgreSQL.ai for vector indexing in PostgreSQL.',
+  title: 'Vector Indexing in AI PostgreSQL | HNSW, IVF Indexes for NeuronDB',
+  description: 'Guide to vector indexing in NeuronDB (AI PostgreSQL extension). Learn HNSW and IVF indexes, distance metrics, and optimize ANN search.',
   keywords: [
     'HNSW index PostgreSQL',
     'AI PostgreSQL indexing',
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     canonical: 'https://neurondb.ai/docs/indexing',
   },
   openGraph: {
-    title: 'Vector Indexing & ANN Search | HNSW, IVF for NeurondB',
-    description: 'Complete guide to HNSW and IVF vector indexes in NeurondB. Optimize ANN search for 10M+ vectors with millisecond latency.',
+    title: 'Vector Indexing and ANN Search | HNSW, IVF for NeuronDB',
+    description: 'Guide to HNSW and IVF vector indexes in NeuronDB. Optimize ANN search for 10M+ vectors with millisecond latency.',
     type: 'article',
     url: 'https://neurondb.ai/docs/indexing',
   },
@@ -50,12 +50,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/configuration',
+  href: '/docs/configuration',
   label: 'Configuration',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/background-workers',
+  href: '/docs/background-workers',
   label: 'Background Workers',
 }
 
@@ -63,7 +63,7 @@ export default function IndexingPage() {
   return (
     <PostgresDocsLayout
       title="Indexing and Distance Metrics"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
@@ -90,7 +90,19 @@ LIMIT 10;`}
         />
 
         <h3>Cosine Distance</h3>
-        <p>Measures the angle between vectors, normalized to [0, 2]. Lower values indicate more similar directions. Ideal for text embeddings and normalized vectors where magnitude is less important than direction.</p>
+        <p>Measures the angle between vectors, normalized to [0, 2]. Lower values indicate more similar directions. Ideal for text embeddings and normalized vectors where magnitude is less important than direction. This is the most commonly used metric for semantic search.</p>
+        
+        <h3>Additional Distance Metrics</h3>
+        <p>NeuronDB supports 10+ distance metrics including:</p>
+        <ul>
+          <li><strong>Manhattan Distance (L1):</strong> Sum of absolute differences, useful for sparse vectors</li>
+          <li><strong>Hamming Distance:</strong> Bit-wise distance for binary vectors</li>
+          <li><strong>Jaccard Distance:</strong> Set similarity measure for categorical data</li>
+          <li><strong>Chebyshev Distance:</strong> Maximum coordinate difference</li>
+          <li><strong>Minkowski Distance:</strong> Generalized distance metric (generalizes L1 and L2)</li>
+          <li><strong>Canberra Distance:</strong> Weighted coordinate differences</li>
+          <li><strong>Braycurtis Distance:</strong> Normalized coordinate differences</li>
+        </ul>
         <SqlCodeBlock
           title="Cosine distance operator"
           code={`-- Cosine distance operator

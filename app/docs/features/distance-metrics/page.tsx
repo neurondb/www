@@ -3,9 +3,9 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'NeurondB Distance Metrics | Vector Similarity Guide',
+  title: 'NeuronDB Distance Metrics | Vector Similarity Guide',
   description:
-    'Understand and tune NeurondB distance metrics including cosine, inner product, L2/L1, Hamming, and hybrid scoring. Includes SQL examples and tuning guidance.',
+    'Understand and tune NeuronDB distance metrics including cosine, inner product, L2/L1, Hamming, and hybrid scoring. Includes SQL examples and tuning guidance.',
 }
 
 const tableOfContents: TocItem[] = [
@@ -17,12 +17,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/features/vector-types',
+  href: '/docs/features/vector-types',
   label: 'Vector Types',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/features/quantization',
+  href: '/docs/features/quantization',
   label: 'Quantization',
 }
 
@@ -30,7 +30,7 @@ export default function Page() {
   return (
     <PostgresDocsLayout
       title="Distance Metrics"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

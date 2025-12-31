@@ -15,12 +15,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/gpu/cuda-support',
+  href: '/docs/gpu/cuda-support',
   label: 'CUDA Support',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/gpu/metal-support',
+  href: '/docs/gpu/metal-support',
   label: 'Metal Support',
 }
 
@@ -28,7 +28,7 @@ export default function ROCmSupportPage() {
   return (
     <PostgresDocsLayout
       title="ROCm Support"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

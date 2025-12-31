@@ -3,11 +3,11 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'AI PostgreSQL Configuration | NeurondB GUC Settings & Tuning Guide',
-  description:
-    'Complete configuration reference for NeurondB (AI PostgreSQL extension). Learn GUC parameters for HNSW indexes, GPU acceleration, background workers, and production tuning. Alternative to PostgreSQL.ai and pgml configuration. Includes postgresql.conf settings and runtime overrides.',
+  title: 'AI PostgreSQL Configuration | NeuronDB GUC Settings & Tuning Guide',
+    description:
+    'Configuration reference for NeuronDB. Learn GUC parameters for HNSW indexes, GPU acceleration, background workers, and production tuning. Includes postgresql.conf settings and runtime overrides.',
   keywords: [
-    'NeurondB configuration',
+    'NeuronDB configuration',
     'AI PostgreSQL configuration',
     'PostgreSQL.ai configuration',
     'pgml configuration',
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     'HNSW configuration',
     'GPU acceleration settings',
     'vector database configuration',
-    'NeurondB tuning',
-    'postgresql.conf NeurondB',
+    'NeuronDB tuning',
+    'postgresql.conf NeuronDB',
     'performance tuning',
     'background workers config',
     'index configuration',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     canonical: 'https://neurondb.ai/docs/configuration',
   },
   openGraph: {
-    title: 'NeurondB Configuration Guide | PostgreSQL Settings & Tuning',
-    description: 'Complete NeurondB configuration reference. Tune HNSW indexes, GPU acceleration, and performance for production.',
+    title: 'NeuronDB Configuration Guide | PostgreSQL Settings & Tuning',
+    description: 'NeuronDB configuration reference. Tune HNSW indexes, GPU acceleration, and performance for production.',
     type: 'article',
     url: 'https://neurondb.ai/docs/configuration',
   },
@@ -43,20 +43,20 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/installation',
+  href: '/docs/installation',
   label: 'Installation',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/troubleshooting',
+  href: '/docs/troubleshooting',
   label: 'Troubleshooting',
 }
 
-export default function NeurondBConfigurationPage() {
+export default function NeuronDBConfigurationPage() {
   return (
     <PostgresDocsLayout
-      title="Configure NeurondB for Production Workloads"
-      version="NeurondB Documentation"
+      title="Configure NeuronDB for Production Workloads"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
@@ -65,7 +65,7 @@ export default function NeurondBConfigurationPage() {
         <h2>Before you begin</h2>
         <p>Ensure you have:</p>
         <ul>
-          <li>NeurondB extension installed and listed in shared_preload_libraries</li>
+          <li>NeuronDB extension installed and listed in shared_preload_libraries</li>
           <li>PostgreSQL superuser access for ALTER SYSTEM and configuration reloads</li>
           <li>Baseline metrics for vector workload (QPS, recall targets, latency SLO)</li>
           <li>Optional: GPU drivers (CUDA or ROCm) installed if enabling GPU mode</li>
@@ -74,7 +74,7 @@ export default function NeurondBConfigurationPage() {
 
       <section id="core-configuration">
         <h2>Core configuration (postgresql.conf)</h2>
-        <p>Add the baseline NeurondB checks to your cluster configuration. Adjust vector index tuning, inference options, and background workers.</p>
+        <p>Add the baseline NeuronDB checks to your cluster configuration. Adjust vector index tuning, inference options, and background workers.</p>
 
         <h3>Baseline parameters</h3>
         <SqlCodeBlock
@@ -194,7 +194,7 @@ ALTER SYSTEM SET neurondb.enable_prefetch = on;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/performance">Performance Guide</a> - Benchmark NeurondB under different parameter profiles and workloads.</li>
+          <li><a href="/docs/performance">Performance Guide</a> - Benchmark NeuronDB under different parameter profiles and workloads.</li>
           <li><a href="/docs/background-workers">Background Workers</a> - Configure neuranq, neuranmon, and neurandefrag scheduling.</li>
           <li><a href="/docs/security">Security & Compliance</a> - Enable encryption, differential privacy, and audit logging.</li>
         </ul>

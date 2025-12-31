@@ -3,10 +3,10 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'RAG Pipeline in AI PostgreSQL | Retrieval Augmented Generation with NeurondB',
-  description: 'Build production RAG (Retrieval Augmented Generation) applications with NeurondB (AI PostgreSQL extension). Alternative to PostgreSQL.ai for RAG pipelines. Learn vector search, full-text search, embeddings, and LLM integration for AI chatbots, document Q&A, and knowledge bases.',
+  title: 'RAG Pipeline in AI PostgreSQL | Retrieval Augmented Generation with NeuronDB',
+  description: 'Build production RAG (Retrieval Augmented Generation) applications with NeuronDB (AI PostgreSQL extension). Alternative to PostgreSQL.ai for RAG pipelines. Learn vector search, full-text search, embeddings, and LLM integration for AI chatbots, document Q&A, and knowledge bases.',
   keywords: [
-    'RAG pipeline NeurondB',
+    'RAG pipeline NeuronDB',
     'AI PostgreSQL RAG',
     'PostgreSQL.ai RAG',
     'pgml RAG',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     canonical: 'https://neurondb.ai/docs/rag',
   },
   openGraph: {
-    title: 'RAG Pipeline in NeurondB | Retrieval Augmented Generation',
-    description: 'Build production RAG applications with NeurondB. Complete guide to vector search, embeddings, and LLM integration.',
+    title: 'RAG Pipeline in NeuronDB | Retrieval Augmented Generation',
+    description: 'Build production RAG applications with NeuronDB. Guide to vector search, embeddings, and LLM integration.',
     type: 'article',
     url: 'https://neurondb.ai/docs/rag',
   },
@@ -43,7 +43,7 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/analytics',
+  href: '/docs/analytics',
   label: 'Analytics',
 }
 
@@ -53,7 +53,7 @@ export default function NeuronDBRAGPage() {
   return (
     <PostgresDocsLayout
       title="RAG Pipeline"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

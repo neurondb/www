@@ -4,7 +4,7 @@ import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
   title: 'Machine Learning & Embeddings | NeuronDB Documentation',
-  description: 'Complete guide to ML inference and embedding generation in NeuronDB with support for multiple models and frameworks',
+  description: 'ML inference and embedding generation in NeuronDB with support for multiple models and frameworks',
 }
 
 const tableOfContents: TocItem[] = [
@@ -14,12 +14,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/analytics',
+  href: '/docs/analytics',
   label: 'Analytics',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/inference',
+  href: '/docs/ml/inference',
   label: 'Inference',
 }
 
@@ -27,13 +27,85 @@ export default function MLPage() {
   return (
     <PostgresDocsLayout
       title="Machine Learning & Embeddings"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
     >
       <section id="ml-capabilities">
         <h2>ML Capabilities</h2>
+
+        <p>NeuronDB provides comprehensive machine learning capabilities with <strong>19 fully implemented ML algorithms</strong> (part of 52 total ML features) in pure C, all supporting GPU acceleration and SIMD optimization. The extension offers in-database ML inference, embedding generation, and complete model lifecycle management.</p>
+
+        <h3>19 Fully Implemented ML Algorithms</h3>
+        <p>NeuronDB includes a complete suite of machine learning algorithms organized by category:</p>
+        
+        <h4>Clustering (5 algorithms):</h4>
+        <ul>
+          <li><strong>K-Means</strong> - Lloyd's algorithm with k-means++ initialization, GPU-accelerated</li>
+          <li><strong>Mini-batch K-Means</strong> - Efficient variant for large datasets and streaming data</li>
+          <li><strong>DBSCAN</strong> - Density-based clustering for arbitrary shapes and noise detection</li>
+          <li><strong>Gaussian Mixture Model (GMM)</strong> - EM algorithm for probabilistic clustering</li>
+          <li><strong>Hierarchical Clustering</strong> - Agglomerative clustering with multiple linkage criteria</li>
+        </ul>
+
+        <h4>Dimensionality Reduction (2 algorithms):</h4>
+        <ul>
+          <li><strong>PCA</strong> - Principal Component Analysis with SIMD-optimized covariance computation</li>
+          <li><strong>PCA Whitening</strong> - Advanced PCA with decorrelation and normalization</li>
+        </ul>
+
+        <h4>Quantization (2 algorithms):</h4>
+        <ul>
+          <li><strong>Product Quantization (PQ)</strong> - Vector compression for 8-16x memory reduction</li>
+          <li><strong>Optimized Product Quantization (OPQ)</strong> - Rotation-optimized PQ for better accuracy</li>
+        </ul>
+
+        <h4>Outlier Detection (3 methods):</h4>
+        <ul>
+          <li><strong>Z-Score</strong> - Statistical outlier detection using standard deviations</li>
+          <li><strong>Modified Z-Score</strong> - Robust variant using median and MAD (Median Absolute Deviation)</li>
+          <li><strong>IQR</strong> - Non-parametric interquartile range method for non-normal distributions</li>
+        </ul>
+
+        <h4>Reranking (3 algorithms):</h4>
+        <ul>
+          <li><strong>MMR (Maximal Marginal Relevance)</strong> - Diversity-focused reranking</li>
+          <li><strong>Ensemble Reranking</strong> - Weighted and Borda count methods</li>
+          <li><strong>Learning-to-Rank (LTR)</strong> - Machine learning-based ranking</li>
+        </ul>
+
+        <h4>Quality Metrics (6 metrics):</h4>
+        <ul>
+          <li><strong>Recall@K, Precision@K, F1@K</strong> - Search quality metrics for retrieval evaluation</li>
+          <li><strong>MRR (Mean Reciprocal Rank)</strong> - Ranking quality measurement</li>
+          <li><strong>Davies-Bouldin Index</strong> - Clustering quality measurement (lower is better)</li>
+          <li><strong>Silhouette Score</strong> - Clustering cohesion and separation analysis</li>
+        </ul>
+
+        <h4>Drift Detection (3 methods):</h4>
+        <ul>
+          <li><strong>Centroid Drift</strong> - Track changes in cluster centroids over time</li>
+          <li><strong>Distribution Divergence</strong> - Statistical distribution comparison</li>
+          <li><strong>Temporal Drift Monitoring</strong> - Time-series based drift detection</li>
+        </ul>
+
+        <h4>Analytics (4 features):</h4>
+        <ul>
+          <li><strong>Topic Discovery</strong> - Automatic topic modeling and analysis</li>
+          <li><strong>Similarity Histograms</strong> - Analyze similarity distributions in vector space</li>
+          <li><strong>KNN Graph Building</strong> - Construct k-nearest neighbor graphs for analysis</li>
+          <li><strong>Embedding Quality Assessment</strong> - Evaluate embedding quality and coherence</li>
+        </ul>
+
+        <h4>Search (2 algorithms):</h4>
+        <ul>
+          <li><strong>Hybrid Lexical-Semantic Fusion</strong> - Combine vector and text search signals</li>
+          <li><strong>Reciprocal Rank Fusion (RRF)</strong> - Multiple ranking fusion algorithm</li>
+        </ul>
+
+        <h4>Traditional ML Algorithms:</h4>
+        <p>Additionally supports Random Forest, XGBoost, LightGBM, CatBoost, Linear/Logistic Regression, Ridge, Lasso, SVM, KNN, Naive Bayes, Decision Trees, Neural Networks, and Deep Learning models for classification, regression, and advanced ML workflows.</p>
 
         <h3>In-Database ML Inference</h3>
         <p>Run ML models directly inside PostgreSQL with zero data movement, batch inference for high throughput, real-time predictions with low latency, and automatic GPU acceleration when available.</p>
@@ -43,6 +115,9 @@ export default function MLPage() {
 
         <h3>Model Management</h3>
         <p>Deploy and manage ML models efficiently with model versioning and rollback, A/B testing support, resource quota management, and performance monitoring.</p>
+
+        <h3>AutoML & Feature Store</h3>
+        <p>Automated hyperparameter tuning, model selection, and feature management with versioning for production ML workflows.</p>
       </section>
 
       <section id="supported-models">

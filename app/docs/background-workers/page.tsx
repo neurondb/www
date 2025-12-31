@@ -4,7 +4,7 @@ import SqlCodeBlock from '@/components/SqlCodeBlock'
 import BashCodeBlock from '@/components/BashCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'Background Workers | Async Processing & Monitoring | NeurondB',
+  title: 'Background Workers | Async Processing & Monitoring | NeuronDB',
   description: 'Dedicated workers for async processing, monitoring, and maintenance to keep your system running optimally. Includes job queue execution, auto-tuning, index maintenance, and LLM processing workers.',
   keywords: [
     'background workers',
@@ -42,12 +42,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/indexing',
+  href: '/docs/indexing',
   label: 'Indexing',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/performance',
+  href: '/docs/performance',
   label: 'Performance',
 }
 
@@ -55,7 +55,7 @@ export default function Page() {
   return (
     <PostgresDocsLayout
       title="Background Workers"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
@@ -64,7 +64,7 @@ export default function Page() {
         <h2>Overview</h2>
         <p>
           <strong>Background Workers</strong> are dedicated processes that handle async processing, monitoring, 
-          and maintenance tasks to keep your NeurondB system running optimally. These workers operate independently 
+          and maintenance tasks to keep your NeuronDB system running optimally. These workers operate independently 
           from query processing, ensuring that maintenance and optimization tasks don't impact query performance.
         </p>
 

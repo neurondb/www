@@ -4,9 +4,9 @@ import SqlCodeBlock from '@/components/SqlCodeBlock'
 import BashCodeBlock from '@/components/BashCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'NeurondB Model Inference | ONNX & GPU Serving',
+  title: 'NeuronDB Model Inference | ONNX & GPU Serving',
   description:
-    'Deploy ONNX models inside PostgreSQL with NeurondB. Configure GPU batching, caching, runtime preferences, and integrate inference with SQL pipelines.',
+    'Deploy ONNX models inside PostgreSQL with NeuronDB. Configure GPU batching, caching, runtime preferences, and integrate inference with SQL pipelines.',
 }
 
 const tableOfContents: TocItem[] = [
@@ -16,12 +16,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml',
+  href: '/docs/ml',
   label: 'ML Overview',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/embeddings',
+  href: '/docs/ml/embeddings',
   label: 'Embeddings',
 }
 
@@ -29,7 +29,7 @@ export default function InferencePage() {
   return (
     <PostgresDocsLayout
       title="Serve ONNX models directly from PostgreSQL"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
@@ -66,7 +66,7 @@ ORDER  BY created_at DESC;`}
 
       <section id="batching">
         <h2>GPU batching & scheduling</h2>
-        <p>NeurondB orchestrates micro-batches per GPU worker. Configure queue sizes, max latency, and fallbacks.</p>
+        <p>NeuronDB orchestrates micro-batches per GPU worker. Configure queue sizes, max latency, and fallbacks.</p>
 
         <h3>PostgreSQL configuration</h3>
         <BashCodeBlock

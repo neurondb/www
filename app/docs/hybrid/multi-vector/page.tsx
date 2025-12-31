@@ -14,12 +14,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/hybrid/overview',
+  href: '/docs/hybrid/overview',
   label: 'Hybrid Search Overview',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/hybrid/faceted-search',
+  href: '/docs/hybrid/faceted-search',
   label: 'Faceted Search',
 }
 
@@ -27,7 +27,7 @@ export default function MultiVectorPage() {
   return (
     <PostgresDocsLayout
       title="Multi-Vector"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

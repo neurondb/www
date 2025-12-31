@@ -7,7 +7,7 @@ export const siteConfig = {
   name: 'NeuronDB',
   domain: 'neurondb.ai',
   email: 'support@neurondb.ai',
-  description: 'PostgreSQL AI Extension for Vector Search, ML Inference & RAG Pipeline',
+  description: 'PostgreSQL AI Extension for Vector Search, ML Inference and RAG Pipeline',
   tagline: 'PostgreSQL AI Extension',
   github: 'https://github.com/neurondb-ai/neurondb',
   twitter: 'https://twitter.com/neurondbai',

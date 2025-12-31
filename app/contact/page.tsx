@@ -48,7 +48,7 @@ Message: ${formData.message}
               Contact Us
             </h1>
             <p className="text-lg md:text-xl font-normal text-white mb-6 max-w-2xl mx-auto drop-shadow-lg">
-              Get in touch with our team for support, questions, or feedback
+              Contact the team for support, questions, or feedback
             </p>
           </div>
         </div>
@@ -60,7 +60,7 @@ Message: ${formData.message}
             <div>
               <h3 className="text-xl font-bold text-white mb-2">Email Support</h3>
               <p className="text-white/80 mb-3">
-                Send us an email for general inquiries and support: <Link
+                Email for general inquiries and support: <Link
                   href={`mailto:${siteConfig.email}`}
                   className="text-yellow-400 hover:text-yellow-300 font-semibold transition-colors"
                 >
@@ -72,7 +72,7 @@ Message: ${formData.message}
             <div>
               <h3 className="text-xl font-bold text-white mb-2">GitHub</h3>
               <p className="text-white/80 mb-3">
-                Report issues, request features, or contribute to NeuronDB: <Link
+                Report issues, request features, or contribute: <Link
                   href={siteConfig.github}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -86,7 +86,7 @@ Message: ${formData.message}
             <div>
               <h3 className="text-xl font-bold text-white mb-2">Documentation</h3>
               <p className="text-white/80 mb-3">
-                Browse our comprehensive documentation and guides: <Link
+                Documentation and guides: <Link
                   href="/docs"
                   className="text-yellow-400 hover:text-yellow-300 font-semibold transition-colors"
                 >

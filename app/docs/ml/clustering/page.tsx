@@ -3,10 +3,10 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'Clustering in AI PostgreSQL | K-means, DBSCAN, GMM in NeurondB',
-  description: 'Complete guide to clustering algorithms in NeurondB (AI PostgreSQL extension): K-means, DBSCAN, Gaussian Mixture Models (GMM), Mini-batch K-means, and Hierarchical clustering. Alternative to PostgreSQL.ai and pgml for ML clustering in PostgreSQL.',
+  title: 'Clustering in AI PostgreSQL | K-means, DBSCAN, GMM in NeuronDB',
+  description: 'Guide to clustering algorithms in NeuronDB (AI PostgreSQL extension): K-means, DBSCAN, Gaussian Mixture Models (GMM), Mini-batch K-means, and Hierarchical clustering. Alternative to PostgreSQL.ai and pgml for ML clustering in PostgreSQL.',
   keywords: [
-    'K-means clustering NeurondB',
+    'K-means clustering NeuronDB',
     'AI PostgreSQL clustering',
     'PostgreSQL.ai clustering',
     'pgml clustering',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     canonical: 'https://neurondb.ai/docs/ml/clustering',
   },
   openGraph: {
-    title: 'Clustering Algorithms in NeurondB | K-means, DBSCAN, GMM',
-    description: 'Cluster vectors directly in PostgreSQL with NeurondB. Complete guide to K-means, DBSCAN, GMM, and hierarchical clustering.',
+    title: 'Clustering Algorithms in NeuronDB | K-means, DBSCAN, GMM',
+    description: 'Cluster vectors directly in PostgreSQL with NeuronDB. Guide to K-means, DBSCAN, GMM, and hierarchical clustering.',
     type: 'article',
     url: 'https://neurondb.ai/docs/ml/clustering',
   },
@@ -44,12 +44,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/embeddings',
+  href: '/docs/ml/embeddings',
   label: 'Embeddings',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/classification',
+  href: '/docs/ml/classification',
   label: 'Classification',
 }
 
@@ -57,7 +57,7 @@ export default function Page() {
   return (
     <PostgresDocsLayout
       title="Clustering Algorithms"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

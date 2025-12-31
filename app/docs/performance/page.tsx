@@ -4,7 +4,7 @@ import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
   title: 'Vector Database Performance Tuning | Optimize NeuronDB PostgreSQL',
-  description: 'Complete performance optimization guide for NeuronDB PostgreSQL vector database. HNSW tuning, recall optimization, latency reduction, memory management, and production scaling. Handle 100M+ vectors with sub-10ms queries.',
+  description: 'Performance optimization guide for NeuronDB PostgreSQL vector database. HNSW tuning, recall optimization, latency reduction, memory management, and production scaling. Handle 100M+ vectors with sub-10ms queries.',
   alternates: {
     canonical: 'https://neurondb.ai/docs/performance',
   },
@@ -17,7 +17,7 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/background-workers',
+  href: '/docs/background-workers',
   label: 'Background Workers',
 }
 
@@ -27,7 +27,7 @@ export default function Page() {
   return (
     <PostgresDocsLayout
       title="Performance"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
@@ -89,11 +89,14 @@ export default function Page() {
         <h2>Optimization Techniques</h2>
 
         <h3>1. SIMD Acceleration</h3>
-        <p>Automatic SIMD (Single Instruction Multiple Data) optimization for distance calculations using AVX2, AVX-512 (x86) or NEON (ARM).</p>
+        <p>Architecture-specific SIMD optimization with runtime CPU feature detection and compile-time paths for maximum performance:</p>
         <ul>
-          <li><strong>AVX2 Speedup:</strong> 4-8x</li>
-          <li><strong>AVX-512 Speedup:</strong> 8-16x</li>
-          <li><strong>Auto Detection:</strong> Automatically enabled when available</li>
+          <li><strong>x86_64:</strong> AVX2 baseline, AVX-512 when available, VNNI for INT8 quantization</li>
+          <li><strong>ARM64:</strong> NEON baseline, dotprod extension support</li>
+          <li><strong>Optimized Operations:</strong> Dot product, L2 distance, K-means assignment, PCA covariance computation</li>
+          <li><strong>Compiler Flags:</strong> -O3 -march=native -funroll-loops -ffp-contract=fast -fopenmp-simd</li>
+          <li><strong>Speedups:</strong> AVX2 (4-8x), AVX-512 (8-16x), NEON (2-4x)</li>
+          <li><strong>Auto Detection:</strong> Runtime CPU feature detection with automatic fallback</li>
         </ul>
 
         <h3>2. Intelligent Caching</h3>

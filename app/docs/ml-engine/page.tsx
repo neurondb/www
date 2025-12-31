@@ -3,8 +3,8 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'ML Engine | Machine Learning Suite with ONNX | NeurondB',
-  description: 'Comprehensive machine learning suite with classification, regression, clustering, and AutoML capabilities powered by ONNX. Deploy models directly in PostgreSQL for real-time inference, training, and model management.',
+  title: 'ML Engine | Machine Learning Suite with ONNX | NeuronDB',
+  description: 'Machine learning suite with classification, regression, clustering, and AutoML capabilities powered by ONNX. Deploy models in PostgreSQL for inference, training, and model management.',
   keywords: [
     'ML engine',
     'machine learning PostgreSQL',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'ML Engine | Machine Learning Suite with ONNX',
-    description: 'Comprehensive ML capabilities with classification, regression, clustering, and AutoML powered by ONNX.',
+    description: 'ML capabilities with classification, regression, clustering, and AutoML powered by ONNX.',
     type: 'article',
     url: 'https://neurondb.ai/docs/ml-engine',
   },
@@ -43,12 +43,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/vector-engine',
+  href: '/docs/vector-engine',
   label: 'Vector Engine',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/embedding-engine',
+  href: '/docs/embedding-engine',
   label: 'Embedding Engine',
 }
 
@@ -56,7 +56,7 @@ export default function MLEnginePage() {
   return (
     <PostgresDocsLayout
       title="ML Engine"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

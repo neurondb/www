@@ -3,9 +3,9 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'NeurondB Model Management | Lifecycle & Governance',
+  title: 'NeuronDB Model Management | Lifecycle & Governance',
   description:
-    'Operate NeurondB model registry with version control, approvals, scheduled retraining, and audit logging. Manage ONNX deployments, rollouts, and performance tracking directly in PostgreSQL.',
+    'Operate NeuronDB model registry with version control, approvals, scheduled retraining, and audit logging. Manage ONNX deployments, rollouts, and performance tracking directly in PostgreSQL.',
 }
 
 const tableOfContents: TocItem[] = [
@@ -15,12 +15,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/rag',
+  href: '/docs/ml/rag',
   label: 'RAG Pipeline',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/feature-store',
+  href: '/docs/ml/feature-store',
   label: 'Feature Store',
 }
 
@@ -28,14 +28,14 @@ export default function ModelManagementPage() {
   return (
     <PostgresDocsLayout
       title="Govern the full model lifecycle inside PostgreSQL"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
     >
       <section id="registry">
         <h2>Model registry & metadata</h2>
-        <p>Every model version is tracked in the NeurondB registry table with immutable metadata. Store provenance, signatures, and deployment configuration in JSONB to integrate with your compliance controls.</p>
+        <p>Every model version is tracked in the NeuronDB registry table with immutable metadata. Store provenance, signatures, and deployment configuration in JSONB to integrate with your compliance controls.</p>
 
         <h3>Register a version</h3>
         <SqlCodeBlock
@@ -70,7 +70,7 @@ ORDER  BY created_at DESC;`}
 
       <section id="rollouts">
         <h2>Rollout controls & staged environments</h2>
-        <p>Promote models between dev, staging, and production directly in SQL. NeurondB stores active deployment slots and supports canary percentages for gradual rollouts.</p>
+        <p>Promote models between dev, staging, and production directly in SQL. NeuronDB stores active deployment slots and supports canary percentages for gradual rollouts.</p>
 
         <h3>Promote model</h3>
         <SqlCodeBlock

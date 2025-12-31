@@ -25,7 +25,7 @@ export const metadata = generateProductPageMetadata('neurondb');
 const neurondbConfig = {
   productId: 'neurondb' as const,
   hero: {
-    subtitle: 'PostgreSQL AI Extension for Vector Search, ML Inference & RAG Pipeline. Build AI-powered applications directly in PostgreSQL with GPU acceleration, 52 ML algorithms, and hybrid search.',
+    subtitle: 'PostgreSQL AI Extension for Vector Search, ML Inference and RAG Pipeline. Build AI applications in PostgreSQL with GPU acceleration, 52 ML algorithms, and hybrid search.',
   },
   demo: <Suspense fallback={<div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center"><div className="text-slate-400">Loading demo...</div></div>}><NeurondBDemoTerminal /></Suspense>,
   badges: [
@@ -39,7 +39,7 @@ const neurondbConfig = {
   componentCards: [],
   architecture: {
     title: 'Architecture',
-    subtitle: 'AI database architecture with vector search, ML inference, and RAG pipeline',
+    subtitle: 'Architecture with vector search, ML inference, and RAG pipeline',
     content: <NeuronDBArchitectureDiagram />,
   },
   featurePillars: {
@@ -47,7 +47,7 @@ const neurondbConfig = {
     items: [
       { 
         title: 'Vector Search & Indexing', 
-        desc: '5 vector types: vector (float32), vectorp (packed), vecmap (sparse map), vgraph (graph-based), rtext (retrieval text). HNSW and IVF indexing with automatic tuning. Multiple distance metrics: L2 (Euclidean), Cosine, Inner Product, Manhattan, Hamming, Jaccard. Product Quantization (PQ) and Optimized PQ (OPQ) for 2x-32x compression.' 
+        desc: '5 vector types: vector (float32 embeddings, up to 16K dimensions), vectorp (packed with Product Quantization), vecmap (sparse vector maps for high-dimensional sparse data), vgraph (graph-based vectors with BFS/DFS/PageRank operations), rtext (retrieval text combining vector and text operations). HNSW and IVF indexing with automatic tuning. 10+ distance metrics: L2 (Euclidean), Cosine, Inner Product, Manhattan, Hamming, Jaccard, Chebyshev, Minkowski, Canberra, Braycurtis. Product Quantization (PQ) and Optimized PQ (OPQ) for 2x-32x compression. DiskANN support for billion-scale vectors on SSD.' 
       },
       { 
         title: 'ML & Embeddings', 
@@ -71,7 +71,7 @@ const neurondbConfig = {
       },
       { 
         title: 'ML Analytics Suite', 
-        desc: 'Analytics: K-means, Mini-batch K-means, DBSCAN, GMM, Hierarchical clustering (all GPU-accelerated). Dimensionality reduction: PCA, PCA Whitening, OPQ. Outlier detection: Z-score, Modified Z-score, IQR, Isolation Forest. Quality metrics: Davies-Bouldin Index, Recall@K, Precision@K, F1@K, MRR. Drift detection with temporal monitoring. Topic discovery and modeling.' 
+        desc: 'Complete ML algorithm suite: 19 implemented algorithms including K-means, Mini-batch K-means, DBSCAN, GMM, Hierarchical clustering (all GPU-accelerated). Dimensionality reduction: PCA, PCA Whitening, OPQ. Outlier detection: Z-score, Modified Z-score, IQR. Reranking: MMR, Ensemble (Weighted & Borda), Learning-to-Rank (LTR). Quality metrics: Davies-Bouldin Index, Recall@K, Precision@K, F1@K, MRR, Silhouette Score. Drift detection: Centroid drift, Distribution divergence, Temporal drift monitoring. Analytics: Topic discovery, Similarity histograms, KNN graph building, Embedding quality assessment.' 
       },
       { 
         title: 'GPU Acceleration', 
@@ -91,7 +91,7 @@ const neurondbConfig = {
       },
       { 
         title: 'PostgreSQL Native Architecture', 
-        desc: 'Pure C implementation following 100% PostgreSQL coding standards. 144 source files + 64 headers, zero compiler warnings. PGXS build system. 473 SQL functions/types/operators. Shared memory for caching. WAL integration for durability. SPI for safe operations. Background worker framework. Standard extension, zero external dependencies, no core modifications.' 
+        desc: 'Pure C implementation following 100% PostgreSQL coding standards. Reorganized source structure: 120 files in logical subdirectories (ml/, gpu/, worker/, index/, scan/, llm/, search/, storage/, util/). 473 SQL functions/types/operators. 7 new monitoring views (vector_stats, index_health, tenant_quota_usage, llm_job_status, query_performance, index_maintenance_status, metrics_summary). Shared memory for caching. WAL integration for durability. SPI for safe operations. Background worker framework. Standard extension, zero external dependencies, no core modifications. SIMD-optimized (AVX2, AVX-512, NEON) with runtime CPU feature detection.' 
       },
     ],
   },
@@ -504,7 +504,7 @@ const neurondbConfig = {
   ctaSection: {
     kicker: 'Get Started',
     title: 'Add AI Capabilities to PostgreSQL',
-    description: 'Install NeurondB. Build semantic search, RAG applications, and ML features in your PostgreSQL infrastructure.',
+    description: 'Install NeuronDB. Build semantic search, RAG applications, and ML features in your PostgreSQL infrastructure.',
     primaryCTA: { href: '/docs/getting-started', label: 'View Documentation' },
     secondaryCTA: { href: 'https://github.com/neurondb-ai/neurondb', label: 'View on GitHub', external: true },
   },

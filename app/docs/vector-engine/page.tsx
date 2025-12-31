@@ -4,7 +4,7 @@ import SqlCodeBlock from '@/components/SqlCodeBlock'
 import BashCodeBlock from '@/components/BashCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'Vector Engine | High-Performance ANN Search with HNSW & IVF | NeurondB',
+  title: 'Vector Engine | High-Performance ANN Search with HNSW & IVF | NeuronDB',
   description: 'High-performance approximate nearest neighbor (ANN) search with HNSW and IVF indexing. Support for multiple distance metrics (cosine, L2, inner product) and quantization techniques (scalar, product quantization) for billion-scale vector similarity search.',
   keywords: [
     'vector engine',
@@ -44,12 +44,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/getting-started',
+  href: '/docs/getting-started',
   label: 'Getting Started',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml-engine',
+  href: '/docs/ml-engine',
   label: 'ML Engine',
 }
 
@@ -57,7 +57,7 @@ export default function VectorEnginePage() {
   return (
     <PostgresDocsLayout
       title="Vector Engine"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
@@ -65,7 +65,7 @@ export default function VectorEnginePage() {
       <section id="overview">
         <h2>Overview</h2>
         <p>
-          The <strong>Vector Engine</strong> is NeurondB's high-performance approximate nearest neighbor (ANN) search system, 
+          The <strong>Vector Engine</strong> is NeuronDB's high-performance approximate nearest neighbor (ANN) search system, 
           designed for billion-scale vector similarity search with millisecond latency. It combines state-of-the-art indexing 
           algorithms (HNSW and IVF) with multiple distance metrics and advanced quantization techniques to deliver 
           production-ready vector search capabilities directly in PostgreSQL.
@@ -73,12 +73,17 @@ export default function VectorEnginePage() {
 
         <h3>Key Capabilities</h3>
         <ul>
+          <li><strong>5 Vector Types:</strong> vector (float32), vectorp (packed), vecmap (sparse maps), vgraph (graph-based), rtext (retrieval text)</li>
           <li><strong>HNSW Indexing:</strong> Hierarchical Navigable Small World graphs for excellent recall and speed</li>
           <li><strong>IVF Indexing:</strong> Inverted File indexes for large-scale datasets with efficient memory usage</li>
-          <li><strong>Multiple Distance Metrics:</strong> Cosine, L2 (Euclidean), inner product, and custom metrics</li>
-          <li><strong>Quantization:</strong> Scalar and product quantization to reduce memory footprint by 4-8x</li>
+          <li><strong>DiskANN:</strong> Billion-scale vector indexing for SSD-based storage</li>
+          <li><strong>10+ Distance Metrics:</strong> Cosine, L2 (Euclidean), inner product, Manhattan, Hamming, Jaccard, Chebyshev, Minkowski, Canberra, Braycurtis</li>
+          <li><strong>Quantization:</strong> Scalar quantization (4x reduction), Product Quantization (8-16x reduction), OPQ optimization</li>
           <li><strong>GPU Acceleration:</strong> Optional CUDA/ROCm/Metal support for 10-100x faster distance computation</li>
+          <li><strong>SIMD Optimization:</strong> Architecture-specific acceleration (AVX2/AVX-512/NEON) with runtime CPU detection</li>
           <li><strong>Adaptive Index Selection:</strong> Automatic index type selection based on dataset characteristics</li>
+          <li><strong>Tenant-Aware Indexes:</strong> Multi-tenant support with isolation and quota management</li>
+          <li><strong>Temporal Indexes:</strong> Time-decay relevance scoring for time-sensitive search</li>
         </ul>
 
         <h3>Performance Benchmarks</h3>
@@ -221,7 +226,7 @@ SET ivf.probes = 20;  -- Number of clusters to search`}
       <section id="distance-metrics">
         <h2>Distance Metrics</h2>
         <p>
-          NeurondB supports multiple distance metrics, each optimized for different use cases and data types. 
+          NeuronDB supports multiple distance metrics, each optimized for different use cases and data types. 
           The choice of distance metric significantly impacts search quality and should match your embedding model's training objective.
         </p>
 
@@ -308,7 +313,7 @@ LIMIT 10;`}
         <h2>Quantization Techniques</h2>
         <p>
           Quantization reduces memory footprint and can accelerate search by compressing vector representations. 
-          NeurondB supports both scalar quantization (per-dimension) and product quantization (subspace-based).
+          NeuronDB supports both scalar quantization (per-dimension) and product quantization (subspace-based).
         </p>
 
         <h3>Scalar Quantization</h3>

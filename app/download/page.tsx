@@ -7,7 +7,7 @@ import { siteConfig } from '@/config/site'
 
 export const metadata = {
   title: 'Download NeuronDB - PostgreSQL AI Extension | Free Download',
-  description: 'Download NeuronDB - AI Database Extension for PostgreSQL. Get vector search, ML inference, GPU acceleration, and RAG capabilities. Available for Linux, macOS, and Windows. Free and open source.',
+  description: 'Download NeuronDB for PostgreSQL. Get vector search, ML inference, GPU acceleration, and RAG capabilities. Available for Linux and macOS. Free and open source.',
   keywords: ['download NeuronDB', 'PostgreSQL extension download', 'vector database download', 'AI database download', 'NeuronDB installation', 'PostgreSQL AI extension', 'free download', 'open source'],
   authors: [{ name: 'NeuronDB Team' }],
   openGraph: {
@@ -49,7 +49,7 @@ export default function DownloadPage() {
               Download NeuronDB
             </h1>
             <p className="text-lg md:text-xl font-normal text-white mb-6 max-w-2xl mx-auto drop-shadow-lg">
-              Get the latest version of NeuronDB - AI Database Extension for PostgreSQL
+              Get the latest version of NeuronDB for PostgreSQL
             </p>
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function DownloadPage() {
                 <Terminal className="w-6 h-6 text-yellow-400" />
                 <div>
                   <div className="text-white font-semibold text-lg">Installation Guide</div>
-                  <div className="text-sm text-white/70">Get started quickly</div>
+                  <div className="text-sm text-white/70">Installation instructions</div>
                 </div>
               </div>
               <ArrowRight className="w-5 h-5 text-yellow-400 group-hover:translate-x-1 transition-transform" />

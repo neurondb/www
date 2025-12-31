@@ -3,10 +3,10 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'Hybrid Search in NeurondB | Vector + Full-Text Search Fusion Guide',
-  description: 'Complete guide to hybrid search in NeurondB combining vector similarity and full-text search. Learn hybrid_search() function, fusion algorithms, metadata filtering, and production deployment strategies for optimal retrieval performance.',
+  title: 'Hybrid Search in NeuronDB | Vector + Full-Text Search Fusion Guide',
+  description: 'Hybrid search in NeuronDB combining vector similarity and full-text search. Learn hybrid_search() function, fusion algorithms, metadata filtering, and production deployment strategies.',
   keywords: [
-    'hybrid search NeurondB',
+    'hybrid search NeuronDB',
     'vector text search fusion',
     'semantic keyword search',
     'hybrid retrieval',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     canonical: 'https://neurondb.ai/docs/hybrid/overview',
   },
   openGraph: {
-    title: 'Hybrid Search in NeurondB | Vector + Full-Text Fusion',
-    description: 'Combine vector similarity and full-text search in NeurondB. Complete guide to hybrid retrieval pipelines.',
+    title: 'Hybrid Search in NeuronDB | Vector + Full-Text Fusion',
+    description: 'Combine vector similarity and full-text search in NeuronDB. Guide to hybrid retrieval pipelines.',
     type: 'article',
     url: 'https://neurondb.ai/docs/hybrid/overview',
   },
@@ -37,12 +37,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/hybrid',
+  href: '/docs/hybrid',
   label: 'Hybrid Search',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/reranking/overview',
+  href: '/docs/reranking/overview',
   label: 'Reranking',
 }
 
@@ -50,7 +50,7 @@ export default function HybridOverviewPage() {
   return (
     <PostgresDocsLayout
       title="Blend lexical and semantic ranking for precision"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

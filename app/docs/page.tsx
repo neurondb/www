@@ -1,14 +1,14 @@
 import React from 'react'
 import { BookOpen, Download, ExternalLink, Database, Zap, Search } from 'lucide-react'
 import ProductDocsLanding from '@/components/ProductDocsLanding'
-import { NeurondBIcon } from '@/components/ProductIcons'
+import { NeuronDBIcon } from '@/components/ProductIcons'
 
 export const metadata = {
-  title: 'NeurondB Documentation | AI PostgreSQL Extension',
+  title: 'NeuronDB Documentation | AI PostgreSQL Extension',
   description:
-    'NeurondB: AI PostgreSQL extension for vector search, machine learning, and AI workloads. GPU-accelerated vector search, HNSW indexing, ML inference, hybrid retrieval, RAG pipelines, and ONNX model deployment in PostgreSQL.',
+    'NeuronDB: AI PostgreSQL extension for vector search, machine learning, and AI workloads. GPU-accelerated vector search, HNSW indexing, ML inference, hybrid retrieval, RAG pipelines, and ONNX model deployment in PostgreSQL.',
   keywords: [
-    'NeurondB',
+    'NeuronDB',
     'AI PostgreSQL',
     'AI Postgres',
     'PostgreSQL AI extension',
@@ -45,15 +45,15 @@ export const metadata = {
     canonical: 'https://www.neurondb.ai/docs/neurondb',
   },
   openGraph: {
-    title: 'NeurondB Documentation | PostgreSQL AI Vector Extension',
-    description: 'Guide to GPU-accelerated vector search, ML inference, and RAG pipelines in PostgreSQL with NeurondB.',
+    title: 'NeuronDB Documentation | PostgreSQL AI Vector Extension',
+    description: 'Guide to GPU-accelerated vector search, ML inference, and RAG pipelines in PostgreSQL with NeuronDB.',
     type: 'website',
     url: 'https://www.neurondb.ai/docs/neurondb',
     siteName: 'NeuronDB',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NeurondB Documentation | PostgreSQL AI Vector Extension',
+    title: 'NeuronDB Documentation | PostgreSQL AI Vector Extension',
     description: 'Guide to GPU-accelerated vector search, ML inference, and RAG pipelines in PostgreSQL.',
   },
 }
@@ -67,7 +67,7 @@ export default function Page() {
         badgeGradient: 'from-slate-700 to-slate-600',
         title: 'NeuronDB Documentation',
         description:
-          'GPU-accelerated vector search, model inference, hybrid retrieval, and RAG orchestration built into PostgreSQL. NeurondB is an AI PostgreSQL extension. Use this documentation to deploy NeurondB, operate background workers, and embed ML pipelines in SQL.',
+          'GPU-accelerated vector search, model inference, hybrid retrieval, and RAG orchestration in PostgreSQL. NeuronDB is a PostgreSQL AI extension. Use this documentation to deploy NeuronDB, operate background workers, and embed ML pipelines in SQL.',
         ctas: [
           {
             label: 'Get Started',
@@ -92,7 +92,7 @@ export default function Page() {
           href: '/docs/features/vector-types'
         },
         {
-          icon: () => <NeurondBIcon size={24} />,
+          icon: () => <NeuronDBIcon size={24} />,
           title: 'ML Inference',
           description: 'ONNX runtime integration, GPU offload, and batch execution for deep learning workloads in SQL.',
           href: '/docs/ml/inference'
@@ -100,7 +100,7 @@ export default function Page() {
         {
           icon: Search,
           title: 'Hybrid Retrieval',
-          description: 'Blend keyword, metadata, and vector signals to deliver highly relevant multimodal results.',
+          description: 'Combine keyword, metadata, and vector signals for multimodal results.',
           href: '/docs/hybrid/overview'
         },
         {
@@ -113,8 +113,9 @@ export default function Page() {
       docSections={[
         {
           title: 'Getting Started',
-          description: 'Install NeurondB on PostgreSQL 16–18, verify GPU support, and apply baseline configuration.',
+          description: 'Start with Docker (recommended) or install the extension directly on PostgreSQL 16–18. Verify GPU support and apply baseline configuration.',
           items: [
+            { title: 'Docker (Recommended)', href: '/docs/getting-started/docker', description: 'Run the full ecosystem (DB + Agent + MCP + Desktop) with Compose profiles.' },
             { title: 'Installation', href: '/docs/installation', description: 'Build from source or install packages.' },
             { title: 'Quick Start', href: '/docs/getting-started/quickstart', description: 'Load sample data and run first vector searches.' },
             { title: 'Configuration', href: '/docs/configuration', description: 'GUC parameters for CPU/GPU execution paths.' }
@@ -122,9 +123,9 @@ export default function Page() {
         },
         {
           title: 'Core Features',
-          description: 'Learn how NeurondB models vectors, maintains indexes, and tunes recall versus latency.',
+          description: 'Learn how NeuronDB models vectors, maintains indexes, and tunes recall versus latency.',
           items: [
-            { title: 'Vector Types', href: '/docs/features/vector-types', description: 'Supported dimensionality and storage formats.' },
+            { title: 'Vector Types', href: '/docs/features/vector-types', description: '5 vector types: vector, vectorp, vecmap, vgraph, rtext with operations.' },
             { title: 'Distance Metrics', href: '/docs/features/distance-metrics', description: 'Cosine, L2, IP, dot, and hybrid scoring.' },
             { title: 'Indexing', href: '/docs/indexing', description: 'HNSW, IVF, PQ, and adaptive index selection.' },
             { title: 'Quantization', href: '/docs/features/quantization', description: 'Reduce memory footprint with scalar and vector quantization.' }
@@ -155,7 +156,8 @@ export default function Page() {
             { title: 'Worker Overview', href: '/docs/background-workers', description: 'Understand worker architecture and lifecycles.' },
             { title: 'Queue Worker (neuranq)', href: '/docs/background-workers/neuranq', description: 'Batch ingestion and asynchronous scoring.' },
             { title: 'Auto-Tuner (neuranmon)', href: '/docs/background-workers/neuranmon', description: 'Automated index health and GPU utilization tuning.' },
-            { title: 'Index Maintenance (neurandefrag)', href: '/docs/background-workers/neurandefrag', description: 'Defragment and rebalance vector indexes online.' }
+            { title: 'Index Maintenance (neurandefrag)', href: '/docs/background-workers/neurandefrag', description: 'Defragment and rebalance vector indexes online.' },
+            { title: 'LLM Processor (neuranllm)', href: '/docs/background-workers/neuranllm', description: 'Process LLM jobs asynchronously with crash recovery and job pruning.' }
           ]
         },
         {
@@ -163,15 +165,32 @@ export default function Page() {
           description: 'NeuronDB ecosystem components: NeuronAgent for agent runtime, NeuronMCP for MCP protocol support, and NeuronDesktop for unified web interface.',
           items: [
             { title: 'NeuronAgent', href: '/docs/neuronagent', description: 'AI agent runtime with REST API, WebSocket, long-term memory, and tool execution.' },
-            { title: 'NeuronMCP', href: '/docs/neuronmcp', description: 'Model Context Protocol server for MCP-compatible clients like Claude Desktop.' },
+            { title: 'NeuronMCP', href: '/docs/neuronmcp', description: 'Model Context Protocol server with 100+ tools (27 PostgreSQL + 70+ NeuronDB) for MCP-compatible clients like Claude Desktop.' },
             { title: 'NeuronDesktop', href: '/docs/neurondesktop', description: 'Unified web interface for managing all NeuronDB ecosystem components with real-time monitoring.' }
+          ]
+        },
+        {
+          title: 'Examples & Tutorials',
+          description: 'Working examples demonstrating NeuronDB capabilities: semantic search, RAG chatbots, agent tools, MCP integration, dataset loading, and LLM training.',
+          items: [
+            { title: 'Semantic Search', href: 'https://github.com/neurondb-ai/neurondb/tree/main/examples/semantic-search-docs', description: 'Document ingestion, embedding generation, and semantic search over document collections.', external: true },
+            { title: 'RAG Chatbot', href: 'https://github.com/neurondb-ai/neurondb/tree/main/examples/rag-chatbot-pdfs', description: 'Full RAG pipeline over PDF documents with LLM integration and interactive chat interface.', external: true },
+            { title: 'Agent Tools', href: 'https://github.com/neurondb-ai/neurondb/tree/main/examples/agent-tools', description: 'NeuronAgent with multiple tools (SQL, HTTP, custom) for complex agent workflows.', external: true },
+            { title: 'MCP Integration', href: 'https://github.com/neurondb-ai/neurondb/tree/main/examples/mcp-integration', description: 'Claude Desktop configuration and MCP server integration examples.', external: true },
+            { title: 'Dataset Loading', href: 'https://github.com/neurondb-ai/neurondb/tree/main/examples/data_loading', description: 'Load datasets from HuggingFace Hub with auto-embedding and index creation.', external: true }
           ]
         }
       ]}
       quickLinks={[
         {
+          title: 'Docker Quick Start',
+          description: 'Get the ecosystem (DB + Agent + MCP + Desktop) running in 5 minutes with Docker Compose.',
+          href: '/docs/getting-started/docker',
+          icon: BookOpen
+        },
+        {
           title: 'Getting Started Guide',
-          description: 'Bootstrap NeurondB on PostgreSQL 16–18 with CPU and GPU execution paths.',
+          description: 'Bootstrap NeuronDB on PostgreSQL 16–18 with CPU and GPU execution paths.',
           href: '/docs/getting-started',
           icon: BookOpen
         },
@@ -183,7 +202,7 @@ export default function Page() {
         },
         {
           title: 'GitHub Repository',
-          description: 'Source code, issues, and contribution guide for NeurondB.',
+          description: 'Source code, issues, and contribution guide for NeuronDB.',
           href: 'https://github.com/neurondb-ai/neurondb',
           icon: ExternalLink,
           external: true

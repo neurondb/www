@@ -15,12 +15,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/quality-metrics',
+  href: '/docs/ml/quality-metrics',
   label: 'Quality Metrics',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/topic-discovery',
+  href: '/docs/ml/topic-discovery',
   label: 'Topic Discovery',
 }
 
@@ -28,7 +28,7 @@ export default function DriftDetectionPage() {
   return (
     <PostgresDocsLayout
       title="Drift Detection"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

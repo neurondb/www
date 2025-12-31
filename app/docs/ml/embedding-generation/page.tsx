@@ -3,10 +3,10 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'Text Embeddings in AI PostgreSQL | embed_text() in NeurondB',
-  description: 'Generate text embeddings in NeurondB (AI PostgreSQL extension) using embed_text() and embed_text_batch() functions. Alternative to PostgreSQL.ai and pgml for embedding generation. Learn vector embeddings, model configuration, caching, and batch processing for semantic search and RAG.',
+  title: 'Text Embeddings in AI PostgreSQL | embed_text() in NeuronDB',
+  description: 'Generate text embeddings in NeuronDB (AI PostgreSQL extension) using embed_text() and embed_text_batch() functions. Alternative to PostgreSQL.ai and pgml for embedding generation. Learn vector embeddings, model configuration, caching, and batch processing for semantic search and RAG.',
   keywords: [
-    'text embeddings NeurondB',
+    'text embeddings NeuronDB',
     'AI PostgreSQL embeddings',
     'PostgreSQL.ai embeddings',
     'pgml embeddings',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     canonical: 'https://neurondb.ai/docs/ml/embedding-generation',
   },
   openGraph: {
-    title: 'Text Embedding Generation in NeurondB | embed_text() Guide',
-    description: 'Generate text embeddings in PostgreSQL with NeurondB. Complete guide to embed_text(), batch processing, and caching.',
+    title: 'Text Embedding Generation in NeuronDB | embed_text() Guide',
+    description: 'Generate text embeddings in PostgreSQL with NeuronDB. Guide to embed_text(), batch processing, and caching.',
     type: 'article',
     url: 'https://neurondb.ai/docs/ml/embedding-generation',
   },
@@ -43,12 +43,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/recommendation-systems',
+  href: '/docs/ml/recommendation-systems',
   label: 'Recommendation Systems',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/inference',
+  href: '/docs/ml/inference',
   label: 'Model Inference',
 }
 
@@ -56,7 +56,7 @@ export default function EmbeddingGenerationPage() {
   return (
     <PostgresDocsLayout
       title="Embedding Generation"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

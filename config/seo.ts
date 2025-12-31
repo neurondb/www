@@ -52,7 +52,7 @@ export function generatePageMetadata({
 }): Metadata {
   const url = `${baseSEO.siteUrl}${path}`
   const ogImage = image ? (image.startsWith('http') ? image : `${baseSEO.siteUrl}${image}`) : `${baseSEO.siteUrl}${baseSEO.defaultImage}`
-  const optimizedDescription = description.substring(0, 160) // Ensure optimal length
+  const optimizedDescription = description.substring(0, 155).replace(/\s+\S*$/, '') // Ensure optimal length, cut at word boundary
 
   return {
     title: `${title} | ${baseSEO.siteName}`,

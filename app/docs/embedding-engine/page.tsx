@@ -3,7 +3,7 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'Embedding Engine | Multi-Modal Embedding Generation | NeurondB',
+  title: 'Embedding Engine | Multi-Modal Embedding Generation | NeuronDB',
   description: 'Multi-modal embedding generation for text, images, and mixed data using state-of-the-art transformer models. Support for OpenAI, Cohere, HuggingFace, and custom models with automatic caching and batch processing.',
   keywords: [
     'embedding engine',
@@ -42,12 +42,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml-engine',
+  href: '/docs/ml-engine',
   label: 'ML Engine',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/gpu',
+  href: '/docs/gpu',
   label: 'GPU Accelerator',
 }
 
@@ -55,7 +55,7 @@ export default function EmbeddingEnginePage() {
   return (
     <PostgresDocsLayout
       title="Embedding Engine"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

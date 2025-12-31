@@ -17,7 +17,7 @@ export default function CommunityPage() {
               Community
             </h1>
             <p className="text-lg md:text-xl font-normal text-white mb-6 max-w-2xl mx-auto drop-shadow-lg">
-              Join our growing community of developers, users, and contributors
+              Developers, users, and contributors
             </p>
           </div>
         </div>
@@ -29,7 +29,7 @@ export default function CommunityPage() {
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">GitHub</h2>
               <p className="text-white/80 mb-4">
-                Contribute to NeuronDB, report issues, and request features
+                Contribute to NeuronDB. Report issues and request features.
               </p>
               <Link
                 href={siteConfig.github}
@@ -45,7 +45,7 @@ export default function CommunityPage() {
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Documentation</h2>
               <p className="text-white/80 mb-4">
-                Browse our comprehensive documentation and guides
+                Documentation and guides
               </p>
               <Link
                 href="/docs"
@@ -59,7 +59,7 @@ export default function CommunityPage() {
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Blog</h2>
               <p className="text-white/80 mb-4">
-                Read the latest updates, tutorials, and technical insights
+                Updates, tutorials, and technical insights
               </p>
               <Link
                 href="/blog"
@@ -73,7 +73,7 @@ export default function CommunityPage() {
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Contact</h2>
               <p className="text-white/80 mb-4">
-                Get in touch with our team for support and questions
+                Contact the team for support and questions
               </p>
               <Link
                 href="/contact"

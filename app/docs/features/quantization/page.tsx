@@ -4,9 +4,9 @@ import SqlCodeBlock from '@/components/SqlCodeBlock'
 import BashCodeBlock from '@/components/BashCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'NeurondB Quantization Strategies | Memory Efficient Vector Search',
+  title: 'NeuronDB Quantization Strategies | Memory Efficient Vector Search',
   description:
-    'Configure NeurondB product quantization, scalar quantization, and residual compression to lower memory usage while preserving recall. Includes SQL recipes and tuning guidance.',
+    'Configure NeuronDB product quantization, scalar quantization, and residual compression to lower memory usage while preserving recall. Includes SQL recipes and tuning guidance.',
 }
 
 const tableOfContents: TocItem[] = [
@@ -16,12 +16,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/features/distance-metrics',
+  href: '/docs/features/distance-metrics',
   label: 'Distance Metrics',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/indexing',
+  href: '/docs/indexing',
   label: 'Indexing',
 }
 
@@ -29,7 +29,7 @@ export default function QuantizationPage() {
   return (
     <PostgresDocsLayout
       title="Quantization Strategies"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

@@ -15,12 +15,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/performance',
+  href: '/docs/performance',
   label: 'Performance',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/performance/monitoring',
+  href: '/docs/performance/monitoring',
   label: 'Monitoring',
 }
 
@@ -28,7 +28,7 @@ export default function SIMDOptimizationPage() {
   return (
     <PostgresDocsLayout
       title="SIMD Optimization"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

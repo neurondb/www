@@ -3,12 +3,12 @@ import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
 
 export const metadata = {
   title: 'MCP Server: Model Context Protocol Explained | NeuronDB',
-  description: 'Complete guide to MCP Server (Model Context Protocol) - what it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation. Learn how MCP enables AI assistants to access external tools and resources. Includes JSON-RPC 2.0, stdio transport, tool execution, and resource access.',
+  description: 'MCP Server (Model Context Protocol) guide. What it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation. Learn how MCP enables AI assistants to access external tools and resources. Includes JSON-RPC 2.0, stdio transport, tool execution, and resource access.',
   keywords: ['MCP Server', 'Model Context Protocol', 'Claude Desktop', 'NeuronMCP', 'JSON-RPC', 'AI assistants', 'PostgreSQL', 'vector search', 'MCP protocol', 'stdio transport', 'tool execution', 'resource access', 'MCP servers', 'Anthropic', 'AI integration'],
   authors: [{ name: 'NeuronDB Team' }],
   openGraph: {
     title: 'MCP Server: Model Context Protocol Explained | NeuronDB',
-    description: 'Complete guide to MCP Server - what it is, how it works, Claude Desktop integration, and NeuronMCP. Learn JSON-RPC 2.0, stdio transport, and tool execution.',
+    description: 'MCP Server guide. What it is, how it works, Claude Desktop integration, and NeuronMCP. Learn JSON-RPC 2.0, stdio transport, and tool execution.',
     url: 'https://neurondb.ai/blog/neurondb-mcp-server',
     siteName: 'NeuronDB',
     images: [
@@ -25,7 +25,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'MCP Server: Model Context Protocol Explained | NeuronDB',
-    description: 'Complete guide to MCP Server - what it is, how it works, Claude Desktop integration, and NeuronMCP',
+    description: 'MCP Server guide. What it is, how it works, Claude Desktop integration, and NeuronMCP',
     images: ['https://neurondb.ai/blog/neurondb-mcp-server/og-image.svg'],
     creator: '@neurondb',
   },
@@ -626,15 +626,15 @@ The MCP ecosystem includes servers for various use cases. Filesystem servers ena
 
 [NeuronDB a PostgreSQL AI Extension](/blog/neurondb)
 
-Complete guide to NeuronDB extension with vector search, ML inference, and RAG capabilities.
+NeuronDB extension with vector search, ML inference, and RAG capabilities.
 
 [Semantic Search Over Text with NeuronDB](/blog/neurondb-semantic-search-guide)
 
-Build complete semantic search systems with document chunking and hybrid search.
+Build semantic search systems with document chunking and hybrid search.
 
 [Vectors in PostgreSQL](/blog/neurondb-vectors)
 
-Master vector operations, indexing, and similarity search in PostgreSQL.
+Vector operations, indexing, and similarity search in PostgreSQL.
 
 ## Support
 
@@ -646,7 +646,7 @@ export default function BlogPost() {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: 'MCP Server: Model Context Protocol Explained',
-    description: 'Complete guide to MCP Server (Model Context Protocol) - what it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation.',
+    description: 'MCP Server (Model Context Protocol) guide. What it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation.',
     image: 'https://neurondb.ai/blog/neurondb-mcp-server/og-image.svg',
     datePublished: '2024-12-05',
     dateModified: '2024-12-05',
@@ -687,7 +687,7 @@ export default function BlogPost() {
             <ShareOnLinkedIn
               url="https://neurondb.ai/blog/neurondb-mcp-server"
               title="MCP Server: Model Context Protocol Explained"
-              summary="Complete guide to MCP Server (Model Context Protocol) - what it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation."
+              summary="MCP Server (Model Context Protocol) guide. What it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation."
               hashtags={[
                 'MCP',
                 'ModelContextProtocol',

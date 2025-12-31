@@ -14,7 +14,7 @@ interface EcosystemCardProps {
 
 function EcosystemCard({ title, icon, features, href }: EcosystemCardProps) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white/90 dark:border-slate-700/60 dark:bg-slate-900/60 p-6 shadow-sm hover:shadow-md transition-shadow">
+    <div className="rounded-2xl border border-slate-200 bg-white/90 dark:border-slate-700/60 dark:bg-slate-900/60 p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
       <div className="flex items-center gap-3 mb-4">
         <div className="text-yellow-400 dark:text-yellow-400">
           {icon}
@@ -23,7 +23,7 @@ function EcosystemCard({ title, icon, features, href }: EcosystemCardProps) {
           {title}
         </h3>
       </div>
-      <ul className="space-y-2 mb-6">
+      <ul className="space-y-2 mb-6 flex-grow">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start gap-2 text-slate-700 dark:text-slate-300 text-sm">
             <span className="text-yellow-400 dark:text-yellow-400 mt-1.5 flex-shrink-0">•</span>
@@ -33,7 +33,7 @@ function EcosystemCard({ title, icon, features, href }: EcosystemCardProps) {
       </ul>
       <Link
         href={href}
-        className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 font-medium text-sm transition-colors"
+        className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 font-medium text-sm transition-colors mt-auto"
       >
         Learn more
         <span>→</span>
@@ -72,9 +72,9 @@ export default function EcosystemSection() {
       title: 'NeuronMCP',
       icon: <Server className="w-6 h-6" />,
       features: [
-        'Model Context Protocol server with 50+ tools enabling MCP-compatible clients (like Claude Desktop) to access NeuronDB.',
+        'Model Context Protocol server with 100+ tools (27 PostgreSQL + 70+ NeuronDB) enabling MCP-compatible clients (like Claude Desktop) to access NeuronDB.',
         'JSON-RPC 2.0 implementation with stdio, HTTP, and SSE transport. Supports tools, resources, prompts, sampling, and progress tracking.',
-        'Comprehensive tools: vector operations, ML training, analytics, RAG, reranking, dataset loading (HuggingFace, URLs, GitHub, S3), and PostgreSQL administration.',
+        'Complete tool suite: 27 PostgreSQL administration tools for database management + 70+ NeuronDB tools for vector operations, ML training, analytics, RAG, reranking, dataset loading (HuggingFace, URLs, GitHub, S3), and comprehensive database monitoring.',
         'Enterprise features: middleware (validation, auth, logging), Prometheus metrics, webhooks, circuit breaker, and real-time resource subscriptions.',
       ],
       href: '/docs/neuronmcp',
@@ -95,12 +95,12 @@ export default function EcosystemSection() {
   return (
     <SectionTemplate background="page" padding="xl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
             NeuronDB Ecosystem
           </h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Complete AI database platform with core engine and runtime components
+            AI database platform with core engine and runtime components
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

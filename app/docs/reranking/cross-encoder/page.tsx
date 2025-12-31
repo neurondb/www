@@ -3,8 +3,8 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'Cross-Encoder Reranking in NeurondB | rerank_cross_encoder() Guide',
-  description: 'Complete guide to cross-encoder reranking in NeurondB using rerank_cross_encoder(), rerank_flash(), and rerank_long_context() functions. Learn how to improve search relevance with neural reranking models, batch processing, and Flash Attention optimization.',
+  title: 'Cross-Encoder Reranking in NeuronDB | rerank_cross_encoder() Guide',
+  description: 'Guide to cross-encoder reranking in NeuronDB using rerank_cross_encoder(), rerank_flash(), and rerank_long_context() functions. Learn how to improve search relevance with neural reranking models, batch processing, and Flash Attention optimization.',
   keywords: [
     'cross-encoder reranking',
     'rerank_cross_encoder',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     canonical: 'https://neurondb.ai/docs/reranking/cross-encoder',
   },
   openGraph: {
-    title: 'Cross-Encoder Reranking in NeurondB | Neural Reranking Guide',
-    description: 'Improve search relevance with cross-encoder reranking in NeurondB. Complete guide with SQL examples and Flash Attention optimization.',
+    title: 'Cross-Encoder Reranking in NeuronDB | Neural Reranking Guide',
+    description: 'Improve search relevance with cross-encoder reranking in NeuronDB. Guide with SQL examples and Flash Attention optimization.',
     type: 'article',
     url: 'https://neurondb.ai/docs/reranking/cross-encoder',
   },
@@ -37,12 +37,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/reranking/overview',
+  href: '/docs/reranking/overview',
   label: 'Reranking Overview',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/reranking/llm-reranking',
+  href: '/docs/reranking/llm-reranking',
   label: 'LLM Reranking',
 }
 
@@ -50,7 +50,7 @@ export default function CrossEncoderPage() {
   return (
     <PostgresDocsLayout
       title="Cross-Encoder Reranking"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

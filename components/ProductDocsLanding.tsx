@@ -31,6 +31,7 @@ interface DocSectionItem {
   title: string
   href: string
   description: string
+  external?: boolean
 }
 
 interface DocSection {

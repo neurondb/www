@@ -3,13 +3,13 @@ import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
 import BlogPageTracker from '../../../components/BlogPageTracker';
 
 export const metadata = {
-    title: 'Semantic Search Over Text with NeuronDB | Complete Implementation Guide',
-    description: 'Learn how to implement semantic search over text using NeuronDB with real-world examples, SQL queries, and production-ready code. Guide to building document search systems, RAG pipelines, hybrid search, embedding generation, chunking strategies, and similarity search in PostgreSQL.',
+    title: 'Semantic Search Over Text with NeuronDB',
+    description: 'Learn how to implement semantic search over text using NeuronDB with examples, SQL queries, and code. Guide to building document search systems, RAG pipelines, hybrid search, embedding generation, chunking strategies, and similarity search in PostgreSQL.',
     keywords: ['semantic search', 'NeuronDB', 'PostgreSQL', 'vector search', 'text search', 'embedding', 'RAG', 'document search', 'similarity search', 'hybrid search', 'SQL queries', 'production code', 'chunking', 'document processing', 'semantic similarity'],
     authors: [{ name: 'NeuronDB Team' }],
     openGraph: {
-        title: 'Semantic Search Over Text with NeuronDB | Complete Implementation Guide',
-        description: 'Guide to implementing semantic search with NeuronDB - real-world examples, SQL queries, and production-ready code for document search and RAG pipelines',
+        title: 'Semantic Search Over Text with NeuronDB',
+        description: 'Guide to implementing semantic search with NeuronDB. Examples, SQL queries, and code for document search and RAG pipelines',
         url: 'https://neurondb.ai/blog/neurondb-semantic-search-guide',
         siteName: 'NeuronDB',
         images: [
@@ -25,7 +25,7 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Semantic Search Over Text with NeuronDB | Complete Implementation Guide',
+        title: 'Semantic Search Over Text with NeuronDB',
         description: 'Guide to implementing semantic search with NeuronDB - real-world examples, SQL queries, and production-ready code',
         images: ['https://neurondb.ai/blog/neurondb-semantic-search-guide/og-image.svg'],
         creator: '@neurondb',
@@ -982,7 +982,7 @@ export default function BlogPost() {
     const structuredData = {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
-        headline: 'Semantic Search Over Text with NeuronDB | Complete Implementation Guide',
+        headline: 'Semantic Search Over Text with NeuronDB',
         description: 'Learn how to implement semantic search over text using NeuronDB with real-world examples, SQL queries, and production-ready code. Guide to building document search systems, RAG pipelines, and hybrid search.',
         image: 'https://neurondb.ai/blog/neurondb-semantic-search-guide/og-image.svg',
         datePublished: '2024-12-05',

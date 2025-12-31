@@ -9,7 +9,7 @@ export const metadata = generateDocsMetadata('neurondesktop', 'NeuronDesktop: Un
 const neurondesktopConfig = {
   productId: 'neurondesktop' as const,
   hero: {
-    subtitle: 'Unified web interface providing a single dashboard for managing and interacting with MCP servers, NeuronDB, and NeuronAgent. Real-time WebSocket communication, secure API key authentication, comprehensive logging, and built-in metrics collection.',
+    subtitle: 'Unified web interface providing a single dashboard for managing and interacting with MCP servers, NeuronDB, and NeuronAgent. Real-time WebSocket communication, secure API key authentication, logging, and built-in metrics collection.',
   },
   demo: null,
   badges: [
@@ -229,7 +229,7 @@ const neurondesktopConfig = {
   ctaSection: {
     kicker: 'Get Started',
     title: 'Manage Your NeuronDB Ecosystem',
-    description: 'Deploy NeuronDesktop. Unified web interface for managing NeuronDB, NeuronAgent, and NeuronMCP with real-time monitoring and comprehensive analytics.',
+    description: 'Deploy NeuronDesktop. Unified web interface for managing NeuronDB, NeuronAgent, and NeuronMCP with real-time monitoring and analytics.',
     primaryCTA: { href: '/docs/neurondesktop', label: 'View Documentation' },
     secondaryCTA: { href: 'https://github.com/neurondb-ai/neurondb', label: 'View on GitHub', external: true },
   },

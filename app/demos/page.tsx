@@ -92,10 +92,10 @@ export default function DemosPage() {
             </div>
             <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 mb-8">
               <p className="text-white/90 leading-relaxed">
-                This interactive demo showcases NeuronDB's core capabilities including vector search with HNSW indexing, 
+                This demo shows NeuronDB capabilities including vector search with HNSW indexing, 
                 machine learning inference with ONNX models, embedding generation, hybrid search combining semantic and 
-                full-text search, RAG pipeline operations, and GPU acceleration. Watch as SQL commands execute to demonstrate 
-                vector similarity search, ML model training and prediction, document processing, and more - all within PostgreSQL.
+                full-text search, RAG pipeline operations, and GPU acceleration. SQL commands execute to demonstrate 
+                vector similarity search, ML model training and prediction, document processing, and more in PostgreSQL.
               </p>
             </div>
             <Suspense fallback={<div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center"><div className="text-slate-400">Loading demo...</div></div>}>
@@ -126,10 +126,10 @@ export default function DemosPage() {
             </div>
             <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 mb-8">
               <p className="text-white/90 leading-relaxed">
-                This demo demonstrates NeuronAgent's REST API endpoints for building AI agent systems. You'll see how to 
+                This demo shows NeuronAgent REST API endpoints for building AI agent systems. You will see how to 
                 create agents with specific profiles and tools, establish sessions for conversation management, send messages 
-                that trigger agent actions using NeuronDB's vector search and embeddings, and retrieve responses. The demo 
-                showcases the complete agent lifecycle including health checks and API authentication.
+                that trigger agent actions using NeuronDB vector search and embeddings, and retrieve responses. The demo 
+                shows the agent lifecycle including health checks and API authentication.
               </p>
             </div>
             <Suspense fallback={<div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center"><div className="text-slate-400">Loading demo...</div></div>}>
@@ -160,10 +160,10 @@ export default function DemosPage() {
             </div>
             <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 mb-8">
               <p className="text-white/90 leading-relaxed">
-                This demo showcases NeuronMCP's Model Context Protocol (MCP) server implementation. You'll see JSON-RPC 2.0 
-                protocol messages over stdio communication, demonstrating how MCP-compatible clients like Claude Desktop can 
+                This demo shows NeuronMCP Model Context Protocol server implementation. You will see JSON-RPC 2.0 
+                protocol messages over stdio communication, showing how MCP-compatible clients like Claude Desktop can 
                 interact with NeuronDB. The demo includes tool discovery, vector search operations, embedding generation, 
-                resource management, and how the MCP server provides access to NeuronDB's vector search, ML algorithms, and 
+                resource management, and how the MCP server provides access to NeuronDB vector search, ML algorithms, and 
                 RAG capabilities through a standardized protocol interface.
               </p>
             </div>

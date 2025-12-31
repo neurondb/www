@@ -3,10 +3,10 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'Recommendation Systems in AI PostgreSQL | Collaborative Filtering in NeurondB',
-  description: 'Build recommendation systems in NeurondB (AI PostgreSQL extension) using collaborative filtering. Alternative to PostgreSQL.ai and pgml for recommendations. Learn train_collaborative_filter(), predict_collaborative_filter(), and evaluation with SQL examples for user-item recommendations.',
+  title: 'Recommendation Systems in AI PostgreSQL | Collaborative Filtering in NeuronDB',
+  description: 'Build recommendation systems in NeuronDB (AI PostgreSQL extension) using collaborative filtering. Alternative to PostgreSQL.ai and pgml for recommendations. Learn train_collaborative_filter(), predict_collaborative_filter(), and evaluation with SQL examples for user-item recommendations.',
   keywords: [
-    'collaborative filtering NeurondB',
+    'collaborative filtering NeuronDB',
     'AI PostgreSQL recommendations',
     'PostgreSQL.ai recommendations',
     'pgml recommendations',
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     canonical: 'https://neurondb.ai/docs/ml/recommendation-systems',
   },
   openGraph: {
-    title: 'Collaborative Filtering in NeurondB | Recommendation Systems',
-    description: 'Build recommendation systems in PostgreSQL with NeurondB collaborative filtering. Complete guide with SQL examples.',
+    title: 'Collaborative Filtering in NeuronDB | Recommendation Systems',
+    description: 'Build recommendation systems in PostgreSQL with NeuronDB collaborative filtering. Guide with SQL examples.',
     type: 'article',
     url: 'https://neurondb.ai/docs/ml/recommendation-systems',
   },
@@ -41,12 +41,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/time-series',
+  href: '/docs/ml/time-series',
   label: 'Time Series',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/embeddings',
+  href: '/docs/ml/embeddings',
   label: 'Embeddings',
 }
 
@@ -54,7 +54,7 @@ export default function RecommendationSystemsPage() {
   return (
     <PostgresDocsLayout
       title="Recommendation Systems"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

@@ -15,12 +15,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/rag/llm-integration',
+  href: '/docs/rag/llm-integration',
   label: 'LLM Integration',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/background-workers',
+  href: '/docs/background-workers',
   label: 'Background Workers',
 }
 
@@ -28,7 +28,7 @@ export default function DocumentProcessingPage() {
   return (
     <PostgresDocsLayout
       title="Document Processing"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

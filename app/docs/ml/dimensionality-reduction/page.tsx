@@ -15,12 +15,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/gradient-boosting',
+  href: '/docs/ml/gradient-boosting',
   label: 'Gradient Boosting',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/quality-metrics',
+  href: '/docs/ml/quality-metrics',
   label: 'Quality Metrics',
 }
 
@@ -28,7 +28,7 @@ export default function DimensionalityReductionPage() {
   return (
     <PostgresDocsLayout
       title="Dimensionality Reduction"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

@@ -3,7 +3,7 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'Advanced Features | Hybrid Search, Reranking, RAG & Caching | NeurondB',
+  title: 'Advanced Features | Hybrid Search, Reranking, RAG & Caching | NeuronDB',
   description: 'Hybrid search, reranking, RAG pipelines, and intelligent caching for production-ready AI applications. Combine vector search with full-text search, improve relevance with reranking, and build end-to-end RAG systems.',
   keywords: [
     'advanced features',
@@ -40,7 +40,7 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/background-workers',
+  href: '/docs/background-workers',
   label: 'Background Workers',
 }
 
@@ -50,7 +50,7 @@ export default function AdvancedFeaturesPage() {
   return (
     <PostgresDocsLayout
       title="Advanced Features"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
@@ -342,7 +342,7 @@ SELECT * FROM rag_query('What is PostgreSQL replication?');`}
         <h2>Intelligent Caching</h2>
         <p>
           Intelligent caching reduces computation, API calls, and latency by storing frequently accessed data, 
-          embeddings, and query results. NeurondB provides multiple caching layers for optimal performance.
+          embeddings, and query results. NeuronDB provides multiple caching layers for optimal performance.
         </p>
 
         <h3>Embedding Cache</h3>

@@ -17,12 +17,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/dimensionality-reduction',
+  href: '/docs/ml/dimensionality-reduction',
   label: 'Dimensionality Reduction',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/drift-detection',
+  href: '/docs/ml/drift-detection',
   label: 'Drift Detection',
 }
 
@@ -30,7 +30,7 @@ export default function QualityMetricsPage() {
   return (
     <PostgresDocsLayout
       title="Quality Metrics"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

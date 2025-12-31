@@ -926,7 +926,7 @@ Use PostgreSQL as a vector database for:
 
 [Semantic Search Guide](/blog/neurondb-semantic-search-guide) - Learn semantic search implementation
 
-[RAG Complete Guide](/blog/rag-complete-guide) - Learn RAG with PostgreSQL vector database
+[RAG Guide](/blog/rag-complete-guide) - Learn RAG with PostgreSQL vector database
 
 ## Support
 
@@ -938,7 +938,7 @@ export default function BlogPost() {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
         headline: 'PostgreSQL as a Vector Database',
-        description: 'Complete guide to using PostgreSQL as a vector database with NeuronDB. Learn architecture, performance, indexing, and production deployment strategies.',
+        description: 'Guide to using PostgreSQL as a vector database with NeuronDB. Learn architecture, performance, indexing, and production deployment strategies.',
         image: 'https://neurondb.ai/blog/postgresql-vector-database/og-image.svg',
         datePublished: '2025-02-25',
         dateModified: '2025-02-25',
@@ -981,7 +981,7 @@ export default function BlogPost() {
                         <ShareOnLinkedIn
                             url="https://neurondb.ai/blog/postgresql-vector-database"
                             title="PostgreSQL as a Vector Database"
-                            summary="Complete guide to using PostgreSQL as a vector database with NeuronDB. Learn architecture, performance, indexing strategies, and production deployment."
+                            summary="Guide to using PostgreSQL as a vector database with NeuronDB. Learn architecture, performance, indexing strategies, and production deployment."
                             hashtags={[
                                 'PostgreSQL',
                                 'VectorDatabase',
@@ -1003,4 +1003,5 @@ export default function BlogPost() {
         </div>
     );
 }
+
 

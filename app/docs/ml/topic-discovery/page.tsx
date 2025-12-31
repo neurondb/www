@@ -15,12 +15,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/drift-detection',
+  href: '/docs/ml/drift-detection',
   label: 'Drift Detection',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/time-series',
+  href: '/docs/ml/time-series',
   label: 'Time Series',
 }
 
@@ -28,7 +28,7 @@ export default function TopicDiscoveryPage() {
   return (
     <PostgresDocsLayout
       title="Topic Discovery"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

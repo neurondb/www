@@ -3,10 +3,10 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'Random Forest in NeurondB | AI PostgreSQL ML Classification & Regression',
-  description: 'Train Random Forest models in NeurondB (AI PostgreSQL extension) for classification and regression. Complete guide with SQL examples, hyperparameters, prediction, and evaluation. Alternative to pgml and PostgreSQL.ai for machine learning in PostgreSQL.',
+  title: 'Random Forest in NeuronDB | AI PostgreSQL ML Classification & Regression',
+  description: 'Train Random Forest models in NeuronDB (AI PostgreSQL extension) for classification and regression. Guide with SQL examples, hyperparameters, prediction, and evaluation. Alternative to pgml and PostgreSQL.ai for machine learning in PostgreSQL.',
   keywords: [
-    'Random Forest NeurondB',
+    'Random Forest NeuronDB',
     'PostgreSQL machine learning',
     'AI PostgreSQL ML',
     'PostgreSQL.ai ML',
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     'Random Forest regression',
     'ensemble learning PostgreSQL',
     'ML in SQL',
-    'NeurondB train function',
-    'NeurondB predict',
+    'NeuronDB train function',
+    'NeuronDB predict',
     'decision trees PostgreSQL',
     'GPU machine learning',
     'PostgreSQL AI ML',
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     canonical: 'https://neurondb.ai/docs/ml/random-forest',
   },
   openGraph: {
-    title: 'Random Forest in NeurondB | ML Classification & Regression',
-    description: 'Train Random Forest models in PostgreSQL with NeurondB. Complete guide with SQL examples and GPU acceleration.',
+    title: 'Random Forest in NeuronDB | ML Classification & Regression',
+    description: 'Train Random Forest models in PostgreSQL with NeuronDB. Guide with SQL examples and GPU acceleration.',
     type: 'article',
     url: 'https://neurondb.ai/docs/ml/random-forest',
   },
@@ -42,12 +42,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/classification',
+  href: '/docs/ml/classification',
   label: 'Classification',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/gradient-boosting',
+  href: '/docs/ml/gradient-boosting',
   label: 'Gradient Boosting',
 }
 
@@ -55,7 +55,7 @@ export default function RandomForestPage() {
   return (
     <PostgresDocsLayout
       title="Random Forest"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

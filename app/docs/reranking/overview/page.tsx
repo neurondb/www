@@ -4,9 +4,9 @@ import SqlCodeBlock from '@/components/SqlCodeBlock'
 import BashCodeBlock from '@/components/BashCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'NeurondB Reranking Overview | Cross-Encoder Playbooks',
+  title: 'NeuronDB Reranking Overview | Cross-Encoder Playbooks',
   description:
-    'Improve retrieval relevance with NeurondB reranking pipelines. Use cross-encoders, LLM verification, and fallback scoring to refine top-K candidates.',
+    'Improve retrieval relevance with NeuronDB reranking pipelines. Use cross-encoders, LLM verification, and fallback scoring to refine top-K candidates.',
 }
 
 const tableOfContents: TocItem[] = [
@@ -16,12 +16,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/hybrid/overview',
+  href: '/docs/hybrid/overview',
   label: 'Hybrid Overview',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/reranking/cross-encoder',
+  href: '/docs/reranking/cross-encoder',
   label: 'Cross-Encoder',
 }
 
@@ -29,7 +29,7 @@ export default function RerankingOverviewPage() {
   return (
     <PostgresDocsLayout
       title="Boost relevance with cross-encoder reranking"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
@@ -73,7 +73,7 @@ LIMIT  15;`}
 
       <section id="batching">
         <h2>Batch efficiently</h2>
-        <p>Batch reranking requests to maintain throughput. The NeurondB inference scheduler groups payloads and leverages GPU execution when available.</p>
+        <p>Batch reranking requests to maintain throughput. The NeuronDB inference scheduler groups payloads and leverages GPU execution when available.</p>
         <BashCodeBlock
           title="Tune batching"
           code={`-- Limit max rerank latency to 40ms

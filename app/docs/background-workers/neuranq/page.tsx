@@ -16,12 +16,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/background-workers',
+  href: '/docs/background-workers',
   label: 'Background Workers Overview',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/background-workers/neuranmon',
+  href: '/docs/background-workers/neuranmon',
   label: 'neuranmon',
 }
 
@@ -29,7 +29,7 @@ export default function NeurAnqPage() {
   return (
     <PostgresDocsLayout
       title="neuranq - Async Job Queue Executor"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

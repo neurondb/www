@@ -16,12 +16,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/inference',
+  href: '/docs/ml/inference',
   label: 'Inference',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/clustering',
+  href: '/docs/ml/clustering',
   label: 'Clustering',
 }
 
@@ -29,7 +29,7 @@ export default function Page() {
   return (
     <PostgresDocsLayout
       title="Understanding Embeddings"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

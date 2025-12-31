@@ -24,15 +24,15 @@ export const metadata = generateDocsMetadata('neurondb', 'NeuronMCP: Model Conte
 const neuronmcpConfig = {
   productId: 'neurondb' as const,
   hero: {
-    subtitle: 'Model Context Protocol server with 50+ tools enabling MCP-compatible clients (like Claude Desktop) to access NeuronDB. Vector operations, ML training, RAG pipeline, reranking, dataset loading, and PostgreSQL administration through JSON-RPC 2.0.',
+    subtitle: 'Model Context Protocol server with 100+ tools (27 PostgreSQL + 70+ NeuronDB) enabling MCP-compatible clients (like Claude Desktop) to access NeuronDB. Vector operations, ML training, RAG pipeline, reranking, dataset loading, and PostgreSQL administration through JSON-RPC 2.0.',
   },
   demo: <Suspense fallback={<div className="bg-slate-900 rounded-lg p-8 border border-slate-700 min-h-[400px] flex items-center justify-center"><div className="text-slate-400">Loading demo...</div></div>}><NeuronMCPDemoTerminal /></Suspense>,
   badges: [
-    '50+ Tools',
+    '100+ Tools',
+    '27 PostgreSQL Tools',
     'JSON-RPC 2.0',
     'stdio Transport',
     'MCP Protocol',
-    'Claude Desktop',
     'Enterprise Ready',
   ],
   componentCards: [],
@@ -50,7 +50,7 @@ const neuronmcpConfig = {
       },
       { 
         title: 'Comprehensive Tool Suite', 
-        desc: '50+ tools covering vector operations, ML training, analytics, RAG, reranking, and PostgreSQL administration. Vector search with 7+ distance metrics. Quantization tools (int8, fp16, binary, uint8, ternary, int4). Dataset loading from HuggingFace, URLs, GitHub, S3, and local files with auto-embedding. Vector graph operations and vecmap (sparse vector) support.' 
+        desc: '100+ tools including 27 PostgreSQL administration tools and 70+ NeuronDB tools covering vector operations, ML training, analytics, RAG, reranking, and complete database management. Vector search with 7+ distance metrics. Quantization tools (int8, fp16, binary, uint8, ternary, int4). Dataset loading from HuggingFace, URLs, GitHub, S3, and local files with auto-embedding. Vector graph operations and vecmap (sparse vector) support. Complete PostgreSQL administration from version info to advanced performance tuning.' 
       },
       { 
         title: 'Vector Operations Tools', 

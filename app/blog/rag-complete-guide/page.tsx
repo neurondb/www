@@ -3,12 +3,12 @@ import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
 
 export const metadata = {
   title: 'RAG: Retrieval-Augmented Generation With PostgreSQL | NeuronDB',
-  description: 'Complete guide to RAG (Retrieval-Augmented Generation) with detailed examples, SQL queries, and implementation patterns. Learn how to build RAG systems with document retrieval, context building, LLM integration, and response generation. Includes real-world examples and NeuronDB implementation.',
+  description: 'RAG (Retrieval-Augmented Generation) guide with examples, SQL queries, and implementation patterns. Learn how to build RAG systems with document retrieval, context building, LLM integration, and response generation. Includes examples and NeuronDB implementation.',
   keywords: ['RAG', 'Retrieval-Augmented Generation', 'LLM', 'vector search', 'semantic search', 'document retrieval', 'context building', 'NeuronDB', 'PostgreSQL', 'embedding', 'similarity search', 'knowledge base', 'AI', 'machine learning'],
   authors: [{ name: 'NeuronDB Team' }],
   openGraph: {
     title: 'RAG: Retrieval-Augmented Generation With PostgreSQL | NeuronDB',
-    description: 'Complete guide to RAG with detailed examples, SQL queries, and implementation patterns. Build RAG systems with document retrieval, context building, and LLM integration.',
+    description: 'RAG guide with examples, SQL queries, and implementation patterns. Build RAG systems with document retrieval, context building, and LLM integration.',
     url: 'https://neurondb.ai/blog/rag-complete-guide',
     siteName: 'NeuronDB',
     images: [
@@ -25,7 +25,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'RAG: Retrieval-Augmented Generation With PostgreSQL | NeuronDB',
-    description: 'Complete guide to RAG with detailed examples, SQL queries, and implementation patterns',
+    description: 'RAG guide with examples, SQL queries, and implementation patterns',
     images: ['https://neurondb.ai/blog/rag-complete-guide/og-image.svg'],
     creator: '@neurondb',
   },
@@ -1087,15 +1087,15 @@ All operations use SQL syntax. No external services required. Systems scale to m
 
 [NeuronDB a PostgreSQL AI Extension](/blog/neurondb)
 
-Complete guide to NeuronDB extension with vector search, ML inference, and RAG capabilities.
+NeuronDB extension with vector search, ML inference, and RAG capabilities.
 
 [Semantic Search Over Text with NeuronDB](/blog/neurondb-semantic-search-guide)
 
-Build complete semantic search systems with document chunking and hybrid search.
+Build semantic search systems with document chunking and hybrid search.
 
 [Vectors in PostgreSQL](/blog/neurondb-vectors)
 
-Master vector operations, indexing, and similarity search in PostgreSQL.
+Vector operations, indexing, and similarity search in PostgreSQL.
 
 ## Support
 
@@ -1107,7 +1107,7 @@ export default function BlogPost() {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: 'RAG: Retrieval-Augmented Generation With PostgreSQL',
-    description: 'Complete guide to RAG (Retrieval-Augmented Generation) with detailed examples, SQL queries, and implementation patterns. Learn how to build RAG systems with document retrieval, context building, LLM integration, and response generation.',
+    description: 'RAG (Retrieval-Augmented Generation) guide with examples, SQL queries, and implementation patterns. Learn how to build RAG systems with document retrieval, context building, LLM integration, and response generation.',
     image: 'https://neurondb.ai/blog/rag-complete-guide/og-image.svg',
     datePublished: '2025-02-23',
     dateModified: '2025-02-23',
@@ -1148,7 +1148,7 @@ export default function BlogPost() {
             <ShareOnLinkedIn
               url="https://neurondb.ai/blog/rag-complete-guide"
               title="RAG: Retrieval-Augmented Generation With PostgreSQL"
-              summary="Complete guide to RAG with detailed examples, SQL queries, and implementation patterns. Learn how to build RAG systems with document retrieval, context building, and LLM integration."
+              summary="RAG guide with examples, SQL queries, and implementation patterns. Learn how to build RAG systems with document retrieval, context building, and LLM integration."
               hashtags={[
                 'RAG',
                 'RetrievalAugmentedGeneration',

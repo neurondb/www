@@ -4,8 +4,8 @@ import SqlCodeBlock from '@/components/SqlCodeBlock'
 import BashCodeBlock from '@/components/BashCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'NeurondB Troubleshooting | Common Issues & Fixes',
-  description: 'Diagnose and resolve NeurondB installation, GPU acceleration, clustering, and indexing issues with step-by-step SQL and configuration commands.',
+  title: 'NeuronDB Troubleshooting | Common Issues & Fixes',
+  description: 'Diagnose and resolve NeuronDB installation, GPU acceleration, clustering, and indexing issues with step-by-step SQL and configuration commands.',
 }
 
 const tableOfContents: TocItem[] = [
@@ -17,17 +17,17 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/configuration',
+  href: '/docs/configuration',
   label: 'Configuration',
 }
 
 const nextLink: NavLink | undefined = undefined
 
-export default function NeurondBTroubleshootingPage() {
+export default function NeuronDBTroubleshootingPage() {
   return (
     <PostgresDocsLayout
-      title="Resolve NeurondB Operational Issues"
-      version="NeurondB Documentation"
+      title="Resolve NeuronDB Operational Issues"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
@@ -49,11 +49,11 @@ export default function NeurondBTroubleshootingPage() {
         <p>Fix runtime failures when enabling CUDA or ROCm acceleration.</p>
 
         <h3>Error: "GPU function not available"</h3>
-        <p>NeurondB cannot locate compiled GPU kernels or drivers.</p>
+        <p>NeuronDB cannot locate compiled GPU kernels or drivers.</p>
         <p>Confirm that GPU support was compiled and drivers are visible.</p>
         <BashCodeBlock
           title="Diagnostic commands"
-          code={`# Confirm NeurondB was built with GPU support
+          code={`# Confirm NeuronDB was built with GPU support
 strings $(pg_config --pkglibdir)/neurondb.so | grep USE_GPU
 
 # Check driver visibility
@@ -93,7 +93,7 @@ UPDATE documents SET embedding = vector_to_int8_gpu(embedding);`}
 
       <section id="ml-clustering">
         <h2>ML clustering & analytics issues</h2>
-        <p>Address convergence, accuracy, and data quality warnings from NeurondB ML pipelines.</p>
+        <p>Address convergence, accuracy, and data quality warnings from NeuronDB ML pipelines.</p>
 
         <h3>"K-Means did not converge"</h3>
         <p>Increase iteration budget or relax tolerance for the dataset.</p>
@@ -215,7 +215,7 @@ WHERE attrelid = 'documents'::regclass
         <h2>Next Steps</h2>
         <ul>
           <li><a href="/docs/configuration">Configuration Reference</a> - Verify each GUC parameter and recommended value after making changes.</li>
-          <li><a href="/docs/performance">Performance Tuning</a> - Benchmark NeurondB after applying fixes to confirm SLO improvements.</li>
+          <li><a href="/docs/performance">Performance Tuning</a> - Benchmark NeuronDB after applying fixes to confirm SLO improvements.</li>
           <li><a href="https://github.com/neurondb-ai/neurondb/issues" target="_blank" rel="noopener noreferrer">Open GitHub Issue</a> - Share logs and repro steps with the community for unresolved bugs.</li>
         </ul>
       </section>

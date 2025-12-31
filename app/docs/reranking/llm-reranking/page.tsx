@@ -3,10 +3,10 @@ import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/Pos
 import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'LLM Reranking in NeurondB | ndb_llm_rerank() Function Guide',
-  description: 'Complete guide to LLM reranking in NeurondB using ndb_llm_rerank() function. Learn how to rerank search results with Large Language Models (GPT, Claude, Hugging Face) for high-quality semantic relevance scoring in PostgreSQL.',
+  title: 'LLM Reranking in NeuronDB | ndb_llm_rerank() Function Guide',
+  description: 'Guide to LLM reranking in NeuronDB using ndb_llm_rerank() function. Learn how to rerank search results with Large Language Models (GPT, Claude, Hugging Face) for high-quality semantic relevance scoring in PostgreSQL.',
   keywords: [
-    'LLM reranking NeurondB',
+    'LLM reranking NeuronDB',
     'ndb_llm_rerank',
     'GPT reranking',
     'Claude reranking',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     canonical: 'https://neurondb.ai/docs/reranking/llm-reranking',
   },
   openGraph: {
-    title: 'LLM Reranking in NeurondB | GPT/Claude Reranking Guide',
-    description: 'Rerank search results with LLMs in NeurondB. Complete guide to ndb_llm_rerank() function and LLM integration.',
+    title: 'LLM Reranking in NeuronDB | GPT/Claude Reranking Guide',
+    description: 'Rerank search results with LLMs in NeuronDB. Guide to ndb_llm_rerank() function and LLM integration.',
     type: 'article',
     url: 'https://neurondb.ai/docs/reranking/llm-reranking',
   },
@@ -35,12 +35,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/reranking/cross-encoder',
+  href: '/docs/reranking/cross-encoder',
   label: 'Cross-Encoder',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/reranking/colbert',
+  href: '/docs/reranking/colbert',
   label: 'ColBERT',
 }
 
@@ -48,7 +48,7 @@ export default function LLMRerankingPage() {
   return (
     <PostgresDocsLayout
       title="LLM Reranking"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

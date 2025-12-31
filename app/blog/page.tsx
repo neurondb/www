@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
 // Blog statistics
 const blogStats = [
-  { label: 'Total Articles', value: '8', icon: BookOpen, color: 'text-white' },
+  { label: 'Total Articles', value: '9', icon: BookOpen, color: 'text-white' },
   { label: 'Monthly Readers', value: '2.1k', icon: Eye, color: 'text-white' },
   { label: 'Categories', value: '1', icon: Tag, color: 'text-white' },
   { label: 'Authors', value: '1', icon: Users, color: 'text-white' }
@@ -85,8 +85,8 @@ const blogPosts = [
   {
     slug: 'neurondb-vectors',
     title: 'Vectors in PostgreSQL',
-    excerpt: 'Master vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Comprehensive guide with SQL queries and real results. Learn HNSW indexing, distance metrics, quantization, and performance optimization.',
-    content: 'Complete guide to working with vectors in PostgreSQL using NeuronDB. Covers vector types, operations, distance metrics, indexing strategies, quantization, and performance optimization with executable SQL queries and results.',
+    excerpt: 'Vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Guide with SQL queries and results. Learn HNSW indexing, distance metrics, quantization, and performance optimization.',
+    content: 'Guide to working with vectors in PostgreSQL using NeuronDB. Covers vector types, operations, distance metrics, indexing strategies, quantization, and performance optimization with SQL queries and results.',
     author: 'NeuronDB Team',
     authorRole: 'Core Developers',
     date: '2025-02-21',
@@ -102,8 +102,8 @@ const blogPosts = [
   {
     slug: 'neurondb-mcp-server',
     title: 'MCP Server: Model Context Protocol Explained',
-    excerpt: 'Complete guide to MCP Server (Model Context Protocol) - what it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation. Learn how MCP enables AI assistants to access external tools and resources.',
-    content: 'Comprehensive guide to MCP Server architecture, protocol implementation, Claude Desktop integration, popular MCP servers, and NeuronMCP. Learn how the Model Context Protocol enables AI assistants to securely access external tools and data sources.',
+    excerpt: 'MCP Server (Model Context Protocol) guide. What it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation. Learn how MCP enables AI assistants to access external tools and resources.',
+    content: 'MCP Server architecture, protocol implementation, Claude Desktop integration, popular MCP servers, and NeuronMCP. Learn how the Model Context Protocol enables AI assistants to access external tools and data sources.',
     author: 'NeuronDB Team',
     authorRole: 'Core Developers',
     date: '2025-02-22',
@@ -119,8 +119,8 @@ const blogPosts = [
   {
     slug: 'rag-complete-guide',
     title: 'RAG: Retrieval-Augmented Generation With PostgreSQL',
-    excerpt: 'Complete guide to RAG (Retrieval-Augmented Generation) with detailed examples, SQL queries, and implementation patterns. Learn how to build RAG systems with document retrieval, context building, LLM integration, and response generation.',
-    content: 'Comprehensive guide to RAG architecture, implementation patterns, SQL examples, and NeuronDB integration. Learn how to build RAG systems with document processing, embedding generation, similarity search, context building, and response generation.',
+    excerpt: 'RAG (Retrieval-Augmented Generation) guide with examples, SQL queries, and implementation patterns. Learn how to build RAG systems with document retrieval, context building, LLM integration, and response generation.',
+    content: 'RAG architecture, implementation patterns, SQL examples, and NeuronDB integration. Learn how to build RAG systems with document processing, embedding generation, similarity search, context building, and response generation.',
     author: 'NeuronDB Team',
     authorRole: 'Core Developers',
     date: '2025-02-23',
@@ -134,10 +134,27 @@ const blogPosts = [
     tags: ['RAG', 'RetrievalAugmentedGeneration', 'LLM', 'VectorSearch', 'SemanticSearch', 'NeuronDB', 'PostgreSQL', 'AI', 'MachineLearning', 'DocumentRetrieval', 'KnowledgeBase']
   },
   {
+    slug: 'rag-architectures-ai-builders-should-understand',
+    title: 'RAG Architectures AI Builders Should Understand',
+    excerpt: 'Practical guide to the core RAG architecture patterns: basic, conversational, filtered, adaptive, hypothesis-driven, agent-driven, and graph-based RAG. Learn when to use each and what trade-offs matter in production.',
+    content: 'Core RAG patterns and how to choose between them. Covers conversational RAG, filtering/reranking, adaptive retrieval, agent-driven workflows, graph-based retrieval, and operational realities.',
+    author: 'NeuronDB Team',
+    authorRole: 'Core Developers',
+    date: '2026-01-01',
+    readTime: '18 min read',
+    category: 'Technical',
+    featured: false,
+    icon: 'neurondb',
+    views: 0,
+    likes: 0,
+    comments: 0,
+    tags: ['RAG', 'RAGArchitectures', 'LLM', 'VectorSearch', 'SemanticSearch', 'GraphRAG', 'AgenticAI', 'ProductionAI']
+  },
+  {
     slug: 'agentic-ai',
-    title: 'Agentic AI: Complete Guide to Autonomous AI Agents',
-    excerpt: 'Complete guide to Agentic AI systems. Explains agent architecture, planning, tool use, memory systems, and autonomous task execution. Includes practical implementation using NeuronDB and NeuronAgent with code examples.',
-    content: 'Comprehensive guide to Agentic AI architecture, planning systems, tool execution, memory management, state machines, and implementation patterns. Learn how to build autonomous agents using NeuronDB and NeuronAgent with production-ready code examples.',
+    title: 'Agentic AI: Guide to Autonomous AI Agents',
+    excerpt: 'Agentic AI systems guide. Explains agent architecture, planning, tool use, memory systems, and autonomous task execution. Includes implementation using NeuronDB and NeuronAgent with code examples.',
+    content: 'Agentic AI architecture, planning systems, tool execution, memory management, state machines, and implementation patterns. Learn how to build autonomous agents using NeuronDB and NeuronAgent with code examples.',
     author: 'NeuronDB Team',
     authorRole: 'Core Developers',
     date: '2025-02-24',
@@ -152,9 +169,9 @@ const blogPosts = [
   },
   {
     slug: 'postgresql-vector-database',
-    title: 'PostgreSQL as a Vector Database: Complete Guide',
-    excerpt: 'Complete guide to using PostgreSQL as a vector database. Learn how PostgreSQL with NeuronDB extension transforms into a powerful vector database with HNSW indexing, similarity search, and production-ready capabilities.',
-    content: 'Comprehensive guide to PostgreSQL vector database architecture, performance benchmarks, indexing strategies, query patterns, and migration approaches. Learn how PostgreSQL with NeuronDB becomes a complete vector database solution.',
+    title: 'PostgreSQL as a Vector Database',
+    excerpt: 'Guide to using PostgreSQL as a vector database. Learn how PostgreSQL with NeuronDB extension works as a vector database with HNSW indexing, similarity search, and production capabilities.',
+    content: 'PostgreSQL vector database architecture, performance benchmarks, indexing strategies, query patterns, and migration approaches. Learn how PostgreSQL with NeuronDB works as a vector database solution.',
     author: 'NeuronDB Team',
     authorRole: 'Core Developers',
     date: '2025-02-25',
@@ -169,9 +186,9 @@ const blogPosts = [
   },
   {
     slug: 'ai-with-database-on-prem',
-    title: 'AI With Data On-Premises: Complete Guide',
-    excerpt: 'Complete guide to deploying AI workloads with databases on-premises. Learn about on-premises AI infrastructure, data sovereignty, security, performance, and implementation with NeuronDB. Includes architecture patterns, deployment strategies, and real-world examples.',
-    content: 'Comprehensive guide to on-premises AI infrastructure, data sovereignty, security architecture, performance optimization, deployment strategies, and implementation patterns. Learn how to deploy NeuronDB and AI workloads on-premises with complete control over data and infrastructure.',
+    title: 'AI With Data On-Premises',
+    excerpt: 'Guide to deploying AI workloads with databases on-premises. Learn about on-premises AI infrastructure, data sovereignty, security, performance, and implementation with NeuronDB. Includes architecture patterns, deployment strategies, and examples.',
+    content: 'On-premises AI infrastructure, data sovereignty, security architecture, performance optimization, deployment strategies, and implementation patterns. Learn how to deploy NeuronDB and AI workloads on-premises with control over data and infrastructure.',
     author: 'NeuronDB Team',
     authorRole: 'Core Developers',
     date: '2025-02-26',
@@ -239,6 +256,16 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
               <Image
                 src="/blog/rag-complete-guide/header.svg?v=7"
                 alt="RAG Complete Guide blog header"
+                fill
+                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
+                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
+                unoptimized
+                priority
+              />
+            ) : post.slug === 'rag-architectures-ai-builders-should-understand' ? (
+              <Image
+                src="/blog/rag-architectures-ai-builders-should-understand/header.svg?v=1"
+                alt="RAG Architectures blog header"
                 fill
                 className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
                 style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
@@ -331,7 +358,7 @@ export default function BlogPage() {
           <div className="max-w-7xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight drop-shadow-lg">Blog</h1>
             <p className="text-lg md:text-xl font-normal text-white mb-6 max-w-2xl mx-auto drop-shadow-lg">
-              Technical insights, tutorials, and updates about NeuronDB
+              Tutorials and updates about NeuronDB
             </p>
 
             {/* Blog Stats */}

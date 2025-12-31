@@ -14,12 +14,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/clustering',
+  href: '/docs/ml/clustering',
   label: 'Clustering',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/regression',
+  href: '/docs/ml/regression',
   label: 'Regression',
 }
 
@@ -27,7 +27,7 @@ export default function Page() {
   return (
     <PostgresDocsLayout
       title="Classification Algorithms"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

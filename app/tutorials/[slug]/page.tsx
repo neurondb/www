@@ -20,7 +20,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-02-data-preparation',
     title: 'Data Preparation and Feature Engineering',
-    excerpt: 'Master data collection, cleaning, feature selection, and transformation. Learn to handle missing values, outliers, normalization, and standardization with practical examples.',
+    excerpt: 'Learn data collection, cleaning, feature selection, and transformation. Learn to handle missing values, outliers, normalization, and standardization with practical examples.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '25 min read',
@@ -50,7 +50,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-05-training',
     title: 'Training Neural Networks',
-    excerpt: 'Master loss functions, backpropagation, optimizers, and learning rates. Implement training loops in Python and log metrics in SQL databases.',
+    excerpt: 'Learn loss functions, backpropagation, optimizers, and learning rates. Implement training loops in Python and log metrics in SQL databases.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '30 min read',
@@ -80,7 +80,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-08-transformers',
     title: 'Transformers: Architecture and Self-Attention',
-    excerpt: 'Master the transformer architecture and self-attention mechanism. Learn multi-head attention, encoder-decoder structures, and positional encoding.',
+    excerpt: 'Learn the transformer architecture and self-attention mechanism. Learn multi-head attention, encoder-decoder structures, and positional encoding.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '32 min read',
@@ -100,7 +100,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-10-vector-search',
     title: 'Vector Search: Similarity and Distance Metrics',
-    excerpt: 'Master vector similarity concepts and distance metrics. Learn cosine, Euclidean, and Manhattan distances with indexing strategies and SQL examples.',
+    excerpt: 'Learn vector similarity concepts and distance metrics. Learn cosine, Euclidean, and Manhattan distances with indexing strategies and SQL examples.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '24 min read',
@@ -130,7 +130,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-13-advanced-rag',
     title: 'Advanced RAG: Hybrid Search and Reranking',
-    excerpt: 'Master hybrid search combining semantic and keyword search. Learn reranking strategies, multi-vector approaches, and temporal search with SQL examples.',
+    excerpt: 'Learn hybrid search combining semantic and keyword search. Learn reranking strategies, multi-vector approaches, and temporal search with SQL examples.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '32 min read',
@@ -150,7 +150,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-15-model-evaluation',
     title: 'Model Evaluation: Metrics and Testing',
-    excerpt: 'Master classification and regression metrics. Learn embedding quality metrics, A/B testing, and comprehensive evaluation suites with SQL storage.',
+    excerpt: 'Learn classification and regression metrics. Learn embedding quality metrics, A/B testing, and comprehensive evaluation suites with SQL storage.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '26 min read',
@@ -180,7 +180,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-18-advanced-architectures',
     title: 'Advanced Architectures: Multi-vector and Temporal Search',
-    excerpt: 'Master multi-vector embeddings, temporal search patterns, ensemble methods, and advanced indexing with complex architecture implementations.',
+    excerpt: 'Learn multi-vector embeddings, temporal search patterns, ensemble methods, and advanced indexing with complex architecture implementations.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '30 min read',
@@ -496,7 +496,7 @@ Understanding these concepts is essential for machine learning. Features describ
 
 ![Key Concepts Diagram](/tutorials/ai-tutorial-01-introduction/diagram-key-concepts.svg)
 
-These core concepts form the foundation of machine learning. Master them to build effective models.
+These core concepts form the foundation of machine learning. Learn them to build effective models.
 
 ### Features
 

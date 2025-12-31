@@ -14,12 +14,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/ml/outlier-detection',
+  href: '/docs/ml/outlier-detection',
   label: 'Outlier Detection',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/ml/unified-api',
+  href: '/docs/ml/unified-api',
   label: 'Unified ML API',
 }
 
@@ -27,7 +27,7 @@ export default function Page() {
   return (
     <PostgresDocsLayout
       title="Support Vector Machines"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

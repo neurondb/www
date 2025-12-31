@@ -14,12 +14,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/gpu/metal-support',
+  href: '/docs/gpu/metal-support',
   label: 'Metal Support',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/performance',
+  href: '/docs/performance',
   label: 'Performance',
 }
 
@@ -27,7 +27,7 @@ export default function GPUAutoDetectionPage() {
   return (
     <PostgresDocsLayout
       title="GPU Auto-Detection"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

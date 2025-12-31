@@ -119,6 +119,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.75,
     },
     {
+      url: `${baseUrl}/blog/rag-architectures-ai-builders-should-understand`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
       url: `${baseUrl}/blog/agentic-ai`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
@@ -266,7 +272,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${baseUrl}/docs/getting-started`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
-      priority: 0.85,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/docs/getting-started/docker`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.95, // High priority - recommended method
     },
     {
       url: `${baseUrl}/docs/getting-started/quickstart`,
@@ -292,6 +304,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const coreFeaturePages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/docs/vector-engine`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/docs/embedding-engine`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,
@@ -334,7 +352,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${baseUrl}/docs/ml`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
-      priority: 0.85,
+      priority: 0.9, // Increased priority - 52 ML algorithms
     },
     {
       url: `${baseUrl}/docs/ml-engine`,
@@ -699,6 +717,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/docs/hybrid`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
     },
   ]
 

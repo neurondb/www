@@ -7,7 +7,7 @@ import SectionTemplate from '@/components/templates/SectionTemplate'
 const capabilities = [
   {
     capability: 'Vector Search',
-    description: 'HNSW indexing, multiple distance metrics, quantization',
+    description: '5 vector types (vector, vectorp, vecmap, vgraph, rtext), HNSW and IVF indexing, 10+ distance metrics, quantization (PQ, OPQ)',
     performance: 'Sub-millisecond on millions',
     productionReady: true,
   },
@@ -43,8 +43,8 @@ const capabilities = [
   },
   {
     capability: 'ML Analytics',
-    description: 'Clustering (K-means, DBSCAN, GMM), PCA, outlier detection, quality metrics, drift detection',
-    performance: 'GPU-accelerated algorithms',
+    description: '19 implemented algorithms: Clustering (K-means, Mini-batch K-means, DBSCAN, GMM, Hierarchical), Dimensionality Reduction (PCA, PCA Whitening), Quantization (PQ, OPQ), Outlier Detection (Z-score, Modified Z-score, IQR), Reranking (MMR, Ensemble, LTR), Quality Metrics (Recall@K, Precision@K, F1@K, MRR, Davies-Bouldin, Silhouette), Drift Detection (Centroid, Distribution, Temporal), Analytics (Topic Discovery, Similarity Histograms, KNN Graphs)',
+    performance: 'GPU-accelerated algorithms with SIMD optimization',
     productionReady: true,
   },
   {
@@ -67,14 +67,32 @@ const capabilities = [
   },
   {
     capability: 'Monitoring & Observability',
-    description: 'pg_stat_neurondb view, worker heartbeats, latency histograms, Prometheus exporter',
-    performance: 'Real-time metrics',
+    description: '7 built-in monitoring views (vector_stats, index_health, tenant_quota_usage, llm_job_status, query_performance, index_maintenance_status, metrics_summary), pg_stat_neurondb view, worker heartbeats, latency histograms, Prometheus exporter',
+    performance: 'Real-time metrics with 24h performance tracking',
     productionReady: true,
   },
   {
     capability: 'PostgreSQL Native',
-    description: 'Pure C implementation, 473 SQL functions, zero external dependencies, WAL integration',
-    performance: 'Zero core modifications',
+    description: 'Pure C implementation, 473 SQL functions, zero external dependencies, WAL integration, reorganized codebase (120 files in logical subdirectories), SIMD-optimized (AVX2/AVX-512/NEON) with runtime CPU detection',
+    performance: 'Zero core modifications, optimized compilation',
+    productionReady: true,
+  },
+  {
+    capability: 'Multi-Tenancy & Security',
+    description: 'Tenant-aware indexes, per-tenant resource quotas, row-level security (RLS) policies, tenant isolation, quota monitoring with warnings, tenant statistics',
+    performance: 'Efficient resource isolation',
+    productionReady: true,
+  },
+  {
+    capability: 'Temporal Search',
+    description: 'Time-decay relevance scoring, temporal indexes, temporal KNN search, temporal drift monitoring, time-series integration',
+    performance: 'Optimized temporal queries',
+    productionReady: true,
+  },
+  {
+    capability: 'Distributed Features',
+    description: 'Federated vector queries, vector replication, Foreign Data Wrapper (FDW) support, distributed query federation',
+    performance: 'Cross-database queries',
     productionReady: true,
   },
   {
@@ -85,8 +103,8 @@ const capabilities = [
   },
   {
     capability: 'NeuronMCP',
-    description: 'Model Context Protocol server enabling MCP-compatible clients to access NeuronDB via stdio',
-    performance: 'JSON-RPC 2.0 implementation',
+    description: 'Model Context Protocol server with 100+ tools (27 PostgreSQL + 70+ NeuronDB) enabling MCP-compatible clients to access NeuronDB via stdio',
+    performance: 'JSON-RPC 2.0 implementation with comprehensive tool suite',
     productionReady: true,
   },
   {
@@ -106,7 +124,7 @@ export default function CapabilitiesSection() {
             PostgreSQL AI Extension Capabilities
           </h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Complete AI database features in a PostgreSQL AI extension
+            AI database features in a PostgreSQL AI extension
           </p>
         </div>
 

@@ -5,21 +5,21 @@ import { ArrowRight, Calendar, Clock, User, Tag, Eye, BookOpen, Users, Graduatio
 import FooterTemplate from '@/components/templates/FooterTemplate'
 
 export const metadata: Metadata = {
-  title: 'AI Tutorials - Complete Guide from Beginner to Advanced | NeuronDB',
-  description: 'Comprehensive AI and machine learning tutorials covering fundamentals to advanced topics. Learn machine learning, neural networks, embeddings, transformers, LLMs, vector search, semantic search, and RAG with Python and SQL examples.',
+  title: 'AI Tutorials from Beginner to Advanced | NeuronDB',
+  description: 'AI and machine learning tutorials covering fundamentals to advanced topics. Learn machine learning, neural networks, embeddings, transformers, LLMs, vector search, semantic search, and RAG with Python and SQL examples.',
   keywords: ['AI tutorials', 'machine learning tutorials', 'neural networks', 'embeddings', 'transformers', 'LLM tutorials', 'vector search', 'semantic search', 'RAG tutorials', 'Python ML', 'SQL ML', 'AI education'],
   authors: [{ name: 'NeuronDB Team' }],
   openGraph: {
-    title: 'AI Tutorials - Complete Guide from Beginner to Advanced | NeuronDB',
-    description: 'Comprehensive AI and machine learning tutorials covering fundamentals to advanced topics.',
+    title: 'AI Tutorials from Beginner to Advanced | NeuronDB',
+    description: 'AI and machine learning tutorials covering fundamentals to advanced topics.',
     url: 'https://neurondb.ai/tutorials',
     siteName: 'NeuronDB',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Tutorials - Complete Guide from Beginner to Advanced | NeuronDB',
-    description: 'Comprehensive AI and machine learning tutorials covering fundamentals to advanced topics.',
+    title: 'AI Tutorials from Beginner to Advanced | NeuronDB',
+    description: 'AI and machine learning tutorials covering fundamentals to advanced topics.',
     creator: '@neurondb',
   },
   alternates: {
@@ -60,7 +60,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-02-data-preparation',
     title: 'Data Preparation and Feature Engineering',
-    excerpt: 'Master data collection, cleaning, feature selection, and transformation. Learn to handle missing values, outliers, normalization, and standardization with practical examples.',
+    excerpt: 'Learn data collection, cleaning, feature selection, and transformation. Learn to handle missing values, outliers, normalization, and standardization with practical examples.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '25 min read',
@@ -90,7 +90,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-05-training',
     title: 'Training Neural Networks',
-    excerpt: 'Master loss functions, backpropagation, optimizers, and learning rates. Implement training loops in Python and log metrics in SQL databases.',
+    excerpt: 'Learn loss functions, backpropagation, optimizers, and learning rates. Implement training loops in Python and log metrics in SQL databases.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '30 min read',
@@ -120,7 +120,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-08-transformers',
     title: 'Transformers: Architecture and Self-Attention',
-    excerpt: 'Master the transformer architecture and self-attention mechanism. Learn multi-head attention, encoder-decoder structures, and positional encoding.',
+    excerpt: 'Learn the transformer architecture and self-attention mechanism. Learn multi-head attention, encoder-decoder structures, and positional encoding.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '32 min read',
@@ -140,7 +140,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-10-vector-search',
     title: 'Vector Search: Similarity and Distance Metrics',
-    excerpt: 'Master vector similarity concepts and distance metrics. Learn cosine, Euclidean, and Manhattan distances with indexing strategies and SQL examples.',
+    excerpt: 'Learn vector similarity concepts and distance metrics. Learn cosine, Euclidean, and Manhattan distances with indexing strategies and SQL examples.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '24 min read',
@@ -150,7 +150,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-11-semantic-search',
     title: 'Semantic Search: Finding Meaning in Text',
-    excerpt: 'Build semantic search systems with document chunking, query processing, and ranking. Learn keyword vs semantic search with complete implementations.',
+    excerpt: 'Build semantic search systems with document chunking, query processing, and ranking. Learn keyword vs semantic search with implementations.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '30 min read',
@@ -160,7 +160,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-12-rag-fundamentals',
     title: 'RAG Fundamentals: Retrieval-Augmented Generation Basics',
-    excerpt: 'Learn RAG architecture, document processing, retrieval strategies, and context building. Build complete RAG systems with Python and SQL examples.',
+    excerpt: 'Learn RAG architecture, document processing, retrieval strategies, and context building. Build RAG systems with Python and SQL examples.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '35 min read',
@@ -170,7 +170,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-13-advanced-rag',
     title: 'Advanced RAG: Hybrid Search and Reranking',
-    excerpt: 'Master hybrid search combining semantic and keyword search. Learn reranking strategies, multi-vector approaches, and temporal search with SQL examples.',
+    excerpt: 'Learn hybrid search combining semantic and keyword search. Learn reranking strategies, multi-vector approaches, and temporal search with SQL examples.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '32 min read',
@@ -190,7 +190,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-15-model-evaluation',
     title: 'Model Evaluation: Metrics and Testing',
-    excerpt: 'Master classification and regression metrics. Learn embedding quality metrics, A/B testing, and comprehensive evaluation suites with SQL storage.',
+    excerpt: 'Classification and regression metrics. Learn embedding quality metrics, A/B testing, and evaluation suites with SQL storage.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '26 min read',
@@ -220,7 +220,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-18-advanced-architectures',
     title: 'Advanced Architectures: Multi-vector and Temporal Search',
-    excerpt: 'Master multi-vector embeddings, temporal search patterns, ensemble methods, and advanced indexing with complex architecture implementations.',
+    excerpt: 'Learn multi-vector embeddings, temporal search patterns, ensemble methods, and advanced indexing with complex architecture implementations.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '30 min read',
@@ -303,7 +303,7 @@ export default function TutorialsPage() {
           <div className="max-w-7xl mx-auto">
             <h1 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-tight drop-shadow-lg">AI Tutorials</h1>
             <p className="text-lg md:text-xl font-normal text-white mb-6 max-w-2xl mx-auto drop-shadow-lg">
-              Complete guide from beginner to advanced. Learn machine learning, neural networks, embeddings, transformers, and RAG.
+              Guide from beginner to advanced. Learn machine learning, neural networks, embeddings, transformers, and RAG.
             </p>
 
             {/* Tutorial Stats */}

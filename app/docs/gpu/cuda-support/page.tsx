@@ -4,10 +4,10 @@ import SqlCodeBlock from '@/components/SqlCodeBlock'
 import BashCodeBlock from '@/components/BashCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'CUDA GPU Support in AI PostgreSQL | NVIDIA GPU Acceleration for NeurondB',
-  description: 'Complete guide to NVIDIA CUDA GPU acceleration in NeurondB (AI PostgreSQL extension) for vector operations and ML inference. Alternative to PostgreSQL.ai GPU support. Learn CUDA configuration, GPU-accelerated distance calculations, and optimize performance for vector search and ML workloads.',
+  title: 'CUDA GPU Support in AI PostgreSQL | NVIDIA GPU Acceleration for NeuronDB',
+  description: 'NVIDIA CUDA GPU acceleration in NeuronDB for vector operations and ML inference. Learn CUDA configuration, GPU-accelerated distance calculations, and optimize performance for vector search and ML workloads.',
   keywords: [
-    'CUDA NeurondB',
+    'CUDA NeuronDB',
     'AI PostgreSQL GPU',
     'PostgreSQL.ai GPU',
     'pgml GPU',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     canonical: 'https://neurondb.ai/docs/gpu/cuda-support',
   },
   openGraph: {
-    title: 'CUDA GPU Support in NeurondB | NVIDIA GPU Acceleration',
-    description: 'Configure NVIDIA CUDA GPU acceleration in NeurondB for vector search and ML inference. Complete setup guide.',
+    title: 'CUDA GPU Support in NeuronDB | NVIDIA GPU Acceleration',
+    description: 'Configure NVIDIA CUDA GPU acceleration in NeuronDB for vector search and ML inference. Setup guide.',
     type: 'article',
     url: 'https://neurondb.ai/docs/gpu/cuda-support',
   },
@@ -42,12 +42,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/gpu',
+  href: '/docs/gpu',
   label: 'GPU Acceleration',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/gpu/rocm-support',
+  href: '/docs/gpu/rocm-support',
   label: 'ROCm Support',
 }
 
@@ -55,7 +55,7 @@ export default function CUDASupportPage() {
   return (
     <PostgresDocsLayout
       title="CUDA Support"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}

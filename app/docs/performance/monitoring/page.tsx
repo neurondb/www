@@ -15,12 +15,12 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/performance/simd-optimization',
+  href: '/docs/performance/simd-optimization',
   label: 'SIMD Optimization',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/security',
+  href: '/docs/security',
   label: 'Security',
 }
 
@@ -28,7 +28,7 @@ export default function MonitoringPage() {
   return (
     <PostgresDocsLayout
       title="Monitoring"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
@@ -40,28 +40,50 @@ export default function MonitoringPage() {
 
       <section id="monitoring-views">
         <h2>Monitoring Views</h2>
-        <p>NeuronDB provides comprehensive monitoring views:</p>
+        <p>NeuronDB provides 7 comprehensive monitoring views for real-time observability:</p>
+        
+        <h3>1. vector_stats</h3>
+        <p>Aggregate statistics for all vector operations including total vectors, dimensions, memory usage, and operation counts.</p>
+        
+        <h3>2. index_health</h3>
+        <p>Health dashboard for all indexes with status icons, usage statistics, fragmentation levels, and maintenance recommendations.</p>
+        
+        <h3>3. tenant_quota_usage</h3>
+        <p>Quota monitoring with warnings for multi-tenant deployments. Tracks resource usage per tenant and alerts when approaching limits.</p>
+        
+        <h3>4. llm_job_status</h3>
+        <p>Job queue summary for LLM operations including pending, running, completed, and failed jobs. Tracks job processing times and success rates.</p>
+        
+        <h3>5. query_performance</h3>
+        <p>Performance metrics for the last 24 hours including query latencies, throughput, cache hit rates, and slow query identification.</p>
+        
+        <h3>6. index_maintenance_status</h3>
+        <p>Index maintenance operations tracking including defragmentation progress, rebuild schedules, and maintenance history.</p>
+        
+        <h3>7. metrics_summary</h3>
+        <p>Prometheus-compatible metrics summary with key performance indicators ready for external monitoring systems.</p>
+        
         <SqlCodeBlock
-          title="Monitoring views"
-          code={`-- Vector statistics
+          title="All 7 monitoring views"
+          code={`-- Vector statistics - Aggregate statistics for all vector operations
 SELECT * FROM neurondb.vector_stats;
 
--- Index health dashboard
+-- Index health dashboard - Health status with icons and recommendations
 SELECT * FROM neurondb.index_health;
 
--- Tenant quota usage
+-- Tenant quota usage - Multi-tenant resource monitoring with warnings
 SELECT * FROM neurondb.tenant_quota_usage;
 
--- LLM job queue status
+-- LLM job queue status - Job processing summary and statistics
 SELECT * FROM neurondb.llm_job_status;
 
--- Query performance metrics (last 24h)
+-- Query performance metrics - Last 24 hours performance data
 SELECT * FROM neurondb.query_performance;
 
--- Index maintenance operations
+-- Index maintenance operations - Maintenance tracking and history
 SELECT * FROM neurondb.index_maintenance_status;
 
--- Prometheus metrics summary
+-- Prometheus metrics summary - Metrics ready for external monitoring
 SELECT * FROM neurondb.metrics_summary;`}
         />
       </section>

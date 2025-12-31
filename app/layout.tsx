@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     default: `PostgreSQL AI Extension - ${siteConfig.name} | Vector Search, ML & RAG Pipeline`,
     template: `%s | PostgreSQL AI Extension`,
   },
-  description: 'NeuronDB is the leading PostgreSQL AI extension for vector search, machine learning inference, and RAG pipeline. Build AI applications in PostgreSQL with GPU acceleration and 52 ML algorithms.',
+  description: 'NeuronDB is the leading PostgreSQL AI extension for vector search, machine learning inference, and RAG pipeline. Build AI applications in PostgreSQL with GPU acceleration, 52 ML algorithms, 473 SQL functions, and complete ecosystem (NeuronAgent, NeuronMCP, NeuronDesktop).',
   applicationName: siteConfig.name,
   authors: [
     { name: `${siteConfig.name} Team`, url: baseUrl },
@@ -73,8 +73,22 @@ export const metadata: Metadata = {
     'onnx postgresql',
     'gpu accelerated database',
     'cuda postgresql',
+    'rocm postgresql',
+    'metal gpu postgresql',
     'neurondb',
     'pgvector alternative',
+    'docker postgresql ai',
+    'mcp server claude desktop',
+    'neuronagent',
+    'neuronmcp',
+    'neurondesktop',
+    '52 ml algorithms',
+    '473 sql functions',
+    'background workers',
+    'vector quantization',
+    'product quantization',
+    'dataset loading',
+    'huggingface datasets',
   ],
   referrer: 'origin-when-cross-origin',
   creator: `${siteConfig.name} Team`,
@@ -177,9 +191,15 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://github.com" />
         <link rel="dns-prefetch" href="https://twitter.com" />
+        <link rel="dns-prefetch" href="https://www.linkedin.com" />
         
         {/* Preload critical resources */}
         <link rel="preload" href="/og-image.jpg" as="image" type="image/jpeg" />
+        <link rel="preload" href="/favicon.ico" as="image" />
+        
+        {/* Prefetch likely next page for better navigation */}
+        <link rel="prefetch" href="/docs/getting-started/docker" />
+        <link rel="prefetch" href="/docs" />
         
         {/* Manifest */}
         <link rel="manifest" href="/manifest.json" />

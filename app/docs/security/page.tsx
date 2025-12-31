@@ -15,7 +15,7 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/performance',
+  href: '/docs/performance',
   label: 'Performance',
 }
 
@@ -25,7 +25,7 @@ export default function SecurityPage() {
   return (
     <PostgresDocsLayout
       title="Security Best Practices"
-      version="NeurondB Documentation"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
@@ -110,12 +110,38 @@ GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA neurondb TO admin_role;`}
 
       <section id="data-protection">
         <h2>Data Protection</h2>
+        <p>NeuronDB provides comprehensive data protection features:</p>
         <ul>
-          <li>Encrypt sensitive data at rest using PostgreSQL encryption</li>
-          <li>Use row-level security (RLS) for multi-tenant deployments</li>
-          <li>Implement audit logging for sensitive operations</li>
-          <li>Regular backups with encryption</li>
+          <li><strong>Vector Encryption:</strong> AES-GCM encryption for vector data via OpenSSL</li>
+          <li><strong>Differential Privacy:</strong> Privacy-preserving embedding operations</li>
+          <li><strong>Row-Level Security (RLS):</strong> Integrated RLS policies via <code>neurondb.rls_policies</code> table for multi-tenant deployments</li>
+          <li><strong>Multi-Tenant Isolation:</strong> Tenant-aware indexes and quota management via <code>neurondb.tenant_quotas</code></li>
+          <li><strong>HMAC-SHA256:</strong> Signed results for tamper detection</li>
+          <li><strong>Audit Logging:</strong> Comprehensive audit logging with tamper detection for sensitive operations</li>
+          <li><strong>Usage Metering:</strong> Track resource usage per tenant for governance</li>
+          <li><strong>GDPR Compliance:</strong> GDPR-compliant data handling and encryption</li>
+          <li><strong>Post-Quantum Encryption:</strong> Support for post-quantum cryptography via <code>encrypt_postquantum()</code></li>
+          <li><strong>Confidential Compute:</strong> Enable confidential computing features via <code>enable_confidential_compute()</code></li>
+          <li><strong>Regular Backups:</strong> Encrypted backups with point-in-time recovery</li>
         </ul>
+        
+        <h3>Multi-Tenancy Security</h3>
+        <SqlCodeBlock
+          title="Configure tenant quotas and RLS policies"
+          code={`-- Create tenant quota limits
+INSERT INTO neurondb.tenant_quotas (tenant_id, max_vectors, max_memory_mb, max_qps)
+VALUES ('tenant_1', 1000000, 8192, 1000);
+
+-- Create RLS policy
+SELECT neurondb.create_policy(
+  'documents',
+  'tenant_isolation',
+  'tenant_id = current_setting(\'app.current_tenant\')'
+);
+
+-- Monitor tenant usage
+SELECT * FROM neurondb.tenant_quota_usage WHERE warnings IS NOT NULL;`}
+        />
       </section>
 
       <section>

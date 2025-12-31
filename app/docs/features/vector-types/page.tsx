@@ -15,20 +15,20 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/features',
+  href: '/docs/features',
   label: 'Features',
 }
 
 const nextLink: NavLink = {
-  href: '/docs/neurondb/features/distance-metrics',
+  href: '/docs/features/distance-metrics',
   label: 'Distance Metrics',
 }
 
 export default function Page() {
   return (
     <PostgresDocsLayout
-      title="Vector Types in NeurondB"
-      version="NeurondB Documentation"
+      title="Vector Types in NeuronDB"
+      version="NeuronDB Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
       nextLink={nextLink}
@@ -88,6 +88,15 @@ INSERT INTO documents (embedding) VALUES ('[0.1, 0.2, 0.3]');`}
 
         <h3>binaryvec</h3>
         <p>Binary vector (bit-packed). 1 bit per dimension. Best for Hamming distance and binary embeddings.</p>
+
+        <h3>vecmap</h3>
+        <p>Sparse vector map type. Stores key-value pairs for sparse vector representations. Efficient for high-dimensional sparse data like TF-IDF vectors, text features, and recommendation systems. Supports sparse vector operations including L2 distance, cosine distance, inner product, and arithmetic operations.</p>
+
+        <h3>vgraph</h3>
+        <p>Vector graph type for graph-based vector operations. Supports BFS (Breadth-First Search), DFS (Depth-First Search), PageRank algorithms, and community detection. Ideal for recommendation systems, knowledge graphs, and graph neural network applications.</p>
+
+        <h3>rtext</h3>
+        <p>Retrieval text type that combines retrieval capabilities with text operations. Optimized for RAG pipelines and semantic text search. Provides seamless integration between vector similarity search and full-text search operations.</p>
       </section>
 
       <section id="usage-examples">
