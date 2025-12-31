@@ -1,6 +1,33 @@
-# Vercel ignore file - files that shouldn't be uploaded to Vercel
-icons/
-png/
-LICENSE
-.eslintcache
-tsconfig.tsbuildinfo
+# Vercel ignore file - files/directories not needed for deployment
+
+# Development files
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+.env*.local
+.local/
+
+# Source files not needed in production
+/icons/
+/png/
+*.py
+*.js
+!next.config.js
+!postcss.config.js
+!tailwind.config.js
+!tsconfig.json
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# Logs
+*.log
+logs/
+
+# Build artifacts from scripts
+*.tsbuildinfo

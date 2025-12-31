@@ -167,39 +167,29 @@ const nextConfig = {
   
   // Experimental features for optimization
   experimental: {
-    optimizePackageImports: ['lucide-react', 'react-syntax-highlighter', '@radix-ui/react-icons'],
-    // Optimize CSS loading
-    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', 'react-syntax-highlighter'],
   },
   
-  // Webpack optimizations
+  // Disable CSS inlining optimization to avoid critters dependency issues
+  // Vercel handles CSS optimization automatically
+  // optimizeCss is not available in Next.js 14.2.5 - handled internally
+  
+  // Webpack optimizations - Only apply in production and client-side
   webpack: (config, { dev, isServer }) => {
-    // Production optimizations
-    if (!dev && !isServer) {
-      // Split chunks for better caching
-      config.optimization = {
-        ...config.optimization,
-        splitChunks: {
+    // Production client-side optimizations only
+    // Note: Vercel optimizes bundling automatically, so we only apply safe optimizations
+    if (!dev && !isServer && config.optimization && config.optimization.splitChunks) {
+      // Preserve existing splitChunks configuration and add custom cacheGroups
+      const existingCacheGroups = config.optimization.splitChunks.cacheGroups || {}
+      config.optimization.splitChunks.cacheGroups = {
+        ...existingCacheGroups,
+        // Vendor chunk - group node_modules for better caching
+        vendor: {
+          name: 'vendor',
           chunks: 'all',
-          cacheGroups: {
-            default: false,
-            vendors: false,
-            // Vendor chunk
-            vendor: {
-              name: 'vendor',
-              chunks: 'all',
-              test: /node_modules/,
-              priority: 20,
-            },
-            // Common chunk
-            common: {
-              name: 'common',
-              minChunks: 2,
-              chunks: 'all',
-              priority: 10,
-              reuseExistingChunk: true,
-            },
-          },
+          test: /node_modules/,
+          priority: 20,
+          reuseExistingChunk: true,
         },
       }
     }

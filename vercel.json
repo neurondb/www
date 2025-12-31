@@ -5,7 +5,10 @@
   "framework": "nextjs",
   "regions": ["iad1"],
   "functions": {
-    "app/**": {
+    "app/sitemap.ts": {
+      "maxDuration": 10
+    },
+    "app/robots.ts": {
       "maxDuration": 10
     }
   },
