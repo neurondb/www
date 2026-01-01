@@ -1,5 +1,8 @@
 import { BlogMarkdown } from '../../_components/BlogMarkdown';
 import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
+import RelatedBlogs from '../../../components/RelatedBlogs';
+import BlogComments from '../../../components/BlogComments';
+import { allBlogPosts } from '@/config/blogPosts';
 
 export const metadata = {
   title: 'Running AI on premises with Postgres',
@@ -365,6 +368,7 @@ export default function BlogPost() {
     keywords: 'on-premises AI, on-prem database, AI infrastructure, data sovereignty, private AI, NeuronDB',
   };
 
+
   return (
     <div className="pt-16">
       <script
@@ -372,17 +376,41 @@ export default function BlogPost() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div style={{ backgroundColor: '#1f2937' }}>
-        <BlogMarkdown>{markdown}</BlogMarkdown>
-        
-        <div className="max-w-7xl mx-auto px-6 pb-12">
-          <div className="border-t border-white/10 pt-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
-            <ShareOnLinkedIn
-              url="https://neurondb.ai/blog/ai-with-database-on-prem"
-              title="Running AI on premises with Postgres"
-              summary="How to run embeddings and vector search on premises with Postgres. Covers architecture, deployment patterns, security, performance, and migration."
-              hashtags={[]}
-            />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+            {/* Main Content */}
+            <div className="flex-1 min-w-0 lg:max-w-3xl">
+              <div className="px-4 sm:px-6 lg:px-0">
+                <BlogMarkdown>{markdown}</BlogMarkdown>
+                
+              <div className="border-t border-white/10 pt-8 mt-8">
+                <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
+                <ShareOnLinkedIn
+                  url="https://neurondb.ai/blog/ai-with-database-on-prem"
+                  title="Running AI on premises with Postgres"
+                  summary="How to run embeddings and vector search on premises with Postgres. Covers architecture, deployment patterns, security, performance, and migration."
+                  hashtags={[]}
+                />
+              </div>
+
+              {/* Comments Section */}
+              <BlogComments 
+                postSlug="ai-with-database-on-prem"
+                postTitle="Running AI on premises with Postgres"
+              />
+            </div>
+            </div>
+            
+            {/* Sidebar - Related Blogs */}
+            <div className="lg:w-80 flex-shrink-0">
+              <div className="px-4 sm:px-6 lg:px-0">
+                <RelatedBlogs 
+                  currentSlug="ai-with-database-on-prem" 
+                  allPosts={allBlogPosts}
+                  maxPosts={4}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
