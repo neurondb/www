@@ -78,7 +78,20 @@ const nextConfig = {
         ]
       },
       {
-        source: '/blog/:path*/:image*.(svg|png|jpg|jpeg|webp|avif)',
+        source: '/blog/:path*/:image.svg',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, must-revalidate'
+          },
+          {
+            key: 'Content-Type',
+            value: 'image/svg+xml'
+          }
+        ]
+      },
+      {
+        source: '/blog/:path*/:image.(png|jpg|jpeg|webp|avif)',
         headers: [
           {
             key: 'Cache-Control',
@@ -87,7 +100,7 @@ const nextConfig = {
         ]
       },
       {
-        source: '/tutorials/:path*/:image*.(svg|png|jpg|jpeg|webp|avif)',
+        source: '/tutorials/:path*/:image.(svg|png|jpg|jpeg|webp|avif)',
         headers: [
           {
             key: 'Cache-Control',

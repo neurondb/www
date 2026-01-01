@@ -79,7 +79,7 @@ const markdown = `<img src="/blog/ai-with-database-on-prem/header.svg?v=12" alt=
 
 <p>Keep three paths clear. Ingest is write heavy. Retrieval is read heavy. Admin work is rare but sensitive. Split these paths by network rules and by roles.</p>
 
-<img src="/blog/ai-with-database-on-prem/diagram-on-prem-architecture.svg" alt="On premises architecture diagram" />
+<img src="/blog/ai-with-database-on-prem/diagram-on-prem-architecture.svg?v=3" alt="On premises architecture diagram" />
 
 <p>Put ingestion on a schedule. Batch it. Keep queries stable. Do not let ad hoc scripts write to the main database. Use a queue or a worker process. Record each run.</p>
 

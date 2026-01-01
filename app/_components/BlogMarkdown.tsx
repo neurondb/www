@@ -726,20 +726,46 @@ export function BlogMarkdown({ children }: { children: string }) {
                     src={finalSrc}
                     alt={alt}
                     style={{ width: '100%', height: 'auto', maxWidth: svgMaxWidth, display: 'block', margin: '0 auto', visibility: 'visible', objectFit: 'contain' }}
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
+                    crossOrigin="anonymous"
                     onError={(e) => {
                       console.error('❌ Failed to load SVG:', src);
                       console.error('Final src used:', finalSrc);
                       const target = e.target as HTMLImageElement;
-                      target.style.border = '2px solid red';
-                      target.style.backgroundColor = '#ff000020';
-                      target.style.minHeight = '200px';
+                      // Retry loading once after a short delay
+                      if (!target.dataset.retried) {
+                        target.dataset.retried = 'true';
+                        setTimeout(() => {
+                          if (typeof window !== 'undefined') {
+                            const img = new window.Image();
+                            img.onload = () => {
+                              target.src = finalSrc;
+                              target.style.border = '';
+                              target.style.backgroundColor = '';
+                            };
+                            img.onerror = () => {
+                              target.style.border = '2px solid red';
+                              target.style.backgroundColor = '#ff000020';
+                              target.style.minHeight = '200px';
+                            };
+                            img.src = finalSrc;
+                          } else {
+                            target.style.border = '2px solid red';
+                            target.style.backgroundColor = '#ff000020';
+                            target.style.minHeight = '200px';
+                          }
+                        }, 500);
+                      } else {
+                        target.style.border = '2px solid red';
+                        target.style.backgroundColor = '#ff000020';
+                        target.style.minHeight = '200px';
+                      }
                     }}
                     onLoad={(e) => {
-                      console.log('✅ SVG loaded successfully:', src);
                       const target = e.target as HTMLImageElement;
-                      console.log('📐 Image dimensions:', target.naturalWidth, 'x', target.naturalHeight);
+                      target.style.border = '';
+                      target.style.backgroundColor = '';
                     }}
                   />
                 ) : (

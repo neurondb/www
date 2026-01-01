@@ -27,18 +27,18 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <!-- Arrowheads: use explicit color markers so arrowheads match each arrow's stroke -->
+    <!-- Arrowheads: explicit fills so arrowheads reliably match each arrow's stroke across browsers -->
     <marker id="arrowhead-cyan" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
-      <polygon points="0 0, 10 5, 0 10" fill="currentColor" opacity="0.9"/>
+      <polygon points="0 0, 10 5, 0 10" fill="#06b6d4" opacity="0.9"/>
     </marker>
     <marker id="arrowhead-orange" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
-      <polygon points="0 0, 10 5, 0 10" fill="currentColor" opacity="0.9"/>
+      <polygon points="0 0, 10 5, 0 10" fill="#f97316" opacity="0.9"/>
     </marker>
     <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
-      <polygon points="0 0, 10 5, 0 10" fill="currentColor" opacity="0.9"/>
+      <polygon points="0 0, 10 5, 0 10" fill="#10b981" opacity="0.9"/>
     </marker>
     <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
-      <polygon points="0 0, 10 5, 0 10" fill="currentColor" opacity="0.9"/>
+      <polygon points="0 0, 10 5, 0 10" fill="#ef4444" opacity="0.9"/>
     </marker>
   </defs>
   
@@ -184,22 +184,23 @@
   </g>
   
   <!-- Arrows: Application to Database -->
-  <path d="M 140 180 L 375 250" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead-cyan)" style="color: inherit;" opacity="0.7"/>
-  <path d="M 370 180 L 375 250" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead-cyan)" style="color: inherit;" opacity="0.7"/>
-  <path d="M 600 180 L 375 250" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead-cyan)" style="color: inherit;" opacity="0.7"/>
-  <path d="M 830 180 L 375 250" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead-cyan)" style="color: inherit;" opacity="0.7"/>
+  <!-- Spread endpoints across the DB box so arrowheads don't overlap -->
+  <path d="M 140 180 L 270 250" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead-cyan)" opacity="0.7"/>
+  <path d="M 370 180 L 330 250" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead-cyan)" opacity="0.7"/>
+  <path d="M 600 180 L 420 250" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead-cyan)" opacity="0.7"/>
+  <path d="M 830 180 L 480 250" fill="none" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead-cyan)" opacity="0.7"/>
   
   <!-- Arrows: Database to Storage -->
-  <path d="M 550 350 L 800 450" fill="none" stroke="#f97316" stroke-width="2" marker-end="url(#arrowhead-orange)" style="color: inherit;" opacity="0.7"/>
+  <path d="M 550 350 L 800 450" fill="none" stroke="#f97316" stroke-width="2" marker-end="url(#arrowhead-orange)" opacity="0.7"/>
   
   <!-- Arrows: Database to GPU -->
-  <path d="M 550 350 L 500 450" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead-green)" style="color: inherit;" opacity="0.7"/>
+  <path d="M 550 350 L 500 450" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead-green)" opacity="0.7"/>
   
   <!-- Arrows: Database to Security -->
-  <path d="M 375 450 L 150 550" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead-red)" style="color: inherit;" opacity="0.7"/>
-  <path d="M 375 450 L 400 550" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead-red)" style="color: inherit;" opacity="0.7"/>
-  <path d="M 375 450 L 650 550" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead-red)" style="color: inherit;" opacity="0.7"/>
-  <path d="M 375 450 L 900 550" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead-red)" style="color: inherit;" opacity="0.7"/>
+  <path d="M 375 450 L 150 550" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead-red)" opacity="0.7"/>
+  <path d="M 375 450 L 400 550" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead-red)" opacity="0.7"/>
+  <path d="M 375 450 L 650 550" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead-red)" opacity="0.7"/>
+  <path d="M 375 450 L 900 550" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowhead-red)" opacity="0.7"/>
   
   <!-- On-Premises Label -->
   <rect x="50" y="750" width="1100" height="40" rx="8" fill="url(#boxGrad)" stroke="#facc15" stroke-width="2" opacity="0.5"/>
