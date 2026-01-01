@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { BlogMarkdown } from '../../_components/BlogMarkdown'
 import FooterTemplate from '@/components/templates/FooterTemplate'
+import RelatedTutorials from '@/components/RelatedTutorials'
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react'
 
 // Tutorials data
@@ -10267,14 +10268,7 @@ export default function TutorialPage({ params }: { params: { slug: string } }) {
   // Generate markdown content based on tutorial slug
   const content = getTutorialContent(tutorial.slug, tutorial, tutorials)
 
-  const markdown = `${content}
-
-## Related Tutorials
-
-${tutorial.order > 1 ? `- [Previous: ${tutorials.find(t => t.order === tutorial.order - 1)?.title}](/tutorials/${tutorials.find(t => t.order === tutorial.order - 1)?.slug})` : ''}
-${tutorial.order < tutorials.length ? `- [Next: ${tutorials.find(t => t.order === tutorial.order + 1)?.title}](/tutorials/${tutorials.find(t => t.order === tutorial.order + 1)?.slug})` : ''}
-- [All Tutorials](/tutorials)
-`
+  const markdown = content
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#1f2937' }}>
@@ -10318,8 +10312,26 @@ ${tutorial.order < tutorials.length ? `- [Next: ${tutorials.find(t => t.order ==
       </div>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto">
-        <BlogMarkdown>{markdown}</BlogMarkdown>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+          {/* Main Content */}
+          <div className="flex-1 min-w-0 lg:max-w-3xl">
+            <div className="px-4 sm:px-6 lg:px-0">
+              <BlogMarkdown>{markdown}</BlogMarkdown>
+            </div>
+          </div>
+          
+          {/* Sidebar - Related Tutorials */}
+          <div className="lg:w-80 flex-shrink-0">
+            <div className="px-4 sm:px-6 lg:px-0">
+              <RelatedTutorials 
+                currentSlug={params.slug}
+                allTutorials={tutorials}
+                maxPosts={4}
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
       <FooterTemplate />
