@@ -1,5 +1,7 @@
 import { BlogMarkdown } from '../../_components/BlogMarkdown';
 import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
+import RelatedBlogs from '../../../components/RelatedBlogs';
+import { allBlogPosts } from '@/config/blogPosts';
 import BlogPageTracker from '../../../components/BlogPageTracker';
 
 export const metadata = {
@@ -1134,30 +1136,48 @@ export default function BlogPost() {
                 title="Agentic AI: Guide to Autonomous AI Agents"
             />
             <div style={{ backgroundColor: '#1f2937' }}>
-                <BlogMarkdown>{markdown}</BlogMarkdown>
-
-                <div className="max-w-7xl mx-auto px-6 pb-12">
-                    <div className="border-t border-white/10 pt-8">
-                        <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
-                        <ShareOnLinkedIn
-                            url="https://neurondb.ai/blog/agentic-ai"
-                            title="Agentic AI: Guide to Autonomous AI Agents"
-                            summary="Agentic AI systems guide with architecture diagrams, implementation patterns, and examples using NeuronDB and NeuronAgent"
-                            hashtags={[
-                                'AgenticAI',
-                                'AutonomousAgents',
-                                'AIAgents',
-                                'NeuronDB',
-                                'NeuronAgent',
-                                'PostgreSQL',
-                                'LLM',
-                                'RAG',
-                                'VectorSearch',
-                                'MachineLearning',
-                                'AI',
-                                'OpenSource'
-                            ]}
-                        />
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                        {/* Main Content */}
+                        <div className="flex-1 min-w-0 lg:max-w-3xl">
+                            <div className="px-4 sm:px-6 lg:px-0">
+                                <BlogMarkdown>{markdown}</BlogMarkdown>
+                                
+                                <div className="border-t border-white/10 pt-8 mt-8">
+                                    <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
+                                    <ShareOnLinkedIn
+                                        url="https://neurondb.ai/blog/agentic-ai"
+                                        title="Agentic AI: Guide to Autonomous AI Agents"
+                                        summary="Agentic AI systems guide with architecture diagrams, implementation patterns, and examples using NeuronDB and NeuronAgent"
+                                        hashtags={[
+                                            'AgenticAI',
+                                            'AutonomousAgents',
+                                            'AIAgents',
+                                            'NeuronDB',
+                                            'NeuronAgent',
+                                            'PostgreSQL',
+                                            'LLM',
+                                            'RAG',
+                                            'VectorSearch',
+                                            'MachineLearning',
+                                            'AI',
+                                            'OpenSource'
+                                        ]}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {/* Sidebar - Related Blogs */}
+                        <div className="lg:w-80 flex-shrink-0">
+                            <div className="px-4 sm:px-6 lg:px-0">
+                                <RelatedBlogs 
+                                    currentSlug="agentic-ai" 
+                                    allPosts={allBlogPosts}
+                                    maxPosts={4}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

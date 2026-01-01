@@ -1,5 +1,7 @@
 import { BlogMarkdown } from '../../_components/BlogMarkdown';
 import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
+import RelatedBlogs from '../../../components/RelatedBlogs';
+import { allBlogPosts } from '@/config/blogPosts';
 
 export const metadata = {
   title: 'NeuronDB: PostgreSQL AI Extension for Vector Search and ML',
@@ -819,32 +821,48 @@ export default function BlogPost() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      {/* Blog Content */}
       <div style={{ backgroundColor: '#1f2937' }}>
-        <BlogMarkdown>{markdown}</BlogMarkdown>
-        
-        {/* Share Section */}
-        <div className="max-w-7xl mx-auto px-6 pb-12">
-          <div className="border-t border-white/10 pt-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
-            <ShareOnLinkedIn
-              url="https://neurondb.ai/blog/neurondb"
-              title="NeuronDB a PostgreSQL AI Extension"
-              summary="NeuronDB is a PostgreSQL extension that adds vector search, ML inference, GPU acceleration, and RAG capabilities. HNSW indexing, 52 ML algorithms, 473 SQL functions, and full pgvector compatibility."
-              hashtags={[
-                'PostgreSQL',
-                'AI',
-                'VectorDatabase',
-                'MachineLearning',
-                'SemanticSearch',
-                'RAG',
-                'GPU',
-                'NeuronDB',
-                'OpenSource',
-                'DeepLearning',
-                'NLP'
-              ]}
-            />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+            {/* Main Content */}
+            <div className="flex-1 min-w-0 lg:max-w-3xl">
+              <div className="px-4 sm:px-6 lg:px-0">
+                <BlogMarkdown>{markdown}</BlogMarkdown>
+                
+                <div className="border-t border-white/10 pt-8 mt-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
+                  <ShareOnLinkedIn
+                    url="https://neurondb.ai/blog/neurondb"
+                    title="NeuronDB a PostgreSQL AI Extension"
+                    summary="NeuronDB is a PostgreSQL extension that adds vector search, ML inference, GPU acceleration, and RAG capabilities. HNSW indexing, 52 ML algorithms, 473 SQL functions, and full pgvector compatibility."
+                    hashtags={[
+                      'PostgreSQL',
+                      'AI',
+                      'VectorDatabase',
+                      'MachineLearning',
+                      'SemanticSearch',
+                      'RAG',
+                      'GPU',
+                      'NeuronDB',
+                      'OpenSource',
+                      'DeepLearning',
+                      'NLP'
+                    ]}
+                  />
+                </div>
+              </div>
+            </div>
+            
+            {/* Sidebar - Related Blogs */}
+            <div className="lg:w-80 flex-shrink-0">
+              <div className="px-4 sm:px-6 lg:px-0">
+                <RelatedBlogs 
+                  currentSlug="neurondb" 
+                  allPosts={allBlogPosts}
+                  maxPosts={4}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

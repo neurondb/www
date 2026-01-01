@@ -1,5 +1,7 @@
 import { BlogMarkdown } from '../../_components/BlogMarkdown';
 import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
+import RelatedBlogs from '../../../components/RelatedBlogs';
+import { allBlogPosts } from '@/config/blogPosts';
 import BlogPageTracker from '../../../components/BlogPageTracker';
 
 export const metadata = {
@@ -1017,33 +1019,49 @@ export default function BlogPost() {
                 slug="neurondb-semantic-search-guide"
                 title="Semantic Search Over Text with NeuronDB"
             />
-            {/* Blog Content */}
             <div style={{ backgroundColor: '#1f2937' }}>
-                <BlogMarkdown>{markdown}</BlogMarkdown>
-
-                {/* Share Section */}
-                <div className="max-w-7xl mx-auto px-6 pb-12">
-                    <div className="border-t border-white/10 pt-8">
-                        <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
-                        <ShareOnLinkedIn
-                            url="https://neurondb.ai/blog/neurondb-semantic-search-guide"
-                            title="Semantic Search Over Text with NeuronDB"
-                            summary="Learn how to implement semantic search over text using NeuronDB with real-world examples, SQL queries, and production-ready code. Guide to building document search systems, RAG pipelines, and hybrid search."
-                            hashtags={[
-                                'PostgreSQL',
-                                'AI',
-                                'VectorDatabase',
-                                'SemanticSearch',
-                                'RAG',
-                                'MachineLearning',
-                                'NeuronDB',
-                                'NeuronDB',
-                                'OpenSource',
-                                'NLP',
-                                'Embeddings',
-                                'VectorSearch'
-                            ]}
-                        />
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                        {/* Main Content */}
+                        <div className="flex-1 min-w-0 lg:max-w-3xl">
+                            <div className="px-4 sm:px-6 lg:px-0">
+                                <BlogMarkdown>{markdown}</BlogMarkdown>
+                                
+                                <div className="border-t border-white/10 pt-8 mt-8">
+                                    <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
+                                    <ShareOnLinkedIn
+                                        url="https://neurondb.ai/blog/neurondb-semantic-search-guide"
+                                        title="Semantic Search Over Text with NeuronDB"
+                                        summary="Learn how to implement semantic search over text using NeuronDB with real-world examples, SQL queries, and production-ready code. Guide to building document search systems, RAG pipelines, and hybrid search."
+                                        hashtags={[
+                                            'PostgreSQL',
+                                            'AI',
+                                            'VectorDatabase',
+                                            'SemanticSearch',
+                                            'RAG',
+                                            'MachineLearning',
+                                            'NeuronDB',
+                                            'NeuronDB',
+                                            'OpenSource',
+                                            'NLP',
+                                            'Embeddings',
+                                            'VectorSearch'
+                                        ]}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {/* Sidebar - Related Blogs */}
+                        <div className="lg:w-80 flex-shrink-0">
+                            <div className="px-4 sm:px-6 lg:px-0">
+                                <RelatedBlogs 
+                                    currentSlug="neurondb-semantic-search-guide" 
+                                    allPosts={allBlogPosts}
+                                    maxPosts={4}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,7 @@
 import { BlogMarkdown } from '../../_components/BlogMarkdown';
 import ShareOnLinkedIn from '../../../components/ShareOnLinkedIn';
+import RelatedBlogs from '../../../components/RelatedBlogs';
+import { allBlogPosts } from '@/config/blogPosts';
 import BlogPageTracker from '../../../components/BlogPageTracker';
 
 export const metadata = {
@@ -247,32 +249,48 @@ export default function BlogPost() {
         slug="rag-architectures-ai-builders-should-understand"
         title="RAG Architectures AI Builders Should Understand"
       />
-      {/* Blog Content */}
       <div style={{ backgroundColor: '#1f2937' }}>
-        <BlogMarkdown>{markdown}</BlogMarkdown>
-
-        {/* Share Section */}
-        <div className="max-w-7xl mx-auto px-6 pb-12">
-          <div className="border-t border-white/10 pt-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
-            <ShareOnLinkedIn
-              url="https://neurondb.ai/blog/rag-architectures-ai-builders-should-understand"
-              title="RAG Architectures AI Builders Should Understand"
-              summary="A practical guide to the core RAG architecture patterns: basic, conversational, filtered, adaptive, hypothesis-driven, agent-driven, and graph-based RAG. Learn how to pick the right one."
-              hashtags={[
-                'RAG',
-                'RetrievalAugmentedGeneration',
-                'LLM',
-                'VectorSearch',
-                'SemanticSearch',
-                'AIArchitecture',
-                'AgenticAI',
-                'GraphRAG',
-                'ProductionAI',
-                'NeuronDB',
-                'PostgreSQL',
-              ]}
-            />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+            {/* Main Content */}
+            <div className="flex-1 min-w-0 lg:max-w-3xl">
+              <div className="px-4 sm:px-6 lg:px-0">
+                <BlogMarkdown>{markdown}</BlogMarkdown>
+                
+                <div className="border-t border-white/10 pt-8 mt-8">
+                  <h3 className="text-2xl font-bold text-white mb-4">Share This Article</h3>
+                  <ShareOnLinkedIn
+                    url="https://neurondb.ai/blog/rag-architectures-ai-builders-should-understand"
+                    title="RAG Architectures AI Builders Should Understand"
+                    summary="A practical guide to the core RAG architecture patterns: basic, conversational, filtered, adaptive, hypothesis-driven, agent-driven, and graph-based RAG. Learn how to pick the right one."
+                    hashtags={[
+                      'RAG',
+                      'RetrievalAugmentedGeneration',
+                      'LLM',
+                      'VectorSearch',
+                      'SemanticSearch',
+                      'AIArchitecture',
+                      'AgenticAI',
+                      'GraphRAG',
+                      'ProductionAI',
+                      'NeuronDB',
+                      'PostgreSQL',
+                    ]}
+                  />
+                </div>
+              </div>
+            </div>
+            
+            {/* Sidebar - Related Blogs */}
+            <div className="lg:w-80 flex-shrink-0">
+              <div className="px-4 sm:px-6 lg:px-0">
+                <RelatedBlogs 
+                  currentSlug="rag-architectures-ai-builders-should-understand" 
+                  allPosts={allBlogPosts}
+                  maxPosts={4}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
