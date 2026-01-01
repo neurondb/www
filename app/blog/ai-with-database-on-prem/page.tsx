@@ -67,13 +67,13 @@ const markdown = `<img src="/blog/ai-with-database-on-prem/header.svg?v=12" alt=
 
 <h2>Cloud vs on premises, quick view</h2>
 
-<img src="/blog/ai-with-database-on-prem/onprem-cloud-comparison.png" alt="On premises vs cloud AI comparison" />
+<img src="/blog/ai-with-database-on-prem/quickreview.png" alt="On premises vs cloud AI comparison" />
 
 <p>Watch your data movement. In many systems you fetch documents in one place, run embeddings in another, and run vector search in a third place. Each hop adds latency and failure modes. If you keep these steps inside one network, you cut variance and you debug faster.</p>
 
 <h2>Architecture overview</h2>
 
-<img src="/blog/ai-with-database-on-prem/architecture.png" alt="On premises AI architecture overview" />
+<img src="/blog/ai-with-database-on-prem/archtect.png" alt="On premises AI architecture overview" />
 
 <p>Keep the data plane local. Store documents and metadata in Postgres. Store embeddings next to the rows they describe. Build vector indexes in the same database. Run retrieval queries over private links. Expose results through your app services.</p>
 
@@ -322,6 +322,10 @@ SELECT hnsw_create_index('documents', 'embedding', 'documents_embedding_hnsw', 1
   <li>Add monitoring and alerts</li>
   <li>Set backups and run a restore drill</li>
 </ol>
+
+<h2>Conclusion</h2>
+
+<p>Running AI on premises with Postgres gives you control, stability, and cost savings at scale. Start with a single server. Lock down security. Measure latency and throughput. Add resilience as you grow. Use NeuronDB to keep embeddings, indexes, and retrieval inside your network. Keep it simple. Keep it monitored. Keep it backed up.</p>
 
 <h2>Related resources</h2>
 
