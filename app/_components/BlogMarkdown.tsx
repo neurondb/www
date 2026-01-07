@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { Highlight, themes } from 'prism-react-renderer';
+import Tip from '@/components/Tip';
 
 // Deterministic, render-safe hash for stable DOM ids (avoids hydration issues)
 const stableHash = (input: string): string => {
@@ -812,9 +813,37 @@ export function BlogMarkdown({ children }: { children: string }) {
             )
           },
 
-          // Blockquotes with styling
-          blockquote({ node, ...props }) {
-            return <blockquote className="border-l-4 border-primary-500 pl-6 py-2 my-6 bg-white/5 rounded-r-lg italic text-white/80" {...props} />;
+          // Blockquotes with styling - support for tips
+          blockquote({ node, children, ...props }: any) {
+            // Check if this is a tip blockquote (starts with [!TIP], [!INFO], [!SUCCESS], or [!WARNING])
+            const text = extractTextFromNode(node);
+            const tipMatch = text.match(/^\[!(TIP|INFO|SUCCESS|WARNING)\]\s*(.*)/is);
+            
+            if (tipMatch) {
+              const tipType = tipMatch[1].toLowerCase() as 'tip' | 'info' | 'success' | 'warning';
+              let tipContent = tipMatch[2].trim();
+              
+              // Extract title if present (format: **Title**: or Title:)
+              const titleMatch = tipContent.match(/^(?:\*\*)?(.+?)(?:\*\*)?:\s*(.+)$/s);
+              let title: string | undefined;
+              let content: string;
+              
+              if (titleMatch) {
+                title = titleMatch[1].trim();
+                content = titleMatch[2].trim();
+              } else {
+                content = tipContent;
+              }
+              
+              return (
+                <Tip type={tipType} title={title}>
+                  {content}
+                </Tip>
+              );
+            }
+            
+            // Regular blockquote
+            return <blockquote className="border-l-4 border-primary-500 pl-6 py-2 my-6 bg-white/5 rounded-r-lg italic text-white/80" {...props}>{children}</blockquote>;
           },
 
           // Strong and emphasis

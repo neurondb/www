@@ -6,6 +6,10 @@ import { siteConfig } from '@/config/site'
 import Header from '@/components/Header'
 import OrganizationSchema from '@/components/SEO/OrganizationSchema'
 import WebSiteSchema from '@/components/SEO/WebSiteSchema'
+import SkipNavigation from '@/components/SkipNavigation'
+import ScrollToTop from '@/components/ScrollToTop'
+import OutboundLinkTracker from '@/components/OutboundLinkTracker'
+import { ToastProvider } from '@/components/ui/Toast'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -185,21 +189,19 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         {/* Resource hints for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://github.com" />
         <link rel="dns-prefetch" href="https://twitter.com" />
         <link rel="dns-prefetch" href="https://www.linkedin.com" />
         
-        {/* Preload critical resources */}
-        <link rel="preload" href="/og-image.jpg" as="image" type="image/jpeg" />
+        {/* Preload critical resources - only small, critical assets */}
         <link rel="preload" href="/favicon.ico" as="image" />
         
-        {/* Prefetch likely next page for better navigation */}
-        <link rel="prefetch" href="/docs/getting-started/docker" />
+        {/* Prefetch likely next pages for better navigation */}
+        <link rel="prefetch" href="/docs/getting-started" />
         <link rel="prefetch" href="/docs" />
+        <link rel="prefetch" href="/download" />
         
         {/* Manifest */}
         <link rel="manifest" href="/manifest.json" />
@@ -216,28 +218,37 @@ export default function RootLayout({
       </head>
       <body className={inter.className} suppressHydrationWarning>
         {/* Google Analytics - Optimized loading */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-R4NNPBY0R1"
-          strategy="afterInteractive"
-          defer
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-R4NNPBY0R1', {
-              page_path: window.location.pathname,
-            });
-          `}
-        </Script>
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+              strategy="afterInteractive"
+              defer
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        )}
         
-        <OrganizationSchema />
-        <WebSiteSchema />
-        <Header />
-        <main role="main">
-          {children}
-        </main>
+        <ToastProvider>
+          <OutboundLinkTracker />
+          <SkipNavigation />
+          <OrganizationSchema />
+          <WebSiteSchema />
+          <Header />
+          <main id="main-content" role="main">
+            {children}
+          </main>
+          <ScrollToTop />
+        </ToastProvider>
       </body>
     </html>
   )

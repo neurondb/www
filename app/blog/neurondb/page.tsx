@@ -441,7 +441,7 @@ SELECT * FROM neurondb.version();
 -- Results:
  version | build_date | postgresql_version 
 ---------+------------+-------------------
- 1.0.0   | 2024-01-15 | 16.0
+ 2.0     | 2026-01-05 | 18.1
 (1 row)
 \`\`\`
 
@@ -460,7 +460,7 @@ SELECT * FROM neurondb.version();
 -- Results:
  version | build_date | postgresql_version 
 ---------+------------+-------------------
- 1.0.0   | 2024-01-15 | 16.0
+ 2.0     | 2026-01-05 | 18.1
 (1 row)
 \`\`\`
 

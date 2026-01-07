@@ -12,7 +12,7 @@ export interface HeroTemplateProps {
 /**
  * HeroTemplate - Standardized hero section wrapper
  * Uses solid background color for consistent hero styling
- * Fixed height: h-[400px] for all pages
+ * Consistent height: min-h-[480px] md:min-h-[500px] for all pages
  */
 export default function HeroTemplate({
   children,
@@ -21,19 +21,24 @@ export default function HeroTemplate({
   overlay = false,
   height = 'fixed',
 }: HeroTemplateProps) {
-  const heightClass = 'h-[400px]'
+  // All heroes use EXACTLY the same height as main page: 480px (mobile), 500px (desktop)
+  // Height prop is ignored - all heroes are identical
+  const heightClass = 'min-h-[480px] md:min-h-[500px]'
 
   return (
     <section
       className={cn(
-        'relative overflow-hidden flex items-center pt-20',
+        'relative overflow-hidden flex items-center pt-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950',
         heightClass,
         className
       )}
-      style={{
-        backgroundColor: '#111827',
-      }}
     >
+      {/* Beautiful Tech Neuron Background */}
+      <div className="absolute inset-0 neuron-tech-bg"></div>
+      
+      {/* Animated mesh gradient background */}
+      <div className="absolute inset-0 gradient-mesh opacity-20"></div>
+      
       {overlay && (
         <div className="absolute inset-0 bg-black/20 pointer-events-none" />
       )}

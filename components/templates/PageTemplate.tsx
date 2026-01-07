@@ -18,8 +18,7 @@ export default function PageTemplate({
 }: PageTemplateProps) {
   return (
     <div 
-      className={cn('min-h-screen', className)}
-      style={{ backgroundColor: '#1f2937' }}
+      className={cn('min-h-screen bg-slate-800 dark:bg-slate-900', className)}
     >
       {children}
     </div>

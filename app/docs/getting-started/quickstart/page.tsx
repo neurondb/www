@@ -38,6 +38,17 @@ export default function QuickStartPage() {
     >
       <section id="prerequisites">
         <h2>Prerequisites</h2>
+        <p>
+          <strong>💡 New to NeuronDB?</strong> For the fastest setup, start with the{' '}
+          <a href="/docs/getting-started/docker">Docker Quick Start</a> which sets up the complete ecosystem (NeuronDB + NeuronAgent + NeuronMCP + NeuronDesktop) in 5 minutes.
+        </p>
+        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+          <p>
+            <strong>📦 Version Information:</strong> This guide covers NeuronDB version 2.0 (from <code>main</code> branch). 
+            For version 1.0 (stable release from <code>REL1_STABLE</code> branch), see the <a href="/docs/installation" style={{ color: '#fbbf24' }}>Installation Guide</a> for branch-specific instructions.
+          </p>
+        </div>
+        <p>For native installation, you'll need:</p>
         <ul>
           <li>PostgreSQL 16, 17, or 18 installed</li>
           <li>NeuronDB extension installed (see <a href="/docs/installation">Installation Guide</a>)</li>

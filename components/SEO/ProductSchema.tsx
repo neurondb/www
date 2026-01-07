@@ -26,7 +26,7 @@ export default function ProductSchema({ productId }: ProductSchemaProps) {
     description: product.longDescription || product.description,
     url: `${baseSEO.siteUrl}${product.productUrl}`,
     downloadUrl: product.githubUrl,
-    softwareVersion: product.version || '1.0.0',
+    softwareVersion: product.version || '2.0.0',
     releaseNotes: product.githubUrl,
     screenshot: {
       '@type': 'ImageObject',

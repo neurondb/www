@@ -41,13 +41,11 @@ export default function PostgresDocsLayout({
 }: PostgresDocsLayoutProps) {
   return (
     <div 
-      className={cn('min-h-screen', className)}
-      style={{ backgroundColor: '#1f2937' }}
+      className={cn('min-h-screen bg-slate-800 dark:bg-slate-900', className)}
     >
       {/* Header */}
       <header 
-        className="border-b border-slate-700"
-        style={{ backgroundColor: '#111827' }}
+        className="border-b border-slate-700 bg-slate-900 dark:bg-slate-950"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -139,16 +137,16 @@ export default function PostgresDocsLayout({
 
           {/* Table of Contents Sidebar */}
           {showToc && tableOfContents && tableOfContents.length > 0 && (
-            <aside className="hidden lg:block w-64 flex-shrink-0">
-              <div className="sticky top-8">
-                <div className="bg-slate-800/60 rounded-lg p-4 border border-slate-700">
-                  <div className="flex items-center gap-2 mb-4">
-                    <List className="w-4 h-4 text-white/70" />
+            <aside className="hidden lg:block w-64 flex-shrink-0" aria-label="Table of contents">
+              <div className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
+                <div className="bg-slate-800/80 backdrop-blur-sm rounded-lg p-4 border border-slate-700 shadow-lg">
+                  <div className="flex items-center gap-2 mb-4 pb-3 border-b border-slate-700">
+                    <List className="w-4 h-4 text-yellow-400" />
                     <h2 className="text-sm font-semibold text-white">
                       Table of Contents
                     </h2>
                   </div>
-                  <nav className="space-y-1">
+                  <nav className="space-y-1" aria-label="Page navigation">
                     {tableOfContents.map((item) => (
                       <TocItemComponent key={item.id} item={item} />
                     ))}
@@ -166,16 +164,25 @@ export default function PostgresDocsLayout({
 
 function TocItemComponent({ item }: { item: TocItem }) {
   const level = item.level ?? 1
-  const indent = level > 1 ? `ml-${(level - 1) * 4}` : ''
+  const indentClass = level > 1 ? `ml-${(level - 1) * 4}` : ''
 
   return (
     <div>
       <a
         href={`#${item.id}`}
         className={cn(
-          'block text-sm text-yellow-400 hover:text-yellow-300 py-1 transition-colors',
-          indent
+          'block text-sm text-yellow-400 hover:text-yellow-300 py-1.5 px-2 rounded transition-all duration-200 hover:bg-slate-700/50 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-slate-800',
+          indentClass
         )}
+        onClick={(e) => {
+          e.preventDefault()
+          const element = document.getElementById(item.id)
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            // Update URL without jumping
+            window.history.pushState(null, '', `#${item.id}`)
+          }
+        }}
       >
         {item.title}
       </a>

@@ -15,7 +15,8 @@ export const metadata: Metadata = {
 const tableOfContents: TocItem[] = [
   { id: 'choose-method', title: 'Choose Installation Method' },
   { id: 'docker-method', title: 'Method 1: Docker (Recommended)' },
-  { id: 'source-method', title: 'Method 2: Source Build' },
+  { id: 'package-method', title: 'Method 2: DEB/RPM Packages' },
+  { id: 'source-method', title: 'Method 3: Source Build' },
   { id: 'prerequisites', title: 'Prerequisites' },
   { id: 'ubuntu-debian', title: 'Ubuntu / Debian' },
   { id: 'macos', title: 'macOS (Homebrew)' },
@@ -44,6 +45,15 @@ export default function NeuronDBInstallationPage() {
     >
       <section id="choose-method">
         <h2>Choose Installation Method</h2>
+        
+        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginBottom: '1rem' }}>
+          <p>
+            <strong>📌 Version Information:</strong> This documentation reflects <strong>NeuronDB 2.0.0</strong> from the <code>main</code> branch.
+            For the stable 1.0.0 release, use the <code>REL1_STABLE</code> branch. See the{' '}
+            <a href="https://github.com/neurondb-ai/neurondb" target="_blank" rel="noopener noreferrer" style={{ color: '#fbbf24' }}>GitHub repository</a> for branch information.
+          </p>
+        </div>
+
         <p>NeuronDB can be installed via Docker (recommended) or built from source:</p>
 
         <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '1rem', marginBottom: '1rem' }}>
@@ -63,6 +73,15 @@ export default function NeuronDBInstallationPage() {
               </td>
               <td style={{ padding: '0.75rem' }}>Most users, includes full ecosystem</td>
               <td style={{ padding: '0.75rem' }}>5 minutes</td>
+            </tr>
+            <tr style={{ borderBottom: '1px solid #374151' }}>
+              <td style={{ padding: '0.75rem' }}>
+                <strong>
+                  <a href="#package-method">DEB/RPM Packages</a>
+                </strong>
+              </td>
+              <td style={{ padding: '0.75rem' }}>Ubuntu/Debian, Rocky Linux/RHEL</td>
+              <td style={{ padding: '0.75rem' }}>2 minutes</td>
             </tr>
             <tr>
               <td style={{ padding: '0.75rem' }}>
@@ -92,12 +111,27 @@ export default function NeuronDBInstallationPage() {
         </p>
 
         <BashCodeBlock
-          title="Quick start with Docker"
-          code={`# Clone repository
+          title="Quick start with Docker (Version 2.0 - main branch)"
+          code={`# Clone repository (defaults to main branch for version 2.0)
 git clone https://github.com/neurondb-ai/neurondb.git
 cd neurondb
 
+# For stable 1.0.0 release, checkout REL1_STABLE branch:
+# git checkout REL1_STABLE
+
 # Start all services (NeuronDB + NeuronAgent + NeuronMCP + NeuronDesktop)
+docker compose up -d
+
+# Verify services
+docker compose ps`}
+        />
+        <BashCodeBlock
+          title="Quick start with Docker (Version 1.0 - REL1_STABLE branch)"
+          code={`# Clone REL1_STABLE branch for version 1.0 (stable release)
+git clone -b REL1_STABLE https://github.com/neurondb-ai/neurondb.git
+cd neurondb
+
+# Start all services
 docker compose up -d
 
 # Verify services
@@ -117,10 +151,96 @@ docker compose ps`}
             <a href="/docs/getting-started/docker">View complete Docker installation guide →</a>
           </strong>
         </p>
+
+        <h3>Docker Images from GitHub Container Registry</h3>
+        <p>
+          Pre-built Docker images are available from GitHub Container Registry (GHCR). Pull specific versions:
+        </p>
+        <BashCodeBlock
+          title="Pull Docker images"
+          code={`# Pull latest images (version 2.0 from main branch)
+docker compose pull
+
+# Pull specific version (example)
+docker pull ghcr.io/neurondb/neurondb-postgres:v2.0.0-pg17-cpu
+
+# For version 1.0 (stable release from REL1_STABLE branch)
+docker pull ghcr.io/neurondb/neurondb-postgres:v1.0.0-pg17-cpu
+
+# Start services
+docker compose up -d`}
+        />
+        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+          <p>
+            <strong>📦 Version Information:</strong> 
+            <ul style={{ marginTop: '0.5rem', paddingLeft: '1.5rem' }}>
+              <li><strong>Version 2.0</strong> (main branch): Latest features, improvements, and bug fixes</li>
+              <li><strong>Version 1.0</strong> (REL1_STABLE branch): Stable production release, recommended for production deployments</li>
+            </ul>
+          </p>
+        </div>
+        <p>
+          Available image tags include variants for PostgreSQL 16/17/18 and GPU profiles (CPU, CUDA, ROCm, Metal).
+          See <a href="https://github.com/neurondb-ai/neurondb/pkgs/container/neurondb-postgres" target="_blank" rel="noopener noreferrer">GHCR packages</a> for all available images.
+        </p>
+      </section>
+
+      <section id="package-method">
+        <h2>Method 2: DEB/RPM Packages</h2>
+        <p>
+          Install NeuronDB using native package managers for Ubuntu/Debian (DEB) or Rocky Linux/RHEL (RPM).
+          Packages are available from GitHub Releases.
+        </p>
+
+        <h3>Ubuntu / Debian (DEB)</h3>
+        <BashCodeBlock
+          title="Install DEB package"
+          code={`# Download latest DEB package from GitHub Releases
+# Visit: https://github.com/neurondb-ai/neurondb/releases
+
+# Install package (replace with actual version)
+sudo dpkg -i neurondb_2.0.0_amd64.deb
+
+# Install dependencies if needed
+sudo apt-get install -f
+
+# Verify installation
+psql -d postgres -c "CREATE EXTENSION neurondb;"
+psql -d postgres -c "SELECT extversion FROM pg_extension WHERE extname = 'neurondb';"`}
+        />
+
+        <h3>Rocky Linux / RHEL (RPM)</h3>
+        <BashCodeBlock
+          title="Install RPM package"
+          code={`# Download latest RPM package from GitHub Releases
+# Visit: https://github.com/neurondb-ai/neurondb/releases
+
+# Install package (replace with actual version)
+sudo rpm -ivh neurondb-2.0.0-1.x86_64.rpm
+
+# Or use yum/dnf
+sudo yum install neurondb-2.0.0-1.x86_64.rpm
+
+# Verify installation
+psql -d postgres -c "CREATE EXTENSION neurondb;"
+psql -d postgres -c "SELECT extversion FROM pg_extension WHERE extname = 'neurondb';"`}
+        />
+
+        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+          <p>
+            <strong>📦 Package Availability:</strong> DEB and RPM packages are built for each release starting with v2.0.0.
+            Download packages from <a href="https://github.com/neurondb-ai/neurondb/releases" target="_blank" rel="noopener noreferrer" style={{ color: '#fbbf24' }}>GitHub Releases</a>.
+          </p>
+        </div>
+
+        <p>
+          <strong>Note:</strong> Package installation only includes the NeuronDB PostgreSQL extension.
+          For the complete ecosystem (NeuronAgent, NeuronMCP, NeuronDesktop), use Docker or build from source.
+        </p>
       </section>
 
       <section id="source-method">
-        <h2>Method 2: Source Build</h2>
+        <h2>Method 3: Source Build</h2>
         <p>
           Build NeuronDB from source for production deployments or custom configurations. This installs only the PostgreSQL extension; you'll need to separately build NeuronAgent, NeuronMCP, and NeuronDesktop if you want the full ecosystem.
         </p>
@@ -166,12 +286,26 @@ sudo apt-get install -y postgresql-17 \\
 
         <h3>Compile & install</h3>
         <BashCodeBlock
-          title="Build NeuronDB"
-          code={`git clone https://github.com/neurondb-ai/neurondb.git
-cd NeuronDB
+          title="Build NeuronDB (Version 2.0 - main branch)"
+          code={`# Clone repository (defaults to main branch for version 2.0)
+git clone https://github.com/neurondb-ai/neurondb.git
+cd neurondb/NeuronDB
 make PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config
 sudo make install PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config`}
         />
+        <BashCodeBlock
+          title="Build NeuronDB (Version 1.0 - REL1_STABLE branch)"
+          code={`# Clone REL1_STABLE branch for version 1.0 (stable release)
+git clone -b REL1_STABLE https://github.com/neurondb-ai/neurondb.git
+cd neurondb/NeuronDB
+make PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config
+sudo make install PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config`}
+        />
+        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+          <p>
+            <strong>💡 Branch Selection:</strong> Use <code>main</code> branch for version 2.0 (latest features) or <code>REL1_STABLE</code> branch for version 1.0 (stable production release).
+          </p>
+        </div>
 
         <h3>Verify artifacts</h3>
         <BashCodeBlock
@@ -194,9 +328,18 @@ brew services start postgresql@17`}
 
         <h3>Compile & install</h3>
         <BashCodeBlock
-          title="Build NeuronDB"
-          code={`git clone https://github.com/neurondb-ai/neurondb.git
-cd NeuronDB
+          title="Build NeuronDB (Version 2.0 - main branch)"
+          code={`# Clone repository (defaults to main branch for version 2.0)
+git clone https://github.com/neurondb-ai/neurondb.git
+cd neurondb/NeuronDB
+make PG_CONFIG=/opt/homebrew/opt/postgresql@17/bin/pg_config
+sudo make install PG_CONFIG=/opt/homebrew/opt/postgresql@17/bin/pg_config`}
+        />
+        <BashCodeBlock
+          title="Build NeuronDB (Version 1.0 - REL1_STABLE branch)"
+          code={`# Clone REL1_STABLE branch for version 1.0 (stable release)
+git clone -b REL1_STABLE https://github.com/neurondb-ai/neurondb.git
+cd neurondb/NeuronDB
 make PG_CONFIG=/opt/homebrew/opt/postgresql@17/bin/pg_config
 sudo make install PG_CONFIG=/opt/homebrew/opt/postgresql@17/bin/pg_config`}
         />
@@ -228,9 +371,18 @@ sudo make install PG_CONFIG=/opt/homebrew/opt/postgresql@17/bin/pg_config`}
 
         <h3>Compile & install</h3>
         <BashCodeBlock
-          title="Build NeuronDB"
-          code={`git clone https://github.com/neurondb-ai/neurondb.git
-cd NeuronDB
+          title="Build NeuronDB (Version 2.0 - main branch)"
+          code={`# Clone repository (defaults to main branch for version 2.0)
+git clone https://github.com/neurondb-ai/neurondb.git
+cd neurondb/NeuronDB
+make PG_CONFIG=/usr/pgsql-17/bin/pg_config
+sudo make install PG_CONFIG=/usr/pgsql-17/bin/pg_config`}
+        />
+        <BashCodeBlock
+          title="Build NeuronDB (Version 1.0 - REL1_STABLE branch)"
+          code={`# Clone REL1_STABLE branch for version 1.0 (stable release)
+git clone -b REL1_STABLE https://github.com/neurondb-ai/neurondb.git
+cd neurondb/NeuronDB
 make PG_CONFIG=/usr/pgsql-17/bin/pg_config
 sudo make install PG_CONFIG=/usr/pgsql-17/bin/pg_config`}
         />
@@ -254,6 +406,26 @@ SELECT extversion
 FROM   pg_extension
 WHERE  extname = 'neurondb';`}
         />
+
+        <h3>Upgrade from version 1.0 to 2.0</h3>
+        <p>
+          If you're upgrading from NeuronDB 1.0, use the upgrade command:
+        </p>
+        <SqlCodeBlock
+          title="Upgrade extension"
+          code={`-- Check current version
+SELECT extversion FROM pg_extension WHERE extname = 'neurondb';
+
+-- Upgrade to version 2.0
+ALTER EXTENSION neurondb UPDATE TO '2.0';
+
+-- Verify upgrade
+SELECT extversion FROM pg_extension WHERE extname = 'neurondb';`}
+        />
+        <p>
+          The upgrade script <code>neurondb--1.0--2.0.sql</code> will automatically run during the upgrade process.
+          This ensures compatibility between versions and preserves all your data and indexes.
+        </p>
 
         <h3>Optional GPU configuration</h3>
         <BashCodeBlock

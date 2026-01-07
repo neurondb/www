@@ -67,7 +67,7 @@ export default function Page() {
         badgeGradient: 'from-slate-700 to-slate-600',
         title: 'NeuronDB Documentation',
         description:
-          'GPU-accelerated vector search, model inference, hybrid retrieval, and RAG orchestration in PostgreSQL. NeuronDB is a PostgreSQL AI extension. Use this documentation to deploy NeuronDB, operate background workers, and embed ML pipelines in SQL.',
+          'GPU-accelerated vector search, model inference, hybrid retrieval, and RAG orchestration in PostgreSQL. NeuronDB is a PostgreSQL AI extension. Use this documentation to deploy NeuronDB, operate background workers, and embed ML pipelines in SQL. This documentation reflects NeuronDB 2.0.0 (main branch). For the stable 1.0.0 release, use the REL1_STABLE branch.',
         ctas: [
           {
             label: 'Get Started',

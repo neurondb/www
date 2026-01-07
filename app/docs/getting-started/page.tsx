@@ -60,6 +60,15 @@ export default function NeuronDBGettingStarted() {
     >
       <section id="introduction">
         <h2>Introduction</h2>
+        
+        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginBottom: '1rem' }}>
+          <p>
+            <strong>📌 Version & Branch Information:</strong> This documentation reflects <strong>NeuronDB 2.0.0</strong> from the <code>main</code> branch (latest development).
+            For production deployments requiring the stable 1.0.0 release, use the <code>REL1_STABLE</code> branch. See{' '}
+            <a href="https://github.com/neurondb-ai/neurondb" target="_blank" rel="noopener noreferrer" style={{ color: '#fbbf24' }}>GitHub repository</a> for branch details.
+          </p>
+        </div>
+
         <p>
           NeuronDB is a PostgreSQL AI ecosystem that provides GPU-accelerated vector search, ML inference, hybrid retrieval, and complete agent infrastructure. The ecosystem includes:
         </p>
@@ -126,9 +135,12 @@ export default function NeuronDBGettingStarted() {
 
         <BashCodeBlock
           title="Start complete ecosystem"
-          code={`# Clone repository
+          code={`# Clone repository (main branch = 2.0.0)
 git clone https://github.com/neurondb-ai/neurondb.git
 cd neurondb
+
+# For stable 1.0.0 release, checkout REL1_STABLE branch:
+# git checkout REL1_STABLE
 
 # Start all services
 docker compose up -d
@@ -166,6 +178,11 @@ docker compose ps`}
           code={`sudo apt-get install -y postgresql-17 postgresql-server-dev-17 build-essential
 
 git clone https://github.com/neurondb-ai/neurondb.git
+cd neurondb
+
+# For stable 1.0.0 release, checkout REL1_STABLE branch:
+# git checkout REL1_STABLE
+
 cd NeuronDB
 make PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config
 sudo make install PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config`}

@@ -61,6 +61,14 @@ export default function DockerQuickStartPage() {
     >
       <section id="introduction">
         <h2>Introduction</h2>
+        
+        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginBottom: '1rem' }}>
+          <p>
+            <strong>📌 Version Information:</strong> This guide uses <strong>NeuronDB 2.0.0</strong> from the <code>main</code> branch.
+            For production deployments requiring the stable 1.0.0 release, checkout the <code>REL1_STABLE</code> branch before running Docker Compose.
+          </p>
+        </div>
+
         <p>
           This guide gets the complete NeuronDB ecosystem running in under 5 minutes using Docker Compose. The ecosystem includes:
         </p>
@@ -112,13 +120,48 @@ docker compose version`}
         <p>Start the complete NeuronDB ecosystem with a single command:</p>
 
         <h3>Step 1: Clone the Repository</h3>
+        <p>Choose the branch based on your needs:</p>
         <BashCodeBlock
-          title="Clone repository"
-          code={`git clone https://github.com/neurondb-ai/neurondb.git
+          title="Clone repository (Version 2.0 - main branch, recommended)"
+          code={`# Clone main branch for version 2.0 (latest features)
+git clone https://github.com/neurondb-ai/neurondb.git
 cd neurondb`}
         />
+        <BashCodeBlock
+          title="Clone repository (Version 1.0 - REL1_STABLE branch, stable release)"
+          code={`# Clone REL1_STABLE branch for version 1.0 (stable production release)
+git clone -b REL1_STABLE https://github.com/neurondb-ai/neurondb.git
+cd neurondb`}
+        />
+        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+          <p>
+            <strong>💡 Branch Selection:</strong> 
+            <ul style={{ marginTop: '0.5rem', paddingLeft: '1.5rem' }}>
+              <li><strong>main branch</strong>: Version 2.0 with latest features, improvements, and bug fixes (default)</li>
+              <li><strong>REL1_STABLE branch</strong>: Version 1.0 stable release, recommended for production deployments requiring maximum stability</li>
+            </ul>
+          </p>
+        </div>
 
-        <h3>Step 2: Start All Services</h3>
+        <h3>Step 2: Pull Pre-built Images (Recommended)</h3>
+        <BashCodeBlock
+          title="Pull images from GitHub Container Registry"
+          code={`# Pull latest pre-built images from GHCR (version 2.0 from main branch)
+docker compose pull
+
+# Or pull specific version
+# For version 2.0: docker pull ghcr.io/neurondb/neurondb-postgres:v2.0.0-pg17-cpu
+# For version 1.0: docker pull ghcr.io/neurondb/neurondb-postgres:v1.0.0-pg17-cpu`}
+        />
+        <p>
+            Pre-built Docker images are available from <a href="https://github.com/neurondb-ai/neurondb/pkgs/container/neurondb-postgres" target="_blank" rel="noopener noreferrer">GitHub Container Registry (GHCR)</a>.
+          This is faster than building from source and ensures you're using tested, production-ready images.
+        </p>
+        <p>
+          <strong>Note:</strong> Docker images are tagged by version. Version 2.0 images are built from the <code>main</code> branch, while version 1.0 images are built from the <code>REL1_STABLE</code> branch.
+        </p>
+
+        <h3>Step 3: Start All Services</h3>
         <BashCodeBlock
           title="Start ecosystem (CPU profile)"
           code={`# Start all services with CPU profile (default)
@@ -129,7 +172,7 @@ docker compose up -d`}
           This command will:
         </p>
         <ul>
-          <li>Build all Docker images (first time only, takes 5-10 minutes)</li>
+          <li>Use pre-built images from GHCR (or build from source if not pulled)</li>
           <li>Start PostgreSQL with NeuronDB extension</li>
           <li>Start NeuronAgent (REST API server on port 8080)</li>
           <li>Start NeuronMCP (MCP protocol server)</li>
@@ -137,7 +180,15 @@ docker compose up -d`}
           <li>Configure networking between all components</li>
         </ul>
 
-        <h3>Step 3: Check Service Status</h3>
+        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+          <p>
+            <strong>💡 Using Pre-built Images:</strong> Images are published to GHCR starting with v2.0.0.
+            Available variants include PostgreSQL 16/17/18 and GPU profiles (CPU, CUDA, ROCm, Metal).
+            See <a href="https://github.com/neurondb-ai/neurondb/pkgs/container/neurondb-postgres" target="_blank" rel="noopener noreferrer" style={{ color: '#fbbf24' }}>GHCR packages</a> for all available images.
+          </p>
+        </div>
+
+        <h3>Step 4: Check Service Status</h3>
         <BashCodeBlock
           title="Verify all services are running"
           code={`docker compose ps`}
@@ -168,7 +219,7 @@ docker compose up -d`}
           title="Verify NeuronDB extension"
           code={`docker compose exec neurondb psql -U neurondb -d neurondb -c "SELECT neurondb.version();"`}
         />
-        <p>Expected output: <code>1.0.0</code></p>
+        <p>Expected output: <code>2.0</code></p>
 
         <h3>Test 2: NeuronAgent REST API</h3>
         <BashCodeBlock

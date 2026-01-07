@@ -542,7 +542,7 @@ NeuronAgent provides the agent runtime. Download the NeuronAgent binary. Extract
 
 \`\`\`bash
 # Download NeuronAgent (example)
-# wget https://github.com/neurondb-ai/neurondb/releases/download/v1.0.0/neuronagent-linux-amd64
+# wget https://github.com/neurondb-ai/neurondb/releases/download/v2.0.0/neuronagent-linux-amd64
 # chmod +x neuronagent-linux-amd64
 # mv neuronagent-linux-amd64 ./bin/neuronagent
 

@@ -113,6 +113,18 @@ const capabilities = [
     performance: 'WebSocket-based real-time updates',
     productionReady: true,
   },
+  {
+    capability: 'Client SDKs',
+    description: 'Official Python SDK (neuronagent) and TypeScript/JavaScript SDKs (@neurondb/neuronagent, @neurondb/neurondesktop) with full API coverage, type safety, and examples',
+    performance: 'Auto-generated from OpenAPI specs',
+    productionReady: true,
+  },
+  {
+    capability: 'Benchmark Suite',
+    description: 'Comprehensive benchmark suite: Vector (SIFT-128, GIST-960, GloVe-100), Hybrid (BEIR datasets), RAG (MTEB, BEIR, RAGAS). Metrics: QPS, Recall, Latency, NDCG, MAP, Faithfulness, Relevancy',
+    performance: 'Reproducible benchmarks with hardware profiles',
+    productionReady: true,
+  },
 ]
 
 export default function CapabilitiesSection() {
