@@ -16,7 +16,12 @@ Disallow: /search?*
 Allow: /
 Allow: /neurondb
 Allow: /docs/
+Allow: /docs/neurondb
+Allow: /docs/neuronagent
+Allow: /docs/neuronmcp
+Allow: /docs/neurondesktop
 Allow: /blog/
+Allow: /tutorials/
 Allow: /download
 Allow: /contact
 Allow: /community
@@ -29,6 +34,9 @@ Crawl-delay: 0
 User-agent: Googlebot-Image
 Allow: /favicons/
 Allow: /og-image.jpg
+Allow: /n-db.png
+Allow: /n-mcp.png
+Allow: /n-agent.png
 Disallow: /*.json$
 
 User-agent: Bingbot

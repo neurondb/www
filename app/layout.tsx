@@ -25,10 +25,10 @@ export const viewport: Viewport = {
   maximumScale: 5,
   userScalable: true,
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: light)', color: '#0f172a' },
     { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
   ],
-  colorScheme: 'light dark',
+  colorScheme: 'dark',
 }
 
 const baseUrl = `https://${siteConfig.domain}`
@@ -186,7 +186,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth dark" suppressHydrationWarning>
       <head>
         {/* Resource hints for performance */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />

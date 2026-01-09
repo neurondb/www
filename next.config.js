@@ -118,6 +118,15 @@ const nextConfig = {
         ]
       },
       {
+        source: '/n-:image.(png|jpg|jpeg|webp|avif)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
         source: '/sitemap.xml',
         headers: [
           {
@@ -181,6 +190,9 @@ const nextConfig = {
   // Experimental features for optimization
   experimental: {
     optimizePackageImports: ['lucide-react', 'react-syntax-highlighter'],
+    // Vercel optimizations - CSS optimization handled automatically
+    // Enable server components optimization
+    serverComponentsExternalPackages: [],
   },
   
   // Disable CSS inlining optimization to avoid critters dependency issues

@@ -67,19 +67,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Product pages - High priority
   const productPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/neuronagent`,
+      url: `${baseUrl}/docs/neurondb`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.95,
     },
     {
-      url: `${baseUrl}/neuronmcp`,
+      url: `${baseUrl}/docs/neuronagent`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.95,
     },
     {
-      url: `${baseUrl}/neurondesktop`,
+      url: `${baseUrl}/docs/neuronmcp`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/docs/neurondesktop`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/neurondb`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
