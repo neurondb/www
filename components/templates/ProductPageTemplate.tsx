@@ -144,36 +144,42 @@ export default function ProductPageTemplate({
     switch (productId) {
       case 'neurondb':
         return (
-          <Image
-            src="/n-db.png"
-            alt={`${product.displayName}: ${product.tagline}`}
-            width={600}
-            height={600}
-            className="w-full h-auto max-w-[500px]"
-            priority
-          />
+          <div className="relative w-full flex items-center justify-center">
+            <Image
+              src="/n-db.png"
+              alt={`${product.displayName}: ${product.tagline}`}
+              width={600}
+              height={600}
+              className="w-full h-auto max-w-[500px]"
+              priority
+            />
+          </div>
         )
       case 'neuronmcp':
         return (
-          <Image
-            src="/n-mcp.png"
-            alt={`${product.displayName}: ${product.tagline}`}
-            width={600}
-            height={600}
-            className="w-full h-auto max-w-[500px]"
-            priority
-          />
+          <div className="relative w-full flex items-center justify-center">
+            <Image
+              src="/n-mcp.png"
+              alt={`${product.displayName}: ${product.tagline}`}
+              width={600}
+              height={600}
+              className="w-full h-auto max-w-[500px]"
+              priority
+            />
+          </div>
         )
       case 'neuronagent':
         return (
-          <Image
-            src="/n-agent.png"
-            alt={`${product.displayName}: ${product.tagline}`}
-            width={600}
-            height={600}
-            className="w-full h-auto max-w-[500px]"
-            priority
-          />
+          <div className="relative w-full flex items-center justify-center">
+            <Image
+              src="/n-agent.png"
+              alt={`${product.displayName}: ${product.tagline}`}
+              width={600}
+              height={600}
+              className="w-full h-auto max-w-[500px]"
+              priority
+            />
+          </div>
         )
       case 'neurondesktop':
         return <NeuronDesktopHeroArt size={280} className="text-slate-600 dark:text-slate-400" />
@@ -271,7 +277,7 @@ export default function ProductPageTemplate({
                   {product.category}
                 </div>
               </div>
-              <div className="relative w-full rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-lg bg-white dark:bg-slate-900 flex items-center justify-center min-h-[400px]">
+              <div className="relative w-full rounded-2xl overflow-hidden flex items-center justify-center min-h-[400px]">
                 <div className="p-8 w-full flex items-center justify-center">
                   {getHeroArt()}
                 </div>

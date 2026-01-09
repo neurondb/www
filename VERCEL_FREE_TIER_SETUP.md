@@ -84,3 +84,4 @@ UPDATE blog_comments SET approved = true WHERE id = 123;
 That's it! Your comments system is ready and **100% free**! 🚀
 
 
+
