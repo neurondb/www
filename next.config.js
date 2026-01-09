@@ -56,6 +56,10 @@ const nextConfig = {
           {
             key: 'Strict-Transport-Security',
             value: 'max-age=31536000; includeSubDomains'
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800'
           }
         ]
       },
@@ -189,10 +193,19 @@ const nextConfig = {
   
   // Experimental features for optimization
   experimental: {
-    optimizePackageImports: ['lucide-react', 'react-syntax-highlighter'],
+    optimizePackageImports: [
+      'lucide-react',
+      'react-syntax-highlighter',
+      'react-markdown',
+      'prism-react-renderer',
+    ],
     // Vercel optimizations - CSS optimization handled automatically
     // Enable server components optimization
     serverComponentsExternalPackages: [],
+    // Optimize server actions
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
   },
   
   // Disable CSS inlining optimization to avoid critters dependency issues
@@ -214,6 +227,21 @@ const nextConfig = {
           chunks: 'all',
           test: /node_modules/,
           priority: 20,
+          reuseExistingChunk: true,
+        },
+        // Separate large libraries
+        reactSyntaxHighlighter: {
+          name: 'syntax-highlighter',
+          test: /[\\/]node_modules[\\/](react-syntax-highlighter|prism-react-renderer)[\\/]/,
+          chunks: 'all',
+          priority: 15,
+          reuseExistingChunk: true,
+        },
+        reactMarkdown: {
+          name: 'markdown',
+          test: /[\\/]node_modules[\\/](react-markdown|remark|rehype)[\\/]/,
+          chunks: 'all',
+          priority: 15,
           reuseExistingChunk: true,
         },
       }

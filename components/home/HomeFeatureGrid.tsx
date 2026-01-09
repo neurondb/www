@@ -63,20 +63,20 @@ const tiles: Tile[] = [
 
 export default function HomeFeatureGrid() {
   return (
-    <section className="bg-white dark:bg-slate-900">
+    <section className="bg-slate-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex items-end justify-between gap-6 mb-8">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900 dark:text-white">
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white">
               One platform. SQL-first.
             </h2>
-            <p className="mt-2 text-slate-600 dark:text-slate-300 max-w-2xl">
+            <p className="mt-2 text-slate-300 max-w-2xl">
               Vector, ML, and RAG primitives that run where your data lives.
             </p>
           </div>
           <Link
             href="/docs"
-            className="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white"
+            className="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-slate-200 hover:text-white"
           >
             Browse docs <ArrowRight className="w-4 h-4" />
           </Link>
@@ -89,29 +89,29 @@ export default function HomeFeatureGrid() {
               <Link
                 key={t.title}
                 href={t.href}
-                className="group block rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-6 hover:border-slate-300 dark:hover:border-slate-700 transition-colors"
+                className="group block rounded-2xl border border-slate-800 bg-slate-950 p-6 hover:border-slate-700 transition-colors"
               >
                 <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center">
-                    <Icon className="w-5 h-5 text-slate-700 dark:text-slate-200" />
+                  <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-slate-200" />
                   </div>
-                  <div className="text-xs font-mono text-slate-500 dark:text-slate-400">{t.meta}</div>
+                  <div className="text-xs font-mono text-slate-400">{t.meta}</div>
                 </div>
 
-                <h3 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">
+                <h3 className="mt-4 text-lg font-semibold text-white">
                   {t.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">
                   {t.description}
                 </p>
 
-                <div className="mt-4 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 p-3">
-                  <code className="text-xs font-mono text-slate-700 dark:text-slate-200">
+                <div className="mt-4 rounded-lg border border-slate-800 bg-slate-900 p-3">
+                  <code className="text-xs font-mono text-slate-200">
                     {t.code}
                   </code>
                 </div>
 
-                <div className="mt-4 text-sm font-semibold text-slate-700 dark:text-slate-200 inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                <div className="mt-4 text-sm font-semibold text-slate-200 inline-flex items-center gap-2 group-hover:gap-3 transition-all">
                   Learn more <ArrowRight className="w-4 h-4" />
                 </div>
               </Link>
@@ -122,7 +122,7 @@ export default function HomeFeatureGrid() {
         <div className="mt-8 sm:hidden">
           <Link
             href="/docs"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-200 hover:text-white"
           >
             Browse docs <ArrowRight className="w-4 h-4" />
           </Link>

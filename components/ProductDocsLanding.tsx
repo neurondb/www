@@ -77,18 +77,18 @@ interface LandingTheme {
 const DEFAULT_THEME: LandingTheme = {
   pageBackground: '',
   heroOverlay: '',
-  badgeContainerBg: 'bg-white/80 dark:bg-slate-800/80',
+  badgeContainerBg: 'bg-slate-800/80',
   badgeRing: 'ring-gray-900/10 dark:ring-white/10',
   primaryButtonClass:
     'inline-flex items-center gap-2 rounded-xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-slate-800',
   secondaryButtonClass:
     'inline-flex items-center gap-2 rounded-xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 dark:border-slate-600 dark:text-slate-200',
-  featureCardClass: 'rounded-2xl border border-slate-200 bg-white/85 p-6 shadow-sm dark:border-slate-700/60 dark:bg-slate-900/60',
+  featureCardClass: 'rounded-2xl border border-slate-700/60 bg-slate-900/60 p-6 shadow-sm',
   featureIconClass: 'text-yellow-400',
-  docCardClass: 'rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm dark:border-slate-700/60 dark:bg-slate-900/60',
+  docCardClass: 'rounded-2xl border border-slate-700/60 bg-slate-900/60 p-6 shadow-sm',
   linkHoverClass: 'hover:text-yellow-300',
   quickLinkCardClass:
-    'rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm transition hover:border-yellow-300 dark:border-slate-700/60 dark:bg-slate-900/60',
+    'rounded-2xl border border-slate-700/60 bg-slate-900/60 p-6 shadow-sm transition hover:border-yellow-300',
   quickLinkIconClass: 'text-yellow-400',
   quickLinkHoverLabelClass: 'text-yellow-400'
 }
@@ -98,11 +98,11 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
 
   return (
     <div 
-      className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950"
+      className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
     >
       {/* Hero Section */}
       <section 
-        className="relative overflow-hidden min-h-[400px] flex items-center pt-20 bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950"
+        className="relative overflow-hidden min-h-[400px] flex items-center pt-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
       >
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8 w-full py-20">
           <div className="mx-auto max-w-3xl text-center w-full">
@@ -119,8 +119,8 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
               </div>
             )}
 
-            <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">{hero.title}</h1>
-            <p className="mt-6 text-lg leading-8 text-slate-700 dark:text-slate-300">{hero.description}</p>
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">{hero.title}</h1>
+            <p className="mt-6 text-lg leading-8 text-slate-300">{hero.description}</p>
 
             {hero.ctas && hero.ctas.length > 0 ? (
               <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -147,15 +147,15 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
 
       {/* Feature Highlights */}
       {features.length > 0 ? (
-        <section className="py-16 bg-white dark:bg-slate-900">
+        <section className="py-16 bg-slate-900">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="text-center text-2xl font-semibold text-slate-900 dark:text-white">Key Capabilities</h2>
+            <h2 className="text-center text-2xl font-semibold text-white">Key Capabilities</h2>
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {features.map(({ icon: Icon, title, description, href }) => {
                 const content = (
                   <>
                     <Icon className={`h-6 w-6 ${themeClasses.featureIconClass}`} />
-                    <h3 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">{title}</h3>
+                    <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
                     <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">{description}</p>
                   </>
                 )
@@ -190,13 +190,13 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
 
       {/* Documentation Sections */}
       {docSections.length > 0 ? (
-        <section className="py-16 bg-white dark:bg-slate-900">
+        <section className="py-16 bg-slate-900">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="text-center text-2xl font-semibold text-slate-900 dark:text-white">Documentation Library</h2>
+            <h2 className="text-center text-2xl font-semibold text-white">Documentation Library</h2>
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {docSections.map((section) => (
                 <div key={section.title} className={themeClasses.docCardClass}>
-                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{section.title}</h3>
+                  <h3 className="text-xl font-semibold text-white">{section.title}</h3>
                   <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">{section.description}</p>
                   <ul className="mt-4 space-y-2 text-sm">
                     {section.items.map((item) => (
@@ -223,7 +223,7 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
       {quickLinks.length > 0 ? (
         <section className="pb-24 bg-white dark:bg-slate-900">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="text-center text-2xl font-semibold text-slate-900 dark:text-white">Quick Links</h2>
+            <h2 className="text-center text-2xl font-semibold text-white">Quick Links</h2>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {quickLinks.map(({ title, description, href, icon: Icon, external }) => {
                 const Component = external ? 'a' : Link
@@ -234,7 +234,7 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
                 return (
                   <Component key={href} {...props} className={themeClasses.quickLinkCardClass}>
                     <Icon className={`h-6 w-6 ${themeClasses.quickLinkIconClass}`} />
-                    <h3 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">{title}</h3>
+                    <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
                     <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">{description}</p>
                     <span
                       className={`mt-4 inline-flex items-center text-sm font-semibold text-yellow-600 dark:text-yellow-400 hover:text-yellow-700 dark:hover:text-yellow-300 transition-colors`}

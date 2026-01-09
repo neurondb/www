@@ -40,11 +40,11 @@ Message: ${formData.message}
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       <HeroTemplate height="default" className="text-center pt-20">
         <div className="container-extra-wide relative z-10 w-full">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-4">
               Contact Us
             </h1>
             <p className="text-lg md:text-xl font-normal text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
@@ -54,15 +54,15 @@ Message: ${formData.message}
         </div>
       </HeroTemplate>
 
-      <section className="py-24 bg-white dark:bg-slate-900">
+      <section className="py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="mb-12 space-y-6">
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Email Support</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Email Support</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-3">
                 Email for general inquiries and support: <Link
                   href={`mailto:${siteConfig.email}`}
-                  className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 font-semibold transition-colors"
+                  className="text-yellow-400 hover:text-yellow-300 font-semibold transition-colors"
                 >
                   {siteConfig.email}
                 </Link>
@@ -70,13 +70,13 @@ Message: ${formData.message}
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">GitHub</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">GitHub</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-3">
                 Report issues, request features, or contribute: <Link
                   href={siteConfig.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 font-semibold transition-colors"
+                  className="text-yellow-400 hover:text-yellow-300 font-semibold transition-colors"
                 >
                   View Repository
                 </Link>
@@ -84,11 +84,11 @@ Message: ${formData.message}
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Documentation</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Documentation</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-3">
                 Documentation and guides: <Link
                   href="/docs"
-                  className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 font-semibold transition-colors"
+                  className="text-yellow-400 hover:text-yellow-300 font-semibold transition-colors"
                 >
                   View Documentation
                 </Link>
@@ -168,7 +168,7 @@ Message: ${formData.message}
 
               <button
                 type="submit"
-                className="w-full py-3 px-6 bg-slate-900 dark:bg-yellow-400 hover:bg-slate-800 dark:hover:bg-yellow-300 text-white dark:text-slate-900 font-semibold rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="w-full py-3 px-6 bg-yellow-400 hover:bg-yellow-300 text-slate-900 font-semibold rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <Send className="w-5 h-5" />
                 Send Message

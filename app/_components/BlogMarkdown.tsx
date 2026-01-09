@@ -307,32 +307,32 @@ export function BlogMarkdown({ children }: { children: string }) {
         components={{
           // Headings with proper sizing and styling
           h1({ node, children, ...props }: any) {
-            return <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-yellow-400 mb-8 mt-12 first:mt-0 leading-tight" {...props}>{children}</h1>;
+            return <h1 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-8 mt-12 first:mt-0 leading-tight" {...props}>{children}</h1>;
           },
           h2({ node, children, ...props }: any) {
             const text = typeof children === 'string' ? children : children?.toString() || '';
             const isKeyConcepts = text.includes('Key Concepts');
-            const colorClass = isKeyConcepts ? 'text-yellow-600 dark:text-yellow-400' : 'text-slate-800 dark:text-cyan-400';
+            const colorClass = isKeyConcepts ? 'text-yellow-400' : 'text-cyan-400';
             return <h2 className={`text-3xl md:text-4xl font-semibold ${colorClass} mb-6 mt-10 leading-tight`} {...props}>{children}</h2>;
           },
           h3({ node, children, ...props }: any) {
             const text = typeof children === 'string' ? children : children?.toString() || '';
-            let colorClass = 'text-slate-800 dark:text-white';
-            if (text.includes('Features')) colorClass = 'text-green-700 dark:text-green-400';
-            else if (text.includes('Labels')) colorClass = 'text-orange-700 dark:text-orange-400';
-            else if (text.includes('Training')) colorClass = 'text-purple-700 dark:text-purple-400';
-            else if (text.includes('Testing')) colorClass = 'text-red-700 dark:text-red-400';
-            else if (text.includes('Overfitting')) colorClass = 'text-yellow-700 dark:text-yellow-400';
+            let colorClass = 'text-white';
+            if (text.includes('Features')) colorClass = 'text-green-400';
+            else if (text.includes('Labels')) colorClass = 'text-orange-400';
+            else if (text.includes('Training')) colorClass = 'text-purple-400';
+            else if (text.includes('Testing')) colorClass = 'text-red-400';
+            else if (text.includes('Overfitting')) colorClass = 'text-yellow-400';
             return <h3 className={`text-2xl md:text-3xl font-semibold ${colorClass} mb-4 mt-8 leading-tight`} {...props}>{children}</h3>;
           },
           h4({ node, children, ...props }: any) {
-            return <h4 className="text-xl md:text-2xl font-semibold text-slate-800 dark:text-white mb-3 mt-6 leading-tight" {...props}>{children}</h4>;
+            return <h4 className="text-xl md:text-2xl font-semibold text-white mb-3 mt-6 leading-tight" {...props}>{children}</h4>;
           },
           h5({ node, children, ...props }: any) {
-            return <h5 className="text-lg md:text-xl font-semibold text-slate-800 dark:text-white mb-3 mt-5 leading-tight" {...props}>{children}</h5>;
+            return <h5 className="text-lg md:text-xl font-semibold text-white mb-3 mt-5 leading-tight" {...props}>{children}</h5>;
           },
           h6({ node, children, ...props }: any) {
-            return <h6 className="text-base md:text-lg font-semibold text-slate-800 dark:text-white mb-2 mt-4 leading-tight" {...props}>{children}</h6>;
+            return <h6 className="text-base md:text-lg font-semibold text-white mb-2 mt-4 leading-tight" {...props}>{children}</h6>;
           },
 
           // Paragraphs with better spacing and readability
@@ -382,7 +382,7 @@ export function BlogMarkdown({ children }: { children: string }) {
               return <span className="inline" {...props}>{processChildren(children)}</span>;
             }
             
-            return <p className="text-slate-700 dark:text-slate-200 text-lg leading-relaxed mb-6" {...props}>{processChildren(children)}</p>;
+            return <p className="text-slate-200 text-lg leading-relaxed mb-6" {...props}>{processChildren(children)}</p>;
           },
 
           // Lists with proper styling
@@ -459,7 +459,7 @@ export function BlogMarkdown({ children }: { children: string }) {
             
             if (isInlineList) {
               return (
-                <ul data-inline-list="true" className="flex flex-wrap gap-x-4 gap-y-2 text-slate-700 dark:text-slate-200 text-lg leading-relaxed mb-6 list-none" {...props}>
+                <ul data-inline-list="true" className="flex flex-wrap gap-x-4 gap-y-2 text-slate-200 text-lg leading-relaxed mb-6 list-none" {...props}>
                   {children}
                 </ul>
               );
@@ -467,7 +467,7 @@ export function BlogMarkdown({ children }: { children: string }) {
             
             // Add colored bullets for Key Concepts section
             const bulletClass = inKeyConcepts ? '[&>li]:list-disc [&>li]:marker:text-cyan-400' : '';
-            return <ul className={`list-disc list-outside text-slate-700 dark:text-slate-200 text-lg leading-relaxed mb-6 space-y-2 ml-8 md:ml-12 pl-4 ${bulletClass}`} {...props}>{children}</ul>;
+            return <ul className={`list-disc list-outside text-slate-200 text-lg leading-relaxed mb-6 space-y-2 ml-8 md:ml-12 pl-4 ${bulletClass}`} {...props}>{children}</ul>;
           },
           ol({ node, children, ...props }: any) {
             // Check if list items contain links (common in "Related Tutorials" sections)
@@ -479,13 +479,13 @@ export function BlogMarkdown({ children }: { children: string }) {
             
             if (isInlineList) {
               return (
-                <ol data-inline-list="true" className="flex flex-wrap gap-x-4 gap-y-2 text-slate-700 dark:text-slate-200 text-lg leading-relaxed mb-6 list-none" {...props}>
+                <ol data-inline-list="true" className="flex flex-wrap gap-x-4 gap-y-2 text-slate-200 text-lg leading-relaxed mb-6 list-none" {...props}>
                   {children}
                 </ol>
               );
             }
             
-            return <ol className="list-decimal list-outside text-slate-700 dark:text-slate-200 text-lg leading-relaxed mb-6 space-y-2 ml-8 md:ml-12 pl-4" {...props}>{children}</ol>;
+            return <ol className="list-decimal list-outside text-slate-200 text-lg leading-relaxed mb-6 space-y-2 ml-8 md:ml-12 pl-4" {...props}>{children}</ol>;
           },
           li({ node, children, ...props }: any) {
             // Regular list items - ensure bullet and text stay on same line
@@ -598,7 +598,7 @@ export function BlogMarkdown({ children }: { children: string }) {
                 </Highlight>
               </div>
             ) : (
-              <code className="bg-slate-100 dark:bg-slate-800 text-orange-600 dark:text-cyan-300 px-2 py-1 rounded text-sm font-mono inline-block" {...props}>
+              <code className="bg-slate-800 text-cyan-300 px-2 py-1 rounded text-sm font-mono inline-block" {...props}>
                 {children}
               </code>
             );
@@ -616,7 +616,7 @@ export function BlogMarkdown({ children }: { children: string }) {
                 }}
               >
                 <table
-                  className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden"
+                  className="bg-slate-800 rounded-lg border border-slate-700 shadow-sm overflow-hidden"
                   style={{
                     width: '100%',
                     minWidth: '100%',
@@ -632,18 +632,18 @@ export function BlogMarkdown({ children }: { children: string }) {
           thead({ node, ...props }) {
             return (
               <thead 
-                className="bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700" 
+                className="bg-slate-900 border-b border-slate-700" 
                 {...props} 
               />
             );
           },
           tbody({ node, ...props }) {
-            return <tbody className="divide-y divide-slate-100 dark:divide-slate-700" {...props} />;
+            return <tbody className="divide-y divide-slate-700" {...props} />;
           },
           tr({ node, ...props }) {
             return (
               <tr 
-                className="even:bg-slate-50/50 dark:even:bg-slate-900/50" 
+                className="even:bg-slate-900/50" 
                 {...props} 
               />
             );
@@ -651,7 +651,7 @@ export function BlogMarkdown({ children }: { children: string }) {
           th({ node, ...props }) {
             return (
               <th 
-                className="px-6 py-4 text-left text-sm font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wider break-words" 
+                className="px-6 py-4 text-left text-sm font-semibold text-slate-100 uppercase tracking-wider break-words" 
                 style={{ 
                   wordWrap: 'break-word', 
                   overflowWrap: 'break-word', 
@@ -666,7 +666,7 @@ export function BlogMarkdown({ children }: { children: string }) {
           td({ node, ...props }) {
             return (
               <td 
-                className="px-6 py-4 text-sm text-slate-700 dark:text-slate-300 break-words leading-relaxed" 
+                className="px-6 py-4 text-sm text-slate-300 break-words leading-relaxed" 
                 style={{ 
                   wordWrap: 'break-word', 
                   overflowWrap: 'break-word', 
@@ -852,7 +852,7 @@ export function BlogMarkdown({ children }: { children: string }) {
             }
             
             // Regular blockquote
-            return <blockquote className="border-l-4 border-yellow-500 dark:border-yellow-400 pl-6 py-2 my-6 bg-slate-50 dark:bg-white/5 rounded-r-lg italic text-slate-700 dark:text-slate-300" {...props}>{children}</blockquote>;
+            return <blockquote className="border-l-4 border-yellow-400 pl-6 py-2 my-6 bg-white/5 rounded-r-lg italic text-slate-300" {...props}>{children}</blockquote>;
           },
 
           // Strong and emphasis
@@ -890,17 +890,17 @@ export function BlogMarkdown({ children }: { children: string }) {
               
               if (isMainBulletItem) {
                 // Style main bullet items with orange color
-                return <strong className="font-bold text-orange-600 dark:text-orange-400" {...props}>{processChildren(children)}</strong>;
+                return <strong className="font-bold text-orange-400" {...props}>{processChildren(children)}</strong>;
               }
               
               // Style other bullet headings with slate color
-              return <strong className="font-bold text-slate-700 dark:text-cyan-300" {...props}>{processChildren(children)}</strong>;
+              return <strong className="font-bold text-cyan-300" {...props}>{processChildren(children)}</strong>;
             }
             
-            return <strong className="font-semibold text-slate-900 dark:text-white" {...props}>{processChildren(children)}</strong>;
+            return <strong className="font-semibold text-white" {...props}>{processChildren(children)}</strong>;
           },
           em({ node, ...props }) {
-            return <em className="italic text-slate-700 dark:text-slate-200" {...props} />;
+            return <em className="italic text-slate-200" {...props} />;
           },
 
           // Links with proper styling
@@ -909,7 +909,7 @@ export function BlogMarkdown({ children }: { children: string }) {
             
             return (
               <a
-                className="text-yellow-600 dark:text-yellow-400 hover:text-yellow-700 dark:hover:text-yellow-300 underline underline-offset-2 transition-colors duration-200"
+                className="text-yellow-400 hover:text-yellow-300 underline underline-offset-2 transition-colors duration-200"
                 target={href && (href.startsWith('http') || href.startsWith('mailto')) && !href.includes('neurondb.ai') ? '_blank' : undefined}
                 rel={href && (href.startsWith('http') || href.startsWith('mailto')) && !href.includes('neurondb.ai') ? 'noopener noreferrer' : undefined}
                 {...props}

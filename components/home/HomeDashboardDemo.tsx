@@ -176,10 +176,10 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 function Pill({ children, tone = 'neutral', className = '' }: { children: React.ReactNode; tone?: 'neutral' | 'ok' | 'warn'; className?: string }) {
   const cls =
     tone === 'ok'
-      ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800'
+      ? 'bg-emerald-950/40 text-emerald-300 border-emerald-800'
       : tone === 'warn'
-      ? 'bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300 border-amber-200 dark:border-amber-800'
-      : 'bg-slate-50 text-slate-700 dark:bg-slate-900 dark:text-slate-300 border-slate-200 dark:border-slate-800'
+      ? 'bg-amber-950/40 text-amber-300 border-amber-800'
+      : 'bg-slate-900 text-slate-300 border-slate-800'
 
   return <span className={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-semibold ${cls} ${className}`}>{children}</span>
 }
@@ -236,7 +236,7 @@ function CodePanel({ title, code }: { title: string; code: string }) {
   }
 
   return (
-    <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-950 text-slate-100 overflow-hidden h-full flex flex-col">
+    <div className="rounded-xl border border-slate-800 bg-slate-950 text-slate-100 overflow-hidden h-full flex flex-col">
       <div className="px-4 py-2 border-b border-slate-800 text-sm font-mono text-slate-300 flex items-center justify-between flex-shrink-0">
         <span>{title}</span>
         <span className="text-slate-400">demo</span>
@@ -278,36 +278,36 @@ function ResultsTable({ results }: { results: Array<{ id: number; sim?: number; 
   const displayResults = results.slice(0, 5)
   
   return (
-    <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 overflow-hidden h-full flex flex-col">
-      <div className="px-4 py-2 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between flex-shrink-0">
-        <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">Results</span>
+    <div className="rounded-xl border border-slate-800 bg-slate-950 overflow-hidden h-full flex flex-col">
+      <div className="px-4 py-2 border-b border-slate-800 flex items-center justify-between flex-shrink-0">
+        <span className="text-sm font-semibold text-slate-200">Results</span>
         <Pill tone="ok" className="text-xs px-2 py-0.5">5 rows</Pill>
       </div>
       <div className="overflow-auto flex-1 min-h-0">
         <table className="w-full text-sm">
-          <thead className="bg-slate-50 dark:bg-slate-900 sticky top-0">
-            <tr className="border-b border-slate-200 dark:border-slate-800">
-              <th className="px-4 py-2.5 text-left text-slate-600 dark:text-slate-400 font-semibold">id</th>
+          <thead className="bg-slate-900 sticky top-0">
+            <tr className="border-b border-slate-800">
+              <th className="px-4 py-2.5 text-left text-slate-400 font-semibold">id</th>
               {displayResults[0]?.prediction !== undefined && (
                 <>
-                  <th className="px-4 py-2.5 text-left text-slate-600 dark:text-slate-400 font-semibold">prediction</th>
-                  <th className="px-4 py-2.5 text-left text-slate-600 dark:text-slate-400 font-semibold">confidence</th>
+                  <th className="px-4 py-2.5 text-left text-slate-400 font-semibold">prediction</th>
+                  <th className="px-4 py-2.5 text-left text-slate-400 font-semibold">confidence</th>
                 </>
               )}
               {displayResults[0]?.sim !== undefined && (
                 <>
-                  <th className="px-4 py-2.5 text-left text-slate-600 dark:text-slate-400 font-semibold">similarity</th>
-                  <th className="px-4 py-2.5 text-left text-slate-600 dark:text-slate-400 font-semibold">text</th>
+                  <th className="px-4 py-2.5 text-left text-slate-400 font-semibold">similarity</th>
+                  <th className="px-4 py-2.5 text-left text-slate-400 font-semibold">text</th>
                 </>
               )}
               {displayResults[0]?.category !== undefined && (
-                <th className="px-4 py-2.5 text-left text-slate-600 dark:text-slate-400 font-semibold">category</th>
+                <th className="px-4 py-2.5 text-left text-slate-400 font-semibold">category</th>
               )}
             </tr>
           </thead>
-          <tbody className="text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-950">
+          <tbody className="text-slate-200 bg-slate-950">
             {displayResults.map((r, i) => (
-              <tr key={r.id || i} className="border-t border-slate-200 dark:border-slate-800">
+              <tr key={r.id || i} className="border-t border-slate-800">
                 <td className="px-4 py-3 font-mono text-sm">{r.id != null && r.id !== 0 ? r.id : ''}</td>
                 {r.prediction !== undefined && (
                   <>
@@ -453,15 +453,15 @@ FROM hybrid_search(
   const currentResults = resultsData[queryIndex] || resultsData[0]
 
   return (
-    <section className="bg-white dark:bg-slate-900">
+    <section className="bg-slate-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-12 gap-10 items-stretch" style={{ minHeight: '650px' }}>
           {/* Left - tabs */}
           <div className="lg:col-span-4 flex flex-col">
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900 dark:text-white flex-shrink-0">
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white flex-shrink-0">
               NeuronDB Console
             </h2>
-            <p className="mt-3 text-slate-600 dark:text-slate-300 flex-shrink-0">
+            <p className="mt-3 text-slate-300 flex-shrink-0">
               Manage your database and workflows from a unified interface
             </p>
 
@@ -476,17 +476,17 @@ FROM hybrid_search(
                     className={[
                       'w-full text-left rounded-xl border px-3 py-2.5 transition-colors flex-shrink-0',
                       isActive
-                        ? 'border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950'
-                        : 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-950',
+                        ? 'border-slate-700 bg-slate-950'
+                        : 'border-slate-800 bg-slate-900 hover:bg-slate-950',
                     ].join(' ')}
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-4 h-4 text-slate-700 dark:text-slate-200" />
+                      <div className="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-4 h-4 text-slate-200" />
                       </div>
                       <div className="min-w-0 flex-1">
-                        <div className="text-sm font-semibold text-slate-900 dark:text-white">{t.label}</div>
-                        <div className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">{t.heading}</div>
+                        <div className="text-sm font-semibold text-white">{t.label}</div>
+                        <div className="text-xs text-slate-400 line-clamp-2">{t.heading}</div>
                       </div>
                     </div>
                   </button>
@@ -496,16 +496,16 @@ FROM hybrid_search(
           </div>
 
           {/* Right: "demo panel" */}
-          <div className="lg:col-span-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 overflow-hidden flex flex-col">
+          <div className="lg:col-span-8 rounded-2xl border border-slate-800 bg-slate-950 overflow-hidden flex flex-col">
             {/* App topbar */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex-shrink-0">
+            <div className="flex items-center justify-between px-5 py-4 border-b border-slate-800 bg-slate-900 flex-shrink-0">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 flex items-center justify-center">
-                  <TIcon className="w-4 h-4 text-slate-700 dark:text-slate-200" />
+                <div className="w-9 h-9 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-center">
+                  <TIcon className="w-4 h-4 text-slate-200" />
                 </div>
                 <div>
-                  <div className="text-base font-semibold text-slate-900 dark:text-white">neurondb</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">console • demo</div>
+                  <div className="text-base font-semibold text-white">neurondb</div>
+                  <div className="text-sm text-slate-400">console • demo</div>
                 </div>
               </div>
               <div className="flex items-center gap-2">
@@ -516,11 +516,11 @@ FROM hybrid_search(
 
             {/* App body */}
             <div className="flex-1 min-h-0 overflow-hidden flex flex-col">
-              <div className="p-4 bg-slate-50 dark:bg-slate-950 flex flex-col h-full overflow-hidden">
+              <div className="p-4 bg-slate-950 flex flex-col h-full overflow-hidden">
                 <div className="flex items-start justify-between gap-4 mb-3 flex-shrink-0">
                   <div>
-                    <div className="text-base font-semibold text-slate-900 dark:text-white">{tab.heading}</div>
-                    <div className="mt-0.5 text-sm text-slate-600 dark:text-slate-300">{tab.description}</div>
+                    <div className="text-base font-semibold text-white">{tab.heading}</div>
+                    <div className="mt-0.5 text-sm text-slate-300">{tab.description}</div>
                   </div>
                   <Pill>{tab.codeLabel}</Pill>
                 </div>
@@ -544,82 +544,82 @@ FROM hybrid_search(
                       </div>
 
                       {/* Performance Block - expandable */}
-                      <div className="min-h-[140px] flex-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex flex-col">
-                        <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Performance</div>
+                      <div className="min-h-[140px] flex-1 rounded-xl border border-slate-800 bg-slate-950 p-4 flex flex-col">
+                        <div className="text-sm font-semibold text-slate-200 mb-3">Performance</div>
                         <div className="grid grid-cols-4 gap-4 flex-1">
                           <div className="space-y-2 text-sm flex flex-col justify-center">
-                            <div className="text-xs text-slate-500 dark:text-slate-400">Query Time</div>
-                            <div className="font-mono font-semibold text-lg text-emerald-600 dark:text-emerald-400">8.42ms</div>
+                            <div className="text-xs text-slate-400">Query Time</div>
+                            <div className="font-mono font-semibold text-lg text-emerald-400">8.42ms</div>
                           </div>
                           <div className="space-y-2 text-sm flex flex-col justify-center">
-                            <div className="text-xs text-slate-500 dark:text-slate-400">Latency (P95)</div>
+                            <div className="text-xs text-slate-400">Latency (P95)</div>
                             <div className="font-mono font-semibold text-lg">12.5ms</div>
                           </div>
                           <div className="space-y-2 text-sm flex flex-col justify-center">
-                            <div className="text-xs text-slate-500 dark:text-slate-400">QPS</div>
-                            <div className="font-mono font-semibold text-lg text-indigo-600 dark:text-indigo-400">8.2k</div>
+                            <div className="text-xs text-slate-400">QPS</div>
+                            <div className="font-mono font-semibold text-lg text-indigo-400">8.2k</div>
                           </div>
                           <div className="space-y-2 text-sm flex flex-col justify-center">
-                            <div className="text-xs text-slate-500 dark:text-slate-400">GPU Status</div>
+                            <div className="text-xs text-slate-400">GPU Status</div>
                             <div className="flex items-center gap-2">
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
-                              <span className="text-xs text-slate-500 dark:text-slate-400">78% util</span>
+                              <span className="text-xs text-slate-400">78% util</span>
                             </div>
                           </div>
                         </div>
                       </div>
 
                       {/* Stats Block - expandable, consolidated */}
-                      <div className="min-h-[180px] flex-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex flex-col">
-                        <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Query Statistics</div>
+                      <div className="min-h-[180px] flex-1 rounded-xl border border-slate-800 bg-slate-950 p-4 flex flex-col">
+                        <div className="text-sm font-semibold text-slate-200 mb-3">Query Statistics</div>
                         <div className="grid grid-cols-3 gap-6 flex-1">
                           <div className="space-y-2 flex flex-col justify-center">
-                            <div className="text-xs text-slate-500 dark:text-slate-400 mb-2">Execution</div>
+                            <div className="text-xs text-slate-400 mb-2">Execution</div>
                             <div className="space-y-1.5 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Rows Returned</span>
+                              <span className="text-slate-400">Rows Returned</span>
                               <span className="font-mono font-semibold">5</span>
                             </div>
                               <div className="flex justify-between">
-                                <span className="text-slate-600 dark:text-slate-400">Cache Hit</span>
+                                <span className="text-slate-400">Cache Hit</span>
                                 <Pill tone="ok" className="text-xs px-2 py-0.5">96%</Pill>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-slate-600 dark:text-slate-400">Plan</span>
-                                <span className="font-mono text-xs text-slate-500 dark:text-slate-400">Index Scan (HNSW)</span>
+                                <span className="text-slate-400">Plan</span>
+                                <span className="font-mono text-xs text-slate-400">Index Scan (HNSW)</span>
                               </div>
                             </div>
                           </div>
                           <div className="space-y-2 flex flex-col justify-center">
-                            <div className="text-xs text-slate-500 dark:text-slate-400 mb-2">Connection</div>
+                            <div className="text-xs text-slate-400 mb-2">Connection</div>
                             <div className="space-y-1.5 text-sm">
                               <div className="flex justify-between">
-                                <span className="text-slate-600 dark:text-slate-400">Database</span>
+                                <span className="text-slate-400">Database</span>
                                 <span className="font-mono text-xs">neurondb</span>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-slate-600 dark:text-slate-400">Version</span>
+                                <span className="text-slate-400">Version</span>
                                 <span className="font-mono text-xs">PostgreSQL 17</span>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-slate-600 dark:text-slate-400">Index Type</span>
+                                <span className="text-slate-400">Index Type</span>
                                 <Pill className="text-xs px-2 py-0.5">HNSW</Pill>
                               </div>
                             </div>
                           </div>
                           <div className="space-y-2 flex flex-col justify-center">
-                            <div className="text-xs text-slate-500 dark:text-slate-400 mb-2">Summary</div>
+                            <div className="text-xs text-slate-400 mb-2">Summary</div>
                             <div className="space-y-1.5 text-sm">
                               <div className="flex justify-between">
-                                <span className="text-slate-600 dark:text-slate-400">Total Queries</span>
+                                <span className="text-slate-400">Total Queries</span>
                                 <span className="font-mono font-semibold">1,247</span>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-slate-600 dark:text-slate-400">Success Rate</span>
+                                <span className="text-slate-400">Success Rate</span>
                                 <Pill tone="ok" className="text-xs px-2 py-0.5">99.8%</Pill>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-slate-600 dark:text-slate-400">Vector Dim</span>
+                                <span className="text-slate-400">Vector Dim</span>
                                 <span className="font-mono text-xs">384</span>
                               </div>
                             </div>
@@ -657,74 +657,74 @@ embed.bulk_insert('embeddings', vectors)`} />
                       </div>
                       {/* Stats panels - fixed size, fixed position */}
                       <div className="grid grid-cols-4 gap-4 flex-shrink-0">
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Model</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Model</div>
                           <div className="space-y-2 text-sm">
-                            <div className="text-slate-600 dark:text-slate-400">all-MiniLM-L6-v2</div>
+                            <div className="text-slate-400">all-MiniLM-L6-v2</div>
                             <Pill className="text-xs px-2 py-0.5">384 dims</Pill>
                             <Pill tone="ok" className="text-xs px-2 py-0.5">GPU</Pill>
                             <div className="flex justify-between mt-2">
-                              <span className="text-slate-600 dark:text-slate-400">Provider</span>
+                              <span className="text-slate-400">Provider</span>
                               <span className="font-mono text-xs">Hugging Face</span>
                           </div>
                         </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Performance</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Performance</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Throughput</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">2.1k/s</span>
+                              <span className="text-slate-400">Throughput</span>
+                              <span className="font-mono font-semibold text-emerald-400">2.1k/s</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Latency</span>
+                              <span className="text-slate-400">Latency</span>
                               <span className="font-mono font-semibold">0.12ms</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">GPU util</span>
-                              <span className="font-mono font-semibold text-indigo-600 dark:text-indigo-400">78%</span>
+                              <span className="text-slate-400">GPU util</span>
+                              <span className="font-mono font-semibold text-indigo-400">78%</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Batch Size</span>
+                              <span className="text-slate-400">Batch Size</span>
                               <span className="font-mono text-xs">512</span>
                           </div>
                         </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Progress</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Progress</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Processed</span>
+                              <span className="text-slate-400">Processed</span>
                               <span className="font-mono font-semibold">1.02M</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Total</span>
+                              <span className="text-slate-400">Total</span>
                               <span className="font-mono text-xs">1.2M</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">ETA</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">3m 24s</span>
+                              <span className="text-slate-400">ETA</span>
+                              <span className="font-mono font-semibold text-emerald-400">3m 24s</span>
                             </div>
                             <Pill tone="ok" className="text-xs px-2 py-0.5 w-full justify-center">85%</Pill>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">System</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">System</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Memory</span>
+                              <span className="text-slate-400">Memory</span>
                               <span className="font-mono text-xs">4.2GB</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">VRAM</span>
+                              <span className="text-slate-400">VRAM</span>
                               <span className="font-mono text-xs">8.5GB</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Temp</span>
+                              <span className="text-slate-400">Temp</span>
                               <span className="font-mono text-xs">62°C</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Status</span>
+                              <span className="text-slate-400">Status</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">healthy</Pill>
                             </div>
                           </div>
@@ -747,13 +747,13 @@ SELECT neurondb.rag.query(
 );`} />
                       </div>
                       {/* Response panel - fixed size */}
-                      <div className="h-[240px] flex-shrink-0 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 overflow-auto">
-                        <div className="text-base font-semibold text-slate-700 dark:text-slate-200 mb-3">RAG Response</div>
-                        <div className="text-sm text-slate-600 dark:text-slate-300 space-y-3">
+                      <div className="h-[240px] flex-shrink-0 rounded-xl border border-slate-800 bg-slate-950 p-4 overflow-auto">
+                        <div className="text-base font-semibold text-slate-200 mb-3">RAG Response</div>
+                        <div className="text-sm text-slate-300 space-y-3">
                           <p>Vector search is a technique for finding similar items in high-dimensional spaces using mathematical representations called embeddings. It enables semantic similarity matching beyond keyword-based search...</p>
                           <div>
                             <div className="font-semibold mb-2">Sources (Top 5):</div>
-                            <ul className="list-disc list-inside space-y-1.5 text-slate-500 dark:text-slate-400">
+                            <ul className="list-disc list-inside space-y-1.5 text-slate-400">
                               <li>doc_42 (similarity: 0.9523) - Vector search fundamentals</li>
                               <li>doc_38 (similarity: 0.9234) - HNSW index architecture</li>
                               <li>doc_35 (similarity: 0.8945) - Embedding generation techniques</li>
@@ -765,66 +765,66 @@ SELECT neurondb.rag.query(
                       </div>
                       {/* RAG Pipeline Stats - fixed size */}
                       <div className="grid grid-cols-3 gap-4 flex-shrink-0">
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                        <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Pipeline Performance</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                        <div className="text-sm font-semibold text-slate-200 mb-3">Pipeline Performance</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Retrieval</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">8.2ms</span>
+                              <span className="text-slate-400">Retrieval</span>
+                              <span className="font-mono font-semibold text-emerald-400">8.2ms</span>
                           </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Reranking</span>
+                              <span className="text-slate-400">Reranking</span>
                               <span className="font-mono font-semibold">12.5ms</span>
                           </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">LLM Gen</span>
-                              <span className="font-mono font-semibold text-indigo-600 dark:text-indigo-400">245ms</span>
+                              <span className="text-slate-400">LLM Gen</span>
+                              <span className="font-mono font-semibold text-indigo-400">245ms</span>
                           </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Total Latency</span>
+                              <span className="text-slate-400">Total Latency</span>
                               <span className="font-mono font-semibold">266ms</span>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">RAG Configuration</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">RAG Configuration</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Knowledge Base</span>
+                              <span className="text-slate-400">Knowledge Base</span>
                               <span className="font-mono text-xs">knowledge_base</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Top-K</span>
+                              <span className="text-slate-400">Top-K</span>
                               <span className="font-mono font-semibold">5</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Reranker</span>
+                              <span className="text-slate-400">Reranker</span>
                               <Pill className="text-xs px-2 py-0.5">cross-encoder</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">LLM Model</span>
+                              <span className="text-slate-400">LLM Model</span>
                               <span className="font-mono text-xs">gpt-4</span>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Statistics</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Statistics</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Queries</span>
+                              <span className="text-slate-400">Queries</span>
                               <span className="font-mono font-semibold">1,247</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Avg Response</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">268ms</span>
+                              <span className="text-slate-400">Avg Response</span>
+                              <span className="font-mono font-semibold text-emerald-400">268ms</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Success Rate</span>
+                              <span className="text-slate-400">Success Rate</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">99.5%</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Tokens/min</span>
-                              <span className="font-mono font-semibold text-indigo-600 dark:text-indigo-400">12.4k</span>
+                              <span className="text-slate-400">Tokens/min</span>
+                              <span className="font-mono font-semibold text-indigo-400">12.4k</span>
                             </div>
                           </div>
                         </div>
@@ -859,65 +859,65 @@ hf.embed_dataset('ag_news', table='docs')`}
                         ]} />
                       </div>
                       <div className="grid grid-cols-3 gap-4 flex-shrink-0">
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Model Info</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Model Info</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Model ID</span>
+                              <span className="text-slate-400">Model ID</span>
                               <span className="font-mono text-xs truncate ml-2">all-MiniLM-L6-v2</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Dimensions</span>
+                              <span className="text-slate-400">Dimensions</span>
                               <span className="font-mono text-xs">384</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Tasks</span>
+                              <span className="text-slate-400">Tasks</span>
                               <Pill className="text-xs px-2 py-0.5">embedding</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Downloads</span>
+                              <span className="text-slate-400">Downloads</span>
                               <span className="font-mono text-xs">12.4M</span>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Dataset Stats</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Dataset Stats</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Dataset</span>
+                              <span className="text-slate-400">Dataset</span>
                               <span className="font-mono text-xs">ag_news</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Rows</span>
+                              <span className="text-slate-400">Rows</span>
                               <span className="font-mono font-semibold">120,000</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Processed</span>
-                              <span className="font-mono text-emerald-600 dark:text-emerald-400">98,450</span>
+                              <span className="text-slate-400">Processed</span>
+                              <span className="font-mono text-emerald-400">98,450</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">ETA</span>
+                              <span className="text-slate-400">ETA</span>
                               <span className="font-mono text-xs">2m 15s</span>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Performance</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Performance</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Throughput</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">1.8k/s</span>
+                              <span className="text-slate-400">Throughput</span>
+                              <span className="font-mono font-semibold text-emerald-400">1.8k/s</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Avg Latency</span>
+                              <span className="text-slate-400">Avg Latency</span>
                               <span className="font-mono font-semibold">0.55ms</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Batch Size</span>
+                              <span className="text-slate-400">Batch Size</span>
                               <span className="font-mono text-xs">512</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">GPU Util</span>
+                              <span className="text-slate-400">GPU Util</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">82%</Pill>
                             </div>
                           </div>
@@ -939,65 +939,65 @@ helm install neurondb neurondb/neurondb \\
                         />
                       </div>
                       <div className="grid grid-cols-3 gap-4 flex-shrink-0">
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Deployment Status</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Deployment Status</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Replicas</span>
+                              <span className="text-slate-400">Replicas</span>
                               <span className="font-mono font-semibold">3/3</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Ready</span>
+                              <span className="text-slate-400">Ready</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">3/3</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Namespace</span>
+                              <span className="text-slate-400">Namespace</span>
                               <span className="font-mono text-xs">neurondb-prod</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Status</span>
+                              <span className="text-slate-400">Status</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">healthy</Pill>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Resources</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Resources</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">CPU (req)</span>
+                              <span className="text-slate-400">CPU (req)</span>
                               <span className="font-mono text-xs">4 cores</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Memory</span>
+                              <span className="text-slate-400">Memory</span>
                               <span className="font-mono text-xs">16GB</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">GPU</span>
+                              <span className="text-slate-400">GPU</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Storage</span>
+                              <span className="text-slate-400">Storage</span>
                               <span className="font-mono text-xs">500GB</span>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Monitoring</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Monitoring</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Prometheus</span>
+                              <span className="text-slate-400">Prometheus</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">active</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Grafana</span>
+                              <span className="text-slate-400">Grafana</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">active</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Jaeger</span>
+                              <span className="text-slate-400">Jaeger</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">active</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">HPA</span>
+                              <span className="text-slate-400">HPA</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">2-10 pods</Pill>
                             </div>
                           </div>
@@ -1028,65 +1028,65 @@ LIMIT 10;`}
                         ]} />
                       </div>
                       <div className="grid grid-cols-3 gap-4 flex-shrink-0">
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Table Stats</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Table Stats</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Table Name</span>
+                              <span className="text-slate-400">Table Name</span>
                               <span className="font-mono text-xs">embeddings</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Rows</span>
+                              <span className="text-slate-400">Rows</span>
                               <span className="font-mono font-semibold">2.4M</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Size</span>
+                              <span className="text-slate-400">Size</span>
                               <span className="font-mono text-xs">12.8GB</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Columns</span>
+                              <span className="text-slate-400">Columns</span>
                               <span className="font-mono text-xs">3</span>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Indexes</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Indexes</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Index Type</span>
+                              <span className="text-slate-400">Index Type</span>
                               <Pill className="text-xs px-2 py-0.5">HNSW</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Index Size</span>
+                              <span className="text-slate-400">Index Size</span>
                               <span className="font-mono text-xs">4.2GB</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Dimensions</span>
+                              <span className="text-slate-400">Dimensions</span>
                               <span className="font-mono text-xs">384</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Status</span>
+                              <span className="text-slate-400">Status</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">ready</Pill>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Query Performance</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Query Performance</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Avg Query Time</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">8.5ms</span>
+                              <span className="text-slate-400">Avg Query Time</span>
+                              <span className="font-mono font-semibold text-emerald-400">8.5ms</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">P95 Latency</span>
+                              <span className="text-slate-400">P95 Latency</span>
                               <span className="font-mono font-semibold">12.3ms</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">QPS</span>
-                              <span className="font-mono font-semibold text-indigo-600 dark:text-indigo-400">7.8k</span>
+                              <span className="text-slate-400">QPS</span>
+                              <span className="font-mono font-semibold text-indigo-400">7.8k</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Cache Hit</span>
+                              <span className="text-slate-400">Cache Hit</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">94%</Pill>
                             </div>
                           </div>
@@ -1122,65 +1122,65 @@ WHERE metric_name IN (
                         ]} />
                       </div>
                       <div className="grid grid-cols-3 gap-4 flex-shrink-0">
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Query Metrics</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Query Metrics</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Latency P95</span>
+                              <span className="text-slate-400">Latency P95</span>
                               <span className="font-mono font-semibold">12ms</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Latency P99</span>
+                              <span className="text-slate-400">Latency P99</span>
                               <span className="font-mono font-semibold">18ms</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">QPS</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">8.2k</span>
+                              <span className="text-slate-400">QPS</span>
+                              <span className="font-mono font-semibold text-emerald-400">8.2k</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Error Rate</span>
+                              <span className="text-slate-400">Error Rate</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">0.02%</Pill>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">System Resources</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">System Resources</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Index Size</span>
+                              <span className="text-slate-400">Index Size</span>
                               <span className="font-mono text-xs">2.3GB</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Memory Used</span>
+                              <span className="text-slate-400">Memory Used</span>
                               <span className="font-mono text-xs">8.4GB / 16GB</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Active Workers</span>
+                              <span className="text-slate-400">Active Workers</span>
                               <span className="font-mono font-semibold">4/4</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Vector Ops/sec</span>
-                              <span className="font-mono font-semibold text-indigo-600 dark:text-indigo-400">8.2k</span>
+                              <span className="text-slate-400">Vector Ops/sec</span>
+                              <span className="font-mono font-semibold text-indigo-400">8.2k</span>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">GPU Metrics</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">GPU Metrics</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Utilization</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">67%</span>
+                              <span className="text-slate-400">Utilization</span>
+                              <span className="font-mono font-semibold text-emerald-400">67%</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Memory</span>
+                              <span className="text-slate-400">Memory</span>
                               <span className="font-mono text-xs">6.2GB / 8GB</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Temperature</span>
+                              <span className="text-slate-400">Temperature</span>
                               <span className="font-mono text-xs">64°C</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Power</span>
+                              <span className="text-slate-400">Power</span>
                               <span className="font-mono text-xs">185W</span>
                             </div>
                           </div>
@@ -1202,65 +1202,65 @@ SET neurondb.workers = 4;`}
                         />
                       </div>
                       <div className="grid grid-cols-3 gap-4 flex-shrink-0">
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Index Settings</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Index Settings</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">HNSW M</span>
+                              <span className="text-slate-400">HNSW M</span>
                               <span className="font-mono text-xs">16</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">EF Construction</span>
+                              <span className="text-slate-400">EF Construction</span>
                               <span className="font-mono text-xs">200</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">EF Search</span>
+                              <span className="text-slate-400">EF Search</span>
                               <span className="font-mono text-xs">40</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Distance Metric</span>
+                              <span className="text-slate-400">Distance Metric</span>
                               <span className="font-mono text-xs">cosine</span>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">System Settings</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">System Settings</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">GPU Enabled</span>
+                              <span className="text-slate-400">GPU Enabled</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">true</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Workers</span>
+                              <span className="text-slate-400">Workers</span>
                               <span className="font-mono text-xs">4</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Batch Size</span>
+                              <span className="text-slate-400">Batch Size</span>
                               <span className="font-mono text-xs">512</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Max Connections</span>
+                              <span className="text-slate-400">Max Connections</span>
                               <span className="font-mono text-xs">100</span>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Advanced Settings</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Advanced Settings</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Cache Size</span>
+                              <span className="text-slate-400">Cache Size</span>
                               <span className="font-mono text-xs">2GB</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Log Level</span>
+                              <span className="text-slate-400">Log Level</span>
                               <span className="font-mono text-xs">INFO</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Auto-Tune</span>
+                              <span className="text-slate-400">Auto-Tune</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Telemetry</span>
+                              <span className="text-slate-400">Telemetry</span>
                               <Pill className="text-xs px-2 py-0.5">disabled</Pill>
                             </div>
                           </div>
@@ -1281,77 +1281,77 @@ Throughput: 145MB/s vs 98MB/s`}
                         />
                       </div>
                       <div className="grid grid-cols-3 gap-4 flex-shrink-0">
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Performance Comparison</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Performance Comparison</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">QPS</span>
+                              <span className="text-slate-400">QPS</span>
                               <div className="flex items-center gap-2">
-                                <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">12.5K</span>
+                                <span className="font-mono font-semibold text-emerald-400">12.5K</span>
                                 <span className="text-xs text-slate-400">vs 8.2K</span>
                               </div>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Latency (P95)</span>
+                              <span className="text-slate-400">Latency (P95)</span>
                               <div className="flex items-center gap-2">
-                                <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">8ms</span>
+                                <span className="font-mono font-semibold text-emerald-400">8ms</span>
                                 <span className="text-xs text-slate-400">vs 15ms</span>
                               </div>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Recall</span>
+                              <span className="text-slate-400">Recall</span>
                               <div className="flex items-center gap-2">
-                                <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">98.5%</span>
+                                <span className="font-mono font-semibold text-emerald-400">98.5%</span>
                                 <span className="text-xs text-slate-400">vs 97.2%</span>
                               </div>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Throughput</span>
+                              <span className="text-slate-400">Throughput</span>
                               <div className="flex items-center gap-2">
-                                <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">145MB/s</span>
+                                <span className="font-mono font-semibold text-emerald-400">145MB/s</span>
                                 <span className="text-xs text-slate-400">vs 98MB/s</span>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Test Configuration</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Test Configuration</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Dataset Size</span>
+                              <span className="text-slate-400">Dataset Size</span>
                               <span className="font-mono text-xs">10M vectors</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Dimensions</span>
+                              <span className="text-slate-400">Dimensions</span>
                               <span className="font-mono text-xs">384</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Query Count</span>
+                              <span className="text-slate-400">Query Count</span>
                               <span className="font-mono text-xs">100,000</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Top-K</span>
+                              <span className="text-slate-400">Top-K</span>
                               <span className="font-mono text-xs">10</span>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Benchmark Results</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Benchmark Results</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Speedup</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">1.52x</span>
+                              <span className="text-slate-400">Speedup</span>
+                              <span className="font-mono font-semibold text-emerald-400">1.52x</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Cost Efficiency</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">2.1x</span>
+                              <span className="text-slate-400">Cost Efficiency</span>
+                              <span className="font-mono font-semibold text-emerald-400">2.1x</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Memory Usage</span>
+                              <span className="text-slate-400">Memory Usage</span>
                               <span className="font-mono text-xs">24% less</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Index Build</span>
+                              <span className="text-slate-400">Index Build</span>
                               <span className="font-mono text-xs">3.2x faster</span>
                             </div>
                           </div>
@@ -1382,65 +1382,65 @@ response = requests.post(
                         />
                 </div>
                       <div className="grid grid-cols-3 gap-4 flex-shrink-0">
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Agent Status</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Agent Status</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Active Agents</span>
+                              <span className="text-slate-400">Active Agents</span>
                               <span className="font-mono font-semibold">12</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Sessions</span>
+                              <span className="text-slate-400">Sessions</span>
                               <span className="font-mono font-semibold">247</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Messages</span>
+                              <span className="text-slate-400">Messages</span>
                               <span className="font-mono font-semibold">8.2k</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Status</span>
+                              <span className="text-slate-400">Status</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">healthy</Pill>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">API Performance</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">API Performance</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Avg Response</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">245ms</span>
+                              <span className="text-slate-400">Avg Response</span>
+                              <span className="font-mono font-semibold text-emerald-400">245ms</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">P95 Latency</span>
+                              <span className="text-slate-400">P95 Latency</span>
                               <span className="font-mono font-semibold">420ms</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">RPS</span>
-                              <span className="font-mono font-semibold text-indigo-600 dark:text-indigo-400">1.2k</span>
+                              <span className="text-slate-400">RPS</span>
+                              <span className="font-mono font-semibold text-indigo-400">1.2k</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Error Rate</span>
+                              <span className="text-slate-400">Error Rate</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">0.1%</Pill>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Features</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Features</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">REST API</span>
+                              <span className="text-slate-400">REST API</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">WebSocket</span>
+                              <span className="text-slate-400">WebSocket</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Memory</span>
+                              <span className="text-slate-400">Memory</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Tools</span>
+                              <span className="text-slate-400">Tools</span>
                               <span className="font-mono text-xs">100+</span>
                             </div>
                           </div>
@@ -1470,65 +1470,65 @@ response = requests.post(
                         />
                       </div>
                       <div className="grid grid-cols-3 gap-4 flex-shrink-0">
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">MCP Server</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">MCP Server</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Protocol</span>
+                              <span className="text-slate-400">Protocol</span>
                               <span className="font-mono text-xs">JSON-RPC 2.0</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Transport</span>
+                              <span className="text-slate-400">Transport</span>
                               <span className="font-mono text-xs">stdio • HTTP</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Status</span>
+                              <span className="text-slate-400">Status</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">active</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Clients</span>
+                              <span className="text-slate-400">Clients</span>
                               <span className="font-mono font-semibold">3</span>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Tools Available</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Tools Available</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">PostgreSQL</span>
+                              <span className="text-slate-400">PostgreSQL</span>
                               <span className="font-mono font-semibold">27</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">NeuronDB</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">70+</span>
+                              <span className="text-slate-400">NeuronDB</span>
+                              <span className="font-mono font-semibold text-emerald-400">70+</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Resources</span>
+                              <span className="text-slate-400">Resources</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Prompts</span>
+                              <span className="text-slate-400">Prompts</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Usage Stats</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Usage Stats</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Requests</span>
+                              <span className="text-slate-400">Requests</span>
                               <span className="font-mono font-semibold">12.4k</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Avg Latency</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">8.5ms</span>
+                              <span className="text-slate-400">Avg Latency</span>
+                              <span className="font-mono font-semibold text-emerald-400">8.5ms</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Success Rate</span>
+                              <span className="text-slate-400">Success Rate</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">99.9%</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Claude Desktop</span>
+                              <span className="text-slate-400">Claude Desktop</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">connected</Pill>
                             </div>
                           </div>
@@ -1564,66 +1564,66 @@ LIMIT 5;`}
                         ]} />
                       </div>
                       <div className="grid grid-cols-3 gap-4 flex-shrink-0">
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Index Types</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Index Types</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">HNSW</span>
+                              <span className="text-slate-400">HNSW</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">IVF</span>
+                              <span className="text-slate-400">IVF</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">pgvector</span>
+                              <span className="text-slate-400">pgvector</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">compatible</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">GPU Build</span>
+                              <span className="text-slate-400">GPU Build</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Distance Metrics</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Distance Metrics</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Cosine</span>
+                              <span className="text-slate-400">Cosine</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">default</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">L2</span>
+                              <span className="text-slate-400">L2</span>
                               <Pill className="text-xs px-2 py-0.5">available</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Inner Product</span>
+                              <span className="text-slate-400">Inner Product</span>
                               <Pill className="text-xs px-2 py-0.5">available</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Total Metrics</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">10+</span>
+                              <span className="text-slate-400">Total Metrics</span>
+                              <span className="font-mono font-semibold text-emerald-400">10+</span>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Performance</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Performance</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Query Time</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">8.2ms</span>
+                              <span className="text-slate-400">Query Time</span>
+                              <span className="font-mono font-semibold text-emerald-400">8.2ms</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Recall</span>
+                              <span className="text-slate-400">Recall</span>
                               <span className="font-mono font-semibold">98.5%</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">GPU Batch</span>
+                              <span className="text-slate-400">GPU Batch</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Throughput</span>
-                              <span className="font-mono font-semibold text-indigo-600 dark:text-indigo-400">8.2k QPS</span>
+                              <span className="text-slate-400">Throughput</span>
+                              <span className="font-mono font-semibold text-indigo-400">8.2k QPS</span>
                             </div>
                           </div>
                         </div>
@@ -1660,65 +1660,65 @@ FROM test_data;`}
                         ]} />
                       </div>
                       <div className="grid grid-cols-3 gap-4 flex-shrink-0">
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Algorithms</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Algorithms</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Random Forest</span>
+                              <span className="text-slate-400">Random Forest</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">XGBoost</span>
+                              <span className="text-slate-400">XGBoost</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Linear Models</span>
+                              <span className="text-slate-400">Linear Models</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Total</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">52+</span>
+                              <span className="text-slate-400">Total</span>
+                              <span className="font-mono font-semibold text-emerald-400">52+</span>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Model Management</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Model Management</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Models</span>
+                              <span className="text-slate-400">Models</span>
                               <span className="font-mono font-semibold">8</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Feature Store</span>
+                              <span className="text-slate-400">Feature Store</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Train in SQL</span>
+                              <span className="text-slate-400">Train in SQL</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">GPU Inference</span>
+                              <span className="text-slate-400">GPU Inference</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Performance</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Performance</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Inference Time</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">0.8ms</span>
+                              <span className="text-slate-400">Inference Time</span>
+                              <span className="font-mono font-semibold text-emerald-400">0.8ms</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Batch Size</span>
+                              <span className="text-slate-400">Batch Size</span>
                               <span className="font-mono text-xs">512</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Throughput</span>
-                              <span className="font-mono font-semibold text-indigo-600 dark:text-indigo-400">2.1k/s</span>
+                              <span className="text-slate-400">Throughput</span>
+                              <span className="font-mono font-semibold text-indigo-400">2.1k/s</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Accuracy</span>
+                              <span className="text-slate-400">Accuracy</span>
                               <span className="font-mono font-semibold">94.2%</span>
                             </div>
                           </div>
@@ -1756,65 +1756,65 @@ SELECT * FROM neurondb.job_queue WHERE status = 'running';`}
                         ]} />
                       </div>
                       <div className="grid grid-cols-3 gap-4 flex-shrink-0">
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Worker Status</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Worker Status</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Active Workers</span>
+                              <span className="text-slate-400">Active Workers</span>
                               <span className="font-mono font-semibold">4/4</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Queue Size</span>
+                              <span className="text-slate-400">Queue Size</span>
                               <span className="font-mono font-semibold">127</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Processing</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">8</span>
+                              <span className="text-slate-400">Processing</span>
+                              <span className="font-mono font-semibold text-emerald-400">8</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Status</span>
+                              <span className="text-slate-400">Status</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">healthy</Pill>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Job Types</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Job Types</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Embedding</span>
+                              <span className="text-slate-400">Embedding</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">active</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Index Build</span>
+                              <span className="text-slate-400">Index Build</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">active</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">ML Training</span>
+                              <span className="text-slate-400">ML Training</span>
                               <Pill className="text-xs px-2 py-0.5">available</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Auto-scaling</span>
+                              <span className="text-slate-400">Auto-scaling</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Metrics</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Metrics</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Jobs/min</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">245</span>
+                              <span className="text-slate-400">Jobs/min</span>
+                              <span className="font-mono font-semibold text-emerald-400">245</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Avg Duration</span>
+                              <span className="text-slate-400">Avg Duration</span>
                               <span className="font-mono font-semibold">12.5s</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Success Rate</span>
+                              <span className="text-slate-400">Success Rate</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">99.2%</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Hooks</span>
+                              <span className="text-slate-400">Hooks</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                           </div>
@@ -1851,65 +1851,65 @@ ORDER BY final_score DESC;`}
                         ]} />
                       </div>
                       <div className="grid grid-cols-3 gap-4 flex-shrink-0">
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Search Types</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Search Types</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Vector</span>
+                              <span className="text-slate-400">Vector</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">enabled</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Full-text</span>
+                              <span className="text-slate-400">Full-text</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">BM25</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Weighted</span>
+                              <span className="text-slate-400">Weighted</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">configurable</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Reranking</span>
+                              <span className="text-slate-400">Reranking</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">optional</Pill>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Performance</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Performance</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Query Time</span>
-                              <span className="font-mono font-semibold text-emerald-600 dark:text-emerald-400">15.2ms</span>
+                              <span className="text-slate-400">Query Time</span>
+                              <span className="font-mono font-semibold text-emerald-400">15.2ms</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Recall</span>
+                              <span className="text-slate-400">Recall</span>
                               <span className="font-mono font-semibold">96.8%</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Precision</span>
+                              <span className="text-slate-400">Precision</span>
                               <span className="font-mono font-semibold">94.5%</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">QPS</span>
-                              <span className="font-mono font-semibold text-indigo-600 dark:text-indigo-400">6.8k</span>
+                              <span className="text-slate-400">QPS</span>
+                              <span className="font-mono font-semibold text-indigo-400">6.8k</span>
                             </div>
                           </div>
                         </div>
-                        <div className="h-[200px] rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex-shrink-0">
-                          <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Configuration</div>
+                        <div className="h-[200px] rounded-xl border border-slate-800 bg-slate-950 p-4 flex-shrink-0">
+                          <div className="text-sm font-semibold text-slate-200 mb-3">Configuration</div>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Vector Weight</span>
+                              <span className="text-slate-400">Vector Weight</span>
                               <span className="font-mono text-xs">0.7</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Text Weight</span>
+                              <span className="text-slate-400">Text Weight</span>
                               <span className="font-mono text-xs">0.3</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Top-K</span>
+                              <span className="text-slate-400">Top-K</span>
                               <span className="font-mono text-xs">5</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Mode</span>
+                              <span className="text-slate-400">Mode</span>
                               <Pill className="text-xs px-2 py-0.5">hybrid</Pill>
                             </div>
                           </div>
@@ -1939,7 +1939,7 @@ ORDER BY final_score DESC;`}
                       active === 'hybrid' ? '/docs/hybrid-search' :
                       '/docs'
                     }
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-slate-200 hover:text-white"
                   >
                     {active === 'sql' ? 'SQL API' :
                      active === 'embeddings' ? 'Embedding engine' :

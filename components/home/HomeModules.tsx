@@ -91,13 +91,13 @@ const modules: ModuleCard[] = [
 
 export default function HomeModules() {
   return (
-    <section className="bg-white dark:bg-slate-900">
+    <section className="bg-slate-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white">
+          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-white">
             Inside NeuronDB
           </h2>
-          <p className="mt-3 text-lg text-slate-600 dark:text-slate-300">
+          <p className="mt-3 text-lg text-slate-300">
             Engines, pipelines, and deployment tools
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function HomeModules() {
               <Link
                 key={m.title}
                 href={m.href}
-                className="group relative rounded-2xl border border-slate-200 dark:border-slate-700 bg-transparent overflow-hidden hover:shadow-xl transition-all"
+                className="group relative rounded-2xl border border-slate-700 bg-transparent overflow-hidden hover:shadow-xl transition-all"
               >
                 {/* Large visual artwork - takes up most of the card */}
                 <div className="h-64 bg-transparent flex items-center justify-center relative overflow-hidden">
@@ -122,22 +122,22 @@ export default function HomeModules() {
                 {/* Minimal text content */}
                 <div className="p-6 bg-transparent">
                   <div className="flex items-center gap-2 mb-2">
-                    <Icon className="w-5 h-5 text-slate-700 dark:text-slate-200" />
-                    <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{m.title}</h3>
+                    <Icon className="w-5 h-5 text-slate-200" />
+                    <h3 className="text-xl font-semibold text-white">{m.title}</h3>
                   </div>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">{m.kicker}</p>
+                  <p className="text-sm text-slate-400 mb-4">{m.kicker}</p>
 
                   {/* Bullets list */}
                   <ul className="space-y-2 mb-4">
                     {m.bullets.slice(0, 5).map((bullet, idx) => (
-                      <li key={idx} className="text-sm text-slate-600 dark:text-slate-400 flex items-start gap-2">
-                        <span className="text-slate-400 dark:text-slate-500 mt-1">•</span>
+                      <li key={idx} className="text-sm text-slate-400 flex items-start gap-2">
+                        <span className="text-slate-500 mt-1">•</span>
                         <span>{bullet}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <div className="mt-4 flex items-center gap-1 text-sm font-medium text-slate-700 dark:text-slate-200 group-hover:text-slate-900 dark:group-hover:text-white transition-colors">
+                  <div className="mt-4 flex items-center gap-1 text-sm font-medium text-slate-200 group-hover:text-white transition-colors">
                     <span>Learn more</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </div>

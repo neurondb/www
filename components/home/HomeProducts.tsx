@@ -77,10 +77,10 @@ const products: Product[] = [
 
 export default function HomeProducts() {
   return (
-    <section className="bg-white dark:bg-slate-900">
+    <section className="bg-slate-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
                 <div className="max-w-3xl mx-auto text-center">
-                  <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white">
+                  <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-white">
                     NeuronDB PostgreSQL AI Ecosystem
                   </h2>
                 </div>
@@ -92,7 +92,7 @@ export default function HomeProducts() {
               <Link
                 key={p.name}
                 href={p.href}
-                className="group relative rounded-2xl border border-slate-200 dark:border-slate-700 bg-transparent overflow-hidden hover:shadow-xl transition-all"
+                className="group relative rounded-2xl border border-slate-700 bg-transparent overflow-hidden hover:shadow-xl transition-all"
                       >
                         {/* Large visual artwork - takes up most of the card */}
                         <div className="h-48 bg-transparent flex items-center justify-center relative overflow-hidden">
@@ -105,26 +105,26 @@ export default function HomeProducts() {
                         {/* Compact product info at bottom */}
                         <div className="p-4 bg-transparent">
                           <div className="flex items-center gap-2 mb-2">
-                            <div className="w-8 h-8 rounded-xl bg-transparent border border-slate-300 dark:border-slate-700 flex items-center justify-center">
-                              <Icon className="w-4 h-4 text-slate-700 dark:text-slate-200" />
+                            <div className="w-8 h-8 rounded-xl bg-transparent border border-slate-700 flex items-center justify-center">
+                              <Icon className="w-4 h-4 text-slate-200" />
                             </div>
                             <div>
-                              <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{p.name}</h3>
-                              <p className="text-xs text-slate-500 dark:text-slate-400">{p.tagline}</p>
+                              <h3 className="text-lg font-semibold text-white">{p.name}</h3>
+                              <p className="text-xs text-slate-400">{p.tagline}</p>
                             </div>
                           </div>
 
                           {/* Bullet points */}
                           <ul className="mt-3 space-y-1.5">
                             {p.bullets.map((bullet, i) => (
-                              <li key={i} className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-400">
-                                <span className="text-yellow-600 dark:text-yellow-400 mt-0.5">•</span>
+                              <li key={i} className="flex items-start gap-2 text-xs text-slate-400">
+                                <span className="text-yellow-400 mt-0.5">•</span>
                                 <span>{bullet}</span>
                               </li>
                             ))}
                           </ul>
 
-                          <div className="mt-3 flex items-center gap-1 text-xs font-medium text-slate-700 dark:text-slate-200 group-hover:text-slate-900 dark:group-hover:text-white transition-colors">
+                          <div className="mt-3 flex items-center gap-1 text-xs font-medium text-slate-200 group-hover:text-white transition-colors">
                             <span>Learn more</span>
                             <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
                           </div>

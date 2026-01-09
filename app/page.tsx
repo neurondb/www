@@ -1,16 +1,30 @@
 import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import { ArrowRight } from 'lucide-react'
 import PageTemplate from '@/components/templates/PageTemplate'
 import FooterTemplate from '@/components/templates/FooterTemplate'
 import FAQSchema from '@/components/SEO/FAQSchema'
 import HomeHero from '@/components/home/HomeHero'
 import HomeFeatureGrid from '@/components/home/HomeFeatureGrid'
-import HomeDashboardDemo from '@/components/home/HomeDashboardDemo'
-import HomeProducts from '@/components/home/HomeProducts'
-import HomeModules from '@/components/home/HomeModules'
 import { generatePageMetadata } from '@/config/seo'
+
+// Dynamic imports for heavy components - load after initial render
+const HomeDashboardDemo = dynamic(() => import('@/components/home/HomeDashboardDemo'), {
+  loading: () => <div className="min-h-[600px] bg-slate-900" />,
+  ssr: true,
+})
+
+const HomeProducts = dynamic(() => import('@/components/home/HomeProducts'), {
+  loading: () => <div className="min-h-[400px] bg-slate-900" />,
+  ssr: true,
+})
+
+const HomeModules = dynamic(() => import('@/components/home/HomeModules'), {
+  loading: () => <div className="min-h-[400px] bg-slate-900" />,
+  ssr: true,
+})
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'NeuronDB PostgreSQL AI Extension',

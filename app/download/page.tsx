@@ -41,11 +41,11 @@ export const metadata = {
 
 export default function DownloadPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       <HeroTemplate height="default" className="text-center pt-20">
         <div className="container-extra-wide relative z-10 w-full">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-4">
               Download NeuronDB
             </h1>
             <p className="text-lg md:text-xl font-normal text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
@@ -55,29 +55,29 @@ export default function DownloadPage() {
         </div>
       </HeroTemplate>
 
-      <section className="py-24 bg-white dark:bg-slate-900">
+      <section className="py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
               Download NeuronDB
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-6">
               Latest version of NeuronDB
             </p>
-            <div className="max-w-3xl mx-auto p-6 bg-slate-50 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700">
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">Choose Your Version</h3>
+            <div className="max-w-3xl mx-auto p-6 bg-slate-800 rounded-lg border border-slate-700">
+              <h3 className="text-xl font-semibold text-white mb-4">Choose Your Version</h3>
               <div className="grid md:grid-cols-2 gap-4 text-left">
-                <div className="p-4 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700">
+                <div className="p-4 bg-slate-900 rounded border border-slate-700">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-semibold rounded">STABLE</span>
-                    <span className="text-slate-900 dark:text-white font-semibold">Version 1.0.0</span>
+                    <span className="text-white font-semibold">Version 1.0.0</span>
                   </div>
                   <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">Stable production release</p>
                   <p className="text-xs text-slate-600 dark:text-slate-400 mb-2"><strong>Branch:</strong> <code className="bg-slate-100 dark:bg-slate-800 px-1 rounded">REL1_STABLE</code></p>
                   <p className="text-xs text-slate-600 dark:text-slate-400 mb-2"><strong>Status:</strong> Stable production release</p>
                   <p className="text-xs text-slate-600 dark:text-slate-400">For production deployments requiring maximum stability</p>
                 </div>
-                <div className="p-4 bg-white dark:bg-slate-900 rounded border border-yellow-300 dark:border-yellow-500/30">
+                <div className="p-4 bg-slate-900 rounded border border-yellow-500/30">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 text-xs font-semibold rounded">LATEST</span>
                     <span className="text-slate-900 dark:text-white font-semibold">Version 2.0.0</span>

@@ -167,7 +167,7 @@ export default function DocsPageClient() {
         featureIconClass: 'text-yellow-400',
         linkHoverClass: 'hover:text-yellow-300',
         quickLinkCardClass:
-          'rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm transition hover:border-yellow-300 dark:border-slate-700/60 dark:bg-slate-900/60',
+          'rounded-2xl border border-slate-700/60 bg-slate-900/60 p-6 shadow-sm transition hover:border-yellow-300',
         quickLinkIconClass: 'text-yellow-400',
         quickLinkHoverLabelClass: 'text-yellow-400'
       }}
