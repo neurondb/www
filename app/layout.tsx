@@ -244,7 +244,7 @@ export default function RootLayout({
           <OrganizationSchema />
           <WebSiteSchema />
           <Header />
-          <main id="main-content" role="main">
+          <main id="main-content" role="main" className="animate-page-fade-in">
             {children}
           </main>
           <ScrollToTop />

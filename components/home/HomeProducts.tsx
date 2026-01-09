@@ -92,12 +92,12 @@ export default function HomeProducts() {
               <Link
                 key={p.name}
                 href={p.href}
-                className="group relative rounded-2xl border border-slate-700 bg-transparent overflow-hidden hover:shadow-xl transition-all"
+                className="group relative rounded-2xl border border-slate-700 bg-transparent overflow-hidden hover:shadow-xl card-smooth"
                       >
                         {/* Large visual artwork - takes up most of the card */}
                         <div className="h-48 bg-transparent flex items-center justify-center relative overflow-hidden">
                           {/* Large artwork - centered and increased SVG size */}
-                          <div className="relative w-72 h-72 opacity-95 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center">
+                          <div className="relative w-72 h-72 opacity-95 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500 ease-out flex items-center justify-center">
                             <ProductArt kind={p.art} />
                           </div>
                         </div>
@@ -124,9 +124,9 @@ export default function HomeProducts() {
                             ))}
                           </ul>
 
-                          <div className="mt-3 flex items-center gap-1 text-xs font-medium text-slate-200 group-hover:text-white transition-colors">
-                            <span>Learn more</span>
-                            <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
+                          <div className="mt-3 flex items-center gap-1 text-xs font-medium text-slate-200 group-hover:text-white transition-all duration-300">
+                            <span className="transition-transform group-hover:translate-x-1">Learn more</span>
+                            <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-2" />
                           </div>
                         </div>
               </Link>

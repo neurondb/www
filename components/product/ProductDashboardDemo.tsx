@@ -78,7 +78,7 @@ function Pill({ children, tone = 'neutral', className = '' }: { children: React.
       ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800'
       : tone === 'warn'
       ? 'bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300 border-amber-200 dark:border-amber-800'
-      : 'bg-slate-50 text-slate-700 dark:bg-slate-900 dark:text-slate-300 border-slate-200 dark:border-slate-800'
+      : 'bg-slate-900 text-slate-300 border-slate-800'
 
   return <span className={`inline-flex items-center rounded-full border px-2 py-0.5 text-[11px] font-semibold ${cls} ${className}`}>{children}</span>
 }
@@ -88,36 +88,36 @@ function ResultsTable({ results }: { results: Array<{ id: number; sim?: number; 
   const displayResults = results.slice(0, 5)
   
   return (
-    <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 overflow-hidden h-full flex flex-col">
-      <div className="px-4 py-2 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between flex-shrink-0">
-        <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">Results</span>
+    <div className="rounded-xl border border-slate-800 bg-slate-950 overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-lg">
+      <div className="px-4 py-2 border-b border-slate-800 flex items-center justify-between flex-shrink-0">
+        <span className="text-sm font-semibold text-slate-200">Results</span>
         <Pill tone="ok" className="text-xs px-2 py-0.5">5 rows</Pill>
       </div>
       <div className="overflow-auto flex-1 min-h-0">
         <table className="w-full text-sm">
-          <thead className="bg-slate-50 dark:bg-slate-900 sticky top-0">
-            <tr className="border-b border-slate-200 dark:border-slate-800">
-              <th className="px-4 py-2.5 text-left text-slate-600 dark:text-slate-400 font-semibold">id</th>
+          <thead className="bg-slate-900 sticky top-0">
+            <tr className="border-b border-slate-800">
+              <th className="px-4 py-2.5 text-left text-slate-400 font-semibold">id</th>
               {displayResults[0]?.prediction !== undefined && (
                 <>
-                  <th className="px-4 py-2.5 text-left text-slate-600 dark:text-slate-400 font-semibold">prediction</th>
-                  <th className="px-4 py-2.5 text-left text-slate-600 dark:text-slate-400 font-semibold">confidence</th>
+                  <th className="px-4 py-2.5 text-left text-slate-400 font-semibold">prediction</th>
+                  <th className="px-4 py-2.5 text-left text-slate-400 font-semibold">confidence</th>
                 </>
               )}
               {displayResults[0]?.sim !== undefined && (
                 <>
-                  <th className="px-4 py-2.5 text-left text-slate-600 dark:text-slate-400 font-semibold">similarity</th>
-                  <th className="px-4 py-2.5 text-left text-slate-600 dark:text-slate-400 font-semibold">text</th>
+                  <th className="px-4 py-2.5 text-left text-slate-400 font-semibold">similarity</th>
+                  <th className="px-4 py-2.5 text-left text-slate-400 font-semibold">text</th>
                 </>
               )}
               {displayResults[0]?.category !== undefined && (
-                <th className="px-4 py-2.5 text-left text-slate-600 dark:text-slate-400 font-semibold">category</th>
+                <th className="px-4 py-2.5 text-left text-slate-400 font-semibold">category</th>
               )}
             </tr>
           </thead>
-          <tbody className="text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-950">
+          <tbody className="text-slate-200 bg-slate-950">
             {displayResults.map((r, i) => (
-              <tr key={r.id || i} className="border-t border-slate-200 dark:border-slate-800">
+              <tr key={r.id || i} className="border-t border-slate-800">
                 <td className="px-4 py-3 font-mono text-sm">{r.id != null && r.id !== 0 ? r.id : ''}</td>
                 {r.prediction !== undefined && (
                   <>
@@ -211,10 +211,10 @@ function CodePanel({ title, code }: { title: string; code: string }) {
   }
 
   return (
-    <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-950 text-slate-100 overflow-hidden h-full flex flex-col">
+    <div className="rounded-xl border border-slate-800 bg-slate-950 text-slate-100 overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-lg">
       <div className="px-4 py-2 border-b border-slate-800 text-sm font-mono text-slate-300 flex items-center justify-between flex-shrink-0">
-        <span>{title}</span>
-        <span className="text-slate-400">demo</span>
+        <span className="transition-colors duration-300">{title}</span>
+        <span className="text-slate-400 transition-opacity duration-300">demo</span>
       </div>
       <div className="overflow-x-auto overflow-y-auto w-full flex-1 min-h-0 max-h-full">
         <SyntaxHighlighter
@@ -263,15 +263,15 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
   const tab = selectedTab
 
   return (
-    <section className="bg-white dark:bg-slate-900">
+    <section className="bg-slate-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-12 gap-10 items-stretch" style={{ minHeight: '650px' }}>
           {/* Left - tabs */}
           <div className="lg:col-span-4 flex flex-col h-full">
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900 dark:text-white flex-shrink-0">
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white flex-shrink-0">
               {title}
             </h2>
-            <p className="mt-3 text-slate-600 dark:text-slate-300 flex-shrink-0">
+            <p className="mt-3 text-slate-300 flex-shrink-0">
               {subtitle}
             </p>
 
@@ -284,19 +284,19 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
                     key={t.id}
                     onClick={() => setActive(t.id)}
                     className={[
-                      'w-full text-left rounded-xl border px-3 py-2.5 transition-colors',
+                      'w-full text-left rounded-xl border px-3 py-2.5 transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-md',
                       isActive
-                        ? 'border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950'
-                        : 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-950',
+                        ? 'border-slate-700 bg-slate-950 shadow-sm'
+                        : 'border-slate-800 bg-slate-900 hover:bg-slate-950',
                     ].join(' ')}
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-4 h-4 text-slate-700 dark:text-slate-200" />
+                      <div className="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110">
+                        <Icon className="w-4 h-4 text-slate-200 transition-transform duration-300 group-hover:rotate-3" />
                       </div>
                       <div className="min-w-0 flex-1">
-                        <div className="text-sm font-semibold text-slate-900 dark:text-white">{t.label}</div>
-                        <div className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">{t.heading}</div>
+                        <div className="text-sm font-semibold text-white">{t.label}</div>
+                        <div className="text-xs text-slate-400 line-clamp-2">{t.heading}</div>
                       </div>
                     </div>
                   </button>
@@ -306,19 +306,19 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
           </div>
 
           {/* Right: "demo panel" */}
-          <div className="lg:col-span-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 overflow-hidden flex flex-col">
+          <div className="lg:col-span-8 rounded-2xl border border-slate-800 bg-slate-950 overflow-hidden flex flex-col">
             {/* App topbar */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex-shrink-0">
+            <div className="flex items-center justify-between px-5 py-4 border-b border-slate-800 bg-slate-900 flex-shrink-0">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 flex items-center justify-center">
+                <div className="w-9 h-9 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-center">
                   {(() => {
                     const Icon = iconMap[tab.iconName] || Database
-                    return <Icon className="w-4 h-4 text-slate-700 dark:text-slate-200" />
+                    return <Icon className="w-4 h-4 text-slate-200" />
                   })()}
                 </div>
                 <div>
-                  <div className="text-base font-semibold text-slate-900 dark:text-white">{productDisplayName}</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">console • demo</div>
+                  <div className="text-base font-semibold text-white">{productDisplayName}</div>
+                  <div className="text-sm text-slate-400">console • demo</div>
                 </div>
               </div>
               <div className="flex items-center gap-2">
@@ -330,17 +330,17 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
             {/* App body */}
             <div className="flex-1 min-h-0 overflow-hidden flex flex-col">
               {/* Main */}
-              <div className="p-4 bg-slate-50 dark:bg-slate-950 flex flex-col h-full overflow-hidden">
+              <div className="p-4 bg-slate-950 flex flex-col h-full overflow-hidden">
                 <div className="flex items-start justify-between gap-4 mb-3 flex-shrink-0">
                   <div>
-                    <div className="text-base font-semibold text-slate-900 dark:text-white">{tab.heading}</div>
-                    <div className="mt-0.5 text-sm text-slate-600 dark:text-slate-300">{tab.description}</div>
+                    <div className="text-base font-semibold text-white">{tab.heading}</div>
+                    <div className="mt-0.5 text-sm text-slate-300">{tab.description}</div>
                   </div>
                   <Pill>{tab.codeLabel}</Pill>
                 </div>
 
                 {/* Content by tab */}
-                <div key={tab.id} className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden">
+                <div key={tab.id} className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden animate-fade-in-up transition-all duration-300">
                   <div className="flex flex-col gap-6 pb-4 h-full">
                     {/* Code Panel - expandable */}
                     <div className="min-h-[320px] flex-[2] overflow-hidden">
@@ -355,23 +355,23 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
                     )}
 
                     {/* Performance Block - expandable */}
-                    <div className="min-h-[140px] flex-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex flex-col">
-                      <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Performance</div>
+                    <div className="min-h-[140px] flex-1 rounded-xl border border-slate-800 bg-slate-950 p-4 flex flex-col">
+                      <div className="text-sm font-semibold text-slate-200 mb-3">Performance</div>
                       <div className="grid grid-cols-4 gap-4 flex-1">
                         <div className="space-y-2 text-sm flex flex-col justify-center">
-                          <div className="text-xs text-slate-500 dark:text-slate-400">Query Time</div>
-                          <div className="font-mono font-semibold text-lg text-emerald-600 dark:text-emerald-400">8.42ms</div>
+                          <div className="text-xs text-slate-400">Query Time</div>
+                          <div className="font-mono font-semibold text-lg text-emerald-400">8.42ms</div>
                         </div>
                         <div className="space-y-2 text-sm flex flex-col justify-center">
-                          <div className="text-xs text-slate-500 dark:text-slate-400">Latency (P95)</div>
+                          <div className="text-xs text-slate-400">Latency (P95)</div>
                           <div className="font-mono font-semibold text-lg">12.5ms</div>
                         </div>
                         <div className="space-y-2 text-sm flex flex-col justify-center">
-                          <div className="text-xs text-slate-500 dark:text-slate-400">QPS</div>
-                          <div className="font-mono font-semibold text-lg text-indigo-600 dark:text-indigo-400">8.2k</div>
+                          <div className="text-xs text-slate-400">QPS</div>
+                          <div className="font-mono font-semibold text-lg text-indigo-400">8.2k</div>
                         </div>
                         <div className="space-y-2 text-sm flex flex-col justify-center">
-                          <div className="text-xs text-slate-500 dark:text-slate-400">Status</div>
+                          <div className="text-xs text-slate-400">Status</div>
                           <div className="flex items-center gap-2">
                             <Pill tone="ok" className="text-xs px-2 py-0.5">ready</Pill>
                           </div>
@@ -380,56 +380,56 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
                     </div>
 
                     {/* Stats Block - expandable, consolidated */}
-                    <div className="min-h-[180px] flex-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 flex flex-col">
-                      <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-3">Query Statistics</div>
+                    <div className="min-h-[180px] flex-1 rounded-xl border border-slate-800 bg-slate-950 p-4 flex flex-col">
+                      <div className="text-sm font-semibold text-slate-200 mb-3">Query Statistics</div>
                       <div className="grid grid-cols-3 gap-6 flex-1">
                         <div className="space-y-2 flex flex-col justify-center">
-                          <div className="text-xs text-slate-500 dark:text-slate-400 mb-2">Execution</div>
+                          <div className="text-xs text-slate-400 mb-2">Execution</div>
                           <div className="space-y-1.5 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Rows Returned</span>
+                              <span className="text-slate-400">Rows Returned</span>
                               <span className="font-mono font-semibold">{tab.results?.length || 5}</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Cache Hit</span>
+                              <span className="text-slate-400">Cache Hit</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">96%</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Plan</span>
-                              <span className="font-mono text-xs text-slate-500 dark:text-slate-400">Optimized</span>
+                              <span className="text-slate-400">Plan</span>
+                              <span className="font-mono text-xs text-slate-400">Optimized</span>
                             </div>
                           </div>
                         </div>
                         <div className="space-y-2 flex flex-col justify-center">
-                          <div className="text-xs text-slate-500 dark:text-slate-400 mb-2">Connection</div>
+                          <div className="text-xs text-slate-400 mb-2">Connection</div>
                           <div className="space-y-1.5 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Database</span>
+                              <span className="text-slate-400">Database</span>
                               <span className="font-mono text-xs">{productId}</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Version</span>
+                              <span className="text-slate-400">Version</span>
                               <span className="font-mono text-xs">v1.0</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Status</span>
+                              <span className="text-slate-400">Status</span>
                               <Pill className="text-xs px-2 py-0.5">active</Pill>
                             </div>
                           </div>
                         </div>
                         <div className="space-y-2 flex flex-col justify-center">
-                          <div className="text-xs text-slate-500 dark:text-slate-400 mb-2">Summary</div>
+                          <div className="text-xs text-slate-400 mb-2">Summary</div>
                           <div className="space-y-1.5 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Total Queries</span>
+                              <span className="text-slate-400">Total Queries</span>
                               <span className="font-mono font-semibold">1,247</span>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Success Rate</span>
+                              <span className="text-slate-400">Success Rate</span>
                               <Pill tone="ok" className="text-xs px-2 py-0.5">99.8%</Pill>
                             </div>
                             <div className="flex justify-between">
-                              <span className="text-slate-600 dark:text-slate-400">Avg Latency</span>
+                              <span className="text-slate-400">Avg Latency</span>
                               <span className="font-mono text-xs">8.2ms</span>
                             </div>
                           </div>
@@ -444,7 +444,7 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
                     href={tab.footerHref}
                     target={tab.footerHref.startsWith('http') ? '_blank' : undefined}
                     rel={tab.footerHref.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-slate-200 hover:text-white"
                   >
                     {tab.footerLabel} <ArrowRight className="w-4 h-4" />
                   </Link>

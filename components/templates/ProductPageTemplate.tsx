@@ -144,45 +144,45 @@ export default function ProductPageTemplate({
     switch (productId) {
       case 'neurondb':
         return (
-          <div className="relative w-full flex items-center justify-center">
+          <div className="relative w-full flex items-center justify-center transition-transform duration-500 hover:scale-105">
             <Image
               src="/n-db.png"
               alt={`${product.displayName}: ${product.tagline}`}
               width={600}
               height={600}
-              className="w-full h-auto max-w-[500px]"
+              className="w-full h-auto max-w-[500px] transition-transform duration-500"
               priority
             />
           </div>
         )
       case 'neuronmcp':
         return (
-          <div className="relative w-full flex items-center justify-center">
+          <div className="relative w-full flex items-center justify-center transition-transform duration-500 hover:scale-105">
             <Image
               src="/n-mcp.png"
               alt={`${product.displayName}: ${product.tagline}`}
               width={600}
               height={600}
-              className="w-full h-auto max-w-[500px]"
+              className="w-full h-auto max-w-[500px] transition-transform duration-500"
               priority
             />
           </div>
         )
       case 'neuronagent':
         return (
-          <div className="relative w-full flex items-center justify-center">
+          <div className="relative w-full flex items-center justify-center transition-transform duration-500 hover:scale-105">
             <Image
               src="/n-agent.png"
               alt={`${product.displayName}: ${product.tagline}`}
               width={600}
               height={600}
-              className="w-full h-auto max-w-[500px]"
+              className="w-full h-auto max-w-[500px] transition-transform duration-500"
               priority
             />
           </div>
         )
       case 'neurondesktop':
-        return <NeuronDesktopHeroArt size={280} className="text-slate-600 dark:text-slate-400" />
+        return <NeuronDesktopHeroArt size={280} className="text-slate-600 dark:text-slate-400 transition-all duration-500 hover:scale-110 hover:rotate-3" />
       default:
         return ProductIcon ? <ProductIcon size={120} /> : null
     }
@@ -221,14 +221,14 @@ export default function ProductPageTemplate({
               <div className="mt-7 flex flex-col sm:flex-row gap-3">
                 <Link
                   href={product.docsUrl || '/docs'}
-                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-white text-slate-900 px-5 py-3 text-sm font-semibold hover:bg-slate-100 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-white text-slate-900 px-5 py-3 text-sm font-semibold hover:bg-slate-100 transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                 >
                   Start
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <Link
                   href={product.docsUrl || '/docs'}
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 px-5 py-3 text-sm font-semibold text-white bg-slate-900/40 backdrop-blur-sm hover:bg-slate-900/60 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 px-5 py-3 text-sm font-semibold text-white bg-slate-900/40 backdrop-blur-sm hover:bg-slate-900/60 transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   Read docs
                 </Link>
@@ -236,15 +236,15 @@ export default function ProductPageTemplate({
                   href={product.githubUrl || 'https://github.com/neurondb-ai/neurondb'}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 bg-slate-900/30 backdrop-blur-sm hover:bg-slate-900/50 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-200 bg-slate-900/30 backdrop-blur-sm hover:bg-slate-900/50 transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                 >
-                  <Github className="w-4 h-4" />
+                  <Github className="w-4 h-4 transition-transform group-hover:rotate-12" />
                   GitHub
                 </Link>
               </div>
 
               {/* Quickstart snippet */}
-              <div className="mt-8 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-950 text-slate-100 overflow-hidden">
+              <div className="mt-8 rounded-xl border border-slate-800 bg-slate-950 text-slate-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.01]">
                 <div className="flex items-center justify-between px-4 py-2 border-b border-slate-800">
                   <div className="text-xs font-mono text-slate-300">
                     {productId === 'neurondb' ? 'psql' : productId === 'neuronmcp' ? 'bash' : productId === 'neuronagent' ? 'curl' : 'bash'}
@@ -260,7 +260,7 @@ export default function ProductPageTemplate({
               {technicalFacts.length > 0 && (
                 <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-slate-400">
                   {technicalFacts.map((fact, idx) => (
-                    <span key={idx} className="font-mono">{fact}</span>
+                    <span key={idx} className="font-mono transition-all duration-300 hover:text-slate-200">{fact}</span>
                   ))}
                 </div>
               )}

@@ -109,12 +109,12 @@ export default function HomeModules() {
               <Link
                 key={m.title}
                 href={m.href}
-                className="group relative rounded-2xl border border-slate-700 bg-transparent overflow-hidden hover:shadow-xl transition-all"
+                className="group relative rounded-2xl border border-slate-700 bg-transparent overflow-hidden hover:shadow-xl card-smooth"
               >
                 {/* Large visual artwork - takes up most of the card */}
                 <div className="h-64 bg-transparent flex items-center justify-center relative overflow-hidden">
                   {/* Large artwork */}
-                  <div className="relative w-56 h-56 opacity-95 group-hover:scale-105 transition-transform duration-500">
+                  <div className="relative w-56 h-56 opacity-95 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500 ease-out">
                     <ModuleArt kind={m.art} />
                   </div>
                 </div>
@@ -137,9 +137,9 @@ export default function HomeModules() {
                     ))}
                   </ul>
 
-                  <div className="mt-4 flex items-center gap-1 text-sm font-medium text-slate-200 group-hover:text-white transition-colors">
-                    <span>Learn more</span>
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  <div className="mt-4 flex items-center gap-1 text-sm font-medium text-slate-200 group-hover:text-white transition-all duration-300">
+                    <span className="transition-transform group-hover:translate-x-1">Learn more</span>
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-2" />
                   </div>
                 </div>
               </Link>

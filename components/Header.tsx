@@ -52,9 +52,8 @@ const Header = () => {
 
   return (
     <header 
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b bg-slate-900/95"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-slate-800 bg-slate-900/95"
       style={{
-        borderBottomColor: 'var(--border)',
         boxShadow: 'var(--shadow-sm)',
       }}
     >
@@ -86,7 +85,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:bg-slate-800"
+                className="px-4 py-2 rounded-lg font-medium transition-all duration-300 ease-out hover:bg-slate-800 hover:translate-x-1"
                 style={{
                   color: 'var(--text-primary)',
                 }}
@@ -98,7 +97,7 @@ const Header = () => {
             ))}
             <Link
               href="/search"
-              className="px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:bg-slate-800"
+              className="px-4 py-2 rounded-lg font-medium transition-all duration-300 ease-out hover:bg-slate-800 hover:translate-x-1"
               style={{
                 color: 'var(--text-primary)',
               }}
@@ -160,7 +159,7 @@ const Header = () => {
           <div 
             id={mobileNavId} 
             ref={mobileMenuRef}
-            className="md:hidden border-t backdrop-blur-md animate-in"
+            className="md:hidden border-t backdrop-blur-md mobile-menu-enter"
             style={{
               borderTopColor: 'var(--border)',
               backgroundColor: 'var(--background)',
@@ -175,7 +174,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="flex items-center px-4 py-3 rounded-xl font-medium transition-all duration-200"
+                  className="flex items-center px-4 py-3 rounded-xl font-medium transition-all duration-300 ease-out hover:bg-slate-800 hover:translate-x-2"
                   style={{
                     color: 'var(--text-primary)',
                   }}
@@ -188,7 +187,7 @@ const Header = () => {
               ))}
               <Link
                 href="/search"
-                className="flex items-center px-4 py-3 rounded-xl font-medium transition-all duration-200"
+                className="flex items-center px-4 py-3 rounded-xl font-medium transition-all duration-300 ease-out hover:bg-slate-800 hover:translate-x-2"
                 style={{
                   color: 'var(--text-primary)',
                 }}

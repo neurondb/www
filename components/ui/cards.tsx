@@ -54,24 +54,25 @@ export function FeatureCard({
   const iconClasses = productId
     ? getProductTheme(productId).featureIconClass
     : 'text-primary-600'
-  
-  const classes = cn(
-    baseClasses,
-    onClick || href ? 'cursor-pointer' : '',
-    className
-  )
 
   const IconComponent = typeof icon === 'function' ? icon : null
   const iconElement = IconComponent ? <IconComponent className={cn('w-6 h-6', iconClasses)} /> : (icon as React.ReactNode)
 
+  const classes = cn(
+    baseClasses,
+    onClick || href ? 'cursor-pointer card-smooth' : '',
+    'transition-all duration-300 ease-out',
+    className
+  )
+
   const content = (
     <>
       {iconElement && (
-        <div className={cn('mb-4', iconClasses)}>
+        <div className={cn('mb-4 transition-transform duration-300 group-hover:scale-110', iconClasses)}>
           {iconElement}
         </div>
       )}
-      <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
+      <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4 transition-colors duration-300 group-hover:text-white dark:group-hover:text-yellow-400">
         {title}
       </h3>
       {Array.isArray(description) ? (
@@ -151,7 +152,7 @@ export function DocCard({
     ? getProductTheme(productId).docCardClass
     : getCardClasses('doc', true)
   
-  const classes = cn(baseClasses, 'cursor-pointer', className)
+  const classes = cn(baseClasses, 'cursor-pointer card-smooth transition-all duration-300 ease-out', className)
 
   const IconComponent = typeof icon === 'function' ? icon : null
   const iconElement = IconComponent ? <IconComponent className="w-5 h-5" /> : (icon as React.ReactNode)
@@ -231,7 +232,7 @@ export function QuickLinkCard({
     ? theme.quickLinkHoverLabelClass
     : 'text-primary-600'
   
-  const classes = cn(baseClasses, 'cursor-pointer group', className)
+  const classes = cn(baseClasses, 'cursor-pointer group card-smooth transition-all duration-300 ease-out', className)
 
   const IconComponent = typeof icon === 'function' ? icon : null
   const iconElement = IconComponent ? <IconComponent className={cn('w-6 h-6', iconClasses)} /> : (icon as React.ReactNode)

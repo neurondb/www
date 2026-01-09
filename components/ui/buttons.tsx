@@ -47,7 +47,7 @@ export function PrimaryButton({
   const baseClasses = getButtonClasses('primary', size)
   const classes = cn(
     baseClasses,
-    'shadow-lg hover:shadow-xl hover:scale-105 active:scale-95',
+    'shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 ease-out',
     disabled && 'opacity-50 cursor-not-allowed hover:scale-100',
     loading && 'cursor-wait',
     className
@@ -87,7 +87,7 @@ export function SecondaryButton({
   const baseClasses = getButtonClasses('secondary', size)
   const classes = cn(
     baseClasses,
-    'hover:shadow-md hover:scale-105 active:scale-95',
+    'hover:shadow-md hover:scale-105 active:scale-95 transition-all duration-300 ease-out',
     disabled && 'opacity-50 cursor-not-allowed hover:scale-100',
     loading && 'cursor-wait',
     className
@@ -127,7 +127,7 @@ export function OutlineButton({
   const baseClasses = getButtonClasses('outline', size)
   const classes = cn(
     baseClasses,
-    'hover:shadow-md hover:scale-105 active:scale-95',
+    'hover:shadow-md hover:scale-105 active:scale-95 transition-all duration-300 ease-out',
     disabled && 'opacity-50 cursor-not-allowed hover:scale-100',
     loading && 'cursor-wait',
     className
@@ -174,7 +174,7 @@ export function ProductPrimaryButton({
   }
   
   const classes = cn(
-    'inline-flex items-center gap-2 rounded-xl font-semibold shadow-lg transition-all duration-300',
+    'inline-flex items-center gap-2 rounded-xl font-semibold shadow-lg transition-all duration-300 ease-out',
     baseClasses,
     sizeClasses[size],
     'hover:shadow-xl hover:scale-105 active:scale-95',
@@ -220,7 +220,7 @@ export function ProductSecondaryButton({
   }
   
   const classes = cn(
-    'inline-flex items-center gap-2 rounded-xl border font-semibold transition-all duration-300',
+    'inline-flex items-center gap-2 rounded-xl border font-semibold transition-all duration-300 ease-out',
     baseClasses,
     sizeClasses[size],
     'hover:shadow-md hover:scale-105 active:scale-95',
@@ -263,7 +263,7 @@ export function PrimaryButtonLink({
   const baseClasses = getButtonClasses('primary', size)
   const classes = cn(
     baseClasses,
-    'shadow-lg hover:shadow-xl hover:scale-105 active:scale-95',
+    'shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300 ease-out',
     className
   )
 

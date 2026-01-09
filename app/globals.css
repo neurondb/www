@@ -438,14 +438,111 @@ html {
   scroll-padding-top: 6rem; /* Account for fixed header */
 }
 
+/* Smooth page transitions */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Intersection Observer based scroll animations */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth entrance animations */
+.animate-page-fade-in {
+  animation: pageFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Enhanced gradient animations */
+.gradient-animated {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
 /* Professional hover effects */
 .hover-lift {
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
 }
 
 .hover-lift:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.02);
   box-shadow: var(--shadow-lg);
+}
+
+.hover-lift:active {
+  transform: translateY(-1px) scale(1.01);
 }
 
 .hover-glow {
@@ -524,7 +621,18 @@ html {
 }
 
 .btn-professional:active {
-  transform: scale(0.98);
+  transform: scale(0.96);
+  transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth icon transitions */
+svg {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover svg {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Text effects - Professional */
@@ -571,7 +679,28 @@ html {
 a, button, [role="button"], input, textarea, select {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
+  transition-duration: 250ms;
+}
+
+/* Enhanced link transitions */
+a {
+  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              text-decoration-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:hover {
+  transform: translateX(2px);
+}
+
+/* Smooth button transitions */
+button, [role="button"] {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+button:active, [role="button"]:active {
+  transform: scale(0.98);
 }
 
 /* Enhanced focus states for accessibility */
@@ -583,12 +712,27 @@ a, button, [role="button"], input, textarea, select {
 
 /* Professional card hover effect */
 .card-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
 }
 
 .card-hover:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px) scale(1.01);
   box-shadow: var(--shadow-xl);
+}
+
+/* Smooth card transitions */
+.card-smooth {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+.card-smooth:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 /* Subtle Hero Background (clean SaaS) */
@@ -618,5 +762,48 @@ a, button, [role="button"], input, textarea, select {
   background-image: 
     radial-gradient(circle at 20% 30%, rgba(251, 191, 36, 0.03) 0%, transparent 50%),
     radial-gradient(circle at 80% 70%, rgba(251, 191, 36, 0.03) 0%, transparent 50%);
+  animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth image transitions */
+img {
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* Smooth backdrop blur transitions */
+.backdrop-blur-xl {
+  transition: backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth border transitions */
+.border {
+  transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced mobile menu animations */
+@keyframes slideDownMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 1000px;
+  }
+}
+
+.mobile-menu-enter {
+  animation: slideDownMenu 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.mobile-menu-exit {
+  animation: slideDownMenu 0.2s cubic-bezier(0.4, 0, 0.2, 1) reverse forwards;
 }
 
