@@ -64,37 +64,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  // Product pages - High priority
+  // Product pages - High priority (root level, not under /docs)
   const productPages: MetadataRoute.Sitemap = [
-    {
-      url: `${baseUrl}/docs/neurondb`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/docs/neuronagent`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/docs/neuronmcp`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/docs/neurondesktop`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.95,
-    },
     {
       url: `${baseUrl}/neurondb`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/neuronagent`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/neuronmcp`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/neurondesktop`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
     },
   ]
 
@@ -268,15 +262,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  // Documentation main pages
-  const docsMainPages: MetadataRoute.Sitemap = [
-    {
-      url: `${baseUrl}/neurondb`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-  ]
+  // Documentation main pages (product pages are in productPages, not here)
+  const docsMainPages: MetadataRoute.Sitemap = []
 
   // Getting Started - High priority for new users
   const gettingStartedPages: MetadataRoute.Sitemap = [

@@ -21,18 +21,18 @@ export default function FooterTemplate({
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className={cn('bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800', className)}>
+    <footer className={cn('bg-slate-900 border-t border-slate-800', className)}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main footer content */}
         <div className="py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
           {/* Product */}
           <div>
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-slate-900 dark:text-white mb-4">
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-white mb-4">
               Product
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/docs" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                <Link href="/docs" className="text-sm text-slate-400 hover:text-white transition-colors">
                   Documentation
                 </Link>
               </li>
@@ -56,7 +56,7 @@ export default function FooterTemplate({
 
           {/* Resources */}
           <div>
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-slate-900 dark:text-white mb-4">
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-white mb-4">
               Resources
             </h3>
             <ul className="space-y-3">
@@ -85,7 +85,7 @@ export default function FooterTemplate({
 
           {/* Developers */}
           <div>
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-slate-900 dark:text-white mb-4">
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-white mb-4">
               Developers
             </h3>
             <ul className="space-y-3">
@@ -120,7 +120,7 @@ export default function FooterTemplate({
 
           {/* Company */}
           <div>
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-slate-900 dark:text-white mb-4">
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-white mb-4">
               Company
             </h3>
             <ul className="space-y-3">
@@ -147,7 +147,7 @@ export default function FooterTemplate({
         </div>
 
         {/* Bottom bar */}
-        <div className="py-8 border-t border-slate-200 dark:border-slate-800">
+        <div className="py-8 border-t border-slate-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-3">
               <Image
@@ -158,11 +158,11 @@ export default function FooterTemplate({
                 className="w-8 h-8 object-contain"
                 unoptimized
               />
-              <span className="text-sm font-semibold text-slate-900 dark:text-white">
+              <span className="text-sm font-semibold text-white">
                 {siteConfig.name}
               </span>
             </div>
-            <div className="flex items-center gap-6 text-xs text-slate-500 dark:text-slate-400">
+            <div className="flex items-center gap-6 text-xs text-slate-400">
               <span>© {currentYear} {siteConfig.name}</span>
               <span>•</span>
               <span>PostgreSQL AI Extension</span>

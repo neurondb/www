@@ -18,7 +18,7 @@ export default function PageTemplate({
 }: PageTemplateProps) {
   return (
     <div 
-      className={cn('min-h-screen bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950', className)}
+      className={cn('min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950', className)}
     >
       {children}
     </div>

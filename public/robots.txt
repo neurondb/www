@@ -15,11 +15,10 @@ Disallow: /search?*
 # Allow important pages
 Allow: /
 Allow: /neurondb
+Allow: /neuronagent
+Allow: /neuronmcp
+Allow: /neurondesktop
 Allow: /docs/
-Allow: /docs/neurondb
-Allow: /docs/neuronagent
-Allow: /docs/neuronmcp
-Allow: /docs/neurondesktop
 Allow: /blog/
 Allow: /tutorials/
 Allow: /download

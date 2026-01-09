@@ -20,9 +20,9 @@ export default function SectionTemplate({
 }: SectionTemplateProps) {
   const backgroundClass =
     background === 'hero'
-      ? 'bg-slate-50 dark:bg-slate-950'
+      ? 'bg-slate-950'
       : background === 'page'
-      ? 'bg-white dark:bg-slate-900'
+      ? 'bg-slate-900'
       : 'bg-transparent'
 
   const paddingClass = {

@@ -429,12 +429,12 @@ export default function ProductPageTemplate({
                 {(featureMatrix.title || featureMatrix.subtitle) && (
                   <div className="text-center mb-8">
                     {featureMatrix.title && (
-                      <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+                      <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                         {featureMatrix.title}
                       </h2>
                     )}
                     {featureMatrix.subtitle && (
-                      <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-4">
+                      <p className="text-lg text-slate-300 max-w-3xl mx-auto mb-4">
                         {featureMatrix.subtitle}
                       </p>
                     )}
@@ -459,12 +459,12 @@ export default function ProductPageTemplate({
                 {(featureComparison.title || featureComparison.subtitle) && (
                   <div className="text-center mb-8">
                     {featureComparison.title && (
-                      <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+                      <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                         {featureComparison.title}
                       </h2>
                     )}
                     {featureComparison.subtitle && (
-                      <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-4">
+                      <p className="text-lg text-slate-300 max-w-3xl mx-auto mb-4">
                         {featureComparison.subtitle}
                       </p>
                     )}
@@ -485,7 +485,7 @@ export default function ProductPageTemplate({
         <SectionTemplate background="page" padding="lg">
           <div className="container-wide">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                 Key Features
               </h2>
               <div className="mx-auto h-1 w-28 bg-slate-400 rounded" />
@@ -510,7 +510,7 @@ export default function ProductPageTemplate({
         <SectionTemplate background="page" padding="lg">
           <div className="container-wide">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
                 Documentation
               </h2>
               <div className="mx-auto h-1 w-28 bg-slate-400 rounded" />

@@ -57,25 +57,25 @@ export default function Home() {
       <HomeModules />
 
       {/* CTA */}
-      <section className="bg-slate-50 dark:bg-slate-950">
+      <section className="bg-slate-950">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-          <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-950 p-10 sm:p-16 text-center">
-            <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white">
+          <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-10 sm:p-16 text-center">
+            <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-white">
               Build with SQL.
             </h2>
-            <p className="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">
               CREATE EXTENSION. Scale to production with Helm charts.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/docs/getting-started"
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors"
+                className="inline-flex items-center gap-2 rounded-lg bg-white text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-100 transition-colors"
               >
                 Build <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/docs"
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-300 dark:border-slate-700 px-6 py-3 text-sm font-semibold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-6 py-3 text-sm font-semibold text-white hover:bg-slate-800 transition-colors"
               >
                 Documentation
               </Link>

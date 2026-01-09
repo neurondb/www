@@ -52,7 +52,7 @@ const Header = () => {
 
   return (
     <header 
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b bg-white/95 dark:bg-slate-900/95"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b bg-slate-900/95"
       style={{
         borderBottomColor: 'var(--border)',
         boxShadow: 'var(--shadow-sm)',
@@ -86,7 +86,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+                className="px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:bg-slate-800"
                 style={{
                   color: 'var(--text-primary)',
                 }}
@@ -98,7 +98,7 @@ const Header = () => {
             ))}
             <Link
               href="/search"
-              className="px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+              className="px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:bg-slate-800"
               style={{
                 color: 'var(--text-primary)',
               }}
