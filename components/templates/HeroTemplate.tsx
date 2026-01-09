@@ -28,19 +28,16 @@ export default function HeroTemplate({
   return (
     <section
       className={cn(
-        'relative overflow-hidden flex items-center pt-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950',
+        'relative overflow-hidden flex items-center pt-20 bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950',
         heightClass,
         className
       )}
     >
-      {/* Beautiful Tech Neuron Background */}
+      {/* Subtle clean background */}
       <div className="absolute inset-0 neuron-tech-bg"></div>
       
-      {/* Animated mesh gradient background */}
-      <div className="absolute inset-0 gradient-mesh opacity-20"></div>
-      
       {overlay && (
-        <div className="absolute inset-0 bg-black/20 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/5 dark:bg-black/20 pointer-events-none" />
       )}
       <div className="relative z-10 w-full">{children}</div>
     </section>

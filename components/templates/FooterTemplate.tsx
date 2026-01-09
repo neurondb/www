@@ -21,85 +21,152 @@ export default function FooterTemplate({
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer
-      className={cn(
-        'bg-slate-900 dark:bg-slate-950 text-slate-300 border-t border-slate-800',
-        className
-      )}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* NeuronDB Icon - Left Side */}
-          <div className="flex items-center justify-center md:justify-start">
-            <Image 
-              src="/favicons/neurondb_ai_clean.png" 
-              alt={siteConfig.name} 
-              width={128}
-              height={128}
-              className="w-32 h-32 object-contain"
-              unoptimized
-            />
-          </div>
-
-          {/* Links Section */}
+    <footer className={cn('bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800', className)}>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Main footer content */}
+        <div className="py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {/* Product */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-slate-900 dark:text-white mb-4">
+              Product
+            </h3>
+            <ul className="space-y-3">
               <li>
-                <Link
-                  href="/docs"
-                  className="text-yellow-400 hover:text-yellow-300 transition-colors"
-                >
+                <Link href="/docs" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
                   Documentation
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/download"
-                  className="text-yellow-400 hover:text-yellow-300 transition-colors"
-                >
+                <Link href="/download" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
                   Download
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/contact"
-                  className="text-yellow-400 hover:text-yellow-300 transition-colors"
-                >
+                <Link href="/demos" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                  Demos
+                </Link>
+              </li>
+              <li>
+                <Link href="/tutorials" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                  Tutorials
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-slate-900 dark:text-white mb-4">
+              Resources
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/blog" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/community" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                  Community
+                </Link>
+              </li>
+              <li>
+                <Link href="/docs/troubleshooting" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                  Support
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Social Links */}
+          {/* Developers */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Connect</h3>
-            <ul className="space-y-2">
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-slate-900 dark:text-white mb-4">
+              Developers
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/docs/getting-started" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                  Getting Started
+                </Link>
+              </li>
+              <li>
+                <Link href="/docs/sql-api" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                  SQL API
+                </Link>
+              </li>
+              <li>
+                <Link href="/docs/deployment/kubernetes" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                  Kubernetes
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://github.com/neurondb-ai/neurondb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors inline-flex items-center gap-1"
+                >
+                  GitHub
+                  <span className="text-xs">↗</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-xs font-semibold tracking-wider uppercase text-slate-900 dark:text-white mb-4">
+              Company
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/neurondb" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                  About
+                </Link>
+              </li>
               {brandingConfig.social.map((social) => (
                 <li key={social.name}>
                   <Link
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-yellow-400 hover:text-yellow-300 transition-colors"
+                    className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors inline-flex items-center gap-1"
                   >
                     {social.name}
+                    <span className="text-xs">↗</span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+        </div>
 
-          {/* Company Info */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">{siteConfig.name}</h3>
-            <p className="text-sm text-slate-400 mb-4">
-              {siteConfig.description}
-            </p>
-            <p className="text-sm text-slate-500">
-              © {currentYear} {siteConfig.name}. All rights reserved.
-            </p>
+        {/* Bottom bar */}
+        <div className="py-8 border-t border-slate-200 dark:border-slate-800">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/favicons/neurondb_ai_clean.png"
+                alt={siteConfig.name}
+                width={32}
+                height={32}
+                className="w-8 h-8 object-contain"
+                unoptimized
+              />
+              <span className="text-sm font-semibold text-slate-900 dark:text-white">
+                {siteConfig.name}
+              </span>
+            </div>
+            <div className="flex items-center gap-6 text-xs text-slate-500 dark:text-slate-400">
+              <span>© {currentYear} {siteConfig.name}</span>
+              <span>•</span>
+              <span>PostgreSQL AI Extension</span>
+            </div>
           </div>
         </div>
       </div>

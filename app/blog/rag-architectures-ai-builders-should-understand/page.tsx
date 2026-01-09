@@ -116,12 +116,12 @@ RAG is not one architecture. It is a family of patterns trading off **latency**,
 | Pattern | Use when | Core move | Extra components | Typical cost/latency |
 |---|---|---|---|---|
 | Basic RAG | single-shot Q&A, docs, FAQ | embed → top-k | chunking + vector index | low |
-| Conversational RAG | follow-ups depend on history | rewrite → retrieve | question rewriter | low–medium |
+| Conversational RAG | follow-ups depend on history | rewrite → retrieve | question rewriter | low to medium |
 | Filtered RAG | mistakes are expensive | retrieve → rerank/filter | reranker/filters | medium |
-| Adaptive RAG | retrieval sometimes hurts | route: no-retrieve vs retrieve | router + thresholds | low–medium |
+| Adaptive RAG | retrieval sometimes hurts | route: no-retrieve vs retrieve | router + thresholds | low to medium |
 | Hypothesis-Driven RAG | queries are vague | draft → retrieve → refine | draft step + guardrails | medium |
 | Agent-Driven RAG | multi-step work matters | plan → retrieve → verify | planner + tools + stop rules | high |
-| Graph-Based RAG | relations drive meaning | traverse → explain | entity graph + traversal | medium–high |
+| Graph-Based RAG | relations drive meaning | traverse → explain | entity graph + traversal | medium to high |
 
 ### Basic RAG
 
@@ -157,7 +157,7 @@ The risk is bias: the draft can steer retrieval in the wrong direction. A practi
 
 ### Agent-Driven RAG
 
-Agent-driven RAG treats retrieval as a plan rather than a single search. The system decomposes the task, issues multiple retrieval calls, reads results, verifies gaps, and stops when evidence is sufficient. This is powerful for multi-step analysis (compare options and recommend), troubleshooting (diagnose, propose fix, validate), and research with branching paths.
+Agent-driven RAG treats retrieval as a plan rather than a single search. The system decomposes the task, issues multiple retrieval calls, reads results, verifies gaps, and stops when evidence is sufficient. Works for multi-step analysis (compare options and recommend), troubleshooting (diagnose, propose fix, validate), and research with branching paths.
 
 ![Agent-driven RAG loop](/blog/rag-architectures-ai-builders-should-understand/agent-driven-rag-loop.svg?v=1)
 
@@ -173,7 +173,7 @@ The operational risk is freshness and coverage. Graphs can encode bias and incom
 
 ## How to pick the right pattern
 
-Start with Basic RAG and make it measurable. Add conversational rewriting only when follow-ups are common. Add reranking and filtering when mistakes are expensive or the corpus is noisy. Use adaptive routing when you have mixed workloads and need to control cost. Choose hypothesis-driven retrieval when queries are vague and ambiguous. Use agents when multi-step work is the product, not an implementation detail. Use graphs when relationships must be explained and similarity search alone can’t answer “why.”
+Use Basic RAG and make it measurable. Add conversational rewriting only when follow-ups are common. Add reranking and filtering when mistakes are expensive or the corpus is noisy. Use adaptive routing when you have mixed workloads and need to control cost. Choose hypothesis-driven retrieval when queries are vague and ambiguous. Use agents when multi-step work is the product, not an implementation detail. Use graphs when relationships must be explained and similarity search alone can't answer "why."
 
 ![Picking the right RAG pattern](/blog/rag-architectures-ai-builders-should-understand/rag-pattern-picker.svg?v=1)
 
@@ -195,7 +195,7 @@ Treat operations as part of the architecture. The checklist below is what keeps 
 
 ## Conclusion
 
-RAG shifts AI from storyteller to assistant by making evidence, permissions, and evaluation part of the product. The pattern you choose sets the tradeoffs you will live with: Basic RAG optimizes for speed and debuggability, reranking and filtering buy precision when stakes are higher, adaptive routing controls cost on mixed workloads, agents unlock multi-step work at the price of orchestration, and graphs add relational explainability when similarity alone is not enough. Whatever you choose, reliability comes from operational discipline: structure-aware chunking, versioned embeddings, measurable retrieval quality, refusal correctness, and end-to-end tracing from query to sources to answer. Start with the simplest architecture that meets the requirement, make it observable and testable, and then add complexity only when it produces a clear, repeatable improvement in outcomes.
+RAG shifts AI from storyteller to assistant by making evidence, permissions, and evaluation part of the product. The pattern you choose sets the tradeoffs: Basic RAG optimizes for speed and debuggability, reranking and filtering buy precision when stakes are higher, adaptive routing controls cost on mixed workloads, agents enable multi-step work at the price of orchestration, and graphs add relational explainability when similarity alone is not enough. Reliability comes from operational discipline: structure-aware chunking, versioned embeddings, measurable retrieval quality, refusal correctness, and end-to-end tracing from query to sources to answer. Use the simplest architecture that meets the requirement, make it observable and testable, and then add complexity only when it produces a clear, repeatable improvement in outcomes.
 
 ## Related Blog Posts
 
@@ -249,7 +249,7 @@ export default function BlogPost() {
         slug="rag-architectures-ai-builders-should-understand"
         title="RAG Architectures AI Builders Should Understand"
       />
-      <div style={{ backgroundColor: '#1f2937' }}>
+      <div className="bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* Main Content */}
@@ -262,7 +262,7 @@ export default function BlogPost() {
                   <ShareOnLinkedIn
                     url="https://neurondb.ai/blog/rag-architectures-ai-builders-should-understand"
                     title="RAG Architectures AI Builders Should Understand"
-                    summary="A practical guide to the core RAG architecture patterns: basic, conversational, filtered, adaptive, hypothesis-driven, agent-driven, and graph-based RAG. Learn how to pick the right one."
+                    summary="Core RAG architecture patterns: basic, conversational, filtered, adaptive, hypothesis-driven, agent-driven, and graph-based RAG. How to pick the right one."
                     hashtags={[
                       'RAG',
                       'RetrievalAugmentedGeneration',

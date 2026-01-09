@@ -21,7 +21,7 @@ const tutorials = [
   {
     slug: 'ai-tutorial-02-data-preparation',
     title: 'Data Preparation and Feature Engineering',
-    excerpt: 'Learn data collection, cleaning, feature selection, and transformation. Learn to handle missing values, outliers, normalization, and standardization with practical examples.',
+    excerpt: 'Data collection, cleaning, feature selection, and transformation. Handle missing values, outliers, normalization, and standardization with practical examples.',
     author: 'NeuronDB Team',
     date: '2025-02-24',
     readTime: '25 min read',

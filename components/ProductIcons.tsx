@@ -14,14 +14,18 @@ export interface ProductIconProps {
 }
 
 // Custom NeuronDB icon component
-export const NeurondBIcon = ({ size = 24, className }: ProductIconProps) => (
-  <div className={className || 'relative flex items-center justify-center'} style={{ width: size, height: size }}>
-    <Brain className="text-indigo-400" style={{ width: size * 0.7, height: size * 0.7 }} />
-    <Database className="text-teal-400 absolute -bottom-1 -right-1" style={{ width: size * 0.35, height: size * 0.35 }} />
-    <Zap className="text-yellow-400 absolute -top-1 -left-1" style={{ width: size * 0.3, height: size * 0.3 }} />
-    <Search className="text-purple-400 absolute -top-1 -right-1" style={{ width: size * 0.25, height: size * 0.25 }} />
-  </div>
-)
+export const NeurondBIcon = ({ size = 24, className }: ProductIconProps) => {
+  const sizeFromClass = className?.includes('h-') ? parseInt(className.match(/h-(\d+)/)?.[1] || '24') * 4 : size
+  const finalSize = sizeFromClass || size
+  return (
+    <div className={className ? `${className} relative flex items-center justify-center` : 'relative flex items-center justify-center'} style={{ width: finalSize, height: finalSize }}>
+      <Brain className="text-indigo-400" style={{ width: finalSize * 0.7, height: finalSize * 0.7 }} />
+      <Database className="text-teal-400 absolute -bottom-1 -right-1" style={{ width: finalSize * 0.35, height: finalSize * 0.35 }} />
+      <Zap className="text-yellow-400 absolute -top-1 -left-1" style={{ width: finalSize * 0.3, height: finalSize * 0.3 }} />
+      <Search className="text-purple-400 absolute -top-1 -right-1" style={{ width: finalSize * 0.25, height: finalSize * 0.25 }} />
+    </div>
+  )
+}
 
 // Preferred export (correct casing). Keep NeurondBIcon for backward compatibility.
 export const NeuronDBIcon = NeurondBIcon

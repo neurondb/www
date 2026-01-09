@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "analyze": "ANALYZE=true next build"
+    "analyze": "ANALYZE=true next build",
+    "scan-links": "node scripts/scan-links.js"
   },
   "dependencies": {
     "@types/react-syntax-highlighter": "^15.5.13",
@@ -16,7 +17,7 @@
     "clsx": "^2.1.1",
     "critters": "^0.0.20",
     "lucide-react": "^0.555.0",
-    "next": "^14.2.5",
+    "next": "^14.2.33",
     "prism-react-renderer": "^2.4.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

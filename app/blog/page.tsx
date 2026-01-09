@@ -4,15 +4,16 @@ import Image from 'next/image'
 import { ArrowRight, Calendar, Clock, User, Tag, Eye, ThumbsUp, MessageCircle, TrendingUp, BookOpen, Code, Database, Server, Zap, Award, Globe, Users } from 'lucide-react'
 import FooterTemplate from '@/components/templates/FooterTemplate'
 import { siteConfig } from '@/config/site'
+import { allBlogPosts } from '@/config/blogPosts'
 
 export const metadata: Metadata = {
   title: 'NeuronDB Blog - Tutorials, Guides & Technical Insights',
-  description: 'Latest updates, tutorials, and technical insights about NeuronDB. Learn about vector search, ML inference, RAG pipelines, PostgreSQL AI extensions, and best practices. Expert guides and real-world examples.',
+  description: 'Latest updates, tutorials, and technical insights about NeuronDB. Vector search, ML inference, RAG pipelines, PostgreSQL AI extensions, and best practices. Expert guides and real-world examples.',
   keywords: ['NeuronDB blog', 'PostgreSQL blog', 'vector database blog', 'AI database tutorials', 'ML inference guides', 'RAG pipeline', 'semantic search', 'PostgreSQL AI', 'technical blog', 'database tutorials'],
   authors: [{ name: 'NeuronDB Team' }],
   openGraph: {
     title: 'NeuronDB Blog - Tutorials, Guides & Technical Insights',
-    description: 'Latest updates, tutorials, and technical insights about NeuronDB. Learn about vector search, ML inference, and RAG pipelines.',
+    description: 'Latest updates, tutorials, and technical insights about NeuronDB. Vector search, ML inference, and RAG pipelines.',
     url: 'https://neurondb.ai/blog',
     siteName: 'NeuronDB',
     type: 'website',
@@ -39,263 +40,29 @@ export const metadata: Metadata = {
   },
 }
 
-// Blog statistics
+// Blog statistics - computed from actual data
 const blogStats = [
-  { label: 'Total Articles', value: '9', icon: BookOpen, color: 'text-white' },
-  { label: 'Monthly Readers', value: '2.1k', icon: Eye, color: 'text-white' },
-  { label: 'Categories', value: '1', icon: Tag, color: 'text-white' },
-  { label: 'Authors', value: '1', icon: Users, color: 'text-white' }
+  { label: 'Total Articles', value: allBlogPosts.length.toString(), icon: BookOpen, color: 'text-white' },
+  { label: 'Categories', value: new Set(allBlogPosts.map(p => p.category)).size.toString(), icon: Tag, color: 'text-white' },
+  { label: 'Authors', value: new Set(allBlogPosts.map(p => p.author)).size.toString(), icon: Users, color: 'text-white' },
+  { label: 'Total Tags', value: new Set(allBlogPosts.flatMap(p => p.tags)).size.toString(), icon: Tag, color: 'text-white' }
 ]
 
-const blogPosts = [
-  {
-    slug: 'neurondb',
-    title: 'NeuronDB a PostgreSQL AI Extension',
-    excerpt: 'NeuronDB adds vector search, ML inference, and RAG capabilities to PostgreSQL. Includes HNSW indexing, GPU acceleration, 10 distance metrics, and pgvector compatibility.',
-    content: 'NeuronDB is a PostgreSQL extension. Provides vector search, machine learning inference, GPU acceleration, and hybrid retrieval. For semantic search, RAG applications, and recommendation systems.',
-    author: 'NeuronDB Team',
-    authorRole: 'Core Developers',
-    date: '2025-02-20',
-    readTime: '22 min read',
-    category: 'Technical',
-    featured: true,
-    icon: 'neurondb',
-    views: 0,
-    likes: 0,
-    comments: 0,
-    tags: ['AI', 'Vector Database', 'Machine Learning', 'Semantic Search', 'RAG', 'PostgreSQL']
-  },
-  {
-    slug: 'neurondb-semantic-search-guide',
-    title: 'Semantic Search Over Text with NeuronDB',
-    excerpt: 'Implement semantic search over text using NeuronDB. Includes examples, SQL queries, and code. Guide to building document search systems, RAG pipelines, and hybrid search.',
-    content: 'Guide to implementing semantic search with NeuronDB. Includes examples, SQL queries, RAG pipeline construction, hybrid search techniques, and optimization strategies.',
-    author: 'NeuronDB Team',
-    authorRole: 'Core Developers',
-    date: '2025-02-19',
-    readTime: '25 min read',
-    category: 'Technical',
-    featured: false,
-    icon: 'neurondb',
-    views: 0,
-    likes: 0,
-    comments: 0,
-    tags: ['NeuronDB', 'Semantic Search', 'RAG', 'Vector Search', 'PostgreSQL', 'Tutorial', 'AI']
-  },
-  {
-    slug: 'neurondb-vectors',
-    title: 'Vectors in PostgreSQL',
-    excerpt: 'Vector operations, indexing, and similarity search in PostgreSQL with NeuronDB. Guide with SQL queries and results. Learn HNSW indexing, distance metrics, quantization, and performance optimization.',
-    content: 'Guide to working with vectors in PostgreSQL using NeuronDB. Covers vector types, operations, distance metrics, indexing strategies, quantization, and performance optimization with SQL queries and results.',
-    author: 'NeuronDB Team',
-    authorRole: 'Core Developers',
-    date: '2025-02-21',
-    readTime: '30 min read',
-    category: 'Technical',
-    featured: false,
-    icon: 'neurondb',
-    views: 0,
-    likes: 0,
-    comments: 0,
-    tags: ['NeuronDB', 'Vectors', 'Vector Search', 'HNSW', 'Distance Metrics', 'PostgreSQL', 'Tutorial', 'AI', 'Indexing']
-  },
-  {
-    slug: 'neurondb-mcp-server',
-    title: 'MCP Server: Model Context Protocol Explained',
-    excerpt: 'MCP Server (Model Context Protocol) guide. What it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation. Learn how MCP enables AI assistants to access external tools and resources.',
-    content: 'MCP Server architecture, protocol implementation, Claude Desktop integration, popular MCP servers, and NeuronMCP. Learn how the Model Context Protocol enables AI assistants to access external tools and data sources.',
-    author: 'NeuronDB Team',
-    authorRole: 'Core Developers',
-    date: '2025-02-22',
-    readTime: '28 min read',
-    category: 'Technical',
-    featured: false,
-    icon: 'neurondb',
-    views: 0,
-    likes: 0,
-    comments: 0,
-    tags: ['MCP', 'ModelContextProtocol', 'ClaudeDesktop', 'NeuronMCP', 'AI', 'PostgreSQL', 'VectorDatabase', 'MachineLearning', 'RAG', 'OpenSource', 'NeuronDB']
-  },
-  {
-    slug: 'rag-complete-guide',
-    title: 'RAG: Retrieval-Augmented Generation With PostgreSQL',
-    excerpt: 'RAG (Retrieval-Augmented Generation) guide with examples, SQL queries, and implementation patterns. Learn how to build RAG systems with document retrieval, context building, LLM integration, and response generation.',
-    content: 'RAG architecture, implementation patterns, SQL examples, and NeuronDB integration. Learn how to build RAG systems with document processing, embedding generation, similarity search, context building, and response generation.',
-    author: 'NeuronDB Team',
-    authorRole: 'Core Developers',
-    date: '2025-02-23',
-    readTime: '35 min read',
-    category: 'Technical',
-    featured: false,
-    icon: 'neurondb',
-    views: 0,
-    likes: 0,
-    comments: 0,
-    tags: ['RAG', 'RetrievalAugmentedGeneration', 'LLM', 'VectorSearch', 'SemanticSearch', 'NeuronDB', 'PostgreSQL', 'AI', 'MachineLearning', 'DocumentRetrieval', 'KnowledgeBase']
-  },
-  {
-    slug: 'rag-architectures-ai-builders-should-understand',
-    title: 'RAG Architectures AI Builders Should Understand',
-    excerpt: 'Practical guide to the core RAG architecture patterns: basic, conversational, filtered, adaptive, hypothesis-driven, agent-driven, and graph-based RAG. Learn when to use each and what trade-offs matter in production.',
-    content: 'Core RAG patterns and how to choose between them. Covers conversational RAG, filtering/reranking, adaptive retrieval, agent-driven workflows, graph-based retrieval, and operational realities.',
-    author: 'NeuronDB Team',
-    authorRole: 'Core Developers',
-    date: '2026-01-01',
-    readTime: '18 min read',
-    category: 'Technical',
-    featured: false,
-    icon: 'neurondb',
-    views: 0,
-    likes: 0,
-    comments: 0,
-    tags: ['RAG', 'RAGArchitectures', 'LLM', 'VectorSearch', 'SemanticSearch', 'GraphRAG', 'AgenticAI', 'ProductionAI']
-  },
-  {
-    slug: 'agentic-ai',
-    title: 'Agentic AI: Guide to Autonomous AI Agents',
-    excerpt: 'Agentic AI systems guide. Explains agent architecture, planning, tool use, memory systems, and autonomous task execution. Includes implementation using NeuronDB and NeuronAgent with code examples.',
-    content: 'Agentic AI architecture, planning systems, tool execution, memory management, state machines, and implementation patterns. Learn how to build autonomous agents using NeuronDB and NeuronAgent with code examples.',
-    author: 'NeuronDB Team',
-    authorRole: 'Core Developers',
-    date: '2025-02-24',
-    readTime: '40 min read',
-    category: 'Technical',
-    featured: false,
-    icon: 'neurondb',
-    views: 0,
-    likes: 0,
-    comments: 0,
-    tags: ['AgenticAI', 'AutonomousAgents', 'AIAgents', 'AgentArchitecture', 'ToolUse', 'Planning', 'MemorySystems', 'NeuronDB', 'NeuronAgent', 'PostgreSQL', 'LLM', 'RAG', 'VectorSearch', 'MachineLearning', 'AI']
-  },
-  {
-    slug: 'postgresql-vector-database',
-    title: 'PostgreSQL as a Vector Database',
-    excerpt: 'Guide to using PostgreSQL as a vector database. Learn how PostgreSQL with NeuronDB extension works as a vector database with HNSW indexing, similarity search, and production capabilities.',
-    content: 'PostgreSQL vector database architecture, performance benchmarks, indexing strategies, query patterns, and migration approaches. Learn how PostgreSQL with NeuronDB works as a vector database solution.',
-    author: 'NeuronDB Team',
-    authorRole: 'Core Developers',
-    date: '2025-02-25',
-    readTime: '35 min read',
-    category: 'Technical',
-    featured: false,
-    icon: 'neurondb',
-    views: 0,
-    likes: 0,
-    comments: 0,
-    tags: ['PostgreSQL', 'VectorDatabase', 'NeuronDB', 'VectorSearch', 'HNSW', 'SQL', 'Database', 'AI', 'SemanticSearch', 'Production', 'Indexing']
-  },
-  {
-    slug: 'ai-with-database-on-prem',
-    title: 'AI With Data On-Premises',
-    excerpt: 'Guide to deploying AI workloads with databases on-premises. Learn about on-premises AI infrastructure, data sovereignty, security, performance, and implementation with NeuronDB. Includes architecture patterns, deployment strategies, and examples.',
-    content: 'On-premises AI infrastructure, data sovereignty, security architecture, performance optimization, deployment strategies, and implementation patterns. Learn how to deploy NeuronDB and AI workloads on-premises with control over data and infrastructure.',
-    author: 'NeuronDB Team',
-    authorRole: 'Core Developers',
-    date: '2025-02-26',
-    readTime: '38 min read',
-    category: 'Technical',
-    featured: false,
-    icon: 'neurondb',
-    views: 0,
-    likes: 0,
-    comments: 0,
-    tags: ['OnPremises', 'AIInfrastructure', 'DataSovereignty', 'PrivateAI', 'EnterpriseAI', 'SelfHosted', 'NeuronDB', 'PostgreSQL', 'Security', 'Compliance', 'EdgeAI', 'HybridCloud']
-  }
-]
+const blogPosts = allBlogPosts
 
 const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number }) => {
   const isAnnouncement = post.category === 'Announcement'
   return (
     <article className="group h-full">
       <Link href={`/blog/${post.slug}`} className="block h-full" aria-label={`Read ${post.title}`}>
-        <div className="bg-slate-950 rounded-3xl shadow-lg border border-slate-900 overflow-hidden hover:shadow-2xl hover:border-slate-800 transition-all duration-300 h-full flex flex-col">
+        <div className="bg-white dark:bg-slate-950 rounded-3xl shadow-lg border border-slate-200 dark:border-slate-900 overflow-hidden hover:shadow-xl dark:hover:shadow-2xl hover:border-slate-300 dark:hover:border-slate-800 transition-all duration-300 h-full flex flex-col">
           {/* Large Stock Image */}
           <div className={`relative w-full aspect-[3/2] overflow-hidden flex-shrink-0 border-b border-slate-900 flex items-center justify-center`} style={{ backgroundColor: '#030712' }}>
             <div className="absolute inset-0 bg-slate-950/80 z-0"></div>
-            {post.slug === 'neurondb' ? (
+            {post.headerImage ? (
               <Image
-                src="/blog/neurondb/header.svg?v=7"
-                alt="NeuronDB blog header"
-                fill
-                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
-                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
-                unoptimized
-                priority
-              />
-            ) : post.slug === 'neurondb-semantic-search-guide' ? (
-              <Image
-                src="/blog/neurondb-semantic-search-guide/header.svg?v=7"
-                alt="NeuronDB Semantic Search Guide blog header"
-                fill
-                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
-                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
-                unoptimized
-                priority
-              />
-            ) : post.slug === 'neurondb-vectors' ? (
-              <Image
-                src="/blog/neurondb-vectors/header.svg?v=7"
-                alt="NeuronDB Vectors Guide blog header"
-                fill
-                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
-                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
-                unoptimized
-                priority
-              />
-            ) : post.slug === 'neurondb-mcp-server' ? (
-              <Image
-                src="/blog/neurondb-mcp-server/header.svg?v=7"
-                alt="MCP Server blog header"
-                fill
-                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
-                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
-                unoptimized
-                priority
-              />
-            ) : post.slug === 'rag-complete-guide' ? (
-              <Image
-                src="/blog/rag-complete-guide/header.svg?v=7"
-                alt="RAG Complete Guide blog header"
-                fill
-                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
-                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
-                unoptimized
-                priority
-              />
-            ) : post.slug === 'rag-architectures-ai-builders-should-understand' ? (
-              <Image
-                src="/blog/rag-architectures-ai-builders-should-understand/header.svg?v=1"
-                alt="RAG Architectures blog header"
-                fill
-                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
-                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
-                unoptimized
-                priority
-              />
-            ) : post.slug === 'agentic-ai' ? (
-              <Image
-                src="/blog/agentic-ai/header.svg?v=7"
-                alt="Agentic AI blog header"
-                fill
-                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
-                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
-                unoptimized
-                priority
-              />
-            ) : post.slug === 'postgresql-vector-database' ? (
-              <Image
-                src="/blog/postgresql-vector-database/header.svg?v=8"
-                alt="PostgreSQL as Vector Database blog header"
-                fill
-                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
-                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
-                unoptimized
-                priority
-              />
-            ) : post.slug === 'ai-with-database-on-prem' ? (
-              <Image
-                src="/blog/ai-with-database-on-prem/header.svg?v=7"
-                alt="AI With Data On-Premises blog header"
+                src={post.headerImage}
+                alt={`${post.title} header`}
                 fill
                 className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
                 style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
@@ -314,14 +81,14 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
             </div>
           </div>
           {/* Content */}
-          <div className="p-7 flex flex-col flex-1 bg-slate-950">
-            <h3 className="text-lg font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors flex-shrink-0 leading-tight">
+          <div className="p-7 flex flex-col flex-1 bg-white dark:bg-slate-950">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors flex-shrink-0 leading-tight">
               {post.title}
             </h3>
-            <p className="text-slate-300 mb-4 line-clamp-3 flex-1 text-sm leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-300 mb-4 line-clamp-3 flex-1 text-sm leading-relaxed">
               {post.excerpt}
             </p>
-            <div className="flex items-center justify-between text-xs text-slate-400 mt-auto flex-shrink-0 font-thin">
+            <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mt-auto flex-shrink-0 font-thin">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-1">
                   <User className="w-4 h-4" />
@@ -332,7 +99,7 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
                   <span>{new Date(post.date).toLocaleDateString()}</span>
                 </div>
               </div>
-              <div className="flex items-center gap-1 text-yellow-400 group-hover:gap-2 transition-all font-thin">
+              <div className="flex items-center gap-1 text-yellow-600 dark:text-yellow-400 group-hover:gap-2 transition-all font-thin">
                 <span>Read more</span>
                 <ArrowRight className="w-4 h-4" />
               </div>
@@ -349,15 +116,12 @@ export default function BlogPage() {
     <div className="pt-0">
       {/* Unified Professional Hero */}
       <section
-        className="relative text-center overflow-hidden flex items-center h-[400px] pt-20"
-        style={{
-          backgroundColor: '#111827'
-        }}
+        className="relative text-center overflow-hidden flex items-center h-[400px] pt-20 bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950"
       >
         <div className="container-extra-wide mx-auto relative z-10 w-full">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight drop-shadow-lg">Blog</h1>
-            <p className="text-lg md:text-xl font-normal text-white mb-6 max-w-2xl mx-auto drop-shadow-lg">
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Blog</h1>
+            <p className="text-lg md:text-xl font-normal text-slate-700 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
               Tutorials and updates about NeuronDB
             </p>
 
@@ -368,8 +132,8 @@ export default function BlogPage() {
                   <div className="flex justify-center mb-2">
                     <stat.icon className={`w-8 h-8 ${stat.color}`} />
                   </div>
-                  <div className="text-3xl font-thin text-white drop-shadow-2xl shadow-2xl drop-shadow-sm">{stat.value}</div>
-                  <div className="text-sm text-white drop-shadow-2xl shadow-2xl/80 drop-shadow-sm">{stat.label}</div>
+                  <div className="text-3xl font-thin text-slate-900 dark:text-white">{stat.value}</div>
+                  <div className="text-sm text-slate-700 dark:text-slate-300">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -378,13 +142,13 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Articles */}
-      <div className="py-24 relative overflow-hidden" style={{ backgroundColor: '#1f2937' }}>
+      <div className="py-24 relative overflow-hidden bg-white dark:bg-slate-900">
         <div className="container-wide">
           <div className="max-w-7xl mx-auto">
             {/* Technical Blogs */}
             <div className="text-center mb-10">
-              <h2 className="text-4xl md:text-5xl font-thin text-white mb-2 tracking-tight">Technical Blogs</h2>
-              <p className="text-lg text-white/80 max-w-2xl mx-auto">Tutorials and technical notes.</p>
+              <h2 className="text-4xl md:text-5xl font-thin text-slate-900 dark:text-white mb-2 tracking-tight">Technical Blogs</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">Tutorials and technical notes.</p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12 mb-20">
               {blogPosts.filter(p => p.category === 'Technical').map((post, i) => (

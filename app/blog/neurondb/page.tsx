@@ -821,7 +821,7 @@ export default function BlogPost() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div style={{ backgroundColor: '#1f2937' }}>
+      <div className="bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* Main Content */}

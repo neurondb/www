@@ -67,19 +67,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Product pages - High priority
   const productPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/docs/neuronagent`,
+      url: `${baseUrl}/neuronagent`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/docs/neuronmcp`,
+      url: `${baseUrl}/neuronmcp`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/docs/neurondesktop`,
+      url: `${baseUrl}/neurondesktop`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -259,7 +259,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Documentation main pages
   const docsMainPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/docs/neurondb`,
+      url: `${baseUrl}/neurondb`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -287,6 +287,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/docs/getting-started/simple-start`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/docs/installation`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
@@ -297,6 +303,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
+    },
+  ]
+
+  // Deployment & Operations - Cloud-native deployment options
+  const deploymentPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/docs/deployment/kubernetes`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/docs/deployment/observability`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/docs/deployment/scripts`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
   ]
 
@@ -734,6 +762,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...tutorialPages,
     ...docsMainPages,
     ...gettingStartedPages,
+    ...deploymentPages,
     ...coreFeaturePages,
     ...mlPages,
     ...hybridPages,

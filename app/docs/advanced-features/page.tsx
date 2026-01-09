@@ -501,7 +501,7 @@ $$ LANGUAGE plpgsql;`}
         <h2>Related Documentation</h2>
         <ul>
           <li><a href="/docs/hybrid">Hybrid Search</a> - Detailed hybrid search guide</li>
-          <li><a href="/docs/reranking">Reranking</a> - Complete reranking documentation</li>
+          <li><a href="/docs/reranking/llm-reranking">Reranking</a> - Complete reranking documentation</li>
           <li><a href="/docs/rag">RAG Pipelines</a> - RAG implementation guide</li>
           <li><a href="/docs/vector-engine">Vector Engine</a> - Vector search capabilities</li>
           <li><a href="/docs/embedding-engine">Embedding Engine</a> - Embedding generation</li>

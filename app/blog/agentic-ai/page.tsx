@@ -105,7 +105,7 @@ Agents are software systems that exhibit autonomous behavior. They differ from t
 
 ![Traditional Programs vs Agents](/blog/agentic-ai/traditional-programs-vs-agents.png)
 
-The diagram illustrates the fundamental differences between traditional programs and agentic systems. Traditional programs follow fixed execution paths defined at development time, while agents adapt their behavior based on context and goals. This adaptive capability enables agents to handle situations that were not explicitly programmed, making them more flexible and powerful for complex, dynamic environments.
+The diagram illustrates the fundamental differences between traditional programs and agentic systems. Traditional programs follow fixed execution paths defined at development time, while agents adapt their behavior based on context and goals. This adaptive capability enables agents to handle situations that were not explicitly programmed, making them more flexible for complex, dynamic environments.
 
 ### Comparison with Traditional AI Systems
 
@@ -162,7 +162,7 @@ Agentic systems include five core components. Each component serves specific fun
 - **Tool registry**: Provides functions for external actions, validates tool calls against schemas, manages tool permissions for security, handles tool errors gracefully, retries failed operations when appropriate, and tracks tool usage for monitoring.
 - **Memory system**: Stores and retrieves context efficiently, uses vector search for semantic retrieval, maintains long-term knowledge bases, ranks memories by relevance, filters memories by context, and updates memories based on new information.
 - **State machine**: Manages execution flow systematically, tracks current state accurately, handles state transitions correctly, manages error recovery automatically, coordinates multi-step tasks effectively, and persists state for reliability.
-- **Runtime**: Orchestrates all components seamlessly, coordinates execution across components, manages error recovery comprehensively, monitors performance continuously, logs activities for debugging, and provides observability for operations.
+- **Runtime**: Orchestrates all components, coordinates execution across components, manages error recovery comprehensively, monitors performance continuously, logs activities for debugging, and provides observability for operations.
 
 ### Agent Architecture
 
@@ -440,7 +440,7 @@ The multi-step diagram shows step coordination. Steps are ordered by dependencie
 
 ### Error Handling and Recovery
 
-Error handling ensures robust operation. Agents encounter various errors:
+Error handling ensures reliable operation. Agents encounter various errors:
 - Network failures affect tool calls
 - Invalid inputs cause validation errors
 - Resource limits cause timeouts
@@ -467,7 +467,7 @@ Robust error handling is essential for production agent systems. Errors can occu
 
 ![Agent, MCP, and NeuronDB Integration](/blog/agentic-ai/agent-mcp-ndb.png)
 
-The integration diagram illustrates how NeuronDB, NeuronAgent, and the Model Context Protocol work together to create a complete agent system. NeuronDB provides the underlying vector database and embedding capabilities. NeuronAgent supplies the runtime environment and agent framework. The MCP server enables integration with external tools and services. Together, these components create a powerful platform for building production-ready agent applications.
+The integration diagram illustrates how NeuronDB, NeuronAgent, and the Model Context Protocol work together to create a complete agent system. NeuronDB provides the underlying vector database and embedding capabilities. NeuronAgent supplies the runtime environment and agent framework. The MCP server enables integration with external tools and services. Together, these components create a platform for building production-ready agent applications.
 
 This section provides a complete step-by-step guide to building a production agent. The guide covers:
 - Installation and setup
@@ -1087,7 +1087,7 @@ Use agents for:
 ## Related Resources
 
 - [NeuronDB Documentation](https://neurondb.ai/docs/neurondb) - Complete NeuronDB reference
-- [NeuronAgent Documentation](https://neurondb.ai/docs/neuronagent) - Complete NeuronAgent reference
+- [NeuronAgent Documentation](https://neurondb.ai/neuronagent) - Complete NeuronAgent reference
 - [Semantic Search Guide](/blog/neurondb-semantic-search-guide) - Learn semantic search with NeuronDB
 - [RAG Guide](/blog/rag-complete-guide) - Learn RAG implementation patterns
 
@@ -1135,7 +1135,7 @@ export default function BlogPost() {
                 slug="agentic-ai"
                 title="Agentic AI: Guide to Autonomous AI Agents"
             />
-            <div style={{ backgroundColor: '#1f2937' }}>
+            <div className="bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
                         {/* Main Content */}

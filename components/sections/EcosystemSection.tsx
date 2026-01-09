@@ -14,26 +14,34 @@ interface EcosystemCardProps {
 
 function EcosystemCard({ title, icon, features, href }: EcosystemCardProps) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white/90 dark:border-slate-700/60 dark:bg-slate-900/60 p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+    <div 
+      className="rounded-xl p-6 card-hover flex flex-col h-full transition-all duration-300 border"
+      style={{
+        backgroundColor: 'var(--background)',
+        borderColor: 'var(--border)',
+        boxShadow: 'var(--shadow-sm)',
+      }}
+    >
       <div className="flex items-center gap-3 mb-4">
-        <div className="text-yellow-400 dark:text-yellow-400">
+        <div style={{ color: 'var(--primary)' }}>
           {icon}
         </div>
-        <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
+        <h3 className="text-xl font-semibold" style={{ color: 'var(--text-primary)' }}>
           {title}
         </h3>
       </div>
-      <ul className="space-y-2 mb-6 flex-grow">
+      <ul className="space-y-3 mb-6 flex-grow">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-start gap-2 text-slate-700 dark:text-slate-300 text-sm">
-            <span className="text-yellow-400 dark:text-yellow-400 mt-1.5 flex-shrink-0">•</span>
+          <li key={index} className="flex items-start gap-3 text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+            <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full mt-2" style={{ backgroundColor: 'var(--primary)' }} />
             <span>{feature}</span>
           </li>
         ))}
       </ul>
       <Link
         href={href}
-        className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 font-medium text-sm transition-colors mt-auto"
+        className="inline-flex items-center gap-2 font-medium text-sm transition-all duration-200 hover:gap-3 mt-auto"
+        style={{ color: 'var(--primary)' }}
       >
         Learn more
         <span>→</span>
@@ -66,7 +74,7 @@ export default function EcosystemSection() {
         'Background jobs with API key authentication, crash recovery, and SKIP LOCKED processing.',
         'Integration with NeuronDB for embeddings, LLM operations, and vector search.',
       ],
-      href: '/docs/neuronagent',
+      href: '/neuronagent',
     },
     {
       title: 'NeuronMCP',
@@ -77,7 +85,7 @@ export default function EcosystemSection() {
         'Complete tool suite: 27 PostgreSQL administration tools for database management + 70+ NeuronDB tools for vector operations, ML training, analytics, RAG, reranking, dataset loading (HuggingFace, URLs, GitHub, S3), and comprehensive database monitoring.',
         'Enterprise features: middleware (validation, auth, logging), Prometheus metrics, webhooks, circuit breaker, and real-time resource subscriptions.',
       ],
-      href: '/docs/neuronmcp',
+      href: '/neuronmcp',
     },
     {
       title: 'NeuronDesktop',
@@ -88,19 +96,19 @@ export default function EcosystemSection() {
         'Secure authentication with API key-based access control, rate limiting, and comprehensive request/response logging with analytics.',
         'Professional UI with metrics collection, health monitoring, agent management, MCP tool testing, and vector search interface.',
       ],
-      href: '/docs/neurondesktop',
+      href: '/neurondesktop',
     },
   ]
 
   return (
     <SectionTemplate background="page" padding="xl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>
             NeuronDB Ecosystem
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            AI database platform with core engine and runtime components
+          <p className="text-lg max-w-3xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
+            Complete AI database platform with core engine and integrated runtime components
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -40,29 +40,29 @@ Message: ${formData.message}
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#1f2937' }}>
-      <HeroTemplate height="default" className="text-white text-center pt-20">
+    <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+      <HeroTemplate height="default" className="text-center pt-20">
         <div className="container-extra-wide relative z-10 w-full">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight drop-shadow-lg">
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white mb-4">
               Contact Us
             </h1>
-            <p className="text-lg md:text-xl font-normal text-white mb-6 max-w-2xl mx-auto drop-shadow-lg">
-              Contact the team for support, questions, or feedback
+            <p className="text-lg md:text-xl font-normal text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
+              Support, questions, or feedback
             </p>
           </div>
         </div>
       </HeroTemplate>
 
-      <section className="py-24" style={{ backgroundColor: '#1f2937' }}>
+      <section className="py-24 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="mb-12 space-y-6">
             <div>
-              <h3 className="text-xl font-bold text-white mb-2">Email Support</h3>
-              <p className="text-white/80 mb-3">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Email Support</h3>
+              <p className="text-slate-600 dark:text-slate-300 mb-3">
                 Email for general inquiries and support: <Link
                   href={`mailto:${siteConfig.email}`}
-                  className="text-yellow-400 hover:text-yellow-300 font-semibold transition-colors"
+                  className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 font-semibold transition-colors"
                 >
                   {siteConfig.email}
                 </Link>
@@ -70,13 +70,13 @@ Message: ${formData.message}
             </div>
 
             <div>
-              <h3 className="text-xl font-bold text-white mb-2">GitHub</h3>
-              <p className="text-white/80 mb-3">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">GitHub</h3>
+              <p className="text-slate-600 dark:text-slate-300 mb-3">
                 Report issues, request features, or contribute: <Link
                   href={siteConfig.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-yellow-400 hover:text-yellow-300 font-semibold transition-colors"
+                  className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 font-semibold transition-colors"
                 >
                   View Repository
                 </Link>
@@ -84,11 +84,11 @@ Message: ${formData.message}
             </div>
 
             <div>
-              <h3 className="text-xl font-bold text-white mb-2">Documentation</h3>
-              <p className="text-white/80 mb-3">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Documentation</h3>
+              <p className="text-slate-600 dark:text-slate-300 mb-3">
                 Documentation and guides: <Link
                   href="/docs"
-                  className="text-yellow-400 hover:text-yellow-300 font-semibold transition-colors"
+                  className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 font-semibold transition-colors"
                 >
                   View Documentation
                 </Link>
@@ -98,11 +98,11 @@ Message: ${formData.message}
 
           {/* Contact Form */}
           <div>
-            <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white mb-6">Send us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-white mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-slate-900 dark:text-white mb-2">
                     Name
                   </label>
                   <input
@@ -112,13 +112,13 @@ Message: ${formData.message}
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-colors text-white placeholder-white/50"
+                    className="w-full px-4 py-3 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-slate-900 dark:focus:ring-yellow-400 focus:border-transparent transition-colors text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400"
                     placeholder="Your name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-slate-900 dark:text-white mb-2">
                     Email
                   </label>
                   <input
@@ -128,14 +128,14 @@ Message: ${formData.message}
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-colors text-white placeholder-white/50"
+                    className="w-full px-4 py-3 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-slate-900 dark:focus:ring-yellow-400 focus:border-transparent transition-colors text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400"
                     placeholder="your@email.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-semibold text-white mb-2">
+                <label htmlFor="subject" className="block text-sm font-semibold text-slate-900 dark:text-white mb-2">
                   Subject
                 </label>
                 <input
@@ -145,13 +145,13 @@ Message: ${formData.message}
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-colors text-white placeholder-white/50"
+                  className="w-full px-4 py-3 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-slate-900 dark:focus:ring-yellow-400 focus:border-transparent transition-colors text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400"
                   placeholder="What is this about?"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-white mb-2">
+                <label htmlFor="message" className="block text-sm font-semibold text-slate-900 dark:text-white mb-2">
                   Message
                 </label>
                 <textarea
@@ -161,14 +161,14 @@ Message: ${formData.message}
                   onChange={handleInputChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-colors resize-none text-white placeholder-white/50"
+                  className="w-full px-4 py-3 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-slate-900 dark:focus:ring-yellow-400 focus:border-transparent transition-colors resize-none text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400"
                   placeholder="Your message..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-3 px-6 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="w-full py-3 px-6 bg-slate-900 dark:bg-yellow-400 hover:bg-slate-800 dark:hover:bg-yellow-300 text-white dark:text-slate-900 font-semibold rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <Send className="w-5 h-5" />
                 Send Message

@@ -25,8 +25,8 @@ export const viewport: Viewport = {
   maximumScale: 5,
   userScalable: true,
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#4f46e5' },
-    { media: '(prefers-color-scheme: dark)', color: '#070d1a' },
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
   ],
   colorScheme: 'light dark',
 }
@@ -216,7 +216,7 @@ export default function RootLayout({
         <meta name="msapplication-tooltip" content={`${siteConfig.name} - AI Database Extension`} />
         <meta name="msapplication-starturl" content="/" />
       </head>
-      <body className={inter.className} suppressHydrationWarning>
+      <body className={`${inter.className} ${inter.variable}`} suppressHydrationWarning style={{ fontFamily: 'var(--font-inter)' } as React.CSSProperties}>
         {/* Google Analytics - Optimized loading */}
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>

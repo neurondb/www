@@ -82,3 +82,5 @@ UPDATE blog_comments SET approved = true WHERE id = 123;
 **Environment variables are automatic** - Vercel sets them when you create the database.
 
 That's it! Your comments system is ready and **100% free**! 🚀
+
+

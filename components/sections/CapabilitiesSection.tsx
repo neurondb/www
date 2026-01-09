@@ -132,33 +132,33 @@ export default function CapabilitiesSection() {
     <SectionTemplate background="page" padding="xl">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-3">
             PostgreSQL AI Extension Capabilities
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
             AI database features in a PostgreSQL AI extension
           </p>
         </div>
 
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse">
+          <table className="w-full border-collapse bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm">
             <thead>
-              <tr className="border-b border-white/20">
-                <th className="text-left py-4 px-6 text-white font-semibold">Capability</th>
-                <th className="text-left py-4 px-6 text-white font-semibold">Description</th>
-                <th className="text-left py-4 px-6 text-white font-semibold">Performance</th>
-                <th className="text-center py-4 px-6 text-white font-semibold">Production Ready</th>
+              <tr className="border-b border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">
+                <th className="text-left py-4 px-6 text-slate-900 dark:text-white font-semibold">Capability</th>
+                <th className="text-left py-4 px-6 text-slate-900 dark:text-white font-semibold">Description</th>
+                <th className="text-left py-4 px-6 text-slate-900 dark:text-white font-semibold">Performance</th>
+                <th className="text-center py-4 px-6 text-slate-900 dark:text-white font-semibold">Production Ready</th>
               </tr>
             </thead>
             <tbody>
               {capabilities.map((cap, index) => (
                 <tr
                   key={index}
-                  className="border-b border-white/10 hover:bg-white/5 transition-colors"
+                  className="border-b border-slate-100 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors even:bg-slate-50/50 dark:even:bg-slate-900/30"
                 >
-                  <td className="py-4 px-6 text-white font-semibold">{cap.capability}</td>
-                  <td className="py-4 px-6 text-white/80">{cap.description}</td>
-                  <td className="py-4 px-6 text-white/80">{cap.performance}</td>
+                  <td className="py-4 px-6 text-slate-900 dark:text-white font-semibold">{cap.capability}</td>
+                  <td className="py-4 px-6 text-slate-700 dark:text-slate-300">{cap.description}</td>
+                  <td className="py-4 px-6 text-slate-700 dark:text-slate-300">{cap.performance}</td>
                   <td className="py-4 px-6 text-center">
                     {cap.productionReady && (
                       <Check className="w-5 h-5 text-green-400 mx-auto" />

@@ -34,3 +34,5 @@ SELECT
 FROM blog_comments
 WHERE approved = true
 ORDER BY created_at DESC;
+
+

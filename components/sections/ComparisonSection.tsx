@@ -147,38 +147,38 @@ export default function ComparisonSection() {
     <SectionTemplate background="page" padding="xl">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-3">
             NeuronDB vs. Alternatives
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
             Comparison of NeuronDB with other PostgreSQL AI and vector extensions
           </p>
         </div>
 
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse min-w-[1000px]">
+          <table className="w-full border-collapse min-w-[1000px] bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm">
             <thead>
-              <tr className="border-b border-white/20">
-                <th className="text-left py-4 px-4 text-white font-semibold sticky left-0 bg-[#1f2937] z-10">Feature</th>
-                <th className="text-left py-4 px-4 text-white font-semibold bg-indigo-600/20">NeuronDB</th>
-                <th className="text-left py-4 px-4 text-white font-semibold">pgvector</th>
-                <th className="text-left py-4 px-4 text-white font-semibold">pgvectorscale</th>
-                <th className="text-left py-4 px-4 text-white font-semibold">pgai</th>
-                <th className="text-left py-4 px-4 text-white font-semibold">PostgresML</th>
+              <tr className="border-b border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900">
+                <th className="text-left py-4 px-4 text-slate-900 dark:text-white font-semibold sticky left-0 bg-slate-50 dark:bg-slate-900 z-10">Feature</th>
+                <th className="text-left py-4 px-4 text-slate-900 dark:text-white font-semibold bg-yellow-50 dark:bg-indigo-600/20">NeuronDB</th>
+                <th className="text-left py-4 px-4 text-slate-900 dark:text-white font-semibold">pgvector</th>
+                <th className="text-left py-4 px-4 text-slate-900 dark:text-white font-semibold">pgvectorscale</th>
+                <th className="text-left py-4 px-4 text-slate-900 dark:text-white font-semibold">pgai</th>
+                <th className="text-left py-4 px-4 text-slate-900 dark:text-white font-semibold">PostgresML</th>
               </tr>
             </thead>
             <tbody>
               {comparisonData.map((row, index) => (
                 <tr
                   key={index}
-                  className="border-b border-white/10 hover:bg-white/5 transition-colors"
+                  className="border-b border-slate-100 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors even:bg-slate-50/50 dark:even:bg-slate-900/30"
                 >
-                  <td className="py-4 px-4 text-white font-semibold sticky left-0 bg-[#1f2937] z-10">{row.feature}</td>
-                  <td className="py-4 px-4 text-yellow-400 font-semibold bg-indigo-600/10">{row.neurondb}</td>
-                  <td className="py-4 px-4 text-white/80">{row.pgvector}</td>
-                  <td className="py-4 px-4 text-white/80">{row.pgvectorscale}</td>
-                  <td className="py-4 px-4 text-white/80">{row.pgai}</td>
-                  <td className="py-4 px-4 text-white/80">{row.postgresml}</td>
+                  <td className="py-4 px-4 text-slate-900 dark:text-white font-semibold sticky left-0 bg-white dark:bg-slate-800 z-10">{row.feature}</td>
+                  <td className="py-4 px-4 text-yellow-600 dark:text-yellow-400 font-semibold bg-yellow-50/50 dark:bg-indigo-600/10">{row.neurondb}</td>
+                  <td className="py-4 px-4 text-slate-700 dark:text-slate-300">{row.pgvector}</td>
+                  <td className="py-4 px-4 text-slate-700 dark:text-slate-300">{row.pgvectorscale}</td>
+                  <td className="py-4 px-4 text-slate-700 dark:text-slate-300">{row.pgai}</td>
+                  <td className="py-4 px-4 text-slate-700 dark:text-slate-300">{row.postgresml}</td>
                 </tr>
               ))}
             </tbody>

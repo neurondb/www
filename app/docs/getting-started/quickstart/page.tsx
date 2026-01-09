@@ -39,13 +39,13 @@ export default function QuickStartPage() {
       <section id="prerequisites">
         <h2>Prerequisites</h2>
         <p>
-          <strong>💡 New to NeuronDB?</strong> For the fastest setup, start with the{' '}
+          <strong>💡 New to NeuronDB?</strong> For the fastest setup, use the{' '}
           <a href="/docs/getting-started/docker">Docker Quick Start</a> which sets up the complete ecosystem (NeuronDB + NeuronAgent + NeuronMCP + NeuronDesktop) in 5 minutes.
         </p>
         <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <p>
-            <strong>📦 Version Information:</strong> This guide covers NeuronDB version 2.0 (from <code>main</code> branch). 
-            For version 1.0 (stable release from <code>REL1_STABLE</code> branch), see the <a href="/docs/installation" style={{ color: '#fbbf24' }}>Installation Guide</a> for branch-specific instructions.
+            <strong>📦 Branch & Version Information:</strong> This guide covers NeuronDB version <strong>2.0.0</strong> from the <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> branch (latest). 
+            For version <strong>1.0.0</strong> (stable release from <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> branch), see the <a href="/docs/installation" style={{ color: '#fbbf24' }}>Installation Guide</a> for branch-specific instructions.
           </p>
         </div>
         <p>For native installation, you'll need:</p>
@@ -117,7 +117,7 @@ LIMIT 5;`}
       <section id="next-steps">
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/features/vector-types">Vector Types</a> - Learn about different vector formats</li>
+          <li><a href="/docs/features/vector-types">Vector Types</a> - Different vector formats</li>
           <li><a href="/docs/ml/embeddings">Embeddings</a> - Embedding generation</li>
           <li><a href="/docs/hybrid/overview">Hybrid Search</a> - Combine semantic and keyword search</li>
           <li><a href="/docs/configuration">Configuration</a> - Configuration options</li>

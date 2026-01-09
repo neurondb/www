@@ -65,15 +65,15 @@ export default function DemosPage() {
     <PageTemplate>
       <HeroTemplate
         height="default"
-        className="text-white text-center pt-20"
+        className="text-center pt-20"
       >
         <div className="container-extra-wide relative z-10 w-full">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight drop-shadow-lg">
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white mb-4">
               Interactive Demos
             </h1>
-            <p className="text-lg md:text-xl font-normal text-white mb-6 max-w-2xl mx-auto drop-shadow-lg">
-              Explore NeuronDB ecosystem capabilities with interactive terminal demos
+            <p className="text-lg md:text-xl font-normal text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
+              NeuronDB ecosystem capabilities with interactive terminal demos
             </p>
           </div>
         </div>
@@ -84,14 +84,14 @@ export default function DemosPage() {
         <div className="container-wide">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center gap-4 mb-6">
-              <Database className="w-10 h-10 text-yellow-400" />
+              <Database className="w-10 h-10 text-yellow-600 dark:text-yellow-400" />
               <div>
-                <h2 className="text-3xl font-bold text-white">NeuronDB Demo</h2>
-                <p className="text-white/80">Vector search, ML inference, and RAG pipeline demonstrations</p>
+                <h2 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">NeuronDB Demo</h2>
+                <p className="text-slate-600 dark:text-slate-300">Vector search, ML inference, and RAG pipeline demonstrations</p>
               </div>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 mb-8">
-              <p className="text-white/90 leading-relaxed">
+            <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-6 mb-8">
+              <p className="text-slate-700 dark:text-slate-200 leading-relaxed">
                 This demo shows NeuronDB capabilities including vector search with HNSW indexing, 
                 machine learning inference with ONNX models, embedding generation, hybrid search combining semantic and 
                 full-text search, RAG pipeline operations, and GPU acceleration. SQL commands execute to demonstrate 
@@ -104,9 +104,9 @@ export default function DemosPage() {
             <div className="mt-6 text-center">
               <Link
                 href="/neurondb"
-                className="text-yellow-400 hover:text-yellow-300 font-semibold"
+                className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 font-semibold"
               >
-                Learn more about NeuronDB →
+                NeuronDB →
               </Link>
             </div>
           </div>
@@ -118,14 +118,14 @@ export default function DemosPage() {
         <div className="container-wide">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center gap-4 mb-6">
-              <Bot className="w-10 h-10 text-yellow-400" />
+              <Bot className="w-10 h-10 text-yellow-600 dark:text-yellow-400" />
               <div>
-                <h2 className="text-3xl font-bold text-white">NeuronAgent Demo</h2>
-                <p className="text-white/80">REST API and agent runtime demonstrations</p>
+                <h2 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">NeuronAgent Demo</h2>
+                <p className="text-slate-600 dark:text-slate-300">REST API and agent runtime demonstrations</p>
               </div>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 mb-8">
-              <p className="text-white/90 leading-relaxed">
+            <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-6 mb-8">
+              <p className="text-slate-700 dark:text-slate-200 leading-relaxed">
                 This demo shows NeuronAgent REST API endpoints for building AI agent systems. You will see how to 
                 create agents with specific profiles and tools, establish sessions for conversation management, send messages 
                 that trigger agent actions using NeuronDB vector search and embeddings, and retrieve responses. The demo 
@@ -137,10 +137,10 @@ export default function DemosPage() {
             </Suspense>
             <div className="mt-6 text-center">
               <Link
-                href="/docs/neuronagent"
-                className="text-yellow-400 hover:text-yellow-300 font-semibold"
+                href="/neuronagent"
+                className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 font-semibold"
               >
-                Learn more about NeuronAgent →
+                NeuronAgent →
               </Link>
             </div>
           </div>
@@ -152,14 +152,14 @@ export default function DemosPage() {
         <div className="container-wide">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center gap-4 mb-6">
-              <Server className="w-10 h-10 text-yellow-400" />
+              <Server className="w-10 h-10 text-yellow-600 dark:text-yellow-400" />
               <div>
-                <h2 className="text-3xl font-bold text-white">NeuronMCP Demo</h2>
-                <p className="text-white/80">MCP protocol and Claude Desktop integration demonstrations</p>
+                <h2 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">NeuronMCP Demo</h2>
+                <p className="text-slate-600 dark:text-slate-300">MCP protocol and Claude Desktop integration demonstrations</p>
               </div>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 mb-8">
-              <p className="text-white/90 leading-relaxed">
+            <div className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg p-6 mb-8">
+              <p className="text-slate-700 dark:text-slate-200 leading-relaxed">
                 This demo shows NeuronMCP Model Context Protocol server implementation. You will see JSON-RPC 2.0 
                 protocol messages over stdio communication, showing how MCP-compatible clients like Claude Desktop can 
                 interact with NeuronDB. The demo includes tool discovery, vector search operations, embedding generation, 
@@ -172,10 +172,10 @@ export default function DemosPage() {
             </Suspense>
             <div className="mt-6 text-center">
               <Link
-                href="/docs/neuronmcp"
-                className="text-yellow-400 hover:text-yellow-300 font-semibold"
+                href="/neuronmcp"
+                className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 font-semibold"
               >
-                Learn more about NeuronMCP →
+                NeuronMCP →
               </Link>
             </div>
           </div>

@@ -52,17 +52,24 @@ const Header = () => {
 
   return (
     <header 
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-slate-200/60 dark:border-slate-700/50 bg-white/80 dark:bg-slate-900/90 shadow-professional"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b bg-white/95 dark:bg-slate-900/95"
+      style={{
+        borderBottomColor: 'var(--border)',
+        boxShadow: 'var(--shadow-sm)',
+      }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-20 w-full">
           {/* Logo */}
           <Link 
             href="/" 
-            className="flex items-center group focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900 rounded"
+            className="flex items-center group focus:outline-none focus-visible:ring-2 rounded-lg transition-transform hover:scale-105"
+            style={{
+              outlineColor: 'var(--primary)',
+            }}
             aria-label={`${siteConfig.name} - Home`}
           >
-            <div className="transition-colors">
+            <div className="transition-all duration-300">
               <Image 
                 src="/favicons/neurondb_ai_clean.png" 
                 alt="" 
@@ -74,18 +81,30 @@ const Header = () => {
             </div>
           </Link>
           {/* Centered menu */}
-          <nav className="hidden md:flex items-center space-x-8 flex-1 justify-center" aria-label="Primary navigation">
+          <nav className="hidden md:flex items-center space-x-1 flex-1 justify-center" aria-label="Primary navigation">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 transition-colors font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900 rounded"
+                className="px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+                style={{
+                  color: 'var(--text-primary)',
+                }}
                 target={item.href.startsWith('http') ? '_blank' : undefined}
                 rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               >
                 {item.name}
               </Link>
             ))}
+            <Link
+              href="/search"
+              className="px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+              style={{
+                color: 'var(--text-primary)',
+              }}
+            >
+              Search
+            </Link>
           </nav>
           {/* CTA buttons right - hidden on mobile */}
           <div className="hidden md:flex items-center justify-end gap-3">
@@ -93,7 +112,12 @@ const Header = () => {
             <Link 
               href="/docs/getting-started"
               onClick={() => handleCTAClick('install', '/docs/getting-started')}
-              className="group bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 text-black font-semibold px-5 py-2 rounded-lg transition-all duration-300 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900 flex items-center gap-2 shadow-md hover:shadow-glow hover:scale-105 active:scale-95"
+              className="group btn-professional px-5 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-2 transition-all duration-200 hover:scale-105 active:scale-95"
+              style={{
+                backgroundColor: 'var(--primary)',
+                color: '#ffffff',
+                boxShadow: 'var(--shadow-md)',
+              }}
             >
               <Download className="w-4 h-4 transition-transform group-hover:translate-y-[-1px]" />
               <span>Install</span>
@@ -103,7 +127,13 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => handleCTAClick('github', siteConfig.github)}
-              className="group bg-slate-800 hover:bg-slate-700 text-white font-semibold px-5 py-2 rounded-lg transition-all duration-300 text-sm focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900 flex items-center gap-2 shadow-md hover:shadow-professional hover:scale-105 active:scale-95 border border-slate-700 hover:border-slate-600"
+              className="group px-5 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-2 border transition-all duration-200 hover:scale-105 active:scale-95"
+              style={{
+                backgroundColor: 'var(--background-dark)',
+                borderColor: 'var(--border)',
+                color: 'var(--text-primary)',
+                boxShadow: 'var(--shadow-sm)',
+              }}
             >
               <Github className="w-4 h-4 transition-transform group-hover:rotate-12" />
               <span>GitHub</span>
@@ -113,7 +143,10 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-slate-900/70 dark:text-white/70 hover:text-slate-900 dark:hover:text-white transition-colors rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900"
+            className="md:hidden p-2 rounded-lg transition-colors hover-lift"
+            style={{
+              color: 'var(--text-secondary)',
+            }}
             aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isMenuOpen}
             aria-controls={mobileNavId}
@@ -127,7 +160,11 @@ const Header = () => {
           <div 
             id={mobileNavId} 
             ref={mobileMenuRef}
-            className="md:hidden border-t border-slate-200/60 dark:border-slate-700 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md"
+            className="md:hidden border-t backdrop-blur-md animate-in"
+            style={{
+              borderTopColor: 'var(--border)',
+              backgroundColor: 'var(--background)',
+            }}
             role="dialog"
             aria-modal="true"
             aria-labelledby="mobile-menu-title"
@@ -138,7 +175,10 @@ const Header = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="flex items-center px-4 py-3 text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 hover:bg-slate-900/5 dark:hover:bg-white/10 rounded-xl font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900"
+                  className="flex items-center px-4 py-3 rounded-xl font-medium transition-all duration-200"
+                  style={{
+                    color: 'var(--text-primary)',
+                  }}
                   onClick={() => setIsMenuOpen(false)}
                   target={item.href.startsWith('http') ? '_blank' : undefined}
                   rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
@@ -146,8 +186,18 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              <Link
+                href="/search"
+                className="flex items-center px-4 py-3 rounded-xl font-medium transition-all duration-200"
+                style={{
+                  color: 'var(--text-primary)',
+                }}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Search
+              </Link>
               {/* Mobile CTA Buttons */}
-              <div className="border-t border-slate-200 dark:border-slate-700 pt-4 mt-4 space-y-2">
+              <div className="border-t pt-4 mt-4 space-y-2" style={{ borderTopColor: 'var(--border)' }}>
                 <div className="flex items-center justify-center px-4">
                   <DarkModeToggle />
                 </div>
@@ -157,7 +207,11 @@ const Header = () => {
                     handleCTAClick('install', '/docs/getting-started')
                     setIsMenuOpen(false)
                   }}
-                  className="flex items-center justify-center gap-2 px-4 py-3 bg-yellow-400 hover:bg-yellow-300 text-black rounded-xl font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900"
+                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-medium transition-all duration-200"
+                  style={{
+                    backgroundColor: 'var(--primary)',
+                    color: '#ffffff',
+                  }}
                 >
                   <Download className="w-4 h-4" />
                   Install
@@ -170,7 +224,12 @@ const Header = () => {
                     handleCTAClick('github', siteConfig.github)
                     setIsMenuOpen(false)
                   }}
-                  className="flex items-center justify-center gap-2 px-4 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-xl font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900"
+                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-medium border transition-all duration-200"
+                  style={{
+                    backgroundColor: 'var(--background-dark)',
+                    borderColor: 'var(--border)',
+                    color: 'var(--text-primary)',
+                  }}
                 >
                   <Github className="w-4 h-4" />
                   GitHub

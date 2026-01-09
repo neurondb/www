@@ -4,7 +4,7 @@ import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
   title: 'Vector Indexing in AI PostgreSQL | HNSW, IVF Indexes for NeuronDB',
-  description: 'Guide to vector indexing in NeuronDB (AI PostgreSQL extension). Learn HNSW and IVF indexes, distance metrics, and optimize ANN search.',
+  description: 'Vector indexing in NeuronDB. HNSW and IVF indexes, distance metrics, and ANN search optimization.',
   keywords: [
     'HNSW index PostgreSQL',
     'AI PostgreSQL indexing',
@@ -175,7 +175,7 @@ LIMIT 10;`}
         <p>NeuronDB implements advanced approximate nearest neighbor (ANN) index types for fast similarity search:</p>
 
         <h3>HNSW (Hierarchical Navigable Small World)</h3>
-        <p>A graph-based index offering excellent recall and speed. HNSW builds a multi-layer graph structure for efficient navigation to nearest neighbors. Recommended for most use cases.</p>
+        <p>A graph-based index offering excellent recall and speed. HNSW builds a multi-layer graph structure for efficient navigation to nearest neighbors. Works for most use cases.</p>
         <SqlCodeBlock
           title="HNSW index examples"
           code={`-- Create HNSW index with L2 distance
@@ -288,9 +288,9 @@ LIMIT 10;`}
 
         <h3>HNSW Parameters</h3>
         <ul>
-          <li><strong>m</strong> (default: 16): Max connections per layer. Higher m = better recall, larger index. Typical range: 12–64.</li>
-          <li><strong>ef_construction</strong> (default: 64): Search width during index build. Higher = better index quality, slower build. Typical range: 64–500.</li>
-          <li><strong>hnsw.ef_search</strong> (runtime GUC, default: 40): Search width at query time. Higher = better recall, slower queries. Typical range: 40–400.</li>
+          <li><strong>m</strong> (default: 16): Max connections per layer. Higher m = better recall, larger index. Typical range: 12 to 64.</li>
+          <li><strong>ef_construction</strong> (default: 64): Search width during index build. Higher = better index quality, slower build. Typical range: 64 to 500.</li>
+          <li><strong>hnsw.ef_search</strong> (runtime GUC, default: 40): Search width at query time. Higher = better recall, slower queries. Typical range: 40 to 400.</li>
         </ul>
         <SqlCodeBlock
           title="HNSW tuning"
@@ -304,8 +304,8 @@ SET hnsw.ef_search = 200;`}
 
         <h3>IVF Parameters</h3>
         <ul>
-          <li><strong>lists</strong> (build-time): Number of clusters. Rule of thumb: <code>sqrt(num_rows)</code> for datasets &gt; 1M. Typical range: 10–10,000.</li>
-          <li><strong>ivf.probes</strong> (runtime GUC, default: 1): Number of clusters to search at query time. Higher = better recall, slower queries. Typical range: 1–100.</li>
+          <li><strong>lists</strong> (build-time): Number of clusters. Rule of thumb: <code>sqrt(num_rows)</code> for datasets &gt; 1M. Typical range: 10 to 10,000.</li>
+          <li><strong>ivf.probes</strong> (runtime GUC, default: 1): Number of clusters to search at query time. Higher = better recall, slower queries. Typical range: 1 to 100.</li>
         </ul>
         <SqlCodeBlock
           title="IVF tuning"
@@ -343,7 +343,7 @@ LIMIT 100;`}
         <h2>Best Practices</h2>
 
         <h3>1. Index Selection</h3>
-        <p>Start with HNSW for most workloads. Switch to IVF if your dataset exceeds 10M vectors or index build time becomes prohibitive.</p>
+        <p>Use HNSW for most workloads. Switch to IVF if your dataset exceeds 10M vectors or index build time becomes prohibitive.</p>
 
         <h3>2. Distance Metric</h3>
         <p>Use cosine distance for text embeddings from models like OpenAI, Cohere, or Sentence Transformers. Use L2 for image embeddings or when embedding model documentation recommends Euclidean distance.</p>
@@ -398,8 +398,8 @@ LIMIT 10;`}
       <section>
         <h2>Next Steps</h2>
         <ul>
-          <li><a href="/docs/gpu">Learn about GPU acceleration</a> for faster distance computation.</li>
-          <li><a href="/docs/hybrid">Explore hybrid search</a> combining vector and full-text search.</li>
+          <li><a href="/docs/gpu">GPU acceleration</a> for faster distance computation.</li>
+          <li><a href="/docs/hybrid">Hybrid search</a> combining vector and full-text search.</li>
           <li><a href="/docs/analytics">Use ML analytics</a> for clustering and outlier detection.</li>
           <li><a href="/docs/performance">Optimize performance</a> with indexing and query best practices.</li>
         </ul>

@@ -6,7 +6,7 @@ import BashCodeBlock from '@/components/BashCodeBlock'
 export const metadata: Metadata = {
   title: 'Docker Quick Start | NeuronDB Ecosystem',
   description:
-    'Get the complete NeuronDB ecosystem running in minutes with Docker. Includes NeuronDB, NeuronAgent, NeuronMCP, and NeuronDesktop with GPU support for CUDA, ROCm, and Metal. Complete setup guide with Docker Compose.',
+    'Complete NeuronDB ecosystem running in minutes with Docker. Includes NeuronDB, NeuronAgent, NeuronMCP, and NeuronDesktop with GPU support for CUDA, ROCm, and Metal. Complete setup guide with Docker Compose.',
   keywords: [
     'neurondb docker',
     'docker postgresql ai',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Docker Quick Start | NeuronDB Ecosystem',
-    description: 'Get the complete NeuronDB ecosystem running in minutes with Docker. Includes all components with GPU support.',
+    description: 'Complete NeuronDB ecosystem running in minutes with Docker. Includes all components with GPU support.',
     type: 'article',
     url: 'https://neurondb.ai/docs/getting-started/docker',
   },
@@ -99,7 +99,7 @@ export default function DockerQuickStartPage() {
             <strong>Docker</strong> 20.10+ and <strong>Docker Compose</strong> 2.0+ installed
           </li>
           <li>
-            <strong>4GB+ RAM</strong> available (8GB recommended)
+            <strong>4GB+ RAM</strong> available (8GB for better performance)
           </li>
           <li>
             <strong>Ports available</strong>: 5433 (PostgreSQL), 8080 (NeuronAgent), 8081 (NeuronDesktop API), 3000 (NeuronDesktop UI)
@@ -119,57 +119,131 @@ docker compose version`}
         <h2>Quick Start (5 minutes)</h2>
         <p>Start the complete NeuronDB ecosystem with a single command:</p>
 
-        <h3>Step 1: Clone the Repository</h3>
-        <p>Choose the branch based on your needs:</p>
-        <BashCodeBlock
-          title="Clone repository (Version 2.0 - main branch, recommended)"
-          code={`# Clone main branch for version 2.0 (latest features)
-git clone https://github.com/neurondb-ai/neurondb.git
-cd neurondb`}
-        />
-        <BashCodeBlock
-          title="Clone repository (Version 1.0 - REL1_STABLE branch, stable release)"
-          code={`# Clone REL1_STABLE branch for version 1.0 (stable production release)
-git clone -b REL1_STABLE https://github.com/neurondb-ai/neurondb.git
-cd neurondb`}
-        />
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
-          <p>
-            <strong>💡 Branch Selection:</strong> 
-            <ul style={{ marginTop: '0.5rem', paddingLeft: '1.5rem' }}>
-              <li><strong>main branch</strong>: Version 2.0 with latest features, improvements, and bug fixes (default)</li>
-              <li><strong>REL1_STABLE branch</strong>: Version 1.0 stable release, recommended for production deployments requiring maximum stability</li>
-            </ul>
+        <div style={{ backgroundColor: '#1e3a5f', padding: '1.5rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1.5rem' }}>
+          <h4 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.1rem', fontWeight: 'bold', color: '#fbbf24' }}>📌 Branch Selection Guide</h4>
+          <p style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
+            NeuronDB has two branches with different versions. Choose based on your needs:
+          </p>
+          <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '1rem', fontSize: '0.95rem' }}>
+            <thead>
+              <tr style={{ borderBottom: '2px solid #4b5563' }}>
+                <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Branch</th>
+                <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Version</th>
+                <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Status</th>
+                <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Use When</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style={{ borderBottom: '1px solid #374151' }}>
+                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>main</code></td>
+                <td style={{ padding: '0.75rem' }}><strong>2.0.0</strong></td>
+                <td style={{ padding: '0.75rem' }}><span style={{ color: '#10b981' }}>Latest</span></td>
+                <td style={{ padding: '0.75rem' }}>New projects, development, latest features</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>REL1_STABLE</code></td>
+                <td style={{ padding: '0.75rem' }}><strong>1.0.0</strong></td>
+                <td style={{ padding: '0.75rem' }}><span style={{ color: '#3b82f6' }}>Stable</span></td>
+                <td style={{ padding: '0.75rem' }}>Production, maximum stability required</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
+            <strong>Recommendation:</strong> Use <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> (version 2.0.0) for most users. Use <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> (version 1.0.0) only if you specifically need the stable release branch.
           </p>
         </div>
 
-        <h3>Step 2: Pull Pre-built Images (Recommended)</h3>
+        <h3>Step 1: Clone Repository with Correct Branch</h3>
+        <BashCodeBlock
+          title="Clone main branch (version 2.0.0)"
+          code={`# Clone main branch for version 2.0.0 (latest features, default)
+git clone https://github.com/neurondb-ai/neurondb.git
+cd neurondb
+# Note: Default clone gets main branch with version 2.0.0`}
+        />
+        <BashCodeBlock
+          title="Clone REL1_STABLE branch (version 1.0.0, stable)"
+          code={`# Clone REL1_STABLE branch for version 1.0.0 (stable production release)
+git clone -b REL1_STABLE https://github.com/neurondb-ai/neurondb.git
+cd neurondb
+# Note: REL1_STABLE branch provides version 1.0.0 (stable release)`}
+        />
+
+        <h3>Step 3: Pull Pre-built Images</h3>
         <BashCodeBlock
           title="Pull images from GitHub Container Registry"
-          code={`# Pull latest pre-built images from GHCR (version 2.0 from main branch)
+          code={`# Pull latest pre-built images from GHCR
 docker compose pull
 
 # Or pull specific version
-# For version 2.0: docker pull ghcr.io/neurondb/neurondb-postgres:v2.0.0-pg17-cpu
-# For version 1.0: docker pull ghcr.io/neurondb/neurondb-postgres:v1.0.0-pg17-cpu`}
+# For version 2.0 (main branch): docker pull ghcr.io/neurondb/neurondb-postgres:v2.0.0-pg17-cpu
+# For version 1.0 (REL1_STABLE branch): docker pull ghcr.io/neurondb/neurondb-postgres:v1.0.0-pg17-cpu
+
+# Pull other components
+docker pull ghcr.io/neurondb/neuronagent:v2.0.0
+docker pull ghcr.io/neurondb/neurondb-mcp:v2.0.0
+docker pull ghcr.io/neurondb/neurondesktop-api:v2.0.0
+docker pull ghcr.io/neurondb/neurondesktop-frontend:v2.0.0`}
         />
         <p>
             Pre-built Docker images are available from <a href="https://github.com/neurondb-ai/neurondb/pkgs/container/neurondb-postgres" target="_blank" rel="noopener noreferrer">GitHub Container Registry (GHCR)</a>.
           This is faster than building from source and ensures you're using tested, production-ready images.
         </p>
-        <p>
-          <strong>Note:</strong> Docker images are tagged by version. Version 2.0 images are built from the <code>main</code> branch, while version 1.0 images are built from the <code>REL1_STABLE</code> branch.
-        </p>
+        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+          <p>
+            <strong>📦 Image Versioning:</strong> Docker images are tagged by version. Version 2.0.0 images are built from the <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> branch, while version 1.0.0 images are built from the <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> branch.
+          </p>
+        </div>
 
-        <h3>Step 3: Start All Services</h3>
+        <h3>Step 4: Choose Your Components</h3>
+        <p>You can start all services together, or select specific components based on your needs:</p>
+        
+        <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '1rem', marginBottom: '1.5rem' }}>
+          <thead>
+            <tr style={{ borderBottom: '2px solid #4b5563' }}>
+              <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Setup</th>
+              <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Command</th>
+              <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Components</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style={{ borderBottom: '1px solid #374151' }}>
+              <td style={{ padding: '0.75rem' }}><strong>NeuronDB only</strong></td>
+              <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>docker compose up -d neurondb</code></td>
+              <td style={{ padding: '0.75rem' }}>PostgreSQL extension only</td>
+            </tr>
+            <tr style={{ borderBottom: '1px solid #374151' }}>
+              <td style={{ padding: '0.75rem' }}><strong>NeuronDB + NeuronMCP</strong></td>
+              <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>docker compose up -d neurondb neuronmcp</code></td>
+              <td style={{ padding: '0.75rem' }}>Extension + MCP server</td>
+            </tr>
+            <tr style={{ borderBottom: '1px solid #374151' }}>
+              <td style={{ padding: '0.75rem' }}><strong>NeuronDB + NeuronAgent</strong></td>
+              <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>docker compose up -d neurondb neuronagent</code></td>
+              <td style={{ padding: '0.75rem' }}>Extension + Agent runtime</td>
+            </tr>
+            <tr>
+              <td style={{ padding: '0.75rem' }}><strong>Full stack</strong></td>
+              <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>docker compose up -d</code></td>
+              <td style={{ padding: '0.75rem' }}>All components</td>
+            </tr>
+          </tbody>
+        </table>
+
         <BashCodeBlock
-          title="Start ecosystem (CPU profile)"
+          title="Start full ecosystem (CPU profile)"
           code={`# Start all services with CPU profile (default)
 docker compose up -d`}
         />
 
+        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+          <p>
+            <strong>💡 Component Independence:</strong> All components run independently. The root <code>docker-compose.yml</code> starts everything together for convenience, but you can run individual services as needed.
+          </p>
+        </div>
+
         <p>
-          This command will:
+          Starting all services will:
         </p>
         <ul>
           <li>Use pre-built images from GHCR (or build from source if not pulled)</li>
@@ -188,7 +262,7 @@ docker compose up -d`}
           </p>
         </div>
 
-        <h3>Step 4: Check Service Status</h3>
+        <h3>Step 5: Check Service Status</h3>
         <BashCodeBlock
           title="Verify all services are running"
           code={`docker compose ps`}
@@ -219,7 +293,13 @@ docker compose up -d`}
           title="Verify NeuronDB extension"
           code={`docker compose exec neurondb psql -U neurondb -d neurondb -c "SELECT neurondb.version();"`}
         />
-        <p>Expected output: <code>2.0</code></p>
+        <p>
+          Expected output:
+          <ul>
+            <li><code>2.0</code> if using <code>main</code> branch (version 2.0.0)</li>
+            <li><code>1.0</code> if using <code>REL1_STABLE</code> branch (version 1.0.0)</li>
+          </ul>
+        </p>
 
         <h3>Test 2: NeuronAgent REST API</h3>
         <BashCodeBlock
@@ -321,48 +401,60 @@ EOF`}
           <thead>
             <tr style={{ borderBottom: '2px solid #4b5563' }}>
               <th style={{ padding: '0.75rem', textAlign: 'left' }}>Service</th>
-              <th style={{ padding: '0.75rem', textAlign: 'left' }}>URL / Connection</th>
-              <th style={{ padding: '0.75rem', textAlign: 'left' }}>Description</th>
+              <th style={{ padding: '0.75rem', textAlign: 'left' }}>How to reach it</th>
+              <th style={{ padding: '0.75rem', textAlign: 'left' }}>Default credentials</th>
+              <th style={{ padding: '0.75rem', textAlign: 'left' }}>Notes</th>
             </tr>
           </thead>
           <tbody>
             <tr style={{ borderBottom: '1px solid #374151' }}>
-              <td style={{ padding: '0.75rem' }}><strong>NeuronDB</strong></td>
+              <td style={{ padding: '0.75rem' }}><strong>NeuronDB (PostgreSQL)</strong></td>
               <td style={{ padding: '0.75rem' }}>
                 <code>postgresql://neurondb:neurondb@localhost:5433/neurondb</code>
               </td>
-              <td style={{ padding: '0.75rem' }}>PostgreSQL with NeuronDB extension</td>
+              <td style={{ padding: '0.75rem' }}>User: <code>neurondb</code>, Password: <code>neurondb</code> ⚠️ <strong>Dev only</strong></td>
+              <td style={{ padding: '0.75rem' }}>Container: <code>neurondb-cpu</code>, Service: <code>neurondb</code></td>
             </tr>
             <tr style={{ borderBottom: '1px solid #374151' }}>
               <td style={{ padding: '0.75rem' }}><strong>NeuronAgent</strong></td>
               <td style={{ padding: '0.75rem' }}>
-                <code>http://localhost:8080</code>
+                <code>http://localhost:8080/health</code>
               </td>
-              <td style={{ padding: '0.75rem' }}>REST API and WebSocket endpoints</td>
-            </tr>
-            <tr style={{ borderBottom: '1px solid #374151' }}>
-              <td style={{ padding: '0.75rem' }}><strong>NeuronMCP</strong></td>
-              <td style={{ padding: '0.75rem' }}>
-                <code>stdio</code> (JSON-RPC 2.0)
-              </td>
-              <td style={{ padding: '0.75rem' }}>MCP protocol server for MCP clients</td>
+              <td style={{ padding: '0.75rem' }}>Health: no auth. API: API key required</td>
+              <td style={{ padding: '0.75rem' }}>Container: <code>neuronagent</code>, Service: <code>neuronagent</code></td>
             </tr>
             <tr style={{ borderBottom: '1px solid #374151' }}>
               <td style={{ padding: '0.75rem' }}><strong>NeuronDesktop UI</strong></td>
               <td style={{ padding: '0.75rem' }}>
                 <code>http://localhost:3000</code>
               </td>
-              <td style={{ padding: '0.75rem' }}>Web-based management interface</td>
+              <td style={{ padding: '0.75rem' }}>No auth (development mode)</td>
+              <td style={{ padding: '0.75rem' }}>Container: <code>neurondesk-frontend</code>, Service: <code>neurondesk-frontend</code></td>
             </tr>
-            <tr>
+            <tr style={{ borderBottom: '1px solid #374151' }}>
               <td style={{ padding: '0.75rem' }}><strong>NeuronDesktop API</strong></td>
               <td style={{ padding: '0.75rem' }}>
-                <code>http://localhost:8081</code>
+                <code>http://localhost:8081/health</code>
               </td>
-              <td style={{ padding: '0.75rem' }}>Backend API for NeuronDesktop</td>
+              <td style={{ padding: '0.75rem' }}>Health: no auth. API: varies by config</td>
+              <td style={{ padding: '0.75rem' }}>Container: <code>neurondesk-api</code>, Service: <code>neurondesk-api</code></td>
+            </tr>
+            <tr>
+              <td style={{ padding: '0.75rem' }}><strong>NeuronMCP</strong></td>
+              <td style={{ padding: '0.75rem' }}>
+                <code>stdio</code> (JSON-RPC 2.0)
+              </td>
+              <td style={{ padding: '0.75rem' }}>N/A (MCP protocol)</td>
+              <td style={{ padding: '0.75rem' }}>Container: <code>neurondb-mcp</code>, Service: <code>neuronmcp</code>. No HTTP port.</td>
             </tr>
           </tbody>
         </table>
+
+        <div style={{ backgroundColor: '#dc2626', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem', border: '1px solid #ef4444' }}>
+          <p style={{ margin: 0, color: '#fecaca' }}>
+            <strong>⚠️ Production Security Warning:</strong> The default credentials shown above are for <strong>development only</strong>. Always use strong, unique passwords in production. Set <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>POSTGRES_PASSWORD</code> and other secrets via environment variables or a <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>.env</code> file.
+          </p>
+        </div>
 
         <h3>Common Commands</h3>
         <BashCodeBlock
@@ -387,19 +479,28 @@ docker compose restart neurondb`}
 
       <section id="next-steps">
         <h2>Next Steps</h2>
-        <p>Now that your ecosystem is running, explore these resources:</p>
+        <p>Now that your ecosystem is running, use these resources:</p>
         <ul>
           <li>
             <a href="/docs/getting-started/quickstart">Quick Start Guide</a> - Create your first vector table, generate embeddings, and run semantic search queries
           </li>
           <li>
-            <a href="/docs/neuronagent">NeuronAgent Documentation</a> - Build AI agents with REST API, WebSocket, and long-term memory
+            <a href="/docs/deployment/kubernetes">Kubernetes Deployment</a> - Deploy NeuronDB on Kubernetes with Helm charts for production-ready, cloud-native deployments
           </li>
           <li>
-            <a href="/docs/neuronmcp">NeuronMCP Documentation</a> - Use 100+ MCP tools with Claude Desktop and other MCP clients
+            <a href="/docs/deployment/observability">Observability Stack</a> - Set up Prometheus, Grafana, and Jaeger for complete monitoring and distributed tracing
           </li>
           <li>
-            <a href="/docs/neurondesktop">NeuronDesktop Documentation</a> - Manage your ecosystem through the unified web interface
+            <a href="/docs/deployment/scripts">Operational Scripts</a> - Use automation scripts for Docker, database, setup, health checks, and monitoring
+          </li>
+          <li>
+            <a href="/neuronagent">NeuronAgent Documentation</a> - Build AI agents with REST API, WebSocket, and long-term memory
+          </li>
+          <li>
+            <a href="/neuronmcp">NeuronMCP Documentation</a> - Use 100+ MCP tools with Claude Desktop and other MCP clients
+          </li>
+          <li>
+            <a href="/neurondesktop">NeuronDesktop Documentation</a> - Manage your ecosystem through the unified web interface
           </li>
           <li>
             <a href="/docs/indexing">Vector Indexing</a> - Configure HNSW, IVF, and quantization for production-scale search
@@ -429,7 +530,7 @@ docker compose logs neurondb-mcp`}
 
         <h3>Out of Memory</h3>
         <p>
-          Ensure Docker has at least <strong>4GB RAM</strong> allocated (8GB+ recommended). Check Docker Desktop → Settings → Resources.
+          Ensure Docker has at least <strong>4GB RAM</strong> allocated (8GB+ for better performance). Check Docker Desktop → Settings → Resources.
         </p>
 
         <h3>GPU Not Detected</h3>

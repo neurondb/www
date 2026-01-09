@@ -30,7 +30,7 @@ export interface CardBaseProps {
 export interface FeatureCardProps extends CardBaseProps {
   icon?: React.ReactNode | LucideIcon
   title: string
-  description: string
+  description: string | string[]
   productId?: ProductId
   hover?: boolean
 }
@@ -71,12 +71,23 @@ export function FeatureCard({
           {iconElement}
         </div>
       )}
-      <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+      <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
         {title}
       </h3>
-      <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-        {description}
-      </p>
+      {Array.isArray(description) ? (
+        <ul className="space-y-2.5 text-slate-700 dark:text-slate-300">
+          {description.map((item, idx) => (
+            <li key={idx} className="flex items-start leading-relaxed text-sm md:text-base">
+              <span className="text-cyan-500 dark:text-cyan-400 mr-3 mt-1.5 flex-shrink-0 font-bold">•</span>
+              <span className="flex-1">{item}</span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-sm md:text-base">
+          {description}
+        </p>
+      )}
       {children}
     </>
   )

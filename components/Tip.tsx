@@ -2,12 +2,12 @@
 
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
-import { Lightbulb, Info, CheckCircle, AlertTriangle } from 'lucide-react'
+import { Lightbulb, Info, CheckCircle, AlertTriangle, HelpCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 export interface TipProps {
   children: React.ReactNode
-  type?: 'tip' | 'info' | 'success' | 'warning'
+  type?: 'tip' | 'hint' | 'info' | 'success' | 'warning'
   title?: string
   className?: string
 }
@@ -20,6 +20,14 @@ const tipConfig = {
     iconColor: 'text-yellow-400',
     titleColor: 'text-yellow-300',
     defaultTitle: '💡 Pro Tip',
+  },
+  hint: {
+    icon: HelpCircle,
+    bgColor: 'bg-cyan-400/10',
+    borderColor: 'border-cyan-400/30',
+    iconColor: 'text-cyan-400',
+    titleColor: 'text-cyan-300',
+    defaultTitle: '💭 Hint',
   },
   info: {
     icon: Info,

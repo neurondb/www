@@ -5,7 +5,7 @@ import { allBlogPosts } from '@/config/blogPosts';
 
 export const metadata = {
   title: 'MCP Server: Model Context Protocol Explained | NeuronDB',
-  description: 'MCP Server (Model Context Protocol) guide. What it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation. Learn how MCP enables AI assistants to access external tools and resources. Includes JSON-RPC 2.0, stdio transport, tool execution, and resource access.',
+  description: 'MCP Server (Model Context Protocol) guide. What it is, how it works, integration with Claude Desktop, known MCP servers, and NeuronMCP implementation. How MCP enables AI assistants to access external tools and resources. Includes JSON-RPC 2.0, stdio transport, tool execution, and resource access.',
   keywords: ['MCP Server', 'Model Context Protocol', 'Claude Desktop', 'NeuronMCP', 'JSON-RPC', 'AI assistants', 'PostgreSQL', 'vector search', 'MCP protocol', 'stdio transport', 'tool execution', 'resource access', 'MCP servers', 'Anthropic', 'AI integration'],
   authors: [{ name: 'NeuronDB Team' }],
   openGraph: {
@@ -51,7 +51,7 @@ const markdown = `![MCP Server header](/blog/neurondb-mcp-server/header.svg?v=7)
 
 # MCP Server: Model Context Protocol Explained
 
-**[View on GitHub](https://github.com/neurondb-ai/neurondb)** | **[Download Latest Release](https://github.com/neurondb-ai/neurondb/releases)** | **[Documentation](/docs/neuronmcp)**
+**[View on GitHub](https://github.com/neurondb-ai/neurondb)** | **[Download Latest Release](https://github.com/neurondb-ai/neurondb/releases)** | **[Documentation](/neuronmcp)**
 
 ## Introduction
 
@@ -349,7 +349,7 @@ Error response:
 
 ## How MCP Works with Claude Desktop
 
-Claude Desktop is Anthropic's desktop application for Claude AI. It supports MCP servers through configuration files. Servers are configured in a settings file. Claude Desktop spawns server processes and communicates via stdio. The configuration file defines which MCP servers to use, how to start them, and what environment variables to set. Claude Desktop reads this configuration when it starts and automatically manages the server lifecycle throughout the session. For detailed setup instructions, see the [Claude Desktop configuration guide](/docs/neuronmcp).
+Claude Desktop is Anthropic's desktop application for Claude AI. It supports MCP servers through configuration files. Servers are configured in a settings file. Claude Desktop spawns server processes and communicates via stdio. The configuration file defines which MCP servers to use, how to start them, and what environment variables to set. Claude Desktop reads this configuration when it starts and automatically manages the server lifecycle throughout the session. For detailed setup instructions, see the [Claude Desktop configuration guide](/neuronmcp).
 
 ![Claude Desktop settings showing NeuronMCP server configuration](/blog/neurondb-mcp-server/claude-desktop-settings.png)
 
@@ -426,7 +426,7 @@ If a server process crashes or exits unexpectedly, Claude Desktop detects the fa
 
 ### Tool Integration
 
-Claude Desktop integrates MCP tools into conversations seamlessly. When a question requires external data or operations, Claude analyzes the query and identifies relevant tools from available MCP servers. Claude calls the appropriate tools automatically and incorporates the results into its response. Tool usage appears in the conversation interface, showing which tools were called and what data was retrieved. This integration happens transparently without requiring manual tool selection or configuration.
+Claude Desktop integrates MCP tools into conversations. When a question requires external data or operations, Claude analyzes the query and identifies relevant tools from available MCP servers. Claude calls the appropriate tools automatically and incorporates the results into its response. Tool usage appears in the conversation interface, showing which tools were called and what data was retrieved. This integration happens transparently without requiring manual tool selection or configuration.
 
 ### Security Considerations
 
@@ -456,13 +456,13 @@ Development tool servers provide programming-related capabilities including code
 
 ### Vector Database Servers
 
-Vector database servers provide vector search capabilities. They expose tools for similarity search, embedding generation, and index management. Examples include Pinecone, Weaviate, and NeuronDB servers. The [neurondb-mcp](/docs/neuronmcp) server provides features including vector similarity search, embedding generation, index creation and management, and multi-vector operations. See the [NeuronMCP documentation](/docs/neuronmcp) for complete details.
+Vector database servers provide vector search capabilities. They expose tools for similarity search, embedding generation, and index management. Examples include Pinecone, Weaviate, and NeuronDB servers. The [neurondb-mcp](/neuronmcp) server provides features including vector similarity search, embedding generation, index creation and management, and multi-vector operations. See the [NeuronMCP documentation](/neuronmcp) for complete details.
 
 ## What is NeuronMCP
 
-[NeuronMCP](/docs/neuronmcp) is an MCP server implementation for [NeuronDB](/neurondb). It enables MCP-compatible clients to access NeuronDB's vector search capabilities, ML inference capabilities, and analytics capabilities. Clients can perform vector searches, generate embeddings, train models, and analyze data through the MCP protocol.
+[NeuronMCP](/neuronmcp) is an MCP server implementation for [NeuronDB](/neurondb). It enables MCP-compatible clients to access NeuronDB's vector search capabilities, ML inference capabilities, and analytics capabilities. Clients can perform vector searches, generate embeddings, train models, and analyze data through the MCP protocol.
 
-NeuronMCP implements the full MCP specification. It provides tools for vector operations, ML operations, analytics, and RAG pipelines. It exposes resources for database schemas, model catalogs, and query results. It supports middleware for custom integrations. For installation and setup instructions, see the [NeuronMCP documentation](/docs/neuronmcp).
+NeuronMCP implements the full MCP specification. It provides tools for vector operations, ML operations, analytics, and RAG pipelines. It exposes resources for database schemas, model catalogs, and query results. It supports middleware for custom integrations. For installation and setup instructions, see the [NeuronMCP documentation](/neuronmcp).
 
 ### Architecture
 
@@ -612,13 +612,13 @@ Claude presents the results. Claude shows the model performance metrics. Claude 
 
 ## Installation
 
-For installation instructions, configuration details, and setup guides, see the [NeuronMCP documentation](/docs/neuronmcp). The documentation includes platform-specific installation steps, configuration examples, and troubleshooting guides. For building from source, see the [NeuronDB GitHub repository](https://github.com/neurondb-ai/neurondb).
+For installation instructions, configuration details, and setup guides, see the [NeuronMCP documentation](/neuronmcp). The documentation includes platform-specific installation steps, configuration examples, and troubleshooting guides. For building from source, see the [NeuronDB GitHub repository](https://github.com/neurondb-ai/neurondb).
 
 ## Conclusion
 
 MCP Server enables AI assistants to access external tools and resources. The protocol provides a standardized interface for communication. It uses JSON-RPC 2.0 over stdio for simplicity and security.
 
-Claude Desktop integrates MCP servers through configuration files. Servers are configured in settings files. Tools are used in conversations. The integration is seamless and transparent.
+Claude Desktop integrates MCP servers through configuration files. Servers are configured in settings files. Tools are used in conversations. The integration is transparent.
 
 NeuronMCP provides NeuronDB access through MCP. It exposes vector operations. It exposes ML operations. It exposes analytics. It exposes RAG capabilities. Clients can perform complex operations through simple tool calls.
 
@@ -678,7 +678,7 @@ export default function BlogPost() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div style={{ backgroundColor: '#1f2937' }}>
+      <div className="bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* Main Content */}
