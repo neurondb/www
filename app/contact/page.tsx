@@ -40,55 +40,42 @@ Message: ${formData.message}
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-      {/* Beautiful Professional Hero */}
-      <section className="relative overflow-hidden min-h-[560px] md:min-h-[600px] flex items-center pt-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-        {/* Enhanced animated gradient background */}
-        <div className="absolute inset-0 neuron-tech-bg opacity-30"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-yellow-950/20 via-amber-950/20 to-orange-950/20"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(251,191,36,0.15),transparent_70%)]"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/60 to-slate-950"></div>
-        
-        {/* Floating animated orbs */}
-        <div className="absolute top-10 right-20 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 left-20 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 left-1/3 w-[500px] h-[500px] bg-orange-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full py-20">
-          <div className="mx-auto max-w-4xl text-center w-full">
-            {/* Badge with glow effect */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-yellow-500/30 bg-gradient-to-r from-yellow-500/10 via-amber-500/10 to-orange-500/10 backdrop-blur-sm px-5 py-2 text-xs text-slate-200 mb-8 animate-fade-in-up shadow-lg shadow-yellow-500/20">
-              <MessageSquare className="w-4 h-4 text-yellow-400 animate-pulse" />
+      {/* Hero Section - Exact Homepage Size */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 min-h-[420px] md:min-h-[450px] flex items-center pt-16 pb-12">
+        {/* Subtle clean background */}
+        <div className="absolute inset-0 neuron-tech-bg"></div>
+        <div className="relative z-10 w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl text-center">
+            {/* Badge - Exact Homepage Style */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/70 px-3 py-1 text-xs text-slate-300 animate-fade-in-up">
+              <MessageSquare className="w-3.5 h-3.5 text-slate-400" />
               <span className="font-semibold">Contact</span>
-              <span className="text-slate-500">•</span>
-              <span className="font-mono text-yellow-300">Get in Touch</span>
+              <span className="text-slate-600">•</span>
+              <span className="font-mono">Get in Touch</span>
             </div>
 
-            {/* Main Title with enhanced gradient */}
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white mb-6 animate-slide-up leading-none">
-              <span className="block drop-shadow-2xl">Contact</span>
-              <span className="block mt-3 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-amber-400 via-orange-400 to-red-400 animate-gradient">
-                Us
-              </span>
-            </h1>
+            {/* Main Title - Exact Homepage Style */}
+            <div className="mt-5 animate-slide-up">
+              <h1 className="text-5xl sm:text-6xl font-semibold tracking-tight text-white">
+                Contact Us
+              </h1>
+            </div>
 
-            {/* Description */}
-            <p className="text-xl sm:text-2xl leading-relaxed text-slate-300 max-w-3xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            {/* Description - Exact Homepage Style */}
+            <p className="mt-5 text-lg sm:text-xl leading-relaxed text-slate-300 max-w-xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               Have questions, feedback, or need support? We're here to help. Reach out via email, GitHub, or use the contact form below.
             </p>
 
-            {/* Enhanced Quick Links with glow effects */}
-            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-4 mb-12 text-sm animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <Link href={`mailto:${siteConfig.email}`} className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900/50 border border-yellow-500/20 hover:border-yellow-500/40 backdrop-blur-sm transition-all duration-300 hover:scale-105 group shadow-lg">
-                <Mail className="w-5 h-5 text-yellow-400 group-hover:text-yellow-300 transition-colors" />
-                <span className="font-semibold text-slate-200">{siteConfig.email}</span>
+            {/* Quick Links - Exact Homepage Style */}
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-400 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <Link href={`mailto:${siteConfig.email}`} className="font-mono transition-all duration-300 hover:text-slate-200">
+                {siteConfig.email}
               </Link>
-              <Link href={siteConfig.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900/50 border border-amber-500/20 hover:border-amber-500/40 backdrop-blur-sm transition-all duration-300 hover:scale-105 group shadow-lg">
-                <Github className="w-5 h-5 text-amber-400 group-hover:text-amber-300 transition-colors" />
-                <span className="font-semibold text-slate-200">GitHub</span>
+              <Link href={siteConfig.github} target="_blank" rel="noopener noreferrer" className="font-mono transition-all duration-300 hover:text-slate-200">
+                GitHub
               </Link>
-              <Link href="/docs" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900/50 border border-orange-500/20 hover:border-orange-500/40 backdrop-blur-sm transition-all duration-300 hover:scale-105 group shadow-lg">
-                <MessageCircle className="w-5 h-5 text-orange-400 group-hover:text-orange-300 transition-colors" />
-                <span className="font-semibold text-slate-200">Documentation</span>
+              <Link href="/docs" className="font-mono transition-all duration-300 hover:text-slate-200">
+                Documentation
               </Link>
             </div>
           </div>
