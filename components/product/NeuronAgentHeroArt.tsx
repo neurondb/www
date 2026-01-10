@@ -72,7 +72,7 @@ export default function NeuronAgentHeroArt({
         <circle cx="12" cy="-20" r="1.5" fill="#ffffff" />
         
         {/* Bot antenna */}
-        <line x1="0" y1="-40" x2="0" y2="-50" stroke="currentColor" strokeWidth="2" className="text-slate-600 dark:text-slate-400" />
+        <line x1="0" y1="-40" x2="0" y2="-50" stroke="currentColor" strokeWidth="2" className="text-slate-600 dark:text-slate-300" />
         <circle cx="0" cy="-50" r="3" fill="url(#memoryGradient)" stroke="#3b82f6" strokeWidth="1.5" />
         
         {/* Bot body */}
@@ -124,7 +124,7 @@ export default function NeuronAgentHeroArt({
 
       {/* State machine icon (bottom left) */}
       <g transform="translate(35, 165)">
-        <circle cx="0" cy="0" r="18" fill="url(#agentGradient)" stroke="currentColor" strokeWidth="2" className="text-slate-600 dark:text-slate-400" opacity="0.9" />
+        <circle cx="0" cy="0" r="18" fill="url(#agentGradient)" stroke="currentColor" strokeWidth="2" className="text-slate-600 dark:text-slate-300" opacity="0.9" />
         <circle cx="-8" cy="-8" r="4" fill="currentColor" className="text-slate-700 dark:text-slate-300" />
         <circle cx="8" cy="-8" r="4" fill="currentColor" className="text-slate-700 dark:text-slate-300" />
         <circle cx="0" cy="8" r="4" fill="currentColor" className="text-slate-700 dark:text-slate-300" />
@@ -133,7 +133,7 @@ export default function NeuronAgentHeroArt({
 
       {/* WebSocket/API icon (bottom right) */}
       <g transform="translate(165, 165)">
-        <rect x="-18" y="-12" width="36" height="24" rx="4" fill="url(#agentGradient)" stroke="currentColor" strokeWidth="2" className="text-slate-600 dark:text-slate-400" opacity="0.9" />
+        <rect x="-18" y="-12" width="36" height="24" rx="4" fill="url(#agentGradient)" stroke="currentColor" strokeWidth="2" className="text-slate-600 dark:text-slate-300" opacity="0.9" />
         <path d="M -10,-6 L -5,-6 L 0,0 L 5,-6 L 10,-6 M -10,6 L -5,6 L 0,0 L 5,6 L 10,6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="text-slate-700 dark:text-slate-300" fill="none" />
       </g>
 

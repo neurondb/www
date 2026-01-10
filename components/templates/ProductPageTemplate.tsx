@@ -182,7 +182,7 @@ export default function ProductPageTemplate({
           </div>
         )
       case 'neurondesktop':
-        return <NeuronDesktopHeroArt size={280} className="text-slate-600 dark:text-slate-400 transition-all duration-500 hover:scale-110 hover:rotate-3" />
+        return <NeuronDesktopHeroArt size={280} className="text-slate-600 dark:text-slate-300 transition-all duration-500 hover:scale-110 hover:rotate-3" />
       default:
         return ProductIcon ? <ProductIcon size={120} /> : null
     }

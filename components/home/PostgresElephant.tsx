@@ -213,7 +213,7 @@ export default function PostgresElephant({
         rx="3"
         ry="4"
         fill="currentColor"
-        className="text-slate-600 dark:text-slate-400"
+        className="text-slate-600 dark:text-slate-300"
       />
 
       {/* Wrinkles/details on body for texture */}
@@ -251,7 +251,7 @@ export default function PostgresElephant({
         fill="none"
         stroke="currentColor"
         strokeWidth="1.5"
-        className="text-slate-600 dark:text-slate-400"
+        className="text-slate-600 dark:text-slate-300"
         opacity="0.5"
       />
     </svg>

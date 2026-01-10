@@ -187,7 +187,7 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
                       </div>
                       <div className="min-w-0 flex-1">
                         <div className="text-sm font-semibold text-slate-900 dark:text-white">{t.label}</div>
-                        <div className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">{t.heading}</div>
+                        <div className="text-xs text-slate-600 dark:text-slate-300 line-clamp-2">{t.heading}</div>
                       </div>
                     </div>
                   </button>
@@ -209,7 +209,7 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-slate-900 dark:text-white">{productId}</div>
-                  <div className="text-xs text-slate-600 dark:text-slate-400">demo</div>
+                  <div className="text-xs text-slate-600 dark:text-slate-300">demo</div>
                 </div>
               </div>
               <div className="flex items-center gap-2">

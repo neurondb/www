@@ -62,8 +62,8 @@ export default function NeuronMCPHeroArt({
         />
         
         {/* Plug prongs */}
-        <rect x="-20" y="-40" width="8" height="12" rx="2" fill="currentColor" className="text-slate-600 dark:text-slate-400" />
-        <rect x="12" y="-40" width="8" height="12" rx="2" fill="currentColor" className="text-slate-600 dark:text-slate-400" />
+        <rect x="-20" y="-40" width="8" height="12" rx="2" fill="currentColor" className="text-slate-600 dark:text-slate-300" />
+        <rect x="12" y="-40" width="8" height="12" rx="2" fill="currentColor" className="text-slate-600 dark:text-slate-300" />
         
         {/* Center connection point */}
         <circle cx="0" cy="0" r="8" fill="url(#toolGradient)" stroke="#10b981" strokeWidth="2" />
@@ -115,7 +115,7 @@ export default function NeuronMCPHeroArt({
 
       {/* Protocol indicator (JSON-RPC) */}
       <g transform="translate(100, 140)">
-        <rect x="-30" y="-8" width="60" height="16" rx="3" fill="url(#mcpGradient)" stroke="currentColor" strokeWidth="1" className="text-slate-600 dark:text-slate-400" opacity="0.7" />
+        <rect x="-30" y="-8" width="60" height="16" rx="3" fill="url(#mcpGradient)" stroke="currentColor" strokeWidth="1" className="text-slate-600 dark:text-slate-300" opacity="0.7" />
         <text 
           x="0" 
           y="4" 
