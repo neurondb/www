@@ -69,7 +69,7 @@ export default function RelatedBlogs({ currentSlug, allPosts, maxPosts = 4 }: Re
                   <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-2 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors line-clamp-2">
                     {post.title}
                   </h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 mb-3 line-clamp-2">
+                  <p className="text-xs text-slate-600 dark:text-slate-300 mb-3 line-clamp-2">
                     {post.excerpt}
                   </p>
                   

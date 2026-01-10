@@ -87,7 +87,7 @@ export default function SearchPage() {
           {showEmptyState && (
             <div className="text-center py-12">
               <FileText className="w-16 h-16 text-slate-300 dark:text-slate-600 mx-auto mb-4" />
-              <p className="text-slate-600 dark:text-slate-400 text-lg mb-2">
+              <p className="text-slate-600 dark:text-slate-300 text-lg mb-2">
                 No results found for &quot;{debouncedQuery}&quot;
               </p>
               <p className="text-slate-500 dark:text-slate-500 text-sm">
@@ -113,7 +113,7 @@ export default function SearchPage() {
                         <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
                           {post.title}
                         </h3>
-                        <p className="text-slate-600 dark:text-slate-400 mb-3 line-clamp-2">
+                        <p className="text-slate-600 dark:text-slate-300 mb-3 line-clamp-2">
                           {post.excerpt}
                         </p>
                         <div className="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-500">

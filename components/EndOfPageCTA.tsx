@@ -21,8 +21,8 @@ export default function EndOfPageCTA() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/docs/getting-started"
-            onClick={() => trackEvent('cta_click', { category: 'EndOfPage', action: 'install', label: '/docs/getting-started', cta_location: 'end_of_page' })}
+            href="/docs/neurondb/getting-started"
+            onClick={() => trackEvent('cta_click', { category: 'EndOfPage', action: 'install', label: '/docs/neurondb/getting-started', cta_location: 'end_of_page' })}
             className="group px-8 py-3.5 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 text-black font-semibold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-glow-lg hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-slate-800 btn-professional"
           >
             <Download className="w-5 h-5 transition-transform group-hover:translate-y-[-2px]" />

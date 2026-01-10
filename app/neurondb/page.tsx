@@ -53,7 +53,7 @@ const neurondbDashboardTabs = [
     description: 'Complete RAG pipeline with document processing',
     codeLabel: 'SQL',
     code: `-- RAG query with reranking\nSELECT neurondb.rag.query(\n  'knowledge_base',\n  'What is vector search?',\n  top_k := 5,\n  rerank := 'cross-encoder',\n  llm := 'gpt-4'\n);\n\n-- Returns structured answer with sources`,
-    footerHref: '/docs/rag',
+    footerHref: '/docs/neurondb/rag',
     footerLabel: 'RAG Docs',
     results: [
       { id: 42, sim: 0.9523, text: 'Vector search enables semantic similarity matching in high-dimensional spaces using embeddings to find related content…' },
@@ -303,7 +303,7 @@ const neurondbConfig = {
       <tbody className="divide-y divide-slate-700 bg-slate-800/40">
         <tr>
             <td className="px-4 py-3 font-medium">
-              <Link href="/docs/vector-engine" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              <Link href="/docs/neurondb/vector-engine" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
                 Vector Search
               </Link>
             </td>
@@ -313,7 +313,7 @@ const neurondbConfig = {
         </tr>
         <tr className="bg-slate-800/60">
             <td className="px-4 py-3 font-medium">
-              <Link href="/docs/ml/inference" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              <Link href="/docs/neurondb/ml/inference" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
                 ML Inference
               </Link>
             </td>
@@ -323,7 +323,7 @@ const neurondbConfig = {
         </tr>
         <tr>
             <td className="px-4 py-3 font-medium">
-              <Link href="/docs/hybrid" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              <Link href="/docs/neurondb/hybrid" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
                 Hybrid Search
               </Link>
             </td>
@@ -333,7 +333,7 @@ const neurondbConfig = {
         </tr>
         <tr className="bg-slate-800/60">
             <td className="px-4 py-3 font-medium">
-              <Link href="/docs/reranking/overview" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              <Link href="/docs/neurondb/hybrid/overview" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
                 Reranking
               </Link>
             </td>
@@ -343,7 +343,7 @@ const neurondbConfig = {
         </tr>
         <tr>
             <td className="px-4 py-3 font-medium">
-              <Link href="/docs/background-workers" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              <Link href="/docs/neurondb/background-workers" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
                 Background Workers
               </Link>
             </td>
@@ -353,7 +353,7 @@ const neurondbConfig = {
         </tr>
         <tr className="bg-slate-800/60">
             <td className="px-4 py-3 font-medium">
-              <Link href="/docs/rag" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              <Link href="/docs/neurondb/background-workers/neurandefrag" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
                 RAG Pipeline
               </Link>
             </td>
@@ -363,7 +363,7 @@ const neurondbConfig = {
         </tr>
           <tr>
             <td className="px-4 py-3 font-medium">
-              <Link href="/docs/analytics" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              <Link href="/docs/neurondb/analytics" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
                 ML Analytics
               </Link>
             </td>
@@ -373,7 +373,7 @@ const neurondbConfig = {
           </tr>
           <tr className="bg-slate-800/60">
             <td className="px-4 py-3 font-medium">
-              <Link href="/docs/gpu" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              <Link href="/docs/neurondb/gpu" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
                 GPU Acceleration
               </Link>
             </td>
@@ -383,7 +383,7 @@ const neurondbConfig = {
           </tr>
           <tr>
             <td className="px-4 py-3 font-medium">
-              <Link href="/docs/performance" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              <Link href="/docs/neurondb/performance" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
                 Performance Optimization
               </Link>
             </td>
@@ -393,7 +393,7 @@ const neurondbConfig = {
           </tr>
           <tr className="bg-slate-800/60">
             <td className="px-4 py-3 font-medium">
-              <Link href="/docs/security" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              <Link href="/docs/neurondb/security" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
                 Security
               </Link>
             </td>
@@ -403,7 +403,7 @@ const neurondbConfig = {
           </tr>
           <tr>
             <td className="px-4 py-3 font-medium">
-              <Link href="/docs/performance/monitoring" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              <Link href="/docs/neurondb/performance/monitoring" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
                 Monitoring & Observability
               </Link>
             </td>
@@ -413,7 +413,7 @@ const neurondbConfig = {
           </tr>
           <tr className="bg-slate-800/60">
             <td className="px-4 py-3 font-medium">
-              <Link href="/docs/getting-started" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              <Link href="/docs/neurondb/getting-started" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
                 PostgreSQL Native
               </Link>
             </td>
@@ -697,7 +697,7 @@ const neurondbConfig = {
     kicker: 'Start',
     title: 'Add AI Capabilities to PostgreSQL',
     description: 'Install NeuronDB. Build semantic search, RAG applications, and ML features in your PostgreSQL infrastructure.',
-    primaryCTA: { href: '/docs/getting-started', label: 'View Documentation' },
+    primaryCTA: { href: '/docs/neurondb/getting-started', label: 'View Documentation' },
     secondaryCTA: { href: 'https://github.com/neurondb-ai/neurondb', label: 'View on GitHub', external: true },
   },
 };

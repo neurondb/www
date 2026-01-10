@@ -22,7 +22,7 @@ export default function NeuronDBDocsPage() {
         ctas: [
           {
             label: 'Start',
-            href: '/docs/neurondb/neurondb/getting-started',
+            href: '/docs/neurondb/getting-started',
             icon: BookOpen,
             variant: 'primary'
           },
@@ -40,25 +40,25 @@ export default function NeuronDBDocsPage() {
           icon: Database,
           title: 'Vector Search',
           description: 'HNSW, IVF, product quantization, and custom distance metrics for billion-scale similarity search.',
-          href: '/docs/neurondb/neurondb/features/vector-types'
+          href: '/docs/neurondb/features/vector-types'
         },
         {
           icon: NeuronDBIcon,
           title: 'ML Inference',
           description: 'ONNX runtime integration, GPU offload, and batch execution for deep learning workloads in SQL.',
-          href: '/docs/neurondb/neurondb/ml/inference'
+          href: '/docs/neurondb/ml/inference'
         },
         {
           icon: Search,
           title: 'Hybrid Retrieval',
           description: 'Combine keyword, metadata, and vector signals for multimodal results.',
-          href: '/docs/neurondb/neurondb/hybrid/overview'
+          href: '/docs/neurondb/hybrid/overview'
         },
         {
           icon: Zap,
           title: 'RAG Pipelines',
           description: 'In-database retrieval augmented generation with prompt templates, metadata policies, and observability.',
-          href: '/docs/neurondb/neurondb/rag'
+          href: '/docs/neurondb/rag'
         }
       ]}
       docSections={[
@@ -66,49 +66,49 @@ export default function NeuronDBDocsPage() {
           title: 'Getting Started',
           description: 'Docker or install the extension on PostgreSQL 16 to 18. Verify GPU support and apply baseline configuration.',
           items: [
-            { title: 'Docker', href: '/docs/neurondb/neurondb/getting-started/docker', description: 'Run the full ecosystem (DB + Agent + MCP + Desktop) with Compose profiles.' },
-            { title: 'Installation', href: '/docs/neurondb/neurondb/installation', description: 'Build from source or install packages.' },
-            { title: 'Quick Start', href: '/docs/neurondb/neurondb/getting-started/quickstart', description: 'Load sample data and run first vector searches.' },
-            { title: 'Configuration', href: '/docs/neurondb/neurondb/configuration', description: 'GUC parameters for CPU/GPU execution paths.' }
+            { title: 'Docker', href: '/docs/neurondb/getting-started/docker', description: 'Run the full ecosystem (DB + Agent + MCP + Desktop) with Compose profiles.' },
+            { title: 'Installation', href: '/docs/neurondb/installation', description: 'Build from source or install packages.' },
+            { title: 'Quick Start', href: '/docs/neurondb/getting-started/quickstart', description: 'Load sample data and run first vector searches.' },
+            { title: 'Configuration', href: '/docs/neurondb/configuration', description: 'GUC parameters for CPU/GPU execution paths.' }
           ]
         },
         {
           title: 'Core Features',
           description: 'How NeuronDB models vectors, maintains indexes, and tunes recall versus latency.',
           items: [
-            { title: 'Vector Types', href: '/docs/neurondb/neurondb/features/vector-types', description: '5 vector types: vector, vectorp, vecmap, vgraph, rtext with operations.' },
-            { title: 'Distance Metrics', href: '/docs/neurondb/neurondb/features/distance-metrics', description: 'Cosine, L2, IP, dot, and hybrid scoring.' },
-            { title: 'Indexing', href: '/docs/neurondb/neurondb/indexing', description: 'HNSW, IVF, PQ, and adaptive index selection.' },
-            { title: 'Quantization', href: '/docs/neurondb/neurondb/features/quantization', description: 'Reduce memory footprint with scalar and vector quantization.' }
+            { title: 'Vector Types', href: '/docs/neurondb/features/vector-types', description: '5 vector types: vector, vectorp, vecmap, vgraph, rtext with operations.' },
+            { title: 'Distance Metrics', href: '/docs/neurondb/features/distance-metrics', description: 'Cosine, L2, IP, dot, and hybrid scoring.' },
+            { title: 'Indexing', href: '/docs/neurondb/indexing', description: 'HNSW, IVF, PQ, and adaptive index selection.' },
+            { title: 'Quantization', href: '/docs/neurondb/features/quantization', description: 'Reduce memory footprint with scalar and vector quantization.' }
           ]
         },
         {
           title: 'ML & Embeddings',
           description: 'Generate, store, and serve embeddings alongside model lifecycle management.',
           items: [
-            { title: 'Embeddings', href: '/docs/neurondb/neurondb/ml/embeddings', description: 'Transform text, audio, and images into dense vectors.' },
-            { title: 'Inference', href: '/docs/neurondb/neurondb/ml/inference', description: 'Deploy ONNX models with GPU batching and caching.' },
-            { title: 'Model Management', href: '/docs/neurondb/neurondb/ml/model-management', description: 'Version control, approvals, and rollback workflows.' }
+            { title: 'Embeddings', href: '/docs/neurondb/ml/embeddings', description: 'Transform text, audio, and images into dense vectors.' },
+            { title: 'Inference', href: '/docs/neurondb/ml/inference', description: 'Deploy ONNX models with GPU batching and caching.' },
+            { title: 'Model Management', href: '/docs/neurondb/ml/model-management', description: 'Version control, approvals, and rollback workflows.' }
           ]
         },
         {
           title: 'Hybrid Search & Reranking',
           description: 'Combine text search, BM25, and neural rerankers for production retrieval pipelines.',
           items: [
-            { title: 'Hybrid Overview', href: '/docs/neurondb/neurondb/hybrid/overview', description: 'Architectures for multi-signal retrieval.' },
-            { title: 'Reranking', href: '/docs/neurondb/neurondb/reranking/overview', description: 'Cross-encoder and LLM reranking playbooks.' },
-            { title: 'RAG Workflows', href: '/docs/neurondb/neurondb/rag', description: 'Orchestrate retrieval augmented generation end to end.' }
+            { title: 'Hybrid Overview', href: '/docs/neurondb/hybrid/overview', description: 'Architectures for multi-signal retrieval.' },
+            { title: 'Reranking', href: '/docs/neurondb/reranking/overview', description: 'Cross-encoder and LLM reranking playbooks.' },
+            { title: 'RAG Workflows', href: '/docs/neurondb/rag', description: 'Orchestrate retrieval augmented generation end to end.' }
           ]
         },
         {
           title: 'Background Workers',
           description: 'Operational guidance for queue execution, auto-tuning, and index maintenance workers.',
           items: [
-            { title: 'Worker Overview', href: '/docs/neurondb/neurondb/background-workers', description: 'Understand worker architecture and lifecycles.' },
-            { title: 'Queue Worker (neuranq)', href: '/docs/neurondb/neurondb/background-workers/neuranq', description: 'Batch ingestion and asynchronous scoring.' },
-            { title: 'Auto-Tuner (neuranmon)', href: '/docs/neurondb/neurondb/background-workers/neuranmon', description: 'Automated index health and GPU utilization tuning.' },
-            { title: 'Index Maintenance (neurandefrag)', href: '/docs/neurondb/neurondb/background-workers/neurandefrag', description: 'Defragment and rebalance vector indexes online.' },
-            { title: 'LLM Processor (neuranllm)', href: '/docs/neurondb/neurondb/background-workers/neuranllm', description: 'Process LLM jobs asynchronously with crash recovery and job pruning.' }
+            { title: 'Worker Overview', href: '/docs/neurondb/background-workers', description: 'Understand worker architecture and lifecycles.' },
+            { title: 'Queue Worker (neuranq)', href: '/docs/neurondb/background-workers/neuranq', description: 'Batch ingestion and asynchronous scoring.' },
+            { title: 'Auto-Tuner (neuranmon)', href: '/docs/neurondb/background-workers/neuranmon', description: 'Automated index health and GPU utilization tuning.' },
+            { title: 'Index Maintenance (neurandefrag)', href: '/docs/neurondb/background-workers/neurandefrag', description: 'Defragment and rebalance vector indexes online.' },
+            { title: 'LLM Processor (neuranllm)', href: '/docs/neurondb/background-workers/neuranllm', description: 'Process LLM jobs asynchronously with crash recovery and job pruning.' }
           ]
         },
         {
@@ -124,9 +124,9 @@ export default function NeuronDBDocsPage() {
           title: 'Deployment & Operations',
           description: 'Cloud-native deployment options, observability stack, and operational scripts for production-ready NeuronDB deployments.',
           items: [
-            { title: 'Kubernetes Deployment', href: '/docs/neurondb/neurondb/deployment/kubernetes', description: 'Complete cloud-native deployment with Helm charts, HPA, PDB, and persistent storage.' },
-            { title: 'Observability Stack', href: '/docs/neurondb/neurondb/deployment/observability', description: 'Prometheus metrics, Grafana dashboards, and Jaeger distributed tracing for complete monitoring.' },
-            { title: 'Operational Scripts', href: '/docs/neurondb/neurondb/deployment/scripts', description: 'Professional automation scripts for Docker, database, setup, health checks, and monitoring.' }
+            { title: 'Kubernetes Deployment', href: '/docs/neurondb/deployment/kubernetes', description: 'Complete cloud-native deployment with Helm charts, HPA, PDB, and persistent storage.' },
+            { title: 'Observability Stack', href: '/docs/neurondb/deployment/observability', description: 'Prometheus metrics, Grafana dashboards, and Jaeger distributed tracing for complete monitoring.' },
+            { title: 'Operational Scripts', href: '/docs/neurondb/deployment/scripts', description: 'Professional automation scripts for Docker, database, setup, health checks, and monitoring.' }
           ]
         },
         {
@@ -145,19 +145,19 @@ export default function NeuronDBDocsPage() {
         {
           title: 'Docker Quick Start',
           description: 'Ecosystem (DB + Agent + MCP + Desktop) running in 5 minutes with Docker Compose.',
-          href: '/docs/neurondb/neurondb/getting-started/docker',
+          href: '/docs/neurondb/getting-started/docker',
           icon: BookOpen
         },
         {
           title: 'Getting Started Guide',
           description: 'Bootstrap NeuronDB on PostgreSQL 16 to 18 with CPU and GPU execution paths.',
-          href: '/docs/neurondb/neurondb/getting-started',
+          href: '/docs/neurondb/getting-started',
           icon: BookOpen
         },
         {
           title: 'Installation Reference',
           description: 'Build from source, package installations, upgrades, and validation scripts.',
-          href: '/docs/neurondb/neurondb/installation',
+          href: '/docs/neurondb/installation',
           icon: Download
         },
         {

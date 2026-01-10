@@ -13,15 +13,32 @@ export default function DarkModeToggle() {
 
   useEffect(() => {
     setMounted(true)
-    // Check localStorage first, default to light if not set
+    // Check if HTML element already has 'dark' class (from server-side forced dark mode)
+    const htmlHasDark = document.documentElement.classList.contains('dark')
+    // Check localStorage for user preference
     const stored = localStorage.getItem('theme')
     
     if (stored) {
-      setIsDark(stored === 'dark')
+      // If user has a preference, use it
+      const shouldBeDark = stored === 'dark'
+      setIsDark(shouldBeDark)
+      // Sync HTML class with preference
+      if (shouldBeDark) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
     } else {
-      // Default to light mode
-      setIsDark(false)
-      localStorage.setItem('theme', 'light')
+      // No preference stored - check if HTML already has dark class (default to dark)
+      const shouldBeDark = htmlHasDark || true // Default to dark mode
+      setIsDark(shouldBeDark)
+      localStorage.setItem('theme', shouldBeDark ? 'dark' : 'light')
+      // Ensure HTML class matches
+      if (shouldBeDark) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
     }
   }, [])
 

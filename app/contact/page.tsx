@@ -47,7 +47,7 @@ Message: ${formData.message}
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-4">
               Contact Us
             </h1>
-            <p className="text-lg md:text-xl font-normal text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl font-normal text-slate-300 mb-6 max-w-2xl mx-auto">
               Support, questions, or feedback
             </p>
           </div>
@@ -59,7 +59,7 @@ Message: ${formData.message}
           <div className="mb-12 space-y-6">
             <div>
               <h3 className="text-xl font-semibold text-white mb-2">Email Support</h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-3">
+              <p className="text-slate-300 mb-3">
                 Email for general inquiries and support: <Link
                   href={`mailto:${siteConfig.email}`}
                   className="text-yellow-400 hover:text-yellow-300 font-semibold transition-colors"
@@ -71,7 +71,7 @@ Message: ${formData.message}
 
             <div>
               <h3 className="text-xl font-semibold text-white mb-2">GitHub</h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-3">
+              <p className="text-slate-300 mb-3">
                 Report issues, request features, or contribute: <Link
                   href={siteConfig.github}
                   target="_blank"
@@ -85,7 +85,7 @@ Message: ${formData.message}
 
             <div>
               <h3 className="text-xl font-semibold text-white mb-2">Documentation</h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-3">
+              <p className="text-slate-300 mb-3">
                 Documentation and guides: <Link
                   href="/docs"
                   className="text-yellow-400 hover:text-yellow-300 font-semibold transition-colors"
@@ -98,11 +98,11 @@ Message: ${formData.message}
 
           {/* Contact Form */}
           <div>
-            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white mb-6">Send us a Message</h2>
+            <h2 className="text-3xl font-semibold tracking-tight text-white mb-6">Send us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-slate-900 dark:text-white mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-white mb-2">
                     Name
                   </label>
                   <input
@@ -118,7 +118,7 @@ Message: ${formData.message}
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-slate-900 dark:text-white mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
                     Email
                   </label>
                   <input
@@ -135,7 +135,7 @@ Message: ${formData.message}
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-semibold text-slate-900 dark:text-white mb-2">
+                <label htmlFor="subject" className="block text-sm font-semibold text-white mb-2">
                   Subject
                 </label>
                 <input
@@ -151,7 +151,7 @@ Message: ${formData.message}
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-slate-900 dark:text-white mb-2">
+                <label htmlFor="message" className="block text-sm font-semibold text-white mb-2">
                   Message
                 </label>
                 <textarea

@@ -48,7 +48,7 @@ export default function DownloadPage() {
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-4">
               Download NeuronDB
             </h1>
-            <p className="text-lg md:text-xl font-normal text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl font-normal text-slate-300 mb-6 max-w-2xl mx-auto">
               Latest version of NeuronDB for PostgreSQL
             </p>
           </div>
@@ -61,7 +61,7 @@ export default function DownloadPage() {
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
               Download NeuronDB
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-6">
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-6">
               Latest version of NeuronDB
             </p>
             <div className="max-w-3xl mx-auto p-6 bg-slate-800 rounded-lg border border-slate-700">
@@ -72,20 +72,20 @@ export default function DownloadPage() {
                     <span className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-semibold rounded">STABLE</span>
                     <span className="text-white font-semibold">Version 1.0.0</span>
                   </div>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">Stable production release</p>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 mb-2"><strong>Branch:</strong> <code className="bg-slate-100 dark:bg-slate-800 px-1 rounded">REL1_STABLE</code></p>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 mb-2"><strong>Status:</strong> Stable production release</p>
-                  <p className="text-xs text-slate-600 dark:text-slate-400">For production deployments requiring maximum stability</p>
+                  <p className="text-sm text-slate-300 mb-3">Stable production release</p>
+                  <p className="text-xs text-slate-400 mb-2"><strong>Branch:</strong> <code className="bg-slate-800 px-1 rounded">REL1_STABLE</code></p>
+                  <p className="text-xs text-slate-400 mb-2"><strong>Status:</strong> Stable production release</p>
+                  <p className="text-xs text-slate-400">For production deployments requiring maximum stability</p>
                 </div>
                 <div className="p-4 bg-slate-900 rounded border border-yellow-500/30">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 text-xs font-semibold rounded">LATEST</span>
-                    <span className="text-slate-900 dark:text-white font-semibold">Version 2.0.0</span>
+                    <span className="text-white font-semibold">Version 2.0.0</span>
                   </div>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">Latest features and improvements</p>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 mb-2"><strong>Branch:</strong> <code className="bg-slate-100 dark:bg-slate-800 px-1 rounded">main</code></p>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 mb-2"><strong>Status:</strong> Latest development (default)</p>
-                  <p className="text-xs text-slate-600 dark:text-slate-400">Latest enhancements, bug fixes, and new features</p>
+                  <p className="text-sm text-slate-300 mb-3">Latest features and improvements</p>
+                  <p className="text-xs text-slate-400 mb-2"><strong>Branch:</strong> <code className="bg-slate-800 px-1 rounded">main</code></p>
+                  <p className="text-xs text-slate-400 mb-2"><strong>Status:</strong> Latest development (default)</p>
+                  <p className="text-xs text-slate-400">Latest enhancements, bug fixes, and new features</p>
                 </div>
               </div>
             </div>
@@ -97,8 +97,8 @@ export default function DownloadPage() {
               <div className="flex items-center gap-4">
                 <Container className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
                 <div>
-                  <div className="text-slate-900 dark:text-white font-semibold text-lg">Docker Images</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">Pre-built images from GitHub Container Registry (GHCR)</div>
+                  <div className="text-white font-semibold text-lg">Docker Images</div>
+                  <div className="text-sm text-slate-300">Pre-built images from GitHub Container Registry (GHCR)</div>
                 </div>
               </div>
               <Link
@@ -114,8 +114,8 @@ export default function DownloadPage() {
               <div className="flex items-center gap-4">
                 <Package className="w-6 h-6 text-slate-700 dark:text-yellow-400" />
                 <div>
-                  <div className="text-slate-900 dark:text-white font-semibold text-lg">DEB Packages</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">Ubuntu/Debian packages (.deb)</div>
+                  <div className="text-white font-semibold text-lg">DEB Packages</div>
+                  <div className="text-sm text-slate-300">Ubuntu/Debian packages (.deb)</div>
                 </div>
               </div>
               <Link
@@ -133,8 +133,8 @@ export default function DownloadPage() {
               <div className="flex items-center gap-4">
                 <Package className="w-6 h-6 text-slate-700 dark:text-yellow-400" />
                 <div>
-                  <div className="text-slate-900 dark:text-white font-semibold text-lg">RPM Packages</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">Rocky Linux/RHEL packages (.rpm)</div>
+                  <div className="text-white font-semibold text-lg">RPM Packages</div>
+                  <div className="text-sm text-slate-300">Rocky Linux/RHEL packages (.rpm)</div>
                 </div>
               </div>
               <Link
@@ -150,7 +150,7 @@ export default function DownloadPage() {
             {/* Source Code */}
             <div className="space-y-3">
               <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-700">
-                <div className="text-sm text-slate-900 dark:text-slate-200 mb-3 font-medium">Source Code Downloads</div>
+                <div className="text-sm text-white mb-3 font-medium">Source Code Downloads</div>
                 <div className="space-y-2">
                   <Link
                     href={`${siteConfig.github}/archive/refs/heads/main.tar.gz`}
@@ -159,24 +159,24 @@ export default function DownloadPage() {
                     <div className="flex items-center gap-3">
                       <Code className="w-5 h-5 text-yellow-600 dark:text-yellow-400" />
                       <div>
-                        <div className="text-slate-900 dark:text-white font-medium">Version 2.0.0 (main branch)</div>
-                        <div className="text-xs text-slate-600 dark:text-slate-400">Latest features and improvements</div>
+                        <div className="text-white font-medium">Version 2.0.0 (main branch)</div>
+                        <div className="text-xs text-slate-400">Latest features and improvements</div>
                       </div>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-slate-600 dark:text-slate-400 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
                     href={`${siteConfig.github}/archive/refs/heads/REL1_STABLE.tar.gz`}
-                    className="flex items-center justify-between p-4 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 rounded border border-slate-200 dark:border-slate-700 transition-colors group"
+                    className="flex items-center justify-between p-4 bg-slate-900 hover:bg-slate-800 rounded border border-slate-700 transition-colors group"
                   >
                     <div className="flex items-center gap-3">
-                      <Code className="w-5 h-5 text-green-600 dark:text-green-400" />
+                      <Code className="w-5 h-5 text-green-400" />
                       <div>
-                        <div className="text-slate-900 dark:text-white font-medium">Version 1.0.0 (REL1_STABLE branch)</div>
-                        <div className="text-xs text-slate-600 dark:text-slate-400">Stable production release</div>
+                        <div className="text-white font-medium">Version 1.0.0 (REL1_STABLE branch)</div>
+                        <div className="text-xs text-slate-400">Stable production release</div>
                       </div>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-slate-600 dark:text-slate-400 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 text-slate-400 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
@@ -185,16 +185,16 @@ export default function DownloadPage() {
             {/* Installation Guide */}
             <Link
               href="/docs/neurondb/getting-started"
-              className="flex items-center justify-between p-6 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors group"
+              className="flex items-center justify-between p-6 bg-slate-800 hover:bg-slate-700 rounded-lg border border-slate-700 transition-colors group"
             >
               <div className="flex items-center gap-4">
-                <Terminal className="w-6 h-6 text-slate-700 dark:text-slate-300" />
+                <Terminal className="w-6 h-6 text-slate-300" />
                 <div>
-                  <div className="text-slate-900 dark:text-white font-semibold text-lg">Installation Guide</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">Complete installation instructions</div>
+                  <div className="text-white font-semibold text-lg">Installation Guide</div>
+                  <div className="text-sm text-slate-300">Complete installation instructions</div>
                 </div>
               </div>
-              <ArrowRight className="w-5 h-5 text-slate-600 dark:text-slate-400 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 text-slate-400 group-hover:translate-x-1 transition-transform" />
             </Link>
 
             {/* GitHub Repository */}
@@ -202,16 +202,16 @@ export default function DownloadPage() {
               href={siteConfig.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-6 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors group"
+              className="flex items-center justify-between p-6 bg-slate-800 hover:bg-slate-700 rounded-lg border border-slate-700 transition-colors group"
             >
               <div className="flex items-center gap-4">
-                <Github className="w-6 h-6 text-slate-700 dark:text-slate-300" />
+                <Github className="w-6 h-6 text-slate-300" />
                 <div>
-                  <div className="text-slate-900 dark:text-white font-semibold text-lg">GitHub Repository</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-300">View source code and contribute</div>
+                  <div className="text-white font-semibold text-lg">GitHub Repository</div>
+                  <div className="text-sm text-slate-300">View source code and contribute</div>
                 </div>
               </div>
-              <ArrowRight className="w-5 h-5 text-slate-600 dark:text-slate-400 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 text-slate-400 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
@@ -220,12 +220,12 @@ export default function DownloadPage() {
             <div className="bg-slate-50 dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700">
               <div className="flex items-center gap-3 mb-3">
                 <Container className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Docker Images</h3>
+                <h3 className="text-lg font-semibold text-white">Docker Images</h3>
               </div>
-              <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">
+              <p className="text-sm text-slate-300 mb-3">
                 Pre-built Docker images from GitHub Container Registry (GHCR). Includes all ecosystem components with GPU support.
               </p>
-              <ul className="text-xs text-slate-600 dark:text-slate-400 space-y-1 mb-4">
+              <ul className="text-xs text-slate-400 space-y-1 mb-4">
                 <li>• CPU, CUDA, ROCm, Metal variants</li>
                 <li>• PostgreSQL 16, 17, 18</li>
                 <li>• Complete ecosystem included</li>
@@ -241,12 +241,12 @@ export default function DownloadPage() {
             <div className="bg-slate-50 dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700">
               <div className="flex items-center gap-3 mb-3">
                 <Package className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">DEB/RPM Packages</h3>
+                <h3 className="text-lg font-semibold text-white">DEB/RPM Packages</h3>
               </div>
-              <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">
+              <p className="text-sm text-slate-300 mb-3">
                 Native packages for Ubuntu/Debian (DEB) and Rocky Linux/RHEL (RPM). Easy installation with package managers.
               </p>
-              <ul className="text-xs text-slate-600 dark:text-slate-400 space-y-1 mb-4">
+              <ul className="text-xs text-slate-400 space-y-1 mb-4">
                 <li>• DEB for Ubuntu/Debian</li>
                 <li>• RPM for Rocky Linux/RHEL</li>
                 <li>• Versioned releases</li>
@@ -264,12 +264,12 @@ export default function DownloadPage() {
             <div className="bg-slate-50 dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700">
               <div className="flex items-center gap-3 mb-3">
                 <Code className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Source Build</h3>
+                <h3 className="text-lg font-semibold text-white">Source Build</h3>
               </div>
-              <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">
+              <p className="text-sm text-slate-300 mb-3">
                 Build from source for production deployments, custom builds, or development. Requires build tools and dependencies.
               </p>
-              <ul className="text-xs text-slate-600 dark:text-slate-400 space-y-1 mb-4">
+              <ul className="text-xs text-slate-400 space-y-1 mb-4">
                 <li>• Full control over build</li>
                 <li>• Custom GPU support</li>
                 <li>• Development setup</li>
@@ -284,23 +284,23 @@ export default function DownloadPage() {
           </div>
 
           <div className="bg-slate-50 dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700">
-            <h3 className="text-xl font-semibold tracking-tight text-slate-900 dark:text-white mb-4">System Requirements</h3>
+            <h3 className="text-xl font-semibold tracking-tight text-white mb-4">System Requirements</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
-                <span className="text-slate-600 dark:text-slate-300">PostgreSQL:</span>
-                <span className="text-slate-900 dark:text-white ml-2">16, 17, or 18</span>
+                <span className="text-slate-300">PostgreSQL:</span>
+                <span className="text-white ml-2">16, 17, or 18</span>
               </div>
               <div>
-                <span className="text-slate-600 dark:text-slate-300">OS:</span>
-                <span className="text-slate-900 dark:text-white ml-2">Linux, macOS</span>
+                <span className="text-slate-300">OS:</span>
+                <span className="text-white ml-2">Linux, macOS</span>
               </div>
               <div>
-                <span className="text-slate-600 dark:text-slate-300">GPU (Optional):</span>
-                <span className="text-slate-900 dark:text-white ml-2">CUDA 11.0+, ROCm, or Metal</span>
+                <span className="text-slate-300">GPU (Optional):</span>
+                <span className="text-white ml-2">CUDA 11.0+, ROCm, or Metal</span>
               </div>
               <div>
-                <span className="text-slate-600 dark:text-slate-300">Build Tools:</span>
-                <span className="text-slate-900 dark:text-white ml-2">GCC/Clang, Make, CMake</span>
+                <span className="text-slate-300">Build Tools:</span>
+                <span className="text-white ml-2">GCC/Clang, Make, CMake</span>
               </div>
             </div>
           </div>

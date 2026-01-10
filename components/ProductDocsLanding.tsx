@@ -215,7 +215,7 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
                             <span>{item.title}</span>
                             <ArrowRight className="h-3 w-3 opacity-0 transition group-hover:opacity-100" />
                           </Component>
-                          <p className="text-xs text-slate-600 dark:text-slate-400">{item.description}</p>
+                          <p className="text-xs text-slate-600 dark:text-slate-300">{item.description}</p>
                         </li>
                       )
                     })}

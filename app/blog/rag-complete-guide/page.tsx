@@ -51,7 +51,7 @@ const markdown = `![RAG header](/blog/rag-complete-guide/header.svg?v=7)
 
 # RAG: Retrieval-Augmented Generation With PostgreSQL
 
-**[View on GitHub](https://github.com/neurondb-ai/neurondb)** | **[Download Latest Release](https://github.com/neurondb-ai/neurondb/releases)** | **[Documentation](/docs/rag)**
+**[View on GitHub](https://github.com/neurondb-ai/neurondb)** | **[Download Latest Release](https://github.com/neurondb-ai/neurondb/releases)** | **[Documentation](/docs/neurondb/rag)**
 
 ## Introduction
 

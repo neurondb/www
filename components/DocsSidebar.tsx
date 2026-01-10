@@ -99,7 +99,7 @@ function NavItemComponent({ item, pathname }: NavItemComponentProps) {
           'block px-3 py-1.5 text-sm rounded-md transition-colors',
           isActive
             ? 'text-yellow-600 dark:text-yellow-400 font-medium bg-yellow-50 dark:bg-yellow-900/20'
-            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
+            : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
         )}
       >
         {item.title}

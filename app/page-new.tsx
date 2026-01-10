@@ -54,7 +54,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/docs/getting-started"
+                href="/docs/neurondb/getting-started"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg font-medium hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors"
               >
                 Start
@@ -338,7 +338,7 @@ SELECT * FROM vector_search('embeddings', query_vector, 10);`}</code>
 
             <div className="text-center pt-8">
               <Link
-                href="/docs/getting-started"
+                href="/docs/neurondb/getting-started"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg font-medium hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors"
               >
                 Read Documentation

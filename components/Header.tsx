@@ -85,10 +85,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="px-4 py-2 rounded-lg font-medium transition-all duration-300 ease-out hover:bg-slate-800 hover:translate-x-1"
-                style={{
-                  color: 'var(--text-primary)',
-                }}
+                className="px-4 py-2 rounded-lg font-medium text-white transition-all duration-300 ease-out hover:bg-slate-800 hover:translate-x-1"
                 target={item.href.startsWith('http') ? '_blank' : undefined}
                 rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               >
@@ -97,10 +94,7 @@ const Header = () => {
             ))}
             <Link
               href="/search"
-              className="px-4 py-2 rounded-lg font-medium transition-all duration-300 ease-out hover:bg-slate-800 hover:translate-x-1"
-              style={{
-                color: 'var(--text-primary)',
-              }}
+              className="px-4 py-2 rounded-lg font-medium text-white transition-all duration-300 ease-out hover:bg-slate-800 hover:translate-x-1"
             >
               Search
             </Link>
@@ -126,11 +120,8 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => handleCTAClick('github', siteConfig.github)}
-              className="group px-5 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-2 border transition-all duration-200 hover:scale-105 active:scale-95"
+                  className="group px-5 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-2 border border-slate-700 bg-slate-800 text-white transition-all duration-200 hover:scale-105 active:scale-95 hover:bg-slate-700"
               style={{
-                backgroundColor: 'var(--background-dark)',
-                borderColor: 'var(--border)',
-                color: 'var(--text-primary)',
                 boxShadow: 'var(--shadow-sm)',
               }}
             >
@@ -142,10 +133,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg transition-colors hover-lift"
-            style={{
-              color: 'var(--text-secondary)',
-            }}
+            className="md:hidden p-2 rounded-lg text-white transition-colors hover-lift hover:bg-slate-800"
             aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isMenuOpen}
             aria-controls={mobileNavId}
@@ -159,11 +147,7 @@ const Header = () => {
           <div 
             id={mobileNavId} 
             ref={mobileMenuRef}
-            className="md:hidden border-t backdrop-blur-md mobile-menu-enter"
-            style={{
-              borderTopColor: 'var(--border)',
-              backgroundColor: 'var(--background)',
-            }}
+            className="md:hidden border-t border-slate-800 bg-slate-900/95 backdrop-blur-md mobile-menu-enter"
             role="dialog"
             aria-modal="true"
             aria-labelledby="mobile-menu-title"
@@ -174,10 +158,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="flex items-center px-4 py-3 rounded-xl font-medium transition-all duration-300 ease-out hover:bg-slate-800 hover:translate-x-2"
-                  style={{
-                    color: 'var(--text-primary)',
-                  }}
+                  className="flex items-center px-4 py-3 rounded-xl font-medium text-white transition-all duration-300 ease-out hover:bg-slate-800 hover:translate-x-2"
                   onClick={() => setIsMenuOpen(false)}
                   target={item.href.startsWith('http') ? '_blank' : undefined}
                   rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
@@ -187,23 +168,20 @@ const Header = () => {
               ))}
               <Link
                 href="/search"
-                className="flex items-center px-4 py-3 rounded-xl font-medium transition-all duration-300 ease-out hover:bg-slate-800 hover:translate-x-2"
-                style={{
-                  color: 'var(--text-primary)',
-                }}
+                className="flex items-center px-4 py-3 rounded-xl font-medium text-white transition-all duration-300 ease-out hover:bg-slate-800 hover:translate-x-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Search
               </Link>
               {/* Mobile CTA Buttons */}
-              <div className="border-t pt-4 mt-4 space-y-2" style={{ borderTopColor: 'var(--border)' }}>
+              <div className="border-t border-slate-800 pt-4 mt-4 space-y-2">
                 <div className="flex items-center justify-center px-4">
                   <DarkModeToggle />
                 </div>
                 <Link
                   href="/docs/neurondb/getting-started"
                   onClick={() => {
-                    handleCTAClick('install', '/docs/getting-started')
+                    handleCTAClick('install', '/docs/neurondb/getting-started')
                     setIsMenuOpen(false)
                   }}
                   className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-medium transition-all duration-200"
@@ -223,12 +201,7 @@ const Header = () => {
                     handleCTAClick('github', siteConfig.github)
                     setIsMenuOpen(false)
                   }}
-                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-medium border transition-all duration-200"
-                  style={{
-                    backgroundColor: 'var(--background-dark)',
-                    borderColor: 'var(--border)',
-                    color: 'var(--text-primary)',
-                  }}
+                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-medium border border-slate-700 bg-slate-800 text-white transition-all duration-200 hover:bg-slate-700"
                 >
                   <Github className="w-4 h-4" />
                   GitHub

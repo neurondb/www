@@ -37,17 +37,17 @@ export default function FooterTemplate({
                 </Link>
               </li>
               <li>
-                <Link href="/download" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                <Link href="/download" className="text-sm text-slate-400 dark:text-slate-300 hover:text-white transition-colors">
                   Download
                 </Link>
               </li>
               <li>
-                <Link href="/demos" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                <Link href="/demos" className="text-sm text-slate-400 dark:text-slate-300 hover:text-white transition-colors">
                   Demos
                 </Link>
               </li>
               <li>
-                <Link href="/tutorials" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                <Link href="/tutorials" className="text-sm text-slate-400 dark:text-slate-300 hover:text-white transition-colors">
                   Tutorials
                 </Link>
               </li>
@@ -61,22 +61,22 @@ export default function FooterTemplate({
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/blog" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                <Link href="/blog" className="text-sm text-slate-400 dark:text-slate-300 hover:text-white transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/community" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                <Link href="/community" className="text-sm text-slate-400 dark:text-slate-300 hover:text-white transition-colors">
                   Community
                 </Link>
               </li>
               <li>
-                <Link href="/docs/troubleshooting" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                <Link href="/docs/neurondb/troubleshooting" className="text-sm text-slate-400 dark:text-slate-300 hover:text-white transition-colors">
                   Support
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                <Link href="/contact" className="text-sm text-slate-400 dark:text-slate-300 hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>
@@ -90,17 +90,17 @@ export default function FooterTemplate({
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/docs/getting-started" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                <Link href="/docs/neurondb/getting-started" className="text-sm text-slate-400 dark:text-slate-300 hover:text-white transition-colors">
                   Getting Started
                 </Link>
               </li>
               <li>
-                <Link href="/docs/sql-api" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                <Link href="/docs/neurondb/sql-api" className="text-sm text-slate-400 dark:text-slate-300 hover:text-white transition-colors">
                   SQL API
                 </Link>
               </li>
               <li>
-                <Link href="/docs/deployment/kubernetes" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                <Link href="/docs/neurondb/deployment/kubernetes" className="text-sm text-slate-400 dark:text-slate-300 hover:text-white transition-colors">
                   Kubernetes
                 </Link>
               </li>
@@ -109,7 +109,7 @@ export default function FooterTemplate({
                   href="https://github.com/neurondb-ai/neurondb"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors inline-flex items-center gap-1"
+                  className="text-sm text-slate-400 dark:text-slate-300 hover:text-white transition-colors inline-flex items-center gap-1"
                 >
                   GitHub
                   <span className="text-xs">↗</span>
@@ -125,7 +125,7 @@ export default function FooterTemplate({
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/neurondb" className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                <Link href="/neurondb" className="text-sm text-slate-400 dark:text-slate-300 hover:text-white transition-colors">
                   About
                 </Link>
               </li>
@@ -135,7 +135,7 @@ export default function FooterTemplate({
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors inline-flex items-center gap-1"
+                    className="text-sm text-slate-400 dark:text-slate-300 hover:text-white transition-colors inline-flex items-center gap-1"
                   >
                     {social.name}
                     <span className="text-xs">↗</span>

@@ -73,7 +73,7 @@ const markdown = `
 
 # RAG Architectures AI Builders Should Understand
 
-**[View on GitHub](https://github.com/neurondb-ai/neurondb)** | **[Download Latest Release](https://github.com/neurondb-ai/neurondb/releases)** | **[Documentation](/docs/rag)**
+**[View on GitHub](https://github.com/neurondb-ai/neurondb)** | **[Download Latest Release](https://github.com/neurondb-ai/neurondb/releases)** | **[Documentation](/docs/neurondb/rag)**
 
 Large language models are exceptionally good at producing fluent text. They are not, by default, good at staying current, respecting private knowledge boundaries, or proving where an answer came from. That gap is exactly where most AI products fail: the demo looks impressive, but the system is not trustworthy when a user relies on it.
 
