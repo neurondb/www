@@ -1,9 +1,13 @@
 import { MetadataRoute } from 'next'
 import { siteConfig } from '@/config/site'
+import { allBlogPosts } from '@/config/blogPosts'
+
+// Route segment config for Vercel ISR
+export const dynamic = 'force-dynamic' // Enable ISR
+export const revalidate = 3600 // Revalidate every hour
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = `https://${siteConfig.domain}`
-  // Use current date for lastModified to ensure fresh sitemap
   const currentDate = new Date().toISOString()
 
   // Static pages - High priority (Most important pages)
@@ -12,54 +16,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: baseUrl,
       lastModified: currentDate,
       changeFrequency: 'daily',
-      priority: 1.0,
+      priority: 1.0, // Homepage gets highest priority
     },
-    {
-      url: `${baseUrl}/neurondb`,
-      lastModified: currentDate,
-      changeFrequency: 'daily',
-      priority: 0.95,
-    },
-    {
-      url: `${baseUrl}/demos`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/download`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: currentDate,
-      changeFrequency: 'daily',
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/tutorials`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/community`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.75,
-    },
-  ]
-
-  // Product pages - High priority (root level, not under /docs)
-  const productPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/neurondb`,
       lastModified: currentDate,
@@ -84,65 +42,51 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 0.95,
     },
+    {
+      url: `${baseUrl}/demos`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/download`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.9, // Blog listing page is important
+    },
+    {
+      url: `${baseUrl}/tutorials`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/community`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ]
 
-  // Blog pages - All blog posts
-  const blogPages: MetadataRoute.Sitemap = [
-    {
-      url: `${baseUrl}/blog/neurondb`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/neurondb-semantic-search-guide`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/neurondb-vectors`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/neurondb-mcp-server`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/rag-complete-guide`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/rag-architectures-ai-builders-should-understand`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/agentic-ai`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/ai-with-database-on-prem`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-    {
-      url: `${baseUrl}/blog/postgresql-vector-database`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.75,
-    },
-  ]
+  // Blog pages - Use actual dates from blog posts for better SEO
+  const blogPages: MetadataRoute.Sitemap = allBlogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date).toISOString(),
+    changeFrequency: 'monthly' as const,
+    priority: post.featured ? 0.85 : 0.75, // Featured posts get higher priority
+  }))
 
   // Tutorial pages - All tutorials
   const tutorialPages: MetadataRoute.Sitemap = [
@@ -398,7 +342,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  // ML & Embeddings - Core AI features
+  // ML & Embeddings - Core AI features (embedding-engine already in coreFeaturePages)
   const mlPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/docs/neurondb/ml`,
@@ -408,12 +352,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${baseUrl}/docs/neurondb/ml-engine`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/docs/neurondb/embedding-engine`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,
@@ -744,7 +682,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  // Additional Features & Support
+  // Additional Features & Support (hybrid already in hybridPages)
   const additionalPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/docs/neurondb/security`,
@@ -770,18 +708,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
-    {
-      url: `${baseUrl}/docs/neurondb/hybrid`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.85,
-    },
   ]
 
-  // Combine all sitemap entries
-  return [
+  // Combine all sitemap entries, removing duplicates by URL (keep highest priority)
+  const allPages = [
     ...staticPages,
-    ...productPages,
     ...blogPages,
     ...tutorialPages,
     ...docsMainPages,
@@ -797,4 +728,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...performancePages,
     ...additionalPages,
   ]
+
+  // Remove duplicates by URL, keeping the entry with highest priority
+  const urlMap = new Map<string, MetadataRoute.Sitemap[0]>()
+  for (const page of allPages) {
+    const existing = urlMap.get(page.url)
+    if (!existing || (page.priority || 0) > (existing.priority || 0)) {
+      urlMap.set(page.url, page)
+    }
+  }
+
+  // Sort by priority (highest first) for better SEO
+  const uniquePages = Array.from(urlMap.values()).sort(
+    (a, b) => (b.priority || 0) - (a.priority || 0)
+  )
+
+  return uniquePages
 }
