@@ -41,79 +41,87 @@ export const metadata = {
 export default function DownloadPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-      {/* Professional Hero */}
-      <section className="relative overflow-hidden min-h-[480px] md:min-h-[520px] flex items-center pt-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-        {/* Subtle background effect */}
-        <div className="absolute inset-0 neuron-tech-bg opacity-40"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-950"></div>
+      {/* Beautiful Professional Hero */}
+      <section className="relative overflow-hidden min-h-[560px] md:min-h-[600px] flex items-center pt-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        {/* Enhanced animated gradient background */}
+        <div className="absolute inset-0 neuron-tech-bg opacity-30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/20 via-cyan-950/20 to-indigo-950/20"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,rgba(59,130,246,0.15),transparent_70%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/60 to-slate-950"></div>
         
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full py-16">
+        {/* Floating animated orbs */}
+        <div className="absolute top-10 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 left-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full py-20">
           <div className="mx-auto max-w-4xl text-center w-full">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/70 px-4 py-1.5 text-xs text-slate-300 mb-6 animate-fade-in-up">
-              <CloudDownload className="w-3.5 h-3.5 text-blue-400" />
+            {/* Badge with glow effect */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-indigo-500/10 backdrop-blur-sm px-5 py-2 text-xs text-slate-200 mb-8 animate-fade-in-up shadow-lg shadow-blue-500/20">
+              <CloudDownload className="w-4 h-4 text-blue-400 animate-pulse" />
               <span className="font-semibold">Download</span>
-              <span className="text-slate-600">•</span>
-              <span className="font-mono">Get Started</span>
+              <span className="text-slate-500">•</span>
+              <span className="font-mono text-blue-300">Get Started</span>
             </div>
 
-            {/* Main Title */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 animate-slide-up">
-              Download
-              <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400">
+            {/* Main Title with enhanced gradient */}
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white mb-6 animate-slide-up leading-none">
+              <span className="block drop-shadow-2xl">Download</span>
+              <span className="block mt-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 via-indigo-400 to-purple-400 animate-gradient">
                 NeuronDB
               </span>
             </h1>
 
             {/* Description */}
-            <p className="text-xl sm:text-2xl leading-relaxed text-slate-300 max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <p className="text-xl sm:text-2xl leading-relaxed text-slate-300 max-w-3xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               Get the latest version of NeuronDB for PostgreSQL. Choose from Docker images, native packages, or build from source.
             </p>
 
-            {/* Quick Stats */}
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-10 text-sm text-slate-400 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <div className="flex items-center gap-2">
-                <Container className="w-4 h-4 text-blue-400" />
-                <span className="font-mono font-semibold text-slate-200">Docker</span>
+            {/* Quick Stats with glow effects */}
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 mb-12 text-sm animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900/50 border border-blue-500/20 hover:border-blue-500/40 backdrop-blur-sm transition-all duration-300 hover:scale-105 group shadow-lg">
+                <Container className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-colors" />
+                <span className="font-mono font-bold text-slate-100 text-base">Docker</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Package className="w-4 h-4 text-cyan-400" />
-                <span className="font-mono font-semibold text-slate-200">DEB/RPM</span>
+              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900/50 border border-cyan-500/20 hover:border-cyan-500/40 backdrop-blur-sm transition-all duration-300 hover:scale-105 group shadow-lg">
+                <Package className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                <span className="font-mono font-bold text-slate-100 text-base">DEB/RPM</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Code className="w-4 h-4 text-indigo-400" />
-                <span className="font-mono font-semibold text-slate-200">Source</span>
+              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900/50 border border-indigo-500/20 hover:border-indigo-500/40 backdrop-blur-sm transition-all duration-300 hover:scale-105 group shadow-lg">
+                <Code className="w-5 h-5 text-indigo-400 group-hover:text-indigo-300 transition-colors" />
+                <span className="font-mono font-bold text-slate-100 text-base">Source</span>
               </div>
             </div>
 
-            {/* Quick Start CTA */}
+            {/* Enhanced Quick Start CTA */}
             <div className="flex justify-center mb-12 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
               <Link
                 href="/docs/neurondb/getting-started/docker"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white text-slate-900 px-6 py-3.5 text-sm font-semibold hover:bg-slate-100 transition-all duration-300 hover:scale-105 hover:shadow-xl group whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 via-cyan-500 to-indigo-500 text-white px-7 py-3.5 text-sm font-bold hover:from-blue-400 hover:via-cyan-400 hover:to-indigo-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50 group whitespace-nowrap relative overflow-hidden"
               >
-                Quick Start Guide
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
+                <span className="relative">Quick Start Guide</span>
+                <ArrowRight className="w-4 h-4 relative transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
 
-            {/* Quickstart Code Snippet */}
-            <div className="rounded-xl border border-slate-800 bg-slate-950/80 backdrop-blur-sm text-slate-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-slate-700 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <div className="flex items-center justify-between px-4 py-2.5 border-b border-slate-800 bg-slate-900/50">
+            {/* Enhanced Quickstart Code Snippet */}
+            <div className="rounded-xl border border-blue-500/30 bg-gradient-to-br from-slate-950/90 via-slate-900/90 to-slate-950/90 backdrop-blur-md text-slate-100 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:border-blue-500/50 hover:scale-[1.01] animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <div className="flex items-center justify-between px-4 py-3 border-b border-blue-500/20 bg-gradient-to-r from-slate-900/80 to-slate-800/80">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-red-500"></div>
-                  <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
-                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-500 shadow-lg shadow-red-500/50 animate-pulse"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500 shadow-lg shadow-yellow-500/50"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-green-500 shadow-lg shadow-green-500/50"></div>
                 </div>
-                <div className="text-xs font-mono text-slate-400">Terminal</div>
+                <div className="text-xs font-mono text-blue-300 font-semibold">Terminal</div>
               </div>
-              <pre className="px-5 py-4 text-sm font-mono overflow-x-auto">
+              <pre className="px-5 py-4 text-sm font-mono overflow-x-auto bg-slate-950/50">
                 <code className="text-slate-200">
-                  <span className="text-green-400">$</span> docker run -d --name neurondb \
+                  <span className="text-green-400 font-semibold">$</span> docker run -d --name neurondb \
                   <br className="hidden sm:block" />
-                  <span className="ml-6 sm:ml-8">-e POSTGRES_PASSWORD=postgres \</span>
+                  <span className="ml-6 sm:ml-8 text-slate-300">-e POSTGRES_PASSWORD=postgres \</span>
                   <br className="hidden sm:block" />
-                  <span className="ml-6 sm:ml-8">neurondb/neurondb:latest</span>
+                  <span className="ml-6 sm:ml-8 text-blue-300">neurondb/neurondb:latest</span>
                 </code>
               </pre>
             </div>

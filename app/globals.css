@@ -493,6 +493,12 @@ html {
   }
 }
 
+/* Animated gradient text */
+.animate-gradient {
+  animation: gradientShift 3s ease infinite;
+  background-size: 200% auto;
+}
+
 /* Intersection Observer based scroll animations */
 .fade-in-on-scroll {
   opacity: 0;

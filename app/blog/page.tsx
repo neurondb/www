@@ -114,55 +114,71 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-      {/* Professional Hero */}
-      <section className="relative overflow-hidden min-h-[480px] md:min-h-[520px] flex items-center pt-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-        {/* Subtle background effect */}
-        <div className="absolute inset-0 neuron-tech-bg opacity-40"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-950"></div>
+      {/* Beautiful Professional Hero */}
+      <section className="relative overflow-hidden min-h-[560px] md:min-h-[600px] flex items-center pt-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        {/* Enhanced animated gradient background */}
+        <div className="absolute inset-0 neuron-tech-bg opacity-30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/20 via-indigo-950/20 to-purple-950/20"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.15),transparent_70%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/60 to-slate-950"></div>
         
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full py-16">
+        {/* Floating animated orbs */}
+        <div className="absolute top-10 left-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 right-20 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
+        
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full py-20">
           <div className="mx-auto max-w-4xl text-center w-full">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/70 px-4 py-1.5 text-xs text-slate-300 mb-6 animate-fade-in-up">
-              <FileText className="w-3.5 h-3.5 text-indigo-400" />
+            {/* Badge with glow effect */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 backdrop-blur-sm px-5 py-2 text-xs text-slate-200 mb-8 animate-fade-in-up shadow-lg shadow-blue-500/20">
+              <FileText className="w-4 h-4 text-blue-400 animate-pulse" />
               <span className="font-semibold">Blog</span>
-              <span className="text-slate-600">•</span>
-              <span className="font-mono">Technical Insights</span>
+              <span className="text-slate-500">•</span>
+              <span className="font-mono text-blue-300">Technical Insights</span>
             </div>
 
-            {/* Main Title */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 animate-slide-up">
-              NeuronDB
-              <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+            {/* Main Title with enhanced gradient */}
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white mb-6 animate-slide-up leading-none">
+              <span className="block drop-shadow-2xl">NeuronDB</span>
+              <span className="block mt-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 via-purple-400 to-pink-400 animate-gradient">
                 Blog
               </span>
             </h1>
 
             {/* Description */}
-            <p className="text-xl sm:text-2xl leading-relaxed text-slate-300 max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <p className="text-xl sm:text-2xl leading-relaxed text-slate-300 max-w-3xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               Tutorials, guides, and technical insights about NeuronDB. Learn vector search, ML inference, RAG pipelines, and PostgreSQL AI extensions.
             </p>
 
-            {/* Quick Stats */}
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-10 text-sm text-slate-400 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              {blogStats.map((stat, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <stat.icon className={`w-4 h-4 ${stat.color === 'text-white' ? 'text-indigo-400' : stat.color}`} />
-                  <span className="font-mono font-semibold text-slate-200">{stat.value}</span>
-                  <span className="text-slate-400">{stat.label}</span>
-                </div>
-              ))}
+            {/* Quick Stats with glow effects */}
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 mb-12 text-sm animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              {blogStats.map((stat, index) => {
+                const colorClasses = [
+                  { border: 'border-blue-500/20 hover:border-blue-500/40', icon: 'text-blue-400 group-hover:text-blue-300' },
+                  { border: 'border-indigo-500/20 hover:border-indigo-500/40', icon: 'text-indigo-400 group-hover:text-indigo-300' },
+                  { border: 'border-purple-500/20 hover:border-purple-500/40', icon: 'text-purple-400 group-hover:text-purple-300' },
+                  { border: 'border-pink-500/20 hover:border-pink-500/40', icon: 'text-pink-400 group-hover:text-pink-300' },
+                ]
+                const color = colorClasses[index % colorClasses.length]
+                return (
+                  <div key={index} className={`flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900/50 border ${color.border} backdrop-blur-sm transition-all duration-300 hover:scale-105 group shadow-lg`}>
+                    <stat.icon className={`w-5 h-5 ${color.icon} transition-colors`} />
+                    <span className="font-mono font-bold text-slate-100 text-base">{stat.value}</span>
+                    <span className="text-slate-400 text-sm">{stat.label}</span>
+                  </div>
+                )
+              })}
             </div>
 
-            {/* Search Bar */}
+            {/* Enhanced Search Bar */}
             <div className="flex justify-center mb-12 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
               <Link
                 href="/search"
-                className="group flex items-center gap-3 w-full sm:w-auto max-w-md rounded-xl border border-slate-700 bg-slate-900/60 backdrop-blur-sm px-5 py-3.5 text-left text-slate-300 hover:border-indigo-500 hover:bg-slate-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+                className="group flex items-center gap-3 w-full sm:w-auto max-w-md rounded-xl border border-blue-500/30 bg-gradient-to-r from-blue-950/40 via-indigo-950/40 to-purple-950/40 backdrop-blur-md px-5 py-3.5 text-left text-slate-200 hover:border-blue-500/60 hover:bg-gradient-to-r hover:from-blue-950/60 hover:via-indigo-950/60 hover:to-purple-950/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/20"
               >
-                <Search className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
-                <span className="flex-1 text-sm">Search blog posts...</span>
-                <kbd className="hidden sm:inline-flex items-center gap-1 rounded border border-slate-600 bg-slate-800 px-2 py-0.5 text-xs font-mono text-slate-400">
+                <Search className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-colors animate-pulse" />
+                <span className="flex-1 text-sm font-medium">Search blog posts...</span>
+                <kbd className="hidden sm:inline-flex items-center gap-1 rounded-md border border-blue-500/30 bg-slate-900/60 px-2.5 py-1 text-xs font-mono text-blue-300 shadow-lg">
                   <span className="text-[10px]">⌘</span>K
                 </kbd>
               </Link>
