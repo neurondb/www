@@ -136,16 +136,9 @@ const neuronagentConfig = {
   architecture: {
     title: 'Architecture',
     subtitle: 'AI agent runtime architecture with state management, memory store, and tool execution',
-    content: <NeuronAgentArchitectureDiagram />,
+    content: null as any, // Will be set in component
   },
-  dashboard: (
-    <ProductDashboardDemo 
-      productId="neuronagent"
-      tabs={neuronagentDashboardTabs}
-      title="NeuronAgent Runtime"
-      subtitle="Build autonomous agents with memory and tool execution"
-    />
-  ),
+  dashboard: null as any, // Will be set in component
   featurePillars: {
     kicker: 'Agent Runtime Features',
     items: [
@@ -155,7 +148,9 @@ const neuronagentConfig = {
           'Complete state machine for autonomous task execution',
           'State persistence, recovery, and transition management',
           'Supports complex workflows with conditional branching',
-          'State validation and error handling'
+          'State validation and error handling',
+          'Multi-agent collaboration with shared state management',
+          'Workflow engine for orchestrating multi-step agent tasks'
         ]
       },
       { 
@@ -221,6 +216,51 @@ const neuronagentConfig = {
           'Vector search and LLM operations',
           'Direct SQL tool access to NeuronDB functions',
           'Efficient context retrieval using HNSW indexes'
+        ]
+      },
+      { 
+        title: 'Multi-Agent Collaboration', 
+        desc: [
+          'Multi-agent collaboration with shared state and communication',
+          'Agent-to-agent messaging and coordination',
+          'Distributed task execution across multiple agents',
+          'Shared memory and context across agent sessions'
+        ]
+      },
+      { 
+        title: 'Workflow Engine', 
+        desc: [
+          'Workflow engine for orchestrating complex multi-step tasks',
+          'Conditional branching and parallel execution',
+          'Task dependencies and scheduling',
+          'Workflow state management and recovery'
+        ]
+      },
+      { 
+        title: 'Human-in-the-Loop (HITL)', 
+        desc: [
+          'Human-in-the-loop integration for approval workflows',
+          'Interactive prompts for user feedback and guidance',
+          'Manual intervention points in automated processes',
+          'Human review and approval mechanisms'
+        ]
+      },
+      { 
+        title: 'Budget Management', 
+        desc: [
+          'Budget management with cost tracking per agent and session',
+          'Token usage monitoring and limits',
+          'API call budget enforcement',
+          'Cost analytics and reporting'
+        ]
+      },
+      { 
+        title: 'Evaluation Framework', 
+        desc: [
+          'Evaluation framework for agent performance assessment',
+          'Metrics collection: success rate, latency, quality scores',
+          'A/B testing capabilities for agent configurations',
+          'Automated testing and benchmarking tools'
         ]
       },
     ],
@@ -298,7 +338,57 @@ const neuronagentConfig = {
           <td className="px-4 py-3 text-slate-300">Job queue with retries, SKIP LOCKED</td>
           <td className="px-4 py-3 text-slate-300">Non-blocking async ops</td>
           <td className="px-4 py-3 text-green-400">✓</td>
-              </tr>
+        </tr>
+        <tr>
+          <td className="px-4 py-3 font-medium">
+            <Link href="/neuronagent" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              Multi-Agent Collaboration
+            </Link>
+          </td>
+          <td className="px-4 py-3 text-slate-300">Shared state, agent-to-agent messaging</td>
+          <td className="px-4 py-3 text-slate-300">Distributed task execution</td>
+          <td className="px-4 py-3 text-green-400">✓</td>
+        </tr>
+        <tr className="bg-slate-800/60">
+          <td className="px-4 py-3 font-medium">
+            <Link href="/neuronagent" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              Workflow Engine
+            </Link>
+          </td>
+          <td className="px-4 py-3 text-slate-300">Multi-step task orchestration, conditional branching</td>
+          <td className="px-4 py-3 text-slate-300">Parallel execution support</td>
+          <td className="px-4 py-3 text-green-400">✓</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-3 font-medium">
+            <Link href="/neuronagent" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              Human-in-the-Loop (HITL)
+            </Link>
+          </td>
+          <td className="px-4 py-3 text-slate-300">Approval workflows, interactive prompts</td>
+          <td className="px-4 py-3 text-slate-300">Manual intervention support</td>
+          <td className="px-4 py-3 text-green-400">✓</td>
+        </tr>
+        <tr className="bg-slate-800/60">
+          <td className="px-4 py-3 font-medium">
+            <Link href="/neuronagent" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              Budget Management
+            </Link>
+          </td>
+          <td className="px-4 py-3 text-slate-300">Cost tracking, token limits, API call budgets</td>
+          <td className="px-4 py-3 text-slate-300">Real-time cost analytics</td>
+          <td className="px-4 py-3 text-green-400">✓</td>
+        </tr>
+        <tr>
+          <td className="px-4 py-3 font-medium">
+            <Link href="/neuronagent" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
+              Evaluation Framework
+            </Link>
+          </td>
+          <td className="px-4 py-3 text-slate-300">Performance metrics, A/B testing, benchmarking</td>
+          <td className="px-4 py-3 text-slate-300">Automated testing tools</td>
+          <td className="px-4 py-3 text-green-400">✓</td>
+        </tr>
               <tr>
           <td className="px-4 py-3 font-medium">
             <Link href="/neuronagent" className="text-yellow-400 hover:text-yellow-300 hover:underline transition-colors">
@@ -325,7 +415,21 @@ const neuronagentConfig = {
 export default function NeuronAgentPage() {
   return (
     <>
-      <ProductPageTemplate {...neuronagentConfig} />
+      <ProductPageTemplate 
+        {...neuronagentConfig}
+        architecture={{
+          ...neuronagentConfig.architecture,
+          content: <NeuronAgentArchitectureDiagram />,
+        }}
+        dashboard={
+          <ProductDashboardDemo 
+            productId="neuronagent"
+            tabs={neuronagentDashboardTabs}
+            title="NeuronAgent Runtime"
+            subtitle="Build autonomous agents with memory and tool execution"
+          />
+        }
+      />
     </>
   );
 }

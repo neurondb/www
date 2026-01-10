@@ -136,16 +136,9 @@ const neuronmcpConfig = {
   architecture: {
     title: 'Architecture',
     subtitle: 'MCP server architecture with protocol handling, tools, resources, and middleware',
-    content: <NeuronMCPArchitectureDiagram />,
+    content: null as any, // Will be set in component
   },
-  dashboard: (
-    <ProductDashboardDemo 
-      productId="neuronmcp"
-      tabs={neuronmcpDashboardTabs}
-      title="NeuronMCP Tools"
-      subtitle="100+ tools for vector ops, ML, RAG, and database admin"
-    />
-  ),
+  dashboard: null as any, // Will be set in component
   featurePillars: {
     kicker: 'MCP Server Features',
     items: [
@@ -381,7 +374,21 @@ const neuronmcpConfig = {
 export default function NeuronMCPPage() {
   return (
     <>
-      <ProductPageTemplate {...neuronmcpConfig} />
+      <ProductPageTemplate 
+        {...neuronmcpConfig}
+        architecture={{
+          ...neuronmcpConfig.architecture,
+          content: <NeuronMCPArchitectureDiagram />,
+        }}
+        dashboard={
+          <ProductDashboardDemo 
+            productId="neuronmcp"
+            tabs={neuronmcpDashboardTabs}
+            title="NeuronMCP Tools"
+            subtitle="100+ tools for vector ops, ML, RAG, and database admin"
+          />
+        }
+      />
     </>
   );
 }

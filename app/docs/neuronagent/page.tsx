@@ -1,10 +1,8 @@
-import { Metadata } from 'next'
+'use client'
+
 import { BookOpen, Download, ExternalLink, Bot, Database, Zap, Server, GitBranch } from 'lucide-react'
 import ProductDocsLanding from '@/components/ProductDocsLanding'
-import { generateDocsMetadata } from '@/config/products'
 import { getProductTheme } from '@/config/theme'
-
-export const metadata: Metadata = generateDocsMetadata('neuronagent')
 
 export default function NeuronAgentDocsPage() {
   const theme = getProductTheme('neuronagent')

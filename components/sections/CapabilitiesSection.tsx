@@ -55,8 +55,8 @@ const capabilities = [
   },
   {
     capability: 'Performance Optimization',
-    description: 'SIMD (AVX2/AVX-512/NEON), intelligent query planning, ANN cache, WAL compression',
-    performance: 'Predictive prefetching',
+    description: 'HNSW index builds 10.1x faster than pgvector (606ms for 50K vectors), SIMD (AVX2/AVX-512/NEON), intelligent query planning, ANN cache, WAL compression, in-memory graph building, efficient neighbor finding during insert',
+    performance: 'Predictive prefetching, optimized flush with pre-computed neighbors',
     productionReady: true,
   },
   {
@@ -121,8 +121,8 @@ const capabilities = [
   },
   {
     capability: 'Benchmark Suite',
-    description: 'Comprehensive benchmark suite: Vector (SIFT-128, GIST-960, GloVe-100), Hybrid (BEIR datasets), RAG (MTEB, BEIR, RAGAS). Metrics: QPS, Recall, Latency, NDCG, MAP, Faithfulness, Relevancy',
-    performance: 'Reproducible benchmarks with hardware profiles',
+    description: 'Comprehensive benchmark suite: Vector (SIFT-128, GIST-960, GloVe-100), Hybrid (BEIR datasets), RAG (MTEB, BEIR, RAGAS). Metrics: QPS, Recall, Latency, NDCG, MAP, Faithfulness, Relevancy. HNSW builds: 606ms (50K vectors, 128-dim L2, 10.1x faster than pgvector), 583ms (50K vectors, 128-dim Cosine, 8.8x faster), 146ms (10K vectors, 768-dim L2, 27.1x faster)',
+    performance: 'Reproducible benchmarks with hardware profiles, integrated RAGAS/MTEB/BEIR',
     productionReady: true,
   },
 ]

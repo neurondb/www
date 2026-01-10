@@ -136,67 +136,9 @@ const neurondesktopConfig = {
   architecture: {
     title: 'Architecture',
     subtitle: 'Unified web interface architecture with MCP proxy, NeuronDB client, and Agent client integration',
-    content: (
-      <div className="w-full max-w-full bg-slate-900/60 rounded-lg p-8 border border-slate-700">
-        <div className="space-y-6 w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-            <div className="bg-slate-800/60 rounded-lg p-6 border border-slate-700 w-full">
-              <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                <Monitor className="w-5 h-5 text-yellow-400 flex-shrink-0" />
-                Frontend (Next.js)
-              </h4>
-              <ul className="text-slate-300 text-sm space-y-2">
-                <li>• React + TypeScript</li>
-                <li>• Real-time WebSocket</li>
-                <li>• Modern responsive UI</li>
-                <li>• Component-based architecture</li>
-              </ul>
-            </div>
-            <div className="bg-slate-800/60 rounded-lg p-6 border border-slate-700 w-full">
-              <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                <Server className="w-5 h-5 text-yellow-400 flex-shrink-0" />
-                Backend API (Go)
-              </h4>
-              <ul className="text-slate-300 text-sm space-y-2">
-                <li>• REST API + WebSocket</li>
-                <li>• MCP Proxy Client</li>
-                <li>• NeuronDB Client</li>
-                <li>• Agent Client</li>
-              </ul>
-            </div>
-          </div>
-          <div className="bg-slate-800/60 rounded-lg p-6 border border-slate-700 w-full">
-            <h4 className="text-white font-semibold mb-3">Integration Layer</h4>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
-              <div className="text-center p-4 bg-slate-900/60 rounded border border-slate-700">
-                <Database className="w-8 h-8 text-yellow-400 mx-auto mb-2 flex-shrink-0" />
-                <p className="text-sm text-slate-300">NeuronDB</p>
-                <p className="text-xs text-slate-400 mt-1">PostgreSQL</p>
-              </div>
-              <div className="text-center p-4 bg-slate-900/60 rounded border border-slate-700">
-                <Bot className="w-8 h-8 text-yellow-400 mx-auto mb-2 flex-shrink-0" />
-                <p className="text-sm text-slate-300">NeuronAgent</p>
-                <p className="text-xs text-slate-400 mt-1">HTTP API</p>
-              </div>
-              <div className="text-center p-4 bg-slate-900/60 rounded border border-slate-700">
-                <Server className="w-8 h-8 text-yellow-400 mx-auto mb-2 flex-shrink-0" />
-                <p className="text-sm text-slate-300">NeuronMCP</p>
-                <p className="text-xs text-slate-400 mt-1">stdio</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    ),
+    content: null as any, // Will be set in component
   },
-  dashboard: (
-    <ProductDashboardDemo 
-      productId="neurondesktop"
-      tabs={neurondesktopDashboardTabs}
-      title="NeuronDesktop Interface"
-      subtitle="Unified web interface for the complete NeuronDB ecosystem"
-    />
-  ),
+  dashboard: null as any, // Will be set in component
   featurePillars: {
     kicker: 'Web Interface Features',
     items: [
@@ -405,7 +347,72 @@ const neurondesktopConfig = {
 export default function NeuronDesktopPage() {
   return (
     <>
-      <ProductPageTemplate {...neurondesktopConfig} />
+      <ProductPageTemplate 
+        {...neurondesktopConfig}
+        architecture={{
+          ...neurondesktopConfig.architecture,
+          content: (
+            <div className="w-full max-w-full bg-slate-900/60 rounded-lg p-8 border border-slate-700">
+              <div className="space-y-6 w-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                  <div className="bg-slate-800/60 rounded-lg p-6 border border-slate-700 w-full">
+                    <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
+                      <Monitor className="w-5 h-5 text-yellow-400 flex-shrink-0" />
+                      Frontend (Next.js)
+                    </h4>
+                    <ul className="text-slate-300 text-sm space-y-2">
+                      <li>• React + TypeScript</li>
+                      <li>• Real-time WebSocket</li>
+                      <li>• Modern responsive UI</li>
+                      <li>• Component-based architecture</li>
+                    </ul>
+                  </div>
+                  <div className="bg-slate-800/60 rounded-lg p-6 border border-slate-700 w-full">
+                    <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
+                      <Server className="w-5 h-5 text-yellow-400 flex-shrink-0" />
+                      Backend API (Go)
+                    </h4>
+                    <ul className="text-slate-300 text-sm space-y-2">
+                      <li>• REST API + WebSocket</li>
+                      <li>• MCP Proxy Client</li>
+                      <li>• NeuronDB Client</li>
+                      <li>• Agent Client</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="bg-slate-800/60 rounded-lg p-6 border border-slate-700 w-full">
+                  <h4 className="text-white font-semibold mb-3">Integration Layer</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+                    <div className="text-center p-4 bg-slate-900/60 rounded border border-slate-700">
+                      <Database className="w-8 h-8 text-yellow-400 mx-auto mb-2 flex-shrink-0" />
+                      <p className="text-sm text-slate-300">NeuronDB</p>
+                      <p className="text-xs text-slate-400 mt-1">PostgreSQL</p>
+                    </div>
+                    <div className="text-center p-4 bg-slate-900/60 rounded border border-slate-700">
+                      <Bot className="w-8 h-8 text-yellow-400 mx-auto mb-2 flex-shrink-0" />
+                      <p className="text-sm text-slate-300">NeuronAgent</p>
+                      <p className="text-xs text-slate-400 mt-1">HTTP API</p>
+                    </div>
+                    <div className="text-center p-4 bg-slate-900/60 rounded border border-slate-700">
+                      <Server className="w-8 h-8 text-yellow-400 mx-auto mb-2 flex-shrink-0" />
+                      <p className="text-sm text-slate-300">NeuronMCP</p>
+                      <p className="text-xs text-slate-400 mt-1">stdio</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ),
+        }}
+        dashboard={
+          <ProductDashboardDemo 
+            productId="neurondesktop"
+            tabs={neurondesktopDashboardTabs}
+            title="NeuronDesktop Interface"
+            subtitle="Unified web interface for the complete NeuronDB ecosystem"
+          />
+        }
+      />
     </>
   );
 }

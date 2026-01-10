@@ -106,7 +106,7 @@ export const products: Record<'neurondb' | 'neuronagent' | 'neuronmcp' | 'neuron
     displayName: 'NeuronAgent',
     tagline: 'AI Agent Runtime for PostgreSQL',
     description: 'REST API and WebSocket agent runtime system with long-term memory, tool execution, and streaming responses.',
-    longDescription: 'AI agent runtime system providing REST API and WebSocket endpoints for building applications with long-term memory and tool execution. Includes agent state machine, HNSW-based vector search for context retrieval, extensible tool registry, and background job processing.',
+    longDescription: 'AI agent runtime system providing REST API and WebSocket endpoints for building applications with long-term memory and tool execution. Includes agent state machine, multi-agent collaboration, workflow engine, HITL (Human-in-the-Loop), HNSW-based vector search for context retrieval, extensible tool registry, budget management, evaluation framework, and background job processing.',
     keywords: [
       'ai agent runtime', 'agent api', 'postgres agent', 'agent framework', 'autonomous agents',
       'rest api agent', 'websocket agent', 'long-term memory', 'agent memory', 'agent tools',

@@ -1,10 +1,8 @@
-import { Metadata } from 'next'
+'use client'
+
 import { BookOpen, Download, ExternalLink, Server, Database, Search, FileText, Layers, Cpu } from 'lucide-react'
 import ProductDocsLanding from '@/components/ProductDocsLanding'
-import { generateDocsMetadata } from '@/config/products'
 import { getProductTheme } from '@/config/theme'
-
-export const metadata: Metadata = generateDocsMetadata('neuronmcp')
 
 export default function NeuronMCPDocsPage() {
   const theme = getProductTheme('neuronmcp')

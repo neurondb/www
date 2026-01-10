@@ -5,8 +5,8 @@ import SectionTemplate from '@/components/templates/SectionTemplate'
 
 const comparisonData = [
   {
-    feature: 'Vector Indexing',
-    neurondb: 'HNSW + IVF',
+    feature: 'Index types',
+    neurondb: 'HNSW, IVF, PQ, hybrid, multi-vector',
     pgvector: 'HNSW + IVF',
     pgvectorscale: 'StreamingDiskANN',
     pgai: 'Uses pgvector',
@@ -123,6 +123,22 @@ const comparisonData = [
     pgvectorscale: '~30 functions',
     pgai: '~15 functions',
     postgresml: '~50 functions',
+  },
+  {
+    feature: 'Benchmark coverage',
+    neurondb: 'RAGAS, MTEB, BEIR integrated',
+    pgvector: 'Manual setup required',
+    pgvectorscale: 'Manual setup required',
+    pgai: 'Manual setup required',
+    postgresml: 'Manual setup required',
+  },
+  {
+    feature: 'HNSW Index Build Performance',
+    neurondb: '606ms for 50K vectors (10.1x faster than pgvector)',
+    pgvector: '6,108ms for 50K vectors (baseline)',
+    pgvectorscale: 'Varies by configuration',
+    pgai: 'Uses pgvector',
+    postgresml: 'Uses pgvector',
   },
   {
     feature: 'Performance (QPS)',

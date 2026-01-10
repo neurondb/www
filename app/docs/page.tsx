@@ -1,33 +1,11 @@
-import { Metadata } from 'next'
+'use client'
+
 import Link from 'next/link'
 import { ArrowRight, BookOpen } from 'lucide-react'
 import FooterTemplate from '@/components/templates/FooterTemplate'
 import { getAllProducts, getProductIds } from '@/config/products'
 import { getProductTheme } from '@/config/theme'
 import { NeuronDBIcon, NeuronAgentIcon, NeuronMCPIcon, NeuronDesktopIcon } from '@/components/ProductIcons'
-
-export const metadata: Metadata = {
-  title: 'Documentation | NeuronDB',
-  description: 'Documentation for NeuronDB ecosystem: NeuronDB PostgreSQL AI extension, NeuronAgent runtime, NeuronMCP protocol server, and NeuronDesktop web interface.',
-  keywords: [
-    'NeuronDB documentation',
-    'PostgreSQL AI documentation',
-    'vector search documentation',
-    'NeuronAgent docs',
-    'NeuronMCP docs',
-    'NeuronDesktop docs',
-  ].join(', '),
-  alternates: {
-    canonical: 'https://www.neurondb.ai/docs',
-  },
-  openGraph: {
-    title: 'Documentation | NeuronDB',
-    description: 'Documentation for the complete NeuronDB ecosystem.',
-    type: 'website',
-    url: 'https://www.neurondb.ai/docs',
-    siteName: 'NeuronDB',
-  },
-}
 
 const productIcons: Record<string, React.ComponentType<{ className?: string }>> = {
   neurondb: NeuronDBIcon,
