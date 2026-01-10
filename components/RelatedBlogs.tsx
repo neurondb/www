@@ -39,7 +39,7 @@ export default function RelatedBlogs({ currentSlug, allPosts, maxPosts = 4 }: Re
     <aside className="w-full lg:w-80 flex-shrink-0">
       <div className="sticky top-24 space-y-6">
         <div>
-          <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Related Articles</h3>
+          <h3 className="text-xl font-bold text-white mb-4">Related Articles</h3>
           <div className="space-y-4">
             {relatedPosts.map((post) => (
               <Link
@@ -47,9 +47,9 @@ export default function RelatedBlogs({ currentSlug, allPosts, maxPosts = 4 }: Re
                 href={`/blog/${post.slug}`}
                 className="block group"
               >
-                <article className="bg-slate-50 dark:bg-slate-900/50 rounded-lg border border-slate-200 dark:border-slate-800 p-4 hover:border-slate-300 dark:hover:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900/70 transition-all duration-200">
+                <article className="bg-slate-900/50 rounded-lg border border-slate-800 p-4 hover:border-slate-700 hover:bg-slate-900/70 transition-all duration-200">
                   {/* Header Image */}
-                  <div className="relative w-full h-32 mb-3 rounded overflow-hidden bg-slate-100 dark:bg-slate-950">
+                  <div className="relative w-full h-32 mb-3 rounded overflow-hidden bg-slate-950">
                     {post.headerImage ? (
                       <Image
                         src={post.headerImage}
@@ -66,15 +66,15 @@ export default function RelatedBlogs({ currentSlug, allPosts, maxPosts = 4 }: Re
                   </div>
                   
                   {/* Content */}
-                  <h4 className="text-sm font-semibold text-slate-900 dark:text-white mb-2 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors line-clamp-2">
+                  <h4 className="text-sm font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors line-clamp-2">
                     {post.title}
                   </h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-300 mb-3 line-clamp-2">
+                  <p className="text-xs text-slate-300 mb-3 line-clamp-2">
                     {post.excerpt}
                   </p>
                   
                   {/* Metadata */}
-                  <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-500">
+                  <div className="flex items-center gap-3 text-xs text-slate-500">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
                       <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
@@ -86,7 +86,7 @@ export default function RelatedBlogs({ currentSlug, allPosts, maxPosts = 4 }: Re
                   </div>
                   
                   {/* Read more arrow */}
-                  <div className="mt-3 flex items-center gap-1 text-xs text-yellow-600 dark:text-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="mt-3 flex items-center gap-1 text-xs text-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity">
                     <span>Read more</span>
                     <ArrowRight className="w-3 h-3" />
                   </div>

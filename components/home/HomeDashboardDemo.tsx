@@ -454,8 +454,8 @@ FROM hybrid_search(
 
   return (
     <section className="bg-slate-900">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-12 gap-10 items-stretch" style={{ minHeight: '650px' }}>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid lg:grid-cols-12 gap-8 items-stretch" style={{ minHeight: '550px' }}>
           {/* Left - tabs */}
           <div className="lg:col-span-4 flex flex-col">
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white flex-shrink-0">

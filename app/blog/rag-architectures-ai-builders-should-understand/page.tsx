@@ -249,7 +249,7 @@ export default function BlogPost() {
         slug="rag-architectures-ai-builders-should-understand"
         title="RAG Architectures AI Builders Should Understand"
       />
-      <div className="bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+      <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* Main Content */}

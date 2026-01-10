@@ -53,7 +53,7 @@ export default function PostgresElephant({
         fill="url(#elephantGradient)"
         stroke="currentColor"
         strokeWidth="2"
-        className="text-slate-700 dark:text-slate-300"
+        className="text-slate-300"
         filter="url(#elephantShadow)"
       />
 
@@ -66,7 +66,7 @@ export default function PostgresElephant({
         fill="url(#elephantGradient)"
         stroke="currentColor"
         strokeWidth="2"
-        className="text-slate-700 dark:text-slate-300"
+        className="text-slate-300"
         filter="url(#elephantShadow)"
       />
 
@@ -76,7 +76,7 @@ export default function PostgresElephant({
         fill="url(#elephantGradient)"
         stroke="currentColor"
         strokeWidth="2"
-        className="text-slate-700 dark:text-slate-300"
+        className="text-slate-300"
         filter="url(#elephantShadow)"
       />
 
@@ -89,7 +89,7 @@ export default function PostgresElephant({
         fill="url(#elephantGradient)"
         stroke="currentColor"
         strokeWidth="2"
-        className="text-slate-700 dark:text-slate-300"
+        className="text-slate-300"
         filter="url(#elephantShadow)"
       />
 
@@ -102,7 +102,7 @@ export default function PostgresElephant({
         fill="url(#elephantGradient)"
         stroke="currentColor"
         strokeWidth="2"
-        className="text-slate-700 dark:text-slate-300"
+        className="text-slate-300"
         filter="url(#elephantShadow)"
       />
 
@@ -112,14 +112,14 @@ export default function PostgresElephant({
         cy="95"
         r="4"
         fill="currentColor"
-        className="text-slate-900 dark:text-white"
+        className="text-white"
       />
       <circle
         cx="156"
         cy="94"
         r="1.5"
         fill="currentColor"
-        className="text-white dark:text-slate-900"
+        className="text-slate-900"
       />
 
       {/* Tusk (left) */}
@@ -129,7 +129,7 @@ export default function PostgresElephant({
         rx="3"
         ry="12"
         fill="currentColor"
-        className="text-slate-400 dark:text-slate-500"
+        className="text-slate-500"
         opacity="0.9"
       />
 
@@ -140,7 +140,7 @@ export default function PostgresElephant({
         rx="2.5"
         ry="10"
         fill="currentColor"
-        className="text-slate-400 dark:text-slate-500"
+        className="text-slate-500"
         opacity="0.7"
       />
 
@@ -153,7 +153,7 @@ export default function PostgresElephant({
         fill="url(#elephantGradient)"
         stroke="currentColor"
         strokeWidth="2"
-        className="text-slate-700 dark:text-slate-300"
+        className="text-slate-300"
         filter="url(#elephantShadow)"
       />
 
@@ -166,7 +166,7 @@ export default function PostgresElephant({
         fill="url(#elephantGradient)"
         stroke="currentColor"
         strokeWidth="2"
-        className="text-slate-700 dark:text-slate-300"
+        className="text-slate-300"
         filter="url(#elephantShadow)"
       />
 
@@ -179,7 +179,7 @@ export default function PostgresElephant({
         fill="url(#elephantGradient)"
         stroke="currentColor"
         strokeWidth="2"
-        className="text-slate-700 dark:text-slate-300"
+        className="text-slate-300"
         filter="url(#elephantShadow)"
       />
 
@@ -192,7 +192,7 @@ export default function PostgresElephant({
         fill="url(#elephantGradient)"
         stroke="currentColor"
         strokeWidth="2"
-        className="text-slate-700 dark:text-slate-300"
+        className="text-slate-300"
         filter="url(#elephantShadow)"
       />
 
@@ -202,7 +202,7 @@ export default function PostgresElephant({
         fill="url(#elephantGradient)"
         stroke="currentColor"
         strokeWidth="2"
-        className="text-slate-700 dark:text-slate-300"
+        className="text-slate-300"
         filter="url(#elephantShadow)"
       />
 
@@ -213,7 +213,7 @@ export default function PostgresElephant({
         rx="3"
         ry="4"
         fill="currentColor"
-        className="text-slate-600 dark:text-slate-300"
+        className="text-slate-300"
       />
 
       {/* Wrinkles/details on body for texture */}
@@ -222,7 +222,7 @@ export default function PostgresElephant({
         fill="none"
         stroke="currentColor"
         strokeWidth="1"
-        className="text-slate-500 dark:text-slate-500"
+        className="text-slate-500"
         opacity="0.4"
       />
       <path
@@ -230,7 +230,7 @@ export default function PostgresElephant({
         fill="none"
         stroke="currentColor"
         strokeWidth="1"
-        className="text-slate-500 dark:text-slate-500"
+        className="text-slate-500"
         opacity="0.4"
       />
       <path
@@ -238,7 +238,7 @@ export default function PostgresElephant({
         fill="none"
         stroke="currentColor"
         strokeWidth="1"
-        className="text-slate-500 dark:text-slate-500"
+        className="text-slate-500"
         opacity="0.4"
       />
 
@@ -251,7 +251,7 @@ export default function PostgresElephant({
         fill="none"
         stroke="currentColor"
         strokeWidth="1.5"
-        className="text-slate-600 dark:text-slate-300"
+        className="text-slate-300"
         opacity="0.5"
       />
     </svg>

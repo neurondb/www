@@ -300,7 +300,7 @@ export function BlogMarkdown({ children }: { children: string }) {
           color: #93c5fd;
         }
       `}} />
-      <article ref={articleRef} className="prose dark:prose-invert w-full py-8 overflow-hidden">
+      <article ref={articleRef} className="prose prose-invert w-full py-8 overflow-hidden">
         <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}

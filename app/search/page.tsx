@@ -86,19 +86,19 @@ export default function SearchPage() {
 
           {showEmptyState && (
             <div className="text-center py-12">
-              <FileText className="w-16 h-16 text-slate-300 dark:text-slate-600 mx-auto mb-4" />
-              <p className="text-slate-600 dark:text-slate-300 text-lg mb-2">
+              <FileText className="w-16 h-16 text-slate-600 mx-auto mb-4" />
+              <p className="text-slate-300 text-lg mb-2">
                 No results found for &quot;{debouncedQuery}&quot;
               </p>
-              <p className="text-slate-500 dark:text-slate-500 text-sm">
-                Try different keywords or browse our <Link href="/blog" className="text-yellow-600 dark:text-yellow-400 hover:underline">blog</Link> and <Link href="/docs" className="text-yellow-600 dark:text-yellow-400 hover:underline">documentation</Link>
+              <p className="text-slate-500 text-sm">
+                Try different keywords or browse our <Link href="/blog" className="text-yellow-400 hover:underline">blog</Link> and <Link href="/docs" className="text-yellow-400 hover:underline">documentation</Link>
               </p>
             </div>
           )}
 
           {hasResults && (
             <div>
-              <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-6">
+              <h2 className="text-2xl font-semibold text-white mb-6">
                 Blog Posts ({blogResults.length})
               </h2>
               <div className="space-y-4">
@@ -106,17 +106,17 @@ export default function SearchPage() {
                   <Link
                     key={post.slug}
                     href={`/blog/${post.slug}`}
-                    className="block p-6 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-yellow-500 dark:hover:border-yellow-400 hover:shadow-md transition-all"
+                    className="block p-6 rounded-lg border border-slate-700 bg-slate-800 hover:border-yellow-400 hover:shadow-md transition-all"
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+                        <h3 className="text-xl font-semibold text-white mb-2">
                           {post.title}
                         </h3>
-                        <p className="text-slate-600 dark:text-slate-300 mb-3 line-clamp-2">
+                        <p className="text-slate-300 mb-3 line-clamp-2">
                           {post.excerpt}
                         </p>
-                        <div className="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-500">
+                        <div className="flex items-center gap-4 text-sm text-slate-500">
                           <span>{new Date(post.date).toLocaleDateString()}</span>
                           <span>•</span>
                           <span>{post.readTime}</span>

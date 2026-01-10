@@ -55,7 +55,7 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
   return (
     <article className="group h-full">
       <Link href={`/blog/${post.slug}`} className="block h-full" aria-label={`Read ${post.title}`}>
-        <div className="bg-white dark:bg-slate-950 rounded-3xl shadow-lg border border-slate-200 dark:border-slate-900 overflow-hidden hover:shadow-xl dark:hover:shadow-2xl hover:border-slate-300 dark:hover:border-slate-800 transition-all duration-300 h-full flex flex-col">
+        <div className="bg-slate-950 rounded-3xl shadow-lg border border-slate-800 overflow-hidden hover:shadow-2xl hover:border-slate-700 transition-all duration-300 h-full flex flex-col">
           {/* Large Stock Image */}
           <div className={`relative w-full aspect-[3/2] overflow-hidden flex-shrink-0 border-b border-slate-900 flex items-center justify-center`} style={{ backgroundColor: '#030712' }}>
             <div className="absolute inset-0 bg-slate-950/80 z-0"></div>
@@ -81,14 +81,14 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
             </div>
           </div>
           {/* Content */}
-          <div className="p-7 flex flex-col flex-1 bg-white dark:bg-slate-950">
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors flex-shrink-0 leading-tight">
+          <div className="p-7 flex flex-col flex-1 bg-slate-950">
+            <h3 className="text-lg font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors flex-shrink-0 leading-tight">
               {post.title}
             </h3>
-            <p className="text-slate-600 dark:text-slate-300 mb-4 line-clamp-3 flex-1 text-sm leading-relaxed">
+            <p className="text-slate-300 mb-4 line-clamp-3 flex-1 text-sm leading-relaxed">
               {post.excerpt}
             </p>
-            <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mt-auto flex-shrink-0 font-thin">
+            <div className="flex items-center justify-between text-xs text-slate-400 mt-auto flex-shrink-0 font-thin">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-1">
                   <User className="w-4 h-4" />
@@ -99,7 +99,7 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
                   <span>{new Date(post.date).toLocaleDateString()}</span>
                 </div>
               </div>
-              <div className="flex items-center gap-1 text-yellow-600 dark:text-yellow-400 group-hover:gap-2 transition-all font-thin">
+              <div className="flex items-center gap-1 text-yellow-400 group-hover:gap-2 transition-all font-thin">
                 <span>Read more</span>
                 <ArrowRight className="w-4 h-4" />
               </div>
@@ -113,15 +113,15 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
 
 export default function BlogPage() {
   return (
-    <div className="pt-0">
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       {/* Unified Professional Hero */}
       <section
-        className="relative text-center overflow-hidden flex items-center h-[400px] pt-20 bg-gradient-to-b from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950"
+        className="relative text-center overflow-hidden flex items-center h-[400px] pt-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
       >
         <div className="container-extra-wide mx-auto relative z-10 w-full">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">Blog</h1>
-            <p className="text-lg md:text-xl font-normal text-slate-700 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Blog</h1>
+            <p className="text-lg md:text-xl font-normal text-slate-300 mb-6 max-w-2xl mx-auto">
               Tutorials and updates about NeuronDB
             </p>
 
@@ -132,8 +132,8 @@ export default function BlogPage() {
                   <div className="flex justify-center mb-2">
                     <stat.icon className={`w-8 h-8 ${stat.color}`} />
                   </div>
-                  <div className="text-3xl font-thin text-slate-900 dark:text-white">{stat.value}</div>
-                  <div className="text-sm text-slate-700 dark:text-slate-300">{stat.label}</div>
+                  <div className="text-3xl font-thin text-white">{stat.value}</div>
+                  <div className="text-sm text-slate-300">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -142,13 +142,13 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Articles */}
-      <div className="py-24 relative overflow-hidden bg-white dark:bg-slate-900">
+      <div className="py-24 relative overflow-hidden bg-slate-900">
         <div className="container-wide">
           <div className="max-w-7xl mx-auto">
             {/* Technical Blogs */}
             <div className="text-center mb-10">
-              <h2 className="text-4xl md:text-5xl font-thin text-slate-900 dark:text-white mb-2 tracking-tight">Technical Blogs</h2>
-              <p className="text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">Tutorials and technical notes.</p>
+              <h2 className="text-4xl md:text-5xl font-thin text-white mb-2 tracking-tight">Technical Blogs</h2>
+              <p className="text-lg text-slate-300 max-w-2xl mx-auto">Tutorials and technical notes.</p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12 mb-20">
               {blogPosts.filter(p => p.category === 'Technical').map((post, i) => (

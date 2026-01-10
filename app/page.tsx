@@ -61,8 +61,35 @@ export default function Home() {
       {/* Hero (Supabase-style split) */}
       <HomeHero />
 
+      {/* Feature Grid - SQL-first capabilities */}
+      <HomeFeatureGrid />
+
       {/* "Stay productive…" demo-style section with benchmarks */}
       <HomeDashboardDemo />
+
+      {/* Stats Section */}
+      <section className="bg-slate-950 border-y border-slate-800">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-white mb-1">473</div>
+              <div className="text-xs sm:text-sm text-slate-400">SQL Functions</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-white mb-1">52</div>
+              <div className="text-xs sm:text-sm text-slate-400">ML Algorithms</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-white mb-1">5</div>
+              <div className="text-xs sm:text-sm text-slate-400">Vector Types</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-white mb-1">4</div>
+              <div className="text-xs sm:text-sm text-slate-400">Background Workers</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Four products: NeuronDB, NeuronMCP, NeuronAgent, NeuronDesktop */}
       <HomeProducts />
@@ -70,26 +97,66 @@ export default function Home() {
       {/* NeuronDB internals: Vector, ML, RAG, Workers, etc. */}
       <HomeModules />
 
+      {/* Use Cases Section */}
+      <section className="bg-slate-900">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-3">
+              Use Cases
+            </h2>
+            <p className="text-sm text-slate-400">
+              Powering AI applications with PostgreSQL
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: 'Semantic Search', desc: 'Build semantic search engines with HNSW indexing and hybrid retrieval', href: '/docs/neurondb/features/vector-types' },
+              { title: 'RAG Applications', desc: 'Create RAG pipelines with document processing, reranking, and LLM integration', href: '/docs/neurondb/rag' },
+              { title: 'Recommendation Systems', desc: 'Build recommendation engines with collaborative filtering and ML algorithms', href: '/docs/neurondb/ml/recommendation-systems' },
+              { title: 'AI Agents', desc: 'Deploy autonomous agents with long-term memory and tool execution via NeuronAgent', href: '/docs/neuronagent' },
+              { title: 'Claude Desktop Integration', desc: 'Connect Claude Desktop to your database with 100+ MCP tools', href: '/docs/neuronmcp' },
+              { title: 'Unified Management', desc: 'Manage your entire NeuronDB ecosystem from a single dashboard', href: '/docs/neurondesktop' },
+            ].map((useCase, i) => (
+              <Link
+                key={i}
+                href={useCase.href}
+                className="group rounded-xl border border-slate-700 bg-slate-950/50 p-5 hover:border-slate-600 hover:bg-slate-900/50 transition-all"
+              >
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors">
+                  {useCase.title}
+                </h3>
+                <p className="text-sm text-slate-400 leading-relaxed">
+                  {useCase.desc}
+                </p>
+                <div className="mt-3 flex items-center gap-1 text-xs font-medium text-slate-300 group-hover:text-yellow-400 transition-colors">
+                  Learn more <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-slate-950">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-          <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-10 sm:p-16 text-center">
-            <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+          <div className="rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-8 sm:p-12 text-center">
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white">
               Build with SQL.
             </h2>
-            <p className="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">
+            <p className="mt-3 text-base text-slate-300 max-w-2xl mx-auto">
               CREATE EXTENSION. Scale to production with Helm charts.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
                 href="/docs/neurondb/getting-started"
-                className="inline-flex items-center gap-2 rounded-lg bg-white text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-100 transition-colors"
+                className="inline-flex items-center gap-2 rounded-lg bg-white text-slate-900 px-5 py-2.5 text-sm font-semibold hover:bg-slate-100 transition-colors"
               >
                 Build <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/docs"
-                className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-6 py-3 text-sm font-semibold text-white hover:bg-slate-800 transition-colors"
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 transition-colors"
               >
                 Documentation
               </Link>

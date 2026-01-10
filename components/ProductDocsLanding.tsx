@@ -78,11 +78,11 @@ const DEFAULT_THEME: LandingTheme = {
   pageBackground: '',
   heroOverlay: '',
   badgeContainerBg: 'bg-slate-800/80',
-  badgeRing: 'ring-gray-900/10 dark:ring-white/10',
+  badgeRing: 'ring-white/10',
   primaryButtonClass:
     'inline-flex items-center gap-2 rounded-xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-slate-800',
   secondaryButtonClass:
-    'inline-flex items-center gap-2 rounded-xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 dark:border-slate-600 dark:text-slate-200',
+    'inline-flex items-center gap-2 rounded-xl border border-slate-600 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-slate-500 hover:text-white',
   featureCardClass: 'rounded-2xl border border-slate-700/60 bg-slate-900/60 p-6 shadow-sm',
   featureIconClass: 'text-yellow-400',
   docCardClass: 'rounded-2xl border border-slate-700/60 bg-slate-900/60 p-6 shadow-sm',
@@ -156,7 +156,7 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
                   <>
                     <Icon className={`h-6 w-6 ${themeClasses.featureIconClass}`} />
                     <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
-                    <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">{description}</p>
+                    <p className="mt-2 text-sm text-slate-300">{description}</p>
                   </>
                 )
                 
@@ -215,7 +215,7 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
                             <span>{item.title}</span>
                             <ArrowRight className="h-3 w-3 opacity-0 transition group-hover:opacity-100" />
                           </Component>
-                          <p className="text-xs text-slate-600 dark:text-slate-300">{item.description}</p>
+                          <p className="text-xs text-slate-300">{item.description}</p>
                         </li>
                       )
                     })}
@@ -229,7 +229,7 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
 
       {/* Quick Links */}
       {quickLinks.length > 0 ? (
-        <section className="pb-24 bg-white dark:bg-slate-900">
+        <section className="pb-24 bg-slate-900">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-center text-2xl font-semibold text-white">Quick Links</h2>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -243,7 +243,7 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
                   <Component key={href} {...props} className={themeClasses.quickLinkCardClass}>
                     <Icon className={`h-6 w-6 ${themeClasses.quickLinkIconClass}`} />
                     <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
-                    <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">{description}</p>
+                    <p className="mt-2 text-sm text-slate-300">{description}</p>
                     <span
                       className={`mt-4 inline-flex items-center text-sm font-semibold ${themeClasses.quickLinkHoverLabelClass.replace('hover:', '')} ${themeClasses.quickLinkHoverLabelClass} transition-colors`}
                     >

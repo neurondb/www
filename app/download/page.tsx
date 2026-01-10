@@ -69,7 +69,7 @@ export default function DownloadPage() {
               <div className="grid md:grid-cols-2 gap-4 text-left">
                 <div className="p-4 bg-slate-900 rounded border border-slate-700">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-semibold rounded">STABLE</span>
+                    <span className="px-2 py-1 bg-green-900/30 text-green-300 text-xs font-semibold rounded">STABLE</span>
                     <span className="text-white font-semibold">Version 1.0.0</span>
                   </div>
                   <p className="text-sm text-slate-300 mb-3">Stable production release</p>
@@ -79,7 +79,7 @@ export default function DownloadPage() {
                 </div>
                 <div className="p-4 bg-slate-900 rounded border border-yellow-500/30">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 text-xs font-semibold rounded">LATEST</span>
+                    <span className="px-2 py-1 bg-yellow-900/30 text-yellow-300 text-xs font-semibold rounded">LATEST</span>
                     <span className="text-white font-semibold">Version 2.0.0</span>
                   </div>
                   <p className="text-sm text-slate-300 mb-3">Latest features and improvements</p>
@@ -93,9 +93,9 @@ export default function DownloadPage() {
 
           <div className="space-y-6 mb-12">
             {/* Docker Images */}
-            <div className="flex items-center justify-between p-6 bg-yellow-50 dark:bg-yellow-900/20 hover:bg-yellow-100 dark:hover:bg-yellow-900/30 rounded-lg border border-yellow-200 dark:border-yellow-500/30 transition-colors group">
+            <div className="flex items-center justify-between p-6 bg-yellow-900/20 hover:bg-yellow-900/30 rounded-lg border border-yellow-500/30 transition-colors group">
               <div className="flex items-center gap-4">
-                <Container className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
+                <Container className="w-6 h-6 text-yellow-400" />
                 <div>
                   <div className="text-white font-semibold text-lg">Docker Images</div>
                   <div className="text-sm text-slate-300">Pre-built images from GitHub Container Registry (GHCR)</div>
@@ -103,16 +103,16 @@ export default function DownloadPage() {
               </div>
               <Link
                 href="/docs/neurondb/getting-started/docker"
-                className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 font-medium text-sm transition-colors"
+                className="text-yellow-400 hover:text-yellow-300 font-medium text-sm transition-colors"
               >
                 View Guide →
               </Link>
             </div>
 
             {/* DEB Packages */}
-            <div className="flex items-center justify-between p-6 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors group">
+            <div className="flex items-center justify-between p-6 bg-slate-800 hover:bg-slate-700 rounded-lg border border-slate-700 transition-colors group">
               <div className="flex items-center gap-4">
-                <Package className="w-6 h-6 text-slate-700 dark:text-yellow-400" />
+                <Package className="w-6 h-6 text-yellow-400" />
                 <div>
                   <div className="text-white font-semibold text-lg">DEB Packages</div>
                   <div className="text-sm text-slate-300">Ubuntu/Debian packages (.deb)</div>
@@ -122,16 +122,16 @@ export default function DownloadPage() {
                 href={`${siteConfig.github}/releases`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 font-medium text-sm transition-colors"
+                className="text-yellow-400 hover:text-yellow-300 font-medium text-sm transition-colors"
               >
                 Download →
               </Link>
             </div>
 
             {/* RPM Packages */}
-            <div className="flex items-center justify-between p-6 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors group">
+            <div className="flex items-center justify-between p-6 bg-slate-800 hover:bg-slate-700 rounded-lg border border-slate-700 transition-colors group">
               <div className="flex items-center gap-4">
-                <Package className="w-6 h-6 text-slate-700 dark:text-yellow-400" />
+                <Package className="w-6 h-6 text-yellow-400" />
                 <div>
                   <div className="text-white font-semibold text-lg">RPM Packages</div>
                   <div className="text-sm text-slate-300">Rocky Linux/RHEL packages (.rpm)</div>
@@ -141,7 +141,7 @@ export default function DownloadPage() {
                 href={`${siteConfig.github}/releases`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 font-medium text-sm transition-colors"
+                className="text-yellow-400 hover:text-yellow-300 font-medium text-sm transition-colors"
               >
                 Download →
               </Link>
@@ -149,15 +149,15 @@ export default function DownloadPage() {
 
             {/* Source Code */}
             <div className="space-y-3">
-              <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-700">
+              <div className="p-4 bg-slate-800 rounded border border-slate-700">
                 <div className="text-sm text-white mb-3 font-medium">Source Code Downloads</div>
                 <div className="space-y-2">
                   <Link
                     href={`${siteConfig.github}/archive/refs/heads/main.tar.gz`}
-                    className="flex items-center justify-between p-4 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 rounded border border-slate-200 dark:border-slate-700 transition-colors group"
+                    className="flex items-center justify-between p-4 bg-slate-900 hover:bg-slate-800 rounded border border-slate-700 transition-colors group"
                   >
                     <div className="flex items-center gap-3">
-                      <Code className="w-5 h-5 text-yellow-600 dark:text-yellow-400" />
+                      <Code className="w-5 h-5 text-yellow-400" />
                       <div>
                         <div className="text-white font-medium">Version 2.0.0 (main branch)</div>
                         <div className="text-xs text-slate-400">Latest features and improvements</div>
@@ -217,9 +217,9 @@ export default function DownloadPage() {
 
           {/* Installation Methods Details */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-slate-50 dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700">
+            <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
               <div className="flex items-center gap-3 mb-3">
-                <Container className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
+                <Container className="w-6 h-6 text-yellow-400" />
                 <h3 className="text-lg font-semibold text-white">Docker Images</h3>
               </div>
               <p className="text-sm text-slate-300 mb-3">
@@ -232,15 +232,15 @@ export default function DownloadPage() {
               </ul>
               <Link
                 href="/docs/neurondb/getting-started/docker"
-                className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 text-sm font-medium"
+                className="text-yellow-400 hover:text-yellow-300 text-sm font-medium"
               >
                 Docker Guide →
               </Link>
             </div>
 
-            <div className="bg-slate-50 dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700">
+            <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
               <div className="flex items-center gap-3 mb-3">
-                <Package className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
+                <Package className="w-6 h-6 text-yellow-400" />
                 <h3 className="text-lg font-semibold text-white">DEB/RPM Packages</h3>
               </div>
               <p className="text-sm text-slate-300 mb-3">
@@ -255,15 +255,15 @@ export default function DownloadPage() {
                 href={`${siteConfig.github}/releases`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 text-sm font-medium"
+                className="text-yellow-400 hover:text-yellow-300 text-sm font-medium"
               >
                 View Releases →
               </Link>
             </div>
 
-            <div className="bg-slate-50 dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700">
+            <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
               <div className="flex items-center gap-3 mb-3">
-                <Code className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
+                <Code className="w-6 h-6 text-yellow-400" />
                 <h3 className="text-lg font-semibold text-white">Source Build</h3>
               </div>
               <p className="text-sm text-slate-300 mb-3">
@@ -276,14 +276,14 @@ export default function DownloadPage() {
               </ul>
               <Link
                 href="/docs/neurondb/installation"
-                className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 text-sm font-medium"
+                className="text-yellow-400 hover:text-yellow-300 text-sm font-medium"
               >
                 Build Guide →
               </Link>
             </div>
           </div>
 
-          <div className="bg-slate-50 dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700">
+          <div className="bg-slate-800 rounded-lg p-6 border border-slate-700">
             <h3 className="text-xl font-semibold tracking-tight text-white mb-4">System Requirements</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>

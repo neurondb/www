@@ -60,8 +60,8 @@ function NavSectionComponent({ section, pathname }: NavSectionComponentProps) {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          'w-full flex items-center gap-2 px-3 py-2 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md transition-colors',
-          hasActiveItem && 'bg-yellow-50 dark:bg-yellow-900/20 text-yellow-700 dark:text-yellow-400'
+          'w-full flex items-center gap-2 px-3 py-2 text-sm font-semibold text-slate-300 hover:bg-slate-800 rounded-md transition-colors',
+          hasActiveItem && 'bg-yellow-900/20 text-yellow-400'
         )}
       >
         {IconComponent && <IconComponent className="w-4 h-4" />}
@@ -73,7 +73,7 @@ function NavSectionComponent({ section, pathname }: NavSectionComponentProps) {
         )}
       </button>
       {isOpen && (
-        <div className="ml-4 mt-1 space-y-1 border-l border-slate-200 dark:border-slate-700 pl-3">
+        <div className="ml-4 mt-1 space-y-1 border-l border-slate-700 pl-3">
           {section.items.map((item) => (
             <NavItemComponent key={item.href} item={item} pathname={pathname} />
           ))}
@@ -98,14 +98,14 @@ function NavItemComponent({ item, pathname }: NavItemComponentProps) {
         className={cn(
           'block px-3 py-1.5 text-sm rounded-md transition-colors',
           isActive
-            ? 'text-yellow-600 dark:text-yellow-400 font-medium bg-yellow-50 dark:bg-yellow-900/20'
-            : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
+            ? 'text-yellow-400 font-medium bg-yellow-900/20'
+            : 'text-slate-300 hover:text-slate-200 hover:bg-slate-800'
         )}
       >
         {item.title}
       </Link>
       {item.items && item.items.length > 0 && (
-        <div className="ml-4 mt-1 space-y-1 border-l border-slate-200 dark:border-slate-700 pl-3">
+        <div className="ml-4 mt-1 space-y-1 border-l border-slate-700 pl-3">
           {item.items.map((subItem) => (
             <NavItemComponent key={subItem.href} item={subItem} pathname={pathname} />
           ))}
@@ -295,10 +295,10 @@ export default function DocsSidebar() {
   return (
     <aside className="hidden lg:block w-64 flex-shrink-0" aria-label="Documentation navigation">
       <div className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
-        <div className="bg-slate-50 dark:bg-slate-800/80 backdrop-blur-sm rounded-lg p-4 border border-slate-200 dark:border-slate-700 shadow-sm">
-          <div className="flex items-center gap-2 mb-4 pb-3 border-b border-slate-200 dark:border-slate-700">
-            <BookOpen className="w-4 h-4 text-yellow-600 dark:text-yellow-400" />
-            <h2 className="text-sm font-semibold text-slate-900 dark:text-white">
+        <div className="bg-slate-800/80 backdrop-blur-sm rounded-lg p-4 border border-slate-700 shadow-sm">
+          <div className="flex items-center gap-2 mb-4 pb-3 border-b border-slate-700">
+            <BookOpen className="w-4 h-4 text-yellow-400" />
+            <h2 className="text-sm font-semibold text-white">
               Documentation
             </h2>
           </div>

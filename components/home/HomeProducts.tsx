@@ -78,14 +78,17 @@ const products: Product[] = [
 export default function HomeProducts() {
   return (
     <section className="bg-slate-900">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-                <div className="max-w-3xl mx-auto text-center">
-                  <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+                <div className="max-w-3xl mx-auto text-center mb-10">
+                  <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white">
                     NeuronDB PostgreSQL AI Ecosystem
                   </h2>
+                  <p className="mt-3 text-sm text-slate-400">
+                    Complete AI stack for PostgreSQL
+                  </p>
                 </div>
 
-        <div className="mt-14 grid md:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {products.map((p) => {
             const Icon = p.icon
             return (
@@ -94,10 +97,10 @@ export default function HomeProducts() {
                 href={p.href}
                 className="group relative rounded-2xl border border-slate-700 bg-transparent overflow-hidden hover:shadow-xl card-smooth"
                       >
-                        {/* Large visual artwork - takes up most of the card */}
-                        <div className="h-48 bg-transparent flex items-center justify-center relative overflow-hidden">
-                          {/* Large artwork - centered and increased SVG size */}
-                          <div className="relative w-72 h-72 opacity-95 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500 ease-out flex items-center justify-center">
+                        {/* Compact visual artwork */}
+                        <div className="h-32 bg-transparent flex items-center justify-center relative overflow-hidden">
+                          {/* Smaller artwork for 4-column layout */}
+                          <div className="relative w-40 h-40 opacity-95 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500 ease-out flex items-center justify-center">
                             <ProductArt kind={p.art} />
                           </div>
                         </div>
@@ -114,12 +117,12 @@ export default function HomeProducts() {
                             </div>
                           </div>
 
-                          {/* Bullet points */}
-                          <ul className="mt-3 space-y-1.5">
-                            {p.bullets.map((bullet, i) => (
-                              <li key={i} className="flex items-start gap-2 text-xs text-slate-400">
-                                <span className="text-yellow-400 mt-0.5">•</span>
-                                <span>{bullet}</span>
+                          {/* Bullet points - show first 3 only */}
+                          <ul className="mt-2 space-y-1">
+                            {p.bullets.slice(0, 3).map((bullet, i) => (
+                              <li key={i} className="flex items-start gap-1.5 text-xs text-slate-400">
+                                <span className="text-yellow-400 mt-0.5 flex-shrink-0">•</span>
+                                <span className="line-clamp-1">{bullet}</span>
                               </li>
                             ))}
                           </ul>

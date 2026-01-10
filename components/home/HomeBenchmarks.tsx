@@ -48,12 +48,12 @@ function BenchmarkBar({
   return (
     <div className="group">
       <div className="flex items-center justify-between mb-1.5">
-        <span className="text-xs font-medium text-slate-700 dark:text-slate-200">{label}</span>
+        <span className="text-xs font-medium text-slate-200">{label}</span>
         <span className="text-xs font-mono font-semibold" style={{ color }}>
           {value.toLocaleString()}{unit}
         </span>
       </div>
-      <div className="relative h-8 bg-slate-100 dark:bg-slate-800 rounded-lg overflow-hidden">
+      <div className="relative h-8 bg-slate-800 rounded-lg overflow-hidden">
         <div
           className="absolute inset-y-0 left-0 rounded-lg transition-all duration-700 ease-out group-hover:brightness-110"
           style={{
@@ -82,16 +82,16 @@ function MetricCard({
   trend: string
 }) {
   return (
-    <div className="relative rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-6 overflow-hidden">
+    <div className="relative rounded-2xl border border-slate-800 bg-slate-950 p-6 overflow-hidden">
       <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 blur-3xl" />
       <div className="relative">
-        <div className="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-950 flex items-center justify-center mb-4">
-          <Icon className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+        <div className="w-10 h-10 rounded-xl bg-indigo-950 flex items-center justify-center mb-4">
+          <Icon className="w-5 h-5 text-indigo-400" />
         </div>
-        <div className="text-sm text-slate-600 dark:text-slate-300 mb-1">{title}</div>
-        <div className="text-3xl font-bold text-slate-900 dark:text-white mb-1">{value}</div>
-        <div className="text-xs text-slate-500 dark:text-slate-300">{subtitle}</div>
-        <div className="mt-3 inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-300 text-xs font-semibold">
+        <div className="text-sm text-slate-300 mb-1">{title}</div>
+        <div className="text-3xl font-bold text-white mb-1">{value}</div>
+        <div className="text-xs text-slate-300">{subtitle}</div>
+        <div className="mt-3 inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-950/30 text-emerald-300 text-xs font-semibold">
           <span>↗</span>
           <span>{trend}</span>
         </div>
@@ -106,18 +106,18 @@ export default function HomeBenchmarks() {
   const maxThroughput = Math.max(...benchmarks.map(b => b.throughput))
 
   return (
-    <section className="bg-slate-50 dark:bg-slate-950">
+    <section className="bg-slate-950">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 text-sm font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-950/30 border border-indigo-800 text-indigo-300 text-sm font-semibold mb-4">
             <Trophy className="w-4 h-4" />
             Performance Benchmarks
           </div>
-          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white">
             Faster than the competition
           </h2>
-          <p className="mt-3 text-lg text-slate-600 dark:text-slate-300">
+          <p className="mt-3 text-lg text-slate-300">
             NeuronDB outperforms leading vector databases across key metrics. Benchmarked on 1M vectors, 384 dimensions.
           </p>
         </div>
@@ -157,13 +157,13 @@ export default function HomeBenchmarks() {
         {/* Benchmark Charts */}
         <div className="grid lg:grid-cols-2 gap-8">
           {/* QPS Chart */}
-          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-8">
+          <div className="rounded-2xl border border-slate-800 bg-slate-950 p-8">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Queries per Second</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Higher is better</p>
+                <h3 className="text-lg font-semibold text-white">Queries per Second</h3>
+                <p className="text-sm text-slate-300">Higher is better</p>
               </div>
-              <div className="px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 text-xs font-mono text-slate-600 dark:text-slate-300">
+              <div className="px-3 py-1 rounded-lg bg-slate-900 text-xs font-mono text-slate-300">
                 1M vectors
               </div>
             </div>
@@ -182,13 +182,13 @@ export default function HomeBenchmarks() {
           </div>
 
           {/* Latency Chart */}
-          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-8">
+          <div className="rounded-2xl border border-slate-800 bg-slate-950 p-8">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Query Latency (p95)</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Lower is better</p>
+                <h3 className="text-lg font-semibold text-white">Query Latency (p95)</h3>
+                <p className="text-sm text-slate-300">Lower is better</p>
               </div>
-              <div className="px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 text-xs font-mono text-slate-600 dark:text-slate-300">
+              <div className="px-3 py-1 rounded-lg bg-slate-900 text-xs font-mono text-slate-300">
                 milliseconds
               </div>
             </div>
@@ -208,13 +208,13 @@ export default function HomeBenchmarks() {
           </div>
 
           {/* Recall Chart */}
-          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-8">
+          <div className="rounded-2xl border border-slate-800 bg-slate-950 p-8">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Recall @k=10</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Accuracy of results</p>
+                <h3 className="text-lg font-semibold text-white">Recall @k=10</h3>
+                <p className="text-sm text-slate-300">Accuracy of results</p>
               </div>
-              <div className="px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 text-xs font-mono text-slate-600 dark:text-slate-300">
+              <div className="px-3 py-1 rounded-lg bg-slate-900 text-xs font-mono text-slate-300">
                 percentage
               </div>
             </div>
@@ -233,13 +233,13 @@ export default function HomeBenchmarks() {
           </div>
 
           {/* Throughput Chart */}
-          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-8">
+          <div className="rounded-2xl border border-slate-800 bg-slate-950 p-8">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Bulk Insert Throughput</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300">Data ingestion speed</p>
+                <h3 className="text-lg font-semibold text-white">Bulk Insert Throughput</h3>
+                <p className="text-sm text-slate-300">Data ingestion speed</p>
               </div>
-              <div className="px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 text-xs font-mono text-slate-600 dark:text-slate-300">
+              <div className="px-3 py-1 rounded-lg bg-slate-900 text-xs font-mono text-slate-300">
                 MB/s
               </div>
             </div>
@@ -260,9 +260,9 @@ export default function HomeBenchmarks() {
 
         {/* Footer Note */}
         <div className="mt-8 text-center">
-          <p className="text-sm text-slate-500 dark:text-slate-300">
+          <p className="text-sm text-slate-300">
             Benchmarks run on AWS r6i.2xlarge (8 vCPU, 64GB RAM) with NVIDIA T4 GPU. Dataset: 1M vectors, 384 dimensions (SBERT embeddings).{' '}
-            <a href="/docs/neurondb/performance" className="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold">
+            <a href="/docs/neurondb/performance" className="text-indigo-400 hover:underline font-semibold">
               View methodology →
             </a>
           </p>

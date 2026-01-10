@@ -3,29 +3,29 @@
 @tailwind utilities;
 
 :root {
-  /* Core colors */
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --background-dark: #f8fafc;
-  --background-darker: #f1f5f9;
+  /* Core colors - Dark theme by default */
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --background-dark: #1e293b;
+  --background-darker: #0a0f1a;
   
-  /* Accent colors - professional indigo for light mode */
-  --primary: #4f46e5;
-  --primary-hover: #4338ca;
-  --secondary: #64748b;
+  /* Accent colors - professional yellow for dark mode */
+  --primary: #fbbf24;
+  --primary-hover: #fcd34d;
+  --secondary: #94a3b8;
   
   /* Border colors */
-  --border: #e2e8f0;
-  --border-hover: #cbd5e1;
+  --border: #1e293b;
+  --border-hover: #334155;
   
   /* Text colors */
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-tertiary: #64748b;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
   
   /* Code colors */
-  --code-bg: #f1f5f9;
-  --code-text: #4f46e5;
+  --code-bg: #1e293b;
+  --code-text: #fbbf24;
   
   /* Professional spacing scale */
   --spacing-xs: 0.25rem;

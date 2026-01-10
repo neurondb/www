@@ -7,11 +7,11 @@ import PostgresElephant from '@/components/home/PostgresElephant'
 
 export default function HomeHero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 min-h-[480px] md:min-h-[500px] flex items-center pt-20">
+    <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 min-h-[420px] md:min-h-[450px] flex items-center pt-16 pb-12">
       {/* Subtle clean background */}
       <div className="absolute inset-0 neuron-tech-bg"></div>
       <div className="relative z-10 w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
           {/* Left: copy */}
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/70 px-3 py-1 text-xs text-slate-300">
@@ -59,7 +59,7 @@ export default function HomeHero() {
             </div>
 
             {/* Quickstart snippet */}
-            <div className="mt-8 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-950 text-slate-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.01] animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <div className="mt-8 rounded-xl border border-slate-800 bg-slate-950 text-slate-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.01] animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
               <div className="flex items-center justify-between px-4 py-2 border-b border-slate-800">
                 <div className="text-xs font-mono text-slate-300">psql</div>
                 <div className="text-xs text-slate-400">Quickstart</div>

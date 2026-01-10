@@ -15,7 +15,7 @@ const tiles: Tile[] = [
     title: 'Vector search',
     description: 'HNSW and IVF indexing with multiple distance metrics. Compatible with pgvector.',
     icon: Layers,
-    href: '/docs/vector-engine',
+    href: '/docs/neurondb/vector-engine',
     meta: 'index + query',
     code: "SELECT * FROM vector_search('embeddings', q, 10);",
   },
@@ -23,7 +23,7 @@ const tiles: Tile[] = [
     title: 'ML inference',
     description: 'In-database inference and classical ML algorithms as SQL functions.',
     icon: Cpu,
-    href: '/docs/ml',
+    href: '/docs/neurondb/ml',
     meta: 'predict() in SQL',
     code: "SELECT neurondb.ml.predict('model', features);",
   },
@@ -31,7 +31,7 @@ const tiles: Tile[] = [
     title: 'RAG pipeline',
     description: 'Chunking, retrieval, reranking, and answer assembly as database steps.',
     icon: Zap,
-    href: '/docs/rag',
+    href: '/docs/neurondb/rag',
     meta: 'retrieve + rerank',
     code: "SELECT neurondb.rag.query('docs', q, top_k => 5);",
   },
@@ -39,7 +39,7 @@ const tiles: Tile[] = [
     title: 'PostgreSQL-native',
     description: 'Runs in-process as an extension. No sidecars required.',
     icon: Database,
-    href: '/docs',
+    href: '/docs/neurondb',
     meta: 'in-process',
     code: 'CREATE EXTENSION neurondb;',
   },
@@ -47,7 +47,7 @@ const tiles: Tile[] = [
     title: 'Agent runtime',
     description: 'Tool execution and workflows via NeuronAgent for database AI apps.',
     icon: Network,
-    href: '/neuronagent',
+    href: '/docs/neuronagent',
     meta: 'tools + workflows',
     code: 'pip install neuronagent',
   },
@@ -55,7 +55,7 @@ const tiles: Tile[] = [
     title: 'MCP tools',
     description: 'Model Context Protocol server for tool access from Claude Desktop and other clients.',
     icon: Layers,
-    href: '/neuronmcp',
+    href: '/docs/neuronmcp',
     meta: '100+ tools',
     code: 'npx @neurondb/neuronmcp',
   },
@@ -64,7 +64,7 @@ const tiles: Tile[] = [
 export default function HomeFeatureGrid() {
   return (
     <section className="bg-slate-900">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex items-end justify-between gap-6 mb-8">
           <div>
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white">

@@ -24,7 +24,7 @@ const modules: ModuleCard[] = [
     bullets: ['HNSW + IVF indexes', '10+ distance metrics', 'GPU batch acceleration', 'pgvector compatible', 'Async index builds'],
     codeLabel: 'SQL',
     code: "SELECT * FROM vector_search('embeddings', q, 10);",
-    href: '/docs/vector-engine',
+    href: '/docs/neurondb/vector-engine',
     icon: Layers,
   },
   {
@@ -36,7 +36,7 @@ const modules: ModuleCard[] = [
     bullets: ['52+ algorithms', 'Model management', 'Feature store', 'Train in SQL', 'GPU inference'],
     codeLabel: 'SQL',
     code: "SELECT neurondb.ml.predict('model', features);",
-    href: '/docs/ml',
+    href: '/docs/neurondb/ml',
     icon: Cpu,
   },
   {
@@ -48,7 +48,7 @@ const modules: ModuleCard[] = [
     bullets: ['Chunk + embed', 'Hybrid retrieval', 'Reranking', 'LLM integration', 'Context assembly'],
     codeLabel: 'SQL',
     code: "SELECT neurondb.rag.query('docs', q, top_k => 5);",
-    href: '/docs/rag',
+    href: '/docs/neurondb/rag',
     icon: Zap,
   },
   {
@@ -60,7 +60,7 @@ const modules: ModuleCard[] = [
     bullets: ['4 workers', 'Queue + scheduler', 'Metrics hooks', 'Async indexing', 'Auto-scaling'],
     codeLabel: 'Docs',
     code: 'docs/background-workers',
-    href: '/docs/background-workers',
+    href: '/docs/neurondb/background-workers',
     icon: GitBranch,
   },
   {
@@ -72,7 +72,7 @@ const modules: ModuleCard[] = [
     bullets: ['StatefulSets', 'HPA + PDB', 'Prometheus + Grafana', 'Jaeger tracing', 'Auto-backup'],
     codeLabel: 'Helm',
     code: 'helm install neurondb',
-    href: '/docs/deployment/kubernetes',
+    href: '/docs/neurondb/deployment/kubernetes',
     icon: Cloud,
   },
   {
@@ -92,17 +92,17 @@ const modules: ModuleCard[] = [
 export default function HomeModules() {
   return (
     <section className="bg-slate-900">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white">
             Inside NeuronDB
           </h2>
-          <p className="mt-3 text-lg text-slate-300">
+          <p className="mt-2 text-sm text-slate-400">
             Engines, pipelines, and deployment tools
           </p>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {modules.map((m) => {
             const Icon = m.icon
             return (
@@ -111,28 +111,28 @@ export default function HomeModules() {
                 href={m.href}
                 className="group relative rounded-2xl border border-slate-700 bg-transparent overflow-hidden hover:shadow-xl card-smooth"
               >
-                {/* Large visual artwork - takes up most of the card */}
-                <div className="h-64 bg-transparent flex items-center justify-center relative overflow-hidden">
-                  {/* Large artwork */}
-                  <div className="relative w-56 h-56 opacity-95 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500 ease-out">
+                {/* Compact visual artwork */}
+                <div className="h-40 bg-transparent flex items-center justify-center relative overflow-hidden">
+                  {/* Smaller artwork for tighter layout */}
+                  <div className="relative w-44 h-44 opacity-95 group-hover:scale-110 group-hover:rotate-2 transition-all duration-500 ease-out">
                     <ModuleArt kind={m.art} />
                   </div>
                 </div>
 
-                {/* Minimal text content */}
-                <div className="p-6 bg-transparent">
+                {/* Compact text content */}
+                <div className="p-5 bg-transparent">
                   <div className="flex items-center gap-2 mb-2">
                     <Icon className="w-5 h-5 text-slate-200" />
                     <h3 className="text-xl font-semibold text-white">{m.title}</h3>
                   </div>
                   <p className="text-sm text-slate-400 mb-4">{m.kicker}</p>
 
-                  {/* Bullets list */}
-                  <ul className="space-y-2 mb-4">
-                    {m.bullets.slice(0, 5).map((bullet, idx) => (
-                      <li key={idx} className="text-sm text-slate-400 flex items-start gap-2">
-                        <span className="text-slate-500 mt-1">•</span>
-                        <span>{bullet}</span>
+                  {/* Bullets list - show first 4 */}
+                  <ul className="space-y-1.5 mb-3">
+                    {m.bullets.slice(0, 4).map((bullet, idx) => (
+                      <li key={idx} className="text-xs text-slate-400 flex items-start gap-1.5">
+                        <span className="text-slate-500 mt-0.5 flex-shrink-0">•</span>
+                        <span className="line-clamp-1">{bullet}</span>
                       </li>
                     ))}
                   </ul>

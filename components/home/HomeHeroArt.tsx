@@ -10,7 +10,7 @@ export default function HomeHeroArt() {
   return (
     <div className="relative w-full">
       {/* Background with gradient */}
-      <div className="relative bg-gradient-to-br from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 overflow-hidden shadow-lg">
+      <div className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 rounded-2xl border border-slate-800 p-6 sm:p-8 overflow-hidden shadow-lg">
         {/* Hero artwork image */}
         <div className="relative w-full h-auto">
           <Image

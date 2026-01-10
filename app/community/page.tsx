@@ -16,7 +16,7 @@ export default function CommunityPage() {
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-4">
               Community
             </h1>
-            <p className="text-lg md:text-xl font-normal text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl font-normal text-slate-300 mb-6 max-w-2xl mx-auto">
               Developers, users, and contributors
             </p>
           </div>
@@ -28,7 +28,7 @@ export default function CommunityPage() {
           <div className="space-y-12">
             <div>
               <h2 className="text-2xl font-semibold text-white mb-4">GitHub</h2>
-              <p className="text-slate-600 dark:text-slate-300 mb-4">
+              <p className="text-slate-300 mb-4">
                 Contribute to NeuronDB. Report issues and request features.
               </p>
               <Link
@@ -44,7 +44,7 @@ export default function CommunityPage() {
 
             <div>
               <h2 className="text-2xl font-semibold text-white mb-4">Documentation</h2>
-              <p className="text-slate-600 dark:text-slate-300 mb-4">
+              <p className="text-slate-300 mb-4">
                 Documentation and guides
               </p>
               <Link
@@ -58,7 +58,7 @@ export default function CommunityPage() {
 
             <div>
               <h2 className="text-2xl font-semibold text-white mb-4">Blog</h2>
-              <p className="text-slate-600 dark:text-slate-300 mb-4">
+              <p className="text-slate-300 mb-4">
                 Updates, tutorials, and technical insights
               </p>
               <Link
@@ -71,8 +71,8 @@ export default function CommunityPage() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">Contact</h2>
-              <p className="text-slate-600 dark:text-slate-300 mb-4">
+              <h2 className="text-2xl font-semibold text-white mb-4">Contact</h2>
+              <p className="text-slate-300 mb-4">
                 Contact the team for support and questions
               </p>
               <Link

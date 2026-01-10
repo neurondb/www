@@ -72,20 +72,20 @@ export function FeatureCard({
           {iconElement}
         </div>
       )}
-      <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4 transition-colors duration-300 group-hover:text-white dark:group-hover:text-yellow-400">
+      <h3 className="text-xl font-semibold text-white mb-4 transition-colors duration-300 group-hover:text-yellow-400">
         {title}
       </h3>
       {Array.isArray(description) ? (
-        <ul className="space-y-2.5 text-slate-700 dark:text-white">
+        <ul className="space-y-2.5 text-white">
           {description.map((item, idx) => (
             <li key={idx} className="flex items-start leading-relaxed text-sm md:text-base">
-              <span className="text-cyan-500 dark:text-cyan-400 mr-3 mt-1.5 flex-shrink-0 font-bold">•</span>
+              <span className="text-cyan-400 mr-3 mt-1.5 flex-shrink-0 font-bold">•</span>
               <span className="flex-1">{item}</span>
             </li>
           ))}
         </ul>
       ) : (
-        <p className="text-slate-700 dark:text-white leading-relaxed text-sm md:text-base">
+        <p className="text-white leading-relaxed text-sm md:text-base">
           {description}
         </p>
       )}
@@ -160,15 +160,15 @@ export function DocCard({
   const content = (
     <>
       {iconElement && (
-        <div className="mb-3 text-primary-600 dark:text-primary-400">
+        <div className="mb-3 text-primary-400">
           {iconElement}
         </div>
       )}
-      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+      <h3 className="text-lg font-semibold text-white mb-2">
         {title}
       </h3>
       {description && (
-        <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+        <p className="text-slate-300 text-sm leading-relaxed">
           {description}
         </p>
       )}
@@ -244,7 +244,7 @@ export function QuickLinkCard({
           {iconElement}
         </div>
       )}
-      <h3 className={cn('text-lg font-semibold mb-2 group-hover:', hoverLabelClasses, 'text-slate-900 dark:text-white')}>
+      <h3 className={cn('text-lg font-semibold mb-2 group-hover:', hoverLabelClasses, 'text-white')}>
         {title}
       </h3>
       <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
@@ -309,7 +309,7 @@ export function Card({
       ? getProductTheme(productId).quickLinkCardClass
       : getCardClasses('quickLink', hover)
   } else {
-    baseClasses = 'rounded-2xl border border-slate-200 bg-white/90 dark:border-slate-700/60 dark:bg-slate-900/60 p-6 shadow-sm'
+    baseClasses = 'rounded-2xl border border-slate-700/60 bg-slate-900/60 p-6 shadow-sm'
   }
   
   const classes = cn(
