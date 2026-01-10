@@ -82,7 +82,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/docs/getting-started"
+                href="/docs/neurondb/getting-started"
                 className="inline-flex items-center gap-2 rounded-lg bg-white text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-100 transition-colors"
               >
                 Build <ArrowRight className="w-4 h-4" />

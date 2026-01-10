@@ -76,7 +76,7 @@ export function FeatureCard({
         {title}
       </h3>
       {Array.isArray(description) ? (
-        <ul className="space-y-2.5 text-slate-700 dark:text-slate-300">
+        <ul className="space-y-2.5 text-slate-700 dark:text-white">
           {description.map((item, idx) => (
             <li key={idx} className="flex items-start leading-relaxed text-sm md:text-base">
               <span className="text-cyan-500 dark:text-cyan-400 mr-3 mt-1.5 flex-shrink-0 font-bold">•</span>
@@ -85,7 +85,7 @@ export function FeatureCard({
           ))}
         </ul>
       ) : (
-        <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-sm md:text-base">
+        <p className="text-slate-700 dark:text-white leading-relaxed text-sm md:text-base">
           {description}
         </p>
       )}

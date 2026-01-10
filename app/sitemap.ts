@@ -21,12 +21,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.95,
     },
     {
-      url: `${baseUrl}/docs`,
-      lastModified: currentDate,
-      changeFrequency: 'daily',
-      priority: 0.95,
-    },
-    {
       url: `${baseUrl}/demos`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
@@ -263,42 +257,73 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]
 
   // Documentation main pages (product pages are in productPages, not here)
-  const docsMainPages: MetadataRoute.Sitemap = []
-
-  // Getting Started - High priority for new users
-  const gettingStartedPages: MetadataRoute.Sitemap = [
+  const docsMainPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/docs/getting-started`,
+      url: `${baseUrl}/docs`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/docs/neurondb`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/docs/neuronagent`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/docs/getting-started/docker`,
+      url: `${baseUrl}/docs/neuronmcp`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/docs/neurondesktop`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+  ]
+
+  // Getting Started - High priority for new users
+  const gettingStartedPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/docs/neurondb/getting-started`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/docs/neurondb/getting-started/docker`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.95, // High priority - recommended method
     },
     {
-      url: `${baseUrl}/docs/getting-started/quickstart`,
+      url: `${baseUrl}/docs/neurondb/getting-started/quickstart`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/docs/getting-started/simple-start`,
+      url: `${baseUrl}/docs/neurondb/getting-started/simple-start`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/docs/installation`,
+      url: `${baseUrl}/docs/neurondb/installation`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/docs/configuration`,
+      url: `${baseUrl}/docs/neurondb/configuration`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -308,19 +333,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Deployment & Operations - Cloud-native deployment options
   const deploymentPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/docs/deployment/kubernetes`,
+      url: `${baseUrl}/docs/neurondb/deployment/kubernetes`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/docs/deployment/observability`,
+      url: `${baseUrl}/docs/neurondb/deployment/observability`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/docs/deployment/scripts`,
+      url: `${baseUrl}/docs/neurondb/deployment/scripts`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -330,43 +355,43 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Core Features - Vector Search & Indexing
   const coreFeaturePages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/docs/vector-engine`,
+      url: `${baseUrl}/docs/neurondb/vector-engine`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/docs/embedding-engine`,
+      url: `${baseUrl}/docs/neurondb/embedding-engine`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/docs/features`,
+      url: `${baseUrl}/docs/neurondb/features`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/docs/features/vector-types`,
+      url: `${baseUrl}/docs/neurondb/features/vector-types`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.75,
     },
     {
-      url: `${baseUrl}/docs/features/distance-metrics`,
+      url: `${baseUrl}/docs/neurondb/features/distance-metrics`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.75,
     },
     {
-      url: `${baseUrl}/docs/features/quantization`,
+      url: `${baseUrl}/docs/neurondb/features/quantization`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.75,
     },
     {
-      url: `${baseUrl}/docs/indexing`,
+      url: `${baseUrl}/docs/neurondb/indexing`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -376,157 +401,157 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // ML & Embeddings - Core AI features
   const mlPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/docs/ml`,
+      url: `${baseUrl}/docs/neurondb/ml`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9, // Increased priority - 52 ML algorithms
     },
     {
-      url: `${baseUrl}/docs/ml-engine`,
+      url: `${baseUrl}/docs/neurondb/ml-engine`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/docs/embedding-engine`,
+      url: `${baseUrl}/docs/neurondb/embedding-engine`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/docs/ml/embeddings`,
+      url: `${baseUrl}/docs/neurondb/ml/embeddings`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/docs/ml/embedding-generation`,
+      url: `${baseUrl}/docs/neurondb/ml/embedding-generation`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/docs/ml/inference`,
+      url: `${baseUrl}/docs/neurondb/ml/inference`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/docs/ml/model-management`,
+      url: `${baseUrl}/docs/neurondb/ml/model-management`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/docs/ml/regression`,
+      url: `${baseUrl}/docs/neurondb/ml/regression`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.65,
     },
     {
-      url: `${baseUrl}/docs/ml/classification`,
+      url: `${baseUrl}/docs/neurondb/ml/classification`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.65,
     },
     {
-      url: `${baseUrl}/docs/ml/clustering`,
+      url: `${baseUrl}/docs/neurondb/ml/clustering`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.65,
     },
     {
-      url: `${baseUrl}/docs/ml/random-forest`,
+      url: `${baseUrl}/docs/neurondb/ml/random-forest`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.65,
     },
     {
-      url: `${baseUrl}/docs/ml/svm`,
+      url: `${baseUrl}/docs/neurondb/ml/svm`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.65,
     },
     {
-      url: `${baseUrl}/docs/ml/gradient-boosting`,
+      url: `${baseUrl}/docs/neurondb/ml/gradient-boosting`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.65,
     },
     {
-      url: `${baseUrl}/docs/ml/dimensionality-reduction`,
+      url: `${baseUrl}/docs/neurondb/ml/dimensionality-reduction`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.65,
     },
     {
-      url: `${baseUrl}/docs/ml/outlier-detection`,
+      url: `${baseUrl}/docs/neurondb/ml/outlier-detection`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.65,
     },
     {
-      url: `${baseUrl}/docs/ml/quality-metrics`,
+      url: `${baseUrl}/docs/neurondb/ml/quality-metrics`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.65,
     },
     {
-      url: `${baseUrl}/docs/ml/drift-detection`,
+      url: `${baseUrl}/docs/neurondb/ml/drift-detection`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.65,
     },
     {
-      url: `${baseUrl}/docs/ml/topic-discovery`,
+      url: `${baseUrl}/docs/neurondb/ml/topic-discovery`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.65,
     },
     {
-      url: `${baseUrl}/docs/ml/time-series`,
+      url: `${baseUrl}/docs/neurondb/ml/time-series`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.65,
     },
     {
-      url: `${baseUrl}/docs/ml/recommendation-systems`,
+      url: `${baseUrl}/docs/neurondb/ml/recommendation-systems`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.65,
     },
     {
-      url: `${baseUrl}/docs/ml/hyperparameter-tuning`,
+      url: `${baseUrl}/docs/neurondb/ml/hyperparameter-tuning`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/docs/ml/text-ml`,
+      url: `${baseUrl}/docs/neurondb/ml/text-ml`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.65,
     },
     {
-      url: `${baseUrl}/docs/ml/feature-store`,
+      url: `${baseUrl}/docs/neurondb/ml/feature-store`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/docs/ml/gpu`,
+      url: `${baseUrl}/docs/neurondb/ml/gpu`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.75,
     },
     {
-      url: `${baseUrl}/docs/ml/unified-api`,
+      url: `${baseUrl}/docs/neurondb/ml/unified-api`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.75,
     },
     {
-      url: `${baseUrl}/docs/ml/rag`,
+      url: `${baseUrl}/docs/neurondb/ml/rag`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.75,
@@ -536,31 +561,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Hybrid Search & Reranking
   const hybridPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/docs/hybrid`,
+      url: `${baseUrl}/docs/neurondb/hybrid`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/docs/hybrid/overview`,
+      url: `${baseUrl}/docs/neurondb/hybrid/overview`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/docs/hybrid/multi-vector`,
+      url: `${baseUrl}/docs/neurondb/hybrid/multi-vector`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/docs/hybrid/faceted-search`,
+      url: `${baseUrl}/docs/neurondb/hybrid/faceted-search`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/docs/hybrid/temporal-search`,
+      url: `${baseUrl}/docs/neurondb/hybrid/temporal-search`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -570,31 +595,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Reranking
   const rerankingPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/docs/reranking/overview`,
+      url: `${baseUrl}/docs/neurondb/reranking/overview`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/docs/reranking/cross-encoder`,
+      url: `${baseUrl}/docs/neurondb/reranking/cross-encoder`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/docs/reranking/llm-reranking`,
+      url: `${baseUrl}/docs/neurondb/reranking/llm-reranking`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/docs/reranking/colbert`,
+      url: `${baseUrl}/docs/neurondb/reranking/colbert`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/docs/reranking/ensemble`,
+      url: `${baseUrl}/docs/neurondb/reranking/ensemble`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -604,19 +629,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // RAG Pipeline - High priority feature
   const ragPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/docs/rag`,
+      url: `${baseUrl}/docs/neurondb/rag`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/docs/rag/document-processing`,
+      url: `${baseUrl}/docs/neurondb/rag/document-processing`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/docs/rag/llm-integration`,
+      url: `${baseUrl}/docs/neurondb/rag/llm-integration`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -626,31 +651,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // GPU Support - High priority feature
   const gpuPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/docs/gpu`,
+      url: `${baseUrl}/docs/neurondb/gpu`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/docs/gpu/auto-detection`,
+      url: `${baseUrl}/docs/neurondb/gpu/auto-detection`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.75,
     },
     {
-      url: `${baseUrl}/docs/gpu/cuda-support`,
+      url: `${baseUrl}/docs/neurondb/gpu/cuda-support`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.75,
     },
     {
-      url: `${baseUrl}/docs/gpu/rocm-support`,
+      url: `${baseUrl}/docs/neurondb/gpu/rocm-support`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.75,
     },
     {
-      url: `${baseUrl}/docs/gpu/metal-support`,
+      url: `${baseUrl}/docs/neurondb/gpu/metal-support`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.75,
@@ -660,31 +685,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Background Workers
   const workerPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/docs/background-workers`,
+      url: `${baseUrl}/docs/neurondb/background-workers`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.75,
     },
     {
-      url: `${baseUrl}/docs/background-workers/neuranq`,
+      url: `${baseUrl}/docs/neurondb/background-workers/neuranq`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/docs/background-workers/neuranmon`,
+      url: `${baseUrl}/docs/neurondb/background-workers/neuranmon`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/docs/background-workers/neurandefrag`,
+      url: `${baseUrl}/docs/neurondb/background-workers/neurandefrag`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/docs/background-workers/neuranllm`,
+      url: `${baseUrl}/docs/neurondb/background-workers/neuranllm`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -694,25 +719,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Performance & Analytics
   const performancePages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/docs/performance`,
+      url: `${baseUrl}/docs/neurondb/performance`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/docs/performance/monitoring`,
+      url: `${baseUrl}/docs/neurondb/performance/monitoring`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.75,
     },
     {
-      url: `${baseUrl}/docs/performance/simd-optimization`,
+      url: `${baseUrl}/docs/neurondb/performance/simd-optimization`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/docs/analytics`,
+      url: `${baseUrl}/docs/neurondb/analytics`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.75,
@@ -722,31 +747,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Additional Features & Support
   const additionalPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/docs/security`,
+      url: `${baseUrl}/docs/neurondb/security`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.75,
     },
     {
-      url: `${baseUrl}/docs/sql-api`,
+      url: `${baseUrl}/docs/neurondb/sql-api`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/docs/advanced-features`,
+      url: `${baseUrl}/docs/neurondb/advanced-features`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.75,
     },
     {
-      url: `${baseUrl}/docs/troubleshooting`,
+      url: `${baseUrl}/docs/neurondb/troubleshooting`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/docs/hybrid`,
+      url: `${baseUrl}/docs/neurondb/hybrid`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,

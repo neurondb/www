@@ -102,7 +102,7 @@ export default function DownloadPage() {
                 </div>
               </div>
               <Link
-                href="/docs/getting-started/docker"
+                href="/docs/neurondb/getting-started/docker"
                 className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 font-medium text-sm transition-colors"
               >
                 View Guide →
@@ -184,7 +184,7 @@ export default function DownloadPage() {
 
             {/* Installation Guide */}
             <Link
-              href="/docs/getting-started"
+              href="/docs/neurondb/getting-started"
               className="flex items-center justify-between p-6 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors group"
             >
               <div className="flex items-center gap-4">
@@ -231,7 +231,7 @@ export default function DownloadPage() {
                 <li>• Complete ecosystem included</li>
               </ul>
               <Link
-                href="/docs/getting-started/docker"
+                href="/docs/neurondb/getting-started/docker"
                 className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 text-sm font-medium"
               >
                 Docker Guide →
@@ -275,7 +275,7 @@ export default function DownloadPage() {
                 <li>• Development setup</li>
               </ul>
               <Link
-                href="/docs/installation"
+                href="/docs/neurondb/installation"
                 className="text-slate-900 dark:text-yellow-400 hover:text-slate-700 dark:hover:text-yellow-300 text-sm font-medium"
               >
                 Build Guide →

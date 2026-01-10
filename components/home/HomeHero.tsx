@@ -35,7 +35,7 @@ export default function HomeHero() {
 
             <div className="mt-7 flex flex-col sm:flex-row gap-3 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <Link
-                href="/docs/getting-started"
+                href="/docs/neurondb/getting-started"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-white text-slate-900 px-5 py-3 text-sm font-semibold hover:bg-slate-100 transition-all duration-300 hover:scale-105 hover:shadow-lg group"
               >
                 Start

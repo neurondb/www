@@ -109,8 +109,8 @@ const Header = () => {
           <div className="hidden md:flex items-center justify-end gap-3">
             <DarkModeToggle />
             <Link 
-              href="/docs/getting-started"
-              onClick={() => handleCTAClick('install', '/docs/getting-started')}
+              href="/docs/neurondb/getting-started"
+              onClick={() => handleCTAClick('install', '/docs/neurondb/getting-started')}
               className="group btn-professional px-5 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-2 transition-all duration-200 hover:scale-105 active:scale-95"
               style={{
                 backgroundColor: 'var(--primary)',
@@ -201,7 +201,7 @@ const Header = () => {
                   <DarkModeToggle />
                 </div>
                 <Link
-                  href="/docs/getting-started"
+                  href="/docs/neurondb/getting-started"
                   onClick={() => {
                     handleCTAClick('install', '/docs/getting-started')
                     setIsMenuOpen(false)

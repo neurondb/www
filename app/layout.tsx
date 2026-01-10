@@ -199,7 +199,7 @@ export default function RootLayout({
         <link rel="preload" href="/favicon.ico" as="image" />
         
         {/* Prefetch likely next pages for better navigation */}
-        <link rel="prefetch" href="/docs/getting-started" />
+        <link rel="prefetch" href="/docs/neurondb/getting-started" />
         <link rel="prefetch" href="/docs" />
         <link rel="prefetch" href="/download" />
         

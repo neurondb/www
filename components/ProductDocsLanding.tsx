@@ -199,18 +199,26 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
                   <h3 className="text-xl font-semibold text-white">{section.title}</h3>
                   <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">{section.description}</p>
                   <ul className="mt-4 space-y-2 text-sm">
-                    {section.items.map((item) => (
-                      <li key={item.href}>
-                        <Link
-                          href={item.href}
-                          className={`group flex items-center justify-between text-yellow-600 dark:text-yellow-400 hover:text-yellow-700 dark:hover:text-yellow-300 transition-colors`}
-                        >
-                          <span>{item.title}</span>
-                          <ArrowRight className="h-3 w-3 opacity-0 transition group-hover:opacity-100" />
-                        </Link>
-                        <p className="text-xs text-slate-600 dark:text-slate-400">{item.description}</p>
-                      </li>
-                    ))}
+                    {section.items.map((item) => {
+                      const Component = item.external ? 'a' : Link
+                      const linkProps = item.external
+                        ? { href: item.href, target: '_blank', rel: 'noopener noreferrer' }
+                        : { href: item.href }
+                      // Extract base color from linkHoverClass (e.g., "hover:text-indigo-600" -> "text-indigo-600")
+                      const baseColorClass = themeClasses.linkHoverClass.replace('hover:', '')
+                      return (
+                        <li key={item.href}>
+                          <Component
+                            {...linkProps}
+                            className={`group flex items-center justify-between ${baseColorClass} ${themeClasses.linkHoverClass} transition-colors`}
+                          >
+                            <span>{item.title}</span>
+                            <ArrowRight className="h-3 w-3 opacity-0 transition group-hover:opacity-100" />
+                          </Component>
+                          <p className="text-xs text-slate-600 dark:text-slate-400">{item.description}</p>
+                        </li>
+                      )
+                    })}
                   </ul>
                 </div>
               ))}
@@ -237,7 +245,7 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
                     <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
                     <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">{description}</p>
                     <span
-                      className={`mt-4 inline-flex items-center text-sm font-semibold text-yellow-600 dark:text-yellow-400 hover:text-yellow-700 dark:hover:text-yellow-300 transition-colors`}
+                      className={`mt-4 inline-flex items-center text-sm font-semibold ${themeClasses.quickLinkHoverLabelClass.replace('hover:', '')} ${themeClasses.quickLinkHoverLabelClass} transition-colors`}
                     >
                       Learn more
                       <ArrowRight className="ml-1 h-3 w-3" />
