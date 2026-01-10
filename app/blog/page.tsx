@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Calendar, Clock, User, Tag, Eye, ThumbsUp, MessageCircle, TrendingUp, BookOpen, Code, Database, Server, Zap, Award, Globe, Users } from 'lucide-react'
+import { ArrowRight, Calendar, Clock, User, Tag, Eye, ThumbsUp, MessageCircle, TrendingUp, BookOpen, Code, Database, Server, Zap, Award, Globe, Users, FileText, Search } from 'lucide-react'
 import FooterTemplate from '@/components/templates/FooterTemplate'
 import { siteConfig } from '@/config/site'
 import { allBlogPosts } from '@/config/blogPosts'
@@ -114,28 +114,58 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-      {/* Unified Professional Hero */}
-      <section
-        className="relative text-center overflow-hidden flex items-center h-[400px] pt-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
-      >
-        <div className="container-extra-wide mx-auto relative z-10 w-full">
-          <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Blog</h1>
-            <p className="text-lg md:text-xl font-normal text-slate-300 mb-6 max-w-2xl mx-auto">
-              Tutorials and updates about NeuronDB
+      {/* Professional Hero */}
+      <section className="relative overflow-hidden min-h-[480px] md:min-h-[520px] flex items-center pt-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        {/* Subtle background effect */}
+        <div className="absolute inset-0 neuron-tech-bg opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-950"></div>
+        
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full py-16">
+          <div className="mx-auto max-w-4xl text-center w-full">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/70 px-4 py-1.5 text-xs text-slate-300 mb-6 animate-fade-in-up">
+              <FileText className="w-3.5 h-3.5 text-indigo-400" />
+              <span className="font-semibold">Blog</span>
+              <span className="text-slate-600">•</span>
+              <span className="font-mono">Technical Insights</span>
+            </div>
+
+            {/* Main Title */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 animate-slide-up">
+              NeuronDB
+              <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+                Blog
+              </span>
+            </h1>
+
+            {/* Description */}
+            <p className="text-xl sm:text-2xl leading-relaxed text-slate-300 max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+              Tutorials, guides, and technical insights about NeuronDB. Learn vector search, ML inference, RAG pipelines, and PostgreSQL AI extensions.
             </p>
 
-            {/* Blog Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto">
+            {/* Quick Stats */}
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-10 text-sm text-slate-400 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               {blogStats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-2">
-                    <stat.icon className={`w-8 h-8 ${stat.color}`} />
-                  </div>
-                  <div className="text-3xl font-thin text-white">{stat.value}</div>
-                  <div className="text-sm text-slate-300">{stat.label}</div>
+                <div key={index} className="flex items-center gap-2">
+                  <stat.icon className={`w-4 h-4 ${stat.color === 'text-white' ? 'text-indigo-400' : stat.color}`} />
+                  <span className="font-mono font-semibold text-slate-200">{stat.value}</span>
+                  <span className="text-slate-400">{stat.label}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Search Bar */}
+            <div className="flex justify-center mb-12 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <Link
+                href="/search"
+                className="group flex items-center gap-3 w-full sm:w-auto max-w-md rounded-xl border border-slate-700 bg-slate-900/60 backdrop-blur-sm px-5 py-3.5 text-left text-slate-300 hover:border-indigo-500 hover:bg-slate-800/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+              >
+                <Search className="w-5 h-5 text-slate-400 group-hover:text-indigo-400 transition-colors" />
+                <span className="flex-1 text-sm">Search blog posts...</span>
+                <kbd className="hidden sm:inline-flex items-center gap-1 rounded border border-slate-600 bg-slate-800 px-2 py-0.5 text-xs font-mono text-slate-400">
+                  <span className="text-[10px]">⌘</span>K
+                </kbd>
+              </Link>
             </div>
           </div>
         </div>

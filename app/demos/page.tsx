@@ -3,11 +3,10 @@ import dynamic from 'next/dynamic'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import PageTemplate from '@/components/templates/PageTemplate'
-import HeroTemplate from '@/components/templates/HeroTemplate'
 import SectionTemplate from '@/components/templates/SectionTemplate'
 import FooterTemplate from '@/components/templates/FooterTemplate'
 import { generatePageMetadata } from '@/config/seo'
-import { Database, Bot, Server } from 'lucide-react'
+import { Database, Bot, Server, PlayCircle, Terminal } from 'lucide-react'
 
 // Dynamically import large demo components with loading fallbacks
 const NeurondBDemoTerminal = dynamic(
@@ -63,21 +62,73 @@ export const metadata: Metadata = generatePageMetadata({
 export default function DemosPage() {
   return (
     <PageTemplate>
-      <HeroTemplate
-        height="default"
-        className="text-center pt-20"
-      >
-        <div className="container-extra-wide relative z-10 w-full">
-          <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-4">
-              Interactive Demos
+      {/* Professional Hero */}
+      <section className="relative overflow-hidden min-h-[480px] md:min-h-[520px] flex items-center pt-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        {/* Subtle background effect */}
+        <div className="absolute inset-0 neuron-tech-bg opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-950"></div>
+        
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full py-16">
+          <div className="mx-auto max-w-4xl text-center w-full">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/70 px-4 py-1.5 text-xs text-slate-300 mb-6 animate-fade-in-up">
+              <PlayCircle className="w-3.5 h-3.5 text-orange-400" />
+              <span className="font-semibold">Demos</span>
+              <span className="text-slate-600">•</span>
+              <span className="font-mono">Interactive</span>
+            </div>
+
+            {/* Main Title */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 animate-slide-up">
+              Interactive
+              <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-pink-400">
+                Demos
+              </span>
             </h1>
-            <p className="text-lg md:text-xl font-normal text-slate-300 mb-6 max-w-2xl mx-auto">
-              NeuronDB ecosystem capabilities with interactive terminal demos
+
+            {/* Description */}
+            <p className="text-xl sm:text-2xl leading-relaxed text-slate-300 max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+              Experience NeuronDB ecosystem capabilities firsthand. Try interactive terminal demos for vector search, ML inference, agent runtime, and MCP protocol.
             </p>
+
+            {/* Quick Stats */}
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-10 text-sm text-slate-400 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <div className="flex items-center gap-2">
+                <Database className="w-4 h-4 text-orange-400" />
+                <span className="font-semibold text-slate-200">NeuronDB</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Bot className="w-4 h-4 text-red-400" />
+                <span className="font-semibold text-slate-200">NeuronAgent</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Server className="w-4 h-4 text-pink-400" />
+                <span className="font-semibold text-slate-200">NeuronMCP</span>
+              </div>
+            </div>
+
+            {/* Terminal Preview */}
+            <div className="rounded-xl border border-slate-800 bg-slate-950/80 backdrop-blur-sm text-slate-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-slate-700 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <div className="flex items-center justify-between px-4 py-2.5 border-b border-slate-800 bg-slate-900/50">
+                <div className="flex items-center gap-2">
+                  <Terminal className="w-4 h-4 text-orange-400" />
+                  <div className="text-xs font-mono text-slate-300">Interactive Terminal</div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-red-500"></div>
+                  <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
+                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                </div>
+              </div>
+              <pre className="px-5 py-4 text-sm font-mono overflow-x-auto">
+                <code className="text-slate-200">
+                  <span className="text-green-400">$</span> <span className="text-slate-400">Try the demos below to see NeuronDB in action...</span>
+                </code>
+              </pre>
+            </div>
           </div>
         </div>
-      </HeroTemplate>
+      </section>
 
       {/* NeuronDB Demo */}
       <SectionTemplate background="page" padding="xl">

@@ -1,7 +1,6 @@
 import React from 'react'
-import { Download, Github, Terminal, Code, FileText, ArrowRight, Package, Container } from 'lucide-react'
+import { Download, Github, Terminal, Code, FileText, ArrowRight, Package, Container, CloudDownload } from 'lucide-react'
 import Link from 'next/link'
-import HeroTemplate from '@/components/templates/HeroTemplate'
 import FooterTemplate from '@/components/templates/FooterTemplate'
 import { siteConfig } from '@/config/site'
 
@@ -42,18 +41,85 @@ export const metadata = {
 export default function DownloadPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-      <HeroTemplate height="default" className="text-center pt-20">
-        <div className="container-extra-wide relative z-10 w-full">
-          <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-4">
-              Download NeuronDB
+      {/* Professional Hero */}
+      <section className="relative overflow-hidden min-h-[480px] md:min-h-[520px] flex items-center pt-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        {/* Subtle background effect */}
+        <div className="absolute inset-0 neuron-tech-bg opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-950"></div>
+        
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full py-16">
+          <div className="mx-auto max-w-4xl text-center w-full">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/70 px-4 py-1.5 text-xs text-slate-300 mb-6 animate-fade-in-up">
+              <CloudDownload className="w-3.5 h-3.5 text-blue-400" />
+              <span className="font-semibold">Download</span>
+              <span className="text-slate-600">•</span>
+              <span className="font-mono">Get Started</span>
+            </div>
+
+            {/* Main Title */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 animate-slide-up">
+              Download
+              <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400">
+                NeuronDB
+              </span>
             </h1>
-            <p className="text-lg md:text-xl font-normal text-slate-300 mb-6 max-w-2xl mx-auto">
-              Latest version of NeuronDB for PostgreSQL
+
+            {/* Description */}
+            <p className="text-xl sm:text-2xl leading-relaxed text-slate-300 max-w-3xl mx-auto mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+              Get the latest version of NeuronDB for PostgreSQL. Choose from Docker images, native packages, or build from source.
             </p>
+
+            {/* Quick Stats */}
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-10 text-sm text-slate-400 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <div className="flex items-center gap-2">
+                <Container className="w-4 h-4 text-blue-400" />
+                <span className="font-mono font-semibold text-slate-200">Docker</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Package className="w-4 h-4 text-cyan-400" />
+                <span className="font-mono font-semibold text-slate-200">DEB/RPM</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Code className="w-4 h-4 text-indigo-400" />
+                <span className="font-mono font-semibold text-slate-200">Source</span>
+              </div>
+            </div>
+
+            {/* Quick Start CTA */}
+            <div className="flex justify-center mb-12 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <Link
+                href="/docs/neurondb/getting-started/docker"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white text-slate-900 px-6 py-3.5 text-sm font-semibold hover:bg-slate-100 transition-all duration-300 hover:scale-105 hover:shadow-xl group whitespace-nowrap"
+              >
+                Quick Start Guide
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+
+            {/* Quickstart Code Snippet */}
+            <div className="rounded-xl border border-slate-800 bg-slate-950/80 backdrop-blur-sm text-slate-100 overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-slate-700 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <div className="flex items-center justify-between px-4 py-2.5 border-b border-slate-800 bg-slate-900/50">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-red-500"></div>
+                  <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
+                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                </div>
+                <div className="text-xs font-mono text-slate-400">Terminal</div>
+              </div>
+              <pre className="px-5 py-4 text-sm font-mono overflow-x-auto">
+                <code className="text-slate-200">
+                  <span className="text-green-400">$</span> docker run -d --name neurondb \
+                  <br className="hidden sm:block" />
+                  <span className="ml-6 sm:ml-8">-e POSTGRES_PASSWORD=postgres \</span>
+                  <br className="hidden sm:block" />
+                  <span className="ml-6 sm:ml-8">neurondb/neurondb:latest</span>
+                </code>
+              </pre>
+            </div>
           </div>
         </div>
-      </HeroTemplate>
+      </section>
 
       <section className="py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
