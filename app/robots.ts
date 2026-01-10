@@ -1,9 +1,8 @@
 import { MetadataRoute } from 'next'
 import { siteConfig } from '@/config/site'
 
-// Route segment config for Vercel ISR
-export const dynamic = 'force-dynamic' // Enable ISR
-export const revalidate = 86400 // Revalidate daily
+// Enable ISR for Vercel - robots.txt will be regenerated daily
+export const revalidate = 86400
 
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = `https://${siteConfig.domain}`

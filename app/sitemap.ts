@@ -2,9 +2,8 @@ import { MetadataRoute } from 'next'
 import { siteConfig } from '@/config/site'
 import { allBlogPosts } from '@/config/blogPosts'
 
-// Route segment config for Vercel ISR
-export const dynamic = 'force-dynamic' // Enable ISR
-export const revalidate = 3600 // Revalidate every hour
+// Enable ISR for Vercel - sitemap will be regenerated every hour
+export const revalidate = 3600
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = `https://${siteConfig.domain}`
