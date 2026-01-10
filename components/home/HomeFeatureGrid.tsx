@@ -1,5 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import { ArrowRight, Database, Cpu, Layers, Network, Zap } from 'lucide-react'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 type Tile = {
   title: string
@@ -8,6 +12,7 @@ type Tile = {
   href: string
   meta: string
   code: string
+  language?: 'sql' | 'bash' | 'javascript' | 'python'
 }
 
 const tiles: Tile[] = [
@@ -18,6 +23,7 @@ const tiles: Tile[] = [
     href: '/docs/neurondb/vector-engine',
     meta: 'index + query',
     code: "SELECT * FROM vector_search('embeddings', q, 10);",
+    language: 'sql',
   },
   {
     title: 'ML inference',
@@ -26,6 +32,7 @@ const tiles: Tile[] = [
     href: '/docs/neurondb/ml',
     meta: 'predict() in SQL',
     code: "SELECT neurondb.ml.predict('model', features);",
+    language: 'sql',
   },
   {
     title: 'RAG pipeline',
@@ -34,6 +41,7 @@ const tiles: Tile[] = [
     href: '/docs/neurondb/rag',
     meta: 'retrieve + rerank',
     code: "SELECT neurondb.rag.query('docs', q, top_k => 5);",
+    language: 'sql',
   },
   {
     title: 'PostgreSQL-native',
@@ -42,6 +50,7 @@ const tiles: Tile[] = [
     href: '/docs/neurondb',
     meta: 'in-process',
     code: 'CREATE EXTENSION neurondb;',
+    language: 'sql',
   },
   {
     title: 'Agent runtime',
@@ -50,6 +59,7 @@ const tiles: Tile[] = [
     href: '/docs/neuronagent',
     meta: 'tools + workflows',
     code: 'pip install neuronagent',
+    language: 'bash',
   },
   {
     title: 'MCP tools',
@@ -58,10 +68,28 @@ const tiles: Tile[] = [
     href: '/docs/neuronmcp',
     meta: '100+ tools',
     code: 'npx @neurondb/neuronmcp',
+    language: 'bash',
   },
 ]
 
 export default function HomeFeatureGrid() {
+  // Custom theme for compact grid code blocks - matches dark theme
+  const compactCodeTheme = {
+    ...vscDarkPlus,
+    'code[class*="language-"]': {
+      ...vscDarkPlus['code[class*="language-"]'],
+      background: 'transparent',
+      color: '#cbd5e1', // slate-300
+    },
+    'pre[class*="language-"]': {
+      ...vscDarkPlus['pre[class*="language-"]'],
+      background: 'transparent',
+      padding: 0,
+      margin: 0,
+      overflow: 'visible',
+    },
+  }
+
   return (
     <section className="bg-slate-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
@@ -105,10 +133,25 @@ export default function HomeFeatureGrid() {
                   {t.description}
                 </p>
 
-                <div className="mt-4 rounded-lg border border-slate-800 bg-slate-900 p-3">
-                  <code className="text-xs font-mono text-slate-200">
+                <div className="mt-4 rounded-lg border border-slate-800 bg-slate-900/50 p-3 overflow-hidden">
+                  <SyntaxHighlighter
+                    language={t.language || 'sql'}
+                    style={compactCodeTheme}
+                    customStyle={{
+                      margin: 0,
+                      padding: 0,
+                      fontSize: '0.75rem',
+                      lineHeight: '1.5',
+                      background: 'transparent',
+                      fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+                    }}
+                    PreTag="div"
+                    showLineNumbers={false}
+                    wrapLines={true}
+                    wrapLongLines={true}
+                  >
                     {t.code}
-                  </code>
+                  </SyntaxHighlighter>
                 </div>
 
                 <div className="mt-4 text-sm font-semibold text-slate-200 inline-flex items-center gap-2 group-hover:gap-3 transition-all">
