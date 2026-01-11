@@ -26,7 +26,10 @@ const prevLink: NavLink = {
   label: 'Observability Stack',
 }
 
-const nextLink: NavLink | undefined = undefined
+const nextLink: NavLink = {
+  href: '/docs/neurondb/deployment/ansible',
+  label: 'Ansible Infrastructure Provisioning',
+}
 
 export default function ScriptsPage() {
   return (
@@ -403,6 +406,9 @@ export default function ScriptsPage() {
           </li>
           <li>
             <a href="https://github.com/neurondb-ai/neurondb/tree/main/scripts" target="_blank" rel="noopener noreferrer">Scripts Directory</a> - All scripts source code
+          </li>
+          <li>
+            <a href="/docs/neurondb/deployment/ansible">Ansible Infrastructure Provisioning</a> - Infrastructure automation and deployment
           </li>
           <li>
             <a href="/docs/neurondb/deployment/kubernetes">Kubernetes Deployment</a> - Cloud-native deployment guide

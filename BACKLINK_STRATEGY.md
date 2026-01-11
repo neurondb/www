@@ -251,7 +251,7 @@ Key features:
 - HNSW, IVFFlat, and DiskANN indexing
 - 52+ ML algorithms in pure C
 - GPU acceleration (CUDA, ROCm, Metal)
-- 473 SQL functions
+- 520+ SQL functions
 - Complete RAG pipeline
 
 Links:

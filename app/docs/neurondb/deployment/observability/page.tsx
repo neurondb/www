@@ -26,7 +26,10 @@ const prevLink: NavLink = {
   label: 'Kubernetes Deployment',
 }
 
-const nextLink: NavLink | undefined = undefined
+const nextLink: NavLink = {
+  href: '/docs/neurondb/deployment/scripts',
+  label: 'Operational Scripts',
+}
 
 export default function ObservabilityPage() {
   return (

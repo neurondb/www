@@ -75,7 +75,7 @@ const neurondbDashboardTabs = [
     footerLabel: 'Hybrid Search Docs',
     results: [
       { id: 502, sim: 0.9234, text: 'PostgreSQL vector extension for AI applications with GPU acceleration…', category: 'tech' },
-      { id: 489, sim: 0.9012, text: 'NeuronDB provides 473 SQL functions for vector operations and ML inference…', category: 'tech' },
+      { id: 489, sim: 0.9012, text: 'NeuronDB provides 520+ SQL functions for vector operations and ML inference…', category: 'tech' },
       { id: 456, sim: 0.8876, text: 'HNSW indexing enables sub-millisecond search on millions of high-dimensional vectors…', category: 'tech' },
       { id: 423, sim: 0.8754, text: 'RAG pipeline with reranking improves LLM response accuracy using semantic retrieval…', category: 'tech' },
       { id: 389, sim: 0.8621, text: 'Background workers handle async embedding generation and index maintenance automatically…', category: 'tech' },
@@ -129,7 +129,7 @@ const neurondbConfig = {
     'PostgreSQL 16 to 18',
     '5 Vector Types',
     '52 ML Algorithms',
-    '473 SQL Functions',
+    '520+ SQL Functions',
     'GPU Acceleration',
     '4 Background Workers',
   ],
@@ -272,7 +272,7 @@ const neurondbConfig = {
         title: 'PostgreSQL Native Architecture', 
         desc: [
           'Pure C implementation following 100% PostgreSQL coding standards',
-          '473 SQL functions, types, and operators',
+          '520+ SQL functions, types, and operators',
           '7 new monitoring views for comprehensive observability',
           'Shared memory for efficient caching',
           'WAL integration for durability and crash recovery',

@@ -118,7 +118,7 @@ const comparisonData = [
   },
   {
     feature: 'SQL Functions',
-    neurondb: '473 functions',
+    neurondb: '520+ functions',
     pgvector: '~20 functions',
     pgvectorscale: '~30 functions',
     pgai: '~15 functions',
@@ -134,8 +134,8 @@ const comparisonData = [
   },
   {
     feature: 'HNSW Index Build Performance',
-    neurondb: '606ms for 50K vectors (10.1x faster than pgvector)',
-    pgvector: '6,108ms for 50K vectors (baseline)',
+    neurondb: '606ms (50K, 128-dim L2, 10.1x), 583ms (50K, 128-dim Cosine, 8.8x), 146ms (10K, 768-dim L2, 27.1x), 1,208ms (100K, 128-dim L2, 13.0x)',
+    pgvector: '6,108ms (50K, 128-dim L2, baseline), 5,113ms (50K, 128-dim Cosine), 3,960ms (10K, 768-dim L2), 15,696ms (100K, 128-dim L2)',
     pgvectorscale: 'Varies by configuration',
     pgai: 'Uses pgvector',
     postgresml: 'Uses pgvector',

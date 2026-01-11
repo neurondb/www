@@ -15,7 +15,7 @@ export default function NeuronMCPDocsPage() {
         badgeGradient: theme.badgeGradient,
         title: 'NeuronMCP Documentation',
         description:
-          'Model Context Protocol server with 100+ tools (27 PostgreSQL + 70+ NeuronDB) enabling MCP-compatible clients (like Claude Desktop) to access NeuronDB. Vector operations, ML training, RAG pipeline, reranking, dataset loading, and PostgreSQL administration through JSON-RPC 2.0.',
+          'Model Context Protocol server with 100+ tools (27 PostgreSQL + 70+ NeuronDB) enabling MCP-compatible clients (like Claude Desktop) to access NeuronDB. 50+ vector operations, complete ML pipeline (52 algorithms), RAG pipeline, 6 reranking methods, dataset loading (HuggingFace, URLs, GitHub, S3, local), vector graph, vecmap operations, and PostgreSQL administration. Supports prompts protocol, sampling/completions, progress tracking, and batch operations.',
         ctas: [
           {
             label: 'Get Started',
@@ -41,17 +41,22 @@ export default function NeuronMCPDocsPage() {
         {
           icon: Database,
           title: '100+ Tools',
-          description: '27 PostgreSQL administration tools + 70+ NeuronDB tools for vector ops, ML, RAG, and database management.',
+          description: '27 PostgreSQL administration tools + 70+ NeuronDB tools including 50+ vector operations, complete ML pipeline, RAG, reranking, dataset loading, vector graph, and vecmap operations.',
         },
         {
           icon: Search,
-          title: 'Vector Operations',
-          description: 'Vector search with 7+ distance metrics, quantization, embeddings, and HNSW indexing tools.',
+          title: 'Vector Operations (50+ Tools)',
+          description: 'Vector search with 7+ distance metrics, quantization (int8, fp16, binary, uint8, ternary, int4), embeddings, HNSW/IVF indexing, hybrid search, and multi-vector search.',
         },
         {
           icon: Cpu,
-          title: 'ML & Analytics',
-          description: 'Complete ML pipeline tools for all 52 algorithms, training, prediction, and analytics.',
+          title: 'Complete ML Pipeline',
+          description: 'All 52 ML algorithms, training, prediction, evaluation, AutoML, ONNX support, time series analysis, and analytics tools.',
+        },
+        {
+          icon: FileText,
+          title: 'Dataset Loading',
+          description: 'Load datasets from HuggingFace, URLs, GitHub, S3, and local files with automatic schema detection, auto-embedding, and index creation.',
         }
       ]}
       docSections={[

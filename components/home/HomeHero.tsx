@@ -74,7 +74,7 @@ export default function HomeHero() {
               <span className="font-mono transition-all duration-300 hover:text-slate-200">PostgreSQL 16 to 18</span>
               <span className="font-mono transition-all duration-300 hover:text-slate-200">Pure C</span>
               <span className="font-mono transition-all duration-300 hover:text-slate-200">GPU: CUDA / ROCm / Metal</span>
-              <span className="font-mono transition-all duration-300 hover:text-slate-200">473 SQL functions</span>
+              <span className="font-mono transition-all duration-300 hover:text-slate-200">520+ SQL functions</span>
             </div>
           </div>
 
@@ -85,7 +85,7 @@ export default function HomeHero() {
                 <PostgresElephant size={24} className="text-slate-500 opacity-60" />
                 <div className="text-xs font-semibold text-slate-300">NeuronDB Ecosystem</div>
               </div>
-              <div className="text-xs font-mono text-slate-400">3 Products • Complete AI Stack</div>
+              <div className="text-xs font-mono text-slate-400">4 Products • Complete AI Stack</div>
             </div>
             <div className="relative w-full rounded-2xl border border-slate-800 overflow-hidden shadow-lg bg-slate-900 transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] animate-slide-in-from-right-full">
               <Image

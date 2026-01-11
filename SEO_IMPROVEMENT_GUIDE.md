@@ -113,7 +113,7 @@ Update `/app/page.tsx` metadata:
 ```typescript
 export const metadata: Metadata = generatePageMetadata({
   title: 'PostgreSQL Vector Database | NeuronDB AI Extension',
-  description: 'Open-source PostgreSQL vector database extension for AI applications. HNSW indexing, ML inference, GPU acceleration. Drop-in replacement for pgvector with 473 SQL functions.',
+  description: 'Open-source PostgreSQL vector database extension for AI applications. HNSW indexing, ML inference, GPU acceleration. Drop-in replacement for pgvector with 520+ SQL functions.',
   keywords: [
     'postgresql vector database',
     'postgres vector database',

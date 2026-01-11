@@ -23,8 +23,8 @@ const tableOfContents: TocItem[] = [
 ]
 
 const prevLink: NavLink = {
-  href: '/docs/neurondb/getting-started/docker',
-  label: 'Docker Quick Start',
+  href: '/docs/neurondb/deployment/ansible',
+  label: 'Ansible Infrastructure Provisioning',
 }
 
 const nextLink: NavLink = {

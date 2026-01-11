@@ -5,12 +5,12 @@ import { allBlogPosts } from '@/config/blogPosts';
 
 export const metadata = {
   title: 'NeuronDB: PostgreSQL AI Extension for Vector Search and ML',
-  description: 'NeuronDB is a PostgreSQL extension that adds vector search, ML inference, GPU acceleration, and RAG capabilities. Features HNSW indexing, 52 ML algorithms, 473 SQL functions, full pgvector compatibility, CUDA/ROCm/Metal support, and in-database AI operations. Build semantic search, recommendation systems, and RAG pipelines with SQL.',
+  description: 'NeuronDB is a PostgreSQL extension that adds vector search, ML inference, GPU acceleration, and RAG capabilities. Features HNSW indexing, 52 ML algorithms, 520+ SQL functions, full pgvector compatibility, CUDA/ROCm/Metal support, and in-database AI operations. Build semantic search, recommendation systems, and RAG pipelines with SQL.',
   keywords: ['NeuronDB', 'PostgreSQL extension', 'vector search', 'ML inference', 'GPU acceleration', 'RAG', 'HNSW indexing', 'pgvector', 'semantic search', 'machine learning', 'PostgreSQL AI', 'vector database', 'embedding', 'similarity search', 'CUDA', 'ROCm', 'Metal'],
   authors: [{ name: 'NeuronDB Team' }],
   openGraph: {
     title: 'NeuronDB: PostgreSQL AI Extension for Vector Search and ML',
-    description: 'PostgreSQL extension with vector search, ML inference, GPU acceleration, and RAG pipeline. HNSW indexing, 52 ML algorithms, 473 SQL functions.',
+    description: 'PostgreSQL extension with vector search, ML inference, GPU acceleration, and RAG pipeline. HNSW indexing, 52 ML algorithms, 520+ SQL functions.',
     url: 'https://neurondb.ai/blog/neurondb',
     siteName: 'NeuronDB',
     images: [
@@ -59,7 +59,7 @@ PostgreSQL handles relational data. AI applications need vector similarity searc
 
 NeuronDB is a PostgreSQL extension. It adds vector search, ML inference, GPU acceleration, and hybrid retrieval to PostgreSQL. It maintains full pgvector compatibility. Applications use SQL syntax for AI operations. No external services required. No complex integrations needed.
 
-NeuronDB supports PostgreSQL 16, 17, and 18. It is implemented in pure C following PostgreSQL coding standards. The extension has zero external dependencies. It provides 473 SQL functions, comprehensive ML capabilities with 19 implemented algorithms (part of 52 total ML features), and 4 background workers including the new neuranllm worker. All operations run within PostgreSQL. Includes 7 monitoring views, 4 new tables for multi-tenancy and security, and 27 new SQL functions for advanced features.
+NeuronDB supports PostgreSQL 16, 17, and 18. It is implemented in pure C following PostgreSQL coding standards. The extension has zero external dependencies. It provides 520+ SQL functions, comprehensive ML capabilities with 19 implemented algorithms (part of 52 total ML features), and 4 background workers including the new neuranllm worker. All operations run within PostgreSQL. Includes 7 monitoring views, 4 new tables for multi-tenancy and security, and 27 new SQL functions for advanced features.
 
 ## What is NeuronDB
 
@@ -69,7 +69,7 @@ The extension provides five vector types. The vector type stores float32 embeddi
 
 NeuronDB includes comprehensive ML capabilities with 19 fully implemented algorithms in pure C. **Clustering**: K-Means, Mini-batch K-means, DBSCAN, GMM, Hierarchical clustering. **Dimensionality Reduction**: PCA, PCA Whitening. **Quantization**: Product Quantization (PQ), Optimized PQ (OPQ). **Outlier Detection**: Z-score, Modified Z-score, IQR. **Reranking**: MMR (Maximal Marginal Relevance), Ensemble (Weighted & Borda), Learning-to-Rank (LTR). **Quality Metrics**: Recall@K, Precision@K, F1@K, MRR, Davies-Bouldin Index, Silhouette Score. **Drift Detection**: Centroid drift, Distribution divergence, Temporal drift monitoring. **Analytics**: Topic discovery, Similarity histograms, KNN graph building, Embedding quality assessment. **Search**: Hybrid Lexical-Semantic Fusion, Reciprocal Rank Fusion (RRF). Additionally supports Random Forest, XGBoost, LightGBM, CatBoost, Linear/Logistic Regression, Ridge, Lasso, SVM, KNN, Naive Bayes, Decision Trees, Neural Networks, Deep Learning. All algorithms support GPU acceleration.
 
-The extension provides 473 SQL functions for vector operations, ML inference, embedding generation, hybrid search, reranking, and analytics. Functions integrate with PostgreSQL's query planner and optimizer. Operations use standard SQL syntax.
+The extension provides 520+ SQL functions for vector operations, ML inference, embedding generation, hybrid search, reranking, and analytics. Functions integrate with PostgreSQL's query planner and optimizer. Operations use standard SQL syntax.
 
 ## Vector Search Capabilities
 
@@ -410,7 +410,7 @@ Vector types comparison shows NeuronDB provides five vector types: vector, vecto
 
 Distance metrics comparison shows NeuronDB supports 10 or more metrics including L2, Cosine, Inner Product, Manhattan, Hamming, Jaccard, Chebyshev, Minkowski, Canberra, and Braycurtis. pgvector supports three metrics: L2, Cosine, and Inner Product. pgvectorscale supports three metrics. pgai uses pgvector metrics. PostgresML uses pgvector metrics.
 
-SQL functions comparison shows NeuronDB provides 473 SQL functions. pgvector provides approximately 20 functions. pgvectorscale provides approximately 30 functions. pgai provides approximately 15 functions. PostgresML provides approximately 50 functions.
+SQL functions comparison shows NeuronDB provides 520+ SQL functions. pgvector provides approximately 20 functions. pgvectorscale provides approximately 30 functions. pgai provides approximately 15 functions. PostgresML provides approximately 50 functions.
 
 Performance comparison shows NeuronDB achieves 100,000 or more queries per second with GPU acceleration. pgvector achieves 10,000 to 50,000 queries per second. pgvectorscale achieves 50,000 to 100,000 queries per second. pgai performance is limited by API overhead. PostgresML achieves 5,000 to 20,000 queries per second due to Python overhead.
 
@@ -771,7 +771,7 @@ Security features protect data and ensure compliance with regulations. All featu
 
 NeuronDB extends PostgreSQL with AI capabilities. The extension provides vector search, ML inference, GPU acceleration, and RAG pipelines. All operations use standard SQL syntax. No external services required. No complex integrations needed.
 
-The extension supports PostgreSQL 16, 17, and 18. Implementation uses pure C following PostgreSQL coding standards. Zero external dependencies. 473 SQL functions. 52 ML algorithms. 4 background workers. Full pgvector compatibility.
+The extension supports PostgreSQL 16, 17, and 18. Implementation uses pure C following PostgreSQL coding standards. Zero external dependencies. 520+ SQL functions. 52 ML algorithms. 4 background workers. Full pgvector compatibility.
 
 Applications build semantic search, RAG systems, recommendation engines, and image search using SQL. Performance scales to billions of vectors. GPU acceleration provides 10x to 100x speedups. Production-ready features include monitoring, security, and background workers.
 
@@ -791,7 +791,7 @@ export default function BlogPost() {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: 'NeuronDB: PostgreSQL AI Extension for Vector Search & ML',
-    description: 'NeuronDB is a PostgreSQL extension that adds vector search, ML inference, GPU acceleration, and RAG capabilities. Features HNSW indexing, 52 ML algorithms, 473 SQL functions, and full pgvector compatibility.',
+    description: 'NeuronDB is a PostgreSQL extension that adds vector search, ML inference, GPU acceleration, and RAG capabilities. Features HNSW indexing, 52 ML algorithms, 520+ SQL functions, and full pgvector compatibility.',
     image: 'https://neurondb.ai/blog/neurondb/og-image.svg',
     datePublished: '2024-12-05',
     dateModified: '2024-12-05',
@@ -834,7 +834,7 @@ export default function BlogPost() {
                   <ShareOnLinkedIn
                     url="https://neurondb.ai/blog/neurondb"
                     title="NeuronDB a PostgreSQL AI Extension"
-                    summary="NeuronDB is a PostgreSQL extension that adds vector search, ML inference, GPU acceleration, and RAG capabilities. HNSW indexing, 52 ML algorithms, 473 SQL functions, and full pgvector compatibility."
+                    summary="NeuronDB is a PostgreSQL extension that adds vector search, ML inference, GPU acceleration, and RAG capabilities. HNSW indexing, 52 ML algorithms, 520+ SQL functions, and full pgvector compatibility."
                     hashtags={[
                       'PostgreSQL',
                       'AI',

@@ -280,7 +280,7 @@ The source repository contains detailed documentation in markdown format:
 - `/app/neurondesktop/page.tsx` - NeuronDesktop overview
 
 ### API References
-- `/app/docs/sql-api/page.tsx` - SQL API reference (473+ functions)
+- `/app/docs/sql-api/page.tsx` - SQL API reference (520+ functions)
 
 ## Documentation Completeness
 
@@ -346,7 +346,7 @@ The source repository contains detailed documentation in markdown format:
 
 ## Key Statistics
 
-- **Total SQL Functions**: 473+
+- **Total SQL Functions**: 520+
 - **ML Algorithms**: 52+
 - **MCP Tools**: 100+
 - **Components**: 4 (NeuronDB, NeuronAgent, NeuronMCP, NeuronDesktop)

@@ -15,7 +15,7 @@ export default function GrowthMetrics() {
   const metrics: Metric[] = [
     {
       label: 'SQL Functions',
-      value: '473',
+      value: '520+',
       change: '+120 this release',
       icon: Code,
       color: 'var(--primary-600)',

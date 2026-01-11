@@ -15,7 +15,7 @@ export default function NeuronAgentDocsPage() {
         badgeGradient: theme.badgeGradient,
         title: 'NeuronAgent Documentation',
         description:
-          'REST API and WebSocket agent runtime system with long-term memory, tool execution, and streaming responses. Build autonomous AI agents with state management, persistent memory, and extensible tool capabilities. Integrates seamlessly with NeuronDB for vector search and embeddings.',
+          'REST API and WebSocket agent runtime system with multi-agent collaboration, workflow engine, human-in-the-loop (HITL), hierarchical memory, planning & reflection, evaluation framework, budget management, and 20+ tools. Build autonomous AI agents with persistent memory, extensible tool capabilities, and advanced collaboration features.',
         ctas: [
           {
             label: 'Get Started',
@@ -40,18 +40,28 @@ export default function NeuronAgentDocsPage() {
         },
         {
           icon: Database,
-          title: 'Long-term Memory',
-          description: 'HNSW-based vector search for context retrieval across sessions and conversations.',
+          title: 'Multi-Agent Collaboration',
+          description: 'Agent-to-agent communication, task delegation, shared workspaces, and hierarchical agent structures.',
+        },
+        {
+          icon: GitBranch,
+          title: 'Workflow Engine',
+          description: 'DAG-based workflow execution with agent, tool, HTTP, approval, and conditional steps with HITL support.',
+        },
+        {
+          icon: Database,
+          title: 'Hierarchical Memory',
+          description: 'Multi-level memory organization with HNSW-based vector search for better context retrieval.',
         },
         {
           icon: Zap,
-          title: 'Tool Execution',
-          description: 'Extensible tool registry: SQL, HTTP, Code, and Shell operations with streaming responses.',
+          title: '20+ Tools',
+          description: 'SQL, HTTP, Code, Shell, Browser (Playwright), Filesystem (virtual), Memory, Collaboration, NeuronDB tools, Multimodal.',
         },
         {
           icon: Server,
-          title: 'REST API & WebSocket',
-          description: 'Full CRUD API and real-time WebSocket support for agent, session, and message management.',
+          title: 'Budget & Evaluation',
+          description: 'Real-time cost tracking, budget controls, evaluation framework, and quality scoring.',
         }
       ]}
       docSections={[
@@ -96,13 +106,63 @@ export default function NeuronAgentDocsPage() {
           ]
         },
         {
-          title: 'Tool System',
-          description: 'Extensible tool registry with SQL, HTTP, Code, and Shell execution capabilities.',
+          title: 'Multi-Agent Collaboration',
+          description: 'Agent-to-agent communication, task delegation, shared workspaces, and hierarchical agent structures.',
           items: [
-            { title: 'Built-in Tools', href: 'https://github.com/neurondb-ai/neurondb', description: 'SQL, HTTP, Code, and Shell tools with validation and error handling.', external: true },
-            { title: 'Custom Tools', href: 'https://github.com/neurondb-ai/neurondb', description: 'Register custom tools with custom execution logic and validation.', external: true },
-            { title: 'Tool Execution', href: 'https://github.com/neurondb-ai/neurondb', description: 'Execute tools with timeout, validation, and streaming responses.', external: true },
-            { title: 'Tool Registry', href: 'https://github.com/neurondb-ai/neurondb', description: 'Manage tool registry with versioning and access control.', external: true }
+            { title: 'Agent Communication', href: 'https://github.com/neurondb-ai/neurondb', description: 'Enable agents to communicate with each other and delegate tasks.', external: true },
+            { title: 'Shared Workspaces', href: 'https://github.com/neurondb-ai/neurondb', description: 'Shared workspaces for collaborative agent environments.', external: true },
+            { title: 'Hierarchical Structures', href: 'https://github.com/neurondb-ai/neurondb', description: 'Organize agents in hierarchical structures with parent-child relationships.', external: true },
+            { title: 'Task Delegation', href: 'https://github.com/neurondb-ai/neurondb', description: 'Delegate tasks between agents with automatic routing and coordination.', external: true }
+          ]
+        },
+        {
+          title: 'Workflow Engine',
+          description: 'DAG-based workflow execution with agent, tool, HTTP, approval, and conditional steps with HITL support.',
+          items: [
+            { title: 'Workflow Definition', href: 'https://github.com/neurondb-ai/neurondb', description: 'Define DAG-based workflows with agent, tool, HTTP, approval, and conditional steps.', external: true },
+            { title: 'Human-in-the-Loop', href: 'https://github.com/neurondb-ai/neurondb', description: 'Approval gates, feedback loops, and human oversight in workflows with email/webhook notifications.', external: true },
+            { title: 'Workflow Execution', href: 'https://github.com/neurondb-ai/neurondb', description: 'Execute workflows with state management, error handling, and retries.', external: true },
+            { title: 'Conditional Logic', href: 'https://github.com/neurondb-ai/neurondb', description: 'Conditional steps and branching logic based on workflow state and results.', external: true }
+          ]
+        },
+        {
+          title: 'Planning & Reflection',
+          description: 'LLM-based planning with task decomposition, agent self-reflection, and quality assessment.',
+          items: [
+            { title: 'LLM-Based Planning', href: 'https://github.com/neurondb-ai/neurondb', description: 'Generate plans using LLM with task decomposition and sequencing.', external: true },
+            { title: 'Task Decomposition', href: 'https://github.com/neurondb-ai/neurondb', description: 'Break down complex tasks into manageable sub-tasks automatically.', external: true },
+            { title: 'Self-Reflection', href: 'https://github.com/neurondb-ai/neurondb', description: 'Agent self-reflection and quality assessment of its own actions.', external: true },
+            { title: 'Quality Assessment', href: 'https://github.com/neurondb-ai/neurondb', description: 'Evaluate task completion quality and adjust strategies accordingly.', external: true }
+          ]
+        },
+        {
+          title: 'Evaluation Framework',
+          description: 'Built-in evaluation system for agent performance with automated quality scoring.',
+          items: [
+            { title: 'Performance Metrics', href: 'https://github.com/neurondb-ai/neurondb', description: 'Track agent performance metrics including success rate, latency, and quality scores.', external: true },
+            { title: 'Automated Scoring', href: 'https://github.com/neurondb-ai/neurondb', description: 'Automated quality scoring for agent responses and task completion.', external: true },
+            { title: 'Evaluation Reports', href: 'https://github.com/neurondb-ai/neurondb', description: 'Generate evaluation reports with detailed performance analysis.', external: true },
+            { title: 'Continuous Improvement', href: 'https://github.com/neurondb-ai/neurondb', description: 'Use evaluation results to improve agent performance over time.', external: true }
+          ]
+        },
+        {
+          title: 'Budget & Cost Management',
+          description: 'Real-time cost tracking, per-agent and per-session budget controls, and budget alerts.',
+          items: [
+            { title: 'Cost Tracking', href: 'https://github.com/neurondb-ai/neurondb', description: 'Real-time cost tracking for LLM API calls, compute resources, and operations.', external: true },
+            { title: 'Budget Controls', href: 'https://github.com/neurondb-ai/neurondb', description: 'Set per-agent and per-session budget limits with automatic enforcement.', external: true },
+            { title: 'Budget Alerts', href: 'https://github.com/neurondb-ai/neurondb', description: 'Configure alerts for budget thresholds and spending limits.', external: true },
+            { title: 'Cost Analytics', href: 'https://github.com/neurondb-ai/neurondb', description: 'Analyze cost trends and optimize agent usage for cost efficiency.', external: true }
+          ]
+        },
+        {
+          title: 'Tool System (20+ Tools)',
+          description: 'Extensible tool registry with SQL, HTTP, Code, Shell, Browser, Filesystem, Memory, Collaboration, NeuronDB tools, and Multimodal processing.',
+          items: [
+            { title: 'Built-in Tools', href: 'https://github.com/neurondb-ai/neurondb', description: 'SQL, HTTP, Code, Shell, Browser (Playwright), Filesystem (virtual), Memory, Collaboration tools.', external: true },
+            { title: 'NeuronDB Tools', href: 'https://github.com/neurondb-ai/neurondb', description: 'RAG, Hybrid Search, Reranking, Vector, ML, Analytics, Visualization tools from NeuronDB.', external: true },
+            { title: 'Multimodal Processing', href: 'https://github.com/neurondb-ai/neurondb', description: 'Multimodal tools for processing text, images, and combined content.', external: true },
+            { title: 'Custom Tools', href: 'https://github.com/neurondb-ai/neurondb', description: 'Register custom tools with custom execution logic and validation.', external: true }
           ]
         },
         {

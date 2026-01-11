@@ -17,6 +17,7 @@ const tableOfContents: TocItem[] = [
   { id: 'docker-method', title: 'Method 1: Docker' },
   { id: 'package-method', title: 'Method 2: DEB/RPM Packages' },
   { id: 'source-method', title: 'Method 3: Source Build' },
+  { id: 'ansible-method', title: 'Method 4: Ansible' },
   { id: 'prerequisites', title: 'Prerequisites' },
   { id: 'ubuntu-debian', title: 'Ubuntu / Debian' },
   { id: 'macos', title: 'macOS (Homebrew)' },
@@ -114,12 +115,21 @@ export default function NeuronDBInstallationPage() {
               <td style={{ padding: '0.75rem' }}>Ubuntu/Debian, Rocky Linux/RHEL</td>
               <td style={{ padding: '0.75rem' }}>2 minutes</td>
             </tr>
-            <tr>
+            <tr style={{ borderBottom: '1px solid #374151' }}>
               <td style={{ padding: '0.75rem' }}>
                 <strong>Source Build</strong>
               </td>
               <td style={{ padding: '0.75rem' }}>Production, custom builds</td>
               <td style={{ padding: '0.75rem' }}>30+ minutes</td>
+            </tr>
+            <tr>
+              <td style={{ padding: '0.75rem' }}>
+                <strong>
+                  <a href="#ansible-method">Ansible</a>
+                </strong>
+              </td>
+              <td style={{ padding: '0.75rem' }}>Infrastructure provisioning, multi-server deployments</td>
+              <td style={{ padding: '0.75rem' }}>10+ minutes</td>
             </tr>
           </tbody>
         </table>
@@ -313,6 +323,84 @@ psql -d postgres -c "SELECT extversion FROM pg_extension WHERE extname = 'neuron
           Build NeuronDB from source for production deployments or custom configurations. This installs only the PostgreSQL extension; you'll need to separately build NeuronAgent, NeuronMCP, and NeuronDesktop if you want the full ecosystem.
         </p>
         <p>Continue reading below for platform-specific source build instructions.</p>
+      </section>
+
+      <section id="ansible-method">
+        <h2>Method 4: Ansible</h2>
+        <p>
+          Use Ansible automation for infrastructure provisioning and deployment of the NeuronDB ecosystem across development, staging, and production environments. Ansible complements Docker/Kubernetes scripts by handling OS-level system configuration, infrastructure provisioning, and service deployment.
+        </p>
+
+        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+          <h3 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.1rem', fontWeight: 'bold', color: '#fbbf24' }}>✨ What Ansible Provides</h3>
+          <ul style={{ marginBottom: 0 }}>
+            <li><strong>OS-level system configuration</strong> - Package installation, user/group creation, system tuning</li>
+            <li><strong>Infrastructure provisioning</strong> - Firewall, security hardening, SSL/TLS certificates</li>
+            <li><strong>PostgreSQL installation and configuration</strong> - Repository setup, database configuration</li>
+            <li><strong>NeuronDB extension build and installation</strong> - Build dependencies, compilation, installation</li>
+            <li><strong>Service deployment</strong> - NeuronAgent, NeuronMCP, NeuronDesktop setup and configuration</li>
+            <li><strong>Backup and restore operations</strong> - Database backup automation</li>
+            <li><strong>Maintenance tasks</strong> - System updates, database VACUUM, log cleanup</li>
+          </ul>
+        </div>
+
+        <h3>Quick Start</h3>
+        <BashCodeBlock
+          title="Deploy complete ecosystem with Ansible"
+          code={`# 1. Clone repository
+git clone https://github.com/neurondb-ai/neurondb.git
+cd neurondb/ansible
+
+# 2. Configure inventory
+vi inventory/hosts.yml
+
+# 3. Configure variables
+vi group_vars/production.yml
+
+# 4. Deploy to all hosts in production
+ansible-playbook playbooks/site.yml -i inventory/hosts.yml --limit production
+
+# 5. Verify deployment
+ansible all -i inventory/hosts.yml -m shell -a "systemctl status postgresql neuronagent neuronmcp"`}
+        />
+
+        <h3>Prerequisites</h3>
+        <ul>
+          <li><strong>Ansible</strong> - Install via <code>brew install ansible</code> (macOS) or <code>apt-get install ansible</code> (Ubuntu/Debian)</li>
+          <li><strong>SSH Access</strong> - SSH key-based authentication to target hosts with sudo/root access</li>
+          <li><strong>Python 3</strong> - Python 3.6+ required on target hosts</li>
+        </ul>
+
+        <h3>Deploy Individual Components</h3>
+        <BashCodeBlock
+          title="Component-specific deployment"
+          code={`# Deploy only infrastructure
+ansible-playbook playbooks/infrastructure.yml -i inventory/hosts.yml
+
+# Deploy only NeuronDB
+ansible-playbook playbooks/deploy-neurondb.yml -i inventory/hosts.yml
+
+# Deploy only NeuronAgent
+ansible-playbook playbooks/deploy-neuronagent.yml -i inventory/hosts.yml
+
+# Deploy only NeuronMCP
+ansible-playbook playbooks/deploy-neuronmcp.yml -i inventory/hosts.yml
+
+# Deploy only NeuronDesktop
+ansible-playbook playbooks/deploy-neurondesktop.yml -i inventory/hosts.yml`}
+        />
+
+        <p>
+          <strong>
+            <a href="/docs/neurondb/deployment/ansible">View complete Ansible deployment guide →</a>
+          </strong>
+        </p>
+
+        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+          <p>
+            <strong>💡 Best For:</strong> Ansible is ideal for infrastructure provisioning, multi-server deployments, and environments where you need fine-grained control over OS-level configuration. For quick single-server setups, Docker is recommended.
+          </p>
+        </div>
       </section>
 
       <section id="prerequisites">

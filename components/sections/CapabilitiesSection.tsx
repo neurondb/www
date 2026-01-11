@@ -73,7 +73,7 @@ const capabilities = [
   },
   {
     capability: 'PostgreSQL Native',
-    description: 'Pure C implementation, 473 SQL functions, zero external dependencies, WAL integration, reorganized codebase (120 files in logical subdirectories), SIMD-optimized (AVX2/AVX-512/NEON) with runtime CPU detection',
+    description: 'Pure C implementation, 520+ SQL functions, zero external dependencies, WAL integration, reorganized codebase (120 files in logical subdirectories), SIMD-optimized (AVX2/AVX-512/NEON) with runtime CPU detection',
     performance: 'Zero core modifications, optimized compilation',
     productionReady: true,
   },

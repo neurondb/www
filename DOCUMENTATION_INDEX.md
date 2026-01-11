@@ -10,7 +10,7 @@ This document provides a complete map of all documentation in the NeuronDB ecosy
 
 #### NeuronDB (PostgreSQL Extension)
 - **Location**: `/app/docs/`
-- **Features**: 473+ SQL functions, vector search, ML algorithms, GPU acceleration
+- **Features**: 520+ SQL functions, vector search, ML algorithms, GPU acceleration
 - **Key Documents**:
   - Getting Started: `/docs/getting-started`
   - Installation: `/docs/installation`
@@ -319,7 +319,7 @@ This document provides a complete map of all documentation in the NeuronDB ecosy
 
 #### SQL API
 - **Document**: `/docs/sql-api`
-- **Covers**: All 473+ SQL functions
+- **Covers**: All 520+ SQL functions
   - Vector operations
   - Distance metrics
   - Quantization functions

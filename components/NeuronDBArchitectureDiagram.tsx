@@ -89,7 +89,7 @@ export default function NeuronDBArchitectureDiagram() {
         {/* API Layer */}
         <div className="bg-slate-800/60 border-2 border-slate-600 rounded-xl p-6 text-center">
           <h4 className="text-lg font-bold text-white mb-2">SQL API Layer</h4>
-          <p className="text-white/80 text-sm">473 SQL Functions | Operators | Types | Views</p>
+          <p className="text-white/80 text-sm">520+ SQL Functions | Operators | Types | Views</p>
         </div>
       </div>
     </div>

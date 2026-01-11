@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     default: `PostgreSQL AI Extension - ${siteConfig.name} | Vector Search, ML & RAG Pipeline`,
     template: `%s | PostgreSQL AI Extension`,
   },
-  description: 'NeuronDB is the leading PostgreSQL AI extension for vector search, machine learning inference, and RAG pipeline. Build AI applications in PostgreSQL with GPU acceleration, 52 ML algorithms, 473 SQL functions, and complete ecosystem (NeuronAgent, NeuronMCP, NeuronDesktop).',
+  description: 'NeuronDB is the leading PostgreSQL AI extension for vector search, machine learning inference, and RAG pipeline. Build AI applications in PostgreSQL with GPU acceleration, 52 ML algorithms, 520+ SQL functions, and complete ecosystem (NeuronAgent, NeuronMCP, NeuronDesktop).',
   applicationName: siteConfig.name,
   authors: [
     { name: `${siteConfig.name} Team`, url: baseUrl },
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     'neuronmcp',
     'neurondesktop',
     '52 ml algorithms',
-    '473 sql functions',
+    '520+ sql functions',
     'background workers',
     'vector quantization',
     'product quantization',

@@ -409,7 +409,7 @@ FROM hybrid_search(
     ],
     [
       { id: 502, sim: 0.9234, text: 'PostgreSQL vector extension for AI applications with GPU acceleration…', category: 'tech' },
-      { id: 489, sim: 0.9012, text: 'NeuronDB provides 473 SQL functions for vector operations and ML inference…', category: 'tech' },
+      { id: 489, sim: 0.9012, text: 'NeuronDB provides 520+ SQL functions for vector operations and ML inference…', category: 'tech' },
       { id: 456, sim: 0.8876, text: 'HNSW indexing enables sub-millisecond search on millions of high-dimensional vectors…', category: 'tech' },
       { id: 423, sim: 0.8754, text: 'RAG pipeline with reranking improves LLM response accuracy using semantic retrieval…', category: 'tech' },
       { id: 389, sim: 0.8621, text: 'Background workers handle async embedding generation and index maintenance automatically…', category: 'tech' },

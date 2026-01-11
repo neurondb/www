@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     question: 'How does NeuronDB work?',
-    answer: 'NeuronDB extends PostgreSQL with 473 SQL functions for vector operations, ML inference, and RAG workflows. It uses HNSW indexing for fast vector search and supports GPU acceleration for batch operations.',
+    answer: 'NeuronDB extends PostgreSQL with 520+ SQL functions for vector operations, ML inference, and RAG workflows. It uses HNSW indexing for fast vector search and supports GPU acceleration for batch operations.',
   },
   {
     question: 'Why is NeuronDB different?',
@@ -72,7 +72,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-1">473</div>
+              <div className="text-3xl sm:text-4xl font-bold text-white mb-1">520+</div>
               <div className="text-xs sm:text-sm text-slate-400">SQL Functions</div>
             </div>
             <div className="text-center">

@@ -23,7 +23,7 @@ import ParticleBackground from '@/components/ParticleBackground'
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'NeuronDB PostgreSQL AI Ecosystem',
-    description: 'PostgreSQL AI ecosystem with 4 products: NeuronDB extension for vector search and ML, NeuronAgent runtime, NeuronMCP server for Claude Desktop, and NeuronDesktop interface. Build AI applications with GPU acceleration, 52+ ML algorithms, 473 SQL functions, and 100+ MCP tools.',
+    description: 'PostgreSQL AI ecosystem with 4 products: NeuronDB extension for vector search and ML, NeuronAgent runtime, NeuronMCP server for Claude Desktop, and NeuronDesktop interface. Build AI applications with GPU acceleration, 52+ ML algorithms, 520+ SQL functions, and 100+ MCP tools.',
   keywords: [
     'neurondb',
     'postgresql ai ecosystem',
@@ -55,7 +55,7 @@ const faqs = [
   },
   {
     question: 'How does NeuronDB compare to pgvector?',
-    answer: 'NeuronDB adds ML inference with ONNX models, hybrid search, RAG pipelines, GPU acceleration, and 52 ML algorithms. It provides 473 SQL functions and 4 background workers.',
+    answer: 'NeuronDB adds ML inference with ONNX models, hybrid search, RAG pipelines, GPU acceleration, and 52 ML algorithms. It provides 520+ SQL functions and 4 background workers.',
   },
   {
     question: 'What PostgreSQL versions are supported?',
@@ -143,7 +143,7 @@ export default function Home() {
             {/* Animated Stats Cards */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
               {[
-                { icon: Code, value: 473, label: 'SQL Functions', color: 'var(--primary-500)' },
+                { icon: Code, value: '520+', label: 'SQL Functions', color: 'var(--primary-500)' },
                 { icon: Brain, value: 52, label: 'ML Algorithms', color: 'var(--secondary-500)' },
                 { icon: Zap, value: 100, label: 'MCP Tools', suffix: '+', color: 'var(--primary-600)' },
                 { icon: Rocket, value: 95, label: 'QPS Performance', suffix: '', color: 'var(--secondary-600)' },
@@ -161,7 +161,7 @@ export default function Home() {
                   >
                     <Icon className="w-5 h-5 mb-2 mx-auto transition-transform group-hover:scale-110" style={{ color: stat.color }} />
                     <div className="text-3xl font-bold mb-1" style={{ color: 'var(--text-primary)' }}>
-                      <AnimatedCounter end={stat.value} suffix={stat.suffix || ''} />
+                      <AnimatedCounter end={typeof stat.value === 'string' ? parseInt(stat.value.replace(/\D/g, '')) || 0 : stat.value} suffix={stat.suffix || ''} />
                     </div>
                     <div className="text-xs font-medium" style={{ color: 'var(--text-secondary)' }}>
                       {stat.label}
@@ -315,7 +315,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--text-tertiary)' }}>SQL Functions</div>
-                  <div className="font-mono" style={{ color: 'var(--text-secondary)' }}>473 functions</div>
+                  <div className="font-mono" style={{ color: 'var(--text-secondary)' }}>520+ functions</div>
                 </div>
                 <div>
                   <div className="text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--text-tertiary)' }}>Background Workers</div>
@@ -358,7 +358,7 @@ export default function Home() {
                     GPU acceleration for CUDA (NVIDIA), ROCm (AMD), and Metal (Apple Silicon) with automatic detection.
                   </p>
                   <p className="text-sm mb-4 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                    473 SQL functions with hybrid search, background workers, and security features.
+                    520+ SQL functions with hybrid search, background workers, and security features.
                   </p>
                   <Link
                     href="/neurondb"

@@ -281,7 +281,7 @@ PostgreSQL vector database solutions include several extensions that add vector 
 | **GPU Support** | CUDA + ROCm + Metal (native) | None | None | None | CUDA (via Python) |
 | **Distance Metrics** | 10+ (L2, Cosine, Inner Product, Manhattan, Hamming, Jaccard, etc.) | 3 (L2, Cosine, Inner Product) | 3 (L2, Cosine, Inner Product) | Uses pgvector | Uses pgvector |
 | **Vector Types** | 5 types (vector, vectorp, vecmap, vgraph, rtext) | 1 type (vector) | 1 type (vector) | Uses pgvector | Uses pgvector |
-| **SQL Functions** | 473 functions | ~20 functions | ~30 functions | ~15 functions | ~50 functions |
+| **SQL Functions** | 520+ functions | ~20 functions | ~30 functions | ~15 functions | ~50 functions |
 | **Performance (QPS)** | 100K+ (with GPU), 1K-2K (CPU) | 10K-50K | 50K-100K | Limited (API overhead) | 5K-20K (Python overhead) |
 | **Dependencies** | Zero (pure C, optional ONNX) | Zero (pure C) | Zero (pure C) | Rust runtime | Python + ML libraries |
 | **PostgreSQL Versions** | 16, 17, 18 | 12-18 | 15-18 | 16-18 | 14-16 |

@@ -353,7 +353,7 @@ export default function ArchitectureDiagramSVG() {
             fill="#64748b"
             className="dark:fill-slate-400"
           >
-            Pure C • 473 SQL Functions • 4 Background Workers
+            Pure C • 520+ SQL Functions • 4 Background Workers
           </text>
         </g>
       </svg>

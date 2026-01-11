@@ -16,7 +16,7 @@ const products: Product[] = [
   {
     name: 'NeuronDB',
     tagline: 'PostgreSQL extension for AI',
-    description: 'Vector search, ML inference, and RAG pipelines. Pure C, 473 SQL functions, GPU-accelerated.',
+    description: 'Vector search, ML inference, and RAG pipelines. Pure C, 520+ SQL functions, GPU-accelerated.',
     art: 'neurondb',
     href: '/neurondb',
     icon: Database,
@@ -25,7 +25,7 @@ const products: Product[] = [
       '52+ ML algorithms in pure C',
       'RAG pipeline with reranking',
       'GPU acceleration (CUDA/ROCm/Metal)',
-      '473 SQL functions',
+      '520+ SQL functions',
     ],
   },
   {

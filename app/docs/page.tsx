@@ -49,7 +49,7 @@ export default function DocsPage() {
             {/* Quick Stats - Exact Homepage Style */}
             <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-400 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <span className="font-mono transition-all duration-300 hover:text-slate-200">4 Products</span>
-              <span className="font-mono transition-all duration-300 hover:text-slate-200">473 SQL Functions</span>
+              <span className="font-mono transition-all duration-300 hover:text-slate-200">520+ SQL Functions</span>
               <span className="font-mono transition-all duration-300 hover:text-slate-200">52 ML Algorithms</span>
             </div>
 
