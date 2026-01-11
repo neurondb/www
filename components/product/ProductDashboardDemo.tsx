@@ -250,9 +250,97 @@ function CodePanel({ title, code }: { title: string; code: string }) {
 
 export default function ProductDashboardDemo({ productId, tabs, title, subtitle }: ProductDashboardDemoProps) {
   const [active, setActive] = useState(tabs[0]?.id || '')
+  const [variantIndex, setVariantIndex] = useState(0)
+  const [isTransitioning, setIsTransitioning] = useState(false)
   const product = getProduct(productId)
   const productDisplayName = product?.displayName || productId
   
+  // Generate variants for each tab (code and results variations)
+  const generateVariants = useMemo(() => {
+    const variants: Record<string, Array<{ code: string; results?: Array<{ id: number; sim?: number; text?: string; prediction?: string; category?: string }> }>> = {}
+    
+    tabs.forEach((tab, tabIdx) => {
+      const tabVariants: Array<{ code: string; results?: Array<{ id: number; sim?: number; text?: string; prediction?: string; category?: string }> }> = []
+      
+      // Base variant
+      tabVariants.push({
+        code: tab.code,
+        results: tab.results ? tab.results.map(r => ({ ...r })) : undefined,
+      })
+      
+      // Generate 2-3 more variants per tab
+      if (tab.results && tab.results.length > 0) {
+        // Variant 1: Different IDs and adjusted similarity scores
+        tabVariants.push({
+          code: tab.code,
+          results: tab.results.map((r, i) => ({
+            ...r,
+            id: r.id + 100 + (tabIdx * 10) + i,
+            sim: r.sim ? Math.min(0.99, Math.max(0.80, r.sim - 0.01 + (i * 0.005))) : r.sim,
+            text: r.text,
+          })),
+        })
+        
+        // Variant 2: Different IDs and scores
+        tabVariants.push({
+          code: tab.code,
+          results: tab.results.map((r, i) => ({
+            ...r,
+            id: r.id + 200 + (tabIdx * 10) + i,
+            sim: r.sim ? Math.min(0.99, Math.max(0.75, r.sim - 0.02 + (i * 0.003))) : r.sim,
+            text: r.text,
+          })),
+        })
+        
+        // Variant 3: Another variation
+        tabVariants.push({
+          code: tab.code,
+          results: tab.results.map((r, i) => ({
+            ...r,
+            id: r.id + 300 + (tabIdx * 10) + i,
+            sim: r.sim ? Math.min(0.99, Math.max(0.82, r.sim - 0.015 + (i * 0.004))) : r.sim,
+            text: r.text,
+          })),
+        })
+      } else {
+        // For tabs without results, just use the same code
+        tabVariants.push({ code: tab.code })
+        tabVariants.push({ code: tab.code })
+        tabVariants.push({ code: tab.code })
+      }
+      
+      variants[tab.id] = tabVariants
+    })
+    
+    return variants
+  }, [tabs])
+
+  // Reset variant index when switching tabs
+  useEffect(() => {
+    setVariantIndex(0)
+    setIsTransitioning(false)
+  }, [active])
+
+  // Rotate variants every 3 seconds with smooth transition
+  useEffect(() => {
+    const variants = generateVariants[active]
+    if (!variants || variants.length <= 1) return
+    
+    const interval = setInterval(() => {
+      setIsTransitioning(true)
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          setVariantIndex((prev) => (prev + 1) % variants.length)
+          requestAnimationFrame(() => {
+            setIsTransitioning(false)
+          })
+        }, 150)
+      })
+    }, 3000)
+    
+    return () => clearInterval(interval)
+  }, [active, generateVariants])
+
   let selectedTab = tabs[0]
   for (let i = 0; i < tabs.length; i++) {
     if (tabs[i].id === active) {
@@ -260,14 +348,21 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
       break
     }
   }
-  const tab = selectedTab
+  
+  const variants = generateVariants[active] || []
+  const currentVariant = variants[variantIndex % variants.length] || variants[0] || { code: selectedTab.code, results: selectedTab.results }
+  const tab = {
+    ...selectedTab,
+    code: currentVariant.code,
+    results: currentVariant.results || selectedTab.results,
+  }
 
   return (
     <section className="bg-slate-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-12 gap-10 items-stretch" style={{ minHeight: '650px' }}>
           {/* Left - tabs */}
-          <div className="lg:col-span-4 flex flex-col h-full self-stretch min-h-full">
+          <div className="lg:col-span-4 flex flex-col">
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white flex-shrink-0">
               {title}
             </h2>
@@ -275,7 +370,7 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
               {subtitle}
             </p>
 
-            <div className="mt-8 space-y-2 flex-grow min-h-0">
+            <div className="mt-8 space-y-2 flex-grow min-h-0 overflow-y-auto">
               {tabs.map((t) => {
                 const Icon = iconMap[t.iconName] || Database
                 const isActive = t.id === active
@@ -284,7 +379,7 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
                     key={t.id}
                     onClick={() => setActive(t.id)}
                     className={[
-                      'w-full text-left rounded-xl border px-3 py-2.5 transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-md',
+                      'w-full text-left rounded-xl border px-3 py-2.5 transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-md flex-shrink-0',
                       isActive
                         ? 'border-slate-700 bg-slate-950 shadow-sm'
                         : 'border-slate-800 bg-slate-900 hover:bg-slate-950',
@@ -306,7 +401,7 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
           </div>
 
           {/* Right: "demo panel" */}
-          <div className="lg:col-span-8 rounded-2xl border border-slate-800 bg-slate-950 overflow-hidden flex flex-col">
+          <div className="lg:col-span-8 rounded-2xl border border-slate-800 bg-slate-950 overflow-hidden flex flex-col h-full">
             {/* App topbar */}
             <div className="flex items-center justify-between px-5 py-4 border-b border-slate-800 bg-slate-900 flex-shrink-0">
               <div className="flex items-center gap-3">
@@ -340,8 +435,8 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
                 </div>
 
                 {/* Content by tab */}
-                <div key={tab.id} className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden animate-fade-in-up transition-all duration-300">
-                  <div className="flex flex-col gap-6 pb-4 h-full">
+                <div key={`${tab.id}-${variantIndex}`} className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden">
+                  <div className={`flex flex-col gap-6 pb-4 h-full transition-opacity duration-300 ease-in-out ${isTransitioning ? 'opacity-40' : 'opacity-100'}`}>
                     {/* Code Panel - expandable */}
                     <div className="min-h-[320px] flex-[2] overflow-hidden">
                       <CodePanel title={tab.label} code={tab.code} />

@@ -352,6 +352,7 @@ function ResultsTable({ results }: { results: Array<{ id: number; sim?: number; 
 export default function HomeDashboardDemo() {
   const [active, setActive] = useState('sql')
   const [queryIndex, setQueryIndex] = useState(0)
+  const [variantIndex, setVariantIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
 
   const sqlQueries = useMemo(() => [
@@ -416,33 +417,108 @@ FROM hybrid_search(
     ],
   ], [])
 
-  // Reset query index when switching to SQL tab
+  // Generate variants for other tabs
+  const embeddingVariants = useMemo(() => [
+    [
+      { id: 1, text: 'Document 1: Introduction to vector databases...', category: 'processed' },
+      { id: 2, text: 'Document 2: Machine learning embeddings guide...', category: 'processed' },
+      { id: 3, text: 'Document 3: Semantic search techniques...', category: 'processed' },
+      { id: 4, text: 'Document 4: RAG pipeline architecture...', category: 'processed' },
+      { id: 5, text: 'Document 5: HNSW indexing explained...', category: 'processed' },
+    ],
+    [
+      { id: 6, text: 'Document 6: PostgreSQL extension features...', category: 'processed' },
+      { id: 7, text: 'Document 7: GPU acceleration methods...', category: 'processed' },
+      { id: 8, text: 'Document 8: Batch embedding generation...', category: 'processed' },
+      { id: 9, text: 'Document 9: Vector similarity metrics...', category: 'processed' },
+      { id: 10, text: 'Document 10: Hybrid search implementation...', category: 'processed' },
+    ],
+    [
+      { id: 11, text: 'Document 11: ML model integration...', category: 'processed' },
+      { id: 12, text: 'Document 12: Background worker tasks...', category: 'processed' },
+      { id: 13, text: 'Document 13: Index optimization tips...', category: 'processed' },
+      { id: 14, text: 'Document 14: Query performance tuning...', category: 'processed' },
+      { id: 15, text: 'Document 15: Database scaling strategies...', category: 'processed' },
+    ],
+  ], [])
+
+  const ragVariants = useMemo(() => [
+    [
+      { id: 42, sim: 0.9523, text: 'Vector search enables semantic similarity matching in high-dimensional spaces…' },
+      { id: 38, sim: 0.9234, text: 'HNSW indexes provide fast approximate nearest neighbor search…' },
+      { id: 35, sim: 0.8945, text: 'RAG combines retrieval with generation for accurate LLM responses…' },
+      { id: 31, sim: 0.8656, text: 'Embeddings convert text into numerical vectors for ML models…' },
+      { id: 28, sim: 0.8367, text: 'PostgreSQL extensions enable vector operations directly…' },
+    ],
+    [
+      { id: 102, sim: 0.9612, text: 'Context retrieval improves LLM response accuracy significantly…' },
+      { id: 98, sim: 0.9345, text: 'Cross-encoder reranking enhances search relevance…' },
+      { id: 95, sim: 0.9056, text: 'Semantic search finds related content by meaning…' },
+      { id: 91, sim: 0.8767, text: 'Vector databases store high-dimensional embeddings efficiently…' },
+      { id: 88, sim: 0.8478, text: 'RAG pipelines combine retrieval with generation seamlessly…' },
+    ],
+    [
+      { id: 202, sim: 0.9556, text: 'NeuronDB provides 520+ SQL functions for vector operations…' },
+      { id: 198, sim: 0.9278, text: 'HNSW indexing enables sub-millisecond search on millions…' },
+      { id: 195, sim: 0.8989, text: 'GPU acceleration speeds up batch vector operations…' },
+      { id: 191, sim: 0.8700, text: 'Background workers handle async embedding generation…' },
+      { id: 188, sim: 0.8411, text: 'Hybrid search combines vector and keyword matching…' },
+    ],
+  ], [])
+
+  // Reset indices when switching tabs
   useEffect(() => {
-    if (active === 'sql') {
-      setQueryIndex(0)
-      setIsTransitioning(false)
-    }
+    setQueryIndex(0)
+    setVariantIndex(0)
+    setIsTransitioning(false)
   }, [active])
 
-  // Rotate queries every 3 seconds with smooth transition
+  // Rotate queries/variants every 3 seconds with smooth transition
   useEffect(() => {
-    if (active !== 'sql') return
+    let interval: NodeJS.Timeout | null = null
     
-    const interval = setInterval(() => {
-      setIsTransitioning(true)
-      // Use requestAnimationFrame for smoother animation
-      requestAnimationFrame(() => {
-        setTimeout(() => {
-          setQueryIndex((prev) => (prev + 1) % sqlQueries.length)
-          requestAnimationFrame(() => {
-            setIsTransitioning(false)
-          })
-        }, 150)
-      })
-    }, 3000)
+    if (active === 'sql') {
+      interval = setInterval(() => {
+        setIsTransitioning(true)
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            setQueryIndex((prev) => (prev + 1) % sqlQueries.length)
+            requestAnimationFrame(() => {
+              setIsTransitioning(false)
+            })
+          }, 150)
+        })
+      }, 3000)
+    } else if (active === 'embeddings') {
+      interval = setInterval(() => {
+        setIsTransitioning(true)
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            setVariantIndex((prev) => (prev + 1) % embeddingVariants.length)
+            requestAnimationFrame(() => {
+              setIsTransitioning(false)
+            })
+          }, 150)
+        })
+      }, 3000)
+    } else if (active === 'rag') {
+      interval = setInterval(() => {
+        setIsTransitioning(true)
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            setVariantIndex((prev) => (prev + 1) % ragVariants.length)
+            requestAnimationFrame(() => {
+              setIsTransitioning(false)
+            })
+          }, 150)
+        })
+      }, 3000)
+    }
     
-    return () => clearInterval(interval)
-  }, [active, sqlQueries.length])
+    return () => {
+      if (interval) clearInterval(interval)
+    }
+  }, [active, sqlQueries.length, embeddingVariants.length, ragVariants.length])
 
   const tab = useMemo(() => {
     const found = tabsData.find((t) => t.id === active)
@@ -647,13 +723,9 @@ embed.bulk_insert('embeddings', vectors)`} />
                       </div>
                       {/* Results Table - fixed size, fixed position */}
                       <div className="h-[220px] flex-shrink-0">
-                        <ResultsTable results={[
-                          { id: 1, text: 'Document 1: Introduction to vector databases...', category: 'processed' },
-                          { id: 2, text: 'Document 2: Machine learning embeddings guide...', category: 'processed' },
-                          { id: 3, text: 'Document 3: Semantic search techniques...', category: 'processed' },
-                          { id: 4, text: 'Document 4: RAG pipeline architecture...', category: 'processed' },
-                          { id: 5, text: 'Document 5: HNSW indexing explained...', category: 'processed' },
-                        ]} />
+                        <div className={`h-full transition-opacity duration-300 ease-in-out ${isTransitioning ? 'opacity-40' : 'opacity-100'}`}>
+                          <ResultsTable results={embeddingVariants[variantIndex % embeddingVariants.length] || embeddingVariants[0]} />
+                        </div>
                       </div>
                       {/* Stats panels - fixed size, fixed position */}
                       <div className="grid grid-cols-4 gap-4 flex-shrink-0">
@@ -748,18 +820,18 @@ SELECT neurondb.rag.query(
                       </div>
                       {/* Response panel - fixed size */}
                       <div className="h-[240px] flex-shrink-0 rounded-xl border border-slate-800 bg-slate-950 p-4 overflow-auto">
-                        <div className="text-base font-semibold text-slate-200 mb-3">RAG Response</div>
-                        <div className="text-sm text-slate-300 space-y-3">
-                          <p>Vector search is a technique for finding similar items in high-dimensional spaces using mathematical representations called embeddings. It enables semantic similarity matching beyond keyword-based search...</p>
-                          <div>
-                            <div className="font-semibold mb-2">Sources (Top 5):</div>
-                            <ul className="list-disc list-inside space-y-1.5 text-slate-400">
-                              <li>doc_42 (similarity: 0.9523) - Vector search fundamentals</li>
-                              <li>doc_38 (similarity: 0.9234) - HNSW index architecture</li>
-                              <li>doc_35 (similarity: 0.8945) - Embedding generation techniques</li>
-                              <li>doc_28 (similarity: 0.8756) - RAG pipeline implementation</li>
-                              <li>doc_24 (similarity: 0.8601) - Semantic similarity metrics</li>
-                            </ul>
+                        <div className={`h-full transition-opacity duration-300 ease-in-out ${isTransitioning ? 'opacity-40' : 'opacity-100'}`}>
+                          <div className="text-base font-semibold text-slate-200 mb-3">RAG Response</div>
+                          <div className="text-sm text-slate-300 space-y-3">
+                            <p>Vector search is a technique for finding similar items in high-dimensional spaces using mathematical representations called embeddings. It enables semantic similarity matching beyond keyword-based search...</p>
+                            <div>
+                              <div className="font-semibold mb-2">Sources (Top 5):</div>
+                              <ul className="list-disc list-inside space-y-1.5 text-slate-400">
+                                {(ragVariants[variantIndex % ragVariants.length] || ragVariants[0]).map((r, i) => (
+                                  <li key={r.id}>doc_{r.id} (similarity: {r.sim?.toFixed(4)}) - {r.text?.substring(0, 40)}…</li>
+                                ))}
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
