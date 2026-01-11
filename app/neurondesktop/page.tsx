@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import ProductPageTemplate from '@/components/templates/ProductPageTemplate';
 import ProductDashboardDemo from '@/components/product/ProductDashboardDemo';
+import NeuronDesktopFeatures from '@/components/product/NeuronDesktopFeatures';
 import { generateDocsMetadata } from '@/config/products';
 import { Monitor, Server, Bot, Database, LineChart, Settings, Shield } from 'lucide-react';
 
@@ -412,6 +413,10 @@ export default function NeuronDesktopPage() {
             subtitle="Unified web interface for the complete NeuronDB ecosystem"
           />
         }
+        featurePillars={{
+          ...neurondesktopConfig.featurePillars,
+          customContent: <NeuronDesktopFeatures />,
+        }}
       />
     </>
   );

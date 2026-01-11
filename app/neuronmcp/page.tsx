@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ProductPageTemplate from '@/components/templates/ProductPageTemplate';
 import ProductDashboardDemo from '@/components/product/ProductDashboardDemo';
 import NeuronMCPArchitectureDiagram from '@/components/NeuronMCPArchitectureDiagram';
+import NeuronMCPFeatures from '@/components/product/NeuronMCPFeatures';
 import { generateDocsMetadata } from '@/config/products';
 
 export const metadata = generateDocsMetadata('neurondb', 'NeuronMCP: Model Context Protocol Server');
@@ -388,6 +389,10 @@ export default function NeuronMCPPage() {
             subtitle="100+ tools for vector ops, ML, RAG, and database admin"
           />
         }
+        featurePillars={{
+          ...neuronmcpConfig.featurePillars,
+          customContent: <NeuronMCPFeatures />,
+        }}
       />
     </>
   );

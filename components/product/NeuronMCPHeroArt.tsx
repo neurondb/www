@@ -29,8 +29,8 @@ export default function NeuronMCPHeroArt({
           <stop offset="100%" stopColor="currentColor" stopOpacity="0.75" />
         </linearGradient>
         <linearGradient id="toolGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#10b981" stopOpacity="0.8" />
-          <stop offset="100%" stopColor="#059669" stopOpacity="0.6" />
+          <stop offset="0%" stopColor="#475569" stopOpacity="0.6" />
+          <stop offset="100%" stopColor="#64748b" stopOpacity="0.5" />
         </linearGradient>
         <filter id="mcpShadow" x="-50%" y="-50%" width="200%" height="200%">
           <feGaussianBlur in="SourceAlpha" stdDeviation="2" />

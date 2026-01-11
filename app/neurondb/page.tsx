@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ProductPageTemplate from '@/components/templates/ProductPageTemplate';
 import ProductDashboardDemo from '@/components/product/ProductDashboardDemo';
 import NeuronDBArchitectureDiagram from '@/components/NeuronDBArchitectureDiagram';
+import NeuronDBFeatures from '@/components/product/NeuronDBFeatures';
 import ProductSchema from '@/components/SEO/ProductSchema';
 import { generateProductPageMetadata } from '@/config/seo';
 
@@ -313,6 +314,10 @@ export default function NeurondBPage() {
             subtitle="PostgreSQL AI Extension for Vector Search, ML Inference and RAG Pipeline. AI applications in PostgreSQL with GPU acceleration, 52 ML algorithms, and hybrid search."
           />
         }
+        featurePillars={{
+          ...neurondbConfig.featurePillars,
+          customContent: <NeuronDBFeatures />,
+        }}
       />
     </>
   );
