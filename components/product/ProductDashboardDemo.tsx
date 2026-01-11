@@ -267,7 +267,7 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-12 gap-10 items-stretch" style={{ minHeight: '650px' }}>
           {/* Left - tabs */}
-          <div className="lg:col-span-4 flex flex-col h-full">
+          <div className="lg:col-span-4 flex flex-col h-full self-stretch min-h-full">
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white flex-shrink-0">
               {title}
             </h2>
@@ -275,7 +275,7 @@ export default function ProductDashboardDemo({ productId, tabs, title, subtitle 
               {subtitle}
             </p>
 
-            <div className="mt-8 space-y-2 flex-grow">
+            <div className="mt-8 space-y-2 flex-grow min-h-0">
               {tabs.map((t) => {
                 const Icon = iconMap[t.iconName] || Database
                 const isActive = t.id === active

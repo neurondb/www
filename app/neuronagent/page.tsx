@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ProductPageTemplate from '@/components/templates/ProductPageTemplate';
 import ProductDashboardDemo from '@/components/product/ProductDashboardDemo';
 import NeuronAgentArchitectureDiagram from '@/components/NeuronAgentArchitectureDiagram';
+import NeuronAgentFeatures from '@/components/product/NeuronAgentFeatures';
 import { generateDocsMetadata } from '@/config/products';
 
 export const metadata = generateDocsMetadata('neurondb', 'NeuronAgent: AI Agent Runtime');
@@ -114,6 +115,114 @@ const neuronagentDashboardTabs = [
       { id: 3, text: 'ws_003: message received, processing', category: 'message' },
       { id: 4, text: 'ws_004: response complete, 342ms latency', category: 'complete' },
       { id: 5, text: 'Active connections: 89, Avg latency: 245ms', category: 'stats' },
+    ],
+  },
+  {
+    id: 'collaboration',
+    label: 'Multi-Agent',
+    iconName: 'Layers',
+    heading: 'Agent collaboration',
+    description: 'Agent-to-agent communication and task delegation',
+    codeLabel: 'HTTP',
+    code: `POST /api/v1/agents/agent_123/collaborate\n{\n  "target_agent": "agent_456",\n  "task": "analyze sales data",\n  "delegate": true\n}\n\n// Agent-to-agent messaging\nPOST /api/v1/agents/agent_123/message\n{\n  "recipient": "agent_456",\n  "content": "Please process this request"`,
+    footerHref: '/neuronagent',
+    footerLabel: 'Collaboration Docs',
+    results: [
+      { id: 1, text: 'agent_123 → agent_456: task delegated, status: processing', category: 'delegation' },
+      { id: 2, text: 'agent_456 → agent_123: task completed, results ready', category: 'response' },
+      { id: 3, text: 'Shared workspace: 3 agents, 12 active tasks', category: 'workspace' },
+      { id: 4, text: 'Hierarchical structure: parent_agent → 5 child agents', category: 'hierarchy' },
+      { id: 5, text: 'Total collaborations: 247, Success rate: 98.5%', category: 'stats' },
+    ],
+  },
+  {
+    id: 'workflow',
+    label: 'Workflow Engine',
+    iconName: 'GitBranch',
+    heading: 'DAG-based workflows',
+    description: 'Multi-step task orchestration with HITL support',
+    codeLabel: 'HTTP',
+    code: `POST /api/v1/workflows\n{\n  "name": "customer_onboarding",\n  "steps": [\n    {"type": "agent", "agent_id": "agent_123"},\n    {"type": "approval", "required": true},\n    {"type": "tool", "tool": "sql"}\n  ],\n  "hitl_enabled": true\n}\n\n// Execute workflow\nPOST /api/v1/workflows/workflow_789/execute`,
+    footerHref: '/neuronagent',
+    footerLabel: 'Workflow Docs',
+    results: [
+      { id: 789, text: 'workflow_789: customer_onboarding, step 2/3, waiting approval', category: 'workflow' },
+      { id: 790, text: 'workflow_790: data_processing, step 1/4, running', category: 'workflow' },
+      { id: 791, text: 'workflow_791: report_generation, completed, 3.2s', category: 'workflow' },
+      { id: 792, text: 'workflow_792: approval_required, paused for human review', category: 'hitl' },
+      { id: 793, text: 'Total workflows: 89, Active: 12, Pending approval: 3', category: 'stats' },
+    ],
+  },
+  {
+    id: 'planning',
+    label: 'Planning & Reflection',
+    iconName: 'BrainCircuit',
+    heading: 'LLM-based planning',
+    description: 'Task decomposition and agent self-reflection',
+    codeLabel: 'HTTP',
+    code: `POST /api/v1/agents/agent_123/plan\n{\n  "goal": "Analyze Q4 sales and generate report",\n  "decompose": true\n}\n\n// Get plan\nGET /api/v1/agents/agent_123/plans/plan_456\n\n// Agent reflection\nPOST /api/v1/agents/agent_123/reflect\n{\n  "task_id": "task_789",\n  "quality_assessment": true\n}`,
+    footerHref: '/neuronagent',
+    footerLabel: 'Planning Docs',
+    results: [
+      { id: 456, text: 'plan_456: 5 steps decomposed, estimated time: 2.3m', category: 'plan' },
+      { id: 457, text: 'plan_457: 3 steps, 2 parallel, 1 sequential', category: 'plan' },
+      { id: 458, text: 'reflection_001: task quality score 0.92, excellent', category: 'reflection' },
+      { id: 459, text: 'reflection_002: identified improvement areas', category: 'reflection' },
+      { id: 460, text: 'Total plans: 124, Avg steps: 4.2, Quality: 0.89', category: 'stats' },
+    ],
+  },
+  {
+    id: 'budget',
+    label: 'Budget Management',
+    iconName: 'Trophy',
+    heading: 'Cost tracking',
+    description: 'Real-time cost tracking and budget controls',
+    codeLabel: 'HTTP',
+    code: `GET /api/v1/agents/agent_123/budget\n// Returns budget status\n\nPOST /api/v1/agents/agent_123/budget\n{\n  "max_cost_per_session": 0.50,\n  "max_tokens": 10000,\n  "alert_threshold": 0.80\n}\n\nGET /api/v1/budgets/analytics\n// Cost trends and optimization`,
+    footerHref: '/neuronagent',
+    footerLabel: 'Budget Docs',
+    results: [
+      { id: 1, text: 'agent_123: $0.23 / $0.50 (46%), 2,341 tokens used', category: 'budget' },
+      { id: 2, text: 'agent_456: $0.48 / $0.50 (96%), alert triggered', category: 'alert' },
+      { id: 3, text: 'session_789: $0.12, 5 API calls, within budget', category: 'session' },
+      { id: 4, text: 'Total cost today: $12.45, 247 sessions, avg $0.05', category: 'summary' },
+      { id: 5, text: 'Budget alerts: 3, Auto-paused: 1', category: 'alerts' },
+    ],
+  },
+  {
+    id: 'evaluation',
+    label: 'Evaluation',
+    iconName: 'Trophy',
+    heading: 'Performance metrics',
+    description: 'Agent evaluation framework with quality scoring',
+    codeLabel: 'HTTP',
+    code: `POST /api/v1/agents/agent_123/evaluate\n{\n  "test_cases": ["case_1", "case_2"],\n  "metrics": ["accuracy", "latency", "quality"]\n}\n\nGET /api/v1/agents/agent_123/evaluations\n// Returns evaluation reports\n\nPOST /api/v1/evaluations/compare\n{\n  "agent_a": "agent_123",\n  "agent_b": "agent_456"\n}`,
+    footerHref: '/neuronagent',
+    footerLabel: 'Evaluation Docs',
+    results: [
+      { id: 1, text: 'eval_001: accuracy 0.94, latency 245ms, quality 0.91', category: 'evaluation' },
+      { id: 2, text: 'eval_002: A/B test, agent_123 vs agent_456', category: 'comparison' },
+      { id: 3, text: 'eval_003: automated scoring, 50 test cases', category: 'automated' },
+      { id: 4, text: 'eval_004: quality score improved 12% this week', category: 'improvement' },
+      { id: 5, text: 'Total evaluations: 89, Avg quality: 0.87', category: 'stats' },
+    ],
+  },
+  {
+    id: 'tools-advanced',
+    label: 'Advanced Tools',
+    iconName: 'Zap',
+    heading: '20+ tools available',
+    description: 'Browser, Filesystem, Memory, Collaboration, NeuronDB tools',
+    codeLabel: 'HTTP',
+    code: `POST /api/v1/tools/execute\n{\n  "tool": "browser",\n  "arguments": {\n    "action": "navigate",\n    "url": "https://example.com"\n  }\n}\n\n// Filesystem tool\nPOST /api/v1/tools/execute\n{\n  "tool": "filesystem",\n  "arguments": {\n    "operation": "read",\n    "path": "/data/report.json"\n  }\n}`,
+    footerHref: '/neuronagent',
+    footerLabel: 'Tools Docs',
+    results: [
+      { id: 1, text: 'browser: page loaded, extracted 342 elements', category: 'browser' },
+      { id: 2, text: 'filesystem: file read, 2.3KB, virtual path', category: 'filesystem' },
+      { id: 3, text: 'memory: context stored, 5 memories added', category: 'memory' },
+      { id: 4, text: 'neurondb: vector search executed, 10 results', category: 'neurondb' },
+      { id: 5, text: 'Total tools: 20+, Executions: 12,447', category: 'stats' },
     ],
   },
 ];
@@ -429,6 +538,10 @@ export default function NeuronAgentPage() {
             subtitle="Build autonomous agents with memory and tool execution"
           />
         }
+        featurePillars={{
+          ...neuronagentConfig.featurePillars,
+          customContent: <NeuronAgentFeatures />,
+        }}
       />
     </>
   );

@@ -52,7 +52,8 @@ export interface ProductPageTemplateProps {
   dashboard?: React.ReactNode
   featurePillars?: {
     kicker?: string
-    items: Array<{ title: string; desc: string | string[] }>
+    items?: Array<{ title: string; desc: string | string[] }>
+    customContent?: React.ReactNode
   }
   features?: Array<{
     icon?: React.ReactNode
@@ -406,16 +407,20 @@ export default function ProductPageTemplate({
               </h2>
               <div className="mx-auto h-1 w-28 bg-slate-400 rounded" />
             </div>
-            <CardGrid columns={3} gap="md">
-              {featurePillars.items.map((item, i) => (
-                <FeatureCard
-                  key={i}
-                  title={item.title}
-                  description={item.desc}
-                  productId={productId}
-                />
-              ))}
-            </CardGrid>
+            {featurePillars.customContent ? (
+              featurePillars.customContent
+            ) : featurePillars.items ? (
+              <CardGrid columns={3} gap="md">
+                {featurePillars.items.map((item, i) => (
+                  <FeatureCard
+                    key={i}
+                    title={item.title}
+                    description={item.desc}
+                    productId={productId}
+                  />
+                ))}
+              </CardGrid>
+            ) : null}
           </div>
         </SectionTemplate>
       )}
