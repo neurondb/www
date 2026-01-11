@@ -41,35 +41,35 @@ const features: Feature[] = [
       <svg viewBox="0 0 200 120" className="w-full h-auto">
         <defs>
           <linearGradient id="stateGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#475569" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#64748b" stopOpacity="0.6" />
           </linearGradient>
         </defs>
         {/* State boxes */}
-        <rect x="10" y="50" width="40" height="30" rx="4" fill="url(#stateGradient)" stroke="#06b6d4" strokeWidth="2" />
-        <text x="30" y="70" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">Init</text>
+        <rect x="10" y="50" width="45" height="32" rx="4" fill="url(#stateGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="32.5" y="70" textAnchor="middle" fill="#e2e8f0" fontSize="9" fontWeight="600">Init</text>
         
-        <rect x="70" y="50" width="40" height="30" rx="4" fill="url(#stateGradient)" stroke="#06b6d4" strokeWidth="2" />
-        <text x="90" y="70" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">Running</text>
+        <rect x="70" y="50" width="50" height="32" rx="4" fill="url(#stateGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="95" y="70" textAnchor="middle" fill="#e2e8f0" fontSize="9" fontWeight="600">Running</text>
         
-        <rect x="130" y="50" width="40" height="30" rx="4" fill="url(#stateGradient)" stroke="#06b6d4" strokeWidth="2" />
-        <text x="150" y="70" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">Complete</text>
+        <rect x="135" y="50" width="50" height="32" rx="4" fill="url(#stateGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="160" y="70" textAnchor="middle" fill="#e2e8f0" fontSize="9" fontWeight="600">Complete</text>
         
         {/* Arrows */}
-        <path d="M 50 65 L 70 65" stroke="#06b6d4" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
-        <path d="M 110 65 L 130 65" stroke="#06b6d4" strokeWidth="2" fill="none" markerEnd="url(#arrowhead)" />
+        <path d="M 55 66 L 70 66" stroke="#94a3b8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowheadState)" />
+        <path d="M 120 66 L 135 66" stroke="#94a3b8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowheadState)" />
         
         {/* Error state */}
-        <rect x="70" y="10" width="40" height="30" rx="4" fill="#ef4444" fillOpacity="0.3" stroke="#ef4444" strokeWidth="2" />
-        <text x="90" y="30" textAnchor="middle" fill="#ef4444" fontSize="10" fontWeight="bold">Error</text>
-        <path d="M 90 50 L 90 40" stroke="#ef4444" strokeWidth="2" fill="none" markerEnd="url(#arrowheadRed)" />
+        <rect x="75" y="10" width="40" height="28" rx="4" fill="#64748b" fillOpacity="0.3" stroke="#94a3b8" strokeWidth="1.5" />
+        <text x="95" y="28" textAnchor="middle" fill="#cbd5e1" fontSize="9" fontWeight="600">Error</text>
+        <path d="M 95 50 L 95 38" stroke="#94a3b8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowheadError)" />
         
         <defs>
-          <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-            <polygon points="0 0, 10 3, 0 6" fill="#06b6d4" />
+          <marker id="arrowheadState" markerWidth="8" markerHeight="8" refX="7" refY="2.5" orient="auto">
+            <polygon points="0 0, 8 2.5, 0 5" fill="#94a3b8" />
           </marker>
-          <marker id="arrowheadRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-            <polygon points="0 0, 10 3, 0 6" fill="#ef4444" />
+          <marker id="arrowheadError" markerWidth="8" markerHeight="8" refX="7" refY="2.5" orient="auto">
+            <polygon points="0 0, 8 2.5, 0 5" fill="#94a3b8" />
           </marker>
         </defs>
       </svg>
@@ -88,28 +88,28 @@ const features: Feature[] = [
       <svg viewBox="0 0 200 120" className="w-full h-auto">
         <defs>
           <linearGradient id="memoryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#a855f7" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#475569" stopOpacity="0.5" />
+            <stop offset="100%" stopColor="#64748b" stopOpacity="0.5" />
           </linearGradient>
         </defs>
         {/* Memory nodes */}
-        <circle cx="50" cy="40" r="15" fill="url(#memoryGradient)" stroke="#8b5cf6" strokeWidth="2" />
-        <circle cx="100" cy="30" r="15" fill="url(#memoryGradient)" stroke="#8b5cf6" strokeWidth="2" />
-        <circle cx="150" cy="40" r="15" fill="url(#memoryGradient)" stroke="#8b5cf6" strokeWidth="2" />
-        <circle cx="75" cy="70" r="15" fill="url(#memoryGradient)" stroke="#8b5cf6" strokeWidth="2" />
-        <circle cx="125" cy="70" r="15" fill="url(#memoryGradient)" stroke="#8b5cf6" strokeWidth="2" />
+        <circle cx="50" cy="40" r="14" fill="url(#memoryGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <circle cx="100" cy="30" r="14" fill="url(#memoryGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <circle cx="150" cy="40" r="14" fill="url(#memoryGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <circle cx="75" cy="70" r="14" fill="url(#memoryGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <circle cx="125" cy="70" r="14" fill="url(#memoryGradient)" stroke="#64748b" strokeWidth="1.5" />
         
         {/* Connections */}
-        <line x1="50" y1="40" x2="100" y2="30" stroke="#8b5cf6" strokeWidth="1.5" opacity="0.6" />
-        <line x1="100" y1="30" x2="150" y2="40" stroke="#8b5cf6" strokeWidth="1.5" opacity="0.6" />
-        <line x1="50" y1="40" x2="75" y2="70" stroke="#8b5cf6" strokeWidth="1.5" opacity="0.6" />
-        <line x1="100" y1="30" x2="125" y2="70" stroke="#8b5cf6" strokeWidth="1.5" opacity="0.6" />
-        <line x1="150" y1="40" x2="125" y2="70" stroke="#8b5cf6" strokeWidth="1.5" opacity="0.6" />
+        <line x1="50" y1="40" x2="100" y2="30" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
+        <line x1="100" y1="30" x2="150" y2="40" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
+        <line x1="50" y1="40" x2="75" y2="70" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
+        <line x1="100" y1="30" x2="125" y2="70" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
+        <line x1="150" y1="40" x2="125" y2="70" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
         
         {/* Search query */}
-        <circle cx="100" cy="100" r="12" fill="#10b981" stroke="#10b981" strokeWidth="2" />
-        <text x="100" y="105" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">Q</text>
-        <line x1="100" y1="88" x2="100" y2="70" stroke="#10b981" strokeWidth="2" strokeDasharray="3,3" />
+        <circle cx="100" cy="100" r="11" fill="#475569" stroke="#64748b" strokeWidth="1.5" />
+        <text x="100" y="105" textAnchor="middle" fill="#e2e8f0" fontSize="9" fontWeight="600">Q</text>
+        <line x1="100" y1="89" x2="100" y2="84" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="2,2" />
       </svg>
     )
   },
@@ -126,32 +126,32 @@ const features: Feature[] = [
       <svg viewBox="0 0 200 120" className="w-full h-auto">
         <defs>
           <linearGradient id="toolGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#f97316" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#475569" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#64748b" stopOpacity="0.6" />
           </linearGradient>
         </defs>
         {/* Tool icons */}
-        <rect x="20" y="30" width="35" height="35" rx="4" fill="url(#toolGradient)" stroke="#f59e0b" strokeWidth="2" />
-        <text x="37.5" y="52" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">SQL</text>
+        <rect x="15" y="28" width="38" height="32" rx="4" fill="url(#toolGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="34" y="50" textAnchor="middle" fill="#e2e8f0" fontSize="10" fontWeight="600">SQL</text>
         
-        <rect x="70" y="30" width="35" height="35" rx="4" fill="url(#toolGradient)" stroke="#f59e0b" strokeWidth="2" />
-        <text x="87.5" y="52" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">HTTP</text>
+        <rect x="62" y="28" width="38" height="32" rx="4" fill="url(#toolGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="81" y="50" textAnchor="middle" fill="#e2e8f0" fontSize="10" fontWeight="600">HTTP</text>
         
-        <rect x="120" y="30" width="35" height="35" rx="4" fill="url(#toolGradient)" stroke="#f59e0b" strokeWidth="2" />
-        <text x="137.5" y="52" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">Code</text>
+        <rect x="109" y="28" width="38" height="32" rx="4" fill="url(#toolGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="128" y="50" textAnchor="middle" fill="#e2e8f0" fontSize="10" fontWeight="600">Code</text>
         
-        <rect x="170" y="30" width="35" height="35" rx="4" fill="url(#toolGradient)" stroke="#f59e0b" strokeWidth="2" />
-        <text x="187.5" y="52" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">Shell</text>
+        <rect x="156" y="28" width="38" height="32" rx="4" fill="url(#toolGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="175" y="50" textAnchor="middle" fill="#e2e8f0" fontSize="10" fontWeight="600">Shell</text>
         
         {/* Registry center */}
-        <circle cx="100" cy="90" r="20" fill="#1e293b" stroke="#f59e0b" strokeWidth="2" />
-        <text x="100" y="96" textAnchor="middle" fill="#f59e0b" fontSize="10" fontWeight="bold">Registry</text>
+        <circle cx="100" cy="90" r="18" fill="#1e293b" stroke="#64748b" strokeWidth="1.5" />
+        <text x="100" y="95" textAnchor="middle" fill="#94a3b8" fontSize="9" fontWeight="600">Registry</text>
         
         {/* Connections */}
-        <line x1="37.5" y1="65" x2="90" y2="90" stroke="#f59e0b" strokeWidth="1.5" opacity="0.6" />
-        <line x1="87.5" y1="65" x2="100" y2="90" stroke="#f59e0b" strokeWidth="1.5" opacity="0.6" />
-        <line x1="137.5" y1="65" x2="110" y2="90" stroke="#f59e0b" strokeWidth="1.5" opacity="0.6" />
-        <line x1="187.5" y1="65" x2="120" y2="90" stroke="#f59e0b" strokeWidth="1.5" opacity="0.6" />
+        <line x1="34" y1="60" x2="88" y2="90" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
+        <line x1="81" y1="60" x2="100" y2="90" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
+        <line x1="128" y1="60" x2="112" y2="90" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
+        <line x1="175" y1="60" x2="122" y2="90" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
       </svg>
     )
   },
@@ -168,33 +168,33 @@ const features: Feature[] = [
       <svg viewBox="0 0 200 120" className="w-full h-auto">
         <defs>
           <linearGradient id="apiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#10b981" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#059669" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#475569" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#64748b" stopOpacity="0.6" />
           </linearGradient>
         </defs>
         {/* REST API */}
-        <rect x="20" y="20" width="70" height="40" rx="4" fill="url(#apiGradient)" stroke="#10b981" strokeWidth="2" />
-        <text x="55" y="42" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">REST API</text>
-        <text x="55" y="55" textAnchor="middle" fill="white" fontSize="8">GET POST PUT DELETE</text>
+        <rect x="15" y="18" width="65" height="38" rx="4" fill="url(#apiGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="47.5" y="38" textAnchor="middle" fill="#e2e8f0" fontSize="10" fontWeight="600">REST API</text>
+        <text x="47.5" y="50" textAnchor="middle" fill="#cbd5e1" fontSize="7">GET POST PUT</text>
         
         {/* WebSocket */}
-        <rect x="110" y="20" width="70" height="40" rx="4" fill="url(#apiGradient)" stroke="#10b981" strokeWidth="2" />
-        <text x="145" y="42" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">WebSocket</text>
-        <text x="145" y="55" textAnchor="middle" fill="white" fontSize="8">Real-time Stream</text>
+        <rect x="100" y="18" width="75" height="38" rx="4" fill="url(#apiGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="137.5" y="38" textAnchor="middle" fill="#e2e8f0" fontSize="10" fontWeight="600">WebSocket</text>
+        <text x="137.5" y="50" textAnchor="middle" fill="#cbd5e1" fontSize="7">Real-time</text>
         
         {/* Server */}
-        <rect x="70" y="75" width="60" height="30" rx="4" fill="#1e293b" stroke="#10b981" strokeWidth="2" />
-        <text x="100" y="93" textAnchor="middle" fill="#10b981" fontSize="10" fontWeight="bold">Server</text>
+        <rect x="65" y="72" width="60" height="28" rx="4" fill="#1e293b" stroke="#64748b" strokeWidth="1.5" />
+        <text x="95" y="90" textAnchor="middle" fill="#94a3b8" fontSize="9" fontWeight="600">Server</text>
         
         {/* Connections */}
-        <line x1="55" y1="60" x2="90" y2="75" stroke="#10b981" strokeWidth="2" />
-        <line x1="145" y1="60" x2="110" y2="75" stroke="#10b981" strokeWidth="2" />
+        <line x1="47.5" y1="56" x2="85" y2="72" stroke="#94a3b8" strokeWidth="1.5" />
+        <line x1="137.5" y1="56" x2="105" y2="72" stroke="#94a3b8" strokeWidth="1.5" />
         
         {/* Data flow */}
-        <circle cx="30" cy="100" r="4" fill="#10b981" />
-        <circle cx="50" cy="100" r="4" fill="#10b981" />
-        <circle cx="70" cy="100" r="4" fill="#10b981" />
-        <text x="100" y="108" textAnchor="middle" fill="#10b981" fontSize="8">Streaming Data</text>
+        <circle cx="25" cy="105" r="3" fill="#64748b" />
+        <circle cx="45" cy="105" r="3" fill="#64748b" />
+        <circle cx="65" cy="105" r="3" fill="#64748b" />
+        <text x="100" y="109" textAnchor="middle" fill="#94a3b8" fontSize="7">Streaming</text>
       </svg>
     )
   },
@@ -212,37 +212,37 @@ const features: Feature[] = [
       <svg viewBox="0 0 200 120" className="w-full h-auto">
         <defs>
           <linearGradient id="jobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#ec4899" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#f43f5e" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#475569" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#64748b" stopOpacity="0.6" />
           </linearGradient>
         </defs>
         {/* Queue */}
-        <rect x="20" y="20" width="50" height="80" rx="4" fill="#1e293b" stroke="#ec4899" strokeWidth="2" />
-        <text x="45" y="40" textAnchor="middle" fill="#ec4899" fontSize="10" fontWeight="bold">Queue</text>
+        <rect x="18" y="18" width="48" height="78" rx="4" fill="#1e293b" stroke="#64748b" strokeWidth="1.5" />
+        <text x="42" y="36" textAnchor="middle" fill="#94a3b8" fontSize="9" fontWeight="600">Queue</text>
         
         {/* Jobs */}
-        <rect x="25" y="50" width="40" height="12" rx="2" fill="url(#jobGradient)" />
-        <rect x="25" y="65" width="40" height="12" rx="2" fill="url(#jobGradient)" />
-        <rect x="25" y="80" width="40" height="12" rx="2" fill="url(#jobGradient)" />
+        <rect x="23" y="48" width="38" height="11" rx="2" fill="url(#jobGradient)" />
+        <rect x="23" y="62" width="38" height="11" rx="2" fill="url(#jobGradient)" />
+        <rect x="23" y="76" width="38" height="11" rx="2" fill="url(#jobGradient)" />
         
         {/* Workers */}
-        <rect x="90" y="30" width="45" height="25" rx="4" fill="url(#jobGradient)" stroke="#ec4899" strokeWidth="2" />
-        <text x="112.5" y="47" textAnchor="middle" fill="white" fontSize="9" fontWeight="bold">Worker 1</text>
+        <rect x="88" y="28" width="42" height="23" rx="4" fill="url(#jobGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="109" y="43" textAnchor="middle" fill="#e2e8f0" fontSize="8" fontWeight="600">Worker 1</text>
         
-        <rect x="90" y="60" width="45" height="25" rx="4" fill="url(#jobGradient)" stroke="#ec4899" strokeWidth="2" />
-        <text x="112.5" y="77" textAnchor="middle" fill="white" fontSize="9" fontWeight="bold">Worker 2</text>
+        <rect x="88" y="57" width="42" height="23" rx="4" fill="url(#jobGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="109" y="72" textAnchor="middle" fill="#e2e8f0" fontSize="8" fontWeight="600">Worker 2</text>
         
-        <rect x="90" y="90" width="45" height="25" rx="4" fill="url(#jobGradient)" stroke="#ec4899" strokeWidth="2" />
-        <text x="112.5" y="107" textAnchor="middle" fill="white" fontSize="9" fontWeight="bold">Worker 3</text>
+        <rect x="88" y="86" width="42" height="23" rx="4" fill="url(#jobGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="109" y="101" textAnchor="middle" fill="#e2e8f0" fontSize="8" fontWeight="600">Worker 3</text>
         
         {/* Arrows */}
-        <path d="M 70 56 L 90 42" stroke="#ec4899" strokeWidth="2" fill="none" markerEnd="url(#arrowheadPink)" />
-        <path d="M 70 71 L 90 72" stroke="#ec4899" strokeWidth="2" fill="none" markerEnd="url(#arrowheadPink)" />
-        <path d="M 70 86 L 90 102" stroke="#ec4899" strokeWidth="2" fill="none" markerEnd="url(#arrowheadPink)" />
+        <path d="M 66 53.5 L 88 39" stroke="#94a3b8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowheadJob)" />
+        <path d="M 66 67.5 L 88 68" stroke="#94a3b8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowheadJob)" />
+        <path d="M 66 81.5 L 88 97" stroke="#94a3b8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowheadJob)" />
         
         <defs>
-          <marker id="arrowheadPink" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-            <polygon points="0 0, 10 3, 0 6" fill="#ec4899" />
+          <marker id="arrowheadJob" markerWidth="8" markerHeight="8" refX="7" refY="2.5" orient="auto">
+            <polygon points="0 0, 8 2.5, 0 5" fill="#94a3b8" />
           </marker>
         </defs>
       </svg>
@@ -262,30 +262,30 @@ const features: Feature[] = [
       <svg viewBox="0 0 200 120" className="w-full h-auto">
         <defs>
           <linearGradient id="securityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#2563eb" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#475569" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#64748b" stopOpacity="0.6" />
           </linearGradient>
         </defs>
         {/* Shield */}
-        <path d="M 100 20 L 120 30 L 120 60 Q 120 80 100 90 Q 80 80 80 60 L 80 30 Z" 
-              fill="url(#securityGradient)" stroke="#3b82f6" strokeWidth="2" />
-        <text x="100" y="60" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">🔒</text>
+        <path d="M 100 18 L 118 27 L 118 56 Q 118 75 100 84 Q 82 75 82 56 L 82 27 Z" 
+              fill="url(#securityGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="100" y="58" textAnchor="middle" fill="#e2e8f0" fontSize="14" fontWeight="600">🔒</text>
         
         {/* API Keys */}
-        <rect x="30" y="50" width="40" height="20" rx="2" fill="#1e293b" stroke="#3b82f6" strokeWidth="1.5" />
-        <text x="50" y="63" textAnchor="middle" fill="#3b82f6" fontSize="8">API Key</text>
+        <rect x="28" y="48" width="36" height="18" rx="2" fill="#1e293b" stroke="#64748b" strokeWidth="1.5" />
+        <text x="46" y="60" textAnchor="middle" fill="#94a3b8" fontSize="7">API Key</text>
         
-        <rect x="130" y="50" width="40" height="20" rx="2" fill="#1e293b" stroke="#3b82f6" strokeWidth="1.5" />
-        <text x="150" y="63" textAnchor="middle" fill="#3b82f6" fontSize="8">RBAC</text>
+        <rect x="128" y="48" width="36" height="18" rx="2" fill="#1e293b" stroke="#64748b" strokeWidth="1.5" />
+        <text x="146" y="60" textAnchor="middle" fill="#94a3b8" fontSize="7">RBAC</text>
         
         {/* Rate Limiter */}
-        <rect x="70" y="85" width="60" height="25" rx="4" fill="#1e293b" stroke="#3b82f6" strokeWidth="2" />
-        <text x="100" y="102" textAnchor="middle" fill="#3b82f6" fontSize="9" fontWeight="bold">Rate Limiter</text>
+        <rect x="68" y="82" width="56" height="22" rx="4" fill="#1e293b" stroke="#64748b" strokeWidth="1.5" />
+        <text x="96" y="97" textAnchor="middle" fill="#94a3b8" fontSize="8" fontWeight="600">Rate Limiter</text>
         
         {/* Connections */}
-        <line x1="50" y1="70" x2="85" y2="85" stroke="#3b82f6" strokeWidth="1.5" opacity="0.6" />
-        <line x1="150" y1="70" x2="115" y2="85" stroke="#3b82f6" strokeWidth="1.5" opacity="0.6" />
-        <line x1="100" y1="90" x2="100" y2="85" stroke="#3b82f6" strokeWidth="2" />
+        <line x1="46" y1="66" x2="82" y2="82" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
+        <line x1="146" y1="66" x2="112" y2="82" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
+        <line x1="100" y1="84" x2="96" y2="82" stroke="#94a3b8" strokeWidth="1.5" />
       </svg>
     )
   },
@@ -302,33 +302,33 @@ const features: Feature[] = [
       <svg viewBox="0 0 200 120" className="w-full h-auto">
         <defs>
           <linearGradient id="sessionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#0891b2" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#475569" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#64748b" stopOpacity="0.6" />
           </linearGradient>
         </defs>
         {/* Sessions */}
-        <rect x="20" y="20" width="50" height="35" rx="4" fill="url(#sessionGradient)" stroke="#06b6d4" strokeWidth="2" />
-        <text x="45" y="38" textAnchor="middle" fill="white" fontSize="9" fontWeight="bold">Session 1</text>
-        <text x="45" y="50" textAnchor="middle" fill="white" fontSize="7">Active</text>
+        <rect x="18" y="18" width="48" height="32" rx="4" fill="url(#sessionGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="42" y="36" textAnchor="middle" fill="#e2e8f0" fontSize="8" fontWeight="600">Session 1</text>
+        <text x="42" y="47" textAnchor="middle" fill="#cbd5e1" fontSize="7">Active</text>
         
-        <rect x="80" y="20" width="50" height="35" rx="4" fill="url(#sessionGradient)" stroke="#06b6d4" strokeWidth="2" />
-        <text x="105" y="38" textAnchor="middle" fill="white" fontSize="9" fontWeight="bold">Session 2</text>
-        <text x="105" y="50" textAnchor="middle" fill="white" fontSize="7">Active</text>
+        <rect x="76" y="18" width="48" height="32" rx="4" fill="url(#sessionGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="100" y="36" textAnchor="middle" fill="#e2e8f0" fontSize="8" fontWeight="600">Session 2</text>
+        <text x="100" y="47" textAnchor="middle" fill="#cbd5e1" fontSize="7">Active</text>
         
-        <rect x="140" y="20" width="50" height="35" rx="4" fill="url(#sessionGradient)" stroke="#06b6d4" strokeWidth="2" />
-        <text x="165" y="38" textAnchor="middle" fill="white" fontSize="9" fontWeight="bold">Session 3</text>
-        <text x="165" y="50" textAnchor="middle" fill="white" fontSize="7">Idle</text>
+        <rect x="134" y="18" width="48" height="32" rx="4" fill="url(#sessionGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="158" y="36" textAnchor="middle" fill="#e2e8f0" fontSize="8" fontWeight="600">Session 3</text>
+        <text x="158" y="47" textAnchor="middle" fill="#cbd5e1" fontSize="7">Idle</text>
         
         {/* Message History */}
-        <rect x="20" y="70" width="160" height="40" rx="4" fill="#1e293b" stroke="#06b6d4" strokeWidth="2" />
-        <text x="100" y="88" textAnchor="middle" fill="#06b6d4" fontSize="10" fontWeight="bold">Message History</text>
-        <line x1="30" y1="95" x2="170" y2="95" stroke="#06b6d4" strokeWidth="1" opacity="0.3" />
-        <text x="100" y="105" textAnchor="middle" fill="#06b6d4" fontSize="8">Context preserved across sessions</text>
+        <rect x="18" y="68" width="164" height="38" rx="4" fill="#1e293b" stroke="#64748b" strokeWidth="1.5" />
+        <text x="100" y="84" textAnchor="middle" fill="#94a3b8" fontSize="9" fontWeight="600">Message History</text>
+        <line x1="28" y1="93" x2="172" y2="93" stroke="#64748b" strokeWidth="1" opacity="0.3" />
+        <text x="100" y="103" textAnchor="middle" fill="#94a3b8" fontSize="7">Context preserved</text>
         
         {/* Connections */}
-        <line x1="45" y1="55" x2="60" y2="70" stroke="#06b6d4" strokeWidth="1.5" opacity="0.6" />
-        <line x1="105" y1="55" x2="100" y2="70" stroke="#06b6d4" strokeWidth="1.5" opacity="0.6" />
-        <line x1="165" y1="55" x2="140" y2="70" stroke="#06b6d4" strokeWidth="1.5" opacity="0.6" />
+        <line x1="42" y1="50" x2="58" y2="68" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
+        <line x1="100" y1="50" x2="100" y2="68" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
+        <line x1="158" y1="50" x2="142" y2="68" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
       </svg>
     )
   },
@@ -345,26 +345,26 @@ const features: Feature[] = [
       <svg viewBox="0 0 200 120" className="w-full h-auto">
         <defs>
           <linearGradient id="integrationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#7c3aed" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#475569" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#64748b" stopOpacity="0.6" />
           </linearGradient>
         </defs>
         {/* NeuronAgent */}
-        <rect x="20" y="20" width="70" height="40" rx="4" fill="url(#integrationGradient)" stroke="#8b5cf6" strokeWidth="2" />
-        <text x="55" y="42" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">NeuronAgent</text>
+        <rect x="18" y="18" width="68" height="38" rx="4" fill="url(#integrationGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="52" y="40" textAnchor="middle" fill="#e2e8f0" fontSize="10" fontWeight="600">NeuronAgent</text>
         
         {/* NeuronDB */}
-        <rect x="110" y="20" width="70" height="40" rx="4" fill="url(#integrationGradient)" stroke="#8b5cf6" strokeWidth="2" />
-        <text x="145" y="42" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold">NeuronDB</text>
+        <rect x="108" y="18" width="68" height="38" rx="4" fill="url(#integrationGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="142" y="40" textAnchor="middle" fill="#e2e8f0" fontSize="10" fontWeight="600">NeuronDB</text>
         
         {/* Integration Layer */}
-        <rect x="50" y="75" width="100" height="30" rx="4" fill="#1e293b" stroke="#8b5cf6" strokeWidth="2" />
-        <text x="100" y="92" textAnchor="middle" fill="#8b5cf6" fontSize="10" fontWeight="bold">Integration Layer</text>
-        <text x="100" y="102" textAnchor="middle" fill="#8b5cf6" fontSize="7">Vector Search | Embeddings | LLM</text>
+        <rect x="48" y="72" width="98" height="28" rx="4" fill="#1e293b" stroke="#64748b" strokeWidth="1.5" />
+        <text x="97" y="88" textAnchor="middle" fill="#94a3b8" fontSize="9" fontWeight="600">Integration</text>
+        <text x="97" y="97" textAnchor="middle" fill="#64748b" fontSize="6">Vector | Embeddings | LLM</text>
         
         {/* Connections */}
-        <line x1="55" y1="60" x2="85" y2="75" stroke="#8b5cf6" strokeWidth="2" />
-        <line x1="145" y1="60" x2="115" y2="75" stroke="#8b5cf6" strokeWidth="2" />
+        <line x1="52" y1="56" x2="83" y2="72" stroke="#94a3b8" strokeWidth="1.5" />
+        <line x1="142" y1="56" x2="111" y2="72" stroke="#94a3b8" strokeWidth="1.5" />
       </svg>
     )
   },
@@ -381,34 +381,34 @@ const features: Feature[] = [
       <svg viewBox="0 0 200 120" className="w-full h-auto">
         <defs>
           <linearGradient id="collabGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#d97706" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#475569" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#64748b" stopOpacity="0.6" />
           </linearGradient>
         </defs>
         {/* Agents */}
-        <circle cx="50" cy="40" r="18" fill="url(#collabGradient)" stroke="#f59e0b" strokeWidth="2" />
-        <text x="50" y="46" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">Agent 1</text>
+        <circle cx="50" cy="38" r="16" fill="url(#collabGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="50" y="43" textAnchor="middle" fill="#e2e8f0" fontSize="9" fontWeight="600">Agent 1</text>
         
-        <circle cx="100" cy="30" r="18" fill="url(#collabGradient)" stroke="#f59e0b" strokeWidth="2" />
-        <text x="100" y="36" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">Agent 2</text>
+        <circle cx="100" cy="28" r="16" fill="url(#collabGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="100" y="33" textAnchor="middle" fill="#e2e8f0" fontSize="9" fontWeight="600">Agent 2</text>
         
-        <circle cx="150" cy="40" r="18" fill="url(#collabGradient)" stroke="#f59e0b" strokeWidth="2" />
-        <text x="150" y="46" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">Agent 3</text>
+        <circle cx="150" cy="38" r="16" fill="url(#collabGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="150" y="43" textAnchor="middle" fill="#e2e8f0" fontSize="9" fontWeight="600">Agent 3</text>
         
         {/* Connections */}
-        <line x1="68" y1="40" x2="82" y2="30" stroke="#f59e0b" strokeWidth="2" opacity="0.6" />
-        <line x1="132" y1="30" x2="132" y2="40" stroke="#f59e0b" strokeWidth="2" opacity="0.6" />
-        <line x1="50" y1="58" x2="150" y2="58" stroke="#f59e0b" strokeWidth="2" opacity="0.6" />
+        <line x1="66" y1="38" x2="84" y2="28" stroke="#94a3b8" strokeWidth="1.5" opacity="0.5" />
+        <line x1="132" y1="28" x2="134" y2="38" stroke="#94a3b8" strokeWidth="1.5" opacity="0.5" />
+        <line x1="50" y1="54" x2="150" y2="54" stroke="#94a3b8" strokeWidth="1.5" opacity="0.5" />
         
         {/* Shared State */}
-        <rect x="60" y="75" width="80" height="30" rx="4" fill="#1e293b" stroke="#f59e0b" strokeWidth="2" />
-        <text x="100" y="92" textAnchor="middle" fill="#f59e0b" fontSize="10" fontWeight="bold">Shared State</text>
-        <text x="100" y="102" textAnchor="middle" fill="#f59e0b" fontSize="7">Memory & Context</text>
+        <rect x="58" y="72" width="78" height="28" rx="4" fill="#1e293b" stroke="#64748b" strokeWidth="1.5" />
+        <text x="97" y="88" textAnchor="middle" fill="#94a3b8" fontSize="9" fontWeight="600">Shared State</text>
+        <text x="97" y="97" textAnchor="middle" fill="#64748b" fontSize="7">Memory & Context</text>
         
         {/* Connections to shared state */}
-        <line x1="50" y1="58" x2="80" y2="75" stroke="#f59e0b" strokeWidth="1.5" opacity="0.6" />
-        <line x1="100" y1="48" x2="100" y2="75" stroke="#f59e0b" strokeWidth="1.5" opacity="0.6" />
-        <line x1="150" y1="58" x2="120" y2="75" stroke="#f59e0b" strokeWidth="1.5" opacity="0.6" />
+        <line x1="50" y1="54" x2="78" y2="72" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
+        <line x1="100" y1="44" x2="97" y2="72" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
+        <line x1="150" y1="54" x2="118" y2="72" stroke="#94a3b8" strokeWidth="1" opacity="0.5" />
       </svg>
     )
   },
@@ -425,37 +425,37 @@ const features: Feature[] = [
       <svg viewBox="0 0 200 120" className="w-full h-auto">
         <defs>
           <linearGradient id="workflowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#10b981" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#059669" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#475569" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#64748b" stopOpacity="0.6" />
           </linearGradient>
         </defs>
         {/* Start */}
-        <circle cx="30" cy="60" r="12" fill="url(#workflowGradient)" stroke="#10b981" strokeWidth="2" />
-        <text x="30" y="65" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">Start</text>
+        <circle cx="28" cy="58" r="11" fill="url(#workflowGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="28" y="63" textAnchor="middle" fill="#e2e8f0" fontSize="8" fontWeight="600">Start</text>
         
         {/* Tasks */}
-        <rect x="60" y="45" width="30" height="30" rx="4" fill="url(#workflowGradient)" stroke="#10b981" strokeWidth="2" />
-        <text x="75" y="63" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">Task 1</text>
+        <rect x="58" y="43" width="28" height="28" rx="4" fill="url(#workflowGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="72" y="61" textAnchor="middle" fill="#e2e8f0" fontSize="8" fontWeight="600">Task 1</text>
         
-        <rect x="110" y="20" width="30" height="30" rx="4" fill="url(#workflowGradient)" stroke="#10b981" strokeWidth="2" />
-        <text x="125" y="38" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">Task 2</text>
+        <rect x="108" y="18" width="28" height="28" rx="4" fill="url(#workflowGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="122" y="36" textAnchor="middle" fill="#e2e8f0" fontSize="8" fontWeight="600">Task 2</text>
         
-        <rect x="110" y="70" width="30" height="30" rx="4" fill="url(#workflowGradient)" stroke="#10b981" strokeWidth="2" />
-        <text x="125" y="88" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">Task 3</text>
+        <rect x="108" y="68" width="28" height="28" rx="4" fill="url(#workflowGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="122" y="86" textAnchor="middle" fill="#e2e8f0" fontSize="8" fontWeight="600">Task 3</text>
         
-        <rect x="160" y="45" width="30" height="30" rx="4" fill="url(#workflowGradient)" stroke="#10b981" strokeWidth="2" />
-        <text x="175" y="63" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">End</text>
+        <rect x="158" y="43" width="28" height="28" rx="4" fill="url(#workflowGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="172" y="61" textAnchor="middle" fill="#e2e8f0" fontSize="8" fontWeight="600">End</text>
         
         {/* Arrows */}
-        <path d="M 42 60 L 60 60" stroke="#10b981" strokeWidth="2" fill="none" markerEnd="url(#arrowheadGreen)" />
-        <path d="M 90 60 L 110 35" stroke="#10b981" strokeWidth="2" fill="none" markerEnd="url(#arrowheadGreen)" />
-        <path d="M 90 60 L 110 85" stroke="#10b981" strokeWidth="2" fill="none" markerEnd="url(#arrowheadGreen)" />
-        <path d="M 140 35 L 160 50" stroke="#10b981" strokeWidth="2" fill="none" markerEnd="url(#arrowheadGreen)" />
-        <path d="M 140 85 L 160 70" stroke="#10b981" strokeWidth="2" fill="none" markerEnd="url(#arrowheadGreen)" />
+        <path d="M 39 58 L 58 58" stroke="#94a3b8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowheadWorkflow)" />
+        <path d="M 86 58 L 108 32" stroke="#94a3b8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowheadWorkflow)" />
+        <path d="M 86 58 L 108 82" stroke="#94a3b8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowheadWorkflow)" />
+        <path d="M 136 32 L 158 47" stroke="#94a3b8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowheadWorkflow)" />
+        <path d="M 136 82 L 158 67" stroke="#94a3b8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowheadWorkflow)" />
         
         <defs>
-          <marker id="arrowheadGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-            <polygon points="0 0, 10 3, 0 6" fill="#10b981" />
+          <marker id="arrowheadWorkflow" markerWidth="8" markerHeight="8" refX="7" refY="2.5" orient="auto">
+            <polygon points="0 0, 8 2.5, 0 5" fill="#94a3b8" />
           </marker>
         </defs>
       </svg>
@@ -474,32 +474,32 @@ const features: Feature[] = [
       <svg viewBox="0 0 200 120" className="w-full h-auto">
         <defs>
           <linearGradient id="hitlGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#2563eb" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#475569" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#64748b" stopOpacity="0.6" />
           </linearGradient>
         </defs>
         {/* Agent */}
-        <rect x="20" y="30" width="50" height="40" rx="4" fill="url(#hitlGradient)" stroke="#3b82f6" strokeWidth="2" />
-        <text x="45" y="52" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">Agent</text>
+        <rect x="18" y="28" width="48" height="38" rx="4" fill="url(#hitlGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="42" y="50" textAnchor="middle" fill="#e2e8f0" fontSize="9" fontWeight="600">Agent</text>
         
         {/* Human */}
-        <circle cx="150" cy="50" r="25" fill="url(#hitlGradient)" stroke="#3b82f6" strokeWidth="2" />
-        <text x="150" y="58" textAnchor="middle" fill="white" fontSize="12">👤</text>
+        <circle cx="148" cy="48" r="23" fill="url(#hitlGradient)" stroke="#64748b" strokeWidth="1.5" />
+        <text x="148" y="56" textAnchor="middle" fill="#e2e8f0" fontSize="12">👤</text>
         
         {/* Approval Flow */}
-        <rect x="80" y="50" width="50" height="20" rx="4" fill="#1e293b" stroke="#3b82f6" strokeWidth="2" />
-        <text x="105" y="63" textAnchor="middle" fill="#3b82f6" fontSize="9" fontWeight="bold">Approval</text>
+        <rect x="78" y="48" width="48" height="18" rx="4" fill="#1e293b" stroke="#64748b" strokeWidth="1.5" />
+        <text x="102" y="60" textAnchor="middle" fill="#94a3b8" fontSize="8" fontWeight="600">Approval</text>
         
         {/* Arrows */}
-        <path d="M 70 50 L 80 60" stroke="#3b82f6" strokeWidth="2" fill="none" markerEnd="url(#arrowheadBlue)" />
-        <path d="M 130 60 L 125 50" stroke="#3b82f6" strokeWidth="2" fill="none" markerEnd="url(#arrowheadBlue)" />
+        <path d="M 66 48 L 78 57" stroke="#94a3b8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowheadHITL)" />
+        <path d="M 126 57 L 122 48" stroke="#94a3b8" strokeWidth="1.5" fill="none" markerEnd="url(#arrowheadHITL)" />
         
         {/* Feedback Loop */}
-        <path d="M 150 75 Q 120 90 105 70" stroke="#3b82f6" strokeWidth="1.5" fill="none" strokeDasharray="3,3" opacity="0.6" />
+        <path d="M 148 73 Q 118 88 105 68" stroke="#94a3b8" strokeWidth="1" fill="none" strokeDasharray="2,2" opacity="0.5" />
         
         <defs>
-          <marker id="arrowheadBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-            <polygon points="0 0, 10 3, 0 6" fill="#3b82f6" />
+          <marker id="arrowheadHITL" markerWidth="8" markerHeight="8" refX="7" refY="2.5" orient="auto">
+            <polygon points="0 0, 8 2.5, 0 5" fill="#94a3b8" />
           </marker>
         </defs>
       </svg>
@@ -518,24 +518,24 @@ const features: Feature[] = [
       <svg viewBox="0 0 200 120" className="w-full h-auto">
         <defs>
           <linearGradient id="budgetGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#10b981" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#059669" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#475569" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#64748b" stopOpacity="0.6" />
           </linearGradient>
         </defs>
         {/* Budget Dashboard */}
-        <rect x="20" y="20" width="160" height="50" rx="4" fill="#1e293b" stroke="#10b981" strokeWidth="2" />
-        <text x="100" y="40" textAnchor="middle" fill="#10b981" fontSize="12" fontWeight="bold">Budget Dashboard</text>
-        <line x1="30" y1="50" x2="170" y2="50" stroke="#10b981" strokeWidth="1" opacity="0.3" />
+        <rect x="18" y="18" width="164" height="48" rx="4" fill="#1e293b" stroke="#64748b" strokeWidth="1.5" />
+        <text x="100" y="36" textAnchor="middle" fill="#94a3b8" fontSize="10" fontWeight="600">Budget Dashboard</text>
+        <line x1="28" y1="48" x2="172" y2="48" stroke="#64748b" strokeWidth="1" opacity="0.3" />
         
         {/* Metrics */}
-        <text x="50" y="65" textAnchor="middle" fill="#10b981" fontSize="8">Tokens: 1.2M</text>
-        <text x="100" y="65" textAnchor="middle" fill="#10b981" fontSize="8">API Calls: 5.4K</text>
-        <text x="150" y="65" textAnchor="middle" fill="#10b981" fontSize="8">Cost: $45.20</text>
+        <text x="50" y="62" textAnchor="middle" fill="#94a3b8" fontSize="7">Tokens: 1.2M</text>
+        <text x="100" y="62" textAnchor="middle" fill="#94a3b8" fontSize="7">API: 5.4K</text>
+        <text x="150" y="62" textAnchor="middle" fill="#94a3b8" fontSize="7">Cost: $45</text>
         
         {/* Budget Bar */}
-        <rect x="20" y="85" width="160" height="20" rx="4" fill="#1e293b" stroke="#10b981" strokeWidth="2" />
-        <rect x="25" y="88" width="120" height="14" rx="2" fill="url(#budgetGradient)" />
-        <text x="100" y="98" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">75% Used</text>
+        <rect x="18" y="82" width="164" height="18" rx="4" fill="#1e293b" stroke="#64748b" strokeWidth="1.5" />
+        <rect x="23" y="85" width="120" height="12" rx="2" fill="url(#budgetGradient)" />
+        <text x="100" y="94" textAnchor="middle" fill="#e2e8f0" fontSize="7" fontWeight="600">75% Used</text>
       </svg>
     )
   },
@@ -552,26 +552,26 @@ const features: Feature[] = [
       <svg viewBox="0 0 200 120" className="w-full h-auto">
         <defs>
           <linearGradient id="evalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#7c3aed" stopOpacity="0.8" />
+            <stop offset="0%" stopColor="#475569" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#64748b" stopOpacity="0.6" />
           </linearGradient>
         </defs>
         {/* Chart Bars */}
-        <rect x="30" y="70" width="20" height="30" rx="2" fill="url(#evalGradient)" />
-        <rect x="60" y="50" width="20" height="50" rx="2" fill="url(#evalGradient)" />
-        <rect x="90" y="40" width="20" height="60" rx="2" fill="url(#evalGradient)" />
-        <rect x="120" y="60" width="20" height="40" rx="2" fill="url(#evalGradient)" />
-        <rect x="150" y="45" width="20" height="55" rx="2" fill="url(#evalGradient)" />
+        <rect x="28" y="68" width="18" height="28" rx="2" fill="url(#evalGradient)" />
+        <rect x="58" y="48" width="18" height="48" rx="2" fill="url(#evalGradient)" />
+        <rect x="88" y="38" width="18" height="58" rx="2" fill="url(#evalGradient)" />
+        <rect x="118" y="58" width="18" height="38" rx="2" fill="url(#evalGradient)" />
+        <rect x="148" y="43" width="18" height="53" rx="2" fill="url(#evalGradient)" />
         
         {/* Metrics Labels */}
-        <text x="40" y="105" textAnchor="middle" fill="#8b5cf6" fontSize="7">Success</text>
-        <text x="70" y="105" textAnchor="middle" fill="#8b5cf6" fontSize="7">Latency</text>
-        <text x="100" y="105" textAnchor="middle" fill="#8b5cf6" fontSize="7">Quality</text>
-        <text x="130" y="105" textAnchor="middle" fill="#8b5cf6" fontSize="7">A/B Test</text>
-        <text x="160" y="105" textAnchor="middle" fill="#8b5cf6" fontSize="7">Benchmark</text>
+        <text x="37" y="103" textAnchor="middle" fill="#94a3b8" fontSize="7">Success</text>
+        <text x="67" y="103" textAnchor="middle" fill="#94a3b8" fontSize="7">Latency</text>
+        <text x="97" y="103" textAnchor="middle" fill="#94a3b8" fontSize="7">Quality</text>
+        <text x="127" y="103" textAnchor="middle" fill="#94a3b8" fontSize="7">A/B Test</text>
+        <text x="157" y="103" textAnchor="middle" fill="#94a3b8" fontSize="7">Benchmark</text>
         
         {/* Title */}
-        <text x="100" y="25" textAnchor="middle" fill="#8b5cf6" fontSize="11" fontWeight="bold">Performance Metrics</text>
+        <text x="100" y="23" textAnchor="middle" fill="#94a3b8" fontSize="10" fontWeight="600">Performance</text>
       </svg>
     )
   }
