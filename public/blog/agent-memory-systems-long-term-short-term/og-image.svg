@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020617;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#0f172a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#020617;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="ogTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="ogGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+  
+  <pattern id="ogGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1e293b" stroke-width="1" opacity="0.15"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#ogGrid)"/>
+  
+  <circle cx="300" cy="315" r="80" fill="#6366f1" opacity="0.2"/>
+  <circle cx="900" cy="315" r="80" fill="#10b981" opacity="0.2"/>
+  
+  <text x="600" y="250" font-family="Arial, sans-serif" font-size="56" fill="url(#ogTextGrad)" text-anchor="middle" font-weight="bold" filter="url(#ogGlow)">
+    Agent Memory Systems
+  </text>
+  <text x="600" y="310" font-family="Arial, sans-serif" font-size="28" fill="#cbd5e1" text-anchor="middle">
+    Long-Term vs Short-Term Memory
+  </text>
+  
+  <rect x="200" y="380" width="800" height="120" rx="12" fill="#1e293b" opacity="0.6" stroke="#334155" stroke-width="1"/>
+  <text x="600" y="425" font-family="Arial, sans-serif" font-size="18" fill="#60a5fa" text-anchor="middle" font-weight="bold">Memory Architecture • Storage Patterns • Retrieval Strategies</text>
+  <text x="300" y="465" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Short-Term Memory</text>
+  <text x="600" y="465" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Long-Term Memory</text>
+  <text x="900" y="465" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Retrieval Systems</text>
+  
+  <text x="600" y="600" font-family="Arial, sans-serif" font-size="18" fill="#64748b" text-anchor="middle">neurondb.ai</text>
+</svg>

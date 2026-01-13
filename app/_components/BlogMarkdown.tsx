@@ -300,7 +300,7 @@ export function BlogMarkdown({ children }: { children: string }) {
           color: #93c5fd;
         }
       `}} />
-      <article ref={articleRef} className="prose prose-invert w-full py-8 overflow-hidden">
+      <article ref={articleRef} className="prose prose-invert max-w-none w-full py-8 overflow-hidden">
         <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}
@@ -543,6 +543,58 @@ export function BlogMarkdown({ children }: { children: string }) {
             return <li className="mb-2 drop-shadow-sm leading-relaxed" style={{ display: 'list-item', lineHeight: '1.75', listStylePosition: 'outside' }} {...props}>{processedChildren || children}</li>;
           },
 
+          // Pre blocks (code blocks without language or with ASCII diagrams)
+          pre({ node, children, ...props }: any) {
+            // Check if this is a code block (has code child)
+            const codeNode = node?.children?.find((child: any) => child?.tagName === 'code');
+            if (codeNode) {
+              // Extract text from code node - handle both direct text and nested structures
+              let codeText = '';
+              if (codeNode.children) {
+                codeText = codeNode.children
+                  .map((child: any) => child.value || child.children?.[0]?.value || '')
+                  .join('')
+                  .replace(/\n$/, '');
+              }
+              
+              const className = codeNode.properties?.className?.[0] || '';
+              const match = /language-(\w+)/.exec(className || '');
+              
+              // If no language match, treat as plain text (like ASCII diagrams)
+              if (!match && codeText.length > 0) {
+                // Check if it looks like an ASCII diagram (has box drawing characters)
+                const isAsciiDiagram = /[┌┐└┘│─├┤┬┴┼╔╗╚╝║═╠╣╦╩╬]/.test(codeText);
+                
+                return (
+                  <div className="my-8 relative group w-full" style={{ maxWidth: '100%' }}>
+                    <div 
+                      className="w-full overflow-x-auto bg-slate-900 rounded-lg border border-gray-600/30 p-4" 
+                      style={{ 
+                        scrollbarWidth: 'thin', 
+                        scrollbarColor: 'rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1)',
+                        maxWidth: '100%',
+                        boxSizing: 'border-box'
+                      }}
+                    >
+                      <pre 
+                        className="text-sm font-mono text-gray-300 whitespace-pre"
+                        style={{ 
+                          margin: 0,
+                          minWidth: isAsciiDiagram ? 'max-content' : 'auto',
+                          overflow: 'visible'
+                        }}
+                      >
+                        {codeText}
+                      </pre>
+                    </div>
+                  </div>
+                );
+              }
+            }
+            // Fall through to default pre rendering if it's not a code block
+            return <pre {...props}>{children}</pre>;
+          },
+
           // Code blocks with syntax highlighting
           code({ node, className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || '');
@@ -553,8 +605,11 @@ export function BlogMarkdown({ children }: { children: string }) {
               (codeText.includes('SELECT') && codeText.includes('log_size'));
             const isLongContent = codeText.split('\n').length > 10;
 
+            // Check if it's an ASCII diagram (has box drawing characters and multiple lines)
+            const isAsciiDiagram = !match && codeText.length > 50 && /[┌┐└┘│─├┤┬┴┼╔╗╚╝║═╠╣╦╩╬]/.test(codeText) && codeText.split('\n').length > 3;
+            
             return match ? (
-              <div className="my-8 relative group w-full" style={{ maxWidth: '100%', overflow: 'hidden' }}>
+              <div className="my-8 relative group w-full" style={{ maxWidth: '100%' }}>
                 {/* Copy button */}
                 <button
                   onClick={() => copyToClipboard(codeText)}
@@ -596,6 +651,30 @@ export function BlogMarkdown({ children }: { children: string }) {
                     </div>
                   )}
                 </Highlight>
+              </div>
+            ) : isAsciiDiagram ? (
+              // Render ASCII diagrams with horizontal scroll
+              <div className="my-8 relative group w-full" style={{ maxWidth: '100%' }}>
+                <div 
+                  className="w-full overflow-x-auto bg-slate-900 rounded-lg border border-gray-600/30 p-4" 
+                  style={{ 
+                    scrollbarWidth: 'thin', 
+                    scrollbarColor: 'rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1)',
+                    maxWidth: '100%',
+                    boxSizing: 'border-box'
+                  }}
+                >
+                  <pre 
+                    className="text-sm font-mono text-gray-300 whitespace-pre"
+                    style={{ 
+                      margin: 0,
+                      minWidth: 'max-content',
+                      overflow: 'visible'
+                    }}
+                  >
+                    {codeText}
+                  </pre>
+                </div>
               </div>
             ) : (
               <code className="bg-slate-800 text-cyan-300 px-2 py-1 rounded text-sm font-mono inline-block" {...props}>
