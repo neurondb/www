@@ -176,9 +176,9 @@ Claude Desktop reads MCP server configuration from a settings file. The file loc
 
 ### Configuration File Locations
 
-- **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Windows**: `%APPDATA%\\Claude\\claude_desktop_config.json`
-- **Linux**: `~/.config/claude/claude_desktop_config.json`
+- **macOS**: \`~/Library/Application Support/Claude/claude_desktop_config.json\`
+- **Windows**: \`%APPDATA%\\Claude\\claude_desktop_config.json\`
+- **Linux**: \`~/.config/claude/claude_desktop_config.json\`
 
 ### Step 1: Create Configuration File
 
