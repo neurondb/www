@@ -145,6 +145,16 @@ SELECT * FROM neurondb.tenant_quota_usage WHERE warnings IS NOT NULL;`}
       </section>
 
       <section>
+        <h2>Security Features</h2>
+        <p>NeuronDB provides comprehensive security features for protecting vector data:</p>
+        <ul>
+          <li><a href="/docs/neurondb/security/rls-embeddings">Row-Level Security (RLS) for Embeddings</a> - Multi-tenant isolation and fine-grained access control</li>
+          <li><a href="/docs/neurondb/security/field-encryption">Field-Level Encryption</a> - AES-256-GCM encryption for sensitive vector data</li>
+          <li><a href="/docs/neurondb/security/audit-logging">Audit Logging</a> - Compliance monitoring for ML and RAG operations</li>
+        </ul>
+      </section>
+
+      <section>
         <h2>Next Steps</h2>
         <ul>
           <li><a href="/docs/neurondb/configuration">Configuration Reference</a> - Security-related GUC parameters</li>

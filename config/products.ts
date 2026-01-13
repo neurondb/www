@@ -82,7 +82,7 @@ export const products: Record<'neurondb' | 'neuronagent' | 'neuronmcp' | 'neuron
     productUrl: '/neurondb',
     ogImage: 'https://www.neurondb.ai/og-image.jpg',
     category: 'AI Database Extension',
-    version: '2.0.0',
+    version: '3.0.0-devel',
     postgresqlVersions: ['16', '17', '18'],
     title: 'AI Database Features',
     items: [
@@ -118,7 +118,7 @@ export const products: Record<'neurondb' | 'neuronagent' | 'neuronmcp' | 'neuron
     productUrl: '/neuronagent',
     ogImage: 'https://www.neurondb.ai/og-image.jpg',
     category: 'Agent Runtime',
-    version: '2.0.0',
+    version: '3.0.0-devel',
     postgresqlVersions: ['16', '17', '18'],
     title: 'Agent Runtime Features',
     items: [
@@ -161,7 +161,7 @@ export const products: Record<'neurondb' | 'neuronagent' | 'neuronmcp' | 'neuron
     productUrl: '/neuronmcp',
     ogImage: 'https://www.neurondb.ai/og-image.jpg',
     category: 'MCP Server',
-    version: '2.0.0',
+    version: '3.0.0-devel',
     postgresqlVersions: ['16', '17', '18'],
     title: 'MCP Server Features',
     items: [
@@ -198,7 +198,7 @@ export const products: Record<'neurondb' | 'neuronagent' | 'neuronmcp' | 'neuron
     productUrl: '/neurondesktop',
     ogImage: 'https://www.neurondb.ai/og-image.jpg',
     category: 'Web Interface',
-    version: '2.0.0',
+    version: '3.0.0-devel',
     postgresqlVersions: ['16', '17', '18'],
     title: 'Web Interface Features',
     items: [
