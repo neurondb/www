@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgSTM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020617;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="msgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:0.4"/>
+    </linearGradient>
+    <marker id="arrowSTM" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#bgSTM)"/>
+  <rect x="40" y="40" width="1120" height="520" rx="8" fill="#0f172a" opacity="0.8" stroke="#1e293b" stroke-width="1"/>
+  
+  <!-- Title -->
+  <text x="600" y="80" font-family="Arial, sans-serif" font-size="32" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Short-Term Memory Flow</text>
+  
+  <!-- User Input -->
+  <rect x="120" y="140" width="200" height="80" rx="8" fill="#6366f1" opacity="0.3" stroke="#818cf8" stroke-width="2"/>
+  <text x="220" y="175" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">User Message</text>
+  <text x="220" y="200" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Conversation input</text>
+  
+  <!-- Arrow 1 -->
+  <line x1="320" y1="180" x2="400" y2="180" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrowSTM)"/>
+  
+  <!-- Message Storage -->
+  <rect x="420" y="140" width="200" height="80" rx="8" fill="url(#msgGrad)" stroke="#818cf8" stroke-width="2"/>
+  <text x="520" y="175" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Message Storage</text>
+  <text x="520" y="200" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">session_memory table</text>
+  
+  <!-- Arrow 2 -->
+  <line x1="620" y1="180" x2="700" y2="180" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrowSTM)"/>
+  
+  <!-- Context Window -->
+  <rect x="720" y="140" width="200" height="80" rx="8" fill="url(#msgGrad)" stroke="#818cf8" stroke-width="2"/>
+  <text x="820" y="175" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Context Window</text>
+  <text x="820" y="200" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Last N messages</text>
+  
+  <!-- Arrow 3 (down) -->
+  <line x1="820" y1="220" x2="820" y2="280" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrowSTM)"/>
+  
+  <!-- State Tracking -->
+  <rect x="720" y="300" width="200" height="80" rx="8" fill="url(#msgGrad)" stroke="#818cf8" stroke-width="2"/>
+  <text x="820" y="335" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">State Tracking</text>
+  <text x="820" y="360" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Conversation state</text>
+  
+  <!-- Arrow 4 (left) -->
+  <line x1="720" y1="340" x2="620" y2="340" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrowSTM)"/>
+  
+  <!-- Agent Response -->
+  <rect x="420" y="300" width="200" height="80" rx="8" fill="#10b981" opacity="0.3" stroke="#34d399" stroke-width="2"/>
+  <text x="520" y="335" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Agent Response</text>
+  <text x="520" y="360" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Uses context</text>
+  
+  <!-- Arrow 5 (left) -->
+  <line x1="420" y1="340" x2="320" y2="340" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrowSTM)"/>
+  
+  <!-- Components Box -->
+  <rect x="120" y="420" width="960" height="120" rx="8" fill="#1e293b" opacity="0.6" stroke="#334155" stroke-width="1"/>
+  <text x="600" y="450" font-family="Arial, sans-serif" font-size="20" fill="#60a5fa" text-anchor="middle" font-weight="bold">Short-Term Memory Components</text>
+  
+  <rect x="160" y="470" width="280" height="60" rx="4" fill="#1e293b" opacity="0.8" stroke="#475569" stroke-width="1"/>
+  <text x="300" y="495" font-family="Arial, sans-serif" font-size="16" fill="#818cf8" text-anchor="middle" font-weight="bold">Message Storage</text>
+  <text x="180" y="515" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">Stores conversation messages</text>
+  <text x="180" y="530" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">User and agent messages</text>
+  
+  <rect x="460" y="470" width="280" height="60" rx="4" fill="#1e293b" opacity="0.8" stroke="#475569" stroke-width="1"/>
+  <text x="600" y="495" font-family="Arial, sans-serif" font-size="16" fill="#818cf8" text-anchor="middle" font-weight="bold">Context Window Management</text>
+  <text x="480" y="515" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">Maintains recent context</text>
+  <text x="480" y="530" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Limits to last N messages</text>
+  
+  <rect x="800" y="470" width="280" height="60" rx="4" fill="#1e293b" opacity="0.8" stroke="#475569" stroke-width="1"/>
+  <text x="940" y="495" font-family="Arial, sans-serif" font-size="16" fill="#818cf8" text-anchor="middle" font-weight="bold">State Tracking</text>
+  <text x="820" y="515" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">Tracks conversation state</text>
+  <text x="820" y="530" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Session metadata</text>
+</svg>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgEngine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020617;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="compGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:0.4"/>
+    </linearGradient>
+    <marker id="arrowEngine" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgEngine)"/>
+  <rect x="40" y="40" width="1120" height="720" rx="8" fill="#0f172a" opacity="0.8" stroke="#1e293b" stroke-width="1"/>
+  
+  <!-- Title -->
+  <text x="600" y="80" font-family="Arial, sans-serif" font-size="32" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Workflow Engine Architecture</text>
+  
+  <!-- Component 1: Executor -->
+  <rect x="120" y="140" width="220" height="140" rx="12" fill="url(#compGrad)" stroke="#818cf8" stroke-width="2"/>
+  <circle cx="150" cy="170" r="8" fill="#10b981"/>
+  <text x="170" y="175" font-family="Arial, sans-serif" font-size="18" fill="#e0e7ff" font-weight="bold">1</text>
+  <text x="230" y="185" font-family="Arial, sans-serif" font-size="20" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Executor</text>
+  <text x="230" y="210" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Runs steps in order</text>
+  <text x="230" y="230" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Manages dependencies</text>
+  <text x="230" y="250" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Handles execution</text>
+  <text x="230" y="270" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">DAG traversal</text>
+  
+  <!-- Arrow 1 -->
+  <line x1="340" y1="210" x2="420" y2="210" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrowEngine)"/>
+  
+  <!-- Component 2: State Manager -->
+  <rect x="440" y="140" width="220" height="140" rx="12" fill="url(#compGrad)" stroke="#818cf8" stroke-width="2"/>
+  <circle cx="470" cy="170" r="8" fill="#10b981"/>
+  <text x="490" y="175" font-family="Arial, sans-serif" font-size="18" fill="#e0e7ff" font-weight="bold">2</text>
+  <text x="550" y="185" font-family="Arial, sans-serif" font-size="20" fill="#f1f5f9" text-anchor="middle" font-weight="bold">State Manager</text>
+  <text x="550" y="210" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Tracks workflow state</text>
+  <text x="550" y="230" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Stores execution data</text>
+  <text x="550" y="250" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Manages status</text>
+  <text x="550" y="270" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Persistent storage</text>
+  
+  <!-- Arrow 2 -->
+  <line x1="660" y1="210" x2="740" y2="210" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrowEngine)"/>
+  
+  <!-- Component 3: Approval Handler -->
+  <rect x="760" y="140" width="220" height="140" rx="12" fill="#f59e0b" opacity="0.4" stroke="#fbbf24" stroke-width="2"/>
+  <circle cx="790" cy="170" r="8" fill="#10b981"/>
+  <text x="810" y="175" font-family="Arial, sans-serif" font-size="18" fill="#fde68a" font-weight="bold">3</text>
+  <text x="870" y="185" font-family="Arial, sans-serif" font-size="20" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Approval Handler</text>
+  <text x="870" y="210" font-family="Arial, sans-serif" font-size="14" fill="#fde68a" text-anchor="middle">Pauses execution</text>
+  <text x="870" y="230" font-family="Arial, sans-serif" font-size="14" fill="#fde68a" text-anchor="middle">Manages approvals</text>
+  <text x="870" y="250" font-family="Arial, sans-serif" font-size="14" fill="#fde68a" text-anchor="middle">Resumes after decision</text>
+  <text x="870" y="270" font-family="Arial, sans-serif" font-size="12" fill="#fef3c7" text-anchor="middle">HITL integration</text>
+  
+  <!-- Arrow 3 (down) -->
+  <line x1="870" y1="280" x2="870" y2="340" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrowEngine)"/>
+  
+  <!-- Component 4: Notification System -->
+  <rect x="760" y="360" width="220" height="140" rx="12" fill="url(#compGrad)" stroke="#818cf8" stroke-width="2"/>
+  <circle cx="790" cy="390" r="8" fill="#10b981"/>
+  <text x="810" y="395" font-family="Arial, sans-serif" font-size="18" fill="#e0e7ff" font-weight="bold">4</text>
+  <text x="870" y="405" font-family="Arial, sans-serif" font-size="20" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Notification System</text>
+  <text x="870" y="430" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Alerts approvers</text>
+  <text x="870" y="450" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Email, SMS, etc.</text>
+  <text x="870" y="470" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Sends context</text>
+  <text x="870" y="490" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Multi-channel</text>
+  
+  <!-- Arrow 4 (left) -->
+  <line x1="760" y1="430" x2="660" y2="430" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrowEngine)"/>
+  
+  <!-- Component 5: Retry Handler -->
+  <rect x="440" y="360" width="220" height="140" rx="12" fill="url(#compGrad)" stroke="#818cf8" stroke-width="2"/>
+  <circle cx="470" cy="390" r="8" fill="#10b981"/>
+  <text x="490" y="395" font-family="Arial, sans-serif" font-size="18" fill="#e0e7ff" font-weight="bold">5</text>
+  <text x="550" y="405" font-family="Arial, sans-serif" font-size="20" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Retry Handler</text>
+  <text x="550" y="430" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Handles failures</text>
+  <text x="550" y="450" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Retries steps</text>
+  <text x="550" y="470" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Error recovery</text>
+  <text x="550" y="490" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Resilient execution</text>
+  
+  <!-- Arrow 5 (left) -->
+  <line x1="440" y1="430" x2="340" y2="430" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrowEngine)"/>
+  
+  <!-- Component 6: Timeout Manager -->
+  <rect x="120" y="360" width="220" height="140" rx="12" fill="url(#compGrad)" stroke="#818cf8" stroke-width="2"/>
+  <circle cx="150" cy="390" r="8" fill="#10b981"/>
+  <text x="170" y="395" font-family="Arial, sans-serif" font-size="18" fill="#e0e7ff" font-weight="bold">6</text>
+  <text x="230" y="405" font-family="Arial, sans-serif" font-size="20" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Timeout Manager</text>
+  <text x="230" y="430" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Monitors timeouts</text>
+  <text x="230" y="450" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Handles expired approvals</text>
+  <text x="230" y="470" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Triggers actions</text>
+  <text x="230" y="490" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Timer management</text>
+  
+  <!-- Arrow 6 (up, to Executor) -->
+  <line x1="230" y1="360" x2="230" y2="280" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrowEngine)"/>
+  
+  <!-- Flow Description -->
+  <rect x="120" y="540" width="960" height="180" rx="8" fill="#1e293b" opacity="0.6" stroke="#334155" stroke-width="1"/>
+  <text x="600" y="570" font-family="Arial, sans-serif" font-size="20" fill="#60a5fa" text-anchor="middle" font-weight="bold">Workflow Engine Flow</text>
+  
+  <rect x="160" y="590" width="200" height="110" rx="4" fill="#1e293b" opacity="0.8" stroke="#475569" stroke-width="1"/>
+  <text x="260" y="615" font-family="Arial, sans-serif" font-size="16" fill="#818cf8" text-anchor="middle" font-weight="bold">Execution Flow</text>
+  <text x="180" y="635" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">1. Executor runs steps</text>
+  <text x="180" y="650" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">2. State Manager tracks</text>
+  <text x="180" y="665" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">3. Approval Handler pauses</text>
+  <text x="180" y="680" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">4. Resume after approval</text>
+  <text x="180" y="695" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">DAG-based execution</text>
+  
+  <rect x="380" y="590" width="200" height="110" rx="4" fill="#1e293b" opacity="0.8" stroke="#475569" stroke-width="1"/>
+  <text x="480" y="615" font-family="Arial, sans-serif" font-size="16" fill="#f59e0b" text-anchor="middle" font-weight="bold">Approval Process</text>
+  <text x="400" y="635" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">1. Pause at approval step</text>
+  <text x="400" y="650" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">2. Create approval request</text>
+  <text x="400" y="665" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">3. Notify approvers</text>
+  <text x="400" y="680" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">4. Wait for decision</text>
+  <text x="400" y="695" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">5. Resume execution</text>
+  
+  <rect x="600" y="590" width="200" height="110" rx="4" fill="#1e293b" opacity="0.8" stroke="#475569" stroke-width="1"/>
+  <text x="700" y="615" font-family="Arial, sans-serif" font-size="16" fill="#60a5fa" text-anchor="middle" font-weight="bold">State Management</text>
+  <text x="620" y="635" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">• Workflow state</text>
+  <text x="620" y="650" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">• Step execution state</text>
+  <text x="620" y="665" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">• Approval state</text>
+  <text x="620" y="680" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">• Persistent storage</text>
+  <text x="620" y="695" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">• Recovery support</text>
+  
+  <rect x="820" y="590" width="200" height="110" rx="4" fill="#1e293b" opacity="0.8" stroke="#475569" stroke-width="1"/>
+  <text x="920" y="615" font-family="Arial, sans-serif" font-size="16" fill="#60a5fa" text-anchor="middle" font-weight="bold">Error Handling</text>
+  <text x="940" y="635" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">• Retry failed steps</text>
+  <text x="940" y="650" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">• Handle timeouts</text>
+  <text x="940" y="665" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">• Error recovery</text>
+  <text x="940" y="680" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">• Failure handling</text>
+  <text x="940" y="695" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">• Graceful degradation</text>
+</svg>

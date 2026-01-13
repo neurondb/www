@@ -87,41 +87,7 @@ MCP communication follows this flow. The client sends a JSON-RPC request with a 
 
 The following diagram shows the detailed communication flow:
 
-\`\`\`
-        ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-        │                                                       MCP Communication Flow                                                         │
-        └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-
-                ┌───────────────┐    ┌───────────────┐    ┌───────────────┐    ┌───────────────┐    ┌───────────────┐    ┌───────────────┐
-                │     [1]       │    │     [2]       │    │     [3]       │    │     [4]       │    │     [5]       │    │     [6]       │
-                │   Startup     │────│  Initialize   │────│  Discover     │────│   Execute     │────│   Resource    │────│   Response    │
-                │               │    │               │    │    Tools      │    │     Tool      │    │    Access     │    │  Generation   │
-                └───────────────┘    └───────────────┘    └───────────────┘    └───────────────┘    └───────────────┘    └───────────────┘
-                        │                    │                    │                    │                    │                    │
-                        │                    │                    │                    │                    │                    │
-                        ▼                    ▼                    ▼                    ▼                    ▼                    ▼
-            ┌─────────────────┐   ┌─────────────────┐   ┌─────────────────┐   ┌─────────────────┐   ┌─────────────────┐   ┌─────────────────┐
-            │    Claude       │   │    Protocol     │   │    Tool List    │   │    Tool Call    │   │    Resource     │   │     Format      │
-            │    Desktop      │   │   Handshake     │   │   Registered    │   │    Executed     │   │    Retrieved    │   │    Results      │
-            │  Reads config   │   │  Capabilities   │   │   Definitions   │   │    Results      │   │    Contents     │   │    Display      │
-            │  Spawns proc    │   │   Exchanged     │   │    Available    │   │    Returned     │   │    Provided     │   │     Answer      │
-            └─────────────────┘   └─────────────────┘   └─────────────────┘   └─────────────────┘   └─────────────────┘   └─────────────────┘
-                        │                    │                    │                    │                    │                    │
-                        │                    │                    │                    │                    │                    │
-                        └────────────────────┴────────────────────┴────────────────────┴────────────────────┴────────────────────┘
-                                                                        │
-                                                                        │ JSON-RPC 2.0 over stdio
-                                                                        │
-                                                                        ▼
-                                                                ┌─────────────────┐
-                                                                │   MCP Server    │
-                                                                │    Process      │
-                                                                │   Validates     │
-                                                                │    Routes       │
-                                                                │   Executes      │
-                                                                │    Returns      │
-                                                                └─────────────────┘
-\`\`\`
+![MCP Protocol Flow Diagram](/blog/neurondb-mcp-server/diagram-mcp-protocol-flow.svg)
 
 **Detailed Step Breakdown:**
 

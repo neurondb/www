@@ -177,49 +177,64 @@ export function BlogMarkdown({ children }: { children: string }) {
         article ul li::marker {
           color: var(--bullet-color, rgb(96 165 250));
         }
-        /* Clean table styling */
+        /* Professional table styling */
         article table {
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0;
+          margin: 1.5rem 0;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Inter', sans-serif;
+          border: 1px solid rgba(30, 41, 59, 0.5);
+          border-radius: 0.5rem;
+          overflow: hidden;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          background-color: rgba(15, 23, 42, 0.5);
         }
-        .dark article table {
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        article table thead {
+          background-color: rgba(30, 41, 59, 0.8);
         }
         article table thead th {
-          position: relative;
+          padding: 0.875rem 1rem;
+          text-align: left;
+          font-weight: 600;
+          font-size: 0.875rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: rgb(248, 250, 252);
+          border-bottom: 1px solid rgba(51, 65, 85, 0.5);
         }
-        article table thead th::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: 1px;
-          background: rgba(0, 0, 0, 0.1);
-        }
-        .dark article table thead th::after {
-          background: rgba(255, 255, 255, 0.1);
+        article table thead th:not(:last-child) {
+          border-right: 1px solid rgba(51, 65, 85, 0.3);
         }
         article table tbody tr {
           transition: background-color 0.15s ease;
+          border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+        }
+        article table tbody tr:last-child {
+          border-bottom: none;
         }
         article table tbody tr:hover {
-          background-color: rgba(0, 0, 0, 0.02);
+          background-color: rgba(51, 65, 85, 0.3);
         }
-        .dark article table tbody tr:hover {
-          background-color: rgba(255, 255, 255, 0.05);
+        article table tbody td {
+          padding: 0.875rem 1rem;
+          color: rgb(203, 213, 225);
+          font-size: 0.875rem;
+          line-height: 1.6;
+          border-right: 1px solid rgba(51, 65, 85, 0.2);
         }
-        article table td:first-child {
+        article table tbody td:last-child {
+          border-right: none;
+        }
+        article table tbody td:first-child {
           font-weight: 600;
-          color: rgb(15, 23, 42);
+          color: rgb(251, 191, 36);
         }
-        .dark article table td:first-child {
-          color: rgb(234, 179, 8);
+        article table tbody tr:nth-child(even) {
+          background-color: rgba(15, 23, 42, 0.3);
         }
-        article table td:not(:first-child) {
-          color: rgb(51, 65, 85);
-        }
-        .dark article table td:not(:first-child) {
-          color: rgba(255, 255, 255, 0.95);
+        article table tbody tr:nth-child(even):hover {
+          background-color: rgba(51, 65, 85, 0.4);
         }
 
         /* Half-size diagrams (PNG) */

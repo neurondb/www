@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgFlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020617;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="stepGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:0.4"/>
+    </linearGradient>
+    <marker id="arrowheadFlow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#bgFlow)"/>
+  <rect x="40" y="40" width="1120" height="520" rx="8" fill="#0f172a" opacity="0.8" stroke="#1e293b" stroke-width="1"/>
+  
+  <!-- Title -->
+  <text x="600" y="80" font-family="Arial, sans-serif" font-size="32" fill="#f1f5f9" text-anchor="middle" font-weight="bold">MCP Communication Flow</text>
+  <text x="600" y="110" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">JSON-RPC 2.0 protocol over stdio</text>
+  
+  <!-- Step 1: Initialization -->
+  <rect x="80" y="160" width="180" height="120" rx="8" fill="url(#stepGrad)" stroke="#818cf8" stroke-width="2"/>
+  <circle cx="110" cy="190" r="8" fill="#10b981"/>
+  <text x="130" y="195" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" font-weight="bold">Step 1</text>
+  <text x="170" y="220" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Initialization</text>
+  <text x="170" y="245" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Claude Desktop</text>
+  <text x="170" y="265" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">connects to NeuronMCP</text>
+  
+  <!-- Arrow 1 -->
+  <line x1="260" y1="220" x2="320" y2="220" stroke="#60a5fa" stroke-width="3" marker-end="url(#arrowheadFlow)"/>
+  
+  <!-- Step 2: Tool Discovery -->
+  <rect x="340" y="160" width="180" height="120" rx="8" fill="url(#stepGrad)" stroke="#818cf8" stroke-width="2"/>
+  <circle cx="370" cy="190" r="8" fill="#10b981"/>
+  <text x="390" y="195" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" font-weight="bold">Step 2</text>
+  <text x="430" y="220" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Tool Discovery</text>
+  <text x="430" y="245" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Claude discovers</text>
+  <text x="430" y="265" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">available tools</text>
+  
+  <!-- Arrow 2 -->
+  <line x1="520" y1="220" x2="580" y2="220" stroke="#60a5fa" stroke-width="3" marker-end="url(#arrowheadFlow)"/>
+  
+  <!-- Step 3: Tool Execution -->
+  <rect x="600" y="160" width="180" height="120" rx="8" fill="url(#stepGrad)" stroke="#818cf8" stroke-width="2"/>
+  <circle cx="630" cy="190" r="8" fill="#10b981"/>
+  <text x="650" y="195" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" font-weight="bold">Step 3</text>
+  <text x="690" y="220" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Tool Execution</text>
+  <text x="690" y="245" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Claude calls tools</text>
+  <text x="690" y="265" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">with parameters</text>
+  
+  <!-- Arrow 3 -->
+  <line x1="780" y1="220" x2="840" y2="220" stroke="#60a5fa" stroke-width="3" marker-end="url(#arrowheadFlow)"/>
+  
+  <!-- Step 4: Result Processing -->
+  <rect x="860" y="160" width="180" height="120" rx="8" fill="url(#stepGrad)" stroke="#818cf8" stroke-width="2"/>
+  <circle cx="890" cy="190" r="8" fill="#10b981"/>
+  <text x="910" y="195" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" font-weight="bold">Step 4</text>
+  <text x="950" y="220" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Result Processing</text>
+  <text x="950" y="245" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">NeuronMCP executes</text>
+  <text x="950" y="265" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">returns results</text>
+  
+  <!-- Arrow 4 (down) -->
+  <line x1="950" y1="280" x2="950" y2="340" stroke="#60a5fa" stroke-width="3" marker-end="url(#arrowheadFlow)"/>
+  
+  <!-- Step 5: Response Generation -->
+  <rect x="860" y="360" width="180" height="120" rx="8" fill="url(#stepGrad)" stroke="#818cf8" stroke-width="2"/>
+  <circle cx="890" cy="390" r="8" fill="#10b981"/>
+  <text x="910" y="395" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" font-weight="bold">Step 5</text>
+  <text x="950" y="420" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Response Generation</text>
+  <text x="950" y="445" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Claude uses results</text>
+  <text x="950" y="465" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">in responses</text>
+  
+  <!-- Arrow 5 (left) -->
+  <line x1="860" y1="420" x2="780" y2="420" stroke="#60a5fa" stroke-width="3" marker-end="url(#arrowheadFlow)"/>
+  
+  <!-- Arrow 6 (left) -->
+  <line x1="600" y1="420" x2="520" y2="420" stroke="#60a5fa" stroke-width="3" marker-end="url(#arrowheadFlow)"/>
+  
+  <!-- Arrow 7 (left) -->
+  <line x1="340" y1="420" x2="260" y2="420" stroke="#60a5fa" stroke-width="3" marker-end="url(#arrowheadFlow)"/>
+  
+  <!-- Loop back arrow (curved) -->
+  <path d="M 260 420 Q 150 420 150 220 Q 150 140 260 140 Q 370 140 470 220" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+  <polygon points="470 220, 480 217, 478 223" fill="#60a5fa" opacity="0.6"/>
+  
+  <!-- Protocol Details -->
+  <rect x="80" y="360" width="180" height="120" rx="8" fill="#1e293b" opacity="0.6" stroke="#334155" stroke-width="1"/>
+  <text x="170" y="385" font-family="Arial, sans-serif" font-size="16" fill="#60a5fa" text-anchor="middle" font-weight="bold">Protocol Details</text>
+  <text x="100" y="410" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">• JSON-RPC 2.0</text>
+  <text x="100" y="430" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">• stdio transport</text>
+  <text x="100" y="450" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">• Bidirectional</text>
+  <text x="100" y="470" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">• Request/Response</text>
+  
+  <!-- Tools Info -->
+  <rect x="340" y="360" width="180" height="120" rx="8" fill="#1e293b" opacity="0.6" stroke="#334155" stroke-width="1"/>
+  <text x="430" y="385" font-family="Arial, sans-serif" font-size="16" fill="#60a5fa" text-anchor="middle" font-weight="bold">Available Tools</text>
+  <text x="360" y="410" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">• vector_search</text>
+  <text x="360" y="430" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">• generate_embedding</text>
+  <text x="360" y="450" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1">• retrieve_context</text>
+  <text x="360" y="470" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">• SQL operations</text>
+  
+  <!-- Flow note -->
+  <text x="600" y="520" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle" font-style="italic">Process repeats for each user query • Tools execute in parallel when possible</text>
+</svg>
