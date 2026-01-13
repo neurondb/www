@@ -58,13 +58,13 @@
   <line x1="580" y1="350" x2="595" y2="350" stroke="#fbbf24" stroke-width="2"/>
   
   <!-- Arrow 3 (from human) -->
-  <line x1="645" y1="350" x2="700" y2="350" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrowHITL)"/>
+  <line x1="645" y1="350" x2="720" y2="350" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrowHITL)"/>
   
   <!-- Step 4: Agent Step (after approval) -->
-  <rect x="720" y="310" width="160" height="80" rx="8" fill="url(#agentGrad)" stroke="#818cf8" stroke-width="2"/>
-  <text x="800" y="335" font-family="Arial, sans-serif" font-size="16" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Agent Step</text>
-  <text x="800" y="355" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Publish</text>
-  <text x="800" y="375" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Content</text>
+  <rect x="740" y="310" width="160" height="80" rx="8" fill="url(#agentGrad)" stroke="#818cf8" stroke-width="2"/>
+  <text x="820" y="335" font-family="Arial, sans-serif" font-size="16" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Agent Step</text>
+  <text x="820" y="355" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Publish</text>
+  <text x="820" y="375" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Content</text>
   
   <!-- Arrow from Conditional (low risk path) -->
   <line x1="540" y1="200" x2="600" y2="200" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrowHITL)"/>
@@ -76,12 +76,11 @@
   <text x="700" y="215" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Publish Directly</text>
   
   <!-- Arrow to End (from auto-approve) -->
-  <line x1="780" y1="200" x2="840" y2="200" stroke="#10b981" stroke-width="4" marker-end="url(#arrowHITL)"/>
+  <line x1="780" y1="200" x2="1040" y2="200" stroke="#10b981" stroke-width="4" marker-end="url(#arrowHITL)"/>
   
   <!-- Arrow to End (from publish after approval) -->
-  <line x1="880" y1="350" x2="940" y2="350" stroke="#10b981" stroke-width="4" marker-end="url(#arrowHITL)"/>
-  <line x1="960" y1="350" x2="960" y2="200" stroke="#10b981" stroke-width="2"/>
-  <line x1="960" y1="200" x2="1040" y2="200" stroke="#10b981" stroke-width="4"/>
+  <line x1="900" y1="350" x2="1040" y2="350" stroke="#10b981" stroke-width="4" marker-end="url(#arrowHITL)"/>
+  <line x1="1040" y1="350" x2="1040" y2="200" stroke="#10b981" stroke-width="2"/>
   
   <!-- End -->
   <circle cx="1100" cy="200" r="30" fill="#10b981" opacity="0.8"/>
