@@ -62,7 +62,7 @@ export default function DockerQuickStartPage() {
       <section id="introduction">
         <h2>Introduction</h2>
         
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginBottom: '1rem' }}>
           <p>
             <strong>📌 Version Information:</strong> This guide uses <strong>NeuronDB 2.0.0</strong> from the <code>main</code> branch.
             For production deployments requiring the stable 1.0.0 release, checkout the <code>REL1_STABLE</code> branch before running Docker Compose.
@@ -119,7 +119,7 @@ docker compose version`}
         <h2>Quick Start (5 minutes)</h2>
         <p>Start the complete NeuronDB ecosystem with a single command:</p>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1.5rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1.5rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1.5rem' }}>
           <h4 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.1rem', fontWeight: 'bold', color: '#fbbf24' }}>📌 Branch Selection Guide</h4>
           <p style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
             NeuronDB has two branches with different versions. Choose based on your needs:
@@ -135,13 +135,13 @@ docker compose version`}
             </thead>
             <tbody>
               <tr style={{ borderBottom: '1px solid #374151' }}>
-                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>main</code></td>
+                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>main</code></td>
                 <td style={{ padding: '0.75rem' }}><strong>2.0.0</strong></td>
                 <td style={{ padding: '0.75rem' }}><span style={{ color: '#10b981' }}>Latest</span></td>
                 <td style={{ padding: '0.75rem' }}>New projects, development, latest features</td>
               </tr>
               <tr>
-                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>REL1_STABLE</code></td>
+                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>REL1_STABLE</code></td>
                 <td style={{ padding: '0.75rem' }}><strong>1.0.0</strong></td>
                 <td style={{ padding: '0.75rem' }}><span style={{ color: '#3b82f6' }}>Stable</span></td>
                 <td style={{ padding: '0.75rem' }}>Production, maximum stability required</td>
@@ -149,7 +149,7 @@ docker compose version`}
             </tbody>
           </table>
           <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
-            <strong>Recommendation:</strong> Use <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> (version 2.0.0) for most users. Use <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> (version 1.0.0) only if you specifically need the stable release branch.
+            <strong>Recommendation:</strong> Use <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> (version 2.0.0) for most users. Use <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> (version 1.0.0) only if you specifically need the stable release branch.
           </p>
         </div>
 
@@ -189,9 +189,9 @@ docker pull ghcr.io/neurondb/neurondesktop-frontend:v2.0.0`}
             Pre-built Docker images are available from <a href="https://github.com/neurondb-ai/neurondb/pkgs/container/neurondb-postgres" target="_blank" rel="noopener noreferrer">GitHub Container Registry (GHCR)</a>.
           This is faster than building from source and ensures you're using tested, production-ready images.
         </p>
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <p>
-            <strong>📦 Image Versioning:</strong> Docker images are tagged by version. Version 2.0.0 images are built from the <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> branch, while version 1.0.0 images are built from the <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> branch.
+            <strong>📦 Image Versioning:</strong> Docker images are tagged by version. Version 2.0.0 images are built from the <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> branch, while version 1.0.0 images are built from the <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> branch.
           </p>
         </div>
 
@@ -209,22 +209,22 @@ docker pull ghcr.io/neurondb/neurondesktop-frontend:v2.0.0`}
           <tbody>
             <tr style={{ borderBottom: '1px solid #374151' }}>
               <td style={{ padding: '0.75rem' }}><strong>NeuronDB only</strong></td>
-              <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>docker compose up -d neurondb</code></td>
+              <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>docker compose up -d neurondb</code></td>
               <td style={{ padding: '0.75rem' }}>PostgreSQL extension only</td>
             </tr>
             <tr style={{ borderBottom: '1px solid #374151' }}>
               <td style={{ padding: '0.75rem' }}><strong>NeuronDB + NeuronMCP</strong></td>
-              <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>docker compose up -d neurondb neuronmcp</code></td>
+              <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>docker compose up -d neurondb neuronmcp</code></td>
               <td style={{ padding: '0.75rem' }}>Extension + MCP server</td>
             </tr>
             <tr style={{ borderBottom: '1px solid #374151' }}>
               <td style={{ padding: '0.75rem' }}><strong>NeuronDB + NeuronAgent</strong></td>
-              <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>docker compose up -d neurondb neuronagent</code></td>
+              <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>docker compose up -d neurondb neuronagent</code></td>
               <td style={{ padding: '0.75rem' }}>Extension + Agent runtime</td>
             </tr>
             <tr>
               <td style={{ padding: '0.75rem' }}><strong>Full stack</strong></td>
-              <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>docker compose up -d</code></td>
+              <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>docker compose up -d</code></td>
               <td style={{ padding: '0.75rem' }}>All components</td>
             </tr>
           </tbody>
@@ -236,7 +236,7 @@ docker pull ghcr.io/neurondb/neurondesktop-frontend:v2.0.0`}
 docker compose up -d`}
         />
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <p>
             <strong>💡 Component Independence:</strong> All components run independently. The root <code>docker-compose.yml</code> starts everything together for convenience, but you can run individual services as needed.
           </p>
@@ -254,7 +254,7 @@ docker compose up -d`}
           <li>Configure networking between all components</li>
         </ul>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <p>
             <strong>💡 Using Pre-built Images:</strong> Images are published to GHCR starting with v2.0.0.
             Available variants include PostgreSQL 16/17/18 and GPU profiles (CPU, CUDA, ROCm, Metal).
@@ -386,7 +386,7 @@ EOF`}
           <a href="/docs/neurondb/gpu/metal-support">Metal GPU Support</a> for setup details.
         </p>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
           <p>
             <strong>Note:</strong> You can run multiple profiles simultaneously on different ports. For example, run both CPU and CUDA profiles side-by-side for testing.
           </p>
@@ -452,7 +452,7 @@ EOF`}
 
         <div style={{ backgroundColor: '#dc2626', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem', border: '1px solid #ef4444' }}>
           <p style={{ margin: 0, color: '#fecaca' }}>
-            <strong>⚠️ Production Security Warning:</strong> The default credentials shown above are for <strong>development only</strong>. Always use strong, unique passwords in production. Set <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>POSTGRES_PASSWORD</code> and other secrets via environment variables or a <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>.env</code> file.
+            <strong>⚠️ Production Security Warning:</strong> The default credentials shown above are for <strong>development only</strong>. Always use strong, unique passwords in production. Set <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>POSTGRES_PASSWORD</code> and other secrets via environment variables or a <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>.env</code> file.
           </p>
         </div>
 

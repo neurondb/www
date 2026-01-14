@@ -52,7 +52,7 @@ export default function ObservabilityPage() {
           <li><strong>Alertmanager</strong> - Alert routing and notification management</li>
         </ul>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <h3 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.1rem', fontWeight: 'bold', color: '#fbbf24' }}>Key Features</h3>
           <ul style={{ marginBottom: 0 }}>
             <li><strong>Complete Coverage:</strong> All modules and variants monitored (NeuronDB, NeuronAgent, NeuronMCP, NeuronDesktop)</li>
@@ -104,7 +104,7 @@ docker compose -f docker-compose.observability.yml up -d prometheus
           <li><strong>Infrastructure:</strong> Node exporter (<code>:9100/metrics</code>), cAdvisor (<code>:8080/metrics</code>)</li>
         </ul>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
           <p style={{ margin: 0 }}>
             <strong>📋 Complete Prometheus Documentation:</strong> See{' '}
             <a href="https://github.com/neurondb-ai/neurondb/blob/main/prometheus/README.md" target="_blank" rel="noopener noreferrer" style={{ color: '#fbbf24' }}>prometheus/README.md</a> for detailed configuration, metrics reference, and alert rules.
@@ -305,7 +305,7 @@ kubectl port-forward svc/neurondb-jaeger 16686:16686 -n neurondb
           <li><code>neurondesktop_active_agent_connections</code> - Active agent connections</li>
         </ul>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
           <p style={{ margin: 0 }}>
             <strong>📋 Complete Metrics Reference:</strong> See{' '}
             <a href="https://github.com/neurondb-ai/neurondb/blob/main/prometheus/README.md#metrics-reference" target="_blank" rel="noopener noreferrer" style={{ color: '#fbbf24' }}>Prometheus README</a> for all available metrics with descriptions and labels.
@@ -346,7 +346,7 @@ kubectl port-forward svc/neurondb-jaeger 16686:16686 -n neurondb
           <li><strong>PrometheusTargetDown</strong> (Critical) - Target down &gt; 2m</li>
         </ul>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
           <p style={{ margin: 0 }}>
             <strong>📋 Complete Alert Rules:</strong> See{' '}
             <a href="https://github.com/neurondb-ai/neurondb/blob/main/prometheus/alerts.yml" target="_blank" rel="noopener noreferrer" style={{ color: '#fbbf24' }}>alerts.yml</a> for all alert rules with conditions and descriptions.

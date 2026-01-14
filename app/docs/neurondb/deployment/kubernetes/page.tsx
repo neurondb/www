@@ -54,7 +54,7 @@ export default function KubernetesDeploymentPage() {
           <li><strong>Observability Stack</strong> - Prometheus, Grafana, and Jaeger</li>
         </ul>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <h3 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.1rem', fontWeight: 'bold', color: '#fbbf24' }}>✨ Key Features</h3>
           <ul style={{ marginBottom: 0 }}>
             <li><strong>High Availability:</strong> Pod Disruption Budgets, multiple replicas, health checks</li>
@@ -291,7 +291,7 @@ ingress:
           <li>TLS certificate configuration</li>
         </ul>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
           <p style={{ margin: 0 }}>
             <strong>📋 Complete Configuration:</strong> See{' '}
             <a href="https://github.com/neurondb-ai/neurondb/blob/main/helm/neurondb/values.yaml" target="_blank" rel="noopener noreferrer" style={{ color: '#fbbf24' }}>helm/neurondb/values.yaml</a> and{' '}

@@ -50,7 +50,7 @@ export default function AnsibleDeploymentPage() {
           The Ansible automation complements existing Docker/Kubernetes scripts by handling infrastructure provisioning and deployment of the NeuronDB ecosystem across development, staging, and production environments.
         </p>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <h3 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.1rem', fontWeight: 'bold', color: '#fbbf24' }}>✨ What Ansible Handles</h3>
           <ul style={{ marginBottom: 0 }}>
             <li><strong>OS-level system configuration</strong> - Package installation, user/group creation, system tuning</li>
@@ -594,7 +594,7 @@ ansible all -i inventory/hosts.yml -m shell \
           </li>
         </ul>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
           <p style={{ margin: 0 }}>
             <strong>💡 Tip:</strong> Ansible playbooks are idempotent and safe to re-run. Use <code>--check</code> mode to preview changes before applying them.
           </p>

@@ -50,7 +50,7 @@ export default function NeuronDBInstallationPage() {
 
       <section id="branch-selection">
         
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1.5rem', borderRadius: '0.5rem', marginBottom: '1.5rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem', marginBottom: '1.5rem' }}>
           <h3 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.25rem', fontWeight: 'bold', color: '#fbbf24' }}>📌 Branch & Version Selection</h3>
           <p style={{ marginBottom: '1rem' }}>
             NeuronDB has two branches with different versions. Choose based on your needs:
@@ -66,13 +66,13 @@ export default function NeuronDBInstallationPage() {
             </thead>
             <tbody>
               <tr style={{ borderBottom: '1px solid #374151' }}>
-                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>main</code></td>
+                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>main</code></td>
                 <td style={{ padding: '0.75rem' }}><strong>2.0.0</strong></td>
                 <td style={{ padding: '0.75rem' }}><span style={{ color: '#10b981' }}>Latest</span></td>
                 <td style={{ padding: '0.75rem' }}>Development, new features, latest improvements</td>
               </tr>
               <tr>
-                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>REL1_STABLE</code></td>
+                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>REL1_STABLE</code></td>
                 <td style={{ padding: '0.75rem' }}><strong>1.0.0</strong></td>
                 <td style={{ padding: '0.75rem' }}><span style={{ color: '#3b82f6' }}>Stable</span></td>
                 <td style={{ padding: '0.75rem' }}>Production, stability, proven releases</td>
@@ -80,7 +80,7 @@ export default function NeuronDBInstallationPage() {
             </tbody>
           </table>
           <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
-            <strong>Recommendation:</strong> Use <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> for new projects and <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> for production deployments requiring maximum stability.
+            <strong>Recommendation:</strong> Use <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> for new projects and <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> for production deployments requiring maximum stability.
           </p>
         </div>
       </section>
@@ -134,7 +134,7 @@ export default function NeuronDBInstallationPage() {
           </tbody>
         </table>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <p>
             <strong>💡 Note:</strong> Use <a href="/docs/neurondb/getting-started/docker" style={{ color: '#fbbf24' }}>Docker</a> to get the complete ecosystem (NeuronDB + NeuronAgent + NeuronMCP + NeuronDesktop) running quickly with automatic configuration.
           </p>
@@ -210,7 +210,7 @@ docker pull ghcr.io/neurondb/neurondb-postgres:v2.0.0-pg17-cpu
 # Start services
 docker compose up -d`}
         />
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <p>
             <strong>📦 Version Information:</strong> 
             <ul style={{ marginTop: '0.5rem', paddingLeft: '1.5rem' }}>
@@ -304,7 +304,7 @@ psql -d postgres -c "SELECT extversion FROM pg_extension WHERE extname = 'neuron
 # Expected output: 1.0`}
         />
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <p>
             <strong>📦 Package Availability:</strong> DEB and RPM packages are built for each release starting with v2.0.0.
             Download packages from <a href="https://github.com/neurondb-ai/neurondb/releases" target="_blank" rel="noopener noreferrer" style={{ color: '#fbbf24' }}>GitHub Releases</a>.
@@ -331,7 +331,7 @@ psql -d postgres -c "SELECT extversion FROM pg_extension WHERE extname = 'neuron
           Use Ansible automation for infrastructure provisioning and deployment of the NeuronDB ecosystem across development, staging, and production environments. Ansible complements Docker/Kubernetes scripts by handling OS-level system configuration, infrastructure provisioning, and service deployment.
         </p>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <h3 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.1rem', fontWeight: 'bold', color: '#fbbf24' }}>✨ What Ansible Provides</h3>
           <ul style={{ marginBottom: 0 }}>
             <li><strong>OS-level system configuration</strong> - Package installation, user/group creation, system tuning</li>
@@ -396,7 +396,7 @@ ansible-playbook playbooks/deploy-neurondesktop.yml -i inventory/hosts.yml`}
           </strong>
         </p>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <p>
             <strong>💡 Best For:</strong> Ansible is ideal for infrastructure provisioning, multi-server deployments, and environments where you need fine-grained control over OS-level configuration. For quick single-server setups, Docker is recommended.
           </p>
@@ -457,7 +457,7 @@ cd neurondb/NeuronDB
 make PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config
 sudo make install PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config`}
         />
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <p>
             <strong>💡 Branch Selection:</strong> Use <code>main</code> branch for version 2.0 (latest features) or <code>REL1_STABLE</code> branch for version 1.0 (stable production release).
           </p>
@@ -567,10 +567,10 @@ WHERE  extname = 'neurondb';`}
         <p>
           If you're upgrading from NeuronDB 1.0 (REL1_STABLE branch) to version 2.0 (main branch), follow these steps:
         </p>
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <p style={{ marginBottom: '0.5rem' }}>
-            <strong>Important:</strong> Version 2.0.0 is available on the <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> branch.
-            The upgrade path requires switching from <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> to <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> branch.
+            <strong>Important:</strong> Version 2.0.0 is available on the <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> branch.
+            The upgrade path requires switching from <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> to <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> branch.
           </p>
         </div>
         <SqlCodeBlock
@@ -609,7 +609,7 @@ neurondb.gpu_memory_pool_mb = 2048`}
           <li><strong>GPU Backends:</strong> CUDA (NVIDIA), ROCm (AMD), Metal (Apple Silicon)</li>
           <li><strong>Architectures:</strong> linux/amd64, linux/arm64</li>
         </ul>
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <p style={{ marginBottom: 0 }}>
             <strong>📋 Detailed Compatibility Matrix:</strong> For complete compatibility information including CI testing details, version-specific notes, and known issues, see{' '}
             <a href="https://github.com/neurondb-ai/neurondb/blob/main/COMPATIBILITY.md" target="_blank" rel="noopener noreferrer" style={{ color: '#fbbf24' }}>COMPATIBILITY.md</a> in the repository.

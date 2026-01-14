@@ -61,7 +61,7 @@ export default function NeuronDBGettingStarted() {
       <section id="introduction">
         <h2>Introduction</h2>
         
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1.5rem', borderRadius: '0.5rem', marginBottom: '1.5rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem', marginBottom: '1.5rem' }}>
           <h3 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.25rem', fontWeight: 'bold', color: '#fbbf24' }}>📌 Branch & Version Selection</h3>
           <p style={{ marginBottom: '1rem' }}>
             NeuronDB has two branches with different versions. Choose based on your needs:
@@ -77,13 +77,13 @@ export default function NeuronDBGettingStarted() {
             </thead>
             <tbody>
               <tr style={{ borderBottom: '1px solid #374151' }}>
-                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>main</code></td>
-                <td style={{ padding: '0.75rem' }}><strong>2.0.0</strong></td>
+                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>main</code></td>
+                <td style={{ padding: '0.75rem' }}><strong>3.0.0-devel</strong></td>
                 <td style={{ padding: '0.75rem' }}><span style={{ color: '#10b981' }}>Latest</span></td>
                 <td style={{ padding: '0.75rem' }}>New projects, development, latest features (default)</td>
               </tr>
               <tr>
-                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>REL1_STABLE</code></td>
+                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>REL1_STABLE</code></td>
                 <td style={{ padding: '0.75rem' }}><strong>1.0.0</strong></td>
                 <td style={{ padding: '0.75rem' }}><span style={{ color: '#3b82f6' }}>Stable</span></td>
                 <td style={{ padding: '0.75rem' }}>Production, maximum stability required</td>
@@ -91,8 +91,8 @@ export default function NeuronDBGettingStarted() {
             </tbody>
           </table>
           <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
-            <strong>Note:</strong> This documentation reflects version <strong>2.0.0</strong> from the <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> branch. 
-            For the stable 1.0.0 release, use the <code style={{ backgroundColor: '#1e293b', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> branch. See{' '}
+            <strong>Note:</strong> This documentation reflects version <strong>3.0.0-devel</strong> from the <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> branch. 
+            For the stable 1.0.0 release, use the <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> branch. See{' '}
             <a href="https://github.com/neurondb-ai/neurondb" target="_blank" rel="noopener noreferrer" style={{ color: '#fbbf24' }}>GitHub repository</a> for branch details.
           </p>
         </div>
@@ -168,7 +168,7 @@ export default function NeuronDBGettingStarted() {
           </tbody>
         </table>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <p>
             <strong>💡 Note:</strong> New here? Use <a href="/docs/neurondb/getting-started/simple-start" style={{ color: '#fbbf24' }}>Simple Start</a> for a beginner-friendly guide. 
             For the complete ecosystem with Docker, use <a href="/docs/neurondb/getting-started/docker" style={{ color: '#fbbf24' }}>Docker Quick Start</a>. 
@@ -185,7 +185,7 @@ export default function NeuronDBGettingStarted() {
 
         <BashCodeBlock
           title="Start complete ecosystem"
-          code={`# Clone repository (main branch = 2.0.0)
+          code={`# Clone repository (main branch = 3.0.0-devel)
 git clone https://github.com/neurondb-ai/neurondb.git
 cd neurondb
 

@@ -47,7 +47,7 @@ export default function ScriptsPage() {
           All scripts are <strong>completely self-sufficient</strong> with no external dependencies.
         </p>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <h3 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.1rem', fontWeight: 'bold', color: '#fbbf24' }}>✨ Script Features</h3>
           <ul style={{ marginBottom: 0 }}>
             <li><strong>Self-sufficient:</strong> No external dependencies</li>
@@ -418,7 +418,7 @@ export default function ScriptsPage() {
           </li>
         </ul>
 
-        <div style={{ backgroundColor: '#1e3a5f', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem' }}>
           <p style={{ margin: 0 }}>
             <strong>💡 Tip:</strong> All scripts support <code>--help</code> for detailed usage information. 
             For example: <code>./scripts/neurondb-docker.sh --help</code>
