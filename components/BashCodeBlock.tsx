@@ -44,7 +44,7 @@ export default function BashCodeBlock({ code, title }: BashCodeBlockProps) {
   };
 
   return (
-    <div className="bg-gray-800/50 rounded-lg mb-6 relative group">
+    <div className="bg-slate-800/50 rounded-lg mb-6 relative group">
       <div className="flex items-center justify-between px-6 pt-6 pb-3">
         {title && (
           <h3 className="text-lg font-semibold text-cyan-400">{title}</h3>

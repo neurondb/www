@@ -197,7 +197,7 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
               {docSections.map((section) => (
                 <div key={section.title} className={themeClasses.docCardClass}>
                   <h3 className="text-xl font-semibold text-white">{section.title}</h3>
-                  <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">{section.description}</p>
+                  <p className="mt-2 text-sm text-slate-300">{section.description}</p>
                   <ul className="mt-4 space-y-2 text-sm">
                     {section.items.map((item) => {
                       const Component = item.external ? 'a' : Link

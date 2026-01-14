@@ -57,7 +57,7 @@ export default function NeuronDesktopHeroArt({
           fill="url(#desktopGradient)"
           stroke="currentColor"
           strokeWidth="2"
-          className="text-slate-700 dark:text-slate-300"
+          className="text-slate-300"
           filter="url(#desktopShadow)"
         />
         
@@ -96,7 +96,7 @@ export default function NeuronDesktopHeroArt({
         fill="url(#desktopGradient)"
         stroke="currentColor"
         strokeWidth="2"
-        className="text-slate-700 dark:text-slate-300"
+        className="text-slate-300"
         filter="url(#desktopShadow)"
       />
       <rect
@@ -108,31 +108,31 @@ export default function NeuronDesktopHeroArt({
         fill="url(#desktopGradient)"
         stroke="currentColor"
         strokeWidth="2"
-        className="text-slate-700 dark:text-slate-300"
+        className="text-slate-300"
         filter="url(#desktopShadow)"
       />
 
       {/* Component icons around monitor */}
       {/* Database icon (top left) */}
       <g transform="translate(30, 30)">
-        <ellipse cx="0" cy="-5" rx="10" ry="3" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-slate-500 dark:text-slate-300" />
-        <rect x="-10" y="-5" width="20" height="12" rx="2" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-slate-500 dark:text-slate-300" />
-        <ellipse cx="0" cy="7" rx="10" ry="3" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-slate-500 dark:text-slate-300" />
+        <ellipse cx="0" cy="-5" rx="10" ry="3" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-slate-300" />
+        <rect x="-10" y="-5" width="20" height="12" rx="2" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-slate-300" />
+        <ellipse cx="0" cy="7" rx="10" ry="3" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-slate-300" />
       </g>
 
       {/* Agent icon (top right) */}
       <g transform="translate(170, 30)">
-        <rect x="-8" y="-10" width="16" height="20" rx="3" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-slate-500 dark:text-slate-300" />
-        <circle cx="0" cy="-5" r="2" fill="currentColor" className="text-slate-500 dark:text-slate-300" />
-        <rect x="-4" y="2" width="8" height="6" rx="1" fill="none" stroke="currentColor" strokeWidth="1" className="text-slate-500 dark:text-slate-300" />
+        <rect x="-8" y="-10" width="16" height="20" rx="3" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-slate-300" />
+        <circle cx="0" cy="-5" r="2" fill="currentColor" className="text-slate-300" />
+        <rect x="-4" y="2" width="8" height="6" rx="1" fill="none" stroke="currentColor" strokeWidth="1" className="text-slate-300" />
       </g>
 
       {/* MCP icon (bottom left) */}
       <g transform="translate(30, 170)">
-        <rect x="-8" y="-8" width="16" height="16" rx="3" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-slate-500 dark:text-slate-300" />
-        <circle cx="0" cy="0" r="4" fill="currentColor" className="text-slate-500 dark:text-slate-300" opacity="0.5" />
-        <rect x="-6" y="-6" width="4" height="4" rx="1" fill="currentColor" className="text-slate-500 dark:text-slate-300" />
-        <rect x="2" y="2" width="4" height="4" rx="1" fill="currentColor" className="text-slate-500 dark:text-slate-300" />
+        <rect x="-8" y="-8" width="16" height="16" rx="3" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-slate-300" />
+        <circle cx="0" cy="0" r="4" fill="currentColor" className="text-slate-300" opacity="0.5" />
+        <rect x="-6" y="-6" width="4" height="4" rx="1" fill="currentColor" className="text-slate-300" />
+        <rect x="2" y="2" width="4" height="4" rx="1" fill="currentColor" className="text-slate-300" />
       </g>
 
       {/* Metrics icon (bottom right) */}
@@ -143,12 +143,12 @@ export default function NeuronDesktopHeroArt({
           stroke="currentColor"
           strokeWidth="1.5"
           strokeLinecap="round"
-          className="text-slate-500 dark:text-slate-300"
+          className="text-slate-300"
         />
-        <circle cx="-4" cy="4" r="1.5" fill="currentColor" className="text-slate-500 dark:text-slate-400" />
-        <circle cx="0" cy="6" r="1.5" fill="currentColor" className="text-slate-500 dark:text-slate-400" />
-        <circle cx="4" cy="0" r="1.5" fill="currentColor" className="text-slate-500 dark:text-slate-400" />
-        <circle cx="8" cy="2" r="1.5" fill="currentColor" className="text-slate-500 dark:text-slate-400" />
+        <circle cx="-4" cy="4" r="1.5" fill="currentColor" className="text-slate-400" />
+        <circle cx="0" cy="6" r="1.5" fill="currentColor" className="text-slate-400" />
+        <circle cx="4" cy="0" r="1.5" fill="currentColor" className="text-slate-400" />
+        <circle cx="8" cy="2" r="1.5" fill="currentColor" className="text-slate-400" />
       </g>
 
       {/* Connection lines from monitor to components */}
@@ -157,7 +157,7 @@ export default function NeuronDesktopHeroArt({
         fill="none"
         stroke="currentColor"
         strokeWidth="1.5"
-        className="text-slate-400 dark:text-slate-500"
+        className="text-slate-500"
         opacity="0.3"
         strokeDasharray="3,3"
       />
@@ -166,7 +166,7 @@ export default function NeuronDesktopHeroArt({
         fill="none"
         stroke="currentColor"
         strokeWidth="1.5"
-        className="text-slate-400 dark:text-slate-500"
+        className="text-slate-500"
         opacity="0.3"
         strokeDasharray="3,3"
       />
@@ -175,7 +175,7 @@ export default function NeuronDesktopHeroArt({
         fill="none"
         stroke="currentColor"
         strokeWidth="1.5"
-        className="text-slate-400 dark:text-slate-500"
+        className="text-slate-500"
         opacity="0.3"
         strokeDasharray="3,3"
       />
@@ -184,7 +184,7 @@ export default function NeuronDesktopHeroArt({
         fill="none"
         stroke="currentColor"
         strokeWidth="1.5"
-        className="text-slate-400 dark:text-slate-500"
+        className="text-slate-500"
         opacity="0.3"
         strokeDasharray="3,3"
       />

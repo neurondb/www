@@ -251,7 +251,7 @@ export const buttons = {
   },
   secondary: {
     base: 'inline-flex items-center gap-2 rounded-xl border font-semibold transition-all duration-300',
-    colors: 'border-slate-300 hover:border-slate-400 text-slate-700 dark:border-slate-600 dark:text-slate-200',
+    colors: 'border-slate-600 hover:border-slate-500 text-slate-200',
     sizes: {
       sm: 'px-4 py-2 text-sm',
       md: 'px-6 py-3 text-sm',

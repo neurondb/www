@@ -247,7 +247,7 @@ export function QuickLinkCard({
       <h3 className={cn('text-lg font-semibold mb-2 group-hover:', hoverLabelClasses, 'text-white')}>
         {title}
       </h3>
-      <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+      <p className="text-slate-300 text-sm leading-relaxed">
         {description}
       </p>
       {children}

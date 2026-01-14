@@ -2777,15 +2777,15 @@ const NeurondBDemoTerminal = () => {
   }, [activeMainTab, activeSubTab])
 
   return (
-    <div className="bg-black rounded-lg shadow-2xl border border-gray-700 overflow-hidden">
+    <div className="bg-black rounded-lg shadow-2xl border border-slate-700 overflow-hidden">
       {/* Terminal Header */}
-      <div className="bg-gray-800 px-4 py-3 border-b border-gray-700">
+      <div className="bg-slate-800 px-4 py-3 border-b border-slate-700">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
             <div className="w-3 h-3 bg-accent-500 rounded-full"></div>
-            <span className="text-gray-300 text-sm ml-4 font-mono">neurondb-demo</span>
+            <span className="text-slate-300 text-sm ml-4 font-mono">neurondb-demo</span>
           </div>
           <div className="flex items-center gap-2">
             <button
@@ -2795,8 +2795,8 @@ const NeurondBDemoTerminal = () => {
                 copied 
                   ? 'bg-green-600 text-white' 
                   : commandHistory.length === 0
-                  ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
-                  : 'hover:bg-gray-700 text-gray-400 hover:text-white'
+                  ? 'bg-slate-700 text-slate-500 cursor-not-allowed'
+                  : 'hover:bg-slate-700 text-slate-400 hover:text-white'
               }`}
               title={copied ? 'Copied!' : 'Copy to clipboard'}
             >
@@ -2807,8 +2807,8 @@ const NeurondBDemoTerminal = () => {
               disabled={isRunning}
               className={`p-2 rounded transition-all ${
                 isRunning 
-                  ? 'bg-gray-700 text-gray-500 cursor-not-allowed' 
-                  : 'hover:bg-gray-700 text-gray-400 hover:text-white'
+                  ? 'bg-slate-700 text-slate-500 cursor-not-allowed' 
+                  : 'hover:bg-slate-700 text-slate-400 hover:text-white'
               }`}
               title="Reset demo"
             >
@@ -2830,7 +2830,7 @@ const NeurondBDemoTerminal = () => {
               className={`px-3 py-2 text-xs font-semibold rounded-lg transition-all capitalize ${
                 activeMainTab === mainTab
                 ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/30'
-                : 'bg-gray-700 text-gray-300 hover:bg-gray-600 hover:text-white'
+                : 'bg-slate-700 text-slate-300 hover:bg-slate-600 hover:text-white'
             } ${isRunning ? 'cursor-not-allowed opacity-50' : ''}`}
           >
               {mainTab === 'llm' ? 'LLM' : mainTab === 'neuronagent' ? 'NeuronAgent' : mainTab === 'neuronmcp' ? 'NeuronMCP' : mainTab}
@@ -2840,7 +2840,7 @@ const NeurondBDemoTerminal = () => {
 
         {/* Sub Tabs (shown when main tab has sub-tabs) */}
         {tabStructure[activeMainTab].subTabs.length > 0 && (
-          <div className="flex gap-2 flex-wrap border-t border-gray-700 pt-2">
+          <div className="flex gap-2 flex-wrap border-t border-slate-700 pt-2">
             {tabStructure[activeMainTab].subTabs.map((subTab) => (
           <button
                 key={subTab}
@@ -2851,7 +2851,7 @@ const NeurondBDemoTerminal = () => {
                 className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all capitalize ${
                   activeSubTab === subTab
                     ? 'bg-cyan-600 text-white shadow-md shadow-cyan-600/20'
-                    : 'bg-gray-700/50 text-gray-400 hover:bg-gray-700 hover:text-gray-300'
+                    : 'bg-slate-700/50 text-slate-400 hover:bg-slate-700 hover:text-slate-300'
             } ${isRunning ? 'cursor-not-allowed opacity-50' : ''}`}
           >
                 {subTab}
@@ -2874,13 +2874,13 @@ const NeurondBDemoTerminal = () => {
         {commandHistory.length === 0 && !isRunning && (() => {
           const { description, badges, tabDisplay } = getWelcomeMessage()
           return (
-            <div className="text-gray-500 mb-4">
+            <div className="text-slate-500 mb-4">
               <div className="text-cyan-400 text-base font-bold mb-2 flex items-center gap-2">
                 <Terminal className="w-5 h-5" />
                 NeurondB Interactive Demo Terminal
               </div>
               {description && (
-                <div className="text-gray-400 text-xs mb-3">
+                <div className="text-slate-400 text-xs mb-3">
                   {description}
                 </div>
               )}
@@ -2930,7 +2930,7 @@ const NeurondBDemoTerminal = () => {
                   return (
                     <span>
                       {parts.map((part, i) => 
-                        i % 2 === 1 ? <span key={i} className="text-emerald-400">{part}</span> : <span key={i} className="text-gray-300">{part}</span>
+                        i % 2 === 1 ? <span key={i} className="text-emerald-400">{part}</span> : <span key={i} className="text-slate-300">{part}</span>
                       )}
                     </span>
                   )
@@ -2941,7 +2941,7 @@ const NeurondBDemoTerminal = () => {
                   return (
                     <span>
                       {parts.map((part, i) => 
-                        i % 2 === 1 ? <span key={i} className="text-yellow-400">{part}</span> : <span key={i} className="text-gray-300">{part}</span>
+                        i % 2 === 1 ? <span key={i} className="text-yellow-400">{part}</span> : <span key={i} className="text-slate-300">{part}</span>
                       )}
                     </span>
                   )
@@ -2952,13 +2952,13 @@ const NeurondBDemoTerminal = () => {
                   return (
                     <span>
                       {parts.map((part, i) => 
-                        i % 2 === 1 ? <span key={i} className="text-cyan-400">{part}</span> : <span key={i} className="text-gray-300">{part}</span>
+                        i % 2 === 1 ? <span key={i} className="text-cyan-400">{part}</span> : <span key={i} className="text-slate-300">{part}</span>
                       )}
                     </span>
                   )
                 }
                 // Default
-                return <span className="text-gray-300">{text}</span>
+                return <span className="text-slate-300">{text}</span>
               }
 
               return (
@@ -3008,7 +3008,7 @@ const NeurondBDemoTerminal = () => {
       </div>
 
       {/* Terminal Controls */}
-      <div className="bg-gray-800 px-4 py-3 border-t border-gray-700">
+      <div className="bg-slate-800 px-4 py-3 border-t border-slate-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <button
@@ -3016,7 +3016,7 @@ const NeurondBDemoTerminal = () => {
               disabled={isRunning}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold transition-all shadow-lg ${
                 isRunning 
-                  ? 'bg-gray-700 text-gray-500 cursor-not-allowed shadow-none' 
+                  ? 'bg-slate-700 text-slate-500 cursor-not-allowed shadow-none' 
                   : 'bg-emerald-600 hover:bg-emerald-700 text-white hover:scale-105 shadow-emerald-600/30'
               }`}
             >
@@ -3029,7 +3029,7 @@ const NeurondBDemoTerminal = () => {
               disabled={!isRunning}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold transition-all ${
                 !isRunning 
-                  ? 'bg-gray-700 text-gray-500 cursor-not-allowed' 
+                  ? 'bg-slate-700 text-slate-500 cursor-not-allowed' 
                   : 'bg-red-600 hover:bg-red-700 text-white hover:scale-105'
               }`}
             >
@@ -3042,16 +3042,16 @@ const NeurondBDemoTerminal = () => {
               disabled={isRunning}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold transition-all ${
                 isRunning 
-                  ? 'bg-gray-700 text-gray-500 cursor-not-allowed' 
-                  : 'bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-white'
+                  ? 'bg-slate-700 text-slate-500 cursor-not-allowed' 
+                  : 'bg-slate-700 hover:bg-slate-600 text-slate-300 hover:text-white'
               }`}
             >
               <RotateCcw className="w-4 h-4" />
               Reset
             </button>
 
-            <div className="flex items-center gap-3 ml-6 pl-6 border-l border-gray-700">
-              <span className="text-gray-400 text-sm font-medium">Speed:</span>
+            <div className="flex items-center gap-3 ml-6 pl-6 border-l border-slate-700">
+              <span className="text-slate-400 text-sm font-medium">Speed:</span>
               <div className="flex gap-2">
                 {[1, 2, 3].map((speed) => (
                   <button
@@ -3061,7 +3061,7 @@ const NeurondBDemoTerminal = () => {
                     className={`px-3 py-1.5 rounded-md text-sm font-mono font-bold transition-all ${
                       speedMultiplier === speed
                         ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/30'
-                        : 'bg-gray-700 text-gray-400 hover:bg-gray-600 hover:text-white'
+                        : 'bg-slate-700 text-slate-400 hover:bg-slate-600 hover:text-white'
                     } ${isRunning ? 'cursor-not-allowed opacity-50' : ''}`}
                   >
                     {speed}×
@@ -3078,7 +3078,7 @@ const NeurondBDemoTerminal = () => {
                 <span className="font-semibold">Running at {speedMultiplier}× speed</span>
               </span>
             ) : (
-              <span className="text-gray-500">
+              <span className="text-slate-500">
                 {commandHistory.length > 0 
                   ? (
                     <span className="flex items-center gap-2">

@@ -194,7 +194,7 @@ export default function ProductPageTemplate({
       {/* Hero Section - Matching Home Hero Style */}
       <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 min-h-[480px] md:min-h-[500px] flex items-center pt-20">
         {/* Subtle clean background */}
-        <div className="absolute inset-0 neuron-tech-bg dark:neuron-tech-bg"></div>
+        <div className="absolute inset-0 neuron-tech-bg"></div>
         <div className="relative z-10 w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             {/* Left: copy */}
