@@ -209,24 +209,7 @@ export default function NeuronAgentDocsPage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginTop: '1.5rem', marginBottom: '1.5rem' }}>
           <Link
             href="/docs/neuronagent/getting-started"
-            style={{
-              backgroundColor: '#1e293b',
-              border: '1px solid #334155',
-              padding: '1.5rem',
-              borderRadius: '0.5rem',
-              textDecoration: 'none',
-              color: '#fbbf24',
-              display: 'block',
-              transition: 'all 0.2s'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = '#fbbf24'
-              e.currentTarget.style.backgroundColor = '#1e293b'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = '#334155'
-              e.currentTarget.style.backgroundColor = '#1e293b'
-            }}
+            className="block rounded-lg border border-slate-700 bg-slate-900/60 p-6 text-yellow-400 hover:text-yellow-300 hover:border-yellow-400 transition-colors"
           >
             <h3 style={{ marginTop: 0, marginBottom: '0.5rem', color: '#fbbf24' }}>🚀 Getting Started</h3>
             <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
@@ -236,24 +219,7 @@ export default function NeuronAgentDocsPage() {
 
           <Link
             href="/docs/neuronagent/getting-started/quickstart"
-            style={{
-              backgroundColor: '#1e293b',
-              border: '1px solid #334155',
-              padding: '1.5rem',
-              borderRadius: '0.5rem',
-              textDecoration: 'none',
-              color: '#fbbf24',
-              display: 'block',
-              transition: 'all 0.2s'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = '#fbbf24'
-              e.currentTarget.style.backgroundColor = '#1e293b'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = '#334155'
-              e.currentTarget.style.backgroundColor = '#1e293b'
-            }}
+            className="block rounded-lg border border-slate-700 bg-slate-900/60 p-6 text-yellow-400 hover:text-yellow-300 hover:border-yellow-400 transition-colors"
           >
             <h3 style={{ marginTop: 0, marginBottom: '0.5rem', color: '#fbbf24' }}>⚡ Quick Start</h3>
             <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
@@ -263,24 +229,7 @@ export default function NeuronAgentDocsPage() {
 
           <Link
             href="/docs/neuronagent/getting-started/configuration"
-            style={{
-              backgroundColor: '#1e293b',
-              border: '1px solid #334155',
-              padding: '1.5rem',
-              borderRadius: '0.5rem',
-              textDecoration: 'none',
-              color: '#fbbf24',
-              display: 'block',
-              transition: 'all 0.2s'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = '#fbbf24'
-              e.currentTarget.style.backgroundColor = '#1e293b'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = '#334155'
-              e.currentTarget.style.backgroundColor = '#1e293b'
-            }}
+            className="block rounded-lg border border-slate-700 bg-slate-900/60 p-6 text-yellow-400 hover:text-yellow-300 hover:border-yellow-400 transition-colors"
           >
             <h3 style={{ marginTop: 0, marginBottom: '0.5rem', color: '#fbbf24' }}>⚙️ Configuration</h3>
             <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
@@ -290,24 +239,7 @@ export default function NeuronAgentDocsPage() {
 
           <Link
             href="/docs/neuronagent/getting-started/neurondb-integration"
-            style={{
-              backgroundColor: '#1e293b',
-              border: '1px solid #334155',
-              padding: '1.5rem',
-              borderRadius: '0.5rem',
-              textDecoration: 'none',
-              color: '#fbbf24',
-              display: 'block',
-              transition: 'all 0.2s'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = '#fbbf24'
-              e.currentTarget.style.backgroundColor = '#1e293b'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = '#334155'
-              e.currentTarget.style.backgroundColor = '#1e293b'
-            }}
+            className="block rounded-lg border border-slate-700 bg-slate-900/60 p-6 text-yellow-400 hover:text-yellow-300 hover:border-yellow-400 transition-colors"
           >
             <h3 style={{ marginTop: 0, marginBottom: '0.5rem', color: '#fbbf24' }}>🔗 NeuronDB Integration</h3>
             <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
