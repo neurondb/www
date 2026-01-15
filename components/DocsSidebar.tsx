@@ -324,12 +324,13 @@ const neuronagentNavSections: NavSection[] = [
     iconName: 'Zap',
     items: [
       { title: 'Features Overview', href: '/docs/neuronagent/features' },
-      { title: 'Agent Runtime', href: '/docs/neuronagent/features' },
-      { title: 'Multi-Agent Collaboration', href: '/docs/neuronagent/features' },
-      { title: 'Workflow Engine', href: '/docs/neuronagent/features' },
-      { title: 'Human-in-the-Loop', href: '/docs/neuronagent/features' },
-      { title: 'Planning & Reflection', href: '/docs/neuronagent/features' },
-      { title: 'Memory Management', href: '/docs/neuronagent/features' },
+      { title: 'Memory System', href: '/docs/neuronagent/memory' },
+      { title: 'Tool System', href: '/docs/neuronagent/tools' },
+      { title: 'Multi-Agent Collaboration', href: '/docs/neuronagent/multi-agent' },
+      { title: 'Workflow Engine', href: '/docs/neuronagent/workflow' },
+      { title: 'Planning & Reflection', href: '/docs/neuronagent/planning' },
+      { title: 'Quality & Evaluation', href: '/docs/neuronagent/evaluation' },
+      { title: 'Budget & Cost Management', href: '/docs/neuronagent/budget' },
     ],
   },
   {
@@ -358,7 +359,7 @@ const neuronmcpNavSections: NavSection[] = [
     iconName: 'Zap',
     items: [
       { title: 'Features Overview', href: '/docs/neuronmcp/features' },
-      { title: 'MCP Protocol', href: '/docs/neuronmcp/features' },
+      { title: 'MCP Protocol', href: '/docs/neuronmcp/protocol' },
       { title: 'Tool Registration', href: '/docs/neuronmcp/features' },
     ],
   },

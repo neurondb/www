@@ -92,28 +92,44 @@ export default function PostgresDocsLayout({
           <main className="flex-1 min-w-0">
             {/* Page Title */}
             <div className="mb-8 pb-6 border-b border-slate-700">
-              {/* Branch/Version Notice */}
+              {/* Branch/Version Selector */}
               <div className="mb-4 rounded-lg border border-slate-700 bg-slate-900/60 p-4 text-sm text-slate-300">
-                <div>
-                  You are viewing documentation for the Latest branch (main, v2.x).
-                  For the Stable 1.x branch (REL1_STABLE), see:
+                <div className="mb-3">
+                  <strong className="text-yellow-400">Documentation Branch:</strong> You are viewing documentation for the <strong className="text-white">main</strong> branch (3.0.0-devel). 
+                  Select a branch to view its documentation:
                 </div>
-                <div className="mt-2 flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="https://github.com/neurondb-ai/neurondb/tree/main/Docs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center rounded bg-yellow-900/30 border border-yellow-700 px-3 py-1.5 text-yellow-300 hover:text-yellow-200 hover:bg-yellow-900/40 transition-colors font-medium"
+                  >
+                    main (3.0.0-devel) - Latest
+                  </a>
+                  <a
+                    href="https://github.com/neurondb-ai/neurondb/tree/REL2_STABLE/Docs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center rounded bg-white/10 px-3 py-1.5 text-slate-300 hover:text-white hover:bg-white/15 transition-colors"
+                  >
+                    REL2_STABLE (2.0.0) - Stable
+                  </a>
                   <a
                     href="https://github.com/neurondb-ai/neurondb/tree/REL1_STABLE/Docs"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center rounded bg-white/10 px-3 py-1 text-yellow-300 hover:text-yellow-200 hover:bg-white/15 transition-colors"
+                    className="inline-flex items-center rounded bg-white/10 px-3 py-1.5 text-slate-300 hover:text-white hover:bg-white/15 transition-colors"
                   >
-                    GitHub Docs (REL1_STABLE)
+                    REL1_STABLE (1.0.0) - Stable
                   </a>
                   <a
-                    href="https://github.com/neurondb-ai/neurondb/releases"
+                    href="https://github.com/neurondb-ai/neurondb"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center rounded bg-white/10 px-3 py-1 text-yellow-300 hover:text-yellow-200 hover:bg-white/15 transition-colors"
+                    className="inline-flex items-center rounded bg-white/10 px-3 py-1.5 text-slate-300 hover:text-white hover:bg-white/15 transition-colors"
                   >
-                    v1.x Releases
+                    GitHub Repository →
                   </a>
                 </div>
               </div>
