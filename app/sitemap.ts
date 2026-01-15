@@ -862,7 +862,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${baseUrl}/docs/neuronagent/troubleshooting`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
-      priority: 0.75,
+      priority: 0.7,
     },
   ]
 
@@ -886,12 +886,36 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 0.85,
     },
+    {
+      url: `${baseUrl}/docs/neuronmcp/getting-started/installation`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/docs/neuronmcp/getting-started/claude-desktop`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
   ]
 
   // NeuronDesktop Documentation Pages
   const neuronDesktopPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/docs/neurondesktop/features`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/docs/neurondesktop/getting-started/installation`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/docs/neurondesktop/getting-started/profiles`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.85,
