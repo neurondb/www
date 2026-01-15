@@ -254,6 +254,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Getting Started - High priority for new users
   const gettingStartedPages: MetadataRoute.Sitemap = [
+    // NeuronDB Getting Started
     {
       url: `${baseUrl}/docs/neurondb/getting-started`,
       lastModified: currentDate,
@@ -295,6 +296,75 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
+    },
+    // NeuronAgent Getting Started
+    {
+      url: `${baseUrl}/docs/neuronagent/getting-started`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/docs/neuronagent/getting-started/installation`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/docs/neuronagent/getting-started/quickstart`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/docs/neuronagent/getting-started/configuration`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/docs/neuronagent/getting-started/neurondb-integration`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    // NeuronMCP Getting Started
+    {
+      url: `${baseUrl}/docs/neuronmcp/getting-started`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/docs/neuronmcp/getting-started/installation`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/docs/neuronmcp/getting-started/claude-desktop`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    // NeuronDesktop Getting Started
+    {
+      url: `${baseUrl}/docs/neurondesktop/getting-started`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/docs/neurondesktop/getting-started/installation`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/docs/neurondesktop/getting-started/profiles`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
     },
   ]
 
@@ -780,6 +850,54 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
+  // NeuronAgent Documentation Pages
+  const neuronAgentPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/docs/neuronagent/features`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/docs/neuronagent/troubleshooting`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+  ]
+
+  // NeuronMCP Documentation Pages
+  const neuronMCPPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/docs/neuronmcp/features`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/docs/neuronmcp/setup`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/docs/neuronmcp/tools`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+  ]
+
+  // NeuronDesktop Documentation Pages
+  const neuronDesktopPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/docs/neurondesktop/features`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+  ]
+
   // Additional Features & Support (hybrid already in hybridPages)
   const additionalPages: MetadataRoute.Sitemap = [
     {
@@ -826,6 +944,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...performancePages,
     ...referencePages,
     ...securityPages,
+    ...neuronAgentPages,
+    ...neuronMCPPages,
+    ...neuronDesktopPages,
     ...additionalPages,
   ]
 
