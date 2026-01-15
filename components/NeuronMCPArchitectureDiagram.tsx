@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function NeuronMCPArchitectureDiagram() {
   return (
-    <div className="w-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-xl p-8 shadow-xl">
+    <div className="w-full bg-black border border-slate-800 rounded-xl p-8 shadow-xl">
       <h2 className="text-2xl font-bold text-white mb-8 text-center">
         NeuronMCP Architecture
       </h2>

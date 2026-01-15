@@ -113,9 +113,9 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-black">
       {/* Hero Section - Exact Homepage Size */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 min-h-[420px] md:min-h-[450px] flex items-center pt-16 pb-12">
+      <section className="relative overflow-hidden bg-black min-h-[420px] md:min-h-[450px] flex items-center pt-16 pb-12">
         {/* Subtle clean background */}
         <div className="absolute inset-0 neuron-tech-bg"></div>
         <div className="relative z-10 w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -167,7 +167,7 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Articles */}
-      <div className="py-24 relative overflow-hidden bg-slate-900">
+      <div className="py-24 relative overflow-hidden bg-black">
         <div className="container-wide">
           <div className="max-w-7xl mx-auto">
             {/* Technical Blogs */}

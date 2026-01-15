@@ -77,7 +77,7 @@ const products: Product[] = [
 
 export default function HomeProducts() {
   return (
-    <section className="bg-slate-900">
+    <section className="bg-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
                 <div className="max-w-3xl mx-auto text-center mb-10">
                   <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white">

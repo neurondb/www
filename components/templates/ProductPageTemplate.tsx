@@ -190,9 +190,9 @@ export default function ProductPageTemplate({
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-black">
       {/* Hero Section - Matching Home Hero Style */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 min-h-[480px] md:min-h-[500px] flex items-center pt-20">
+      <section className="relative overflow-hidden bg-black min-h-[480px] md:min-h-[500px] flex items-center pt-20">
         {/* Subtle clean background */}
         <div className="absolute inset-0 neuron-tech-bg"></div>
         <div className="relative z-10 w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

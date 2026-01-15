@@ -19,9 +19,9 @@ export default function DocsPage() {
   const productIds = getProductIds()
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-black">
       {/* Hero Section - Exact Homepage Size */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 min-h-[420px] md:min-h-[450px] flex items-center pt-16 pb-12">
+      <section className="relative overflow-hidden bg-black min-h-[420px] md:min-h-[450px] flex items-center pt-16 pb-12">
         {/* Subtle clean background */}
         <div className="absolute inset-0 neuron-tech-bg"></div>
         <div className="relative z-10 w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -95,7 +95,7 @@ export default function DocsPage() {
       </section>
 
       {/* Product Catalog */}
-      <section className="py-16 bg-slate-900">
+      <section className="py-16 bg-black">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-center text-2xl font-semibold text-white mb-12">
             Select a Product
@@ -154,7 +154,7 @@ export default function DocsPage() {
       </section>
 
       {/* Quick Links */}
-      <section className="py-16 bg-slate-900">
+      <section className="py-16 bg-black">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-center text-2xl font-semibold text-white mb-10">
             Quick Links

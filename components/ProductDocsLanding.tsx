@@ -98,11 +98,11 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
 
   return (
     <div 
-      className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
+      className="min-h-screen bg-black"
     >
       {/* Hero Section */}
       <section 
-        className="relative overflow-hidden min-h-[400px] flex items-center pt-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
+        className="relative overflow-hidden min-h-[400px] flex items-center pt-20 bg-black"
       >
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8 w-full py-20">
           <div className="mx-auto max-w-3xl text-center w-full">
@@ -147,7 +147,7 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
 
       {/* Feature Highlights */}
       {features.length > 0 ? (
-        <section className="py-16 bg-slate-900">
+        <section className="py-16 bg-black">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-center text-2xl font-semibold text-white">Key Capabilities</h2>
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -190,7 +190,7 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
 
       {/* Documentation Sections */}
       {docSections.length > 0 ? (
-        <section className="py-16 bg-slate-900">
+        <section className="py-16 bg-black">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-center text-2xl font-semibold text-white">Documentation Library</h2>
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -229,7 +229,7 @@ export default function ProductDocsLanding({ hero, features, docSections, quickL
 
       {/* Quick Links */}
       {quickLinks.length > 0 ? (
-        <section className="pb-24 bg-slate-900">
+        <section className="pb-24 bg-black">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-center text-2xl font-semibold text-white">Quick Links</h2>
             <div className="mt-10 grid gap-6 md:grid-cols-3">

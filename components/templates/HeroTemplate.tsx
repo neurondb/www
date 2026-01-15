@@ -28,7 +28,7 @@ export default function HeroTemplate({
   return (
     <section
       className={cn(
-        'relative overflow-hidden flex items-center pt-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950',
+        'relative overflow-hidden flex items-center pt-20 bg-black',
         heightClass,
         className
       )}

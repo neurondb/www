@@ -548,7 +548,7 @@ export default function BlogPost() {
         slug="neurondb-vs-pgvector-comparison-migration"
         title="NeuronDB vs pgvector: Feature Comparison and Migration Guide"
       />
-      <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+      <div className="bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* Main Content */}

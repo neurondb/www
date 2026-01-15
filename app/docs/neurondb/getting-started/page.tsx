@@ -248,6 +248,9 @@ sudo make install PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config`}
         <p>After installation, use these guides:</p>
         <ul>
           <li>
+            <a href="/docs/neurondb/getting-started/recipes">SQL Recipe Library</a> - Ready-to-run SQL queries for vector search, hybrid search, and more
+          </li>
+          <li>
             <a href="/docs/neurondb/getting-started/quickstart">Quick Start Guide</a> - Create your first vector table, generate embeddings, and run semantic search
           </li>
           <li>

@@ -42,11 +42,11 @@ export default function PostgresDocsLayout({
 }: PostgresDocsLayoutProps) {
   return (
     <div 
-      className={cn('min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950', className)}
+      className={cn('min-h-screen bg-black', className)}
     >
       {/* Header */}
       <header 
-        className="border-b border-slate-700 bg-slate-950"
+        className="border-b border-slate-700 bg-black"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">

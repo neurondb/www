@@ -21,7 +21,7 @@ export default function FooterTemplate({
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className={cn('bg-slate-900 border-t border-slate-800', className)}>
+    <footer className={cn('bg-black border-t border-slate-800', className)}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main footer content */}
         <div className="py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
