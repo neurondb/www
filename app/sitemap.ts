@@ -260,6 +260,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/docs/neurondb/getting-started/recipes`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/docs/neurondb/installation`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
@@ -292,6 +298,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/docs/neurondb/deployment/ansible`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/docs/neurondb/deployment/ha-architecture`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/docs/neurondb/deployment/sizing-guide`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/docs/neurondb/deployment/upgrade-rollback`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.75,
     },
   ]
 
@@ -681,14 +711,58 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  // Additional Features & Support (hybrid already in hybridPages)
-  const additionalPages: MetadataRoute.Sitemap = [
+  // Reference Documentation
+  const referencePages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/docs/neurondb/reference/data-types`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/docs/neurondb/reference/embedding-compatibility`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/docs/neurondb/reference/glossary`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+  ]
+
+  // Security Documentation
+  const securityPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/docs/neurondb/security`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.75,
     },
+    {
+      url: `${baseUrl}/docs/neurondb/security/audit-logging`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/docs/neurondb/security/field-encryption`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/docs/neurondb/security/rls-embeddings`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+  ]
+
+  // Additional Features & Support (hybrid already in hybridPages)
+  const additionalPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/docs/neurondb/sql-api`,
       lastModified: currentDate,
@@ -706,6 +780,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/search`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.6,
     },
   ]
 
@@ -725,6 +805,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...gpuPages,
     ...workerPages,
     ...performancePages,
+    ...referencePages,
+    ...securityPages,
     ...additionalPages,
   ]
 
