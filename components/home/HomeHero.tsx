@@ -22,14 +22,14 @@ export default function HomeHero() {
 
             <div className="mt-5 flex items-center gap-4 animate-slide-up">
               <h1 className="text-5xl sm:text-6xl font-semibold tracking-tight text-white">
-                AI inside PostgreSQL.
+                PostgreSQL AI Extension.
               </h1>
               <div className="hidden sm:block flex-shrink-0 -mt-4 opacity-80 hover:opacity-100 transition-all duration-300 hover:scale-110 hover:rotate-3">
                 <PostgresElephant size={80} className="text-slate-400" />
               </div>
             </div>
             <p className="mt-5 text-lg sm:text-xl leading-relaxed text-slate-300 max-w-xl animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              PostgreSQL extension for vector search, ML inference, and RAG pipelines.
+              PostgreSQL AI extension for vector search, embeddings, ML inference, RAG pipelines, MCP server, and agentic AI runtime.
               Runs in-process with SQL functions.
             </p>
 
