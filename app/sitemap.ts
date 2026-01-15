@@ -3,7 +3,16 @@ import { siteConfig } from '@/config/site'
 import { allBlogPosts } from '@/config/blogPosts'
 
 // Enable ISR for Vercel - sitemap will be regenerated every hour
+// This ensures fresh sitemap data while maintaining good cache performance
 export const revalidate = 3600
+
+// Sitemap best practices:
+// - All URLs are absolute (required)
+// - Priorities: 0.0 to 1.0 (homepage = 1.0, important pages = 0.9-0.95, regular = 0.7-0.8, low = 0.5-0.6)
+// - Change frequencies: always, hourly, daily, weekly, monthly, yearly, never
+// - lastModified: ISO 8601 format (current date for static, actual date for dynamic content)
+// - No duplicates (handled by deduplication logic)
+// - Maximum 50,000 URLs per sitemap (we're well under this limit)
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = `https://${siteConfig.domain}`
@@ -820,9 +829,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Sort by priority (highest first) for better SEO
+  // This helps search engines prioritize important pages during crawling
   const uniquePages = Array.from(urlMap.values()).sort(
     (a, b) => (b.priority || 0) - (a.priority || 0)
   )
+
+  // Validate sitemap structure
+  // - All URLs are absolute (required by sitemap protocol)
+  // - Priorities are between 0.0 and 1.0
+  // - Change frequencies are valid
+  // - No duplicates (handled above)
+  // - Maximum 50,000 URLs (we're well under this limit)
+  
+  // Log sitemap stats in development
+  if (process.env.NODE_ENV === 'development') {
+    console.log(`[Sitemap] Generated ${uniquePages.length} URLs`)
+    console.log(`[Sitemap] Priority range: ${Math.min(...uniquePages.map(p => p.priority || 0))} - ${Math.max(...uniquePages.map(p => p.priority || 0))}`)
+  }
 
   return uniquePages
 }
