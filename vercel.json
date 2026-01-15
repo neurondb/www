@@ -9,7 +9,6 @@
       "maxDuration": 10,
       "memory": 1024,
       "includeFiles": "config/**",
-      "regions": ["iad1"],
       "runtime": "nodejs20.x"
     },
     "app/robots.ts": {
