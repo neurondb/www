@@ -53,7 +53,7 @@ export default function NeuronDBInstallationPage() {
         <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem', marginBottom: '1.5rem' }}>
           <h3 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.25rem', fontWeight: 'bold', color: '#fbbf24' }}>📌 Branch & Version Selection</h3>
           <p style={{ marginBottom: '1rem' }}>
-            NeuronDB has two branches with different versions. Choose based on your needs:
+            NeuronDB has three branches with different versions. Choose based on your needs:
           </p>
           <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '1rem', fontSize: '0.95rem' }}>
             <thead>
@@ -67,9 +67,15 @@ export default function NeuronDBInstallationPage() {
             <tbody>
               <tr style={{ borderBottom: '1px solid #374151' }}>
                 <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>main</code></td>
-                <td style={{ padding: '0.75rem' }}><strong>2.0.0</strong></td>
+                <td style={{ padding: '0.75rem' }}><strong>3.0.0-devel</strong></td>
                 <td style={{ padding: '0.75rem' }}><span style={{ color: '#10b981' }}>Latest</span></td>
-                <td style={{ padding: '0.75rem' }}>Development, new features, latest improvements</td>
+                <td style={{ padding: '0.75rem' }}>Development, new features, latest improvements (default)</td>
+              </tr>
+              <tr style={{ borderBottom: '1px solid #374151' }}>
+                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>REL2_STABLE</code></td>
+                <td style={{ padding: '0.75rem' }}><strong>2.0.0</strong></td>
+                <td style={{ padding: '0.75rem' }}><span style={{ color: '#3b82f6' }}>Stable</span></td>
+                <td style={{ padding: '0.75rem' }}>Production, stable v2.0 features</td>
               </tr>
               <tr>
                 <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>REL1_STABLE</code></td>
