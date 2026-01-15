@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ChevronDown, ChevronRight, BookOpen, Database, Zap, Search, Cpu, Layers, Sparkles, Code, Settings, Box, Activity, Shield, Rocket, FileCode } from 'lucide-react'
+import { ChevronDown, ChevronRight, BookOpen, Database, Zap, Search, Cpu, Layers, Sparkles, Code, Settings, Box, Activity, Shield, Rocket, FileCode, Users, Workflow, HardDrive, Webhook, Server } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface NavSection {
@@ -32,6 +32,11 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Code,
   FileCode,
   Settings,
+  Users,
+  Workflow,
+  HardDrive,
+  Webhook,
+  Server,
 }
 
 interface NavSectionComponentProps {
@@ -115,182 +120,301 @@ function NavItemComponent({ item, pathname }: NavItemComponentProps) {
   )
 }
 
+// NeuronDB navigation structure
+const neurondbNavSections: NavSection[] = [
+  {
+    title: 'Getting Started',
+    iconName: 'Rocket',
+    items: [
+      { title: 'Overview', href: '/docs/neurondb' },
+      { title: 'Simple Start', href: '/docs/neurondb/getting-started/simple-start' },
+      { title: 'Docker Quick Start', href: '/docs/neurondb/getting-started/docker' },
+      { title: 'Quick Start Guide', href: '/docs/neurondb/getting-started/quickstart' },
+      { title: 'SQL Recipes', href: '/docs/neurondb/getting-started/recipes' },
+      { title: 'Installation', href: '/docs/neurondb/installation' },
+      { title: 'Configuration', href: '/docs/neurondb/configuration' },
+    ],
+  },
+  {
+    title: 'Core Features',
+    iconName: 'Database',
+    items: [
+      { title: 'Vector Engine', href: '/docs/neurondb/vector-engine' },
+      { title: 'Vector Types', href: '/docs/neurondb/features/vector-types' },
+      { title: 'Distance Metrics', href: '/docs/neurondb/features/distance-metrics' },
+      { title: 'Indexing', href: '/docs/neurondb/indexing' },
+      { title: 'Quantization', href: '/docs/neurondb/features/quantization' },
+      { title: 'Features Overview', href: '/docs/neurondb/features' },
+    ],
+  },
+  {
+    title: 'ML & Embeddings',
+    iconName: 'Cpu',
+    items: [
+      { title: 'ML Engine', href: '/docs/neurondb/ml-engine' },
+      { title: 'Embedding Engine', href: '/docs/neurondb/embedding-engine' },
+      { title: 'Embeddings', href: '/docs/neurondb/ml/embeddings' },
+      { title: 'Embedding Generation', href: '/docs/neurondb/ml/embedding-generation' },
+      { title: 'Inference', href: '/docs/neurondb/ml/inference' },
+      { title: 'Model Management', href: '/docs/neurondb/ml/model-management' },
+      { title: 'Feature Store', href: '/docs/neurondb/ml/feature-store' },
+      { title: 'Unified API', href: '/docs/neurondb/ml/unified-api' },
+      { title: 'GPU Support', href: '/docs/neurondb/ml/gpu' },
+      { title: 'Text ML', href: '/docs/neurondb/ml/text-ml' },
+    ],
+  },
+  {
+    title: 'ML Algorithms',
+    iconName: 'Layers',
+    items: [
+      { title: 'ML Overview', href: '/docs/neurondb/ml' },
+      { title: 'Classification', href: '/docs/neurondb/ml/classification' },
+      { title: 'Regression', href: '/docs/neurondb/ml/regression' },
+      { title: 'Clustering', href: '/docs/neurondb/ml/clustering' },
+      { title: 'Random Forest', href: '/docs/neurondb/ml/random-forest' },
+      { title: 'Gradient Boosting', href: '/docs/neurondb/ml/gradient-boosting' },
+      { title: 'SVM', href: '/docs/neurondb/ml/svm' },
+      { title: 'Dimensionality Reduction', href: '/docs/neurondb/ml/dimensionality-reduction' },
+      { title: 'Outlier Detection', href: '/docs/neurondb/ml/outlier-detection' },
+      { title: 'Quality Metrics', href: '/docs/neurondb/ml/quality-metrics' },
+      { title: 'Drift Detection', href: '/docs/neurondb/ml/drift-detection' },
+      { title: 'Topic Discovery', href: '/docs/neurondb/ml/topic-discovery' },
+      { title: 'Time Series', href: '/docs/neurondb/ml/time-series' },
+      { title: 'Recommendation Systems', href: '/docs/neurondb/ml/recommendation-systems' },
+      { title: 'Hyperparameter Tuning', href: '/docs/neurondb/ml/hyperparameter-tuning' },
+      { title: 'RAG in ML', href: '/docs/neurondb/ml/rag' },
+    ],
+  },
+  {
+    title: 'Hybrid Search',
+    iconName: 'Search',
+    items: [
+      { title: 'Hybrid Overview', href: '/docs/neurondb/hybrid/overview' },
+      { title: 'Hybrid Search', href: '/docs/neurondb/hybrid' },
+      { title: 'Multi-Vector Search', href: '/docs/neurondb/hybrid/multi-vector' },
+      { title: 'Faceted Search', href: '/docs/neurondb/hybrid/faceted-search' },
+      { title: 'Temporal Search', href: '/docs/neurondb/hybrid/temporal-search' },
+    ],
+  },
+  {
+    title: 'Reranking',
+    iconName: 'Sparkles',
+    items: [
+      { title: 'Reranking Overview', href: '/docs/neurondb/reranking/overview' },
+      { title: 'Cross-Encoder', href: '/docs/neurondb/reranking/cross-encoder' },
+      { title: 'LLM Reranking', href: '/docs/neurondb/reranking/llm-reranking' },
+      { title: 'ColBERT', href: '/docs/neurondb/reranking/colbert' },
+      { title: 'Ensemble', href: '/docs/neurondb/reranking/ensemble' },
+    ],
+  },
+  {
+    title: 'RAG Pipeline',
+    iconName: 'Zap',
+    items: [
+      { title: 'RAG Overview', href: '/docs/neurondb/rag' },
+      { title: 'Document Processing', href: '/docs/neurondb/rag/document-processing' },
+      { title: 'LLM Integration', href: '/docs/neurondb/rag/llm-integration' },
+    ],
+  },
+  {
+    title: 'Background Workers',
+    iconName: 'Activity',
+    items: [
+      { title: 'Workers Overview', href: '/docs/neurondb/background-workers' },
+      { title: 'Queue Worker (neuranq)', href: '/docs/neurondb/background-workers/neuranq' },
+      { title: 'Auto-Tuner (neuranmon)', href: '/docs/neurondb/background-workers/neuranmon' },
+      { title: 'Index Maintenance (neurandefrag)', href: '/docs/neurondb/background-workers/neurandefrag' },
+      { title: 'LLM Processor (neuranllm)', href: '/docs/neurondb/background-workers/neuranllm' },
+    ],
+  },
+  {
+    title: 'GPU Acceleration',
+    iconName: 'Cpu',
+    items: [
+      { title: 'GPU Overview', href: '/docs/neurondb/gpu' },
+      { title: 'CUDA Support', href: '/docs/neurondb/gpu/cuda-support' },
+      { title: 'ROCm Support', href: '/docs/neurondb/gpu/rocm-support' },
+      { title: 'Metal Support', href: '/docs/neurondb/gpu/metal-support' },
+      { title: 'Auto-Detection', href: '/docs/neurondb/gpu/auto-detection' },
+    ],
+  },
+  {
+    title: 'Components',
+    iconName: 'Box',
+    items: [
+      { title: 'NeuronAgent', href: '/docs/neuronagent' },
+      { title: 'NeuronMCP', href: '/docs/neuronmcp' },
+      { title: 'NeuronDesktop', href: '/docs/neurondesktop' },
+    ],
+  },
+  {
+    title: 'Performance & Monitoring',
+    iconName: 'Activity',
+    items: [
+      { title: 'Performance Guide', href: '/docs/neurondb/performance' },
+      { title: 'Monitoring', href: '/docs/neurondb/performance/monitoring' },
+      { title: 'SIMD Optimization', href: '/docs/neurondb/performance/simd-optimization' },
+      { title: 'Analytics', href: '/docs/neurondb/analytics' },
+    ],
+  },
+  {
+    title: 'Security',
+    iconName: 'Shield',
+    items: [
+      { title: 'Security Guide', href: '/docs/neurondb/security' },
+      { title: 'Audit Logging', href: '/docs/neurondb/security/audit-logging' },
+      { title: 'Field Encryption', href: '/docs/neurondb/security/field-encryption' },
+      { title: 'RLS Embeddings', href: '/docs/neurondb/security/rls-embeddings' },
+    ],
+  },
+  {
+    title: 'Deployment',
+    iconName: 'Rocket',
+    items: [
+      { title: 'Kubernetes', href: '/docs/neurondb/deployment/kubernetes' },
+      { title: 'Ansible', href: '/docs/neurondb/deployment/ansible' },
+      { title: 'HA Architecture', href: '/docs/neurondb/deployment/ha-architecture' },
+      { title: 'Observability', href: '/docs/neurondb/deployment/observability' },
+      { title: 'Operational Scripts', href: '/docs/neurondb/deployment/scripts' },
+      { title: 'Sizing Guide', href: '/docs/neurondb/deployment/sizing-guide' },
+      { title: 'Upgrade & Rollback', href: '/docs/neurondb/deployment/upgrade-rollback' },
+    ],
+  },
+  {
+    title: 'Advanced Features',
+    iconName: 'Code',
+    items: [
+      { title: 'Advanced Features', href: '/docs/neurondb/advanced-features' },
+    ],
+  },
+  {
+    title: 'API Reference',
+    iconName: 'FileCode',
+    items: [
+      { title: 'SQL API Reference', href: '/docs/neurondb/sql-api' },
+      { title: 'Data Types', href: '/docs/neurondb/reference/data-types' },
+      { title: 'Embedding Compatibility', href: '/docs/neurondb/reference/embedding-compatibility' },
+      { title: 'Glossary', href: '/docs/neurondb/reference/glossary' },
+    ],
+  },
+  {
+    title: 'Troubleshooting',
+    iconName: 'Settings',
+    items: [
+      { title: 'Troubleshooting Guide', href: '/docs/neurondb/troubleshooting' },
+    ],
+  },
+]
+
+// NeuronAgent navigation structure
+const neuronagentNavSections: NavSection[] = [
+  {
+    title: 'Getting Started',
+    iconName: 'Rocket',
+    items: [
+      { title: 'Overview', href: '/docs/neuronagent' },
+      { title: 'Quick Start', href: '/docs/neuronagent/getting-started/quickstart' },
+      { title: 'Installation', href: '/docs/neuronagent/getting-started/installation' },
+      { title: 'Configuration', href: '/docs/neuronagent/getting-started/configuration' },
+      { title: 'NeuronDB Integration', href: '/docs/neuronagent/getting-started/neurondb-integration' },
+    ],
+  },
+  {
+    title: 'Features',
+    iconName: 'Zap',
+    items: [
+      { title: 'Features Overview', href: '/docs/neuronagent/features' },
+      { title: 'Agent Runtime', href: '/docs/neuronagent/features' },
+      { title: 'Multi-Agent Collaboration', href: '/docs/neuronagent/features' },
+      { title: 'Workflow Engine', href: '/docs/neuronagent/features' },
+      { title: 'Human-in-the-Loop', href: '/docs/neuronagent/features' },
+      { title: 'Planning & Reflection', href: '/docs/neuronagent/features' },
+      { title: 'Memory Management', href: '/docs/neuronagent/features' },
+    ],
+  },
+  {
+    title: 'Troubleshooting',
+    iconName: 'Settings',
+    items: [
+      { title: 'Troubleshooting Guide', href: '/docs/neuronagent/troubleshooting' },
+    ],
+  },
+]
+
+// NeuronMCP navigation structure
+const neuronmcpNavSections: NavSection[] = [
+  {
+    title: 'Getting Started',
+    iconName: 'Rocket',
+    items: [
+      { title: 'Overview', href: '/docs/neuronmcp' },
+      { title: 'Installation', href: '/docs/neuronmcp/getting-started/installation' },
+      { title: 'Claude Desktop Setup', href: '/docs/neuronmcp/getting-started/claude-desktop' },
+      { title: 'Setup Guide', href: '/docs/neuronmcp/setup' },
+    ],
+  },
+  {
+    title: 'Features',
+    iconName: 'Zap',
+    items: [
+      { title: 'Features Overview', href: '/docs/neuronmcp/features' },
+      { title: 'MCP Protocol', href: '/docs/neuronmcp/features' },
+      { title: 'Tool Registration', href: '/docs/neuronmcp/features' },
+    ],
+  },
+  {
+    title: 'Tools & Resources',
+    iconName: 'Box',
+    items: [
+      { title: 'Tool Catalog', href: '/docs/neuronmcp/tools' },
+      { title: 'Vector Operations', href: '/docs/neuronmcp/tools' },
+      { title: 'ML Tools', href: '/docs/neuronmcp/tools' },
+      { title: 'RAG Tools', href: '/docs/neuronmcp/tools' },
+      { title: 'PostgreSQL Tools', href: '/docs/neuronmcp/tools' },
+    ],
+  },
+]
+
+// NeuronDesktop navigation structure
+const neurondesktopNavSections: NavSection[] = [
+  {
+    title: 'Getting Started',
+    iconName: 'Rocket',
+    items: [
+      { title: 'Overview', href: '/docs/neurondesktop' },
+      { title: 'Installation', href: '/docs/neurondesktop/getting-started/installation' },
+      { title: 'Profile Configuration', href: '/docs/neurondesktop/getting-started/profiles' },
+    ],
+  },
+  {
+    title: 'Features',
+    iconName: 'Zap',
+    items: [
+      { title: 'Features Overview', href: '/docs/neurondesktop/features' },
+      { title: 'Unified Dashboard', href: '/docs/neurondesktop/features' },
+      { title: 'MCP Console', href: '/docs/neurondesktop/features' },
+      { title: 'NeuronDB Console', href: '/docs/neurondesktop/features' },
+      { title: 'Agent Management', href: '/docs/neurondesktop/features' },
+    ],
+  },
+]
+
 export default function DocsSidebar() {
   const pathname = usePathname()
 
-  const navSections = useMemo<NavSection[]>(() => [
-    {
-      title: 'Getting Started',
-      iconName: 'Rocket',
-      items: [
-        { title: 'Overview', href: '/docs/getting-started' },
-        { title: 'Simple Start', href: '/docs/getting-started/simple-start' },
-        { title: 'Docker Quick Start', href: '/docs/getting-started/docker' },
-        { title: 'Quick Start Guide', href: '/docs/getting-started/quickstart' },
-        { title: 'Installation', href: '/docs/installation' },
-        { title: 'Configuration', href: '/docs/configuration' },
-      ],
-    },
-    {
-      title: 'Core Features',
-      iconName: 'Database',
-      items: [
-        { title: 'Vector Engine', href: '/docs/vector-engine' },
-        { title: 'Vector Types', href: '/docs/features/vector-types' },
-        { title: 'Distance Metrics', href: '/docs/features/distance-metrics' },
-        { title: 'Indexing', href: '/docs/indexing' },
-        { title: 'Quantization', href: '/docs/features/quantization' },
-        { title: 'Features Overview', href: '/docs/features' },
-      ],
-    },
-    {
-      title: 'ML & Embeddings',
-      iconName: 'Cpu',
-      items: [
-        { title: 'ML Engine', href: '/docs/ml-engine' },
-        { title: 'Embedding Engine', href: '/docs/embedding-engine' },
-        { title: 'Embeddings', href: '/docs/ml/embeddings' },
-        { title: 'Embedding Generation', href: '/docs/ml/embedding-generation' },
-        { title: 'Inference', href: '/docs/ml/inference' },
-        { title: 'Model Management', href: '/docs/ml/model-management' },
-        { title: 'Feature Store', href: '/docs/ml/feature-store' },
-        { title: 'Unified API', href: '/docs/ml/unified-api' },
-        { title: 'GPU Support', href: '/docs/ml/gpu' },
-        { title: 'Text ML', href: '/docs/ml/text-ml' },
-      ],
-    },
-    {
-      title: 'ML Algorithms',
-      iconName: 'Layers',
-      items: [
-        { title: 'ML Overview', href: '/docs/ml' },
-        { title: 'Classification', href: '/docs/ml/classification' },
-        { title: 'Regression', href: '/docs/ml/regression' },
-        { title: 'Clustering', href: '/docs/ml/clustering' },
-        { title: 'Random Forest', href: '/docs/ml/random-forest' },
-        { title: 'Gradient Boosting', href: '/docs/ml/gradient-boosting' },
-        { title: 'SVM', href: '/docs/ml/svm' },
-        { title: 'Dimensionality Reduction', href: '/docs/ml/dimensionality-reduction' },
-        { title: 'Outlier Detection', href: '/docs/ml/outlier-detection' },
-        { title: 'Quality Metrics', href: '/docs/ml/quality-metrics' },
-        { title: 'Drift Detection', href: '/docs/ml/drift-detection' },
-        { title: 'Topic Discovery', href: '/docs/ml/topic-discovery' },
-        { title: 'Time Series', href: '/docs/ml/time-series' },
-        { title: 'Recommendation Systems', href: '/docs/ml/recommendation-systems' },
-        { title: 'Hyperparameter Tuning', href: '/docs/ml/hyperparameter-tuning' },
-        { title: 'RAG in ML', href: '/docs/ml/rag' },
-      ],
-    },
-    {
-      title: 'Hybrid Search',
-      iconName: 'Search',
-      items: [
-        { title: 'Hybrid Overview', href: '/docs/hybrid/overview' },
-        { title: 'Hybrid Search', href: '/docs/hybrid' },
-        { title: 'Multi-Vector Search', href: '/docs/hybrid/multi-vector' },
-        { title: 'Faceted Search', href: '/docs/hybrid/faceted-search' },
-        { title: 'Temporal Search', href: '/docs/hybrid/temporal-search' },
-      ],
-    },
-    {
-      title: 'Reranking',
-      iconName: 'Sparkles',
-      items: [
-        { title: 'Reranking Overview', href: '/docs/reranking/overview' },
-        { title: 'Cross-Encoder', href: '/docs/reranking/cross-encoder' },
-        { title: 'LLM Reranking', href: '/docs/reranking/llm-reranking' },
-        { title: 'ColBERT', href: '/docs/reranking/colbert' },
-        { title: 'Ensemble', href: '/docs/reranking/ensemble' },
-      ],
-    },
-    {
-      title: 'RAG Pipeline',
-      iconName: 'Zap',
-      items: [
-        { title: 'RAG Overview', href: '/docs/rag' },
-        { title: 'Document Processing', href: '/docs/rag/document-processing' },
-        { title: 'LLM Integration', href: '/docs/rag/llm-integration' },
-      ],
-    },
-    {
-      title: 'Background Workers',
-      iconName: 'Activity',
-      items: [
-        { title: 'Workers Overview', href: '/docs/background-workers' },
-        { title: 'Queue Worker (neuranq)', href: '/docs/background-workers/neuranq' },
-        { title: 'Auto-Tuner (neuranmon)', href: '/docs/background-workers/neuranmon' },
-        { title: 'Index Maintenance (neurandefrag)', href: '/docs/background-workers/neurandefrag' },
-        { title: 'LLM Processor (neuranllm)', href: '/docs/background-workers/neuranllm' },
-      ],
-    },
-    {
-      title: 'GPU Acceleration',
-      iconName: 'Cpu',
-      items: [
-        { title: 'GPU Overview', href: '/docs/gpu' },
-        { title: 'CUDA Support', href: '/docs/gpu/cuda-support' },
-        { title: 'ROCm Support', href: '/docs/gpu/rocm-support' },
-        { title: 'Metal Support', href: '/docs/gpu/metal-support' },
-        { title: 'Auto-Detection', href: '/docs/gpu/auto-detection' },
-      ],
-    },
-    {
-      title: 'Components',
-      iconName: 'Box',
-      items: [
-        { title: 'NeuronAgent', href: '/neuronagent' },
-        { title: 'NeuronMCP', href: '/neuronmcp' },
-        { title: 'NeuronDesktop', href: '/neurondesktop' },
-      ],
-    },
-    {
-      title: 'Performance & Monitoring',
-      iconName: 'Activity',
-      items: [
-        { title: 'Performance Guide', href: '/docs/performance' },
-        { title: 'Monitoring', href: '/docs/performance/monitoring' },
-        { title: 'SIMD Optimization', href: '/docs/performance/simd-optimization' },
-        { title: 'Analytics', href: '/docs/analytics' },
-      ],
-    },
-    {
-      title: 'Security',
-      iconName: 'Shield',
-      items: [
-        { title: 'Security Guide', href: '/docs/security' },
-      ],
-    },
-    {
-      title: 'Deployment',
-      iconName: 'Rocket',
-      items: [
-        { title: 'Kubernetes', href: '/docs/deployment/kubernetes' },
-        { title: 'Observability', href: '/docs/deployment/observability' },
-        { title: 'Operational Scripts', href: '/docs/deployment/scripts' },
-      ],
-    },
-    {
-      title: 'Advanced Features',
-      iconName: 'Code',
-      items: [
-        { title: 'Advanced Features', href: '/docs/advanced-features' },
-      ],
-    },
-    {
-      title: 'API Reference',
-      iconName: 'FileCode',
-      items: [
-        { title: 'SQL API Reference', href: '/docs/sql-api' },
-      ],
-    },
-    {
-      title: 'Troubleshooting',
-      iconName: 'Settings',
-      items: [
-        { title: 'Troubleshooting Guide', href: '/docs/troubleshooting' },
-      ],
-    },
-  ], [])
+  const navSections = useMemo<NavSection[]>(() => {
+    // Determine which product we're viewing based on pathname
+    if (pathname.startsWith('/docs/neuronagent')) {
+      return neuronagentNavSections
+    } else if (pathname.startsWith('/docs/neuronmcp')) {
+      return neuronmcpNavSections
+    } else if (pathname.startsWith('/docs/neurondesktop')) {
+      return neurondesktopNavSections
+    } else {
+      // Default to NeuronDB navigation
+      return neurondbNavSections
+    }
+  }, [pathname])
 
   return (
     <aside className="hidden lg:block w-64 flex-shrink-0" aria-label="Documentation navigation">
