@@ -135,11 +135,17 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=3600, s-maxage=3600'
+            // Vercel optimization: Edge cache for 1 hour, stale-while-revalidate for 24h
+            // This ensures fast delivery while allowing background updates
+            value: 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400'
           },
           {
             key: 'Content-Type',
-            value: 'application/xml'
+            value: 'application/xml; charset=utf-8'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
           }
         ]
       },

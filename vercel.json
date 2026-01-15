@@ -8,7 +8,9 @@
     "app/sitemap.ts": {
       "maxDuration": 10,
       "memory": 1024,
-      "includeFiles": "config/**"
+      "includeFiles": "config/**",
+      "regions": ["iad1"],
+      "runtime": "nodejs20.x"
     },
     "app/robots.ts": {
       "maxDuration": 5,
