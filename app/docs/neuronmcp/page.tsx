@@ -1,34 +1,33 @@
 import { Metadata } from 'next'
 import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/PostgresDocsLayout'
-import Link from 'next/link'
+import BashCodeBlock from '@/components/BashCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'NeuronMCP Documentation | Model Context Protocol Server for NeuronDB',
-  description: 'NeuronMCP is a Model Context Protocol server with 100+ tools (27 PostgreSQL + 70+ NeuronDB) enabling MCP-compatible clients like Claude Desktop to access NeuronDB vector operations, ML training, RAG pipeline, and PostgreSQL administration.',
+  title: 'Getting Started with NeuronMCP | MCP Server Installation Guide',
+  description: 'NeuronMCP installation guide. Deploy the Model Context Protocol server with 100+ tools for MCP-compatible clients like Claude Desktop.',
   keywords: [
-    'NeuronMCP',
+    'NeuronMCP installation',
     'MCP server postgresql',
-    'Model Context Protocol',
+    'MCP server setup',
     'Claude Desktop MCP',
+    'Model Context Protocol',
     'MCP tools postgresql',
+    'NeuronMCP quick start',
+    'MCP server configuration',
     'MCP protocol server',
-    'JSON-RPC MCP',
-    'MCP resources',
     'MCP integration',
     'anthropic MCP',
-    'MCP client',
-    'MCP server setup',
-    'MCP tools catalog',
-    '100 MCP tools',
-    'MCP vector operations',
-    'MCP ML tools'
+    'MCP client setup',
+    'JSON-RPC MCP',
+    'MCP resources',
+    'MCP tools catalog'
   ].join(', '),
   alternates: {
     canonical: 'https://neurondb.ai/docs/neuronmcp',
   },
   openGraph: {
-    title: 'NeuronMCP Documentation | MCP Server for NeuronDB',
-    description: 'Model Context Protocol server with 100+ tools for vector operations, ML, RAG, and PostgreSQL administration.',
+    title: 'Getting Started with NeuronMCP | MCP Server Installation',
+    description: 'NeuronMCP installation guide. Connect Claude Desktop to NeuronDB with 100+ MCP tools.',
     type: 'article',
     url: 'https://neurondb.ai/docs/neuronmcp',
   },
@@ -36,23 +35,23 @@ export const metadata: Metadata = {
 
 const tableOfContents: TocItem[] = [
   { id: 'introduction', title: 'Introduction' },
-  { id: 'key-features', title: 'Key Features' },
-  { id: 'mcp-protocol', title: 'MCP Protocol' },
-  { id: 'tool-catalog', title: 'Tool Catalog' },
-  { id: 'getting-started', title: 'Getting Started' },
-  { id: 'documentation', title: 'Documentation' },
+  { id: 'choose-your-path', title: 'Choose Your Path' },
+  { id: 'docker-quickstart', title: 'Docker Quick Start' },
+  { id: 'claude-desktop-setup', title: 'Claude Desktop Setup' },
+  { id: 'source-build', title: 'Source Build (Advanced)' },
+  { id: 'next-steps', title: 'Next Steps' },
 ]
 
 const prevLink: NavLink | undefined = undefined
 const nextLink: NavLink = {
-  href: '/docs/neuronmcp/getting-started',
-  label: 'Getting Started',
+  href: '/docs/neuronmcp/getting-started/claude-desktop',
+  label: 'Claude Desktop Setup',
 }
 
 export default function NeuronMCPDocsPage() {
   return (
     <PostgresDocsLayout
-      title="NeuronMCP Documentation"
+      title="Getting Started with NeuronMCP"
       version="NeuronMCP Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
@@ -61,253 +60,252 @@ export default function NeuronMCPDocsPage() {
       <section id="introduction">
         <h2>Introduction</h2>
         
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem', marginBottom: '1.5rem' }}>
+          <h3 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.25rem', fontWeight: 'bold', color: '#fbbf24' }}>📌 Branch & Version Selection</h3>
+          <p style={{ marginBottom: '1rem' }}>
+            NeuronMCP has two branches with different versions. Choose based on your needs:
+          </p>
+          <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '1rem', fontSize: '0.95rem' }}>
+            <thead>
+              <tr style={{ borderBottom: '2px solid #4b5563' }}>
+                <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Branch</th>
+                <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Version</th>
+                <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Status</th>
+                <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Use When</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style={{ borderBottom: '1px solid #374151' }}>
+                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>main</code></td>
+                <td style={{ padding: '0.75rem' }}><strong>3.0.0-devel</strong></td>
+                <td style={{ padding: '0.75rem' }}><span style={{ color: '#10b981' }}>Latest</span></td>
+                <td style={{ padding: '0.75rem' }}>New projects, development, latest features (default)</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>REL1_STABLE</code></td>
+                <td style={{ padding: '0.75rem' }}><strong>1.0.0</strong></td>
+                <td style={{ padding: '0.75rem' }}><span style={{ color: '#3b82f6' }}>Stable</span></td>
+                <td style={{ padding: '0.75rem' }}>Production, maximum stability required</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
+            <strong>Note:</strong> This documentation reflects version <strong>3.0.0-devel</strong> from the <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> branch. 
+            For the stable 1.0.0 release, use the <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> branch. See{' '}
+            <a href="https://github.com/neurondb-ai/neurondb" target="_blank" rel="noopener noreferrer" style={{ color: '#fbbf24' }}>GitHub repository</a> for branch details.
+          </p>
+        </div>
+
         <p>
-          NeuronMCP is a Model Context Protocol (MCP) server providing comprehensive tools and resources for MCP-compatible clients to interact with NeuronDB. It implements the full MCP protocol with JSON-RPC 2.0, supporting stdio, HTTP, and SSE transport modes.
+          NeuronMCP is a Model Context Protocol (MCP) server providing comprehensive tools and resources for MCP-compatible clients to interact with NeuronDB. It includes:
+        </p>
+        <ul>
+          <li><strong>MCP Protocol Server</strong> - Full JSON-RPC 2.0 implementation with stdio, HTTP, and SSE transport</li>
+          <li><strong>100+ Tools</strong> - 27 PostgreSQL administration tools + 70+ NeuronDB tools for vector operations, ML, RAG, and dataset loading</li>
+          <li><strong>Resource Provider</strong> - Schema, models, indexes, config, workers, and stats with real-time subscriptions</li>
+          <li><strong>Enterprise Features</strong> - Middleware, authentication, caching, metrics, webhooks, and resilience</li>
+        </ul>
+        <p>
+          <strong>What you can build:</strong> Connect Claude Desktop and other MCP clients to NeuronDB for vector search, ML training, RAG pipelines, and complete database management - all through the MCP protocol.
+        </p>
+      </section>
+
+      <section id="choose-your-path">
+        <h2>Choose Your Path</h2>
+        <p>Pick the installation method that best fits your needs:</p>
+
+        <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '1rem', marginBottom: '1rem' }}>
+          <thead>
+            <tr style={{ borderBottom: '2px solid #4b5563' }}>
+              <th style={{ padding: '0.75rem', textAlign: 'left' }}>Method</th>
+              <th style={{ padding: '0.75rem', textAlign: 'left' }}>Best For</th>
+              <th style={{ padding: '0.75rem', textAlign: 'left' }}>Time</th>
+              <th style={{ padding: '0.75rem', textAlign: 'left' }}>Difficulty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style={{ borderBottom: '1px solid #374151' }}>
+              <td style={{ padding: '0.75rem' }}>
+                <strong>
+                  <a href="/docs/neuronmcp/getting-started/claude-desktop">Claude Desktop Setup</a>
+                </strong>
+              </td>
+              <td style={{ padding: '0.75rem' }}>Connect Claude Desktop to NeuronDB</td>
+              <td style={{ padding: '0.75rem' }}>5 minutes</td>
+              <td style={{ padding: '0.75rem' }}>⭐ Easy</td>
+            </tr>
+            <tr style={{ borderBottom: '1px solid #374151' }}>
+              <td style={{ padding: '0.75rem' }}>
+                <strong>
+                  <a href="/docs/neuronmcp/getting-started/installation">Docker Installation</a>
+                </strong>
+              </td>
+              <td style={{ padding: '0.75rem' }}>Complete setup with Docker Compose</td>
+              <td style={{ padding: '0.75rem' }}>5 minutes</td>
+              <td style={{ padding: '0.75rem' }}>⭐ Easy</td>
+            </tr>
+            <tr>
+              <td style={{ padding: '0.75rem' }}>
+                <strong>
+                  <a href="/docs/neuronmcp/setup">Source Build</a>
+                </strong>
+              </td>
+              <td style={{ padding: '0.75rem' }}>Production, custom builds, developers</td>
+              <td style={{ padding: '0.75rem' }}>30+ minutes</td>
+              <td style={{ padding: '0.75rem' }}>⭐⭐⭐ Advanced</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+          <p>
+            <strong>💡 Note:</strong> Using Claude Desktop? Start with <a href="/docs/neuronmcp/getting-started/claude-desktop" style={{ color: '#fbbf24' }}>Claude Desktop Setup</a> for the fastest integration. 
+            For Docker deployment, use <a href="/docs/neuronmcp/getting-started/installation" style={{ color: '#fbbf24' }}>Docker Installation</a>. 
+            Production deployments should use <a href="/docs/neuronmcp/setup" style={{ color: '#fbbf24' }}>Source Build</a>.
+          </p>
+        </div>
+      </section>
+
+      <section id="docker-quickstart">
+        <h2>Docker Quick Start</h2>
+        <p>
+          Complete NeuronMCP setup running in under 5 minutes with Docker Compose. This method includes NeuronMCP server with NeuronDB integration.
         </p>
 
-        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem', marginTop: '1.5rem', marginBottom: '1.5rem' }}>
-          <h3 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.25rem', fontWeight: 'bold', color: '#fbbf24' }}>🎯 What You Can Build</h3>
-          <ul style={{ marginBottom: 0 }}>
-            <li>Connect Claude Desktop to NeuronDB for vector search, ML training, and RAG pipelines</li>
-            <li>Use 100+ MCP tools for complete database and AI operations</li>
-            <li>Load datasets from HuggingFace, URLs, GitHub, S3 with auto-embedding</li>
-            <li>Manage PostgreSQL databases through MCP protocol</li>
-            <li>Build MCP-compatible applications with NeuronDB backend</li>
-          </ul>
-        </div>
+        <BashCodeBlock
+          title="Start NeuronMCP with Docker Compose"
+          code={`# Clone repository (main branch = 3.0.0-devel)
+git clone https://github.com/neurondb-ai/neurondb.git
+cd neurondb
+
+# For stable 1.0.0 release, checkout REL1_STABLE branch:
+# git checkout REL1_STABLE
+
+# Start NeuronMCP with NeuronDB
+docker compose up -d neuronmcp neurondb
+
+# Verify services
+docker compose ps
+
+# Test MCP server (stdio mode)
+echo '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"test","version":"1.0"}}}' | ./NeuronMCP/bin/neuronmcp`}
+        />
+
+        <p>This starts:</p>
+        <ul>
+          <li>NeuronMCP (MCP server) with stdio, HTTP, and SSE transport</li>
+          <li>NeuronDB (PostgreSQL with extension) on port 5433</li>
+          <li>100+ MCP tools available for clients</li>
+          <li>Resource provider for schema, models, and indexes</li>
+        </ul>
+
+        <p>
+          <strong>
+            <a href="/docs/neuronmcp/getting-started/claude-desktop">Continue to Claude Desktop Setup →</a>
+          </strong>
+        </p>
       </section>
 
-      <section id="key-features">
-        <h2>Key Features</h2>
+      <section id="claude-desktop-setup">
+        <h2>Claude Desktop Setup</h2>
+        <p>
+          Connect Claude Desktop to NeuronMCP to access 100+ tools for vector search, ML training, RAG pipelines, and PostgreSQL administration.
+        </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginTop: '1.5rem', marginBottom: '1.5rem' }}>
-          <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem' }}>
-            <h3 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#fbbf24' }}>🔌 MCP Protocol</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.95rem' }}>
-              Full JSON-RPC 2.0 implementation with stdio, HTTP, and SSE transport for MCP-compatible clients.
-            </p>
-          </div>
+        <BashCodeBlock
+          title="Configure Claude Desktop"
+          code={`# Edit Claude Desktop configuration
+# macOS: ~/Library/Application Support/Claude/claude_desktop_config.json
+# Windows: %APPDATA%\\Claude\\claude_desktop_config.json
 
-          <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem' }}>
-            <h3 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#fbbf24' }}>🛠️ 100+ Tools</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.95rem' }}>
-              27 PostgreSQL administration tools + 70+ NeuronDB tools including vector operations, ML pipeline, RAG, reranking, and dataset loading.
-            </p>
-          </div>
+{
+  "mcpServers": {
+    "neurondb": {
+      "command": "neuronmcp",
+      "args": ["--transport", "stdio"],
+      "env": {
+        "DB_HOST": "localhost",
+        "DB_PORT": "5433",
+        "DB_NAME": "neurondb",
+        "DB_USER": "postgres",
+        "DB_PASSWORD": "postgres"
+      }
+    }
+  }
+}`}
+        />
 
-          <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem' }}>
-            <h3 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#fbbf24' }}>🔍 Vector Operations (50+ Tools)</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.95rem' }}>
-              Vector search with 7+ distance metrics, quantization, embeddings, HNSW/IVF indexing, hybrid search, and multi-vector search.
-            </p>
-          </div>
+        <p>After configuration:</p>
+        <ol>
+          <li>Restart Claude Desktop</li>
+          <li>NeuronMCP tools will be available in Claude Desktop</li>
+          <li>Use tools for vector search, ML training, RAG, and database management</li>
+        </ol>
 
-          <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem' }}>
-            <h3 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#fbbf24' }}>🤖 Complete ML Pipeline</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.95rem' }}>
-              All 52 ML algorithms, training, prediction, evaluation, AutoML, ONNX support, time series analysis, and analytics tools.
-            </p>
-          </div>
-
-          <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem' }}>
-            <h3 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#fbbf24' }}>📊 Dataset Loading</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.95rem' }}>
-              Load datasets from HuggingFace, URLs, GitHub, S3, and local files with automatic schema detection, auto-embedding, and index creation.
-            </p>
-          </div>
-
-          <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem' }}>
-            <h3 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#fbbf24' }}>🏢 Enterprise Features</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.95rem' }}>
-              Middleware, authentication, caching, metrics, webhooks, circuit breaker, retry mechanisms, and health checks.
-            </p>
-          </div>
-        </div>
+        <p>
+          See the <a href="/docs/neuronmcp/getting-started/claude-desktop">Claude Desktop Setup Guide</a> for detailed configuration instructions.
+        </p>
       </section>
 
-      <section id="mcp-protocol">
-        <h2>MCP Protocol Implementation</h2>
+      <section id="source-build">
+        <h2>Source Build (Advanced)</h2>
+        <p>
+          For production deployments or custom builds, install from source. This requires Go 1.21+, PostgreSQL 16-18 with NeuronDB extension, and build dependencies.
+        </p>
+        <p>
+          See the <a href="/docs/neuronmcp/setup">Setup Guide</a> for detailed platform-specific instructions and configuration schema setup.
+        </p>
 
-        <h3>JSON-RPC 2.0</h3>
-        <ul>
-          <li><strong>Full Protocol Support</strong> - Complete JSON-RPC 2.0 implementation</li>
-          <li><strong>Transport Modes</strong> - stdio, HTTP, and SSE transport options</li>
-          <li><strong>Batch Operations</strong> - Transactional batch tool calls for efficient bulk operations</li>
-          <li><strong>Progress Tracking</strong> - Long-running operation progress with progress/get</li>
-          <li><strong>Tool Discovery</strong> - Search and filter tools with categorization and metadata</li>
-        </ul>
+        <BashCodeBlock
+          title="Quick reference (Ubuntu/Debian)"
+          code={`# Install dependencies
+sudo apt-get install -y postgresql-17 postgresql-server-dev-17 build-essential golang-go
 
-        <h3>Protocol Features</h3>
-        <ul>
-          <li><strong>Prompts Protocol</strong> - Full prompts/list and prompts/get with template engine support</li>
-          <li><strong>Sampling/Completions</strong> - sampling/createMessage with streaming support for LLM interactions</li>
-          <li><strong>Resources</strong> - Schema, models, indexes, config, workers, and stats as MCP resources</li>
-          <li><strong>Real-time Subscriptions</strong> - Subscribe to resource updates</li>
-        </ul>
+# Clone repository
+git clone https://github.com/neurondb-ai/neurondb.git
+cd neurondb
+
+# For stable 1.0.0 release, checkout REL1_STABLE branch:
+# git checkout REL1_STABLE
+
+# Build NeuronMCP
+cd NeuronMCP
+go build -o neuronmcp ./cmd/server
+
+# Run setup script to configure database schema
+./scripts/neuronmcp-setup.sh
+
+# Run NeuronMCP server
+./neuronmcp --transport stdio`}
+        />
+
+        <p>
+          After building NeuronMCP, configure it to connect to your NeuronDB instance and set up the configuration schema. See the <a href="/docs/neuronmcp/setup">Setup Guide</a> for complete instructions.
+        </p>
       </section>
 
-      <section id="tool-catalog">
-        <h2>Tool Catalog (100+ Tools)</h2>
-
-        <h3>Vector Operations (50+ Tools)</h3>
+      <section id="next-steps">
+        <h2>Next Steps</h2>
+        <p>After installation, use these guides:</p>
         <ul>
-          <li><strong>Vector Search (8 tools)</strong> - Distance metrics: L2, cosine, inner product, L1, Hamming, Chebyshev, Minkowski</li>
-          <li><strong>Embedding Generation (7 tools)</strong> - Single, batch, image, multimodal embeddings with 50+ pre-configured models</li>
-          <li><strong>Index Management (6 tools)</strong> - Create, tune, and manage HNSW and IVF indexes</li>
-          <li><strong>Quantization (2 tools)</strong> - Quantize vectors (int8, fp16, binary, uint8, ternary, int4)</li>
-          <li><strong>Vector Operations (3 tools)</strong> - Vector arithmetic, distance, and similarity calculations</li>
-          <li><strong>Advanced Features</strong> - Multi-vector search, hybrid search, vector graph operations, vecmap operations</li>
-        </ul>
-
-        <h3>ML Tools & Pipeline</h3>
-        <ul>
-          <li><strong>Training & Prediction (6 tools)</strong> - Train models with 52+ algorithms, single/batch predictions, model evaluation</li>
-          <li><strong>Model Management</strong> - List models, get model info, delete models, export models</li>
-          <li><strong>AutoML</strong> - Automated model selection, hyperparameter tuning, and training</li>
-          <li><strong>ONNX Support (4 tools)</strong> - Import, export, info, and predict with ONNX models</li>
-          <li><strong>Time Series</strong> - ARIMA, forecasting, seasonal decomposition, anomaly detection</li>
-          <li><strong>Analytics</strong> - Data analysis, clustering, outlier detection, drift detection, topic discovery</li>
-        </ul>
-
-        <h3>RAG & Reranking Tools</h3>
-        <ul>
-          <li><strong>RAG Pipeline</strong> - Document processing, chunking, retrieval, and response generation</li>
-          <li><strong>Reranking Methods</strong> - Cross-encoder, LLM, Cohere, ColBERT, Learning-to-Rank (LTR), ensemble reranking</li>
-          <li><strong>Hybrid Retrieval</strong> - Combine vector search with keyword search and filters</li>
-        </ul>
-
-        <h3>PostgreSQL Administration (27 Tools)</h3>
-        <ul>
-          <li><strong>Server Information</strong> - Version, stats, databases, connections, locks, replication, settings, extensions</li>
-          <li><strong>Database Object Management</strong> - Tables, indexes, schemas, views, sequences, functions, triggers, constraints</li>
-          <li><strong>User and Role Management</strong> - Create, alter, drop users/roles, grant/revoke permissions</li>
-          <li><strong>Performance & Statistics</strong> - Table stats, index stats, active queries, wait events</li>
-          <li><strong>Size and Storage</strong> - Table size, index size, bloat analysis, vacuum stats</li>
-          <li><strong>Administration</strong> - Explain, vacuum, analyze, reindex, transactions, query management</li>
-          <li><strong>Backup & Recovery</strong> - Backup/restore database, backup table, list backups, verify backup</li>
-        </ul>
-
-        <h3>Dataset Loading</h3>
-        <ul>
-          <li><strong>HuggingFace Datasets</strong> - Load datasets from HuggingFace Hub with automatic schema detection</li>
-          <li><strong>URL Loading</strong> - Load CSV, JSON, and Parquet files from URLs with optimized bulk loading</li>
-          <li><strong>S3 & GitHub</strong> - Load datasets from S3 buckets and GitHub repositories</li>
-          <li><strong>Auto-Embedding</strong> - Automatic embedding generation for text columns during dataset loading</li>
-        </ul>
-      </section>
-
-      <section id="getting-started">
-        <h2>Getting Started</h2>
-        <p>Install and configure NeuronMCP server, connect Claude Desktop, and start using MCP tools.</p>
-
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginTop: '1.5rem', marginBottom: '1.5rem' }}>
-          <Link
-            href="/docs/neuronmcp/getting-started"
-            className="block rounded-lg border border-slate-700 bg-slate-900/60 p-6 text-yellow-400 hover:text-yellow-300 hover:border-yellow-400 transition-colors"
-          >
-            <h3 style={{ marginTop: 0, marginBottom: '0.5rem', color: '#fbbf24' }}>🚀 Getting Started</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
-              Installation guide and quick start for NeuronMCP
-            </p>
-          </Link>
-
-          <Link
-            href="/docs/neuronmcp/getting-started/claude-desktop"
-            className="block rounded-lg border border-slate-700 bg-slate-900/60 p-6 text-yellow-400 hover:text-yellow-300 hover:border-yellow-400 transition-colors"
-          >
-            <h3 style={{ marginTop: 0, marginBottom: '0.5rem', color: '#fbbf24' }}>🖥️ Claude Desktop Setup</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
-              Configure Claude Desktop to connect to NeuronMCP
-            </p>
-          </Link>
-
-          <Link
-            href="/docs/neuronmcp/tools"
-            className="block rounded-lg border border-slate-700 bg-slate-900/60 p-6 text-yellow-400 hover:text-yellow-300 hover:border-yellow-400 transition-colors"
-          >
-            <h3 style={{ marginTop: 0, marginBottom: '0.5rem', color: '#fbbf24' }}>📋 Tool Catalog</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
-              Browse all 100+ available MCP tools
-            </p>
-          </Link>
-
-          <Link
-            href="/docs/neuronmcp/setup"
-            className="block rounded-lg border border-slate-700 bg-slate-900/60 p-6 text-yellow-400 hover:text-yellow-300 hover:border-yellow-400 transition-colors"
-          >
-            <h3 style={{ marginTop: 0, marginBottom: '0.5rem', color: '#fbbf24' }}>⚙️ Setup Guide</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
-              Complete configuration schema and setup instructions
-            </p>
-          </Link>
-        </div>
-      </section>
-
-      <section id="documentation">
-        <h2>Documentation Library</h2>
-
-        <h3>MCP Protocol</h3>
-        <ul>
-          <li><strong>Protocol Overview</strong> - Understanding the Model Context Protocol and JSON-RPC 2.0 implementation</li>
-          <li><strong>stdio Transport</strong> - Use stdio transport for Claude Desktop and other stdio-based clients</li>
-          <li><strong>HTTP Transport</strong> - HTTP transport for web-based clients and remote connections</li>
-          <li><strong>SSE Transport</strong> - Server-Sent Events transport for streaming responses</li>
-        </ul>
-
-        <h3>Vector Tools</h3>
-        <ul>
-          <li><strong>Vector Search</strong> - Vector search with multiple distance metrics (L2, Cosine, IP, Manhattan, Hamming, Jaccard)</li>
-          <li><strong>Embeddings</strong> - Generate text, image, and multimodal embeddings with batch processing</li>
-          <li><strong>Indexing</strong> - Create and manage HNSW and IVF indexes for vector search</li>
-          <li><strong>Quantization</strong> - Quantization tools: int8, fp16, binary, uint8, ternary, int4 for memory optimization</li>
-        </ul>
-
-        <h3>ML Tools</h3>
-        <ul>
-          <li><strong>ML Training</strong> - Train all 52 ML algorithms (classification, regression, clustering, etc.) via MCP</li>
-          <li><strong>Prediction</strong> - Make predictions with trained models and batch inference</li>
-          <li><strong>Model Management</strong> - Model catalog, versioning, A/B testing, and deployment workflows</li>
-          <li><strong>AutoML</strong> - Automated model selection and hyperparameter tuning</li>
-        </ul>
-
-        <h3>RAG & Reranking Tools</h3>
-        <ul>
-          <li><strong>RAG Pipeline</strong> - Complete RAG pipeline with document processing, chunking, and retrieval</li>
-          <li><strong>Cross-encoder Reranking</strong> - Neural reranking with cross-encoder models for improved relevance</li>
-          <li><strong>LLM Reranking</strong> - LLM-powered reranking with custom prompts and scoring</li>
-          <li><strong>Ensemble Reranking</strong> - Combine multiple reranking strategies for optimal results</li>
-        </ul>
-
-        <h3>Dataset Loading</h3>
-        <ul>
-          <li><strong>HuggingFace Datasets</strong> - Load datasets from HuggingFace Hub with automatic schema detection</li>
-          <li><strong>URL Loading</strong> - Load CSV, JSON, and Parquet files from URLs with optimized bulk loading</li>
-          <li><strong>S3 & GitHub</strong> - Load datasets from S3 buckets and GitHub repositories</li>
-          <li><strong>Auto-Embedding</strong> - Automatic embedding generation for text columns during dataset loading</li>
-        </ul>
-
-        <h3>PostgreSQL Tools</h3>
-        <ul>
-          <li><strong>Database Stats</strong> - Get database statistics, size, connection info, and performance metrics</li>
-          <li><strong>Extension Management</strong> - Manage PostgreSQL extensions, versions, and configurations</li>
-          <li><strong>Query Analysis</strong> - Analyze query performance, execution plans, and resource usage</li>
-          <li><strong>System Monitoring</strong> - Monitor locks, replication status, and system resource utilization</li>
-        </ul>
-
-        <h3>Resources & Middleware</h3>
-        <ul>
-          <li><strong>Resources</strong> - Schema, model catalog, index configs, and system stats as MCP resources</li>
-          <li><strong>Middleware</strong> - Validation, logging, timeout, error handling, and authentication middleware</li>
-          <li><strong>Enterprise Features</strong> - Prometheus metrics, webhooks, caching, circuit breaker, and health checks</li>
-          <li><strong>Authentication</strong> - JWT, API keys, OAuth2 with rate limiting and access control</li>
-        </ul>
-
-        <h3>Examples & Tutorials</h3>
-        <ul>
-          <li><a href="https://github.com/neurondb-ai/neurondb/tree/main/examples/mcp-integration" target="_blank" rel="noopener noreferrer">MCP Integration</a> - Claude Desktop configuration and MCP server integration examples</li>
-          <li><a href="https://github.com/neurondb-ai/neurondb/tree/main/examples/data_loading" target="_blank" rel="noopener noreferrer">Dataset Loading</a> - Load datasets from HuggingFace Hub with auto-embedding and index creation</li>
-          <li><a href="https://github.com/neurondb-ai/neurondb" target="_blank" rel="noopener noreferrer">Vector Search Example</a> - Vector search and similarity queries via MCP tools</li>
-          <li><a href="https://github.com/neurondb-ai/neurondb" target="_blank" rel="noopener noreferrer">ML Training Example</a> - Train ML models and make predictions using MCP tools</li>
+          <li>
+            <a href="/docs/neuronmcp/getting-started/claude-desktop">Claude Desktop Setup</a> - Configure Claude Desktop to connect to NeuronMCP
+          </li>
+          <li>
+            <a href="/docs/neuronmcp/tools">Tool Catalog</a> - Browse all 100+ available MCP tools
+          </li>
+          <li>
+            <a href="/docs/neuronmcp/features">Features Documentation</a> - Complete feature reference for MCP protocol and tools
+          </li>
+          <li>
+            <a href="/docs/neuronmcp/setup">Setup Guide</a> - Complete configuration schema and setup instructions
+          </li>
+          <li>
+            <a href="/docs/neurondb">NeuronDB Documentation</a> - Vector search, ML inference, and RAG pipelines
+          </li>
+          <li>
+            <a href="https://github.com/neurondb-ai/neurondb/tree/main/examples/mcp-integration">MCP Integration Example</a> - Complete example showing Claude Desktop configuration
+          </li>
         </ul>
       </section>
 

@@ -1,36 +1,34 @@
 import { Metadata } from 'next'
 import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/PostgresDocsLayout'
-import Link from 'next/link'
+import BashCodeBlock from '@/components/BashCodeBlock'
 
 export const metadata: Metadata = {
-  title: 'NeuronAgent Documentation | AI Agent Runtime for PostgreSQL',
-  description: 'NeuronAgent is an AI agent runtime system with REST API and WebSocket endpoints. Build autonomous AI agents with persistent memory, multi-agent collaboration, workflow engine, and 20+ tools.',
+  title: 'Getting Started with NeuronAgent | AI Agent Runtime Installation Guide',
+  description: 'NeuronAgent installation guide. Deploy the AI agent runtime system with REST API, WebSocket, multi-agent collaboration, workflow engine, and long-term memory.',
   keywords: [
-    'NeuronAgent',
+    'NeuronAgent installation',
     'AI agent runtime',
     'agent runtime postgresql',
     'postgresql agent',
     'agentic AI postgresql',
+    'NeuronAgent quick start',
+    'AI agent setup',
+    'agent runtime setup',
+    'NeuronAgent configuration',
     'autonomous agents',
     'multi-agent collaboration',
     'agent workflow engine',
     'agent memory',
     'agent tools',
     'REST API agent',
-    'WebSocket agent',
-    'agent state machine',
-    'hierarchical memory',
-    'agent planning',
-    'agent evaluation',
-    'budget management',
-    'HITL workflows'
+    'WebSocket agent'
   ].join(', '),
   alternates: {
     canonical: 'https://neurondb.ai/docs/neuronagent',
   },
   openGraph: {
-    title: 'NeuronAgent Documentation | AI Agent Runtime',
-    description: 'Build autonomous AI agents with REST API, WebSocket, persistent memory, and 20+ tools.',
+    title: 'Getting Started with NeuronAgent | Installation and Quick Start',
+    description: 'NeuronAgent installation guide. Build AI agents with REST API, WebSocket, and PostgreSQL-backed memory.',
     type: 'article',
     url: 'https://neurondb.ai/docs/neuronagent',
   },
@@ -38,22 +36,22 @@ export const metadata: Metadata = {
 
 const tableOfContents: TocItem[] = [
   { id: 'introduction', title: 'Introduction' },
-  { id: 'key-features', title: 'Key Features' },
-  { id: 'core-capabilities', title: 'Core Capabilities' },
-  { id: 'getting-started', title: 'Getting Started' },
-  { id: 'documentation', title: 'Documentation' },
+  { id: 'choose-your-path', title: 'Choose Your Path' },
+  { id: 'docker-quickstart', title: 'Docker Quick Start' },
+  { id: 'source-build', title: 'Source Build (Advanced)' },
+  { id: 'next-steps', title: 'Next Steps' },
 ]
 
 const prevLink: NavLink | undefined = undefined
 const nextLink: NavLink = {
-  href: '/docs/neuronagent/getting-started',
-  label: 'Getting Started',
+  href: '/docs/neuronagent/getting-started/quickstart',
+  label: 'Quick Start',
 }
 
 export default function NeuronAgentDocsPage() {
   return (
     <PostgresDocsLayout
-      title="NeuronAgent Documentation"
+      title="Getting Started with NeuronAgent"
       version="NeuronAgent Documentation"
       tableOfContents={tableOfContents}
       prevLink={prevLink}
@@ -62,282 +60,210 @@ export default function NeuronAgentDocsPage() {
       <section id="introduction">
         <h2>Introduction</h2>
         
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem', marginBottom: '1.5rem' }}>
+          <h3 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.25rem', fontWeight: 'bold', color: '#fbbf24' }}>📌 Branch & Version Selection</h3>
+          <p style={{ marginBottom: '1rem' }}>
+            NeuronAgent has two branches with different versions. Choose based on your needs:
+          </p>
+          <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '1rem', fontSize: '0.95rem' }}>
+            <thead>
+              <tr style={{ borderBottom: '2px solid #4b5563' }}>
+                <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Branch</th>
+                <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Version</th>
+                <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Status</th>
+                <th style={{ padding: '0.75rem', textAlign: 'left', color: '#fbbf24' }}>Use When</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style={{ borderBottom: '1px solid #374151' }}>
+                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>main</code></td>
+                <td style={{ padding: '0.75rem' }}><strong>3.0.0-devel</strong></td>
+                <td style={{ padding: '0.75rem' }}><span style={{ color: '#10b981' }}>Latest</span></td>
+                <td style={{ padding: '0.75rem' }}>New projects, development, latest features (default)</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '0.75rem' }}><code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.25rem 0.5rem', borderRadius: '0.25rem' }}>REL1_STABLE</code></td>
+                <td style={{ padding: '0.75rem' }}><strong>1.0.0</strong></td>
+                <td style={{ padding: '0.75rem' }}><span style={{ color: '#3b82f6' }}>Stable</span></td>
+                <td style={{ padding: '0.75rem' }}>Production, maximum stability required</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
+            <strong>Note:</strong> This documentation reflects version <strong>3.0.0-devel</strong> from the <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>main</code> branch. 
+            For the stable 1.0.0 release, use the <code style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '0.15rem 0.4rem', borderRadius: '0.25rem' }}>REL1_STABLE</code> branch. See{' '}
+            <a href="https://github.com/neurondb-ai/neurondb" target="_blank" rel="noopener noreferrer" style={{ color: '#fbbf24' }}>GitHub repository</a> for branch details.
+          </p>
+        </div>
+
         <p>
-          NeuronAgent is an AI agent runtime system providing REST API and WebSocket endpoints for building autonomous agent applications. It includes persistent memory, tool execution, multi-agent collaboration, workflow automation, and complete integration with NeuronDB.
+          NeuronAgent is an AI agent runtime system providing REST API and WebSocket endpoints for building autonomous agent applications. It includes:
+        </p>
+        <ul>
+          <li><strong>Agent Runtime</strong> - Complete state machine for autonomous task execution with persistent memory</li>
+          <li><strong>Multi-Agent Collaboration</strong> - Agent-to-agent communication, task delegation, and shared workspaces</li>
+          <li><strong>Workflow Engine</strong> - DAG-based workflow execution with human-in-the-loop (HITL) support</li>
+          <li><strong>Long-term Memory</strong> - HNSW-based vector search for context retrieval across sessions</li>
+          <li><strong>20+ Tools</strong> - SQL, HTTP, Code, Shell, Browser, Filesystem, Memory, Collaboration, NeuronDB tools, Multimodal</li>
+          <li><strong>Budget & Evaluation</strong> - Real-time cost tracking, budget controls, and quality scoring</li>
+        </ul>
+        <p>
+          <strong>What you can build:</strong> Autonomous AI agents with persistent memory, multi-agent systems, workflow automation, and agentic AI applications - all backed by PostgreSQL.
+        </p>
+      </section>
+
+      <section id="choose-your-path">
+        <h2>Choose Your Path</h2>
+        <p>Pick the installation method that best fits your needs:</p>
+
+        <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '1rem', marginBottom: '1rem' }}>
+          <thead>
+            <tr style={{ borderBottom: '2px solid #4b5563' }}>
+              <th style={{ padding: '0.75rem', textAlign: 'left' }}>Method</th>
+              <th style={{ padding: '0.75rem', textAlign: 'left' }}>Best For</th>
+              <th style={{ padding: '0.75rem', textAlign: 'left' }}>Time</th>
+              <th style={{ padding: '0.75rem', textAlign: 'left' }}>Difficulty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style={{ borderBottom: '1px solid #374151' }}>
+              <td style={{ padding: '0.75rem' }}>
+                <strong>
+                  <a href="/docs/neuronagent/getting-started/quickstart">Quick Start</a>
+                </strong>
+              </td>
+              <td style={{ padding: '0.75rem' }}>Create your first agent with tools and memory</td>
+              <td style={{ padding: '0.75rem' }}>10 minutes</td>
+              <td style={{ padding: '0.75rem' }}>⭐⭐ Medium</td>
+            </tr>
+            <tr style={{ borderBottom: '1px solid #374151' }}>
+              <td style={{ padding: '0.75rem' }}>
+                <strong>
+                  <a href="/docs/neuronagent/getting-started/installation">Docker Installation</a>
+                </strong>
+              </td>
+              <td style={{ padding: '0.75rem' }}>Complete setup with Docker Compose</td>
+              <td style={{ padding: '0.75rem' }}>5 minutes</td>
+              <td style={{ padding: '0.75rem' }}>⭐ Easy</td>
+            </tr>
+            <tr>
+              <td style={{ padding: '0.75rem' }}>
+                <strong>
+                  <a href="/docs/neuronagent/getting-started/configuration">Source Build</a>
+                </strong>
+              </td>
+              <td style={{ padding: '0.75rem' }}>Production, custom builds, developers</td>
+              <td style={{ padding: '0.75rem' }}>30+ minutes</td>
+              <td style={{ padding: '0.75rem' }}>⭐⭐⭐ Advanced</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
+          <p>
+            <strong>💡 Note:</strong> New here? Start with <a href="/docs/neuronagent/getting-started/quickstart" style={{ color: '#fbbf24' }}>Quick Start</a> to create your first agent. 
+            For Docker deployment, use <a href="/docs/neuronagent/getting-started/installation" style={{ color: '#fbbf24' }}>Docker Installation</a>. 
+            Production deployments should use <a href="/docs/neuronagent/getting-started/configuration" style={{ color: '#fbbf24' }}>Source Build</a>.
+          </p>
+        </div>
+      </section>
+
+      <section id="docker-quickstart">
+        <h2>Docker Quick Start</h2>
+        <p>
+          Complete NeuronAgent setup running in under 5 minutes with Docker Compose. This method includes NeuronAgent with NeuronDB integration and requires minimal configuration.
         </p>
 
-        <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem', marginTop: '1.5rem', marginBottom: '1.5rem' }}>
-          <h3 style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1.25rem', fontWeight: 'bold', color: '#fbbf24' }}>🎯 What You Can Build</h3>
-          <ul style={{ marginBottom: 0 }}>
-            <li>Autonomous AI agents with long-term memory and context retrieval</li>
-            <li>Multi-agent systems with collaboration and task delegation</li>
-            <li>Workflow automation with human-in-the-loop (HITL) support</li>
-            <li>Agentic AI applications backed by PostgreSQL</li>
-            <li>Research agents, data analysis agents, customer support agents, and content generation agents</li>
-          </ul>
-        </div>
+        <BashCodeBlock
+          title="Start NeuronAgent with Docker Compose"
+          code={`# Clone repository (main branch = 3.0.0-devel)
+git clone https://github.com/neurondb-ai/neurondb.git
+cd neurondb
+
+# For stable 1.0.0 release, checkout REL1_STABLE branch:
+# git checkout REL1_STABLE
+
+# Start NeuronAgent with NeuronDB
+docker compose up -d neuronagent neurondb
+
+# Verify services
+docker compose ps
+
+# Check health endpoint
+curl -sS http://localhost:8080/health`}
+        />
+
+        <p>This starts:</p>
+        <ul>
+          <li>NeuronAgent (REST API) on port 8080</li>
+          <li>NeuronDB (PostgreSQL with extension) on port 5433</li>
+          <li>WebSocket support for real-time streaming</li>
+          <li>Background workers for memory promotion and async tasks</li>
+        </ul>
+
+        <p>
+          <strong>
+            <a href="/docs/neuronagent/getting-started/quickstart">Continue to Quick Start guide →</a>
+          </strong>
+        </p>
       </section>
 
-      <section id="key-features">
-        <h2>Key Features</h2>
+      <section id="source-build">
+        <h2>Source Build (Advanced)</h2>
+        <p>
+          For production deployments or custom builds, install from source. This requires Go 1.21+, PostgreSQL 16-18 with NeuronDB extension, and build dependencies.
+        </p>
+        <p>
+          See the <a href="/docs/neuronagent/getting-started/installation">Installation Guide</a> for detailed platform-specific instructions.
+        </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginTop: '1.5rem', marginBottom: '1.5rem' }}>
-          <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem' }}>
-            <h3 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#fbbf24' }}>🤖 Agent State Machine</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.95rem' }}>
-              Complete state machine for autonomous task execution with state persistence and recovery.
-            </p>
-          </div>
+        <BashCodeBlock
+          title="Quick reference (Ubuntu/Debian)"
+          code={`# Install dependencies
+sudo apt-get install -y postgresql-17 postgresql-server-dev-17 build-essential golang-go
 
-          <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem' }}>
-            <h3 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#fbbf24' }}>👥 Multi-Agent Collaboration</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.95rem' }}>
-              Agent-to-agent communication, task delegation, shared workspaces, and hierarchical agent structures.
-            </p>
-          </div>
+# Clone repository
+git clone https://github.com/neurondb-ai/neurondb.git
+cd neurondb
 
-          <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem' }}>
-            <h3 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#fbbf24' }}>🔄 Workflow Engine</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.95rem' }}>
-              DAG-based workflow execution with agent, tool, HTTP, approval, and conditional steps with HITL support.
-            </p>
-          </div>
+# For stable 1.0.0 release, checkout REL1_STABLE branch:
+# git checkout REL1_STABLE
 
-          <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem' }}>
-            <h3 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#fbbf24' }}>🧠 Hierarchical Memory</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.95rem' }}>
-              Multi-level memory organization with HNSW-based vector search for better context retrieval.
-            </p>
-          </div>
+# Build NeuronAgent
+cd NeuronAgent
+go build -o neuronagent ./cmd/server
 
-          <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem' }}>
-            <h3 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#fbbf24' }}>🛠️ 20+ Tools</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.95rem' }}>
-              SQL, HTTP, Code, Shell, Browser (Playwright), Filesystem (virtual), Memory, Collaboration, NeuronDB tools, Multimodal.
-            </p>
-          </div>
+# Run NeuronAgent
+./neuronagent --config configs/config.yaml.example`}
+        />
 
-          <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1.5rem', borderRadius: '0.5rem' }}>
-            <h3 style={{ marginTop: 0, marginBottom: '0.75rem', color: '#fbbf24' }}>💰 Budget & Evaluation</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.95rem' }}>
-              Real-time cost tracking, budget controls, evaluation framework, and quality scoring.
-            </p>
-          </div>
-        </div>
+        <p>
+          After building NeuronAgent, configure it to connect to your NeuronDB instance. See the <a href="/docs/neuronagent/getting-started/configuration">Configuration Guide</a> for details.
+        </p>
       </section>
 
-      <section id="core-capabilities">
-        <h2>Core Capabilities</h2>
-
-        <h3>Agent Runtime</h3>
+      <section id="next-steps">
+        <h2>Next Steps</h2>
+        <p>After installation, use these guides:</p>
         <ul>
-          <li><strong>State Machine</strong> - Complete state machine for autonomous task execution</li>
-          <li><strong>Persistent Memory</strong> - Long-term memory with HNSW-based vector search</li>
-          <li><strong>Tool Execution</strong> - Extensible tool registry with 20+ built-in tools</li>
-          <li><strong>Streaming Responses</strong> - Real-time streaming via WebSocket</li>
-          <li><strong>Multi-Model Support</strong> - Support for GPT-4, Claude, Gemini, Llama, and custom models</li>
-        </ul>
-
-        <h3>Multi-Agent Collaboration</h3>
-        <ul>
-          <li><strong>Workspaces</strong> - Create shared workspaces for agent collaboration</li>
-          <li><strong>Agent-to-Agent Communication</strong> - Direct communication between agents</li>
-          <li><strong>Task Delegation</strong> - Delegate tasks to specialized agents</li>
-          <li><strong>Hierarchical Structures</strong> - Parent-child agent relationships</li>
-          <li><strong>Participant Management</strong> - Add users and agents to workspaces</li>
-        </ul>
-
-        <h3>Workflow Engine</h3>
-        <ul>
-          <li><strong>DAG-Based Workflows</strong> - Directed acyclic graph workflow execution</li>
-          <li><strong>Step Types</strong> - Agent, Tool, HTTP, SQL, Approval, and Custom steps</li>
-          <li><strong>Conditional Logic</strong> - Conditional branching in workflows</li>
-          <li><strong>Retry Logic</strong> - Configurable retry policies</li>
-          <li><strong>Human-in-the-Loop (HITL)</strong> - Approval gates with email/webhook notifications</li>
-          <li><strong>Scheduled Execution</strong> - Cron-based workflow scheduling</li>
-        </ul>
-
-        <h3>Planning & Reflection</h3>
-        <ul>
-          <li><strong>LLM-Based Planning</strong> - Generate execution plans from tasks</li>
-          <li><strong>Task Decomposition</strong> - Break down complex tasks into subtasks</li>
-          <li><strong>Self-Reflection</strong> - Agents can reflect on their own responses</li>
-          <li><strong>Quality Assessment</strong> - Evaluate response quality</li>
-          <li><strong>Plan Execution</strong> - Execute and track plan progress</li>
-        </ul>
-
-        <h3>Memory Management</h3>
-        <ul>
-          <li><strong>Hierarchical Memory</strong> - Multi-level memory organization</li>
-          <li><strong>Vector Search</strong> - HNSW-based semantic search</li>
-          <li><strong>Memory Promotion</strong> - Promote important memories to long-term storage</li>
-          <li><strong>Memory Summarization</strong> - Summarize memory chunks</li>
-          <li><strong>Memory Search</strong> - Search memory by semantic similarity</li>
-        </ul>
-
-        <h3>Budget & Cost Management</h3>
-        <ul>
-          <li><strong>Per-Agent Budgets</strong> - Set budgets for individual agents</li>
-          <li><strong>Per-Session Budgets</strong> - Budget controls per conversation</li>
-          <li><strong>Real-Time Tracking</strong> - Track costs in real-time</li>
-          <li><strong>Budget Alerts</strong> - Alerts when approaching budget limits</li>
-          <li><strong>Cost Analytics</strong> - Detailed cost breakdowns and analytics</li>
-        </ul>
-
-        <h3>Evaluation Framework</h3>
-        <ul>
-          <li><strong>Automated Evaluation</strong> - Evaluate agent performance automatically</li>
-          <li><strong>Quality Scoring</strong> - Score responses for quality metrics</li>
-          <li><strong>Retrieval Evaluation</strong> - Evaluate RAG retrieval performance</li>
-          <li><strong>Evaluation Runs</strong> - Batch evaluation across multiple tasks</li>
-          <li><strong>Evaluation Results</strong> - Detailed evaluation results and metrics</li>
-        </ul>
-
-        <h3>Tool System (20+ Tools)</h3>
-        <ul>
-          <li><strong>Built-in Tools</strong> - SQL, HTTP, Code, Shell, Browser, Visualization, Filesystem, Memory, Collaboration</li>
-          <li><strong>NeuronDB Tools</strong> - ML, Vector, RAG, Analytics, Hybrid Search, Reranking</li>
-          <li><strong>Multimodal Processing</strong> - Image and multimedia processing with embedding generation</li>
-          <li><strong>Custom Tools</strong> - Register custom tools with JSON Schema validation</li>
-        </ul>
-      </section>
-
-      <section id="getting-started">
-        <h2>Getting Started</h2>
-        <p>Deploy NeuronAgent and create your first autonomous agent with memory and tool execution capabilities.</p>
-
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginTop: '1.5rem', marginBottom: '1.5rem' }}>
-          <Link
-            href="/docs/neuronagent/getting-started"
-            className="block rounded-lg border border-slate-700 bg-slate-900/60 p-6 text-yellow-400 hover:text-yellow-300 hover:border-yellow-400 transition-colors"
-          >
-            <h3 style={{ marginTop: 0, marginBottom: '0.5rem', color: '#fbbf24' }}>🚀 Getting Started</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
-              Installation guide and quick start for NeuronAgent
-            </p>
-          </Link>
-
-          <Link
-            href="/docs/neuronagent/getting-started/quickstart"
-            className="block rounded-lg border border-slate-700 bg-slate-900/60 p-6 text-yellow-400 hover:text-yellow-300 hover:border-yellow-400 transition-colors"
-          >
-            <h3 style={{ marginTop: 0, marginBottom: '0.5rem', color: '#fbbf24' }}>⚡ Quick Start</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
-              Create your first agent with tools and memory in minutes
-            </p>
-          </Link>
-
-          <Link
-            href="/docs/neuronagent/getting-started/configuration"
-            className="block rounded-lg border border-slate-700 bg-slate-900/60 p-6 text-yellow-400 hover:text-yellow-300 hover:border-yellow-400 transition-colors"
-          >
-            <h3 style={{ marginTop: 0, marginBottom: '0.5rem', color: '#fbbf24' }}>⚙️ Configuration</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
-              Configure API keys, rate limiting, and database connections
-            </p>
-          </Link>
-
-          <Link
-            href="/docs/neuronagent/getting-started/neurondb-integration"
-            className="block rounded-lg border border-slate-700 bg-slate-900/60 p-6 text-yellow-400 hover:text-yellow-300 hover:border-yellow-400 transition-colors"
-          >
-            <h3 style={{ marginTop: 0, marginBottom: '0.5rem', color: '#fbbf24' }}>🔗 NeuronDB Integration</h3>
-            <p style={{ marginBottom: 0, fontSize: '0.9rem', color: '#cbd5e1' }}>
-              Integrate with NeuronDB for vector search and embeddings
-            </p>
-          </Link>
-        </div>
-      </section>
-
-      <section id="documentation">
-        <h2>Documentation Library</h2>
-
-        <h3>Agent Management</h3>
-        <ul>
-          <li><strong>Agent Lifecycle</strong> - Create, update, list, and delete agents via REST API</li>
-          <li><strong>State Machine</strong> - State persistence, recovery, and transition management</li>
-          <li><strong>System Prompts</strong> - Configure agent behavior with custom prompts</li>
-          <li><strong>Model Configuration</strong> - Select and configure LLM models (GPT-4, Claude, etc.)</li>
-        </ul>
-
-        <h3>Session Management</h3>
-        <ul>
-          <li><strong>Session Creation</strong> - Create and manage agent sessions with user IDs and metadata</li>
-          <li><strong>Message History</strong> - Track conversation history with pagination and filtering</li>
-          <li><strong>Multi-Agent Sessions</strong> - Support for multiple agents in a single session</li>
-          <li><strong>Session Cleanup</strong> - Automatic timeout and cleanup policies</li>
-        </ul>
-
-        <h3>Long-term Memory</h3>
-        <ul>
-          <li><strong>Memory Search</strong> - Semantic search across historical conversations</li>
-          <li><strong>Memory Persistence</strong> - Persistent memory storage across sessions</li>
-          <li><strong>Context Retrieval</strong> - Retrieve relevant context from memory</li>
-          <li><strong>NeuronDB Integration</strong> - Use NeuronDB embeddings for memory vectorization</li>
-        </ul>
-
-        <h3>Multi-Agent Collaboration</h3>
-        <ul>
-          <li><strong>Agent Communication</strong> - Enable agents to communicate and delegate tasks</li>
-          <li><strong>Shared Workspaces</strong> - Shared workspaces for collaborative environments</li>
-          <li><strong>Hierarchical Structures</strong> - Organize agents in hierarchical structures</li>
-          <li><strong>Task Delegation</strong> - Delegate tasks between agents with automatic routing</li>
-        </ul>
-
-        <h3>Workflow Engine</h3>
-        <ul>
-          <li><strong>Workflow Definition</strong> - Define DAG-based workflows with multiple step types</li>
-          <li><strong>Human-in-the-Loop</strong> - Approval gates and feedback loops with notifications</li>
-          <li><strong>Workflow Execution</strong> - Execute workflows with state management and retries</li>
-          <li><strong>Conditional Logic</strong> - Conditional steps and branching logic</li>
-        </ul>
-
-        <h3>Planning & Reflection</h3>
-        <ul>
-          <li><strong>LLM-Based Planning</strong> - Generate plans using LLM with task decomposition</li>
-          <li><strong>Task Decomposition</strong> - Break down complex tasks into sub-tasks</li>
-          <li><strong>Self-Reflection</strong> - Agent self-reflection and quality assessment</li>
-          <li><strong>Quality Assessment</strong> - Evaluate task completion quality</li>
-        </ul>
-
-        <h3>Evaluation Framework</h3>
-        <ul>
-          <li><strong>Performance Metrics</strong> - Track success rate, latency, and quality scores</li>
-          <li><strong>Automated Scoring</strong> - Automated quality scoring for responses</li>
-          <li><strong>Evaluation Reports</strong> - Generate evaluation reports with analysis</li>
-          <li><strong>Continuous Improvement</strong> - Use evaluation results to improve performance</li>
-        </ul>
-
-        <h3>Budget & Cost Management</h3>
-        <ul>
-          <li><strong>Cost Tracking</strong> - Real-time cost tracking for LLM API calls</li>
-          <li><strong>Budget Controls</strong> - Set per-agent and per-session budget limits</li>
-          <li><strong>Budget Alerts</strong> - Configure alerts for budget thresholds</li>
-          <li><strong>Cost Analytics</strong> - Analyze cost trends and optimize usage</li>
-        </ul>
-
-        <h3>API & WebSocket</h3>
-        <ul>
-          <li><strong>REST API</strong> - Full CRUD operations for agents, sessions, and messages</li>
-          <li><strong>WebSocket</strong> - Real-time streaming responses and bidirectional communication</li>
-          <li><strong>Authentication</strong> - API key-based authentication with rate limiting and RBAC</li>
-          <li><strong>Rate Limiting</strong> - Configure rate limits per API key and endpoint</li>
-        </ul>
-
-        <h3>Background Jobs</h3>
-        <ul>
-          <li><strong>Job Queue</strong> - PostgreSQL-based job queue with SKIP LOCKED</li>
-          <li><strong>Retries</strong> - Automatic retry logic with exponential backoff</li>
-          <li><strong>Crash Recovery</strong> - Recovery from crashes with job state persistence</li>
-          <li><strong>Worker Pool</strong> - Configurable worker pool for parallel processing</li>
-        </ul>
-
-        <h3>Examples & Tutorials</h3>
-        <ul>
-          <li><a href="https://github.com/neurondb-ai/neurondb/tree/main/examples/agent-tools" target="_blank" rel="noopener noreferrer">Agent Tools Example</a> - Complete example with multiple tools</li>
-          <li><a href="https://github.com/neurondb-ai/neurondb" target="_blank" rel="noopener noreferrer">Memory Example</a> - Long-term memory with context retrieval</li>
-          <li><a href="https://github.com/neurondb-ai/neurondb" target="_blank" rel="noopener noreferrer">WebSocket Example</a> - Real-time streaming example</li>
-          <li><a href="https://github.com/neurondb-ai/neurondb" target="_blank" rel="noopener noreferrer">State Machine Example</a> - Complex workflow example</li>
+          <li>
+            <a href="/docs/neuronagent/getting-started/quickstart">Quick Start Guide</a> - Create your first agent with tools and memory
+          </li>
+          <li>
+            <a href="/docs/neuronagent/getting-started/configuration">Configuration Guide</a> - Configure API keys, rate limiting, and database connections
+          </li>
+          <li>
+            <a href="/docs/neuronagent/getting-started/neurondb-integration">NeuronDB Integration</a> - Integrate with NeuronDB for vector search and embeddings
+          </li>
+          <li>
+            <a href="/docs/neuronagent/features">Features Documentation</a> - Complete feature reference for agents, workflows, and tools
+          </li>
+          <li>
+            <a href="/docs/neurondb">NeuronDB Documentation</a> - Vector search, ML inference, and RAG pipelines
+          </li>
+          <li>
+            <a href="https://github.com/neurondb-ai/neurondb/tree/main/examples/agent-tools">Agent Tools Example</a> - Complete working example with multiple tools
+          </li>
         </ul>
       </section>
 
