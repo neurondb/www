@@ -22,7 +22,7 @@ export default function HomeHero() {
 
             <div className="mt-5 flex items-center gap-4 animate-slide-up">
               <h1 className="text-5xl sm:text-6xl font-semibold tracking-tight text-white">
-                PostgreSQL AI Extension.
+                PostgreSQL AI Factory.
               </h1>
               <div className="hidden sm:block flex-shrink-0 -mt-4 opacity-80 hover:opacity-100 transition-all duration-300 hover:scale-110 hover:rotate-3">
                 <PostgresElephant size={80} className="text-slate-400" />
