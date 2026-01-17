@@ -28,7 +28,7 @@ export default function InteractiveSVG({
   const [isInView, setIsInView] = useState(priority) // Load immediately if priority
   const [svgContent, setSvgContent] = useState<string | null>(null)
   const imgRef = useRef<HTMLImageElement>(null)
-  const svgRef = useRef<SVGSVGElement>(null)
+  const svgRef = useRef<SVGSVGElement | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const animationTriggered = useRef(false)
 
