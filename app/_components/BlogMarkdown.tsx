@@ -858,6 +858,9 @@ export function BlogMarkdown({ children }: { children: string }) {
             const srcWithoutQuery = src.split('?')[0]
             const isSVG = srcWithoutQuery.toLowerCase().endsWith('.svg')
             
+            // Check if SVG should be animated (via ?animated query parameter)
+            const shouldAnimate = isSVG && (src.includes('?animated') || src.includes('&animated'))
+            
             // Check if this is one of the specific PNG diagrams that should be smaller
             const isSmallDiagram = src.includes('agent-main.png') || 
                                    src.includes('agent-mcp-ndb.png') || 
@@ -883,12 +886,14 @@ export function BlogMarkdown({ children }: { children: string }) {
               marginTop: 20, 
               maxWidth: '100%', 
               width: '100%', 
-              overflow: 'visible', 
+              overflow: 'hidden', 
               display: 'block', 
               textAlign: 'center', 
               backgroundColor: 'transparent', 
               scrollMarginTop: '100px',
-              padding: '0'
+              padding: '0',
+              position: 'relative',
+              zIndex: 0
             }
             
             // For blog diagrams, load them with priority to avoid loading skeleton issues
@@ -902,6 +907,7 @@ export function BlogMarkdown({ children }: { children: string }) {
                     alt={alt}
                     maxWidth={svgMaxWidth}
                     priority={shouldPriorityLoad}
+                    animated={shouldAnimate}
                     style={{ 
                       width: '100%', 
                       height: 'auto', 

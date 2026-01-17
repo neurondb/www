@@ -33,19 +33,25 @@
     <text x="0" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="end" dominant-baseline="middle">15</text>
     
     <!-- Bars -->
-    <rect x="30" y="140" width="50" height="60" fill="url(#cyanGrad)" stroke="#06b6d4" stroke-width="2" rx="4"/>
-    <text x="55" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle">12.5</text>
-    <text x="55" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">pgvector</text>
+    <g data-animate="slide" data-delay="0">
+      <rect x="30" y="140" width="50" height="60" fill="url(#cyanGrad)" stroke="#06b6d4" stroke-width="2" rx="4"/>
+      <text x="55" y="130" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle">12.5</text>
+      <text x="55" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">pgvector</text>
+    </g>
     
-    <rect x="110" y="155" width="50" height="45" fill="url(#purpleGrad)" stroke="#8b5cf6" stroke-width="2" rx="4"/>
-    <text x="135" y="145" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">8.2</text>
-    <text x="135" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">NeuronDB</text>
-    <text x="135" y="225" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle">CPU</text>
+    <g data-animate="slide" data-delay="150">
+      <rect x="110" y="155" width="50" height="45" fill="url(#purpleGrad)" stroke="#8b5cf6" stroke-width="2" rx="4"/>
+      <text x="135" y="145" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">8.2</text>
+      <text x="135" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">NeuronDB</text>
+      <text x="135" y="225" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle">CPU</text>
+    </g>
     
-    <rect x="190" y="175" width="50" height="25" fill="url(#greenGrad)" stroke="#10b981" stroke-width="2" rx="4"/>
-    <text x="215" y="165" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle">3.5</text>
-    <text x="215" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">NeuronDB</text>
-    <text x="215" y="225" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle">GPU</text>
+    <g data-animate="slide" data-delay="300">
+      <rect x="190" y="175" width="50" height="25" fill="url(#greenGrad)" stroke="#10b981" stroke-width="2" rx="4"/>
+      <text x="215" y="165" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle">3.5</text>
+      <text x="215" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">NeuronDB</text>
+      <text x="215" y="225" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle">GPU</text>
+    </g>
   </g>
   
   <!-- Throughput Chart -->
@@ -59,19 +65,25 @@
     <text x="0" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="end" dominant-baseline="middle">15K</text>
     
     <!-- Bars -->
-    <rect x="30" y="185" width="50" height="15" fill="url(#cyanGrad)" stroke="#06b6d4" stroke-width="2" rx="4"/>
-    <text x="55" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle">80</text>
-    <text x="55" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">pgvector</text>
+    <g data-animate="slide" data-delay="500">
+      <rect x="30" y="185" width="50" height="15" fill="url(#cyanGrad)" stroke="#06b6d4" stroke-width="2" rx="4"/>
+      <text x="55" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle">80</text>
+      <text x="55" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">pgvector</text>
+    </g>
     
-    <rect x="110" y="180" width="50" height="20" fill="url(#purpleGrad)" stroke="#8b5cf6" stroke-width="2" rx="4"/>
-    <text x="135" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">122</text>
-    <text x="135" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">NeuronDB</text>
-    <text x="135" y="225" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle">CPU</text>
+    <g data-animate="slide" data-delay="650">
+      <rect x="110" y="180" width="50" height="20" fill="url(#purpleGrad)" stroke="#8b5cf6" stroke-width="2" rx="4"/>
+      <text x="135" y="170" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">122</text>
+      <text x="135" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">NeuronDB</text>
+      <text x="135" y="225" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle">CPU</text>
+    </g>
     
-    <rect x="190" y="120" width="50" height="80" fill="url(#greenGrad)" stroke="#10b981" stroke-width="2" rx="4"/>
-    <text x="215" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle">12.5K</text>
-    <text x="215" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">NeuronDB</text>
-    <text x="215" y="225" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle">GPU</text>
+    <g data-animate="slide" data-delay="800">
+      <rect x="190" y="120" width="50" height="80" fill="url(#greenGrad)" stroke="#10b981" stroke-width="2" rx="4"/>
+      <text x="215" y="110" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle">12.5K</text>
+      <text x="215" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">NeuronDB</text>
+      <text x="215" y="225" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle">GPU</text>
+    </g>
   </g>
   
   <!-- Index Build Time Chart -->
@@ -85,14 +97,18 @@
     <text x="0" y="50" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="end" dominant-baseline="middle">250</text>
     
     <!-- Bars -->
-    <rect x="30" y="50" width="50" height="150" fill="url(#cyanGrad)" stroke="#06b6d4" stroke-width="2" rx="4"/>
-    <text x="55" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle">245</text>
-    <text x="55" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">pgvector</text>
+    <g data-animate="slide" data-delay="1000">
+      <rect x="30" y="50" width="50" height="150" fill="url(#cyanGrad)" stroke="#06b6d4" stroke-width="2" rx="4"/>
+      <text x="55" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle">245</text>
+      <text x="55" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">pgvector</text>
+    </g>
     
-    <rect x="110" y="70" width="50" height="130" fill="url(#purpleGrad)" stroke="#8b5cf6" stroke-width="2" rx="4"/>
-    <text x="135" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">189</text>
-    <text x="135" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">NeuronDB</text>
-    <text x="135" y="225" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle">CPU</text>
+    <g data-animate="slide" data-delay="1150">
+      <rect x="110" y="70" width="50" height="130" fill="url(#purpleGrad)" stroke="#8b5cf6" stroke-width="2" rx="4"/>
+      <text x="135" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">189</text>
+      <text x="135" y="210" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">NeuronDB</text>
+      <text x="135" y="225" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle">CPU</text>
+    </g>
   </g>
   
   <!-- Legend -->

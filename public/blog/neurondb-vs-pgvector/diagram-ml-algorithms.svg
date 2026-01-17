@@ -128,7 +128,7 @@
       <text x="100" y="60" fill="#cbd5e1" font-size="11" text-anchor="middle"
             font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Kernel methods</text>
       <text x="100" y="80" fill="#cbd5e1" font-size="11" text-anchor="middle"
-            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Linear & RBF</text>
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Linear &amp; RBF</text>
       <text x="100" y="100" fill="#cbd5e1" font-size="11" text-anchor="middle"
             font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Margin maximization</text>
       <text x="100" y="120" fill="#cbd5e1" font-size="11" text-anchor="middle"

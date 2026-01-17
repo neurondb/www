@@ -38,7 +38,7 @@
     <g transform="translate(40, 80)">
       <rect x="0" y="0" width="400" height="90" rx="8" fill="#1e293b" stroke="#06b6d4" stroke-width="1"/>
       <text x="200" y="30" fill="#22d3ee" font-size="18" font-weight="700" text-anchor="middle"
-            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">L2 (Euclidean) <-></text>
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">L2 (Euclidean) &lt;-&gt;</text>
       <text x="200" y="55" fill="#cbd5e1" font-size="12" text-anchor="middle"
             font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Standard distance metric " Magnitude sensitive</text>
       <text x="200" y="75" fill="#cbd5e1" font-size="12" text-anchor="middle"
@@ -48,7 +48,7 @@
     <g transform="translate(40, 190)">
       <rect x="0" y="0" width="400" height="90" rx="8" fill="#1e293b" stroke="#06b6d4" stroke-width="1"/>
       <text x="200" y="30" fill="#22d3ee" font-size="18" font-weight="700" text-anchor="middle"
-            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Cosine <=></text>
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Cosine &lt;=&gt;</text>
       <text x="200" y="55" fill="#cbd5e1" font-size="12" text-anchor="middle"
             font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Angle-based similarity " Magnitude independent</text>
       <text x="200" y="75" fill="#cbd5e1" font-size="12" text-anchor="middle"
@@ -58,7 +58,7 @@
     <g transform="translate(40, 300)">
       <rect x="0" y="0" width="400" height="90" rx="8" fill="#1e293b" stroke="#06b6d4" stroke-width="1"/>
       <text x="200" y="30" fill="#22d3ee" font-size="18" font-weight="700" text-anchor="middle"
-            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Inner Product <#></text>
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Inner Product &lt;#&gt;</text>
       <text x="200" y="55" fill="#cbd5e1" font-size="12" text-anchor="middle"
             font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Dot product " Negative inner product</text>
       <text x="200" y="75" fill="#cbd5e1" font-size="12" text-anchor="middle"
@@ -83,7 +83,7 @@
     <g transform="translate(40, 135)">
       <rect x="0" y="0" width="400" height="45" rx="8" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
       <text x="200" y="18" fill="#a78bfa" font-size="14" font-weight="600" text-anchor="middle"
-            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">L1 (Manhattan) <+></text>
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">L1 (Manhattan) &lt;+&gt;</text>
       <text x="200" y="35" fill="#cbd5e1" font-size="11" text-anchor="middle"
             font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Sum of absolute differences " Robust to outliers</text>
     </g>
@@ -91,7 +91,7 @@
     <g transform="translate(40, 190)">
       <rect x="0" y="0" width="400" height="45" rx="8" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
       <text x="200" y="18" fill="#a78bfa" font-size="14" font-weight="600" text-anchor="middle"
-            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Hamming <~></text>
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Hamming &lt;~&gt;</text>
       <text x="200" y="35" fill="#cbd5e1" font-size="11" text-anchor="middle"
             font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Bit-wise distance " For binary vectors</text>
     </g>
@@ -99,7 +99,7 @@
     <g transform="translate(40, 245)">
       <rect x="0" y="0" width="400" height="45" rx="8" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
       <text x="200" y="18" fill="#a78bfa" font-size="14" font-weight="600" text-anchor="middle"
-            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Jaccard <%></text>
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Jaccard &lt;%&gt;</text>
       <text x="200" y="35" fill="#cbd5e1" font-size="11" text-anchor="middle"
             font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Set similarity " For sparse vectors</text>
     </g>

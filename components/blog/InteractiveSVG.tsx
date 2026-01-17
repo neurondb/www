@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
+import { animateFromAttributes, resetAnimations } from '@/utils/svgAnimations'
 
 interface InteractiveSVGProps {
   src: string
@@ -9,6 +10,7 @@ interface InteractiveSVGProps {
   style?: React.CSSProperties
   maxWidth?: string
   priority?: boolean
+  animated?: boolean
 }
 
 export default function InteractiveSVG({
@@ -18,13 +20,17 @@ export default function InteractiveSVG({
   style = {},
   maxWidth = '980px',
   priority = false,
+  animated = false,
 }: InteractiveSVGProps) {
   const [isLoaded, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
   const [retryCount, setRetryCount] = useState(0)
   const [isInView, setIsInView] = useState(priority) // Load immediately if priority
+  const [svgContent, setSvgContent] = useState<string | null>(null)
   const imgRef = useRef<HTMLImageElement>(null)
+  const svgRef = useRef<SVGSVGElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
+  const animationTriggered = useRef(false)
 
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -54,9 +60,57 @@ export default function InteractiveSVG({
     }
   }, [priority, isInView])
 
-  // Load image when in view
+  // Load SVG content for animated SVGs
   useEffect(() => {
-    if (!isInView || isLoaded || hasError) return
+    if (!animated || !isInView) return
+    // Reset state when switching to animated mode
+    if (animated && !svgContent && !hasError) {
+      setSvgContent(null)
+      setIsLoaded(false)
+      setHasError(false)
+    }
+    if (svgContent || hasError) return
+
+    const loadSvgContent = async () => {
+      try {
+        // Ensure src is an absolute path (starts with /) for proper resolution
+        const fetchSrc = src.startsWith('/') ? src : `/${src}`
+        const response = await fetch(fetchSrc)
+        if (!response.ok) {
+          throw new Error(`Failed to load SVG: ${response.statusText} (${response.status})`)
+        }
+        const text = await response.text()
+        // Basic validation - ensure it's actually SVG content
+        if (!text.trim().startsWith('<') || !text.includes('<svg')) {
+          throw new Error('Response does not appear to be valid SVG content')
+        }
+        setSvgContent(text)
+        setIsLoaded(true)
+        setHasError(false)
+      } catch (error) {
+        console.error('Error loading SVG content:', error, 'for src:', src)
+        if (retryCount < 3) {
+          setTimeout(() => {
+            setRetryCount((prev) => prev + 1)
+            setHasError(false)
+          }, 1000 * (retryCount + 1))
+        } else {
+          setHasError(true)
+        }
+      }
+    }
+
+    loadSvgContent()
+  }, [animated, isInView, src, svgContent, hasError, retryCount])
+
+  // Load image when in view (for non-animated SVGs)
+  useEffect(() => {
+    if (animated || !isInView) return
+    // Reset error state when switching to non-animated mode
+    if (!animated && hasError) {
+      setHasError(false)
+    }
+    if (isLoaded || hasError) return
 
     const img = new Image()
     img.onload = () => {
@@ -82,7 +136,7 @@ export default function InteractiveSVG({
       setIsLoaded(true)
       setHasError(false)
     }
-  }, [isInView, src, isLoaded, hasError, retryCount])
+  }, [animated, isInView, src, isLoaded, hasError, retryCount])
 
   const handleImageError = () => {
     if (retryCount < 3) {
@@ -102,9 +156,9 @@ export default function InteractiveSVG({
     setHasError(false)
   }
 
-  // Check if image is already loaded when component mounts or src changes
+  // Check if image is already loaded when component mounts or src changes (non-animated only)
   useEffect(() => {
-    if (!isInView || isLoaded) return
+    if (animated || !isInView || isLoaded) return
     
     // Use multiple check intervals to catch cached images
     const checkTimer1 = setTimeout(() => {
@@ -142,7 +196,83 @@ export default function InteractiveSVG({
       clearTimeout(checkTimer2)
       clearTimeout(checkTimer3)
     }
-  }, [isInView, isLoaded, src])
+  }, [animated, isInView, isLoaded, src])
+
+  // Trigger animations when SVG is in view and loaded (animated SVGs only)
+  useEffect(() => {
+    if (!animated || !isLoaded || !svgContent || animationTriggered.current) return
+
+    // Find SVG element in the container after it's rendered
+    const findAndAnimate = () => {
+      if (!containerRef.current) return
+
+      const svgElement = containerRef.current.querySelector('svg') as SVGSVGElement | null
+      if (!svgElement || animationTriggered.current) return
+
+      svgRef.current = svgElement
+
+      // Use IntersectionObserver to trigger animations when SVG enters viewport
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !animationTriggered.current) {
+              animationTriggered.current = true
+              // Small delay to ensure SVG is fully rendered
+              setTimeout(() => {
+                animateFromAttributes(svgElement)
+              }, 100)
+              observer.disconnect()
+            }
+          })
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '50px',
+        }
+      )
+
+      observer.observe(svgElement)
+
+      return () => {
+        observer.disconnect()
+        // Cleanup animations on unmount
+        if (svgElement) {
+          resetAnimations(svgElement)
+        }
+      }
+    }
+
+    // Small delay to ensure DOM is updated after dangerouslySetInnerHTML
+    const timeoutId = setTimeout(() => {
+      findAndAnimate()
+      // Also ensure SVG styling is applied immediately for proper responsive sizing
+      if (containerRef.current) {
+        const svgElement = containerRef.current.querySelector('svg') as SVGSVGElement | null
+        if (svgElement) {
+          // Apply responsive styles
+          svgElement.style.width = '100%'
+          svgElement.style.height = 'auto'
+          svgElement.style.maxWidth = maxWidth
+          svgElement.style.display = 'block'
+          // Ensure viewBox is set for proper scaling (should already be there)
+          // Remove fixed width/height attributes to allow CSS to control sizing
+          const hasViewBox = svgElement.getAttribute('viewBox')
+          if (hasViewBox) {
+            svgElement.removeAttribute('width')
+            svgElement.removeAttribute('height')
+          }
+        }
+      }
+    }, 50)
+
+    return () => {
+      clearTimeout(timeoutId)
+      // Cleanup animations on unmount
+      if (svgRef.current) {
+        resetAnimations(svgRef.current)
+      }
+    }
+  }, [animated, isLoaded, svgContent, maxWidth])
 
   return (
     <div
@@ -150,6 +280,7 @@ export default function InteractiveSVG({
       className={`relative w-full ${className}`}
       style={{
         minHeight: isLoaded ? 'auto' : '200px',
+        overflow: 'hidden',
         ...style,
       }}
     >
@@ -201,8 +332,28 @@ export default function InteractiveSVG({
         </div>
       )}
 
-      {/* Actual Image */}
-      {isInView && (
+      {/* Animated SVG (inline) */}
+      {isInView && animated && svgContent && (
+        <div
+          className={`transition-opacity duration-500 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{
+            width: '100%',
+            maxWidth: maxWidth,
+            margin: '0 auto',
+            overflow: 'hidden',
+            ...style,
+          }}
+          dangerouslySetInnerHTML={{
+            __html: svgContent,
+          }}
+          aria-label={alt}
+        />
+      )}
+
+      {/* Static Image (non-animated SVGs and other images) */}
+      {isInView && !animated && (
         <img
           ref={(node) => {
             imgRef.current = node

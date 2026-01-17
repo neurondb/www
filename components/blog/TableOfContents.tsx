@@ -57,6 +57,9 @@ export default function TableOfContents({ headings, className = '' }: TableOfCon
 
   if (headings.length === 0) return null
 
+  // Determine main headings (typically level 1 or 2)
+  const isMainHeading = (level: number) => level === 1 || level === 2
+
   return (
     <nav
       className={`sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto ${className}`}
@@ -64,33 +67,37 @@ export default function TableOfContents({ headings, className = '' }: TableOfCon
     >
       <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-lg p-4">
         <h3 className="text-lg font-semibold text-white mb-4">Contents</h3>
-        <ul className="space-y-2">
+        <div className="grid grid-cols-2 gap-x-2 gap-y-2">
           {headings.map((heading) => {
             const isActive = activeId === heading.id
+            const mainHeading = isMainHeading(heading.level)
             const indentClass = {
               1: 'ml-0',
-              2: 'ml-4',
-              3: 'ml-8',
-              4: 'ml-12',
+              2: 'ml-0',
+              3: 'ml-2',
+              4: 'ml-4',
             }[heading.level] || 'ml-0'
 
             return (
-              <li key={heading.id} className={indentClass}>
+              <div
+                key={heading.id}
+                className={mainHeading ? 'col-span-2' : ''}
+              >
                 <button
                   onClick={() => scrollToHeading(heading.id)}
-                  className={`text-left w-full px-3 py-2 rounded-md transition-all duration-200 text-sm ${
+                  className={`text-left w-full px-3 py-2 rounded-md transition-all duration-200 text-sm ${indentClass} ${
                     isActive
                       ? 'bg-cyan-500/20 text-cyan-400 font-semibold border-l-2 border-cyan-400'
                       : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
-                  }`}
+                  } ${mainHeading ? 'font-semibold' : ''}`}
                   aria-current={isActive ? 'location' : undefined}
                 >
                   {heading.text}
                 </button>
-              </li>
+              </div>
             )
           })}
-        </ul>
+        </div>
       </div>
     </nav>
   )

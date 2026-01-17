@@ -357,7 +357,7 @@ NeuronDB provides automatic SIMD detection and optimization (AVX, AVX2, AVX-512)
 
 Performance is a critical factor when choosing between extensions. Performance characteristics depend on dataset size, vector dimensions, index configuration, and hardware capabilities. This section compares both extensions across key metrics with real-world benchmarks.
 
-![Performance Graph](/blog/neurondb-vs-pgvector/diagram-performance-graph.svg?v=1)
+![Performance Graph](/blog/neurondb-vs-pgvector/diagram-performance-graph.svg?v=1&animated)
 
 Performance characteristics depend on index parameters (m, ef_construction for HNSW; lists, probes for IVF), query-time parameters (ef_search for HNSW), vector dimensions, dataset size, and hardware capabilities. NeuronDB provides 2-4x speedup with GPU acceleration and SIMD optimizations.
 
@@ -682,7 +682,7 @@ NeuronDB provides enhanced monitoring through dedicated views (\`neurondb.index_
 
 If you're currently using pgvector and considering NeuronDB, migration is straightforward due to full compatibility. This section provides step-by-step instructions, common pitfalls to avoid, and troubleshooting guidance.
 
-![Migration Flow](/blog/neurondb-vs-pgvector/diagram-migration-flow.svg?v=1)
+![Migration Flow](/blog/neurondb-vs-pgvector/diagram-migration-flow.svg?v=1&animated)
 
 ### Pre-Migration Checklist
 
@@ -1161,8 +1161,20 @@ export default function BlogPost() {
       <div className="bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+            {/* Sidebar - Table of Contents and Related Blogs */}
+            <div className="lg:w-80 flex-shrink-0 relative z-10">
+              <div className="px-4 sm:px-6 lg:px-0 space-y-8">
+                <BlogPageClient markdown={markdown} showTOC={true} />
+                <RelatedBlogs 
+                  currentSlug="neurondb-vs-pgvector" 
+                  allPosts={allBlogPosts}
+                  maxPosts={4}
+                />
+              </div>
+            </div>
+            
             {/* Main Content */}
-            <div className="flex-1 min-w-0 lg:max-w-5xl">
+            <div className="flex-1 min-w-0 lg:max-w-5xl relative z-0">
               <div className="px-4 sm:px-6 lg:px-0">
                 <BlogMarkdown>{markdown}</BlogMarkdown>
                 
@@ -1186,18 +1198,6 @@ export default function BlogPost() {
                     ]}
                   />
                 </div>
-              </div>
-            </div>
-            
-            {/* Sidebar - Table of Contents and Related Blogs */}
-            <div className="lg:w-80 flex-shrink-0">
-              <div className="px-4 sm:px-6 lg:px-0 space-y-8">
-                <BlogPageClient markdown={markdown} showTOC={true} />
-                <RelatedBlogs 
-                  currentSlug="neurondb-vs-pgvector" 
-                  allPosts={allBlogPosts}
-                  maxPosts={4}
-                />
               </div>
             </div>
           </div>

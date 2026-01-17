@@ -41,7 +41,7 @@
     <text x="250" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="bold" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">pgvector</text>
     
     <!-- Type System -->
-    <g transform="translate(0, 40)">
+    <g transform="translate(0, 40)" data-animate="fade" data-delay="0">
       <rect x="0" y="0" width="200" height="100" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
       <rect x="5" y="5" width="190" height="90" rx="6" fill="url(#cyanGrad)"/>
       <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Type System</text>
@@ -50,7 +50,7 @@
     </g>
     
     <!-- Index Structures -->
-    <g transform="translate(250, 40)">
+    <g transform="translate(250, 40)" data-animate="fade" data-delay="100">
       <rect x="0" y="0" width="200" height="100" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
       <rect x="5" y="5" width="190" height="90" rx="6" fill="url(#cyanGrad)"/>
       <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Index Structures</text>
@@ -59,7 +59,7 @@
     </g>
     
     <!-- Query Execution -->
-    <g transform="translate(0, 160)">
+    <g transform="translate(0, 160)" data-animate="fade" data-delay="200">
       <rect x="0" y="0" width="200" height="100" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
       <rect x="5" y="5" width="190" height="90" rx="6" fill="url(#cyanGrad)"/>
       <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Query Execution</text>
@@ -68,7 +68,7 @@
     </g>
     
     <!-- Limitations -->
-    <g transform="translate(250, 160)">
+    <g transform="translate(250, 160)" data-animate="fade" data-delay="300">
       <rect x="0" y="0" width="200" height="100" rx="8" fill="url(#boxGrad)" stroke="#64748b" stroke-width="2"/>
       <rect x="5" y="5" width="190" height="90" rx="6" fill="url(#boxGrad)" opacity="0.5"/>
       <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">No GPU</text>
@@ -91,7 +91,7 @@
     </g>
     
     <!-- Index Structures -->
-    <g transform="translate(250, 40)">
+    <g transform="translate(250, 40)" data-animate="fade" data-delay="100">
       <rect x="0" y="0" width="200" height="100" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
       <rect x="5" y="5" width="190" height="90" rx="6" fill="url(#purpleGrad)"/>
       <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Index Structures</text>
@@ -100,7 +100,7 @@
     </g>
     
     <!-- Query Execution -->
-    <g transform="translate(0, 160)">
+    <g transform="translate(0, 160)" data-animate="fade" data-delay="200">
       <rect x="0" y="0" width="200" height="100" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
       <rect x="5" y="5" width="190" height="90" rx="6" fill="url(#purpleGrad)"/>
       <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Query Execution</text>
@@ -109,7 +109,7 @@
     </g>
     
     <!-- GPU Acceleration -->
-    <g transform="translate(250, 160)">
+    <g transform="translate(250, 160)" data-animate="fade" data-delay="400">
       <rect x="0" y="0" width="200" height="100" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2" filter="url(#glow)"/>
       <rect x="5" y="5" width="190" height="90" rx="6" fill="url(#greenGrad)"/>
       <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">GPU Acceleration</text>
@@ -118,7 +118,7 @@
     </g>
     
     <!-- Background Workers -->
-    <g transform="translate(0, 280)">
+    <g transform="translate(0, 280)" data-animate="fade" data-delay="500">
       <rect x="0" y="0" width="200" height="100" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
       <rect x="5" y="5" width="190" height="90" rx="6" fill="url(#purpleGrad)"/>
       <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Background Workers</text>
@@ -127,7 +127,7 @@
     </g>
     
     <!-- ML & RAG -->
-    <g transform="translate(250, 280)">
+    <g transform="translate(250, 280)" data-animate="fade" data-delay="600">
       <rect x="0" y="0" width="200" height="100" rx="8" fill="url(#boxGrad)" stroke="#facc15" stroke-width="2" filter="url(#glow)"/>
       <rect x="5" y="5" width="190" height="90" rx="6" fill="url(#yellowGrad)"/>
       <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">ML &amp; RAG</text>
@@ -137,7 +137,7 @@
   </g>
   
   <!-- Compatibility Arrow -->
-  <line x1="500" y1="400" x2="650" y2="400" stroke="#06b6d4" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="400" x2="650" y2="400" stroke="#06b6d4" stroke-width="3" marker-end="url(#arrowhead)" data-animate="stroke" data-delay="700"/>
   <text x="575" y="390" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">100% Compatible</text>
   
 </svg>
