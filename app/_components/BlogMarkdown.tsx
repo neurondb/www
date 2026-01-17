@@ -7,6 +7,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { Highlight, themes } from 'prism-react-renderer';
 import Tip from '@/components/Tip';
+import InteractiveSVG from '@/components/blog/InteractiveSVG';
 
 // Deterministic, render-safe hash for stable DOM ids (avoids hydration issues)
 const stableHash = (input: string): string => {
@@ -176,6 +177,50 @@ export function BlogMarkdown({ children }: { children: string }) {
         /* Colored bullets for Key Concepts section using CSS custom properties */
         article ul li::marker {
           color: var(--bullet-color, rgb(96 165 250));
+          font-size: 1.2em;
+        }
+        /* Perfect bullet point rendering - ensure bullets are outside and visible */
+        article ul {
+          list-style-position: outside !important;
+          padding-left: 1.5rem;
+        }
+        article ul li {
+          list-style-position: outside !important;
+          padding-left: 0.5rem;
+          margin-left: 0;
+          position: relative;
+        }
+        /* Enhanced bullet styling with gradient colors */
+        article ul li::before {
+          content: '';
+          position: absolute;
+          left: -1.5rem;
+          top: 0.5em;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, rgb(96 165 250), rgb(59 130 246));
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+        article ul li:hover::before {
+          opacity: 1;
+        }
+        /* Ensure nested lists have proper indentation */
+        article ul ul {
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+          padding-left: 2rem;
+        }
+        article ul ul li {
+          padding-left: 0.5rem;
+        }
+        /* Animated bullet points on scroll */
+        article ul li {
+          transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+        article ul li:hover {
+          transform: translateX(4px);
         }
         /* Professional table styling */
         article table {
@@ -297,6 +342,10 @@ export function BlogMarkdown({ children }: { children: string }) {
         /* Figure styling */
         article figure {
           margin: 2rem 0;
+          transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        article figure:hover {
+          transform: translateY(-2px);
         }
         article figure figcaption {
           margin-top: 0.75rem;
@@ -328,7 +377,13 @@ export function BlogMarkdown({ children }: { children: string }) {
             const text = typeof children === 'string' ? children : children?.toString() || '';
             const isKeyConcepts = text.includes('Key Concepts');
             const colorClass = isKeyConcepts ? 'text-yellow-400' : 'text-cyan-400';
-            return <h2 className={`text-3xl md:text-4xl font-semibold ${colorClass} mb-6 mt-10 leading-tight`} {...props}>{children}</h2>;
+            // Generate ID for table of contents
+            const id = text
+              .toLowerCase()
+              .replace(/[^\w\s-]/g, '')
+              .replace(/\s+/g, '-')
+              .replace(/-+/g, '-');
+            return <h2 id={id} className={`text-3xl md:text-4xl font-semibold ${colorClass} mb-6 mt-10 leading-tight scroll-mt-24`} {...props}>{children}</h2>;
           },
           h3({ node, children, ...props }: any) {
             const text = typeof children === 'string' ? children : children?.toString() || '';
@@ -338,10 +393,22 @@ export function BlogMarkdown({ children }: { children: string }) {
             else if (text.includes('Training')) colorClass = 'text-purple-400';
             else if (text.includes('Testing')) colorClass = 'text-red-400';
             else if (text.includes('Overfitting')) colorClass = 'text-yellow-400';
-            return <h3 className={`text-2xl md:text-3xl font-semibold ${colorClass} mb-4 mt-8 leading-tight`} {...props}>{children}</h3>;
+            // Generate ID for table of contents
+            const id = text
+              .toLowerCase()
+              .replace(/[^\w\s-]/g, '')
+              .replace(/\s+/g, '-')
+              .replace(/-+/g, '-');
+            return <h3 id={id} className={`text-2xl md:text-3xl font-semibold ${colorClass} mb-4 mt-8 leading-tight scroll-mt-24`} {...props}>{children}</h3>;
           },
           h4({ node, children, ...props }: any) {
-            return <h4 className="text-xl md:text-2xl font-semibold text-white mb-3 mt-6 leading-tight" {...props}>{children}</h4>;
+            const text = typeof children === 'string' ? children : children?.toString() || '';
+            const id = text
+              .toLowerCase()
+              .replace(/[^\w\s-]/g, '')
+              .replace(/\s+/g, '-')
+              .replace(/-+/g, '-');
+            return <h4 id={id} className="text-xl md:text-2xl font-semibold text-white mb-3 mt-6 leading-tight scroll-mt-24" {...props}>{children}</h4>;
           },
           h5({ node, children, ...props }: any) {
             return <h5 className="text-lg md:text-xl font-semibold text-white mb-3 mt-5 leading-tight" {...props}>{children}</h5>;
@@ -482,7 +549,7 @@ export function BlogMarkdown({ children }: { children: string }) {
             
             // Add colored bullets for Key Concepts section
             const bulletClass = inKeyConcepts ? '[&>li]:list-disc [&>li]:marker:text-cyan-400' : '';
-            return <ul className={`list-disc list-outside text-slate-200 text-lg leading-relaxed mb-6 space-y-2 ml-8 md:ml-12 pl-4 ${bulletClass}`} {...props}>{children}</ul>;
+            return <ul className={`list-disc list-outside text-slate-200 text-lg leading-relaxed mb-6 space-y-3 ml-6 md:ml-8 pl-4 ${bulletClass}`} style={{ listStylePosition: 'outside' }} {...props}>{children}</ul>;
           },
           ol({ node, children, ...props }: any) {
             // Check if list items contain links (common in "Related Tutorials" sections)
@@ -555,7 +622,7 @@ export function BlogMarkdown({ children }: { children: string }) {
             };
             
             const processedChildren = unwrapParagraphs(children);
-            return <li className="mb-2 drop-shadow-sm leading-relaxed" style={{ display: 'list-item', lineHeight: '1.75', listStylePosition: 'outside' }} {...props}>{processedChildren || children}</li>;
+            return <li className="mb-2 drop-shadow-sm leading-relaxed transition-all duration-200 hover:translate-x-1" style={{ display: 'list-item', lineHeight: '1.75', listStylePosition: 'outside', paddingLeft: '0.5rem' }} {...props}>{processedChildren || children}</li>;
           },
 
           // Pre blocks (code blocks without language or with ASCII diagrams)
@@ -787,7 +854,9 @@ export function BlogMarkdown({ children }: { children: string }) {
             const figureId = !isHeader ? `figure-${stableHash(src)}` : ''
             
             // For SVGs, use regular img tag for better compatibility
-            const isSVG = src.toLowerCase().endsWith('.svg')
+            // Strip query parameters before checking file extension
+            const srcWithoutQuery = src.split('?')[0]
+            const isSVG = srcWithoutQuery.toLowerCase().endsWith('.svg')
             
             // Check if this is one of the specific PNG diagrams that should be smaller
             const isSmallDiagram = src.includes('agent-main.png') || 
@@ -822,54 +891,22 @@ export function BlogMarkdown({ children }: { children: string }) {
               padding: '0'
             }
             
+            // For blog diagrams, load them with priority to avoid loading skeleton issues
+            const shouldPriorityLoad = isHeader || (isSVG && src.includes('/blog/'))
+            
             const imageContent = (
               <>
                 {isSVG ? (
-                  <img
-                    key={finalSrc}
+                  <InteractiveSVG
                     src={finalSrc}
                     alt={alt}
-                    style={{ width: '100%', height: 'auto', maxWidth: svgMaxWidth, display: 'block', margin: '0 auto', visibility: 'visible', objectFit: 'contain' }}
-                    loading="eager"
-                    decoding="async"
-                    crossOrigin="anonymous"
-                    onError={(e) => {
-                      console.error('❌ Failed to load SVG:', src);
-                      console.error('Final src used:', finalSrc);
-                      const target = e.target as HTMLImageElement;
-                      // Retry loading once after a short delay
-                      if (!target.dataset.retried) {
-                        target.dataset.retried = 'true';
-                        setTimeout(() => {
-                          if (typeof window !== 'undefined') {
-                            const img = new window.Image();
-                            img.onload = () => {
-                              target.src = finalSrc;
-                              target.style.border = '';
-                              target.style.backgroundColor = '';
-                            };
-                            img.onerror = () => {
-                              target.style.border = '2px solid red';
-                              target.style.backgroundColor = '#ff000020';
-                              target.style.minHeight = '200px';
-                            };
-                            img.src = finalSrc;
-                          } else {
-                            target.style.border = '2px solid red';
-                            target.style.backgroundColor = '#ff000020';
-                            target.style.minHeight = '200px';
-                          }
-                        }, 500);
-                      } else {
-                        target.style.border = '2px solid red';
-                        target.style.backgroundColor = '#ff000020';
-                        target.style.minHeight = '200px';
-                      }
-                    }}
-                    onLoad={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.border = '';
-                      target.style.backgroundColor = '';
+                    maxWidth={svgMaxWidth}
+                    priority={shouldPriorityLoad}
+                    style={{ 
+                      width: '100%', 
+                      height: 'auto', 
+                      display: 'block', 
+                      margin: '0 auto',
                     }}
                   />
                 ) : (

@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet">
+  
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.3"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.3"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:0.3"/>
+    </linearGradient>
+    <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#facc15;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#eab308;stop-opacity:0.3"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 5, 0 10" fill="#06b6d4" opacity="0.9"/>
+    </marker>
+    <marker id="arrowheadPurple" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 5, 0 10" fill="#8b5cf6" opacity="0.9"/>
+    </marker>
+    <marker id="arrowheadGreen" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 5, 0 10" fill="#10b981" opacity="0.9"/>
+    </marker>
+    <marker id="arrowheadYellow" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 5, 0 10" fill="#facc15" opacity="0.9"/>
+    </marker>
+  </defs>
+  
+  <text x="600" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">NeuronDB Background Workers</text>
+  
+  <!-- Central PostgreSQL -->
+  <g transform="translate(500, 200)">
+    <circle cx="100" cy="100" r="80" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="3" filter="url(#glow)"/>
+    <circle cx="100" cy="100" r="75" fill="url(#cyanGrad)"/>
+    <text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">PostgreSQL</text>
+    <text x="100" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">NeuronDB</text>
+  </g>
+  
+  <!-- neuranllm Worker -->
+  <g transform="translate(50, 80)">
+    <rect x="0" y="0" width="200" height="120" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
+    <rect x="5" y="5" width="190" height="110" rx="6" fill="url(#purpleGrad)"/>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">neuranllm</text>
+    <text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Async LLM Inference</text>
+    <text x="100" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Batch Processing</text>
+    <text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Model Management</text>
+  </g>
+  <!-- Arrow from neuranllm to PostgreSQL (right edge of box to circle edge) -->
+  <path d="M 250 140 L 527 267" stroke="#8b5cf6" stroke-width="2" fill="none" marker-end="url(#arrowheadPurple)"/>
+  
+  <!-- neuranq Worker -->
+  <g transform="translate(950, 80)">
+    <rect x="0" y="0" width="200" height="120" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+    <rect x="5" y="5" width="190" height="110" rx="6" fill="url(#cyanGrad)"/>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">neuranq</text>
+    <text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Query Optimization</text>
+    <text x="100" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Index Tuning</text>
+    <text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Performance Analysis</text>
+  </g>
+  <!-- Arrow from neuranq to PostgreSQL (left edge of box to circle edge) -->
+  <path d="M 950 140 L 673 267" stroke="#06b6d4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- neuranmon Worker -->
+  <g transform="translate(50, 400)">
+    <rect x="0" y="0" width="200" height="120" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2" filter="url(#glow)"/>
+    <rect x="5" y="5" width="190" height="110" rx="6" fill="url(#greenGrad)"/>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">neuranmon</text>
+    <text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">System Monitoring</text>
+    <text x="100" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Performance Metrics</text>
+    <text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Alert Generation</text>
+  </g>
+  <!-- Arrow from neuranmon to PostgreSQL (right edge of box to circle edge) -->
+  <path d="M 250 460 L 527 333" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arrowheadGreen)"/>
+  
+  <!-- neurandefrag Worker -->
+  <g transform="translate(950, 400)">
+    <rect x="0" y="0" width="200" height="120" rx="8" fill="url(#boxGrad)" stroke="#facc15" stroke-width="2" filter="url(#glow)"/>
+    <rect x="5" y="5" width="190" height="110" rx="6" fill="url(#yellowGrad)"/>
+    <text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">neurandefrag</text>
+    <text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Index Maintenance</text>
+    <text x="100" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Defragmentation</text>
+    <text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Vacuum Operations</text>
+  </g>
+  <!-- Arrow from neurandefrag to PostgreSQL (left edge of box to circle edge) -->
+  <path d="M 950 460 L 673 333" stroke="#facc15" stroke-width="2" fill="none" marker-end="url(#arrowheadYellow)"/>
+  
+  <!-- Summary -->
+  <g transform="translate(400, 550)">
+    <text x="200" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">All workers run asynchronously, enabling non-blocking operations and automatic maintenance</text>
+  </g>
+  
+</svg>

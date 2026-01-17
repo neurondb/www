@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Memory Types Comparison">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <linearGradient id="shortGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c2d12" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ea580c" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="longGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065f46" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="workingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6b21a8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="40" y="40" width="1120" height="620" rx="28" fill="url(#panel)" stroke="#334155" filter="url(#shadow)"/>
+
+  <text x="600" y="98" fill="#e2e8f0" font-size="24" font-weight="900" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    Memory Types Comparison
+  </text>
+  <text x="600" y="128" fill="#94a3b8" font-size="14" font-weight="600" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    Three distinct memory types that serve different purposes in agentic systems
+  </text>
+
+  <!-- Short-term Memory -->
+  <rect x="80" y="180" width="320" height="400" rx="16" fill="url(#shortGrad)" stroke="#ea580c" stroke-width="2"/>
+  <text x="240" y="220" fill="#e2e8f0" font-size="18" font-weight="900" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Short-term Memory</text>
+  <text x="100" y="260" fill="#cbd5e1" font-size="13" font-weight="700"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Characteristics:</text>
+  <text x="120" y="285" fill="#94a3b8" font-size="12">" Stores recent conversation context</text>
+  <text x="120" y="305" fill="#94a3b8" font-size="12">" Maintains session state</text>
+  <text x="120" y="325" fill="#94a3b8" font-size="12">" Enables multi-turn conversations</text>
+  <text x="120" y="345" fill="#94a3b8" font-size="12">" Provides immediate context</text>
+  <text x="100" y="380" fill="#cbd5e1" font-size="13" font-weight="700">Purpose:</text>
+  <text x="120" y="405" fill="#94a3b8" font-size="12">Enables conversation continuity</text>
+  <text x="120" y="425" fill="#94a3b8" font-size="12">Agents remember recent exchanges</text>
+  <text x="120" y="445" fill="#94a3b8" font-size="12">Maintains context within sessions</text>
+  <text x="120" y="465" fill="#94a3b8" font-size="12">Provides coherent responses</text>
+  <text x="100" y="500" fill="#cbd5e1" font-size="13" font-weight="700">Persistence:</text>
+  <text x="120" y="525" fill="#fca5a5" font-size="12" font-weight="600">Session-scoped</text>
+  <text x="120" y="545" fill="#94a3b8" font-size="12">Cleared when session ends</text>
+
+  <!-- Long-term Memory -->
+  <rect x="440" y="180" width="320" height="400" rx="16" fill="url(#longGrad)" stroke="#10b981" stroke-width="2"/>
+  <text x="600" y="220" fill="#e2e8f0" font-size="18" font-weight="900" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Long-term Memory</text>
+  <text x="460" y="260" fill="#cbd5e1" font-size="13" font-weight="700"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Characteristics:</text>
+  <text x="480" y="285" fill="#94a3b8" font-size="12">" Stores important facts & events</text>
+  <text x="480" y="305" fill="#94a3b8" font-size="12">" Persists across sessions</text>
+  <text x="480" y="325" fill="#94a3b8" font-size="12">" Enables knowledge accumulation</text>
+  <text x="480" y="345" fill="#94a3b8" font-size="12">" Supports learning over time</text>
+  <text x="460" y="380" fill="#cbd5e1" font-size="13" font-weight="700">Purpose:</text>
+  <text x="480" y="405" fill="#94a3b8" font-size="12">Enables knowledge accumulation</text>
+  <text x="480" y="425" fill="#94a3b8" font-size="12">Agents remember important facts</text>
+  <text x="480" y="445" fill="#94a3b8" font-size="12">Build expertise over time</text>
+  <text x="480" y="465" fill="#94a3b8" font-size="12">Avoid repeating mistakes</text>
+  <text x="460" y="500" fill="#cbd5e1" font-size="13" font-weight="700">Persistence:</text>
+  <text x="480" y="525" fill="#6ee7b7" font-size="12" font-weight="600">Permanent</text>
+  <text x="480" y="545" fill="#94a3b8" font-size="12">Stored in vector databases</text>
+
+  <!-- Working Memory -->
+  <rect x="800" y="180" width="320" height="400" rx="16" fill="url(#workingGrad)" stroke="#a855f7" stroke-width="2"/>
+  <text x="960" y="220" fill="#e2e8f0" font-size="18" font-weight="900" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Working Memory</text>
+  <text x="820" y="260" fill="#cbd5e1" font-size="13" font-weight="700"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Characteristics:</text>
+  <text x="840" y="285" fill="#94a3b8" font-size="12">" Stores temporary computation state</text>
+  <text x="840" y="305" fill="#94a3b8" font-size="12">" Holds intermediate results</text>
+  <text x="840" y="325" fill="#94a3b8" font-size="12">" Supports complex reasoning</text>
+  <text x="840" y="345" fill="#94a3b8" font-size="12">" Clears after task completion</text>
+  <text x="820" y="380" fill="#cbd5e1" font-size="13" font-weight="700">Purpose:</text>
+  <text x="840" y="405" fill="#94a3b8" font-size="12">Enables complex reasoning</text>
+  <text x="840" y="425" fill="#94a3b8" font-size="12">Agents hold intermediate results</text>
+  <text x="840" y="445" fill="#94a3b8" font-size="12">Perform multi-step calculations</text>
+  <text x="840" y="465" fill="#94a3b8" font-size="12">Manage temporary state</text>
+  <text x="820" y="500" fill="#cbd5e1" font-size="13" font-weight="700">Persistence:</text>
+  <text x="840" y="525" fill="#c4b5fd" font-size="12" font-weight="600">Temporary</text>
+  <text x="840" y="545" fill="#94a3b8" font-size="12">Cleared after task completion</text>
+</svg>

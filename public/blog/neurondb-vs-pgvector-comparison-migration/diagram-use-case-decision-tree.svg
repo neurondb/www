@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid meet">
+  
+  <ns0:defs>
+    <ns0:linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#1e293b;stop-opacity:1"/>
+      <ns0:stop offset="100%" style="stop-color:#0f172a;stop-opacity:1"/>
+    </ns0:linearGradient>
+    <ns0:linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.4"/>
+      <ns0:stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.3"/>
+    </ns0:linearGradient>
+    <ns0:linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.4"/>
+      <ns0:stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.3"/>
+    </ns0:linearGradient>
+    <ns0:linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#10b981;stop-opacity:0.4"/>
+      <ns0:stop offset="100%" style="stop-color:#059669;stop-opacity:0.3"/>
+    </ns0:linearGradient>
+    <ns0:filter id="glow">
+      <ns0:feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <ns0:feMerge>
+        <ns0:feMergeNode in="coloredBlur"/>
+        <ns0:feMergeNode in="SourceGraphic"/>
+      </ns0:feMerge>
+    </ns0:filter>
+    <ns0:marker id="arrowhead" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <ns0:polygon points="0 0, 10 5, 0 10" fill="#06b6d4" opacity="0.9"/>
+    </ns0:marker>
+    <ns0:marker id="arrowheadPurple" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <ns0:polygon points="0 0, 10 5, 0 10" fill="#8b5cf6" opacity="0.9"/>
+    </ns0:marker>
+  </ns0:defs>
+  
+  <ns0:text x="600" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Use Case Decision Tree</ns0:text>
+  
+  <!-- Start -->
+  <ns0:g transform="translate(500, 80)">
+    <ns0:ellipse cx="100" cy="40" rx="100" ry="40" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="3" filter="url(#glow)"/>
+    <ns0:ellipse cx="100" cy="40" rx="95" ry="35" fill="url(#cyanGrad)"/>
+    <ns0:text x="100" y="45" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Need Vector Search?</ns0:text>
+  </ns0:g>
+  
+  <!-- Decision 1: GPU Available? -->
+  <ns0:g transform="translate(200, 200)">
+    <ns0:rect x="0" y="0" width="200" height="100" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="190" height="90" rx="6" fill="url(#cyanGrad)"/>
+    <ns0:text x="100" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">GPU Available?</ns0:text>
+    <ns0:text x="100" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">NVIDIA, AMD, or</ns0:text>
+    <ns0:text x="100" y="80" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Apple Silicon</ns0:text>
+  </ns0:g>
+  
+  <!-- Decision 2: Need ML/RAG? -->
+  <ns0:g transform="translate(800, 200)">
+    <ns0:rect x="0" y="0" width="200" height="100" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="190" height="90" rx="6" fill="url(#cyanGrad)"/>
+    <ns0:text x="100" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Need ML/RAG?</ns0:text>
+    <ns0:text x="100" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Embedding generation,</ns0:text>
+    <ns0:text x="100" y="80" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">RAG pipelines</ns0:text>
+  </ns0:g>
+  
+  <!-- Decision 3: Large Scale? -->
+  <ns0:g transform="translate(200, 380)">
+    <ns0:rect x="0" y="0" width="200" height="100" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="190" height="90" rx="6" fill="url(#cyanGrad)"/>
+    <ns0:text x="100" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Large Scale?</ns0:text>
+    <ns0:text x="100" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">&gt; 10M vectors</ns0:text>
+    <ns0:text x="100" y="80" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">or &gt; 10K QPS</ns0:text>
+  </ns0:g>
+  
+  <!-- Decision 4: Need Advanced Features? -->
+  <ns0:g transform="translate(800, 380)">
+    <ns0:rect x="0" y="0" width="200" height="100" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="190" height="90" rx="6" fill="url(#cyanGrad)"/>
+    <ns0:text x="100" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Advanced Features?</ns0:text>
+    <ns0:text x="100" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Quantization, hybrid</ns0:text>
+    <ns0:text x="100" y="80" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">search, reranking</ns0:text>
+  </ns0:g>
+  
+  <!-- Results: pgvector -->
+  <ns0:g transform="translate(50, 560)">
+    <ns0:rect x="0" y="0" width="250" height="120" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="3" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="240" height="110" rx="6" fill="url(#cyanGrad)"/>
+    <ns0:text x="125" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Choose pgvector</ns0:text>
+    <ns0:text x="125" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Simple vector search</ns0:text>
+    <ns0:text x="125" y="80" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Minimal dependencies</ns0:text>
+    <ns0:text x="125" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Lightweight solution</ns0:text>
+  </ns0:g>
+  
+  <!-- Results: NeuronDB -->
+  <ns0:g transform="translate(880, 560)">
+    <ns0:rect x="0" y="0" width="250" height="120" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="3" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="240" height="110" rx="6" fill="url(#purpleGrad)"/>
+    <ns0:text x="125" y="35" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Choose NeuronDB</ns0:text>
+    <ns0:text x="125" y="60" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">GPU acceleration</ns0:text>
+    <ns0:text x="125" y="80" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">ML &amp; RAG features</ns0:text>
+    <ns0:text x="125" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">520+ SQL functions</ns0:text>
+  </ns0:g>
+  
+  <!-- Arrows -->
+  <ns0:line x1="600" y1="120" x2="300" y2="200" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <ns0:text x="450" y="160" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle">Yes</ns0:text>
+  
+  <ns0:line x1="600" y1="120" x2="900" y2="200" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <ns0:text x="750" y="160" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle">No</ns0:text>
+  
+  <ns0:line x1="300" y1="300" x2="300" y2="380" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <ns0:line x1="900" y1="300" x2="900" y2="380" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <ns0:line x1="300" y1="480" x2="175" y2="560" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <ns0:text x="200" y="520" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle">No</ns0:text>
+  
+  <ns0:line x1="900" y1="480" x2="1005" y2="560" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowheadPurple)"/>
+  <ns0:text x="980" y="520" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#8b5cf6" text-anchor="middle" dominant-baseline="middle">Yes</ns0:text>
+  
+  <!-- Additional paths -->
+  <ns0:line x1="400" y1="250" x2="175" y2="560" stroke="#06b6d4" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <ns0:line x1="800" y1="250" x2="1005" y2="560" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowheadPurple)"/>
+  <ns0:line x1="400" y1="430" x2="175" y2="560" stroke="#06b6d4" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <ns0:line x1="800" y1="430" x2="1005" y2="560" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowheadPurple)"/>
+  
+  <!-- Summary -->
+  <ns0:g transform="translate(400, 720)">
+    <ns0:rect x="0" y="0" width="400" height="120" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" opacity="0.3"/>
+    <ns0:text x="200" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#06b6d4" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Decision Guidelines</ns0:text>
+    <ns0:text x="200" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">pgvector: Simple, lightweight, basic vector search</ns0:text>
+    <ns0:text x="200" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">NeuronDB: GPU, ML, RAG, large-scale, advanced features</ns0:text>
+    <ns0:text x="200" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle">Both maintain 100% compatibility for easy migration</ns0:text>
+  </ns0:g>
+  
+</ns0:svg>

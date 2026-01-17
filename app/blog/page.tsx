@@ -57,15 +57,22 @@ const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number })
       <Link href={`/blog/${post.slug}`} className="block h-full" aria-label={`Read ${post.title}`}>
         <div className="bg-slate-950 rounded-3xl shadow-lg border border-slate-800 overflow-hidden hover:shadow-2xl hover:border-slate-700 transition-all duration-300 h-full flex flex-col">
           {/* Large Stock Image */}
-          <div className={`relative w-full aspect-[3/2] overflow-hidden flex-shrink-0 border-b border-slate-900 flex items-center justify-center`} style={{ backgroundColor: '#030712' }}>
-            <div className="absolute inset-0 bg-slate-950/80 z-0"></div>
+          <div className={`relative w-full aspect-[3/2] overflow-hidden flex-shrink-0 border-b border-slate-900 flex items-center justify-center`} style={{ backgroundColor: '#000000' }}>
+            <div className="absolute inset-0 bg-black/80 z-0"></div>
             {post.headerImage ? (
               <Image
                 src={post.headerImage}
                 alt={`${post.title} header`}
                 fill
-                className="object-contain opacity-100 scale-90 brightness-150 contrast-125 z-10"
-                style={{ filter: 'brightness(1.5) contrast(1.25) drop-shadow(0 0 10px rgba(255,255,255,0.1))' }}
+                className="object-contain opacity-100 scale-90 z-10"
+                style={{ 
+                  filter: 'brightness(2.5) contrast(2.0) drop-shadow(0 0 2px rgba(255,255,255,0.5)) drop-shadow(0 0 4px rgba(255,255,255,0.3))',
+                  imageRendering: 'crisp-edges',
+                  ...({
+                    WebkitImageRendering: '-webkit-optimize-contrast',
+                    msInterpolationMode: 'nearest-neighbor',
+                  } as React.CSSProperties),
+                }}
                 unoptimized
                 priority
               />

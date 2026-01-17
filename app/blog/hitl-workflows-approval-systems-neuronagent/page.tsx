@@ -684,7 +684,7 @@ Complete guide to building autonomous AI agents with NeuronAgent.
 
 Learn how to implement memory systems for AI agents.
 
-[NeuronDB vs pgvector: Feature Comparison and Migration Guide](/blog/neurondb-vs-pgvector-comparison-migration)
+[NeuronDB vs pgvector: Feature Comparison and Migration Guide](/blog/neurondb-vs-pgvector)
 
 Compare NeuronDB and pgvector features and migration paths.
 

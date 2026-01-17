@@ -611,7 +611,7 @@ Use Claude Desktop with NeuronDB when you need AI assistance for database querie
 
 Learn about MCP protocol and how it enables AI assistants to access external tools.
 
-[NeuronDB vs pgvector: Feature Comparison and Migration Guide](/blog/neurondb-vs-pgvector-comparison-migration)
+[NeuronDB vs pgvector: Feature Comparison and Migration Guide](/blog/neurondb-vs-pgvector)
 
 Compare NeuronDB and pgvector features and learn migration strategies.
 

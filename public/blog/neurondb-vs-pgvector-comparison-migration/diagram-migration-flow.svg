@@ -1,0 +1,199 @@
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid meet">
+  
+  <ns0:defs>
+    <ns0:linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#1e293b;stop-opacity:1"/>
+      <ns0:stop offset="100%" style="stop-color:#0f172a;stop-opacity:1"/>
+    </ns0:linearGradient>
+    <ns0:linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.4"/>
+      <ns0:stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.3"/>
+    </ns0:linearGradient>
+    <ns0:linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#10b981;stop-opacity:0.4"/>
+      <ns0:stop offset="100%" style="stop-color:#059669;stop-opacity:0.3"/>
+    </ns0:linearGradient>
+    <ns0:linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.4"/>
+      <ns0:stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.3"/>
+    </ns0:linearGradient>
+    <ns0:filter id="glow">
+      <ns0:feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <ns0:feMerge>
+        <ns0:feMergeNode in="coloredBlur"/>
+        <ns0:feMergeNode in="SourceGraphic"/>
+      </ns0:feMerge>
+    </ns0:filter>
+    <ns0:marker id="arrowhead" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <ns0:polygon points="0 0, 10 5, 0 10" fill="#06b6d4" opacity="0.9"/>
+    </ns0:marker>
+    <ns0:marker id="arrowheadPurple" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <ns0:polygon points="0 0, 10 5, 0 10" fill="#8b5cf6" opacity="0.9"/>
+    </ns0:marker>
+    <ns0:marker id="arrowheadGreen" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <ns0:polygon points="0 0, 10 5, 0 10" fill="#10b981" opacity="0.9"/>
+    </ns0:marker>
+    <ns0:linearGradient id="yellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#facc15;stop-opacity:0.4"/>
+      <ns0:stop offset="100%" style="stop-color:#eab308;stop-opacity:0.3"/>
+    </ns0:linearGradient>
+  </ns0:defs>
+  
+  <ns0:text x="600" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Migration Flow: pgvector to NeuronDB</ns0:text>
+  
+  <!-- Step 1: Pre-Migration -->
+  <!-- Box bounds: (50, 100) to (250, 240), center y: 170 -->
+  <ns0:g transform="translate(50, 100)">
+    <ns0:rect x="0" y="0" width="200" height="140" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="190" height="130" rx="6" fill="url(#cyanGrad)"/>
+    <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Step 1: Pre-Migration</ns0:text>
+    <ns0:text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Backup database</ns0:text>
+    <ns0:text x="100" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Document config</ns0:text>
+    <ns0:text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Verify PG version</ns0:text>
+    <ns0:text x="100" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Record baselines</ns0:text>
+  </ns0:g>
+  
+  <!-- Arrow 1: Step 1 -> Step 2 (horizontal, right edge to left edge) -->
+  <!-- Start: (250, 170), End: (300, 170), with 12px clearance -->
+  <ns0:path d="M 262 170 H 288" stroke="#06b6d4" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 2: Drop pgvector -->
+  <!-- Box bounds: (300, 100) to (500, 240), center y: 170 -->
+  <ns0:g transform="translate(300, 100)">
+    <ns0:rect x="0" y="0" width="200" height="140" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="2" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="190" height="130" rx="6" fill="url(#cyanGrad)"/>
+    <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Step 2: Drop pgvector</ns0:text>
+    <ns0:text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">DROP EXTENSION</ns0:text>
+    <ns0:text x="100" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">vector CASCADE</ns0:text>
+    <ns0:text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Data remains intact</ns0:text>
+  </ns0:g>
+  
+  <!-- Arrow 2: Step 2 -> Step 3 (horizontal, right edge to left edge) -->
+  <!-- Start: (500, 170), End: (550, 170), with 12px clearance -->
+  <ns0:path d="M 512 170 H 538" stroke="#06b6d4" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 3: Install NeuronDB -->
+  <!-- Box bounds: (550, 100) to (750, 240), center y: 170 -->
+  <ns0:g transform="translate(550, 100)">
+    <ns0:rect x="0" y="0" width="200" height="140" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="190" height="130" rx="6" fill="url(#purpleGrad)"/>
+    <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Step 3: Install NeuronDB</ns0:text>
+    <ns0:text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">CREATE EXTENSION</ns0:text>
+    <ns0:text x="100" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">neurondb</ns0:text>
+    <ns0:text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">100% compatible</ns0:text>
+  </ns0:g>
+  
+  <!-- Arrow 3: Step 3 -> Step 4 (horizontal, right edge to left edge) -->
+  <!-- Start: (750, 170), End: (800, 170), with 12px clearance -->
+  <ns0:path d="M 762 170 H 788" stroke="#8b5cf6" stroke-width="3" fill="none" marker-end="url(#arrowheadPurple)"/>
+  
+  <!-- Step 4: Verify -->
+  <!-- Box bounds: (800, 100) to (1000, 240), center y: 170 -->
+  <ns0:g transform="translate(800, 100)">
+    <ns0:rect x="0" y="0" width="200" height="140" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="190" height="130" rx="6" fill="url(#greenGrad)"/>
+    <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Step 4: Verify</ns0:text>
+    <ns0:text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Data integrity</ns0:text>
+    <ns0:text x="100" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Test operations</ns0:text>
+    <ns0:text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Compatibility checks</ns0:text>
+  </ns0:g>
+  
+  <!-- Step 5: Recreate Indexes -->
+  <!-- Box bounds: (50, 300) to (250, 440), center y: 370 -->
+  <ns0:g transform="translate(50, 300)">
+    <ns0:rect x="0" y="0" width="200" height="140" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="190" height="130" rx="6" fill="url(#purpleGrad)"/>
+    <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Step 5: Recreate Indexes</ns0:text>
+    <ns0:text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">DROP old indexes</ns0:text>
+    <ns0:text x="100" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">CREATE INDEX USING</ns0:text>
+    <ns0:text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">hnsw or ivf</ns0:text>
+    <ns0:text x="100" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">(Optional but recommended)</ns0:text>
+  </ns0:g>
+  
+  <!-- Step 6: Update Parameters -->
+  <!-- Box bounds: (300, 300) to (500, 440), center y: 370 -->
+  <ns0:g transform="translate(300, 300)">
+    <ns0:rect x="0" y="0" width="200" height="140" rx="8" fill="url(#boxGrad)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="190" height="130" rx="6" fill="url(#purpleGrad)"/>
+    <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Step 6: Update Parameters</ns0:text>
+    <ns0:text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">SET neurondb.hnsw_ef_search</ns0:text>
+    <ns0:text x="100" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">SET neurondb.ivf_probes</ns0:text>
+    <ns0:text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Use GUCs instead of</ns0:text>
+    <ns0:text x="100" y="115" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">session variables</ns0:text>
+  </ns0:g>
+  
+  <!-- Step 7: Test Compatibility -->
+  <!-- Box bounds: (550, 300) to (750, 440), center y: 370 -->
+  <ns0:g transform="translate(550, 300)">
+    <ns0:rect x="0" y="0" width="200" height="140" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="190" height="130" rx="6" fill="url(#greenGrad)"/>
+    <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Step 7: Test Compatibility</ns0:text>
+    <ns0:text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Test operators</ns0:text>
+    <ns0:text x="100" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Test functions</ns0:text>
+    <ns0:text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Test aggregates</ns0:text>
+  </ns0:g>
+  
+  <!-- Step 8: Enable Features -->
+  <!-- Box bounds: (800, 300) to (1000, 440), center y: 370 -->
+  <ns0:g transform="translate(800, 300)">
+    <ns0:rect x="0" y="0" width="200" height="140" rx="8" fill="url(#boxGrad)" stroke="#facc15" stroke-width="2" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="190" height="130" rx="6" fill="url(#yellowGrad)"/>
+    <ns0:text x="100" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Step 8: Enable Features</ns0:text>
+    <ns0:text x="100" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">GPU acceleration</ns0:text>
+    <ns0:text x="100" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">(if available)</ns0:text>
+    <ns0:text x="100" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Verify GPU status</ns0:text>
+  </ns0:g>
+  
+  <!-- Vertical arrows: Step 1-4 -> Step 5-8 (bottom edge to top edge) -->
+  <!-- Step 1 -> Step 5: center x: 150, bottom: 240, top: 300, with 12px clearance -->
+  <ns0:path d="M 150 252 V 288" stroke="#06b6d4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 2 -> Step 6: center x: 400, bottom: 240, top: 300, with 12px clearance -->
+  <ns0:path d="M 400 252 V 288" stroke="#06b6d4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 3 -> Step 7: center x: 650, bottom: 240, top: 300, with 12px clearance -->
+  <ns0:path d="M 650 252 V 288" stroke="#8b5cf6" stroke-width="2" fill="none" marker-end="url(#arrowheadPurple)"/>
+  
+  <!-- Step 4 -> Step 8: center x: 900, bottom: 240, top: 300, with 12px clearance -->
+  <ns0:path d="M 900 252 V 288" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arrowheadGreen)"/>
+  
+  <!-- Success -->
+  <!-- Box bounds: (400, 500) to (800, 620), center y: 560, center x: 600 -->
+  <ns0:g transform="translate(400, 500)">
+    <ns0:rect x="0" y="0" width="400" height="120" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="3" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="390" height="110" rx="6" fill="url(#greenGrad)"/>
+    <ns0:text x="200" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round"> Migration Complete</ns0:text>
+    <ns0:text x="200" y="70" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">All existing queries work without modification</ns0:text>
+    <ns0:text x="200" y="95" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Access to 520+ SQL functions and advanced features</ns0:text>
+  </ns0:g>
+  
+  <!-- Arrows from Step 5-8 to Success box (bottom edge to top edge) -->
+  <!-- Step 5 -> Success: (150, 440) to (450, 500), orthogonal route with 12px clearance -->
+  <ns0:path d="M 150 452 V 488 H 450" stroke="#06b6d4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 6 -> Success: (400, 440) to (450, 500), orthogonal route with 12px clearance -->
+  <ns0:path d="M 400 452 V 488 H 450" stroke="#06b6d4" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 7 -> Success: (650, 440) to (600, 500), orthogonal route with 12px clearance -->
+  <ns0:path d="M 650 452 V 488 H 600" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arrowheadGreen)"/>
+  
+  <!-- Step 8 -> Success: (900, 440) to (700, 500), orthogonal route with 12px clearance -->
+  <ns0:path d="M 900 452 V 488 H 700" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arrowheadGreen)"/>
+  
+  <!-- Rollback option -->
+  <!-- Box bounds: (820, 500) to (1100, 600), center y: 550, center x: 960 -->
+  <ns0:g transform="translate(820, 500)">
+    <ns0:rect x="0" y="0" width="280" height="100" rx="8" fill="url(#boxGrad)" stroke="#64748b" stroke-width="2" opacity="0.5"/>
+    <ns0:rect x="5" y="5" width="270" height="90" rx="6" fill="url(#boxGrad)" opacity="0.3"/>
+    <ns0:text x="140" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Rollback Available</ns0:text>
+    <ns0:text x="140" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">If issues occur, drop NeuronDB</ns0:text>
+    <ns0:text x="140" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">and reinstall pgvector</ns0:text>
+  </ns0:g>
+  
+  <!-- Arrow from Success to Rollback (right edge to left edge) -->
+  <!-- Success box right edge center: (800, 560), Rollback box left edge center: (820, 550) -->
+  <!-- Orthogonal route: vertical down from success, then horizontal right to rollback -->
+  <ns0:path d="M 812 560 V 550 H 808" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)" opacity="0.6"/>
+  
+</ns0:svg>

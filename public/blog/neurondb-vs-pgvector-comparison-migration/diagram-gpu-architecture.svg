@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid meet">
+  
+  <ns0:defs>
+    <ns0:linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#1e293b;stop-opacity:1"/>
+      <ns0:stop offset="100%" style="stop-color:#0f172a;stop-opacity:1"/>
+    </ns0:linearGradient>
+    <ns0:linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#10b981;stop-opacity:0.4"/>
+      <ns0:stop offset="100%" style="stop-color:#059669;stop-opacity:0.3"/>
+    </ns0:linearGradient>
+    <ns0:linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.4"/>
+      <ns0:stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.3"/>
+    </ns0:linearGradient>
+    <ns0:linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <ns0:stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.4"/>
+      <ns0:stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.3"/>
+    </ns0:linearGradient>
+    <ns0:filter id="glow">
+      <ns0:feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <ns0:feMerge>
+        <ns0:feMergeNode in="coloredBlur"/>
+        <ns0:feMergeNode in="SourceGraphic"/>
+      </ns0:feMerge>
+    </ns0:filter>
+    <ns0:marker id="arrowhead" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <ns0:polygon points="0 0, 10 5, 0 10" fill="#10b981" opacity="0.9"/>
+    </ns0:marker>
+  </ns0:defs>
+  
+  <ns0:text x="600" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="bold" fill="#facc15" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">GPU Acceleration Architecture</ns0:text>
+  
+  <!-- PostgreSQL with NeuronDB -->
+  <ns0:g transform="translate(100, 100)">
+    <ns0:rect x="0" y="0" width="300" height="200" rx="8" fill="url(#boxGrad)" stroke="#06b6d4" stroke-width="3" filter="url(#glow)"/>
+    <ns0:rect x="5" y="5" width="290" height="190" rx="6" fill="url(#cyanGrad)"/>
+    <ns0:text x="150" y="40" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">PostgreSQL + NeuronDB</ns0:text>
+    <ns0:text x="150" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Query Processing</ns0:text>
+    <ns0:text x="150" y="100" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Vector Operations</ns0:text>
+    <ns0:text x="150" y="125" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Distance Calculations</ns0:text>
+    <ns0:text x="150" y="150" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Batch Processing</ns0:text>
+    <ns0:text x="150" y="175" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Automatic GPU Detection &amp; Fallback</ns0:text>
+  </ns0:g>
+  
+  <!-- GPU Backends -->
+  <ns0:g transform="translate(600, 80)">
+    <ns0:text x="200" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">GPU Backends</ns0:text>
+    
+    <!-- CUDA -->
+    <ns0:g transform="translate(0, 40)">
+      <ns0:rect x="0" y="0" width="180" height="100" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2" filter="url(#glow)"/>
+      <ns0:rect x="5" y="5" width="170" height="90" rx="6" fill="url(#greenGrad)"/>
+      <ns0:text x="85" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">CUDA</ns0:text>
+      <ns0:text x="85" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">NVIDIA GPUs</ns0:text>
+      <ns0:text x="85" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">CUDA 11.0+</ns0:text>
+      <ns0:text x="85" y="90" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Multi-GPU support</ns0:text>
+    </ns0:g>
+    
+    <!-- ROCm -->
+    <ns0:g transform="translate(220, 40)">
+      <ns0:rect x="0" y="0" width="180" height="100" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2" filter="url(#glow)"/>
+      <ns0:rect x="5" y="5" width="170" height="90" rx="6" fill="url(#greenGrad)"/>
+      <ns0:text x="85" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">ROCm</ns0:text>
+      <ns0:text x="85" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">AMD GPUs</ns0:text>
+      <ns0:text x="85" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">ROCm 5.0+</ns0:text>
+      <ns0:text x="85" y="90" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Multi-GPU support</ns0:text>
+    </ns0:g>
+    
+    <!-- Metal -->
+    <ns0:g transform="translate(0, 160)">
+      <ns0:rect x="0" y="0" width="180" height="100" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2" filter="url(#glow)"/>
+      <ns0:rect x="5" y="5" width="170" height="90" rx="6" fill="url(#greenGrad)"/>
+      <ns0:text x="85" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Metal</ns0:text>
+      <ns0:text x="85" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Apple Silicon</ns0:text>
+      <ns0:text x="85" y="75" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">M1/M2/M3</ns0:text>
+      <ns0:text x="85" y="90" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Unified memory</ns0:text>
+    </ns0:g>
+  </ns0:g>
+  
+  <!-- Performance Improvements -->
+  <ns0:g transform="translate(50, 350)">
+    <ns0:text x="550" y="0" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Performance Improvements</ns0:text>
+    
+    <ns0:g transform="translate(0, 40)">
+      <ns0:rect x="0" y="0" width="250" height="80" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2" filter="url(#glow)"/>
+      <ns0:rect x="5" y="5" width="240" height="70" rx="6" fill="url(#greenGrad)"/>
+      <ns0:text x="125" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Query Latency</ns0:text>
+      <ns0:text x="125" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">2-3x reduction</ns0:text>
+    </ns0:g>
+    
+    <ns0:g transform="translate(300, 40)">
+      <ns0:rect x="0" y="0" width="250" height="80" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2" filter="url(#glow)"/>
+      <ns0:rect x="5" y="5" width="240" height="70" rx="6" fill="url(#greenGrad)"/>
+      <ns0:text x="125" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Batch Operations</ns0:text>
+      <ns0:text x="125" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">5-10x speedup</ns0:text>
+    </ns0:g>
+    
+    <ns0:g transform="translate(600, 40)">
+      <ns0:rect x="0" y="0" width="250" height="80" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2" filter="url(#glow)"/>
+      <ns0:rect x="5" y="5" width="240" height="70" rx="6" fill="url(#greenGrad)"/>
+      <ns0:text x="125" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">Throughput</ns0:text>
+      <ns0:text x="125" y="55" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">10-15x increase</ns0:text>
+    </ns0:g>
+  </ns0:g>
+  
+  <!-- Connection arrows -->
+  <ns0:line x1="400" y1="200" x2="600" y2="130" stroke="#10b981" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <ns0:line x1="400" y1="200" x2="600" y2="180" stroke="#10b981" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <ns0:line x1="400" y1="200" x2="600" y2="300" stroke="#10b981" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Summary -->
+  <ns0:g transform="translate(50, 500)">
+    <ns0:rect x="0" y="0" width="1100" height="100" rx="8" fill="url(#boxGrad)" stroke="#10b981" stroke-width="2" opacity="0.3"/>
+    <ns0:text x="550" y="30" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="bold" fill="#10b981" text-anchor="middle" dominant-baseline="middle" stroke="#0f172a" stroke-width="1" paint-order="stroke fill" stroke-linejoin="round">GPU Acceleration Benefits</ns0:text>
+    <ns0:text x="275" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">Automatic GPU detection and CPU fallback</ns0:text>
+    <ns0:text x="550" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">Zero-copy memory transfers</ns0:text>
+    <ns0:text x="825" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle" dominant-baseline="middle">Multi-GPU support (up to 8 GPUs)</ns0:text>
+    <ns0:text x="550" y="90" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle" dominant-baseline="middle">GPU memory pools and efficient resource sharing</ns0:text>
+  </ns0:g>
+  
+</ns0:svg>

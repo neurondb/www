@@ -235,7 +235,7 @@ export const allBlogPosts: BlogPost[] = [
     tags: ['ClaudeDesktop', 'NeuronMCP', 'MCPServer', 'ClaudeIntegration', 'NeuronDB', 'ModelContextProtocol', 'PostgreSQL', 'VectorSearch', 'AIAssistants']
   },
   {
-    slug: 'neurondb-vs-pgvector-comparison-migration',
+    slug: 'neurondb-vs-pgvector',
     title: 'NeuronDB vs pgvector: Feature Comparison and Migration Guide',
     excerpt: 'Complete comparison of NeuronDB and pgvector features, performance benchmarks, and step-by-step migration guide. Learn when to use each solution and how to migrate from pgvector to NeuronDB.',
     content: 'PostgreSQL users have two main options for vector search: pgvector and NeuronDB. Both extensions add vector capabilities to PostgreSQL, but they differ significantly in features, performance, and use cases. This guide compares NeuronDB and pgvector, provides performance benchmarks, and includes a complete migration guide.',
@@ -246,7 +246,7 @@ export const allBlogPosts: BlogPost[] = [
     category: 'Technical',
     featured: false,
     icon: 'neurondb',
-    headerImage: '/blog/neurondb-vs-pgvector-comparison-migration/header.svg?v=1',
+    headerImage: '/blog/neurondb-vs-pgvector/header.svg?v=1',
     views: 0,
     likes: 0,
     comments: 0,

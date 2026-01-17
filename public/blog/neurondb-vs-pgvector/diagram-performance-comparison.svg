@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="900" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgPerf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020617;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="pgvectorBar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0.8"/>
+    </linearGradient>
+    <linearGradient id="neurondbBar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.9"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="900" fill="url(#bgPerf)"/>
+  <rect x="40" y="40" width="1120" height="820" rx="8" fill="#0f172a" opacity="0.8" stroke="#1e293b" stroke-width="1"/>
+  
+  <!-- Title -->
+  <text x="600" y="80" font-family="Arial, sans-serif" font-size="32" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Performance Comparison</text>
+  <text x="600" y="110" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">1M vectors, 384 dimensions, HNSW index, top-10 queries</text>
+  
+  <!-- Query Performance Section -->
+  <text x="80" y="160" font-family="Arial, sans-serif" font-size="22" fill="#60a5fa" font-weight="bold">Query Performance</text>
+  
+  <!-- Average Query Time -->
+  <text x="100" y="200" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Average Query Time:</text>
+  <rect x="100" y="210" width="220" height="50" rx="4" fill="url(#pgvectorBar)"/>
+  <text x="210" y="240" font-family="Arial, sans-serif" font-size="16" fill="#dbeafe" text-anchor="middle" font-weight="bold">12.5ms</text>
+  <text x="210" y="275" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">pgvector</text>
+  
+  <rect x="380" y="210" width="145" height="50" rx="4" fill="url(#neurondbBar)"/>
+  <text x="452" y="240" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" text-anchor="middle" font-weight="bold">8.2ms</text>
+  <text x="452" y="275" font-family="Arial, sans-serif" font-size="12" fill="#818cf8" text-anchor="middle">NeuronDB</text>
+  <text x="580" y="235" font-family="Arial, sans-serif" font-size="14" fill="#10b981" font-weight="bold">34% faster</text>
+  
+  <!-- P95 Query Time -->
+  <text x="100" y="310" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">P95 Query Time:</text>
+  <rect x="100" y="320" width="260" height="50" rx="4" fill="url(#pgvectorBar)"/>
+  <text x="230" y="350" font-family="Arial, sans-serif" font-size="16" fill="#dbeafe" text-anchor="middle" font-weight="bold">18.3ms</text>
+  <text x="230" y="385" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">pgvector</text>
+  
+  <rect x="420" y="320" width="170" height="50" rx="4" fill="url(#neurondbBar)"/>
+  <text x="505" y="350" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" text-anchor="middle" font-weight="bold">11.7ms</text>
+  <text x="505" y="385" font-family="Arial, sans-serif" font-size="12" fill="#818cf8" text-anchor="middle">NeuronDB</text>
+  <text x="640" y="345" font-family="Arial, sans-serif" font-size="14" fill="#10b981" font-weight="bold">36% faster</text>
+  
+  <!-- Throughput -->
+  <text x="100" y="420" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Throughput (QPS):</text>
+  <rect x="100" y="430" width="160" height="50" rx="4" fill="url(#pgvectorBar)"/>
+  <text x="180" y="460" font-family="Arial, sans-serif" font-size="16" fill="#dbeafe" text-anchor="middle" font-weight="bold">80 QPS</text>
+  <text x="180" y="495" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">pgvector</text>
+  
+  <rect x="320" y="430" width="244" height="50" rx="4" fill="url(#neurondbBar)"/>
+  <text x="442" y="460" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" text-anchor="middle" font-weight="bold">122 QPS</text>
+  <text x="442" y="495" font-family="Arial, sans-serif" font-size="12" fill="#818cf8" text-anchor="middle">NeuronDB</text>
+  <text x="610" y="455" font-family="Arial, sans-serif" font-size="14" fill="#10b981" font-weight="bold">53% higher</text>
+  
+  <!-- Index Build Performance Section -->
+  <text x="80" y="540" font-family="Arial, sans-serif" font-size="22" fill="#60a5fa" font-weight="bold">Index Build Performance</text>
+  
+  <!-- Index Build Time -->
+  <text x="100" y="580" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Index Build Time:</text>
+  <rect x="100" y="590" width="245" height="50" rx="4" fill="url(#pgvectorBar)"/>
+  <text x="222" y="620" font-family="Arial, sans-serif" font-size="16" fill="#dbeafe" text-anchor="middle" font-weight="bold">245s</text>
+  <text x="222" y="655" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">pgvector</text>
+  
+  <rect x="405" y="590" width="189" height="50" rx="4" fill="url(#neurondbBar)"/>
+  <text x="499" y="620" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" text-anchor="middle" font-weight="bold">189s</text>
+  <text x="499" y="655" font-family="Arial, sans-serif" font-size="12" fill="#818cf8" text-anchor="middle">NeuronDB</text>
+  <text x="640" y="615" font-family="Arial, sans-serif" font-size="14" fill="#10b981" font-weight="bold">23% faster</text>
+  
+  <!-- Index Size -->
+  <text x="100" y="690" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Index Size:</text>
+  <rect x="100" y="700" width="210" height="50" rx="4" fill="url(#pgvectorBar)"/>
+  <text x="205" y="730" font-family="Arial, sans-serif" font-size="16" fill="#dbeafe" text-anchor="middle" font-weight="bold">2.1 GB</text>
+  <text x="205" y="765" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">pgvector</text>
+  
+  <rect x="370" y="700" width="180" height="50" rx="4" fill="url(#neurondbBar)"/>
+  <text x="460" y="730" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" text-anchor="middle" font-weight="bold">1.8 GB</text>
+  <text x="460" y="765" font-family="Arial, sans-serif" font-size="12" fill="#818cf8" text-anchor="middle">NeuronDB</text>
+  <text x="590" y="725" font-family="Arial, sans-serif" font-size="14" fill="#10b981" font-weight="bold">14% smaller</text>
+  
+  <!-- GPU Acceleration Section -->
+  <text x="700" y="160" font-family="Arial, sans-serif" font-size="22" fill="#60a5fa" font-weight="bold">GPU Acceleration</text>
+  <text x="700" y="185" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">NeuronDB Only</text>
+  
+  <!-- GPU Speedup bars -->
+  <text x="720" y="230" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Embedding Generation:</text>
+  <rect x="720" y="240" width="400" height="30" rx="4" fill="#1e293b" stroke="#334155" opacity="0.6"/>
+  <rect x="720" y="240" width="30" height="30" rx="4" fill="#10b981"/>
+  <text x="1140" y="258" font-family="Arial, sans-serif" font-size="14" fill="#10b981" font-weight="bold">13x faster</text>
+  
+  <text x="720" y="300" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Batch Similarity Search:</text>
+  <rect x="720" y="310" width="400" height="30" rx="4" fill="#1e293b" stroke="#334155"/>
+  <rect x="720" y="310" width="30" height="30" rx="4" fill="#10b981"/>
+  <text x="1140" y="328" font-family="Arial, sans-serif" font-size="14" fill="#10b981" font-weight="bold">12x faster</text>
+  
+  <text x="720" y="370" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">Index Build (10M vectors):</text>
+  <rect x="720" y="380" width="400" height="30" rx="4" fill="#1e293b" stroke="#334155"/>
+  <rect x="720" y="380" width="30" height="30" rx="4" fill="#10b981"/>
+  <text x="1140" y="398" font-family="Arial, sans-serif" font-size="14" fill="#10b981" font-weight="bold">12x faster</text>
+  
+  <!-- Legend -->
+  <rect x="720" y="450" width="20" height="20" rx="2" fill="url(#pgvectorBar)"/>
+  <text x="750" y="465" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">pgvector</text>
+  
+  <rect x="850" y="450" width="20" height="20" rx="2" fill="url(#neurondbBar)"/>
+  <text x="880" y="465" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">NeuronDB</text>
+</svg>

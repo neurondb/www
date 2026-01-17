@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="ML Algorithms in NeuronDB">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <linearGradient id="clusteringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="classificationGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="regressionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="dimRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="metricsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#db2777" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="40" y="40" width="1120" height="820" rx="28" fill="url(#panel)" stroke="#334155" filter="url(#shadow)"/>
+
+  <text x="600" y="98" fill="#e2e8f0" font-size="28" font-weight="900" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    52+ Machine Learning Algorithms
+  </text>
+  <text x="600" y="128" fill="#94a3b8" font-size="14" font-weight="600" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    Comprehensive ML capabilities available in NeuronDB (pgvector: 0 algorithms)
+  </text>
+
+  <!-- Clustering -->
+  <g transform="translate(80, 180)">
+    <rect x="0" y="0" width="500" height="280" rx="16" fill="url(#clusteringGrad)" stroke="#3b82f6" stroke-width="2"/>
+    <text x="250" y="40" fill="#e2e8f0" font-size="20" font-weight="700" text-anchor="middle"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Clustering</text>
+    <text x="250" y="65" fill="#94a3b8" font-size="12" text-anchor="middle"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Group similar vectors into clusters</text>
+    
+    <g transform="translate(40, 90)">
+      <rect x="0" y="0" width="200" height="160" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+      <text x="100" y="25" fill="#60a5fa" font-size="14" font-weight="600" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">K-Means</text>
+      <text x="100" y="45" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Partition-based</text>
+      <text x="100" y="60" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Centroid-based</text>
+      <text x="100" y="80" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Mini-batch variant</text>
+      <text x="100" y="100" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Fast convergence</text>
+      <text x="100" y="120" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Scalable</text>
+      <text x="100" y="140" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">GPU accelerated</text>
+    </g>
+    
+    <g transform="translate(260, 90)">
+      <rect x="0" y="0" width="200" height="160" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+      <text x="100" y="25" fill="#60a5fa" font-size="14" font-weight="600" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">DBSCAN</text>
+      <text x="100" y="45" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Density-based</text>
+      <text x="100" y="60" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Noise detection</text>
+      <text x="100" y="80" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Arbitrary shapes</text>
+      <text x="100" y="100" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">No cluster count</text>
+      <text x="100" y="120" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Outlier handling</text>
+      <text x="100" y="140" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Vector optimized</text>
+    </g>
+    
+    <g transform="translate(40, 260)">
+      <text x="0" y="0" fill="#94a3b8" font-size="12" font-weight="600"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Also includes:</text>
+      <text x="0" y="20" fill="#94a3b8" font-size="11"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">" Gaussian Mixture Model " Hierarchical Clustering</text>
+    </g>
+  </g>
+
+  <!-- Classification -->
+  <g transform="translate(620, 180)">
+    <rect x="0" y="0" width="500" height="280" rx="16" fill="url(#classificationGrad)" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="250" y="40" fill="#e2e8f0" font-size="20" font-weight="700" text-anchor="middle"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Classification</text>
+    <text x="250" y="65" fill="#94a3b8" font-size="12" text-anchor="middle"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Predict categorical labels</text>
+    
+    <g transform="translate(40, 90)">
+      <rect x="0" y="0" width="200" height="160" rx="8" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+      <text x="100" y="25" fill="#a78bfa" font-size="14" font-weight="600" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Random Forest</text>
+      <text x="100" y="45" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Ensemble method</text>
+      <text x="100" y="60" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Decision trees</text>
+      <text x="100" y="80" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">High accuracy</text>
+      <text x="100" y="100" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Feature importance</text>
+      <text x="100" y="120" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Overfitting resistant</text>
+      <text x="100" y="140" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Multi-class support</text>
+    </g>
+    
+    <g transform="translate(260, 90)">
+      <rect x="0" y="0" width="200" height="160" rx="8" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+      <text x="100" y="25" fill="#a78bfa" font-size="14" font-weight="600" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">SVM</text>
+      <text x="100" y="45" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Support Vector Machine</text>
+      <text x="100" y="60" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Kernel methods</text>
+      <text x="100" y="80" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Linear & RBF</text>
+      <text x="100" y="100" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Margin maximization</text>
+      <text x="100" y="120" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">High-dimensional</text>
+      <text x="100" y="140" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Vector optimized</text>
+    </g>
+    
+    <g transform="translate(40, 260)">
+      <text x="0" y="0" fill="#94a3b8" font-size="12" font-weight="600"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Also includes:</text>
+      <text x="0" y="20" fill="#94a3b8" font-size="11"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">" Logistic Regression " Naive Bayes " Neural Networks</text>
+    </g>
+  </g>
+
+  <!-- Regression -->
+  <g transform="translate(80, 500)">
+    <rect x="0" y="0" width="500" height="280" rx="16" fill="url(#regressionGrad)" stroke="#10b981" stroke-width="2"/>
+    <text x="250" y="40" fill="#e2e8f0" font-size="20" font-weight="700" text-anchor="middle"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Regression</text>
+    <text x="250" y="65" fill="#94a3b8" font-size="12" text-anchor="middle"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Predict continuous values</text>
+    
+    <g transform="translate(40, 90)">
+      <rect x="0" y="0" width="200" height="160" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1"/>
+      <text x="100" y="25" fill="#34d399" font-size="14" font-weight="600" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Linear Regression</text>
+      <text x="100" y="45" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">OLS method</text>
+      <text x="100" y="60" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Ridge (L2)</text>
+      <text x="100" y="80" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Lasso (L1)</text>
+      <text x="100" y="100" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Regularization</text>
+      <text x="100" y="120" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Fast training</text>
+      <text x="100" y="140" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Interpretable</text>
+    </g>
+    
+    <g transform="translate(260, 90)">
+      <rect x="0" y="0" width="200" height="160" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1"/>
+      <text x="100" y="25" fill="#34d399" font-size="14" font-weight="600" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Neural Networks</text>
+      <text x="100" y="45" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Deep learning</text>
+      <text x="100" y="60" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Multi-layer</text>
+      <text x="100" y="80" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Non-linear patterns</text>
+      <text x="100" y="100" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">GPU training</text>
+      <text x="100" y="120" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">High accuracy</text>
+      <text x="100" y="140" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">ONNX runtime</text>
+    </g>
+    
+    <g transform="translate(40, 260)">
+      <text x="0" y="0" fill="#94a3b8" font-size="12" font-weight="600"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Also includes:</text>
+      <text x="0" y="20" fill="#94a3b8" font-size="11"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">" Elastic Net " Polynomial Regression " AutoML</text>
+    </g>
+  </g>
+
+  <!-- Dimensionality Reduction & Quality Metrics -->
+  <g transform="translate(620, 500)">
+    <rect x="0" y="0" width="500" height="280" rx="16" fill="url(#dimRedGrad)" stroke="#f59e0b" stroke-width="2"/>
+    <text x="250" y="40" fill="#e2e8f0" font-size="20" font-weight="700" text-anchor="middle"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Dimensionality Reduction</text>
+    <text x="250" y="65" fill="#94a3b8" font-size="12" text-anchor="middle"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Reduce vector dimensions</text>
+    
+    <g transform="translate(40, 90)">
+      <rect x="0" y="0" width="420" height="80" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1"/>
+      <text x="210" y="25" fill="#fbbf24" font-size="14" font-weight="600" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">PCA (Principal Component Analysis)</text>
+      <text x="210" y="45" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Linear transformation " Variance maximization " PCA Whitening</text>
+      <text x="210" y="65" fill="#cbd5e1" font-size="11" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Feature extraction " Noise reduction " GPU accelerated</text>
+    </g>
+    
+    <g transform="translate(40, 180)">
+      <rect x="0" y="0" width="500" height="80" rx="16" fill="url(#metricsGrad)" stroke="#ec4899" stroke-width="2"/>
+      <text x="250" y="25" fill="#e2e8f0" font-size="18" font-weight="700" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Quality Metrics</text>
+      <text x="250" y="50" fill="#cbd5e1" font-size="12" text-anchor="middle"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Recall@K " Precision@K " F1@K " MRR " Davies-Bouldin " Silhouette Score</text>
+    </g>
+  </g>
+
+  <!-- Summary -->
+  <rect x="200" y="820" width="800" height="60" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+  <text x="600" y="845" fill="#fbbf24" font-size="16" font-weight="700" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">52+ Algorithms Available</text>
+  <text x="600" y="865" fill="#cbd5e1" font-size="13" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">All algorithms support GPU acceleration, vector optimization, and in-database execution</text>
+</svg>

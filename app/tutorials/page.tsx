@@ -241,16 +241,25 @@ const TutorialCard = ({ tutorial }: { tutorial: typeof tutorials[0] }) => {
       <Link href={`/tutorials/${tutorial.slug}`} className="block h-full" aria-label={`Read ${tutorial.title}`}>
         <div className="bg-slate-950 rounded-3xl shadow-lg border border-slate-800 overflow-hidden hover:shadow-2xl hover:border-slate-700 transition-all duration-300 h-full flex flex-col">
           {/* Header Image */}
-          <div className="relative w-full aspect-[3/2] overflow-hidden flex-shrink-0 border-b border-slate-900">
+          <div className="relative w-full aspect-[5/4] overflow-hidden flex-shrink-0 border-b border-slate-900 flex items-center justify-center p-4" style={{ backgroundColor: '#000000' }}>
+            <div className="absolute inset-0 bg-black/80 z-0"></div>
             <Image
               src={`/tutorials/${tutorial.slug}/header.svg`}
               alt={tutorial.title}
-              width={1200}
-              height={400}
-              className="w-full h-full object-contain bg-slate-950"
+              fill
+              className="object-contain opacity-100 scale-110 z-10"
+              style={{ 
+                filter: 'brightness(2.5) contrast(2.0) drop-shadow(0 0 2px rgba(255,255,255,0.5)) drop-shadow(0 0 4px rgba(255,255,255,0.3))',
+                imageRendering: 'crisp-edges',
+                ...({
+                  WebkitImageRendering: '-webkit-optimize-contrast',
+                  msInterpolationMode: 'nearest-neighbor',
+                } as React.CSSProperties),
+                objectPosition: 'center',
+              }}
               unoptimized
             />
-            <div className="absolute top-4 left-4 bg-slate-950/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg border border-slate-800">
+            <div className="absolute top-4 left-4 bg-slate-950/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg border border-slate-800 z-20">
               {tutorial.level}
             </div>
           </div>
@@ -291,7 +300,7 @@ export default function TutorialsPage() {
   const advancedTutorials = tutorials.filter(t => t.level === 'Advanced')
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="bg-black">
       {/* Hero Section - Exact Homepage Size */}
       <section className="relative overflow-hidden bg-black min-h-[420px] md:min-h-[450px] flex items-center pt-16 pb-12">
         {/* Subtle clean background */}

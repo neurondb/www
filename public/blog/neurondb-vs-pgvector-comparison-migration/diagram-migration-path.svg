@@ -1,34 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1200" height="700" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Migration Path" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <linearGradient id="bgMig" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#020617;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1"/>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
     </linearGradient>
-    <linearGradient id="stepGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:0.3"/>
-      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0.3"/>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+    <linearGradient id="stepGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.3"/>
     </linearGradient>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#6366f1"/>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.3"/>
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 5, 0 10" fill="#6366f1" opacity="0.9"/>
+    </marker>
+    <marker id="arrowheadGreen" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <polygon points="0 0, 10 5, 0 10" fill="#10b981" opacity="0.9"/>
     </marker>
   </defs>
   
-  <!-- Background -->
-  <rect width="1200" height="700" fill="url(#bgMig)"/>
-  <rect x="40" y="40" width="1120" height="620" rx="8" fill="#0f172a" opacity="0.8" stroke="#1e293b" stroke-width="1"/>
+  <rect x="40" y="40" width="1120" height="620" rx="28" fill="url(#panel)" stroke="#334155" filter="url(#shadow)"/>
   
-  <!-- Title -->
-  <text x="600" y="80" font-family="Arial, sans-serif" font-size="32" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Migration Path</text>
-  <text x="600" y="110" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">Step-by-step migration from pgvector to NeuronDB</text>
+  <text x="600" y="98" fill="#e2e8f0" font-size="24" font-weight="900" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    Migration Path
+  </text>
+  <text x="600" y="128" fill="#94a3b8" font-size="14" font-weight="600" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    Step-by-step migration from pgvector to NeuronDB
+  </text>
   
   <!-- Step 1: Backup -->
   <rect x="120" y="160" width="200" height="120" rx="8" fill="url(#stepGrad)" stroke="#6366f1" stroke-width="2"/>
   <circle cx="140" cy="180" r="8" fill="#10b981"/>
-  <text x="160" y="185" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" font-weight="bold">Step 1</text>
-  <text x="220" y="215" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Backup Database</text>
-  <text x="220" y="240" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">pg_dump database</text>
-  <text x="220" y="260" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Create backup file</text>
+  <text x="160" y="185" fill="#e0e7ff" font-size="16" font-weight="700"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Step 1</text>
+  <text x="220" y="215" fill="#f1f5f9" font-size="18" font-weight="700" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Backup Database</text>
+  <text x="220" y="240" fill="#cbd5e1" font-size="14" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">pg_dump database</text>
+  <text x="220" y="260" fill="#94a3b8" font-size="14" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Create backup file</text>
   
   <!-- Arrow 1 -->
   <line x1="320" y1="220" x2="380" y2="220" stroke="#6366f1" stroke-width="3" marker-end="url(#arrowhead)"/>
@@ -36,10 +53,14 @@
   <!-- Step 2: Install -->
   <rect x="400" y="160" width="200" height="120" rx="8" fill="url(#stepGrad)" stroke="#6366f1" stroke-width="2"/>
   <circle cx="420" cy="180" r="8" fill="#10b981"/>
-  <text x="440" y="185" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" font-weight="bold">Step 2</text>
-  <text x="500" y="215" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Install NeuronDB</text>
-  <text x="500" y="240" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">CREATE EXTENSION</text>
-  <text x="500" y="260" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Coexists with pgvector</text>
+  <text x="440" y="185" fill="#e0e7ff" font-size="16" font-weight="700"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Step 2</text>
+  <text x="500" y="215" fill="#f1f5f9" font-size="18" font-weight="700" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Install NeuronDB</text>
+  <text x="500" y="240" fill="#cbd5e1" font-size="14" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">CREATE EXTENSION</text>
+  <text x="500" y="260" fill="#94a3b8" font-size="14" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Coexists with pgvector</text>
   
   <!-- Arrow 2 -->
   <line x1="600" y1="220" x2="660" y2="220" stroke="#6366f1" stroke-width="3" marker-end="url(#arrowhead)"/>
@@ -47,10 +68,14 @@
   <!-- Step 3: Verify -->
   <rect x="680" y="160" width="200" height="120" rx="8" fill="url(#stepGrad)" stroke="#6366f1" stroke-width="2"/>
   <circle cx="700" cy="180" r="8" fill="#10b981"/>
-  <text x="720" y="185" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" font-weight="bold">Step 3</text>
-  <text x="780" y="215" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Verify Compatibility</text>
-  <text x="780" y="240" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Test existing queries</text>
-  <text x="780" y="260" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">pgvector compatible</text>
+  <text x="720" y="185" fill="#e0e7ff" font-size="16" font-weight="700"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Step 3</text>
+  <text x="780" y="215" fill="#f1f5f9" font-size="18" font-weight="700" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Verify Compatibility</text>
+  <text x="780" y="240" fill="#cbd5e1" font-size="14" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Test existing queries</text>
+  <text x="780" y="260" fill="#94a3b8" font-size="14" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">pgvector compatible</text>
   
   <!-- Arrow 3 (down) -->
   <line x1="780" y1="280" x2="780" y2="340" stroke="#6366f1" stroke-width="3" marker-end="url(#arrowhead)"/>
@@ -58,10 +83,14 @@
   <!-- Step 4: Migrate Indexes -->
   <rect x="680" y="360" width="200" height="120" rx="8" fill="url(#stepGrad)" stroke="#6366f1" stroke-width="2"/>
   <circle cx="700" cy="380" r="8" fill="#10b981"/>
-  <text x="720" y="385" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" font-weight="bold">Step 4</text>
-  <text x="780" y="415" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Migrate Indexes</text>
-  <text x="780" y="440" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Optional: Recreate</text>
-  <text x="780" y="460" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Better performance</text>
+  <text x="720" y="385" fill="#e0e7ff" font-size="16" font-weight="700"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Step 4</text>
+  <text x="780" y="415" fill="#f1f5f9" font-size="18" font-weight="700" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Migrate Indexes</text>
+  <text x="780" y="440" fill="#cbd5e1" font-size="14" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Optional: Recreate</text>
+  <text x="780" y="460" fill="#94a3b8" font-size="14" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Better performance</text>
   
   <!-- Arrow 4 (left) -->
   <line x1="680" y1="420" x2="620" y2="420" stroke="#6366f1" stroke-width="3" marker-end="url(#arrowhead)"/>
@@ -69,10 +98,14 @@
   <!-- Step 5: Test Features -->
   <rect x="400" y="360" width="200" height="120" rx="8" fill="url(#stepGrad)" stroke="#6366f1" stroke-width="2"/>
   <circle cx="420" cy="380" r="8" fill="#10b981"/>
-  <text x="440" y="385" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" font-weight="bold">Step 5</text>
-  <text x="500" y="415" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Test New Features</text>
-  <text x="500" y="440" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Embedding gen</text>
-  <text x="500" y="460" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Hybrid search</text>
+  <text x="440" y="385" fill="#e0e7ff" font-size="16" font-weight="700"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Step 5</text>
+  <text x="500" y="415" fill="#f1f5f9" font-size="18" font-weight="700" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Test New Features</text>
+  <text x="500" y="440" fill="#cbd5e1" font-size="14" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Embedding gen</text>
+  <text x="500" y="460" fill="#94a3b8" font-size="14" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Hybrid search</text>
   
   <!-- Arrow 5 (left) -->
   <line x1="400" y1="420" x2="340" y2="420" stroke="#6366f1" stroke-width="3" marker-end="url(#arrowhead)"/>
@@ -80,27 +113,40 @@
   <!-- Step 6: Remove pgvector -->
   <rect x="120" y="360" width="200" height="120" rx="8" fill="url(#stepGrad)" stroke="#6366f1" stroke-width="2"/>
   <circle cx="140" cy="380" r="8" fill="#10b981"/>
-  <text x="160" y="385" font-family="Arial, sans-serif" font-size="16" fill="#e0e7ff" font-weight="bold">Step 6</text>
-  <text x="220" y="415" font-family="Arial, sans-serif" font-size="18" fill="#f1f5f9" text-anchor="middle" font-weight="bold">Remove pgvector</text>
-  <text x="220" y="440" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle">Optional: DROP EXTENSION</text>
-  <text x="220" y="460" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">NeuronDB only</text>
+  <text x="160" y="385" fill="#e0e7ff" font-size="16" font-weight="700"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Step 6</text>
+  <text x="220" y="415" fill="#f1f5f9" font-size="18" font-weight="700" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Remove pgvector</text>
+  <text x="220" y="440" fill="#cbd5e1" font-size="14" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Optional: DROP EXTENSION</text>
+  <text x="220" y="460" fill="#94a3b8" font-size="14" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">NeuronDB only</text>
   
   <!-- Success indicator -->
-  <rect x="900" y="360" width="200" height="120" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="2" opacity="0.6"/>
+  <rect x="900" y="360" width="200" height="120" rx="8" fill="url(#successGrad)" stroke="#10b981" stroke-width="2"/>
   <circle cx="920" cy="380" r="8" fill="#10b981"/>
-  <text x="940" y="385" font-family="Arial, sans-serif" font-size="16" fill="#10b981" font-weight="bold">Complete</text>
-  <text x="1000" y="415" font-family="Arial, sans-serif" font-size="18" fill="#10b981" text-anchor="middle" font-weight="bold">Migration Complete</text>
-  <text x="1000" y="440" font-family="Arial, sans-serif" font-size="14" fill="#34d399" text-anchor="middle">All features available</text>
-  <text x="1000" y="460" font-family="Arial, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">Production ready</text>
+  <text x="940" y="385" fill="#10b981" font-size="16" font-weight="700"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Complete</text>
+  <text x="1000" y="415" fill="#10b981" font-size="18" font-weight="700" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Migration Complete</text>
+  <text x="1000" y="440" fill="#34d399" font-size="14" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">All features available</text>
+  <text x="1000" y="460" fill="#6ee7b7" font-size="14" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Production ready</text>
   
   <!-- Arrow to success -->
-  <line x1="880" y1="420" x2="900" y2="420" stroke="#10b981" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="880" y1="420" x2="900" y2="420" stroke="#10b981" stroke-width="3" marker-end="url(#arrowheadGreen)"/>
   
   <!-- Key points -->
-  <rect x="120" y="520" width="960" height="80" rx="8" fill="#1e293b" opacity="0.6" stroke="#334155" stroke-width="1"/>
-  <text x="600" y="545" font-family="Arial, sans-serif" font-size="16" fill="#60a5fa" text-anchor="middle" font-weight="bold">Key Points:</text>
-  <text x="200" y="575" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">✓ pgvector compatibility</text>
-  <text x="450" y="575" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">✓ No downtime required</text>
-  <text x="700" y="575" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">✓ Coexistence supported</text>
-  <text x="950" y="575" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">✓ Reversible process</text>
+  <rect x="120" y="520" width="960" height="80" rx="8" fill="#0f172a" opacity="0.6" stroke="#334155" stroke-width="1"/>
+  <text x="600" y="545" fill="#60a5fa" font-size="16" font-weight="700" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Key Points:</text>
+  <text x="200" y="575" fill="#cbd5e1" font-size="14"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"> pgvector compatibility</text>
+  <text x="450" y="575" fill="#cbd5e1" font-size="14"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"> No downtime required</text>
+  <text x="700" y="575" fill="#cbd5e1" font-size="14"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"> Coexistence supported</text>
+  <text x="950" y="575" fill="#cbd5e1" font-size="14"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"> Reversible process</text>
 </svg>

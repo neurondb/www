@@ -47,19 +47,28 @@ export default function RelatedBlogs({ currentSlug, allPosts, maxPosts = 4 }: Re
                 href={`/blog/${post.slug}`}
                 className="block group"
               >
-                <article className="bg-slate-900/50 rounded-lg border border-slate-800 p-4 hover:border-slate-700 hover:bg-slate-900/70 transition-all duration-200">
+                <article className="bg-slate-950 rounded-lg border border-slate-800 p-4 hover:border-slate-700 hover:bg-slate-950 transition-all duration-200">
                   {/* Header Image */}
-                  <div className="relative w-full h-32 mb-3 rounded overflow-hidden bg-slate-950">
+                  <div className="relative w-full h-32 mb-3 rounded overflow-hidden flex items-center justify-center" style={{ backgroundColor: '#000000' }}>
+                    <div className="absolute inset-0 bg-black/80 z-0"></div>
                     {post.headerImage ? (
                       <Image
                         src={post.headerImage}
                         alt={post.title}
                         fill
-                        className="object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                        className="object-contain opacity-100 scale-90 z-10"
+                        style={{ 
+                          filter: 'brightness(2.5) contrast(2.0) drop-shadow(0 0 2px rgba(255,255,255,0.5)) drop-shadow(0 0 4px rgba(255,255,255,0.3))',
+                          imageRendering: 'crisp-edges',
+                          ...({
+                            WebkitImageRendering: '-webkit-optimize-contrast',
+                            msInterpolationMode: 'nearest-neighbor',
+                          } as React.CSSProperties),
+                        }}
                         unoptimized
                       />
                     ) : (
-                      <div className="flex items-center justify-center h-full">
+                      <div className="flex items-center justify-center h-full z-10 relative">
                         <div className="text-2xl">📄</div>
                       </div>
                     )}

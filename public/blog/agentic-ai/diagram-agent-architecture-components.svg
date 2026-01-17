@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img" aria-label="Agent Architecture Components">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect x="40" y="40" width="1120" height="920" rx="28" fill="url(#panel)" stroke="#334155" filter="url(#shadow)"/>
+
+  <text x="600" y="98" fill="#e2e8f0" font-size="24" font-weight="900" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    Agent Architecture Components
+  </text>
+  <text x="600" y="128" fill="#94a3b8" font-size="14" font-weight="600" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    Responsibilities, inputs, outputs, and interactions of core components
+  </text>
+
+  <!-- Table Header -->
+  <rect x="80" y="160" width="1040" height="50" rx="12" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  <text x="180" y="190" fill="#e2e8f0" font-size="14" font-weight="900" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Component</text>
+  <text x="380" y="190" fill="#e2e8f0" font-size="14" font-weight="900" text-anchor="middle">Responsibilities</text>
+  <text x="680" y="190" fill="#e2e8f0" font-size="14" font-weight="900" text-anchor="middle">Inputs</text>
+  <text x="920" y="190" fill="#e2e8f0" font-size="14" font-weight="900" text-anchor="middle">Outputs</text>
+
+  <!-- Planning System Row -->
+  <rect x="80" y="230" width="1040" height="140" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="180" y="260" fill="#3b82f6" font-size="13" font-weight="900" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Planning System</text>
+  <text x="280" y="260" fill="#cbd5e1" font-size="11" font-weight="600"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Breaks goals into steps</text>
+  <text x="280" y="280" fill="#94a3b8" font-size="10">Handles conditional logic</text>
+  <text x="280" y="300" fill="#94a3b8" font-size="10">Validates & ranks plans</text>
+  <text x="280" y="320" fill="#94a3b8" font-size="10">Manages dependencies</text>
+  <text x="280" y="340" fill="#94a3b8" font-size="10">Selects optimal plans</text>
+  <text x="280" y="360" fill="#94a3b8" font-size="10">Manages step ordering</text>
+  <text x="600" y="260" fill="#cbd5e1" font-size="11" font-weight="600">Goals, tool registry</text>
+  <text x="600" y="280" fill="#94a3b8" font-size="10">Context from memory</text>
+  <text x="600" y="300" fill="#94a3b8" font-size="10">Current system state</text>
+  <text x="600" y="320" fill="#94a3b8" font-size="10">Execution results</text>
+  <text x="880" y="260" fill="#cbd5e1" font-size="11" font-weight="600">Execution plans</text>
+  <text x="880" y="280" fill="#94a3b8" font-size="10">Step sequences</text>
+  <text x="880" y="300" fill="#94a3b8" font-size="10">Validated actions</text>
+  <text x="880" y="320" fill="#94a3b8" font-size="10">Quality rankings</text>
+
+  <!-- Tool Registry Row -->
+  <rect x="80" y="390" width="1040" height="140" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="180" y="420" fill="#ea580c" font-size="13" font-weight="900" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Tool Registry</text>
+  <text x="280" y="420" fill="#cbd5e1" font-size="11" font-weight="600"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Provides tool functions</text>
+  <text x="280" y="440" fill="#94a3b8" font-size="10">Validates tool calls</text>
+  <text x="280" y="460" fill="#94a3b8" font-size="10">Manages permissions</text>
+  <text x="280" y="480" fill="#94a3b8" font-size="10">Handles errors gracefully</text>
+  <text x="280" y="500" fill="#94a3b8" font-size="10">Retries failed operations</text>
+  <text x="280" y="520" fill="#94a3b8" font-size="10">Tracks tool usage</text>
+  <text x="600" y="420" fill="#cbd5e1" font-size="11" font-weight="600">Tool call requests</text>
+  <text x="600" y="440" fill="#94a3b8" font-size="10">Tool parameters</text>
+  <text x="600" y="460" fill="#94a3b8" font-size="10">Tool metadata</text>
+  <text x="600" y="480" fill="#94a3b8" font-size="10">Security policies</text>
+  <text x="880" y="420" fill="#cbd5e1" font-size="11" font-weight="600">Tool results</text>
+  <text x="880" y="440" fill="#94a3b8" font-size="10">Execution status</text>
+  <text x="880" y="460" fill="#94a3b8" font-size="10">Error messages</text>
+  <text x="880" y="480" fill="#94a3b8" font-size="10">Usage metrics</text>
+
+  <!-- Memory System Row -->
+  <rect x="80" y="550" width="1040" height="140" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="180" y="580" fill="#10b981" font-size="13" font-weight="900" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Memory System</text>
+  <text x="280" y="580" fill="#cbd5e1" font-size="11" font-weight="600"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Stores context efficiently</text>
+  <text x="280" y="600" fill="#94a3b8" font-size="10">Uses vector search</text>
+  <text x="280" y="620" fill="#94a3b8" font-size="10">Maintains knowledge bases</text>
+  <text x="280" y="640" fill="#94a3b8" font-size="10">Ranks memories by relevance</text>
+  <text x="280" y="660" fill="#94a3b8" font-size="10">Filters by context</text>
+  <text x="280" y="680" fill="#94a3b8" font-size="10">Updates based on new info</text>
+  <text x="600" y="580" fill="#cbd5e1" font-size="11" font-weight="600">Text from interactions</text>
+  <text x="600" y="600" fill="#94a3b8" font-size="10">Query embeddings</text>
+  <text x="600" y="620" fill="#94a3b8" font-size="10">Metadata & tags</text>
+  <text x="600" y="640" fill="#94a3b8" font-size="10">Retrieval queries</text>
+  <text x="880" y="580" fill="#cbd5e1" font-size="11" font-weight="600">Stored embeddings</text>
+  <text x="880" y="600" fill="#94a3b8" font-size="10">Relevant memories</text>
+  <text x="880" y="620" fill="#94a3b8" font-size="10">Similarity scores</text>
+  <text x="880" y="640" fill="#94a3b8" font-size="10">Ranked results</text>
+
+  <!-- State Machine Row -->
+  <rect x="80" y="710" width="1040" height="140" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="180" y="740" fill="#a855f7" font-size="13" font-weight="900" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">State Machine</text>
+  <text x="280" y="740" fill="#cbd5e1" font-size="11" font-weight="600"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Manages execution flow</text>
+  <text x="280" y="760" fill="#94a3b8" font-size="10">Tracks current state</text>
+  <text x="280" y="780" fill="#94a3b8" font-size="10">Handles transitions</text>
+  <text x="280" y="800" fill="#94a3b8" font-size="10">Manages error recovery</text>
+  <text x="280" y="820" fill="#94a3b8" font-size="10">Coordinates multi-step tasks</text>
+  <text x="280" y="840" fill="#94a3b8" font-size="10">Persists state</text>
+  <text x="600" y="740" fill="#cbd5e1" font-size="11" font-weight="600">State transition events</text>
+  <text x="600" y="760" fill="#94a3b8" font-size="10">Execution results</text>
+  <text x="600" y="780" fill="#94a3b8" font-size="10">Error conditions</text>
+  <text x="600" y="800" fill="#94a3b8" font-size="10">Completion signals</text>
+  <text x="880" y="740" fill="#cbd5e1" font-size="11" font-weight="600">Current state</text>
+  <text x="880" y="760" fill="#94a3b8" font-size="10">State transitions</text>
+  <text x="880" y="780" fill="#94a3b8" font-size="10">Recovery actions</text>
+  <text x="880" y="800" fill="#94a3b8" font-size="10">State persistence</text>
+
+  <!-- Runtime Row -->
+  <rect x="80" y="870" width="1040" height="60" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="180" y="900" fill="#f59e0b" font-size="13" font-weight="900" text-anchor="middle"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Runtime</text>
+  <text x="280" y="900" fill="#cbd5e1" font-size="11" font-weight="600"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Orchestrates all components</text>
+  <text x="280" y="920" fill="#94a3b8" font-size="10">Coordinates execution</text>
+  <text x="600" y="900" fill="#cbd5e1" font-size="11" font-weight="600">User input, component outputs</text>
+  <text x="880" y="900" fill="#cbd5e1" font-size="11" font-weight="600">Final responses, observability</text>
+</svg>

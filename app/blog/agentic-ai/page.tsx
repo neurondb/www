@@ -103,7 +103,7 @@ Agentic AI refers to systems that act autonomously to achieve goals. The term "a
 
 Agents are software systems that exhibit autonomous behavior. They differ from traditional programs in key ways.
 
-![Traditional Programs vs Agents](/blog/agentic-ai/traditional-programs-vs-agents.png)
+![Traditional Programs vs Agents](/blog/agentic-ai/diagram-traditional-programs-vs-agents.svg?v=1)
 
 The diagram illustrates the fundamental differences between traditional programs and agentic systems. Traditional programs follow fixed execution paths defined at development time, while agents adapt their behavior based on context and goals. This adaptive capability enables agents to handle situations that were not explicitly programmed, making them more flexible for complex, dynamic environments.
 
@@ -135,34 +135,17 @@ Agentic systems change this paradigm fundamentally. Agents:
 
 Agents differ from chatbots in fundamental ways. Understanding these differences is essential for building agentic systems.
 
-| Aspect | Chatbots | Agents |
-|--------|----------|--------|
-| **Context Handling** | Respond to individual messages without context; each message processed independently; context lost between interactions | Maintain conversation context across sessions; previous interactions inform current responses; context accumulates over time; memory enables continuity |
-| **Action Execution** | Generate text only; cannot execute actions; cannot interact with systems; cannot query databases; cannot call APIs | Execute actions through tools; query databases; call APIs; run code; interact with systems |
-| **Memory** | No memory beyond current session; when session ends all context is lost | Store long-term memories in vector databases; memories persist across sessions; enable learning; improve responses over time |
-| **Adaptability** | Follow fixed patterns; use predetermined templates; cannot adapt behavior | Adapt plans dynamically; adjust strategies based on results; optimize for success |
-| **Planning Capabilities** | No planning; respond immediately to each message; cannot break down complex tasks; cannot coordinate multiple steps | Generate multi-step plans; break complex goals into actionable sequences; handle conditional logic; manage step dependencies |
-| **Tool Usage** | Cannot use external tools; limited to text generation; no database access; no API integration | Access comprehensive tool registry; execute SQL queries; make HTTP requests; run code snippets; interact with external systems |
-| **Multi-Step Tasks** | Handle single-turn conversations only; cannot coordinate sequential actions; cannot manage task workflows | Execute complex multi-step workflows; coordinate sequential actions; manage task dependencies; handle parallel execution |
-| **Error Handling** | Limited error recovery; cannot retry failed operations; cannot adapt to failures | Robust error handling; automatic retry mechanisms; graceful failure recovery; adaptive error strategies |
-| **Learning Ability** | Static behavior; cannot learn from interactions; responses do not improve over time | Continuous learning; improve from experience; adapt based on feedback; optimize performance over time |
-| **State Management** | Stateless operation; no persistent state; cannot resume interrupted tasks | Persistent state management; track execution progress; resume interrupted tasks; maintain state across sessions |
-| **Personalization** | Generic responses; no user-specific adaptation; same responses for all users | Personalized interactions; learn user preferences; adapt to individual needs; build user-specific knowledge |
-| **Integration Capabilities** | Limited integration; primarily text-based interfaces; minimal external system connectivity | Deep system integration; connect to databases; integrate with APIs; interact with cloud services; access file systems |
-| **Response Quality** | Template-based responses; limited depth; no fact verification; may provide outdated information | Context-aware responses; fact-checked answers; real-time information retrieval; comprehensive and accurate answers |
-| **Scalability** | Limited scalability; each conversation isolated; no shared knowledge; resource-intensive per conversation | Highly scalable; shared knowledge base; efficient resource usage; optimized for production workloads |
-| **User Experience** | Simple question-answer format; limited interactivity; no proactive assistance | Rich interactive experience; proactive assistance; guided workflows; comprehensive task completion |
-| **Cost Efficiency** | High per-conversation cost; no knowledge reuse; repeated processing of similar queries | Cost-efficient; knowledge reuse across sessions; optimized resource utilization; reduced redundant processing |
+![Agents vs Chatbots Comparison](/blog/agentic-ai/diagram-agents-vs-chatbots-comparison.svg?v=1)
+
+The comparison table illustrates the fundamental differences between chatbots and agents across 14 key aspects. Chatbots are limited to text generation with no persistent memory, while agents maintain context, execute actions through tools, and learn from experience. This visual comparison helps builders understand when to use agents versus traditional chatbots.
 
 ### Core Components of Agentic Systems
 
 Agentic systems include five core components. Each component serves specific functions. Understanding each component is essential for building agents.
 
-- **Planning system**: Breaks goals into actionable steps, handles conditional logic for decision-making, manages step dependencies to ensure correct ordering, validates plan feasibility before execution, ranks plans by quality metrics, and selects optimal plans for execution.
-- **Tool registry**: Provides functions for external actions, validates tool calls against schemas, manages tool permissions for security, handles tool errors gracefully, retries failed operations when appropriate, and tracks tool usage for monitoring.
-- **Memory system**: Stores and retrieves context efficiently, uses vector search for semantic retrieval, maintains long-term knowledge bases, ranks memories by relevance, filters memories by context, and updates memories based on new information.
-- **State machine**: Manages execution flow systematically, tracks current state accurately, handles state transitions correctly, manages error recovery automatically, coordinates multi-step tasks effectively, and persists state for reliability.
-- **Runtime**: Orchestrates all components, coordinates execution across components, manages error recovery comprehensively, monitors performance continuously, logs activities for debugging, and provides observability for operations.
+![Core Components Overview](/blog/agentic-ai/diagram-core-components-overview.svg?v=1)
+
+The core components diagram shows all five essential components: Planning System, Tool Registry, Memory System, State Machine, and Runtime. Each component has distinct responsibilities and interacts with others to enable autonomous agent behavior. The diagram illustrates how components coordinate through well-defined interfaces, with the Runtime orchestrating all interactions.
 
 ### Agent Architecture
 
@@ -170,9 +153,11 @@ Agents follow a structured architecture. The architecture separates concerns, ea
 
 **User interface:** Sends messages to the agent. Messages include user queries and goals. The interface may be a web application or API, and messages are formatted as text or structured data.
 
-![Agent Architecture Diagram](/blog/agentic-ai/agent-main.png)
+![Agent Architecture Diagram](/blog/agentic-ai/diagram-agent-architecture.svg?v=1)
 
-The architecture diagram shows component relationships. User input flows to the runtime. The runtime queries the planner for execution plans. The planner generates steps and validates feasibility. Steps flow to the tool executor for action execution. Results flow to memory for storage. Memory feeds back to the planner for context. The state machine coordinates all transitions. The response generator formats final output.
+![Agent Architecture Components](/blog/agentic-ai/diagram-agent-architecture-components.svg?v=1)
+
+The architecture components table shows all five components (Planning System, Tool Registry, Memory System, State Machine, Runtime) with their responsibilities, inputs, outputs, and interactions. This detailed view helps builders understand how each component contributes to the overall agent system and how data flows between components.
 
 The agent architecture provides a modular design where each component has clearly defined responsibilities. This separation of concerns allows for independent development and optimization of individual components. The data flow between components is bidirectional, enabling components to influence each other's behavior based on execution context. This architecture supports scalability, allowing individual components to be optimized or replaced without affecting the entire system.
 
@@ -220,42 +205,16 @@ Tools are the bridge between agents and external systems. Without tools, agents 
 Tool execution is fundamental to agentic behavior. Agents identify needed actions during planning, select appropriate tools from the registry, format parameters correctly, call tools and process results, and use results for subsequent steps.
 
 Tools include four primary types:
-- **SQL tools**: Execute database queries, enable data retrieval, support data analysis, and provide structured data access.
-- **HTTP tools**: Make web requests, fetch external data, interact with APIs, and retrieve current information.
-- **Code tools**: Execute code snippets, perform computations, process data, and generate outputs.
-- **Shell tools**: Run system commands, interact with the operating system, execute scripts, and manage files.
 
-Each tool type serves specific purposes:
-- **SQL tools**: Enable database interactions where agents query structured data, retrieve relevant information, and analyze data relationships
-- **HTTP tools**: Enable web interactions where agents fetch current information, call external APIs, and retrieve real-time data
-- **Code tools**: Enable computation where agents perform calculations, process data, and generate results
-- **Shell tools**: Enable system interactions where agents execute commands, manage files, and interact with the environment
+![Tool Types Comparison](/blog/agentic-ai/diagram-tool-types-comparison.svg?v=1)
+
+The tool types comparison shows SQL, HTTP, Code, and Shell tools with their capabilities and use cases. SQL tools enable database interactions for querying structured data. HTTP tools enable web interactions for fetching current information and calling APIs. Code tools enable computation for performing calculations and processing data. Shell tools enable system interactions for executing commands and managing files.
 
 Tool execution follows a structured flow:
-1. The agent identifies a needed action during plan execution
-2. Examines available tools in the registry
-3. Selects the most appropriate tool
-4. Formats tool parameters according to tool specifications
-5. Calls the tool through the executor
-6. The tool executes the action in its environment and returns results in a structured format
-7. The agent processes results for validation
-8. Uses results for subsequent planning steps
-9. Continues execution with updated context
 
-Tool execution includes error handling. Tools may fail due to:
-- Network issues
-- Invalid results
-- Timeouts
-- Authentication requirements
+![Tool Execution Flow Comparison](/blog/agentic-ai/diagram-tool-execution-comparison.svg?v=1)
 
-The executor handles errors gracefully:
-- Retries transient failures
-- Reports permanent failures
-- Updates agent state
-
-![Tool Execution Diagram](/blog/agentic-ai/diagram-tool-execution.svg)
-
-The tool execution diagram shows the interaction flow. The agent requests a tool call with parameters. The tool registry validates the request against tool metadata. The tool executor runs the action in the tool environment. Results are returned in structured format. The agent processes results for validation. The agent updates state with new information. The agent continues planning with updated context.
+The tool execution flow comparison shows synchronous and asynchronous execution patterns. Synchronous execution blocks until tool completion, providing simple sequential flow. Asynchronous execution enables parallel processing and higher throughput by queuing tool calls and continuing with other tasks. Both patterns include error handling paths for robust operation.
 
 ### Memory Systems
 
@@ -266,32 +225,16 @@ Memory is essential for agentic behavior. Without memory, agents cannot learn fr
 Memory systems enable persistent knowledge. Agents store important facts from interactions, retrieve relevant context for new queries, build knowledge bases over time, and improve performance through experience.
 
 Memory includes three distinct types:
-- **Short-term memory**: Stores recent conversation context, maintains session state, enables multi-turn conversations, and provides immediate context.
-- **Long-term memory**: Stores important facts and events, persists across sessions, enables knowledge accumulation, and supports learning over time.
-- **Working memory**: Stores temporary computation state, holds intermediate results, supports complex reasoning, and clears after task completion.
 
-Each memory type serves specific purposes:
-- **Short-term memory**: Enables conversation continuity where agents remember recent exchanges, maintain context within sessions, and provide coherent responses
-- **Long-term memory**: Enables knowledge accumulation where agents remember important facts, build expertise over time, and avoid repeating mistakes
-- **Working memory**: Enables complex reasoning where agents hold intermediate results, perform multi-step calculations, and manage temporary state
+![Memory Types Comparison](/blog/agentic-ai/diagram-memory-types-comparison.svg?v=1)
 
-Memory storage follows a structured process:
-1. Text is extracted from agent interactions
-2. Important facts are identified
-3. Facts are converted to embeddings using language models
-4. Embeddings capture semantic meaning
-5. Embeddings are stored in vector databases
-6. Metadata is attached including timestamps and tags
-7. Vector indexes enable fast retrieval
+The memory types comparison visualizes Short-term, Long-term, and Working memory with their characteristics, purposes, and persistence levels. Short-term memory enables conversation continuity within sessions. Long-term memory enables knowledge accumulation across sessions using vector databases. Working memory enables complex reasoning by holding temporary computation state.
 
-Memory retrieval uses vector similarity search:
-1. Queries are converted to embeddings that capture query semantics
-2. Similarity search finds relevant memories using cosine distance or Euclidean distance
-3. Results are ranked by similarity score
-4. Top results are selected for context
-5. Context is added to agent prompts
+Memory storage and retrieval follow structured processes:
 
-Vector search enables semantic retrieval. Memories are found by meaning, not keywords. Queries match conceptually similar content, synonyms and related concepts are handled automatically, and context retrieval improves response quality.
+![Memory Storage vs Retrieval Comparison](/blog/agentic-ai/diagram-memory-storage-retrieval-comparison.svg?v=1)
+
+The memory storage vs retrieval comparison shows side-by-side processes with their steps, timing, and performance characteristics. Storage involves extracting text, generating embeddings, storing in vector databases, and indexing for fast retrieval. Retrieval involves converting queries to embeddings, performing similarity search, ranking results, and adding context to prompts. Both processes leverage vector search for semantic retrieval, finding memories by meaning rather than keywords.
 
 ![Memory System Diagram](/blog/agentic-ai/diagram-memory-system.svg)
 
@@ -328,9 +271,10 @@ State machines provide structured control flow for agent execution. They ensure 
 The planning component generates execution plans. It uses language models to analyze goals, breaks goals into actionable steps, and handles conditional logic and loops.
 
 Planning works in three phases:
-- **Phase one is goal analysis**: The system understands the desired outcome.
-- **Phase two is step generation**: The system creates a sequence of actions.
-- **Phase three is plan validation**: The system checks plan feasibility.
+
+![Planning Phases Comparison](/blog/agentic-ai/diagram-planning-phases-comparison.svg?v=1)
+
+The planning phases diagram shows the three-phase process: Goal Analysis (understanding desired outcome), Step Generation (creating action sequences), and Plan Validation (checking feasibility). Each phase has specific inputs, processes, and outputs, with dependencies between phases ensuring valid executable plans.
 
 Plans include step dependencies. Some steps require previous steps to complete. The planner orders steps correctly and handles parallel execution when possible.
 
@@ -441,31 +385,16 @@ The multi-step diagram shows step coordination. Steps are ordered by dependencie
 ### Error Handling and Recovery
 
 Error handling ensures reliable operation. Agents encounter various errors:
-- Network failures affect tool calls
-- Invalid inputs cause validation errors
-- Resource limits cause timeouts
 
-Error handling includes detection. The system:
-- Monitors execution
-- Detects failures
-- Categorizes errors
-- Selects recovery strategies
+![Error Handling Strategies](/blog/agentic-ai/diagram-error-handling-strategies.svg?v=1)
 
-Recovery strategies include retries:
-- Transient errors trigger retries
-- Retries use exponential backoff
-- Retries have maximum attempts
-- Permanent errors skip retries
-
-![Error Handling Diagram](/blog/agentic-ai/diagram-error-handling.svg)
-
-The error handling diagram shows recovery flow. Errors are detected. Errors are categorized. Recovery strategies are selected. Strategies are executed. Success restores normal flow.
+The error handling strategies diagram shows four error types (Network Failures, Validation Errors, Timeouts, Authentication) and their recovery strategies. The diagram illustrates the complete error handling flow from detection through categorization, retry strategies, plan adjustment, and success recovery. Robust error handling is essential for production agent systems, distinguishing between transient issues that can be retried and permanent failures that require different handling.
 
 Robust error handling is essential for production agent systems. Errors can occur at any stage of execution, from tool failures to network issues to validation errors. Effective error handling requires both detection mechanisms and recovery strategies. Categorization of errors enables appropriate response selection, distinguishing between transient issues that can be retried and permanent failures that require different handling. Recovery strategies must be designed to minimize disruption to ongoing operations while ensuring system integrity and reliability.
 
 ## Building an Agent with NeuronDB and NeuronAgent
 
-![Agent, MCP, and NeuronDB Integration](/blog/agentic-ai/agent-mcp-ndb.png)
+![Agent, MCP, and NeuronDB Integration](/blog/agentic-ai/diagram-agent-mcp-neurondb-integration.svg?v=1)
 
 The integration diagram illustrates how NeuronDB, NeuronAgent, and the Model Context Protocol work together to create a complete agent system. NeuronDB provides the underlying vector database and embedding capabilities. NeuronAgent supplies the runtime environment and agent framework. The MCP server enables integration with external tools and services. Together, these components create a platform for building production-ready agent applications.
 
