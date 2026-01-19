@@ -104,10 +104,10 @@ export default function NeuronMCPClaudeDesktop() {
           Once connected, you can use NeuronMCP tools in Claude Desktop:
         </p>
         <ul>
-          <li>Vector search: "Search for similar vectors using the vector_search tool"</li>
-          <li>ML training: "Train a classification model using the train_model tool"</li>
-          <li>RAG operations: "Process documents and build a RAG pipeline"</li>
-          <li>Database management: "List all tables in the database"</li>
+          <li>Vector search: &quot;Search for similar vectors using the vector_search tool&quot;</li>
+          <li>ML training: &quot;Train a classification model using the train_model tool&quot;</li>
+          <li>RAG operations: &quot;Process documents and build a RAG pipeline&quot;</li>
+          <li>Database management: &quot;List all tables in the database&quot;</li>
         </ul>
         <p>
           See the <a href="/docs/neuronmcp/tools">Tool Catalog</a> for complete list of available tools.

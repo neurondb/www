@@ -69,19 +69,19 @@ SELECT ARRAY[1.0, 2.0, 3.0]::vector(3);`}
               <td><code>&lt;-&gt;</code></td>
               <td>L2 (Euclidean) distance</td>
               <td><code>float</code></td>
-              <td><code>embedding &lt;-&gt; '[1,2,3]'</code></td>
+              <td><code>embedding &lt;-&gt; &apos;[1,2,3]&apos;</code></td>
             </tr>
             <tr>
               <td><code>&lt;=&gt;</code></td>
               <td>Cosine distance</td>
               <td><code>float</code></td>
-              <td><code>embedding &lt;=&gt; '[1,2,3]'</code></td>
+              <td><code>embedding &lt;=&gt; &apos;[1,2,3]&apos;</code></td>
             </tr>
             <tr>
               <td><code>&lt;#&gt;</code></td>
               <td>Inner product (negative dot product)</td>
               <td><code>float</code></td>
-              <td><code>embedding &lt;#&gt; '[1,2,3]'</code></td>
+              <td><code>embedding &lt;#&gt; &apos;[1,2,3]&apos;</code></td>
             </tr>
           </tbody>
         </table>

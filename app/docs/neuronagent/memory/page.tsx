@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import PostgresDocsLayout, { type TocItem, type NavLink } from '@/components/PostgresDocsLayout'
-import SqlCodeBlock from '@/components/SqlCodeBlock'
 
 export const metadata: Metadata = {
   title: 'Memory System | Hierarchical Memory Management | NeuronAgent',

@@ -37,7 +37,7 @@ export default function NeuronDBTroubleshootingPage() {
         <p>Before troubleshooting, verify:</p>
         <ul>
           <li>Enable <code>log_min_messages = debug1</code> temporarily when reproducing issues</li>
-          <li>Verify <code>SELECT * FROM pg_extension WHERE extname = 'neurondb';</code> returns the expected version</li>
+          <li>Verify <code>SELECT * FROM pg_extension WHERE extname = &apos;neurondb&apos;;</code> returns the expected version</li>
           <li>Collect <code>EXPLAIN (ANALYZE, BUFFERS)</code> plans for slow queries before tuning</li>
           <li>Ensure GPU drivers (CUDA/ROCm) are the same version used during compilation</li>
         </ul>
@@ -48,7 +48,7 @@ export default function NeuronDBTroubleshootingPage() {
         <h2>GPU acceleration issues</h2>
         <p>Fix runtime failures when enabling CUDA or ROCm acceleration.</p>
 
-        <h3>Error: "GPU function not available"</h3>
+        <h3>Error: &quot;GPU function not available&quot;</h3>
         <p>NeuronDB cannot locate compiled GPU kernels or drivers.</p>
         <p>Confirm that GPU support was compiled and drivers are visible.</p>
         <BashCodeBlock
@@ -95,7 +95,7 @@ UPDATE documents SET embedding = vector_to_int8_gpu(embedding);`}
         <h2>ML clustering & analytics issues</h2>
         <p>Address convergence, accuracy, and data quality warnings from NeuronDB ML pipelines.</p>
 
-        <h3>"K-Means did not converge"</h3>
+        <h3>&quot;K-Means did not converge&quot;</h3>
         <p>Increase iteration budget or relax tolerance for the dataset.</p>
         <SqlCodeBlock
           title="Retry K-Means with relaxed thresholds"

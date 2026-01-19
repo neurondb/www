@@ -2893,7 +2893,7 @@ const NeurondBDemoTerminal = () => {
               )}
               <div className="text-gray-600 text-xs mt-2">
                 {tabDisplay ? (
-                  <>Ready to demonstrate <span className="text-cyan-400 font-semibold">{tabDisplay}</span>. Click "Run Demo" to begin.</>
+                  <>Ready to demonstrate <span className="text-cyan-400 font-semibold">{tabDisplay}</span>. Click &quot;Run Demo&quot; to begin.</>
                 ) : (
                   'Select a tab above and click "Run Demo" to begin exploring NeuronDB capabilities'
                 )}

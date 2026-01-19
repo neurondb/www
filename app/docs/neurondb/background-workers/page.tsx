@@ -65,7 +65,7 @@ export default function Page() {
         <p>
           <strong>Background Workers</strong> are dedicated processes that handle async processing, monitoring, 
           and maintenance tasks to keep your NeuronDB system running optimally. These workers operate independently 
-          from query processing, ensuring that maintenance and optimization tasks don't impact query performance.
+          from query processing, ensuring that maintenance and optimization tasks don&apos;t impact query performance.
         </p>
 
         <h3>Available Workers</h3>
@@ -78,7 +78,7 @@ export default function Page() {
 
         <h3>Benefits</h3>
         <ul>
-          <li><strong>Non-Blocking:</strong> Maintenance tasks don't impact query performance</li>
+          <li><strong>Non-Blocking:</strong> Maintenance tasks don&apos;t impact query performance</li>
           <li><strong>Automatic:</strong> Workers run continuously without manual intervention</li>
           <li><strong>Configurable:</strong> Tune worker behavior to match your workload</li>
           <li><strong>Observable:</strong> Monitor worker status and performance metrics</li>
@@ -167,7 +167,7 @@ neurondb.neurandefrag_fragmentation_threshold = 0.30  # Rebuild at 30%`}
         <h3>Features</h3>
         <ul>
           <li><strong>Async Generation:</strong> Process LLM requests in the background</li>
-          <li><strong>Token Streaming:</strong> Stream tokens as they're generated</li>
+          <li><strong>Token Streaming:</strong> Stream tokens as they&apos;re generated</li>
           <li><strong>Rate Limiting:</strong> Control API usage and costs</li>
           <li><strong>Error Handling:</strong> Automatic retries with exponential backoff</li>
         </ul>

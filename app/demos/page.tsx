@@ -6,7 +6,7 @@ import PageTemplate from '@/components/templates/PageTemplate'
 import SectionTemplate from '@/components/templates/SectionTemplate'
 import FooterTemplate from '@/components/templates/FooterTemplate'
 import { generatePageMetadata } from '@/config/seo'
-import { Database, Bot, Server, PlayCircle, Terminal } from 'lucide-react'
+import { Database, Bot, Server, PlayCircle } from 'lucide-react'
 
 // Dynamically import large demo components with loading fallbacks
 const NeurondBDemoTerminal = dynamic(

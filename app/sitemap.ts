@@ -1042,8 +1042,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Vercel optimization: Log stats only in development to reduce production overhead
   if (process.env.NODE_ENV === 'development') {
     const priorities = uniquePages.map(p => p.priority || 0)
+    // eslint-disable-next-line no-console
     console.log(`[Sitemap] Generated ${uniquePages.length} URLs`)
+    // eslint-disable-next-line no-console
     console.log(`[Sitemap] Priority range: ${Math.min(...priorities)} - ${Math.max(...priorities)}`)
+    // eslint-disable-next-line no-console
     console.log(`[Sitemap] Vercel ISR: Revalidates every ${revalidate}s`)
   }
 

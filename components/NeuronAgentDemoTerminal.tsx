@@ -308,7 +308,7 @@ const NeuronAgentDemoTerminal = () => {
                 <span className="px-2 py-1 bg-emerald-400/10 rounded">Vector Search</span>
               </div>
               <div className="text-gray-600 text-xs mt-2">
-                Click "Run Demo" to see NeuronAgent API in action
+                Click &quot;Run Demo&quot; to see NeuronAgent API in action
               </div>
             </div>
           )}

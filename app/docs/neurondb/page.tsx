@@ -245,7 +245,7 @@ sudo make install PG_CONFIG=/usr/lib/postgresql/17/bin/pg_config`}
         />
 
         <p>
-          After installing the extension, you'll need to separately build and run NeuronAgent, NeuronMCP, and NeuronDesktop. See component documentation for details.
+          After installing the extension, you&apos;ll need to separately build and run NeuronAgent, NeuronMCP, and NeuronDesktop. See component documentation for details.
         </p>
       </section>
 

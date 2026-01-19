@@ -62,7 +62,7 @@ export default function RecipesLibraryPage() {
           This recipe library provides <strong>copy-paste ready SQL queries</strong> for common NeuronDB operations. Each recipe file contains multiple queries with explanations, use cases, and complexity ratings.
         </p>
         <p>
-          <strong>What you'll find:</strong>
+          <strong>What you&apos;ll find:</strong>
         </p>
         <ul>
           <li>✅ Ready-to-run SQL queries for vector search</li>
@@ -78,7 +78,7 @@ export default function RecipesLibraryPage() {
         <p>Get started with recipes in three steps:</p>
         
         <h3>1. Load Quickstart Data</h3>
-        <p>If you haven't already, load the quickstart data pack:</p>
+        <p>If you haven&apos;t already, load the quickstart data pack:</p>
         <BashCodeBlock
           title="Load quickstart data"
           code={`./examples/quickstart/load_quickstart.sh`}
@@ -386,7 +386,7 @@ embedding vector(1536)  -- For OpenAI ada-002`}
       <section id="troubleshooting">
         <h2>Troubleshooting</h2>
 
-        <h3>"Table quickstart_documents does not exist"</h3>
+        <h3>&quot;Table quickstart_documents does not exist&quot;</h3>
         <p><strong>Solution:</strong> Load the quickstart data pack first:</p>
         <BashCodeBlock
           title="Load quickstart data"
@@ -394,7 +394,7 @@ embedding vector(1536)  -- For OpenAI ada-002`}
         />
         <p>Or adapt the recipe to use your own table.</p>
 
-        <h3>"Index not used in query"</h3>
+        <h3>&quot;Index not used in query&quot;</h3>
         <p><strong>Solution:</strong></p>
         <ol>
           <li>Verify index exists: <code>\d table_name</code></li>
@@ -403,7 +403,7 @@ embedding vector(1536)  -- For OpenAI ada-002`}
           <li>Use <code>EXPLAIN ANALYZE</code> to see query plan</li>
         </ol>
 
-        <h3>"Embedding generation fails"</h3>
+        <h3>&quot;Embedding generation fails&quot;</h3>
         <p><strong>Solution:</strong></p>
         <ol>
           <li>Check embedding model is configured</li>
@@ -412,7 +412,7 @@ embedding vector(1536)  -- For OpenAI ada-002`}
           <li>See <code>05_embedding_generation.sql</code> for error handling examples</li>
         </ol>
 
-        <h3>"Query is slow"</h3>
+        <h3>&quot;Query is slow&quot;</h3>
         <p><strong>Solution:</strong></p>
         <ol>
           <li>Create/verify indexes (see <code>04_indexing.sql</code>)</li>

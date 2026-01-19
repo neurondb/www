@@ -54,7 +54,7 @@ export default function SimpleStartPage() {
           This guide walks you through setup step by step. If you know Docker and PostgreSQL, use the <a href="/docs/neurondb/getting-started/quickstart">Technical Quickstart</a>.
         </p>
         <p>
-          <strong>What you'll accomplish:</strong>
+          <strong>What you&apos;ll accomplish:</strong>
         </p>
         <ul>
           <li>✅ Get NeuronDB running locally</li>
@@ -171,13 +171,13 @@ docker compose ps`}
 {`NAME                STATUS
 neurondb-cpu        healthy (or running)`}
         </pre>
-        <p>Wait for "healthy" status. This means PostgreSQL initialized and accepts connections. This takes 30 to 60 seconds.</p>
+        <p>Wait for &quot;healthy&quot; status. This means PostgreSQL initialized and accepts connections. This takes 30 to 60 seconds.</p>
 
         <details>
           <summary style={{ cursor: 'pointer', color: '#fbbf24', marginTop: '1rem', marginBottom: '1rem' }}>
-            <strong>🔍 What if it's not healthy?</strong>
+            <strong>🔍 What if it&apos;s not healthy?</strong>
           </summary>
-          <p>If the service shows as "unhealthy" or keeps restarting:</p>
+          <p>If the service shows as &quot;unhealthy&quot; or keeps restarting:</p>
           <ol>
             <li>
               <strong>Check logs:</strong>
@@ -225,7 +225,7 @@ docker compose exec neurondb psql -U neurondb -d neurondb -c "SELECT neurondb.ve
         </div>
 
         <h4>Step 4: Your First Vector Search</h4>
-        <p>Let's create a simple example to understand how vector search works:</p>
+        <p>Let&apos;s create a simple example to understand how vector search works:</p>
         <BashCodeBlock
           title="Create test table and perform vector search"
           code={`docker compose exec neurondb psql -U neurondb -d neurondb <<EOF
@@ -313,7 +313,7 @@ sudo make install`}
           />
           <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '0.5rem' }}>
             <p style={{ margin: 0 }}>
-              <strong>📝 What's happening?</strong> The <code>make</code> command compiles the C code into a PostgreSQL extension. <code>make install</code> copies the compiled files to PostgreSQL's extension directory.
+              <strong>📝 What&apos;s happening?</strong> The <code>make</code> command compiles the C code into a PostgreSQL extension. <code>make install</code> copies the compiled files to PostgreSQL&apos;s extension directory.
             </p>
           </div>
 
@@ -411,7 +411,7 @@ DROP TABLE test;`}
             <li>Store vectors alongside your regular data</li>
             <li>Use SQL to query vectors</li>
             <li>Combine vector search with traditional SQL filters</li>
-            <li>Leverage PostgreSQL's ACID guarantees</li>
+            <li>Leverage PostgreSQL&apos;s ACID guarantees</li>
           </ul>
         </details>
       </section>
@@ -443,14 +443,14 @@ DROP TABLE test;`}
           <ul style={{ marginBottom: '1rem' }}>
             <li><strong>Docker is recommended</strong> for the easiest setup</li>
             <li><strong>Keep containers running</strong> - They use minimal resources when idle</li>
-            <li><strong>Use <code>docker compose logs</code></strong> to see what's happening</li>
+            <li><strong>Use <code>docker compose logs</code></strong> to see what&apos;s happening</li>
             <li><strong>Port conflicts?</strong> Change ports in <code>docker-compose.yml</code></li>
           </ul>
           <h4 style={{ marginTop: '0.5rem', marginBottom: '0.5rem', fontSize: '1rem', fontWeight: 'bold' }}>Learning Tips</h4>
           <ul style={{ marginBottom: '1rem' }}>
             <li><strong>Start simple</strong> - Get it running first, then explore advanced features</li>
             <li><strong>Read the architecture guide</strong> to understand how components work together</li>
-            <li><strong>Try the examples</strong> - They're designed to teach concepts</li>
+            <li><strong>Try the examples</strong> - They&apos;re designed to teach concepts</li>
             <li><strong>Check troubleshooting</strong> if you encounter issues</li>
           </ul>
           <h4 style={{ marginTop: '0.5rem', marginBottom: '0.5rem', fontSize: '1rem', fontWeight: 'bold' }}>Development Tips</h4>
@@ -476,7 +476,7 @@ DROP TABLE test;`}
             <strong>A:</strong> Yes! You can install NeuronDB into your existing PostgreSQL installation. See <a href="/docs/neurondb/installation" style={{ color: '#fbbf24' }}>Native Installation</a>.
           </p>
 
-          <h4>Q: What's the difference between Docker and native install?</h4>
+          <h4>Q: What&apos;s the difference between Docker and native install?</h4>
           <p>
             <strong>A:</strong>
           </p>

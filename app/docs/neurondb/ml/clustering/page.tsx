@@ -310,7 +310,7 @@ ORDER BY cluster_id;`}
     table_name TEXT,
     column_name TEXT,
     n_clusters INTEGER,
-    linkage TEXT  -- 'single', 'complete', or 'average'
+    linkage TEXT  -- &apos;single&apos;, &apos;complete&apos;, or &apos;average&apos;
 ) RETURNS TABLE (id INTEGER, cluster_id INTEGER)</code></pre>
       </section>
 

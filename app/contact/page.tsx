@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Mail, Github, MessageCircle, Send, ArrowRight, MessageSquare } from 'lucide-react'
+import { Send, MessageSquare } from 'lucide-react'
 import Link from 'next/link'
 import FooterTemplate from '@/components/templates/FooterTemplate'
 import { siteConfig } from '@/config/site'
@@ -63,7 +63,7 @@ Message: ${formData.message}
 
             {/* Description - Exact Homepage Style */}
             <p className="mt-5 text-lg sm:text-xl leading-relaxed text-slate-300 max-w-xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              Have questions, feedback, or need support? We're here to help. Reach out via email, GitHub, or use the contact form below.
+              Have questions, feedback, or need support? We&apos;re here to help. Reach out via email, GitHub, or use the contact form below.
             </p>
 
             {/* Quick Links - Exact Homepage Style */}

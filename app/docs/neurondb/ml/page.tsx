@@ -42,7 +42,7 @@ export default function MLPage() {
         
         <h4>Clustering (5 algorithms):</h4>
         <ul>
-          <li><strong>K-Means</strong> - Lloyd's algorithm with k-means++ initialization, GPU-accelerated</li>
+          <li><strong>K-Means</strong> - Lloyd&apos;s algorithm with k-means++ initialization, GPU-accelerated</li>
           <li><strong>Mini-batch K-Means</strong> - Efficient variant for large datasets and streaming data</li>
           <li><strong>DBSCAN</strong> - Density-based clustering for arbitrary shapes and noise detection</li>
           <li><strong>Gaussian Mixture Model (GMM)</strong> - EM algorithm for probabilistic clustering</li>
@@ -151,7 +151,7 @@ export default function MLPage() {
 
         <h3>embed_text()</h3>
         <p>Generate text embeddings with automatic caching.</p>
-        <p><strong>Signature:</strong> <code>embed_text(text TEXT, model TEXT DEFAULT 'all-MiniLM-L6-v2') RETURNS vector</code></p>
+        <p><strong>Signature:</strong> <code>embed_text(text TEXT, model TEXT DEFAULT &apos;all-MiniLM-L6-v2&apos;) RETURNS vector</code></p>
         <SqlCodeBlock
           title="Example"
           code={`SELECT embed_text('Machine learning with PostgreSQL');`}
@@ -159,10 +159,10 @@ export default function MLPage() {
 
         <h3>embed_text_batch()</h3>
         <p>Generate embeddings for multiple texts efficiently.</p>
-        <p><strong>Signature:</strong> <code>embed_text_batch(texts TEXT[], model TEXT DEFAULT 'all-MiniLM-L6-v2') RETURNS vector[]</code></p>
+        <p><strong>Signature:</strong> <code>embed_text_batch(texts TEXT[], model TEXT DEFAULT &apos;all-MiniLM-L6-v2&apos;) RETURNS vector[]</code></p>
         <SqlCodeBlock
           title="Example"
-          code={`SELECT embed_text_batch(ARRAY['text1', 'text2'], 'all-MiniLM-L6-v2');`}
+          code={`SELECT embed_text_batch(ARRAY[&apos;text1&apos;, &apos;text2&apos;], &apos;all-MiniLM-L6-v2&apos;);`}
         />
 
         <h3>train_random_forest_classifier()</h3>

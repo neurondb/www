@@ -10,6 +10,7 @@ import SkipNavigation from '@/components/SkipNavigation'
 import ScrollToTop from '@/components/ScrollToTop'
 import OutboundLinkTracker from '@/components/OutboundLinkTracker'
 import { ToastProvider } from '@/components/ui/Toast'
+import { ErrorBoundary } from '@/components/ErrorBoundary'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -354,17 +355,19 @@ export default function RootLayout({
           </>
         )}
         
-        <ToastProvider>
-          <OutboundLinkTracker />
-          <SkipNavigation />
-          <OrganizationSchema />
-          <WebSiteSchema />
-          <Header />
-          <main id="main-content" role="main" className="animate-page-fade-in pt-24">
-            {children}
-          </main>
-          <ScrollToTop />
-        </ToastProvider>
+        <ErrorBoundary>
+          <ToastProvider>
+            <OutboundLinkTracker />
+            <SkipNavigation />
+            <OrganizationSchema />
+            <WebSiteSchema />
+            <Header />
+            <main id="main-content" role="main" className="animate-page-fade-in pt-24">
+              {children}
+            </main>
+            <ScrollToTop />
+          </ToastProvider>
+        </ErrorBoundary>
       </body>
     </html>
   )

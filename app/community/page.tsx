@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Github, MessageCircle, Users, BookOpen, ArrowRight, UserPlus } from 'lucide-react'
+import { ArrowRight, UserPlus } from 'lucide-react'
 import Link from 'next/link'
 import FooterTemplate from '@/components/templates/FooterTemplate'
 import { siteConfig } from '@/config/site'

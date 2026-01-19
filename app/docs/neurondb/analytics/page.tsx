@@ -37,7 +37,7 @@ export default function NeuronDBAnalyticsPage() {
         <p>NeuronDB provides 5 clustering algorithms with GPU acceleration:</p>
 
         <h3>K-Means Clustering</h3>
-        <p>Lloyd's K-Means with k-means++ initialization for finding customer segments, topic clusters, and data grouping. GPU-accelerated for large datasets.</p>
+        <p>Lloyd&apos;s K-Means with k-means++ initialization for finding customer segments, topic clusters, and data grouping. GPU-accelerated for large datasets.</p>
         
         <h3>Mini-batch K-Means</h3>
         <p>Efficient variant of K-Means using mini-batches for faster convergence on very large datasets. Ideal for streaming data and incremental updates.</p>

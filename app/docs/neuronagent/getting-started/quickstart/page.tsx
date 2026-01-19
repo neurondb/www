@@ -104,7 +104,7 @@ curl -X POST http://localhost:8080/api/v1/sessions/{session_id}/messages \\
       <section id="use-tools">
         <h2>Using Tools</h2>
         <p>
-          Agents can use tools to perform actions. Tools are automatically selected based on the agent's configuration and the task at hand.
+          Agents can use tools to perform actions. Tools are automatically selected based on the agent&apos;s configuration and the task at hand.
         </p>
         <p>
           See the <a href="https://github.com/neurondb-ai/neurondb/tree/main/examples/agent-tools" target="_blank" rel="noopener noreferrer">Agent Tools Example</a> for complete working examples.

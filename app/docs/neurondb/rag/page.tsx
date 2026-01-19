@@ -66,7 +66,7 @@ export default function NeuronDBRAGPage() {
       <section id="rag-workflow">
         <h2>RAG Workflow</h2>
         <ol>
-          <li><strong>User Question:</strong> "What is PostgreSQL replication?"</li>
+          <li><strong>User Question:</strong> &quot;What is PostgreSQL replication?&quot;</li>
           <li><strong>Retrieve:</strong> Find relevant documents using hybrid search</li>
           <li><strong>Rerank:</strong> Score and sort results by relevance</li>
           <li><strong>Generate:</strong> LLM creates answer using retrieved context</li>

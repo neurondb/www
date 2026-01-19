@@ -39,22 +39,22 @@ export default function Page() {
         <p><strong>Embeddings</strong> are dense vector representations of data (text, images, audio) that capture semantic meaning in a high-dimensional space. Unlike traditional keyword-based representations, embeddings encode contextual relationships, allowing machines to understand similarity and meaning.</p>
 
         <h3>Key Concept</h3>
-        <p><strong>Traditional Search:</strong> Matches exact keywords → "machine learning" only finds documents with those exact words</p>
-        <p><strong>Semantic Search (Embeddings):</strong> Understands meaning → "machine learning" also finds "neural networks", "AI models", "deep learning"</p>
+        <p><strong>Traditional Search:</strong> Matches exact keywords → &quot;machine learning&quot; only finds documents with those exact words</p>
+        <p><strong>Semantic Search (Embeddings):</strong> Understands meaning → &quot;machine learning&quot; also finds &quot;neural networks&quot;, &quot;AI models&quot;, &quot;deep learning&quot;</p>
 
         <h3>How Embeddings Capture Similarity</h3>
-        <pre><code>{`Text "cat"    → [0.8, 0.2, 0.1, ...]     ┐
-Text "kitten" → [0.75, 0.25, 0.12, ...]   ├─ Close together (similar meaning)
-Text "dog"    → [0.7, 0.3, 0.15, ...]     ┘
+        <pre><code>{`Text &quot;cat&quot;    → [0.8, 0.2, 0.1, ...]     ┐
+Text &quot;kitten&quot; → [0.75, 0.25, 0.12, ...]   ├─ Close together (similar meaning)
+Text &quot;dog&quot;    → [0.7, 0.3, 0.15, ...]     ┘
 
-Text "car"    → [-0.3, 0.9, -0.5, ...]    ← Far apart (different concept)`}</code></pre>
+Text &quot;car&quot;    → [-0.3, 0.9, -0.5, ...]    ← Far apart (different concept)`}</code></pre>
       </section>
 
       <section id="why-embeddings-matter">
         <h2>Why Embeddings Matter</h2>
 
         <h3>Understanding Context</h3>
-        <p>Embeddings capture context and meaning. The word "bank" has different embeddings near "river" vs "money" based on context.</p>
+        <p>Embeddings capture context and meaning. The word &quot;bank&quot; has different embeddings near &quot;river&quot; vs &quot;money&quot; based on context.</p>
 
         <h3>Language Independence</h3>
         <p>Similar concepts in different languages have similar embeddings. Search in English, find results in Spanish/French/Chinese.</p>

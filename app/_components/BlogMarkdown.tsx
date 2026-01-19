@@ -370,10 +370,10 @@ export function BlogMarkdown({ children }: { children: string }) {
         rehypePlugins={[rehypeRaw]}
         components={{
           // Headings with proper sizing and styling
-          h1({ node, children, ...props }: any) {
+          h1({ node: _node, children, ...props }: any) {
             return <h1 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-8 mt-12 first:mt-0 leading-tight" {...props}>{children}</h1>;
           },
-          h2({ node, children, ...props }: any) {
+          h2({ node: _node, children, ...props }: any) {
             const text = typeof children === 'string' ? children : children?.toString() || '';
             const isKeyConcepts = text.includes('Key Concepts');
             const colorClass = isKeyConcepts ? 'text-yellow-400' : 'text-cyan-400';
@@ -385,7 +385,7 @@ export function BlogMarkdown({ children }: { children: string }) {
               .replace(/-+/g, '-');
             return <h2 id={id} className={`text-3xl md:text-4xl font-semibold ${colorClass} mb-6 mt-10 leading-tight scroll-mt-24`} {...props}>{children}</h2>;
           },
-          h3({ node, children, ...props }: any) {
+          h3({ node: _node, children, ...props }: any) {
             const text = typeof children === 'string' ? children : children?.toString() || '';
             let colorClass = 'text-white';
             if (text.includes('Features')) colorClass = 'text-green-400';
@@ -401,7 +401,7 @@ export function BlogMarkdown({ children }: { children: string }) {
               .replace(/-+/g, '-');
             return <h3 id={id} className={`text-2xl md:text-3xl font-semibold ${colorClass} mb-4 mt-8 leading-tight scroll-mt-24`} {...props}>{children}</h3>;
           },
-          h4({ node, children, ...props }: any) {
+          h4({ node: _node, children, ...props }: any) {
             const text = typeof children === 'string' ? children : children?.toString() || '';
             const id = text
               .toLowerCase()
@@ -410,19 +410,19 @@ export function BlogMarkdown({ children }: { children: string }) {
               .replace(/-+/g, '-');
             return <h4 id={id} className="text-xl md:text-2xl font-semibold text-white mb-3 mt-6 leading-tight scroll-mt-24" {...props}>{children}</h4>;
           },
-          h5({ node, children, ...props }: any) {
+          h5({ node: _node, children, ...props }: any) {
             return <h5 className="text-lg md:text-xl font-semibold text-white mb-3 mt-5 leading-tight" {...props}>{children}</h5>;
           },
-          h6({ node, children, ...props }: any) {
+          h6({ node: _node, children, ...props }: any) {
             return <h6 className="text-base md:text-lg font-semibold text-white mb-2 mt-4 leading-tight" {...props}>{children}</h6>;
           },
 
           // Paragraphs with better spacing and readability
           p({ node, children, ...props }: any) {
             // Check if paragraph only contains an image - if so, unwrap it
-            const hasOnlyImage = node?.children?.length === 1 && 
-                                 node.children[0]?.type === 'element' && 
-                                 node.children[0]?.tagName === 'img';
+            const hasOnlyImage = node?.children?.length === 1 &&
+                                  node.children[0]?.type === 'element' &&
+                                  node.children[0]?.tagName === 'img';
             
             if (hasOnlyImage) {
               // Return the image directly without paragraph wrapper
@@ -569,7 +569,7 @@ export function BlogMarkdown({ children }: { children: string }) {
             
             return <ol className="list-decimal list-outside text-slate-200 text-lg leading-relaxed mb-6 space-y-2 ml-8 md:ml-12 pl-4" {...props}>{children}</ol>;
           },
-          li({ node, children, ...props }: any) {
+          li({ node: _node, children, ...props }: any) {
             // Regular list items - ensure bullet and text stay on same line
             // Always unwrap paragraphs inside list items to keep content inline
             const unwrapParagraphs = (children: any): any => {
@@ -678,7 +678,7 @@ export function BlogMarkdown({ children }: { children: string }) {
           },
 
           // Code blocks with syntax highlighting
-          code({ node, className, children, ...props }) {
+          code({ node: _node, className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || '');
             const codeText = String(children).replace(/\n$/, '');
 
@@ -766,7 +766,7 @@ export function BlogMarkdown({ children }: { children: string }) {
           },
 
           // Tables with proper styling
-          table({ node, ...props }) {
+          table({ node: _node, ...props }) {
             return (
               <div
                 className="overflow-x-auto my-8 w-full"
@@ -790,7 +790,7 @@ export function BlogMarkdown({ children }: { children: string }) {
               </div>
             );
           },
-          thead({ node, ...props }) {
+          thead({ node: _node, ...props }) {
             return (
               <thead 
                 className="bg-slate-900 border-b border-slate-700" 
@@ -798,10 +798,10 @@ export function BlogMarkdown({ children }: { children: string }) {
               />
             );
           },
-          tbody({ node, ...props }) {
+          tbody({ node: _node, ...props }) {
             return <tbody className="divide-y divide-slate-700" {...props} />;
           },
-          tr({ node, ...props }) {
+          tr({ node: _node, ...props }) {
             return (
               <tr 
                 className="even:bg-slate-900/50" 
@@ -809,7 +809,7 @@ export function BlogMarkdown({ children }: { children: string }) {
               />
             );
           },
-          th({ node, ...props }) {
+          th({ node: _node, ...props }) {
             return (
               <th 
                 className="px-6 py-4 text-left text-sm font-semibold text-slate-100 uppercase tracking-wider break-words" 
@@ -824,7 +824,7 @@ export function BlogMarkdown({ children }: { children: string }) {
               />
             );
           },
-          td({ node, ...props }) {
+          td({ node: _node, ...props }) {
             return (
               <td 
                 className="px-6 py-4 text-sm text-slate-300 break-words leading-relaxed" 
@@ -843,7 +843,7 @@ export function BlogMarkdown({ children }: { children: string }) {
 
           // Images with proper styling (use Next/Image to avoid lint warnings)
           // Note: Images are block-level elements, so we use a div wrapper
-          img({ node, ...props }) {
+          img({ node: _node, ...props }) {
             const src = (props as any).src as string | undefined
             const alt = ((props as any).alt as string | undefined) || 'Blog image'
             if (!src) return null
@@ -1036,12 +1036,12 @@ export function BlogMarkdown({ children }: { children: string }) {
             
             return <strong className="font-semibold text-white" {...props}>{processChildren(children)}</strong>;
           },
-          em({ node, ...props }) {
+          em({ node: _node, ...props }) {
             return <em className="italic text-slate-200" {...props} />;
           },
 
           // Links with proper styling
-          a({ node, className, ...props }: any) {
+          a({ node: _node, className: _className, ...props }: any) {
             const href = props.href || '';
             
             return (

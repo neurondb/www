@@ -66,7 +66,7 @@ export default function EnsemblePage() {
         <p>Combine multiple reranking models for improved accuracy. NeuronDB supports weighted ensemble and Borda count methods.</p>
         
         <h3>Weighted Ensemble</h3>
-        <p>Combine multiple reranking models with custom weights. Each model's scores are weighted and summed to produce final scores.</p>
+        <p>Combine multiple reranking models with custom weights. Each model&apos;s scores are weighted and summed to produce final scores.</p>
         <SqlCodeBlock
           title="Weighted ensemble reranking"
           code={`-- Prepare scored results from multiple models

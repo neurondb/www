@@ -315,7 +315,7 @@ const NeuronMCPDemoTerminal = () => {
                 <span className="px-2 py-1 bg-emerald-400/10 rounded">Claude Desktop</span>
               </div>
               <div className="text-gray-600 text-xs mt-2">
-                Click "Run Demo" to see NeuronMCP protocol in action
+                Click &quot;Run Demo&quot; to see NeuronMCP protocol in action
               </div>
             </div>
           )}

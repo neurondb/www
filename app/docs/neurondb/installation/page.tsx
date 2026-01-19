@@ -326,7 +326,7 @@ psql -d postgres -c "SELECT extversion FROM pg_extension WHERE extname = 'neuron
       <section id="source-method">
         <h2>Method 3: Source Build</h2>
         <p>
-          Build NeuronDB from source for production deployments or custom configurations. This installs only the PostgreSQL extension; you'll need to separately build NeuronAgent, NeuronMCP, and NeuronDesktop if you want the full ecosystem.
+          Build NeuronDB from source for production deployments or custom configurations. This installs only the PostgreSQL extension; you&apos;ll need to separately build NeuronAgent, NeuronMCP, and NeuronDesktop if you want the full ecosystem.
         </p>
         <p>Continue reading below for platform-specific source build instructions.</p>
       </section>
@@ -571,7 +571,7 @@ WHERE  extname = 'neurondb';`}
 
         <h3>Upgrade from version 1.0 to 2.0</h3>
         <p>
-          If you're upgrading from NeuronDB 1.0 (REL1_STABLE branch) to version 2.0 (main branch), follow these steps:
+          If you&apos;re upgrading from NeuronDB 1.0 (REL1_STABLE branch) to version 2.0 (main branch), follow these steps:
         </p>
         <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <p style={{ marginBottom: '0.5rem' }}>
@@ -593,7 +593,7 @@ SELECT extversion FROM pg_extension WHERE extname = 'neurondb';`}
         <p>
           The upgrade script <code>neurondb--1.0--2.0.sql</code> will automatically run during the upgrade process.
           This ensures compatibility between versions and preserves all your data and indexes.
-          <strong>Note:</strong> Make sure you've installed NeuronDB from the <code>main</code> branch before running the upgrade.
+          <strong>Note:</strong> Make sure you&apos;ve installed NeuronDB from the <code>main</code> branch before running the upgrade.
         </p>
 
         <h3>Optional GPU configuration</h3>

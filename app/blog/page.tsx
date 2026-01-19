@@ -1,9 +1,8 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Calendar, Clock, User, Tag, Eye, ThumbsUp, MessageCircle, TrendingUp, BookOpen, Code, Database, Server, Zap, Award, Globe, Users, FileText, Search } from 'lucide-react'
+import { ArrowRight, Calendar, User, Tag, BookOpen, Users, FileText, Search } from 'lucide-react'
 import FooterTemplate from '@/components/templates/FooterTemplate'
-import { siteConfig } from '@/config/site'
 import { allBlogPosts } from '@/config/blogPosts'
 
 export const metadata: Metadata = {
@@ -50,7 +49,7 @@ const blogStats = [
 
 const blogPosts = allBlogPosts
 
-const BlogCard = ({ post, index }: { post: typeof blogPosts[0], index: number }) => {
+const BlogCard = ({ post }: { post: typeof blogPosts[0] }) => {
   const isAnnouncement = post.category === 'Announcement'
   return (
     <article className="group h-full">

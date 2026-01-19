@@ -193,7 +193,7 @@ docker pull ghcr.io/neurondb/neurondesktop-frontend:v2.0.0`}
         />
         <p>
             Pre-built Docker images are available from <a href="https://github.com/neurondb-ai/neurondb/pkgs/container/neurondb-postgres" target="_blank" rel="noopener noreferrer">GitHub Container Registry (GHCR)</a>.
-          This is faster than building from source and ensures you're using tested, production-ready images.
+          This is faster than building from source and ensures you&apos;re using tested, production-ready images.
         </p>
         <div style={{ backgroundColor: '#1e293b', border: '1px solid #334155', padding: '1rem', borderRadius: '0.5rem', marginTop: '1rem', marginBottom: '1rem' }}>
           <p>
@@ -275,7 +275,7 @@ docker compose up -d`}
         />
 
         <p>
-          You should see five services running with "healthy" status:
+          You should see five services running with &quot;healthy&quot; status:
         </p>
         <ul>
           <li><code>neurondb-cpu</code> - PostgreSQL with NeuronDB extension</li>
@@ -286,7 +286,7 @@ docker compose up -d`}
         </ul>
 
         <p>
-          <strong>Wait 30-60 seconds</strong> for all services to initialize and show "healthy" status.
+          <strong>Wait 30-60 seconds</strong> for all services to initialize and show &quot;healthy&quot; status.
         </p>
       </section>
 
@@ -521,7 +521,7 @@ docker compose restart neurondb`}
         <h2>Troubleshooting</h2>
         <p>Having issues? Check these common problems:</p>
 
-        <h3>Services Won't Start</h3>
+        <h3>Services Won&apos;t Start</h3>
         <BashCodeBlock
           title="Check logs"
           code={`docker compose logs neurondb

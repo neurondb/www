@@ -67,7 +67,7 @@ docker compose version`}
 
       <section id="step-1">
         <h2>Step 1: Install NeuronDB</h2>
-        <p>If you haven't installed NeuronDB yet, choose your method:</p>
+        <p>If you haven&apos;t installed NeuronDB yet, choose your method:</p>
 
         <h3>Option A: Docker Compose (Recommended for Quick Start) 🐳</h3>
         <p><strong>Fastest way to get started:</strong></p>
@@ -131,7 +131,7 @@ docker compose exec neurondb psql -U neurondb -d neurondb -c "SELECT neurondb.ve
 
         <details>
           <summary style={{ cursor: 'pointer', color: '#fbbf24', marginTop: '1rem', marginBottom: '1rem' }}>
-            <strong>📚 What's in the Data Pack?</strong>
+            <strong>📚 What&apos;s in the Data Pack?</strong>
           </summary>
           <ul>
             <li><strong>~500 documents</strong> - Sample text documents</li>
@@ -259,7 +259,7 @@ LIMIT 10;`}
         />
         <p><strong>What this does:</strong></p>
         <ol>
-          <li>Generates embedding for "machine learning algorithms"</li>
+          <li>Generates embedding for &quot;machine learning algorithms&quot;</li>
           <li>Searches for documents with similar embeddings</li>
           <li>Returns top 10 results</li>
         </ol>
@@ -350,9 +350,9 @@ LIMIT 10;`}
           </p>
           <p><strong>Example:</strong></p>
           <ul>
-            <li>"machine learning" → <code>[0.1, 0.2, 0.3, ...]</code> (384 numbers)</li>
-            <li>"artificial intelligence" → <code>[0.12, 0.19, 0.31, ...]</code> (similar numbers)</li>
-            <li>"banana" → <code>[0.9, 0.1, 0.2, ...]</code> (different numbers)</li>
+            <li>&quot;machine learning&quot; → <code>[0.1, 0.2, 0.3, ...]</code> (384 numbers)</li>
+            <li>&quot;artificial intelligence&quot; → <code>[0.12, 0.19, 0.31, ...]</code> (similar numbers)</li>
+            <li>&quot;banana&quot; → <code>[0.9, 0.1, 0.2, ...]</code> (different numbers)</li>
           </ul>
 
           <h3>What is Distance?</h3>

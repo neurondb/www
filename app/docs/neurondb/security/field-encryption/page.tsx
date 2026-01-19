@@ -58,7 +58,7 @@ export default function FieldEncryptionPage() {
       <section id="prerequisites">
         <h2>Prerequisites</h2>
         <p>
-          Field-level encryption requires OpenSSL support in the PostgreSQL build. The encryption functions use OpenSSL's EVP API for AES-256-GCM.
+          Field-level encryption requires OpenSSL support in the PostgreSQL build. The encryption functions use OpenSSL&apos;s EVP API for AES-256-GCM.
         </p>
       </section>
 
@@ -137,7 +137,7 @@ SELECT rotate_encryption_key(
         <h2>Security Considerations</h2>
         <ol>
           <li>
-            <strong>Key Management:</strong> Store encryption keys securely. Consider using PostgreSQL's key management extensions or external key management systems.
+            <strong>Key Management:</strong> Store encryption keys securely. Consider using PostgreSQL&apos;s key management extensions or external key management systems.
           </li>
           <li>
             <strong>Performance:</strong> Encryption/decryption adds latency. Use encryption selectively for sensitive data only.

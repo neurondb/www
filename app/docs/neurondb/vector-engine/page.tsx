@@ -65,7 +65,7 @@ export default function VectorEnginePage() {
       <section id="overview">
         <h2>Overview</h2>
         <p>
-          The <strong>Vector Engine</strong> is NeuronDB's high-performance approximate nearest neighbor (ANN) search system, 
+          The <strong>Vector Engine</strong> is NeuronDB&apos;s high-performance approximate nearest neighbor (ANN) search system, 
           designed for billion-scale vector similarity search with millisecond latency. It combines state-of-the-art indexing 
           algorithms (HNSW and IVF) with multiple distance metrics and advanced quantization techniques to deliver 
           production-ready vector search capabilities directly in PostgreSQL.
@@ -227,7 +227,7 @@ SET ivf.probes = 20;  -- Number of clusters to search`}
         <h2>Distance Metrics</h2>
         <p>
           NeuronDB supports multiple distance metrics, each optimized for different use cases and data types. 
-          The choice of distance metric significantly impacts search quality and should match your embedding model's training objective.
+          The choice of distance metric significantly impacts search quality and should match your embedding model&apos;s training objective.
         </p>
 
         <h3>Cosine Distance</h3>

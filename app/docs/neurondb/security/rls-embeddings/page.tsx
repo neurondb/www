@@ -37,7 +37,7 @@ export default function RLSEmbeddingsPage() {
       <section id="overview">
         <h2>Overview</h2>
         <p>
-          NeuronDB extends PostgreSQL's Row-Level Security (RLS) to support embedding-specific access patterns and integration with vector index scans. This ensures multi-tenant isolation and fine-grained access control for vector data.
+          NeuronDB extends PostgreSQL&apos;s Row-Level Security (RLS) to support embedding-specific access patterns and integration with vector index scans. This ensures multi-tenant isolation and fine-grained access control for vector data.
         </p>
       </section>
 

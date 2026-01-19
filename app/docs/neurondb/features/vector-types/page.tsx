@@ -50,7 +50,7 @@ export default function Page() {
         <h2>Why Use Vectors?</h2>
 
         <h3>Semantic Search</h3>
-        <p>Find similar items based on <em>meaning</em>, not just keywords. Search for "laptop" and get results for "notebook computer", "portable PC".</p>
+        <p>Find similar items based on <em>meaning</em>, not just keywords. Search for &quot;laptop&quot; and get results for &quot;notebook computer&quot;, &quot;portable PC&quot;.</p>
 
         <h3>Recommendations</h3>
         <p>Build recommendation systems that suggest related products, content, or services based on similarity.</p>

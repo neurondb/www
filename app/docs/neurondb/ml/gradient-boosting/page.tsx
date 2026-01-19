@@ -98,7 +98,7 @@ SELECT neurondb.train(
         <p><strong>Function Signature:</strong></p>
         <pre><code>neurondb.train(
     project TEXT,
-    algorithm TEXT,        -- 'xgboost'
+    algorithm TEXT,        -- &apos;xgboost&apos;
     table_name TEXT,
     target_column TEXT,
     feature_columns TEXT[],

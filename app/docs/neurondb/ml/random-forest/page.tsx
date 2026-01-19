@@ -89,8 +89,8 @@ SELECT model_id FROM rf_model;`}
         />
         <p><strong>Function Signature:</strong></p>
         <pre><code>neurondb.train(
-    project TEXT,           -- ML project name (e.g., 'default')
-    algorithm TEXT,         -- Algorithm name: 'random_forest'
+    project TEXT,           -- ML project name (e.g., &apos;default&apos;)
+    algorithm TEXT,         -- Algorithm name: &apos;random_forest&apos;
     table_name TEXT,        -- Training data table name
     target_column TEXT,    -- Target/label column name
     feature_columns TEXT[], -- Array of feature column names
